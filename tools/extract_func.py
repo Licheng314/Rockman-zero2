@@ -19,6 +19,7 @@ import sys
 from collections import deque
 from pathlib import Path
 from project_guard import writer_lock, transaction, build_checked
+from thumb_v4 import valid_thumb1
 
 from capstone import Cs, CS_ARCH_ARM, CS_MODE_THUMB
 
@@ -27,7 +28,7 @@ EXPECT = "c4d93a58f0f82c526dec8a3fdbda170336303689"
 data = open("baserom.gba", "rb").read()
 md = Cs(CS_ARCH_ARM, CS_MODE_THUMB)
 
-COND_BR = {"beq","bne","bcs","bcc","bmi","bpl","bvs","bvc","bhi","bls","bge","blt","bgt","ble","cbz","cbnz"}
+COND_BR = {"beq","bne","bcs","bcc","bhs","blo","bmi","bpl","bvs","bvc","bhi","bls","bge","blt","bgt","ble"}
 UAL_MAP = {"lsls":"lsl","lsrs":"lsr","asrs":"asr","adds":"add","subs":"sub","movs":"mov",
            "ands":"and","orrs":"orr","eors":"eor","bics":"bic","muls":"mul","negs":"neg"}
 REG_ALIAS = {"ip": "r12", "sl": "r10", "sb": "r9", "fp": "r11"}
@@ -52,6 +53,8 @@ def disasm_bfs(start, cap):
             ins = next(md.disasm(data[addr:addr + 8], va(addr), count=1), None)
             if ins is None or ins.address != va(addr) or ins.size not in (2, 4):
                 break
+            if not valid_thumb1(data, addr, ins.size):
+                break
             instrs[addr] = ins
             m, ops = ins.mnemonic, ins.op_str
             if m in COND_BR or m == "b":
@@ -70,6 +73,10 @@ def disasm_bfs(start, cap):
                 continue
             if (m == "bx" and ops == "lr") or (m == "pop" and "pc" in ops) or m == "bx":
                 break
+            if m in ("mov", "add") and ops.split(",", 1)[0].strip() == "pc":
+                # Computed jumps end this block. Their tables are data until
+                # a separate bounded table analysis proves case entry points.
+                break
             if m == "ldr" and " [pc" in ops:
                 imm = int(ops.split("#")[-1].rstrip("]"), 16) if "#" in ops else 0
                 paddr = ((va(addr) + 4) & ~3) - BASE + imm
@@ -85,6 +92,15 @@ def fix_ops(ops):
 
 def fmt(ins, start, name, instrs, exts):
     m, ops = ins.mnemonic, fix_ops(ins.op_str)
+    parts = ops.split(", ")
+    if m == "movs" and len(parts) == 2 and all(re.fullmatch(r"r[0-7]", p) for p in parts):
+        # Capstone aliases LSL #0 to MOVS; armips MOV chooses a different
+        # encoding, so retain the actual flag-setting shift encoding.
+        return f"lsl {parts[0]}, {parts[1]}, #0"
+    if m == "muls" and len(parts) == 3 and parts[0] == parts[2]:
+        return f"mul {parts[0]}, {parts[1]}"
+    if m == "add" and len(parts) == 3 and parts[0] == parts[2]:
+        return f"add {parts[0]}, {parts[1]}"
     if m == "rsbs" and re.fullmatch(r"r\d+, r\d+, #0", ops):
         return f"neg {ops[:-4]}"
     m2 = UAL_MAP.get(m, m)

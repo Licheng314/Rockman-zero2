@@ -1,0 +1,30 @@
+; Typed data: referenced PC literals / bounded switch words, not instructions.
+stage0_pool_080E20D0:
+    .word 0x00007250
+    .word 0x00007340
+    .word 0x00007264
+    .word 0x0202E140
+    .word 0x0202E188
+    .word 0x02037CF0
+    .word 0x00007324
+    .word 0x0203BC40
+    .word 0x00000DCC
+    .word 0x00000BB4
+    .word 0x02000F98
+    .word 0x00000406
+    .word 0x08390EB4
+    .word 0x08390EC0
+    .word 0x0836D25C
+    .word 0x0836D264
+    .word 0x00000514
+    .word 0x08432D00
+    .word 0x0202E590
+    .word 0x08432D0C
+    .word 0x0202E390
+    .word 0x0000053C
+    .word 0x0000058C
+    .word 0x00002050
+    .word 0x00007354
+    .word 0x03002AC0
+    .word 0x00000402
+    .word 0x00000401

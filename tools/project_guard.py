@@ -83,7 +83,16 @@ def recover_transaction():
 
 @contextlib.contextmanager
 def transaction(name):
-    paths = [ROOT/'tools/segments.json', ROOT/f'asm/{name}.s', ROOT/f'asm/{name}.manifest']
+    with transaction_paths([ROOT/'tools/segments.json', ROOT/f'asm/{name}.s', ROOT/f'asm/{name}.manifest']):
+        yield
+
+
+@contextlib.contextmanager
+def transaction_paths(paths):
+    """Recover all files of a multi-block integration from the same journal."""
+    paths = list(dict.fromkeys(Path(p).resolve() for p in paths))
+    if not all(p.is_relative_to(ROOT.resolve()) for p in paths):
+        raise RuntimeError('Transaction path outside the project')
     before = {p: p.read_bytes() if p.exists() else None for p in paths}
     owns_journal = not os.environ.get('RMZ2_TRANSACTION_OWNER')
     journal = ROOT/'build/transaction.json'

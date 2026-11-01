@@ -1,0 +1,3 @@
+; Typed data: referenced PC literals / bounded switch words, not instructions.
+stage0_pool_080DAC48:
+    .word 0x0834BAC4

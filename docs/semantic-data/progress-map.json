@@ -1,8 +1,8 @@
 {
   "date": "2026-11-01",
-  "segments_sha1": "aa324eaaa041f34c3423b52b3c6f54395cd54704",
+  "segments_sha1": "e8e49aef1d4d895dfa5444531110b163290e9d2d",
   "code_area_capacity": 983040,
-  "formal_covered_bytes": 912454,
+  "formal_covered_bytes": 960170,
   "c_integrated_count": 35,
   "c_integrated_bytes": 1282,
   "regions": [
@@ -10,120 +10,120 @@
       "start": 0,
       "end": 65536,
       "capacity": 65536,
-      "covered": 60508,
-      "remaining": 5028,
+      "covered": 64298,
+      "remaining": 1238,
       "c_integrated_bytes": 440
     },
     {
       "start": 65536,
       "end": 131072,
       "capacity": 65536,
-      "covered": 60726,
-      "remaining": 4810,
+      "covered": 64850,
+      "remaining": 686,
       "c_integrated_bytes": 230
     },
     {
       "start": 131072,
       "end": 196608,
       "capacity": 65536,
-      "covered": 60710,
-      "remaining": 4826,
+      "covered": 64902,
+      "remaining": 634,
       "c_integrated_bytes": 98
     },
     {
       "start": 196608,
       "end": 262144,
       "capacity": 65536,
-      "covered": 60758,
-      "remaining": 4778,
+      "covered": 62858,
+      "remaining": 2678,
       "c_integrated_bytes": 290
     },
     {
       "start": 262144,
       "end": 327680,
       "capacity": 65536,
-      "covered": 62876,
-      "remaining": 2660,
+      "covered": 64960,
+      "remaining": 576,
       "c_integrated_bytes": 18
     },
     {
       "start": 327680,
       "end": 393216,
       "capacity": 65536,
-      "covered": 63138,
-      "remaining": 2398,
+      "covered": 65086,
+      "remaining": 450,
       "c_integrated_bytes": 42
     },
     {
       "start": 393216,
       "end": 458752,
       "capacity": 65536,
-      "covered": 63160,
-      "remaining": 2376,
+      "covered": 65040,
+      "remaining": 496,
       "c_integrated_bytes": 40
     },
     {
       "start": 458752,
       "end": 524288,
       "capacity": 65536,
-      "covered": 62848,
-      "remaining": 2688,
+      "covered": 65158,
+      "remaining": 378,
       "c_integrated_bytes": 0
     },
     {
       "start": 524288,
       "end": 589824,
       "capacity": 65536,
-      "covered": 63054,
-      "remaining": 2482,
+      "covered": 64912,
+      "remaining": 624,
       "c_integrated_bytes": 86
     },
     {
       "start": 589824,
       "end": 655360,
       "capacity": 65536,
-      "covered": 62266,
-      "remaining": 3270,
+      "covered": 64506,
+      "remaining": 1030,
       "c_integrated_bytes": 38
     },
     {
       "start": 655360,
       "end": 720896,
       "capacity": 65536,
-      "covered": 61042,
-      "remaining": 4494,
+      "covered": 63818,
+      "remaining": 1718,
       "c_integrated_bytes": 0
     },
     {
       "start": 720896,
       "end": 786432,
       "capacity": 65536,
-      "covered": 60116,
-      "remaining": 5420,
+      "covered": 63372,
+      "remaining": 2164,
       "c_integrated_bytes": 0
     },
     {
       "start": 786432,
       "end": 851968,
       "capacity": 65536,
-      "covered": 60542,
-      "remaining": 4994,
+      "covered": 64660,
+      "remaining": 876,
       "c_integrated_bytes": 0
     },
     {
       "start": 851968,
       "end": 917504,
       "capacity": 65536,
-      "covered": 60974,
-      "remaining": 4562,
+      "covered": 63478,
+      "remaining": 2058,
       "c_integrated_bytes": 0
     },
     {
       "start": 917504,
       "end": 983040,
       "capacity": 65536,
-      "covered": 49736,
-      "remaining": 15800,
+      "covered": 58272,
+      "remaining": 7264,
       "c_integrated_bytes": 0
     }
   ],

@@ -1,0 +1,30 @@
+{
+  "updated_at": "2026-11-01T18:39:47.428758+08:00",
+  "objective": "Complete stage0 assembly extraction and classification without disguising unknown data as code",
+  "status": "in-progress",
+  "baseline_formal_bytes": 912454,
+  "formal_segments": 10700,
+  "formal_bytes": 960170,
+  "capacity_bytes": 983040,
+  "formal_coverage_percent": 97.67354329427084,
+  "uncovered_bytes": 22870,
+  "gap_count": 3259,
+  "formal_switch_entries_without_decoded_source": 846,
+  "uncovered_direct_branch_targets": 2,
+  "uncovered_fallthrough_targets": 5,
+  "uncovered_pc_word_bytes": 32,
+  "c_integrated_count_unchanged": 35,
+  "new_bulk_thumb_instruction_bytes": 6308,
+  "new_bulk_arm_instruction_bytes": 520,
+  "new_bulk_typed_word_bytes": 36844,
+  "exact_new_extents_verified": 4300,
+  "rom_sha1": "c4d93a58f0f82c526dec8a3fdbda170336303689",
+  "next_work": [
+    "Decode846 bounded-switch entries already represented only by raw source within older formal segments",
+    "Repair BL boundaries at0x6314C,0x6FDD4,0xC5D04",
+    "Resolve RAM-copied code and remaining large gaps",
+    "Classify remaining literal/table/alignment/header bytes with evidence",
+    "Audit actual emitted extents of historical formal segments before completion"
+  ],
+  "overall_goal_achieved": false
+}
