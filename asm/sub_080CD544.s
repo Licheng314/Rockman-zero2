@@ -1,0 +1,55 @@
+; sub_080CD544 @ 0x080CD544-080CD5AE  (自动生成, 经往返验证)
+.thumb
+sub_080CD544:
+    push {r4, lr}
+    add r4, r0, #0
+    add r0, #0xb4
+    ldr r2, [r0]
+    ldr r0, [r4, #0x54]
+    sub r2, r2, r0
+    ldrb r0, [r4, #0x11]
+    lsl r1, r0, #8
+    add r2, r2, r1
+    lsl r0, r0, #9
+    cmp r2, r0
+    bls loc_080CD584
+    add r0, r4, #0
+    add r0, #0xbc
+    ldrb r1, [r0]
+    mov r2, #1
+    eor r1, r2
+    strb r1, [r0]
+    cmp r1, #0
+    beq loc_080CD57C
+    ldr r1, [pc, #8]
+    add r0, r4, #0
+    bl EXT_080127E4
+    b loc_080CD584
+    .dh 0x0000 ; gap
+    .word 0x00006F03
+loc_080CD57C:
+    ldr r1, [pc, #0x1c]
+    add r0, r4, #0
+    bl EXT_080127E4
+loc_080CD584:
+    add r0, r4, #0
+    bl EXT_080128D4
+    add r0, r4, #0
+    add r0, #0xbc
+    ldrb r0, [r0]
+    cmp r0, #0
+    beq loc_080CD5A0
+    ldr r0, [r4, #0x54]
+    mov r1, #0x80
+    lsl r1, r1, #1
+    b loc_080CD5A4
+    .word 0x00006F04
+loc_080CD5A0:
+    ldr r0, [r4, #0x54]
+    ldr r1, [pc, #0xc]
+loc_080CD5A4:
+    add r0, r0, r1
+    str r0, [r4, #0x54]
+    pop {r4}
+    pop {r0}
+    bx r0

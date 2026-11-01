@@ -1,0 +1,95 @@
+{
+  "baseline_sha1": "c4d93a58f0f82c526dec8a3fdbda170336303689",
+  "scope": "Original static frame/animation data for A8/A9; capacity and clipping refer only to callback 0800033C.",
+  "examples": [
+    {
+      "bank": "0xa8",
+      "animation_table": "0x8432abc",
+      "sequence0_stream": "0x8432ac0",
+      "sequence0_first4": "00 01 00 ff",
+      "frame_table": "0x842da60",
+      "first_frame_header": "04 00 01 00",
+      "piece_count": 1,
+      "pieces": [
+        {
+          "address": "0x842da64",
+          "raw_hex": "00 00 00 80 00 00 f0 f0",
+          "attr0": "0x0",
+          "attr1": "0x8000",
+          "attr2": "0x0",
+          "x_s8": -16,
+          "y_s8": -16,
+          "dimension_index": 2,
+          "width": 32,
+          "height": 32
+        }
+      ]
+    },
+    {
+      "bank": "0xa9",
+      "animation_table": "0x8432abc",
+      "sequence0_stream": "0x8432ac0",
+      "sequence0_first4": "00 01 00 ff",
+      "frame_table": "0x842da60",
+      "first_frame_header": "04 00 01 00",
+      "piece_count": 1,
+      "pieces": [
+        {
+          "address": "0x842da64",
+          "raw_hex": "00 00 00 80 00 00 f0 f0",
+          "attr0": "0x0",
+          "attr1": "0x8000",
+          "attr2": "0x0",
+          "x_s8": -16,
+          "y_s8": -16,
+          "dimension_index": 2,
+          "width": 32,
+          "height": 32
+        }
+      ]
+    }
+  ],
+  "oam_buffer": {
+    "start": "0x03002ED0",
+    "end_exclusive": "0x030032D0",
+    "cursor_pointer": "0x030032D0",
+    "hardware_destination": "0x07000000",
+    "dma_control": "0x84000100"
+  },
+  "callback_033C_clipping": {
+    "x_min": -128,
+    "x_max_inclusive": 245,
+    "y_min": -64,
+    "y_max_inclusive": 159
+  },
+  "callback_capacity_check": "cursor + pieceCount*8 < 0x030032D0; equality rejected before clipping",
+  "width_minus_one_table": [
+    7,
+    15,
+    31,
+    63,
+    15,
+    31,
+    31,
+    63,
+    7,
+    7,
+    15,
+    31
+  ],
+  "height_minus_one_table": [
+    7,
+    15,
+    31,
+    63,
+    7,
+    7,
+    15,
+    31,
+    15,
+    31,
+    31,
+    63
+  ],
+  "renderer_code_sha1": "4d4ca6892cfcb6380f0e2da2aeaf6230ea7be5f7"
+}

@@ -1,0 +1,462 @@
+{
+  "date": "2026-11-01",
+  "segments_sha1": "aa324eaaa041f34c3423b52b3c6f54395cd54704",
+  "code_area_capacity": 983040,
+  "formal_covered_bytes": 912454,
+  "c_integrated_count": 35,
+  "c_integrated_bytes": 1282,
+  "regions": [
+    {
+      "start": 0,
+      "end": 65536,
+      "capacity": 65536,
+      "covered": 60508,
+      "remaining": 5028,
+      "c_integrated_bytes": 440
+    },
+    {
+      "start": 65536,
+      "end": 131072,
+      "capacity": 65536,
+      "covered": 60726,
+      "remaining": 4810,
+      "c_integrated_bytes": 230
+    },
+    {
+      "start": 131072,
+      "end": 196608,
+      "capacity": 65536,
+      "covered": 60710,
+      "remaining": 4826,
+      "c_integrated_bytes": 98
+    },
+    {
+      "start": 196608,
+      "end": 262144,
+      "capacity": 65536,
+      "covered": 60758,
+      "remaining": 4778,
+      "c_integrated_bytes": 290
+    },
+    {
+      "start": 262144,
+      "end": 327680,
+      "capacity": 65536,
+      "covered": 62876,
+      "remaining": 2660,
+      "c_integrated_bytes": 18
+    },
+    {
+      "start": 327680,
+      "end": 393216,
+      "capacity": 65536,
+      "covered": 63138,
+      "remaining": 2398,
+      "c_integrated_bytes": 42
+    },
+    {
+      "start": 393216,
+      "end": 458752,
+      "capacity": 65536,
+      "covered": 63160,
+      "remaining": 2376,
+      "c_integrated_bytes": 40
+    },
+    {
+      "start": 458752,
+      "end": 524288,
+      "capacity": 65536,
+      "covered": 62848,
+      "remaining": 2688,
+      "c_integrated_bytes": 0
+    },
+    {
+      "start": 524288,
+      "end": 589824,
+      "capacity": 65536,
+      "covered": 63054,
+      "remaining": 2482,
+      "c_integrated_bytes": 86
+    },
+    {
+      "start": 589824,
+      "end": 655360,
+      "capacity": 65536,
+      "covered": 62266,
+      "remaining": 3270,
+      "c_integrated_bytes": 38
+    },
+    {
+      "start": 655360,
+      "end": 720896,
+      "capacity": 65536,
+      "covered": 61042,
+      "remaining": 4494,
+      "c_integrated_bytes": 0
+    },
+    {
+      "start": 720896,
+      "end": 786432,
+      "capacity": 65536,
+      "covered": 60116,
+      "remaining": 5420,
+      "c_integrated_bytes": 0
+    },
+    {
+      "start": 786432,
+      "end": 851968,
+      "capacity": 65536,
+      "covered": 60542,
+      "remaining": 4994,
+      "c_integrated_bytes": 0
+    },
+    {
+      "start": 851968,
+      "end": 917504,
+      "capacity": 65536,
+      "covered": 60974,
+      "remaining": 4562,
+      "c_integrated_bytes": 0
+    },
+    {
+      "start": 917504,
+      "end": 983040,
+      "capacity": 65536,
+      "covered": 49736,
+      "remaining": 15800,
+      "c_integrated_bytes": 0
+    }
+  ],
+  "research_topics": [
+    {
+      "group": "状态与资源",
+      "title": "储量槽与逐点恢复：只读语义研究",
+      "report": "semantic-resource-storage.md",
+      "status": "有局部研究；全模块总量未定",
+      "acceptance_ceiling": "该主题全部字段、容量/单位、读写入口、成功失败及边界条件有定义；相关流程可对照验证"
+    },
+    {
+      "group": "状态与资源",
+      "title": "恢复计时队列与储量转存",
+      "report": "semantic-recovery-queues.md",
+      "status": "有局部研究；全模块总量未定",
+      "acceptance_ceiling": "该主题全部字段、容量/单位、读写入口、成功失败及边界条件有定义；相关流程可对照验证"
+    },
+    {
+      "group": "状态与资源",
+      "title": "储能槽获得、项目动作码与激活流程",
+      "report": "semantic-slot-acquisition.md",
+      "status": "有局部研究；全模块总量未定",
+      "acceptance_ceiling": "该主题全部字段、容量/单位、读写入口、成功失败及边界条件有定义；相关流程可对照验证"
+    },
+    {
+      "group": "状态与资源",
+      "title": "项目持久记录、成长域与三项配置列表",
+      "report": "semantic-item-state.md",
+      "status": "有局部研究；全模块总量未定",
+      "acceptance_ceiling": "该主题全部字段、容量/单位、读写入口、成功失败及边界条件有定义；相关流程可对照验证"
+    },
+    {
+      "group": "状态与资源",
+      "title": "菜单忙碌协议、取消与项目确认边界",
+      "report": "semantic-menu-protocol.md",
+      "status": "有局部研究；全模块总量未定",
+      "acceptance_ceiling": "该主题全部字段、容量/单位、读写入口、成功失败及边界条件有定义；相关流程可对照验证"
+    },
+    {
+      "group": "状态与资源",
+      "title": "项目类别名称与成长界面文字互证",
+      "report": "semantic-menu-labels.md",
+      "status": "有局部研究；全模块总量未定",
+      "acceptance_ceiling": "该主题全部字段、容量/单位、读写入口、成功失败及边界条件有定义；相关流程可对照验证"
+    },
+    {
+      "group": "运行与脚本",
+      "title": "恢复调度、控制状态与全局模式门控",
+      "report": "semantic-runtime-gates.md",
+      "status": "有局部研究；全模块总量未定",
+      "acceptance_ceiling": "该主题入口、调度/命令状态、等待恢复、退出及异常边界有定义并对照验证"
+    },
+    {
+      "group": "运行与脚本",
+      "title": "协作式任务调度与游戏状态循环",
+      "report": "semantic-task-scheduler.md",
+      "status": "有局部研究；全模块总量未定",
+      "acceptance_ceiling": "该主题入口、调度/命令状态、等待恢复、退出及异常边界有定义并对照验证"
+    },
+    {
+      "group": "运行与脚本",
+      "title": "对象池、活动链遍历与延迟回收",
+      "report": "semantic-object-pools.md",
+      "status": "有局部研究；全模块总量未定",
+      "acceptance_ceiling": "该主题入口、调度/命令状态、等待恢复、退出及异常边界有定义并对照验证"
+    },
+    {
+      "group": "运行与脚本",
+      "title": "脚本控制字到实体按键映射",
+      "report": "semantic-script-control.md",
+      "status": "有局部研究；全模块总量未定",
+      "acceptance_ceiling": "该主题入口、调度/命令状态、等待恢复、退出及异常边界有定义并对照验证"
+    },
+    {
+      "group": "运行与脚本",
+      "title": "场景脚本解释器、等待与控制恢复",
+      "report": "semantic-scene-interpreter.md",
+      "status": "有局部研究；全模块总量未定",
+      "acceptance_ceiling": "该主题入口、调度/命令状态、等待恢复、退出及异常边界有定义并对照验证"
+    },
+    {
+      "group": "运行与脚本",
+      "title": "按键采样、边沿与逐键连发",
+      "report": "semantic-input-state.md",
+      "status": "有局部研究；全模块总量未定",
+      "acceptance_ceiling": "该主题入口、调度/命令状态、等待恢复、退出及异常边界有定义并对照验证"
+    },
+    {
+      "group": "绘制与数据",
+      "title": "对象帧、绘制桶与OAM提交",
+      "report": "semantic-object-drawing.md",
+      "status": "有局部研究；全模块总量未定",
+      "acceptance_ceiling": "该主题从输入记录到实际输出的映射、变换、容量和失败路径可验证；涉及图像时验收可辨识输出"
+    },
+    {
+      "group": "绘制与数据",
+      "title": "仿射图块定位、裁剪与OAM写入",
+      "report": "semantic-affine-piece-render.md",
+      "status": "有局部研究；全模块总量未定",
+      "acceptance_ceiling": "该主题从输入记录到实际输出的映射、变换、容量和失败路径可验证；涉及图像时验收可辨识输出"
+    },
+    {
+      "group": "绘制与数据",
+      "title": "项目文字引用、字符渲染队列与字形证据",
+      "report": "semantic-text-rendering.md",
+      "status": "有局部研究；全模块总量未定",
+      "acceptance_ceiling": "该主题从输入记录到实际输出的映射、变换、容量和失败路径可验证；涉及图像时验收可辨识输出"
+    },
+    {
+      "group": "绘制与数据",
+      "title": "图块资源描述符与延迟传输队列",
+      "report": "semantic-graphic-transfer.md",
+      "status": "有局部研究；全模块总量未定",
+      "acceptance_ceiling": "该主题从输入记录到实际输出的映射、变换、容量和失败路径可验证；涉及图像时验收可辨识输出"
+    },
+    {
+      "group": "绘制与数据",
+      "title": "调色板缓冲、软件颜色变换与成长反馈",
+      "report": "semantic-palette-feedback.md",
+      "status": "有局部研究；全模块总量未定",
+      "acceptance_ceiling": "该主题从输入记录到实际输出的映射、变换、容量和失败路径可验证；涉及图像时验收可辨识输出"
+    },
+    {
+      "group": "绘制与数据",
+      "title": "摄像机模式、跟随与震动到绘制坐标",
+      "report": "semantic-camera.md",
+      "status": "有局部研究；全模块总量未定",
+      "acceptance_ceiling": "该主题从输入记录到实际输出的映射、变换、容量和失败路径可验证；涉及图像时验收可辨识输出"
+    },
+    {
+      "group": "地图、地形和矩形",
+      "title": "地图区域分类、摄像机修正与地形网格分层",
+      "report": "semantic-map-regions.md",
+      "status": "有局部研究；全模块总量未定",
+      "acceptance_ceiling": "该主题数据布局、坐标单位、全部适用形状/方向、边界及调用者约定可验证"
+    },
+    {
+      "group": "地图、地形和矩形",
+      "title": "地形从ROM展开到RAM及运行时补丁",
+      "report": "semantic-terrain-loading.md",
+      "status": "有局部研究；全模块总量未定",
+      "acceptance_ceiling": "该主题数据布局、坐标单位、全部适用形状/方向、边界及调用者约定可验证"
+    },
+    {
+      "group": "地图、地形和矩形",
+      "title": "地形形状的标量公式与方向查询约定",
+      "report": "semantic-terrain-shapes.md",
+      "status": "有局部研究；全模块总量未定",
+      "acceptance_ceiling": "该主题数据布局、坐标单位、全部适用形状/方向、边界及调用者约定可验证"
+    },
+    {
+      "group": "地图、地形和矩形",
+      "title": "点属性查询与方向推出的形状差异",
+      "report": "semantic-point-terrain.md",
+      "status": "有局部研究；全模块总量未定",
+      "acceptance_ceiling": "该主题数据布局、坐标单位、全部适用形状/方向、边界及调用者约定可验证"
+    },
+    {
+      "group": "地图、地形和矩形",
+      "title": "水平方向地形形状响应",
+      "report": "semantic-horizontal-terrain.md",
+      "status": "有局部研究；全模块总量未定",
+      "acceptance_ceiling": "该主题数据布局、坐标单位、全部适用形状/方向、边界及调用者约定可验证"
+    },
+    {
+      "group": "地图、地形和矩形",
+      "title": "动态碰撞矩形与移动带动",
+      "report": "semantic-dynamic-rectangles.md",
+      "status": "有局部研究；全模块总量未定",
+      "acceptance_ceiling": "该主题数据布局、坐标单位、全部适用形状/方向、边界及调用者约定可验证"
+    },
+    {
+      "group": "地图、地形和矩形",
+      "title": "地形表面搜索与实体纵向纠正",
+      "report": "semantic-surface-consumers.md",
+      "status": "有局部研究；全模块总量未定",
+      "acceptance_ceiling": "该主题数据布局、坐标单位、全部适用形状/方向、边界及调用者约定可验证"
+    },
+    {
+      "group": "地图、地形和矩形",
+      "title": "特殊地形接受策略与横向追踪",
+      "report": "semantic-special-terrain-policy.md",
+      "status": "有局部研究；全模块总量未定",
+      "acceptance_ceiling": "该主题数据布局、坐标单位、全部适用形状/方向、边界及调用者约定可验证"
+    },
+    {
+      "group": "碰撞与交互",
+      "title": "实体碰撞组件与分类登记",
+      "report": "semantic-entity-collision-registry.md",
+      "status": "有局部研究；全模块总量未定",
+      "acceptance_ceiling": "该主题登记、筛选、配对、状态变化及回调链与相关边界可验证"
+    },
+    {
+      "group": "碰撞与交互",
+      "title": "实体碰撞：分类配对、预处理与定向相交边界",
+      "report": "semantic-entity-collision-pairing.md",
+      "status": "有局部研究；全模块总量未定",
+      "acceptance_ceiling": "该主题登记、筛选、配对、状态变化及回调链与相关边界可验证"
+    },
+    {
+      "group": "碰撞与交互",
+      "title": "实体碰撞相交后的属性准备、状态与回调",
+      "report": "semantic-entity-collision-resolution-interface.md",
+      "status": "有局部研究；全模块总量未定",
+      "acceptance_ceiling": "该主题登记、筛选、配对、状态变化及回调链与相关边界可验证"
+    },
+    {
+      "group": "碰撞与交互",
+      "title": "命中核心：分流、扣减公式与提交状态",
+      "report": "semantic-hit-damage.md",
+      "status": "有局部研究；全模块总量未定",
+      "acceptance_ceiling": "该主题登记、筛选、配对、状态变化及回调链与相关边界可验证"
+    },
+    {
+      "group": "碰撞与交互",
+      "title": "受击消费者、直接扣减入口与伤害评分累计",
+      "report": "semantic-hit-consumers.md",
+      "status": "有局部研究；全模块总量未定",
+      "acceptance_ceiling": "该主题登记、筛选、配对、状态变化及回调链与相关边界可验证"
+    },
+    {
+      "group": "碰撞与交互",
+      "title": "实体持续交互计数：生产、衰减与状态清除",
+      "report": "semantic-entity-interaction-counter.md",
+      "status": "有局部研究；全模块总量未定",
+      "acceptance_ceiling": "该主题登记、筛选、配对、状态变化及回调链与相关边界可验证"
+    },
+    {
+      "group": "碰撞与交互",
+      "title": "实体动作历史与交互计数的输入事件依据",
+      "report": "semantic-entity-action-history.md",
+      "status": "有局部研究；全模块总量未定",
+      "acceptance_ceiling": "该主题登记、筛选、配对、状态变化及回调链与相关边界可验证"
+    },
+    {
+      "group": "碰撞与交互",
+      "title": "输入缓冲到水平移动：历史保持、幅值与方向锁",
+      "report": "semantic-entity-buffered-movement.md",
+      "status": "有局部研究；全模块总量未定",
+      "acceptance_ceiling": "该主题登记、筛选、配对、状态变化及回调链与相关边界可验证"
+    },
+    {
+      "group": "父对象、捕获和退场",
+      "title": "创建者的四阶段协议与历史依赖退出",
+      "report": "semantic-attachment-parent-phases.md",
+      "status": "有局部研究；全模块总量未定",
+      "acceptance_ceiling": "该主题完整状态/子状态、进入退出条件、坐标关系和资源回收可验证"
+    },
+    {
+      "group": "父对象、捕获和退场",
+      "title": "父对象主状态17：九阶段往返与对准下落",
+      "report": "semantic-parent-motion-cycle.md",
+      "status": "有局部研究；全模块总量未定",
+      "acceptance_ceiling": "该主题完整状态/子状态、进入退出条件、坐标关系和资源回收可验证"
+    },
+    {
+      "group": "父对象、捕获和退场",
+      "title": "父状态17的摄像机范围与重映射地形编号查询",
+      "report": "semantic-parent-environment.md",
+      "status": "有局部研究；全模块总量未定",
+      "acceptance_ceiling": "该主题完整状态/子状态、进入退出条件、坐标关系和资源回收可验证"
+    },
+    {
+      "group": "父对象、捕获和退场",
+      "title": "573FC父对象动作选择：状态恢复、历史权重与临时覆盖",
+      "report": "semantic-parent-action-selector.md",
+      "status": "有局部研究；全模块总量未定",
+      "acceptance_ceiling": "该主题完整状态/子状态、进入退出条件、坐标关系和资源回收可验证"
+    },
+    {
+      "group": "父对象、捕获和退场",
+      "title": "父状态14的缩放桥接：直接16/17与19→17",
+      "report": "semantic-parent-form-bridge.md",
+      "status": "有局部研究；全模块总量未定",
+      "acceptance_ceiling": "该主题完整状态/子状态、进入退出条件、坐标关系和资源回收可验证"
+    },
+    {
+      "group": "父对象、捕获和退场",
+      "title": "父对象关联计数CC、接近信号DB与交接结果C1",
+      "report": "semantic-parent-associated-signals.md",
+      "status": "有局部研究；全模块总量未定",
+      "acceptance_ceiling": "该主题完整状态/子状态、进入退出条件、坐标关系和资源回收可验证"
+    },
+    {
+      "group": "父对象、捕获和退场",
+      "title": "候选坐标到碰撞捕获、等待与返程交接",
+      "report": "semantic-parent-capture-protocol.md",
+      "status": "有局部研究；全模块总量未定",
+      "acceptance_ceiling": "该主题完整状态/子状态、进入退出条件、坐标关系和资源回收可验证"
+    },
+    {
+      "group": "父对象、捕获和退场",
+      "title": "捕获对象的向外飞行、点地形停止与无目标返程",
+      "report": "semantic-parent-outbound-terrain.md",
+      "status": "有局部研究；全模块总量未定",
+      "acceptance_ceiling": "该主题完整状态/子状态、进入退出条件、坐标关系和资源回收可验证"
+    },
+    {
+      "group": "父对象、捕获和退场",
+      "title": "六段附属对象：子类型8/9的几何连接与回收",
+      "report": "semantic-parent-link-segments.md",
+      "status": "有局部研究；全模块总量未定",
+      "acceptance_ceiling": "该主题完整状态/子状态、进入退出条件、坐标关系和资源回收可验证"
+    },
+    {
+      "group": "父对象、捕获和退场",
+      "title": "附着对象的创建、飞行、计时与所属关系",
+      "report": "semantic-attachment-lifecycle.md",
+      "status": "有局部研究；全模块总量未定",
+      "acceptance_ceiling": "该主题完整状态/子状态、进入退出条件、坐标关系和资源回收可验证"
+    },
+    {
+      "group": "父对象、捕获和退场",
+      "title": "附着对象退场、池回收与槽位再利用",
+      "report": "semantic-attachment-retirement.md",
+      "status": "有局部研究；全模块总量未定",
+      "acceptance_ceiling": "该主题完整状态/子状态、进入退出条件、坐标关系和资源回收可验证"
+    },
+    {
+      "group": "本次修补后的权威解释",
+      "title": "对象类型必须由池句柄、类型表和编号共同确定",
+      "report": "semantic-entity-type-scope.md",
+      "status": "6个工厂、36组执行已验证；其余类型未普查",
+      "acceptance_ceiling": "本次六工厂作用域纠错已验收；全对象系统还需逐池建立完整类型表与生命周期清单"
+    },
+    {
+      "group": "本次修补后的权威解释",
+      "title": "图像链审计：已验证传输与尚未完成的像素还原",
+      "report": "semantic-render-pipeline-audit.md",
+      "status": "256组队列＋2组调色板控制；未验收像素输出",
+      "acceptance_ceiling": "当前控制流纠错已验收；完整图像链仍需真实映射、解码、调色板和拼合输出验证"
+    }
+  ],
+  "semantic_completion_denominator": null
+}

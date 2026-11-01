@@ -1,0 +1,13 @@
+# ROM 与生成物不入库
+*.gba
+*.sav
+*.sgm
+*.7z
+analysis/samples/
+extracted/
+build/
+tools/bin/
+funcdb.json
+__pycache__/
+tools/agbcc/
+assets/

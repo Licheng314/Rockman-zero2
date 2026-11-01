@@ -1,0 +1,15 @@
+{
+ "sha1": "c4d93a58f0f82c526dec8a3fdbda170336303689",
+ "lib72": {
+  "array": "0x08431CAC",
+  "entries": 29,
+  "frames": "0x00-0x23 (36 帧 Boss 精灵)",
+  "usage": "0x7200-0x7212/0x721C 由类型 0x36 相位引用"
+ },
+ "lib62": {
+  "array": "0x08431710",
+  "entries": 4,
+  "usage": "启动组(init 小动画: 帧0x00 保持+0x1A 循环)"
+ },
+ "format": "(时长<<8)|帧号 + 0xFF00 保持 + 0xFE00 跳转(与 anim-sequence-stepper 一致)"
+}

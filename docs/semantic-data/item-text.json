@@ -1,0 +1,1386 @@
+{
+  "baseline_sha1": "c4d93a58f0f82c526dec8a3fdbda170336303689",
+  "offset_table": "0x0834C47C",
+  "text_base": "0x0834C9E4",
+  "mapping_status": "Latin letters, digits and space visually checked against glyph pixels using DE318 addressing. Unknown glyphs retained as tokens. Renderer controls follow DE818; no dynamic RAM strings resolved.",
+  "glyph_evidence": "font-latin-evidence.png",
+  "records": [
+    {
+      "item_id": 1,
+      "name": {
+        "reference_id": 100,
+        "rom_address": "0x0834CF66",
+        "raw_hex": "11 36 25 32 28 2d 29 ff",
+        "decoded": "Grandie",
+        "terminator": "FF"
+      },
+      "description": {
+        "reference_id": 200,
+        "rom_address": "0x0834D1EE",
+        "raw_hex": "13 00 28 33 39 26 30 29 fc 3d 33 39 36 fc 3a 2d 38 25 30 2d 38 3d e2 ff",
+        "decoded": "I double\nyour\nvitality<GLYPH_E2>",
+        "terminator": "FF"
+      }
+    },
+    {
+      "item_id": 2,
+      "name": {
+        "reference_id": 101,
+        "rom_address": "0x0834CF6E",
+        "raw_hex": "23 29 34 34 2d 29 ff",
+        "decoded": "Yeppie",
+        "terminator": "FF"
+      },
+      "description": {
+        "reference_id": 201,
+        "rom_address": "0x0834D206",
+        "raw_hex": "13 00 2d 32 27 36 29 25 37 29 fc 3a 2d 38 25 30 2d 38 3d fc 37 30 2d 2b 2c 38 30 3d e2 ff",
+        "decoded": "I increase\nvitality\nslightly<GLYPH_E2>",
+        "terminator": "FF"
+      }
+    },
+    {
+      "item_id": 3,
+      "name": {
+        "reference_id": 102,
+        "rom_address": "0x0834CF75",
+        "raw_hex": "10 39 34 34 2d 29 ff",
+        "decoded": "Fuppie",
+        "terminator": "FF"
+      },
+      "description": {
+        "reference_id": 202,
+        "rom_address": "0x0834D224",
+        "raw_hex": "23 33 39 00 3b 25 32 38 fc 37 33 31 29 00 31 33 36 29 fc 3a 2d 38 25 30 2d 38 3d f0 08 ff",
+        "decoded": "You want\nsome more\nvitality<GLYPH_0F8>",
+        "terminator": "FF"
+      }
+    },
+    {
+      "item_id": 4,
+      "name": {
+        "reference_id": 103,
+        "rom_address": "0x0834CF7C",
+        "raw_hex": "17 25 34 34 2d 29 ff",
+        "decoded": "Mappie",
+        "terminator": "FF"
+      },
+      "description": {
+        "reference_id": 203,
+        "rom_address": "0x0834D242",
+        "raw_hex": "13 00 27 25 32 fc 26 33 33 37 38 00 3d 33 39 36 fc 3a 2d 38 25 30 2d 38 3d e2 ff",
+        "decoded": "I can\nboost your\nvitality<GLYPH_E2>",
+        "terminator": "FF"
+      }
+    },
+    {
+      "item_id": 5,
+      "name": {
+        "reference_id": 104,
+        "rom_address": "0x0834CF83",
+        "raw_hex": "0f 39 34 34 2d 29 ff",
+        "decoded": "Euppie",
+        "terminator": "FF"
+      },
+      "description": {
+        "reference_id": 204,
+        "rom_address": "0x0834D25D",
+        "raw_hex": "1d 25 27 36 2d 2a 2d 27 29 fc 31 29 00 2a 33 36 fc 3a 2d 38 25 30 2d 38 3d e2 ff",
+        "decoded": "Sacrifice\nme for\nvitality<GLYPH_E2>",
+        "terminator": "FF"
+      }
+    },
+    {
+      "item_id": 6,
+      "name": {
+        "reference_id": 105,
+        "rom_address": "0x0834CF8A",
+        "raw_hex": "0f 37 38 25 32 ff",
+        "decoded": "Estan",
+        "terminator": "FF"
+      },
+      "description": {
+        "reference_id": 205,
+        "rom_address": "0x0834D278",
+        "raw_hex": "13 00 38 39 36 32 fc 2d 32 38 33 00 25 fc 1d 39 26 00 1e 25 32 2f e2 ff",
+        "decoded": "I turn\ninto a\nSub Tank<GLYPH_E2>",
+        "terminator": "FF"
+      }
+    },
+    {
+      "item_id": 7,
+      "name": {
+        "reference_id": 106,
+        "rom_address": "0x0834CF90",
+        "raw_hex": "1a 29 25 38 25 32 ff",
+        "decoded": "Peatan",
+        "terminator": "FF"
+      },
+      "description": {
+        "reference_id": 206,
+        "rom_address": "0x0834D290",
+        "raw_hex": "13 00 27 25 32 00 26 29 fc 3d 33 39 36 fc 1d 39 26 00 1e 25 32 2f e2 ff",
+        "decoded": "I can be\nyour\nSub Tank<GLYPH_E2>",
+        "terminator": "FF"
+      }
+    },
+    {
+      "item_id": 8,
+      "name": {
+        "reference_id": 107,
+        "rom_address": "0x0834CF97",
+        "raw_hex": "0b 36 32 39 29 ff",
+        "decoded": "Arnue",
+        "terminator": "FF"
+      },
+      "description": {
+        "reference_id": 207,
+        "rom_address": "0x0834D2A8",
+        "raw_hex": "13 eb 30 30 00 2b 2d 3a 29 fc 3d 33 39 00 38 3b 33 fc 27 33 32 38 2d 32 39 29 37 e2 ff",
+        "decoded": "I<GLYPH_EB>ll give\nyou two\ncontinues<GLYPH_E2>",
+        "terminator": "FF"
+      }
+    },
+    {
+      "item_id": 9,
+      "name": {
+        "reference_id": 108,
+        "rom_address": "0x0834CF9D",
+        "raw_hex": "0d 2c 25 36 32 39 29 ff",
+        "decoded": "Charnue",
+        "terminator": "FF"
+      },
+      "description": {
+        "reference_id": 208,
+        "rom_address": "0x0834D2C5",
+        "raw_hex": "13 eb 30 30 00 2b 2d 3a 29 fc 3d 33 39 00 38 3b 33 fc 27 33 32 38 2d 32 39 29 37 e2 ff",
+        "decoded": "I<GLYPH_EB>ll give\nyou two\ncontinues<GLYPH_E2>",
+        "terminator": "FF"
+      }
+    },
+    {
+      "item_id": 10,
+      "name": {
+        "reference_id": 109,
+        "rom_address": "0x0834CFA5",
+        "raw_hex": "15 29 36 29 2a 2a ff",
+        "decoded": "Kereff",
+        "terminator": "FF"
+      },
+      "description": {
+        "reference_id": 209,
+        "rom_address": "0x0834D2E2",
+        "raw_hex": "13 00 27 25 32 00 37 33 36 38 fc 33 2a 00 36 29 37 38 33 36 29 fc 3a 2d 38 25 30 2d 38 3d e2 ff",
+        "decoded": "I can sort\nof restore\nvitality<GLYPH_E2>",
+        "terminator": "FF"
+      }
+    },
+    {
+      "item_id": 11,
+      "name": {
+        "reference_id": 110,
+        "rom_address": "0x0834CFAC",
+        "raw_hex": "1c 2d 36 29 2a 2a ff",
+        "decoded": "Rireff",
+        "terminator": "FF"
+      },
+      "description": {
+        "reference_id": 210,
+        "rom_address": "0x0834D302",
+        "raw_hex": "1f 37 29 00 31 3d fc 29 32 29 36 2b 3d 00 2a 33 36 fc 3a 2d 38 25 30 2d 38 3d e2 ff",
+        "decoded": "Use my\nenergy for\nvitality<GLYPH_E2>",
+        "terminator": "FF"
+      }
+    },
+    {
+      "item_id": 12,
+      "name": {
+        "reference_id": 111,
+        "rom_address": "0x0834CFB3",
+        "raw_hex": "17 39 36 29 2a 2a ff",
+        "decoded": "Mureff",
+        "terminator": "FF"
+      },
+      "description": {
+        "reference_id": 211,
+        "rom_address": "0x0834D31E",
+        "raw_hex": "13 00 27 25 32 00 2b 2d 3a 29 fc 25 00 30 2d 38 38 30 29 fc 3a 2d 38 25 30 2d 38 3d e2 ff",
+        "decoded": "I can give\na little\nvitality<GLYPH_E2>",
+        "terminator": "FF"
+      }
+    },
+    {
+      "item_id": 13,
+      "name": {
+        "reference_id": 112,
+        "rom_address": "0x0834CFBA",
+        "raw_hex": "18 39 36 29 2a 2a ff",
+        "decoded": "Nureff",
+        "terminator": "FF"
+      },
+      "description": {
+        "reference_id": 212,
+        "rom_address": "0x0834D33C",
+        "raw_hex": "13 00 27 25 32 fc 2c 29 30 34 00 3d 33 39 36 fc 3b 33 39 32 28 e2 ff",
+        "decoded": "I can\nhelp your\nwound<GLYPH_E2>",
+        "terminator": "FF"
+      }
+    },
+    {
+      "item_id": 14,
+      "name": {
+        "reference_id": 113,
+        "rom_address": "0x0834CFC1",
+        "raw_hex": "19 36 29 2a 2a ff",
+        "decoded": "Oreff",
+        "terminator": "FF"
+      },
+      "description": {
+        "reference_id": 213,
+        "rom_address": "0x0834D353",
+        "raw_hex": "13 00 27 25 32 00 2c 29 25 30 fc 3d 33 39 fc 37 30 2d 2b 2c 38 30 3d e2 ff",
+        "decoded": "I can heal\nyou\nslightly<GLYPH_E2>",
+        "terminator": "FF"
+      }
+    },
+    {
+      "item_id": 15,
+      "name": {
+        "reference_id": 114,
+        "rom_address": "0x0834CFC7",
+        "raw_hex": "1a 2d 36 29 2a 2a ff",
+        "decoded": "Pireff",
+        "terminator": "FF"
+      },
+      "description": {
+        "reference_id": 214,
+        "rom_address": "0x0834D36C",
+        "raw_hex": "23 33 39 00 3b 25 32 38 fc 31 29 00 38 33 00 2c 29 30 34 fc 27 39 36 29 00 3d 33 39 f0 08 ff",
+        "decoded": "You want\nme to help\ncure you<GLYPH_0F8>",
+        "terminator": "FF"
+      }
+    },
+    {
+      "item_id": 16,
+      "name": {
+        "reference_id": 115,
+        "rom_address": "0x0834CFCE",
+        "raw_hex": "0f 31 2d 27 2f ff",
+        "decoded": "Emick",
+        "terminator": "FF"
+      },
+      "description": {
+        "reference_id": 215,
+        "rom_address": "0x0834D38B",
+        "raw_hex": "13 00 27 25 32 00 27 39 36 29 fc 3d 33 39 00 2a 39 30 30 3d e5 ff",
+        "decoded": "I can cure\nyou fully<GLYPH_E5>",
+        "terminator": "FF"
+      }
+    },
+    {
+      "item_id": 17,
+      "name": {
+        "reference_id": 116,
+        "rom_address": "0x0834CFD4",
+        "raw_hex": "1d 25 38 2d 27 2f ff",
+        "decoded": "Satick",
+        "terminator": "FF"
+      },
+      "description": {
+        "reference_id": 216,
+        "rom_address": "0x0834D3A1",
+        "raw_hex": "23 33 39 00 3b 25 32 38 fc 31 29 00 38 33 00 27 39 36 29 fc 3d 33 39 00 2a 39 30 30 3d f0 08 ff",
+        "decoded": "You want\nme to cure\nyou fully<GLYPH_0F8>",
+        "terminator": "FF"
+      }
+    },
+    {
+      "item_id": 18,
+      "name": {
+        "reference_id": 117,
+        "rom_address": "0x0834CFDB",
+        "raw_hex": "1a 25 36 2d 27 2f ff",
+        "decoded": "Parick",
+        "terminator": "FF"
+      },
+      "description": {
+        "reference_id": 217,
+        "rom_address": "0x0834D3C1",
+        "raw_hex": "17 3d 00 34 33 3b 29 36 fc 3b 2d 30 30 00 37 25 3a 29 fc 3d 33 39 e2 ff",
+        "decoded": "My power\nwill save\nyou<GLYPH_E2>",
+        "terminator": "FF"
+      }
+    },
+    {
+      "item_id": 19,
+      "name": {
+        "reference_id": 118,
+        "rom_address": "0x0834CFE2",
+        "raw_hex": "17 2d 38 2d 27 2f ff",
+        "decoded": "Mitick",
+        "terminator": "FF"
+      },
+      "description": {
+        "reference_id": 218,
+        "rom_address": "0x0834D3D9",
+        "raw_hex": "13 38 eb 37 00 31 3d fc 28 39 38 3d 00 38 33 fc 2c 29 25 30 00 3d 33 39 e2 ff",
+        "decoded": "It<GLYPH_EB>s my\nduty to\nheal you<GLYPH_E2>",
+        "terminator": "FF"
+      }
+    },
+    {
+      "item_id": 20,
+      "name": {
+        "reference_id": 119,
+        "rom_address": "0x0834CFE9",
+        "raw_hex": "13 37 2c 2d 30 25 36 ff",
+        "decoded": "Ishilar",
+        "terminator": "FF"
+      },
+      "description": {
+        "reference_id": 219,
+        "rom_address": "0x0834D3F3",
+        "raw_hex": "13 00 27 2c 25 32 2b 29 fc 26 39 30 30 29 38 37 00 38 33 fc 3a 2d 38 25 30 2d 38 3d e2 ff",
+        "decoded": "I change\nbullets to\nvitality<GLYPH_E2>",
+        "terminator": "FF"
+      }
+    },
+    {
+      "item_id": 21,
+      "name": {
+        "reference_id": 120,
+        "rom_address": "0x0834CFF1",
+        "raw_hex": "1e 33 31 2d 30 25 36 ff",
+        "decoded": "Tomilar",
+        "terminator": "FF"
+      },
+      "description": {
+        "reference_id": 220,
+        "rom_address": "0x0834D411",
+        "raw_hex": "13 00 27 2c 25 32 2b 29 fc 26 39 30 30 29 38 37 00 38 33 fc 3a 2d 38 25 30 2d 38 3d e2 ff",
+        "decoded": "I change\nbullets to\nvitality<GLYPH_E2>",
+        "terminator": "FF"
+      }
+    },
+    {
+      "item_id": 22,
+      "name": {
+        "reference_id": 121,
+        "rom_address": "0x0834CFF9",
+        "raw_hex": "17 2d 2f 2d 30 25 36 ff",
+        "decoded": "Mikilar",
+        "terminator": "FF"
+      },
+      "description": {
+        "reference_id": 221,
+        "rom_address": "0x0834D42F",
+        "raw_hex": "13 eb 30 30 fc 27 33 32 3a 29 36 38 fc 26 39 30 30 29 38 37 e2 ff",
+        "decoded": "I<GLYPH_EB>ll\nconvert\nbullets<GLYPH_E2>",
+        "terminator": "FF"
+      }
+    },
+    {
+      "item_id": 23,
+      "name": {
+        "reference_id": 122,
+        "rom_address": "0x0834D001",
+        "raw_hex": "1c 29 31 2d 30 25 36 ff",
+        "decoded": "Remilar",
+        "terminator": "FF"
+      },
+      "description": {
+        "reference_id": 222,
+        "rom_address": "0x0834D445",
+        "raw_hex": "1e 2c 29 00 2c 2d 38 37 00 13 fc 38 25 2f 29 00 3b 2d 30 30 fc 2c 29 25 30 00 3d 33 39 e2 ff",
+        "decoded": "The hits I\ntake will\nheal you<GLYPH_E2>",
+        "terminator": "FF"
+      }
+    },
+    {
+      "item_id": 24,
+      "name": {
+        "reference_id": 123,
+        "rom_address": "0x0834D009",
+        "raw_hex": "0d 39 30 33 34 34 29 ff",
+        "decoded": "Culoppe",
+        "terminator": "FF"
+      },
+      "description": {
+        "reference_id": 223,
+        "rom_address": "0x0834D464",
+        "raw_hex": "13 eb 30 30 00 2a 30 3d fc 28 36 33 34 00 37 33 31 29 fc 2d 38 29 31 37 e2 ff",
+        "decoded": "I<GLYPH_EB>ll fly\ndrop some\nitems<GLYPH_E2>",
+        "terminator": "FF"
+      }
+    },
+    {
+      "item_id": 25,
+      "name": {
+        "reference_id": 124,
+        "rom_address": "0x0834D011",
+        "raw_hex": "17 2d 30 33 34 34 29 ff",
+        "decoded": "Miloppe",
+        "terminator": "FF"
+      },
+      "description": {
+        "reference_id": 224,
+        "rom_address": "0x0834D47E",
+        "raw_hex": "13 eb 30 30 fc 37 27 25 38 38 29 36 00 25 fc 2a 29 3b 00 2d 38 29 31 37 e2 ff",
+        "decoded": "I<GLYPH_EB>ll\nscatter a\nfew items<GLYPH_E2>",
+        "terminator": "FF"
+      }
+    },
+    {
+      "item_id": 26,
+      "name": {
+        "reference_id": 125,
+        "rom_address": "0x0834D019",
+        "raw_hex": "17 29 30 33 34 34 29 ff",
+        "decoded": "Meloppe",
+        "terminator": "FF"
+      },
+      "description": {
+        "reference_id": 225,
+        "rom_address": "0x0834D498",
+        "raw_hex": "13 eb 30 30 fc 37 27 25 38 38 29 36 00 25 fc 2a 29 3b 00 2d 38 29 31 37 e2 ff",
+        "decoded": "I<GLYPH_EB>ll\nscatter a\nfew items<GLYPH_E2>",
+        "terminator": "FF"
+      }
+    },
+    {
+      "item_id": 27,
+      "name": {
+        "reference_id": 126,
+        "rom_address": "0x0834D021",
+        "raw_hex": "1c 29 30 33 34 34 29 ff",
+        "decoded": "Reloppe",
+        "terminator": "FF"
+      },
+      "description": {
+        "reference_id": 226,
+        "rom_address": "0x0834D4B2",
+        "raw_hex": "13 eb 30 30 00 2b 2d 3a 29 fc 3d 33 39 00 37 33 31 29 fc 2d 38 29 31 37 e2 ff",
+        "decoded": "I<GLYPH_EB>ll give\nyou some\nitems<GLYPH_E2>",
+        "terminator": "FF"
+      }
+    },
+    {
+      "item_id": 28,
+      "name": {
+        "reference_id": 127,
+        "rom_address": "0x0834D029",
+        "raw_hex": "1a 39 38 2d 27 2f ff",
+        "decoded": "Putick",
+        "terminator": "FF"
+      },
+      "description": {
+        "reference_id": 227,
+        "rom_address": "0x0834D4CC",
+        "raw_hex": "13 00 2c 29 30 34 00 2d 32 fc 38 2c 29 00 2a 25 38 25 30 fc 3e 33 32 29 e2 ff",
+        "decoded": "I help in\nthe fatal\nzone<GLYPH_E2>",
+        "terminator": "FF"
+      }
+    },
+    {
+      "item_id": 29,
+      "name": {
+        "reference_id": 128,
+        "rom_address": "0x0834D030",
+        "raw_hex": "14 29 38 38 25 2c ff",
+        "decoded": "Jettah",
+        "terminator": "FF"
+      },
+      "description": {
+        "reference_id": 228,
+        "rom_address": "0x0834D4E6",
+        "raw_hex": "13 eb 30 30 00 38 29 25 27 2c fc 3d 33 39 00 2c 33 3b 00 38 33 fc 36 39 32 00 2a 25 37 38 e2 ff",
+        "decoded": "I<GLYPH_EB>ll teach\nyou how to\nrun fast<GLYPH_E2>",
+        "terminator": "FF"
+      }
+    },
+    {
+      "item_id": 30,
+      "name": {
+        "reference_id": 129,
+        "rom_address": "0x0834D037",
+        "raw_hex": "0b 38 38 2d ff",
+        "decoded": "Atti",
+        "terminator": "FF"
+      },
+      "description": {
+        "reference_id": 229,
+        "rom_address": "0x0834D506",
+        "raw_hex": "0d 30 2d 31 26 2d 32 2b fc 2d 37 00 31 3d fc 37 34 29 27 2d 25 30 38 3d e5 ff",
+        "decoded": "Climbing\nis my\nspecialty<GLYPH_E5>",
+        "terminator": "FF"
+      }
+    },
+    {
+      "item_id": 31,
+      "name": {
+        "reference_id": 130,
+        "rom_address": "0x0834D03C",
+        "raw_hex": "15 29 30 33 32 ff",
+        "decoded": "Kelon",
+        "terminator": "FF"
+      },
+      "description": {
+        "reference_id": 230,
+        "rom_address": "0x0834D520",
+        "raw_hex": "13 eb 30 30 00 2c 29 30 34 fc 3d 33 39 00 28 29 2a 3d fc 2b 36 25 3a 2d 38 3d e5 ff",
+        "decoded": "I<GLYPH_EB>ll help\nyou defy\ngravity<GLYPH_E5>",
+        "terminator": "FF"
+      }
+    },
+    {
+      "item_id": 32,
+      "name": {
+        "reference_id": 131,
+        "rom_address": "0x0834D042",
+        "raw_hex": "10 39 26 39 2a 2a 25 ff",
+        "decoded": "Fubuffa",
+        "terminator": "FF"
+      },
+      "description": {
+        "reference_id": 231,
+        "rom_address": "0x0834D53C",
+        "raw_hex": "23 33 39 eb 30 30 fc 32 29 3a 29 36 00 2a 25 30 30 fc 3b 2d 38 2c 00 31 29 e5 ff",
+        "decoded": "You<GLYPH_EB>ll\nnever fall\nwith me<GLYPH_E5>",
+        "terminator": "FF"
+      }
+    },
+    {
+      "item_id": 33,
+      "name": {
+        "reference_id": 132,
+        "rom_address": "0x0834D04A",
+        "raw_hex": "0c 2d 36 3b 2d 32 ff",
+        "decoded": "Birwin",
+        "terminator": "FF"
+      },
+      "description": {
+        "reference_id": 232,
+        "rom_address": "0x0834D557",
+        "raw_hex": "13 eb 30 30 00 37 25 3a 29 fc 3d 33 39 00 2a 33 36 31 00 25 fc 34 2d 38 e2 ff",
+        "decoded": "I<GLYPH_EB>ll save\nyou form a\npit<GLYPH_E2>",
+        "terminator": "FF"
+      }
+    },
+    {
+      "item_id": 34,
+      "name": {
+        "reference_id": 133,
+        "rom_address": "0x0834D051",
+        "raw_hex": "0c 2d 36 25 29 36 33 ff",
+        "decoded": "Biraero",
+        "terminator": "FF"
+      },
+      "description": {
+        "reference_id": 233,
+        "rom_address": "0x0834D571",
+        "raw_hex": "13 00 31 39 37 38 fc 37 25 3a 29 00 38 2c 33 37 29 fc 3b 2c 33 00 2a 25 30 30 e5 ff",
+        "decoded": "I must\nsave those\nwho fall<GLYPH_E5>",
+        "terminator": "FF"
+      }
+    },
+    {
+      "item_id": 35,
+      "name": {
+        "reference_id": 134,
+        "rom_address": "0x0834D059",
+        "raw_hex": "0c 2d 36 27 25 36 36 3d ff",
+        "decoded": "Bircarry",
+        "terminator": "FF"
+      },
+      "description": {
+        "reference_id": 234,
+        "rom_address": "0x0834D58D",
+        "raw_hex": "13 eb 30 30 00 37 25 3a 29 fc 3d 33 39 00 2a 33 36 31 00 25 fc 34 2d 38 00 2a 25 30 30 e5 ff",
+        "decoded": "I<GLYPH_EB>ll save\nyou form a\npit fall<GLYPH_E5>",
+        "terminator": "FF"
+      }
+    },
+    {
+      "item_id": 36,
+      "name": {
+        "reference_id": 135,
+        "rom_address": "0x0834D062",
+        "raw_hex": "0c 2d 36 2c 25 32 2b ff",
+        "decoded": "Birhang",
+        "terminator": "FF"
+      },
+      "description": {
+        "reference_id": 235,
+        "rom_address": "0x0834D5AC",
+        "raw_hex": "13 eb 30 30 00 2c 29 30 34 fc 3d 33 39 00 33 39 38 00 33 2a fc 25 00 2c 33 30 29 e2 ff",
+        "decoded": "I<GLYPH_EB>ll help\nyou out of\na hole<GLYPH_E2>",
+        "terminator": "FF"
+      }
+    },
+    {
+      "item_id": 37,
+      "name": {
+        "reference_id": 136,
+        "rom_address": "0x0834D06A",
+        "raw_hex": "0c 2d 36 2a 30 33 3b ff",
+        "decoded": "Birflow",
+        "terminator": "FF"
+      },
+      "description": {
+        "reference_id": 236,
+        "rom_address": "0x0834D5C9",
+        "raw_hex": "13 eb 30 30 00 2b 29 38 fc 3d 33 39 00 33 39 38 00 33 2a fc 25 32 3d 00 34 2d 38 e5 ff",
+        "decoded": "I<GLYPH_EB>ll get\nyou out of\nany pit<GLYPH_E5>",
+        "terminator": "FF"
+      }
+    },
+    {
+      "item_id": 38,
+      "name": {
+        "reference_id": 137,
+        "rom_address": "0x0834D072",
+        "raw_hex": "0c 2d 36 2c 29 30 34 ff",
+        "decoded": "Birhelp",
+        "terminator": "FF"
+      },
+      "description": {
+        "reference_id": 237,
+        "rom_address": "0x0834D5E6",
+        "raw_hex": "13 eb 30 30 00 2c 29 30 34 fc 3d 33 39 00 33 39 38 00 33 2a fc 25 32 3d 00 2c 33 30 29 e2 ff",
+        "decoded": "I<GLYPH_EB>ll help\nyou out of\nany hole<GLYPH_E2>",
+        "terminator": "FF"
+      }
+    },
+    {
+      "item_id": 39,
+      "name": {
+        "reference_id": 138,
+        "rom_address": "0x0834D07A",
+        "raw_hex": "0c 29 29 37 39 30 38 ff",
+        "decoded": "Beesult",
+        "terminator": "FF"
+      },
+      "description": {
+        "reference_id": 238,
+        "rom_address": "0x0834D605",
+        "raw_hex": "13 eb 30 30 00 2b 2d 3a 29 fc 3d 33 39 00 27 33 3a 29 36 fc 2a 2d 36 29 e2 ff",
+        "decoded": "I<GLYPH_EB>ll give\nyou cover\nfire<GLYPH_E2>",
+        "terminator": "FF"
+      }
+    },
+    {
+      "item_id": 40,
+      "name": {
+        "reference_id": 139,
+        "rom_address": "0x0834D082",
+        "raw_hex": "0c 29 29 37 2c 33 38 ff",
+        "decoded": "Beeshot",
+        "terminator": "FF"
+      },
+      "description": {
+        "reference_id": 239,
+        "rom_address": "0x0834D61F",
+        "raw_hex": "13 eb 30 30 00 2c 29 30 34 fc 3d 33 39 00 2a 2d 2b 2c 38 fc 29 32 29 31 2d 29 37 e2 ff",
+        "decoded": "I<GLYPH_EB>ll help\nyou fight\nenemies<GLYPH_E2>",
+        "terminator": "FF"
+      }
+    },
+    {
+      "item_id": 41,
+      "name": {
+        "reference_id": 140,
+        "rom_address": "0x0834D08A",
+        "raw_hex": "0c 29 29 37 38 2d 32 ff",
+        "decoded": "Beestin",
+        "terminator": "FF"
+      },
+      "description": {
+        "reference_id": 240,
+        "rom_address": "0x0834D63C",
+        "raw_hex": "17 3d 00 3b 29 25 34 33 32 fc 3b 2d 30 30 00 2b 2d 3a 29 fc 3d 33 39 00 27 33 3a 29 36 e2 ff",
+        "decoded": "My weapon\nwill give\nyou cover<GLYPH_E2>",
+        "terminator": "FF"
+      }
+    },
+    {
+      "item_id": 42,
+      "name": {
+        "reference_id": 141,
+        "rom_address": "0x0834D092",
+        "raw_hex": "0c 29 29 26 2d 38 29 ff",
+        "decoded": "Beebite",
+        "terminator": "FF"
+      },
+      "description": {
+        "reference_id": 241,
+        "rom_address": "0x0834D65B",
+        "raw_hex": "13 eb 30 30 00 37 2c 33 33 38 fc 25 38 00 3d 33 39 36 fc 25 38 38 25 27 2f 29 36 37 e2 ff",
+        "decoded": "I<GLYPH_EB>ll shoot\nat your\nattackers<GLYPH_E2>",
+        "terminator": "FF"
+      }
+    },
+    {
+      "item_id": 43,
+      "name": {
+        "reference_id": 142,
+        "rom_address": "0x0834D09A",
+        "raw_hex": "0c 29 29 2c 2d 38 38 ff",
+        "decoded": "Beehitt",
+        "terminator": "FF"
+      },
+      "description": {
+        "reference_id": 242,
+        "rom_address": "0x0834D679",
+        "raw_hex": "13 eb 30 30 fc 34 36 33 3a 2d 28 29 fc 26 25 27 2f 39 34 e2 ff",
+        "decoded": "I<GLYPH_EB>ll\nprovide\nbackup<GLYPH_E2>",
+        "terminator": "FF"
+      }
+    },
+    {
+      "item_id": 44,
+      "name": {
+        "reference_id": 143,
+        "rom_address": "0x0834D0A2",
+        "raw_hex": "0c 29 29 2a 2d 36 29 ff",
+        "decoded": "Beefire",
+        "terminator": "FF"
+      },
+      "description": {
+        "reference_id": 243,
+        "rom_address": "0x0834D68E",
+        "raw_hex": "17 3d 00 26 39 30 30 29 38 37 fc 34 36 33 3a 2d 28 29 fc 26 25 27 2f 39 34 e2 ff",
+        "decoded": "My bullets\nprovide\nbackup<GLYPH_E2>",
+        "terminator": "FF"
+      }
+    },
+    {
+      "item_id": 45,
+      "name": {
+        "reference_id": 144,
+        "rom_address": "0x0834D0AA",
+        "raw_hex": "0c 29 29 30 25 32 27 2c ff",
+        "decoded": "Beelanch",
+        "terminator": "FF"
+      },
+      "description": {
+        "reference_id": 244,
+        "rom_address": "0x0834D6A9",
+        "raw_hex": "13 eb 30 30 00 27 33 3a 29 36 fc 3d 33 39 e5 ff",
+        "decoded": "I<GLYPH_EB>ll cover\nyou<GLYPH_E5>",
+        "terminator": "FF"
+      }
+    },
+    {
+      "item_id": 46,
+      "name": {
+        "reference_id": 145,
+        "rom_address": "0x0834D0B3",
+        "raw_hex": "0c 29 29 30 30 29 38 ff",
+        "decoded": "Beellet",
+        "terminator": "FF"
+      },
+      "description": {
+        "reference_id": 245,
+        "rom_address": "0x0834D6B9",
+        "raw_hex": "1f 37 29 00 31 29 e4 2d 2a fc 3d 33 39 00 32 29 29 28 fc 26 25 27 2f 00 39 34 e2 ff",
+        "decoded": "Use me<GLYPH_E4>if\nyou need\nback up<GLYPH_E2>",
+        "terminator": "FF"
+      }
+    },
+    {
+      "item_id": 47,
+      "name": {
+        "reference_id": 146,
+        "rom_address": "0x0834D0BB",
+        "raw_hex": "1d 38 2d 27 2f 25 2c ff",
+        "decoded": "Stickah",
+        "terminator": "FF"
+      },
+      "description": {
+        "reference_id": 246,
+        "rom_address": "0x0834D6D5",
+        "raw_hex": "13 00 37 38 39 32 fc 27 29 36 38 25 2d 32 fc 29 32 29 31 2d 29 37 e2 ff",
+        "decoded": "I stun\ncertain\nenemies<GLYPH_E2>",
+        "terminator": "FF"
+      }
+    },
+    {
+      "item_id": 48,
+      "name": {
+        "reference_id": 147,
+        "rom_address": "0x0834D0C3",
+        "raw_hex": "1d 38 2d 27 2f 33 33 ff",
+        "decoded": "Stickoo",
+        "terminator": "FF"
+      },
+      "description": {
+        "reference_id": 247,
+        "rom_address": "0x0834D6ED",
+        "raw_hex": "13 00 27 25 32 00 37 38 39 32 fc 27 29 36 38 25 2d 32 fc 29 32 29 31 2d 29 37 e2 ff",
+        "decoded": "I can stun\ncertain\nenemies<GLYPH_E2>",
+        "terminator": "FF"
+      }
+    },
+    {
+      "item_id": 49,
+      "name": {
+        "reference_id": 148,
+        "rom_address": "0x0834D0CB",
+        "raw_hex": "1d 38 2d 27 2f 2d 29 ff",
+        "decoded": "Stickie",
+        "terminator": "FF"
+      },
+      "description": {
+        "reference_id": 248,
+        "rom_address": "0x0834D709",
+        "raw_hex": "23 33 39 36 00 29 32 29 31 3d fc 27 25 32 eb 38 fc 37 2c 25 2f 29 00 31 29 e5 ff",
+        "decoded": "Your enemy\ncan<GLYPH_EB>t\nshake me<GLYPH_E5>",
+        "terminator": "FF"
+      }
+    },
+    {
+      "item_id": 50,
+      "name": {
+        "reference_id": 149,
+        "rom_address": "0x0834D0D3",
+        "raw_hex": "1d 38 2d 27 2f 33 2c ff",
+        "decoded": "Stickoh",
+        "terminator": "FF"
+      },
+      "description": {
+        "reference_id": 249,
+        "rom_address": "0x0834D724",
+        "raw_hex": "1f 37 29 00 31 29 00 38 33 fc 37 38 39 32 00 3d 33 39 36 fc 29 32 29 31 2d 29 37 e2 ff",
+        "decoded": "Use me to\nstun your\nenemies<GLYPH_E2>",
+        "terminator": "FF"
+      }
+    },
+    {
+      "item_id": 51,
+      "name": {
+        "reference_id": 150,
+        "rom_address": "0x0834D0DB",
+        "raw_hex": "0c 33 31 2b 36 33 3b ff",
+        "decoded": "Bomgrow",
+        "terminator": "FF"
+      },
+      "description": {
+        "reference_id": 250,
+        "rom_address": "0x0834D741",
+        "raw_hex": "13 00 29 3c 34 30 33 28 29 fc 33 32 00 3d 33 39 36 fc 29 32 29 31 2d 29 37 e5 ff",
+        "decoded": "I explode\non your\nenemies<GLYPH_E5>",
+        "terminator": "FF"
+      }
+    },
+    {
+      "item_id": 52,
+      "name": {
+        "reference_id": 151,
+        "rom_address": "0x0834D0E3",
+        "raw_hex": "0c 33 31 37 29 36 33 3b ff",
+        "decoded": "Bomserow",
+        "terminator": "FF"
+      },
+      "description": {
+        "reference_id": 251,
+        "rom_address": "0x0834D75C",
+        "raw_hex": "13 00 27 25 32 00 39 37 29 fc 26 39 30 30 29 38 37 00 38 33 fc 29 3c 34 30 33 28 29 e5 ff",
+        "decoded": "I can use\nbullets to\nexplode<GLYPH_E5>",
+        "terminator": "FF"
+      }
+    },
+    {
+      "item_id": 53,
+      "name": {
+        "reference_id": 152,
+        "rom_address": "0x0834D0EC",
+        "raw_hex": "0c 33 31 34 2c 29 3b ff",
+        "decoded": "Bomphew",
+        "terminator": "FF"
+      },
+      "description": {
+        "reference_id": 252,
+        "rom_address": "0x0834D77A",
+        "raw_hex": "13 eb 30 30 00 29 25 38 fc 26 39 30 30 29 38 37 fc 25 32 28 00 26 39 36 37 38 e5 ff",
+        "decoded": "I<GLYPH_EB>ll eat\nbullets\nand burst<GLYPH_E5>",
+        "terminator": "FF"
+      }
+    },
+    {
+      "item_id": 54,
+      "name": {
+        "reference_id": 153,
+        "rom_address": "0x0834D0F4",
+        "raw_hex": "0c 33 31 26 30 33 3b ff",
+        "decoded": "Bomblow",
+        "terminator": "FF"
+      },
+      "description": {
+        "reference_id": 253,
+        "rom_address": "0x0834D796",
+        "raw_hex": "0c 39 30 30 29 38 37 fc 31 25 2f 29 00 31 29 fc 29 3c 34 30 33 28 29 e5 ff",
+        "decoded": "Bullets\nmake me\nexplode<GLYPH_E5>",
+        "terminator": "FF"
+      }
+    },
+    {
+      "item_id": 55,
+      "name": {
+        "reference_id": 154,
+        "rom_address": "0x0834D0FC",
+        "raw_hex": "0e 25 26 30 29 ff",
+        "decoded": "Dable",
+        "terminator": "FF"
+      },
+      "description": {
+        "reference_id": 254,
+        "rom_address": "0x0834D7AF",
+        "raw_hex": "13 eb 30 30 fc 28 33 39 26 30 29 fc 3d 33 39 36 00 2d 38 29 31 e2 ff",
+        "decoded": "I<GLYPH_EB>ll\ndouble\nyour item<GLYPH_E2>",
+        "terminator": "FF"
+      }
+    },
+    {
+      "item_id": 56,
+      "name": {
+        "reference_id": 155,
+        "rom_address": "0x0834D102",
+        "raw_hex": "17 29 32 2d 38 29 ff",
+        "decoded": "Menite",
+        "terminator": "FF"
+      },
+      "description": {
+        "reference_id": 255,
+        "rom_address": "0x0834D7C6",
+        "raw_hex": "13 eb 30 30 00 29 36 25 37 29 fc 38 2c 29 00 37 31 25 30 30 fc 29 32 29 31 2d 29 37 e5 ff",
+        "decoded": "I<GLYPH_EB>ll erase\nthe small\nenemies<GLYPH_E5>",
+        "terminator": "FF"
+      }
+    },
+    {
+      "item_id": 57,
+      "name": {
+        "reference_id": 156,
+        "rom_address": "0x0834D109",
+        "raw_hex": "16 25 32 2d 38 29 ff",
+        "decoded": "Lanite",
+        "terminator": "FF"
+      },
+      "description": {
+        "reference_id": 256,
+        "rom_address": "0x0834D7E4",
+        "raw_hex": "13 00 27 25 32 00 36 39 26 fc 33 39 38 00 37 31 25 30 30 fc 29 32 29 31 2d 29 37 e5 ff",
+        "decoded": "I can rub\nout small\nenemies<GLYPH_E5>",
+        "terminator": "FF"
+      }
+    },
+    {
+      "item_id": 58,
+      "name": {
+        "reference_id": 157,
+        "rom_address": "0x0834D110",
+        "raw_hex": "12 25 2a 31 25 36 28 33 ff",
+        "decoded": "Hafmardo",
+        "terminator": "FF"
+      },
+      "description": {
+        "reference_id": 257,
+        "rom_address": "0x0834D801",
+        "raw_hex": "13 00 36 29 28 39 27 29 00 25 fc 26 33 37 37 eb 37 fc 29 32 29 36 2b 3d e5 ff",
+        "decoded": "I reduce a\nboss<GLYPH_EB>s\nenergy<GLYPH_E5>",
+        "terminator": "FF"
+      }
+    },
+    {
+      "item_id": 59,
+      "name": {
+        "reference_id": 158,
+        "rom_address": "0x0834D119",
+        "raw_hex": "12 25 2a 31 25 36 31 32 ff",
+        "decoded": "Hafmarmn",
+        "terminator": "FF"
+      },
+      "description": {
+        "reference_id": 258,
+        "rom_address": "0x0834D81B",
+        "raw_hex": "13 00 27 25 32 00 27 39 38 fc 25 00 26 33 37 37 eb 37 fc 29 32 29 36 2b 3d e5 ff",
+        "decoded": "I can cut\na boss<GLYPH_EB>s\nenergy<GLYPH_E5>",
+        "terminator": "FF"
+      }
+    },
+    {
+      "item_id": 60,
+      "name": {
+        "reference_id": 159,
+        "rom_address": "0x0834D122",
+        "raw_hex": "1d 38 33 27 27 39 31 ff",
+        "decoded": "Stoccum",
+        "terminator": "FF"
+      },
+      "description": {
+        "reference_id": 259,
+        "rom_address": "0x0834D836",
+        "raw_hex": "13 eb 31 00 25 26 30 29 fc 38 33 00 37 38 39 32 fc 29 32 29 31 2d 29 37 e2 ff",
+        "decoded": "I<GLYPH_EB>m able\nto stun\nenemies<GLYPH_E2>",
+        "terminator": "FF"
+      }
+    },
+    {
+      "item_id": 61,
+      "name": {
+        "reference_id": 160,
+        "rom_address": "0x0834D12A",
+        "raw_hex": "1d 38 33 27 2f 29 30 ff",
+        "decoded": "Stockel",
+        "terminator": "FF"
+      },
+      "description": {
+        "reference_id": 260,
+        "rom_address": "0x0834D850",
+        "raw_hex": "13 00 27 25 32 00 37 38 39 32 fc 27 29 36 38 25 2d 32 fc 29 32 29 31 2d 29 37 e2 ff",
+        "decoded": "I can stun\ncertain\nenemies<GLYPH_E2>",
+        "terminator": "FF"
+      }
+    },
+    {
+      "item_id": 62,
+      "name": {
+        "reference_id": 161,
+        "rom_address": "0x0834D132",
+        "raw_hex": "1d 38 33 27 38 38 39 37 ff",
+        "decoded": "Stocttus",
+        "terminator": "FF"
+      },
+      "description": {
+        "reference_id": 261,
+        "rom_address": "0x0834D86C",
+        "raw_hex": "13 eb 30 30 00 37 38 39 32 fc 29 32 29 31 2d 29 37 fc 2a 33 36 00 3d 33 39 e2 ff",
+        "decoded": "I<GLYPH_EB>ll stun\nenemies\nfor you<GLYPH_E2>",
+        "terminator": "FF"
+      }
+    },
+    {
+      "item_id": 63,
+      "name": {
+        "reference_id": 162,
+        "rom_address": "0x0834D13B",
+        "raw_hex": "1d 38 33 27 38 29 31 ff",
+        "decoded": "Stoctem",
+        "terminator": "FF"
+      },
+      "description": {
+        "reference_id": 262,
+        "rom_address": "0x0834D887",
+        "raw_hex": "0f 32 29 31 2d 29 37 fc 3b 2d 30 30 00 2b 29 38 fc 37 38 39 32 32 29 28 e5 ff",
+        "decoded": "Enemies\nwill get\nstunned<GLYPH_E5>",
+        "terminator": "FF"
+      }
+    },
+    {
+      "item_id": 64,
+      "name": {
+        "reference_id": 163,
+        "rom_address": "0x0834D143",
+        "raw_hex": "1d 38 33 27 34 39 37 37 ff",
+        "decoded": "Stocpuss",
+        "terminator": "FF"
+      },
+      "description": {
+        "reference_id": 263,
+        "rom_address": "0x0834D8A1",
+        "raw_hex": "17 3d 00 34 33 3b 29 36 fc 27 25 32 00 37 38 39 32 fc 29 32 29 31 2d 29 37 e2 ff",
+        "decoded": "My power\ncan stun\nenemies<GLYPH_E2>",
+        "terminator": "FF"
+      }
+    },
+    {
+      "item_id": 65,
+      "name": {
+        "reference_id": 164,
+        "rom_address": "0x0834D14C",
+        "raw_hex": "1d 38 33 27 34 29 30 30 ff",
+        "decoded": "Stocpell",
+        "terminator": "FF"
+      },
+      "description": {
+        "reference_id": 264,
+        "rom_address": "0x0834D8BC",
+        "raw_hex": "0f 32 29 31 2d 29 37 fc 3b 2d 30 30 00 2b 29 38 fc 37 38 39 32 32 29 28 e2 ff",
+        "decoded": "Enemies\nwill get\nstunned<GLYPH_E2>",
+        "terminator": "FF"
+      }
+    },
+    {
+      "item_id": 66,
+      "name": {
+        "reference_id": 165,
+        "rom_address": "0x0834D155",
+        "raw_hex": "0d 30 33 27 2f 30 29 ff",
+        "decoded": "Clockle",
+        "terminator": "FF"
+      },
+      "description": {
+        "reference_id": 265,
+        "rom_address": "0x0834D8D6",
+        "raw_hex": "0d 2c 25 36 2b 29 00 2d 32 fc 30 29 37 37 00 38 2d 31 29 fc 3b 2d 38 2c 00 31 29 e5 ff",
+        "decoded": "Charge in\nless time\nwith me<GLYPH_E5>",
+        "terminator": "FF"
+      }
+    },
+    {
+      "item_id": 67,
+      "name": {
+        "reference_id": 166,
+        "rom_address": "0x0834D15D",
+        "raw_hex": "0d 30 33 27 37 39 30 29 ff",
+        "decoded": "Clocsule",
+        "terminator": "FF"
+      },
+      "description": {
+        "reference_id": 266,
+        "rom_address": "0x0834D8F3",
+        "raw_hex": "13 00 37 2c 33 36 38 29 32 fc 27 2c 25 36 2b 29 fc 38 2d 31 29 e5 ff",
+        "decoded": "I shorten\ncharge\ntime<GLYPH_E5>",
+        "terminator": "FF"
+      }
+    },
+    {
+      "item_id": 68,
+      "name": {
+        "reference_id": 167,
+        "rom_address": "0x0834D166",
+        "raw_hex": "0d 30 33 27 38 29 30 30 ff",
+        "decoded": "Cloctell",
+        "terminator": "FF"
+      },
+      "description": {
+        "reference_id": 267,
+        "rom_address": "0x0834D90A",
+        "raw_hex": "13 00 36 29 28 39 27 29 fc 27 2c 25 36 2b 29 fc 38 2d 31 29 e5 ff",
+        "decoded": "I reduce\ncharge\ntime<GLYPH_E5>",
+        "terminator": "FF"
+      }
+    },
+    {
+      "item_id": 69,
+      "name": {
+        "reference_id": 168,
+        "rom_address": "0x0834D16F",
+        "raw_hex": "0d 30 33 27 34 39 30 30 ff",
+        "decoded": "Clocpull",
+        "terminator": "FF"
+      },
+      "description": {
+        "reference_id": 268,
+        "rom_address": "0x0834D920",
+        "raw_hex": "1f 37 29 00 31 29 fc 38 33 00 27 2c 25 36 2b 29 fc 2a 25 37 38 29 36 e5 ff",
+        "decoded": "Use me\nto charge\nfaster<GLYPH_E5>",
+        "terminator": "FF"
+      }
+    },
+    {
+      "item_id": 70,
+      "name": {
+        "reference_id": 169,
+        "rom_address": "0x0834D178",
+        "raw_hex": "13 38 29 31 29 38 29 36 ff",
+        "decoded": "Itemeter",
+        "terminator": "FF"
+      },
+      "description": {
+        "reference_id": 269,
+        "rom_address": "0x0834D939",
+        "raw_hex": "0f 32 29 31 2d 29 37 fc 3b 2d 30 30 00 28 36 33 34 fc 25 32 00 2d 38 29 31 e2 ff",
+        "decoded": "Enemies\nwill drop\nan item<GLYPH_E2>",
+        "terminator": "FF"
+      }
+    },
+    {
+      "item_id": 71,
+      "name": {
+        "reference_id": 170,
+        "rom_address": "0x0834D181",
+        "raw_hex": "13 38 29 36 33 38 2c ff",
+        "decoded": "Iteroth",
+        "terminator": "FF"
+      },
+      "description": {
+        "reference_id": 270,
+        "rom_address": "0x0834D954",
+        "raw_hex": "1d 31 25 30 30 00 2a 33 29 fc 3b 2d 30 30 00 28 36 33 34 fc 25 32 00 2d 38 29 31 e2 ff",
+        "decoded": "Small foe\nwill drop\nan item<GLYPH_E2>",
+        "terminator": "FF"
+      }
+    },
+    {
+      "item_id": 72,
+      "name": {
+        "reference_id": 171,
+        "rom_address": "0x0834D189",
+        "raw_hex": "13 38 29 31 25 37 37 ff",
+        "decoded": "Itemass",
+        "terminator": "FF"
+      },
+      "description": {
+        "reference_id": 271,
+        "rom_address": "0x0834D971",
+        "raw_hex": "1f 37 29 00 31 3d fc 34 33 3b 29 36 00 38 33 fc 2b 29 38 00 2d 38 29 31 37 e2 ff",
+        "decoded": "Use my\npower to\nget items<GLYPH_E2>",
+        "terminator": "FF"
+      }
+    },
+    {
+      "item_id": 73,
+      "name": {
+        "reference_id": 172,
+        "rom_address": "0x0834D191",
+        "raw_hex": "13 38 29 36 29 3c ff",
+        "decoded": "Iterex",
+        "terminator": "FF"
+      },
+      "description": {
+        "reference_id": 272,
+        "rom_address": "0x0834D98C",
+        "raw_hex": "13 eb 30 30 00 31 25 2f 29 fc 2a 33 29 00 28 36 33 34 fc 2d 38 29 31 37 e5 ff",
+        "decoded": "I<GLYPH_EB>ll make\nfoe drop\nitems<GLYPH_E5>",
+        "terminator": "FF"
+      }
+    },
+    {
+      "item_id": 74,
+      "name": {
+        "reference_id": 173,
+        "rom_address": "0x0834D198",
+        "raw_hex": "17 f0 01 33 36 25 34 34 ff",
+        "decoded": "M<GLYPH_0F1>orapp",
+        "terminator": "FF"
+      },
+      "description": {
+        "reference_id": 273,
+        "rom_address": "0x0834D9A6",
+        "raw_hex": "13 eb 30 30 00 38 39 36 32 fc 2a 33 29 00 2d 32 38 33 fc 17 29 38 38 25 30 30 37 e2 ff",
+        "decoded": "I<GLYPH_EB>ll turn\nfoe into\nMettalls<GLYPH_E2>",
+        "terminator": "FF"
+      }
+    },
+    {
+      "item_id": 75,
+      "name": {
+        "reference_id": 174,
+        "rom_address": "0x0834D1A1",
+        "raw_hex": "17 f0 01 33 36 2d 32 25 ff",
+        "decoded": "M<GLYPH_0F1>orina",
+        "terminator": "FF"
+      },
+      "description": {
+        "reference_id": 274,
+        "rom_address": "0x0834D9C3",
+        "raw_hex": "13 eb 30 30 00 31 25 2f 29 fc 2a 33 29 00 2d 32 38 33 fc 17 29 38 38 25 30 30 37 e2 ff",
+        "decoded": "I<GLYPH_EB>ll make\nfoe into\nMettalls<GLYPH_E2>",
+        "terminator": "FF"
+      }
+    },
+    {
+      "item_id": 76,
+      "name": {
+        "reference_id": 175,
+        "rom_address": "0x0834D1AA",
+        "raw_hex": "17 f0 01 33 36 33 37 37 25 ff",
+        "decoded": "M<GLYPH_0F1>orossa",
+        "terminator": "FF"
+      },
+      "description": {
+        "reference_id": 275,
+        "rom_address": "0x0834D9E0",
+        "raw_hex": "13 00 27 25 32 00 38 39 36 32 fc 2a 33 29 00 2d 32 38 33 fc 17 29 38 38 25 30 30 37 e2 ff",
+        "decoded": "I can turn\nfoe into\nMettalls<GLYPH_E2>",
+        "terminator": "FF"
+      }
+    },
+    {
+      "item_id": 77,
+      "name": {
+        "reference_id": 176,
+        "rom_address": "0x0834D1B4",
+        "raw_hex": "17 f0 01 33 36 29 32 33 ff",
+        "decoded": "M<GLYPH_0F1>oreno",
+        "terminator": "FF"
+      },
+      "description": {
+        "reference_id": 276,
+        "rom_address": "0x0834D9FE",
+        "raw_hex": "0f 32 29 31 2d 29 37 eb 30 30 fc 38 39 36 32 00 2d 32 38 33 fc 17 29 38 38 25 30 30 37 e5 ff",
+        "decoded": "Enemies<GLYPH_EB>ll\nturn into\nMettalls<GLYPH_E5>",
+        "terminator": "FF"
+      }
+    },
+    {
+      "item_id": 78,
+      "name": {
+        "reference_id": 177,
+        "rom_address": "0x0834D1BD",
+        "raw_hex": "0b 27 33 33 30 ff",
+        "decoded": "Acool",
+        "terminator": "FF"
+      },
+      "description": {
+        "reference_id": 277,
+        "rom_address": "0x0834DA1D",
+        "raw_hex": "13 eb 30 30 00 26 33 33 37 38 fc 3d 33 39 00 38 33 fc 30 29 3a 29 30 00 0b e2 ff",
+        "decoded": "I<GLYPH_EB>ll boost\nyou to\nlevel A<GLYPH_E2>",
+        "terminator": "FF"
+      }
+    },
+    {
+      "item_id": 79,
+      "name": {
+        "reference_id": 178,
+        "rom_address": "0x0834D1C3",
+        "raw_hex": "0b 37 2c 2d 36 33 ff",
+        "decoded": "Ashiro",
+        "terminator": "FF"
+      },
+      "description": {
+        "reference_id": 278,
+        "rom_address": "0x0834DA38",
+        "raw_hex": "23 33 39 eb 30 30 00 26 29 fc 25 38 00 30 29 3a 29 30 fc 0b e2 ff",
+        "decoded": "You<GLYPH_EB>ll be\nat level\nA<GLYPH_E2>",
+        "terminator": "FF"
+      }
+    },
+    {
+      "item_id": 80,
+      "name": {
+        "reference_id": 179,
+        "rom_address": "0x0834D1CA",
+        "raw_hex": "0b 38 29 36 32 29 36 ff",
+        "decoded": "Aterner",
+        "terminator": "FF"
+      },
+      "description": {
+        "reference_id": 279,
+        "rom_address": "0x0834DA4E",
+        "raw_hex": "13 eb 30 30 00 31 25 2f 29 fc 3d 33 39 00 25 38 fc 30 29 3a 29 30 00 0b e2 ff",
+        "decoded": "I<GLYPH_EB>ll make\nyou at\nlevel A<GLYPH_E2>",
+        "terminator": "FF"
+      }
+    },
+    {
+      "item_id": 81,
+      "name": {
+        "reference_id": 180,
+        "rom_address": "0x0834D1D2",
+        "raw_hex": "0b 32 39 36 36 25 3d ff",
+        "decoded": "Anurray",
+        "terminator": "FF"
+      },
+      "description": {
+        "reference_id": 280,
+        "rom_address": "0x0834DA68",
+        "raw_hex": "1d 2c 33 39 30 28 00 13 fc 31 25 2f 29 00 3d 33 39 fc 30 29 3a 29 30 00 0b f0 08 ff",
+        "decoded": "Should I\nmake you\nlevel A<GLYPH_0F8>",
+        "terminator": "FF"
+      }
+    }
+  ]
+}

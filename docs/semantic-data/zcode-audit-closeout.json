@@ -1,0 +1,180 @@
+{
+  "closed_at": "2026-11-01T12:48:44.815888+08:00",
+  "head": "bd2ab38784ef1117684b9d7f7e6ea308ab030c10",
+  "scope": "ZCode artifact audit and consolidation; no background restart, commit, push, history deletion or token billing verification",
+  "formal": {
+    "writer_active": false,
+    "segments": 6379,
+    "assembly_coverage_bytes": 912454,
+    "code_coverage_percent": 92.82,
+    "c_integrated_count": 35,
+    "verified_rom": true
+  },
+  "rom": {
+    "bytes": 8388608,
+    "sha1": "c4d93a58f0f82c526dec8a3fdbda170336303689",
+    "fresh_full_build_passed_this_audit": true
+  },
+  "fresh_c_recompile": {
+    "functions": 5,
+    "all_function_bytes_match": true,
+    "strict_integrator_extents": [
+      26,
+      36,
+      26,
+      56,
+      16
+    ],
+    "section_padding_outside_symbol_is_not_integrated": true
+  },
+  "recovery_regression": {
+    "executed_this_audit": true,
+    "passed": 10
+  },
+  "semantic_checks": {
+    "type-scope": {
+      "factory_cases": 36,
+      "hooks": [],
+      "factories": [
+        {
+          "entry": "0x8077fb0",
+          "pool_handle": "0x202f078",
+          "type_table": "0x833d990",
+          "type": "0x20",
+          "vector": "0x833fd94",
+          "lifecycle": [
+            "0x8078085",
+            "0x80780a9",
+            "0x80780c1",
+            "0x8065a05",
+            "0x8006c29"
+          ],
+          "signature": "owner",
+          "returns_node": true
+        },
+        {
+          "entry": "0x80a2c9c",
+          "pool_handle": "0x202f07c",
+          "type_table": "0x8343064",
+          "type": "0x20",
+          "vector": "0x834476c",
+          "lifecycle": [
+            "0x80a2d55",
+            "0x80a2e51",
+            "0x80a2f9d",
+            "0x80983d1",
+            "0x8006c29"
+          ],
+          "signature": "owner",
+          "returns_node": true
+        },
+        {
+          "entry": "0x80b5640",
+          "pool_handle": "0x202f084",
+          "type_table": "0x8345998",
+          "type": "0x20",
+          "vector": "0x8346cd8",
+          "lifecycle": [
+            "0x80b569d",
+            "0x80b57c5",
+            "0x80b5815",
+            "0x80ac5ed",
+            "0x8006c29"
+          ],
+          "signature": "owner",
+          "returns_node": false
+        },
+        {
+          "entry": "0x8079c14",
+          "pool_handle": "0x202f078",
+          "type_table": "0x833d990",
+          "type": "0x22",
+          "vector": "0x833ff80",
+          "lifecycle": [
+            "0x8079c7d",
+            "0x8079f89",
+            "0x8079fa1",
+            "0x8065a05",
+            "0x8006c29"
+          ],
+          "signature": "owner",
+          "returns_node": true
+        },
+        {
+          "entry": "0x80a35fc",
+          "pool_handle": "0x202f07c",
+          "type_table": "0x8343064",
+          "type": "0x22",
+          "vector": "0x8344890",
+          "lifecycle": [
+            "0x80a365d",
+            "0x80a3675",
+            "0x80a36bd",
+            "0x80983d1",
+            "0x8006c29"
+          ],
+          "signature": "coords_flags",
+          "returns_node": false
+        },
+        {
+          "entry": "0x80b6070",
+          "pool_handle": "0x202f084",
+          "type_table": "0x8345998",
+          "type": "0x22",
+          "vector": "0x8346d74",
+          "lifecycle": [
+            "0x80b60c5",
+            "0x80b6155",
+            "0x80b619d",
+            "0x80ac5ed",
+            "0x8006c29"
+          ],
+          "signature": "coords",
+          "returns_node": false
+        }
+      ],
+      "rom_sha1": "c4d93a58f0f82c526dec8a3fdbda170336303689",
+      "scope": "Actual six constructors and allocator; initialization callbacks not executed."
+    },
+    "render-queue-audit": {
+      "queue_cases": 256,
+      "palette_control_cases": 2,
+      "rom_sha1": "c4d93a58f0f82c526dec8a3fdbda170336303689",
+      "scope": "Original 02544 instructions. BIOS/02638 calls and DMA MMIO recorded, not executed; no pixel decode or hardware timing claim.",
+      "findings": [
+        "type0 invokes02638, never skip",
+        "type1 has small and large branches, no124B global cap",
+        "configured DMA copies RAM to VRAM then fills source RAM",
+        "reverse processing and queue reset"
+      ]
+    }
+  },
+  "document_decisions": {
+    "candidate-only": 29,
+    "retained-existing-scope": 66,
+    "rewritten-or-retired": 14,
+    "repaired-and-verified": 2,
+    "catalog-consolidated": 1
+  },
+  "repeated_reports": {
+    "before_bytes": 9504026,
+    "after_bytes": 4784
+  },
+  "backup": "build/audit-20261101, including original largest reports as *.before; Git history retained",
+  "pending": [
+    "Full game behavior and hardware DMA/BIOS execution",
+    "Actual sprite pixel reconstruction and asset mapping",
+    "Bounded 786F0 initializer execution validation",
+    "29 candidate reports need independent semantic verification"
+  ],
+  "out_of_scope": [
+    "Agent memory stores",
+    "Publishing and commits",
+    "Token billing verification"
+  ],
+  "document_check": {
+    "command": "python tools/check_research_docs.py",
+    "exit_code": 0,
+    "output": "119 Markdown files, 481 local links, 0 issues"
+  }
+}

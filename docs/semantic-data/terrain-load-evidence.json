@@ -1,0 +1,151 @@
+{
+  "baseline_sha1": "c4d93a58f0f82c526dec8a3fdbda170336303689",
+  "method": "Static reconstruction of 084C0 over declared layout dimensions, not a RAM capture. Uniform fill uses first terrain ID of designated fill block; non-fill screen blocks copy 10 rows x15 IDs. No dynamic patches applied.",
+  "initializer": "08007F64 -> 080069AC + 080084C0",
+  "collision_context": "0x020011B8",
+  "grid_header": "0x020017E0",
+  "grid_ids": "0x020017E4",
+  "update_flag": "0x0202D000",
+  "initial_fast_fill": {
+    "control": "0x0100AE08",
+    "bytes": 178208,
+    "start": "0x020017E4",
+    "end_exclusive": "0x202d004",
+    "following_flag_write": "u16[0x0202D000]=0"
+  },
+  "stages": [
+    {
+      "stage_index": 0,
+      "stage_record": "0x8314414",
+      "asset_pack": "0x865fd00",
+      "pack_raw_12": "dc 00 00 00 dc 0e 00 00 5c 12 00 00",
+      "visual_definition_base": "0x865fddc",
+      "attribute_base": "0x8660bdc",
+      "pattern_base": "0x8660f5c",
+      "layout": "0x83140fc",
+      "layout_header": {
+        "source_row_stride_screens": 16,
+        "fill_block_id": 1,
+        "width_screens": 16,
+        "height_screens": 8
+      },
+      "grid_width_tiles": 240,
+      "grid_height_tiles": 80,
+      "fill_tile_id": 1,
+      "fill_attribute": "0xc01",
+      "original_fill_block_distinct_tiles": [
+        1
+      ],
+      "used_layout_block_id_range": [
+        1,
+        43
+      ],
+      "inferred_attribute_storage_bound": 448,
+      "grid_tile_id_range": [
+        0,
+        445
+      ],
+      "shape_low_nibble_cell_counts": {
+        "0": 4525,
+        "1": 14587,
+        "14": 2,
+        "15": 86
+      },
+      "attribute_8000_cell_count": 24,
+      "binary_file": "terrain-stage-0-initial.u16le",
+      "binary_bytes": 38400,
+      "binary_sha1": "8156b8039796fefbe8f3a14661b36b0df3ac685c"
+    },
+    {
+      "stage_index": 1,
+      "stage_record": "0x8314f48",
+      "asset_pack": "0x865fd0c",
+      "pack_raw_12": "e0 45 00 00 80 70 00 00 28 7b 00 00",
+      "visual_definition_base": "0x86642ec",
+      "attribute_base": "0x8666d8c",
+      "pattern_base": "0x8667834",
+      "layout": "0x83144f8",
+      "layout_header": {
+        "source_row_stride_screens": 64,
+        "fill_block_id": 1,
+        "width_screens": 64,
+        "height_screens": 5
+      },
+      "grid_width_tiles": 960,
+      "grid_height_tiles": 50,
+      "fill_tile_id": 1,
+      "fill_attribute": "0x1",
+      "original_fill_block_distinct_tiles": [
+        1
+      ],
+      "used_layout_block_id_range": [
+        0,
+        71
+      ],
+      "inferred_attribute_storage_bound": 1364,
+      "grid_tile_id_range": [
+        0,
+        1171
+      ],
+      "shape_low_nibble_cell_counts": {
+        "0": 17146,
+        "1": 30854
+      },
+      "attribute_8000_cell_count": 0,
+      "binary_file": "terrain-stage-1-initial.u16le",
+      "binary_bytes": 96000,
+      "binary_sha1": "efd3bb69043f7b098ea0503ca086d1e1a3b2804b"
+    },
+    {
+      "stage_index": 2,
+      "stage_record": "0x8315bf8",
+      "asset_pack": "0x865fd18",
+      "pack_raw_12": "7c cf 00 00 1c f8 00 00 44 02 01 00",
+      "visual_definition_base": "0x866cc94",
+      "attribute_base": "0x866f534",
+      "pattern_base": "0x866ff5c",
+      "layout": "0x83153a0",
+      "layout_header": {
+        "source_row_stride_screens": 32,
+        "fill_block_id": 1,
+        "width_screens": 32,
+        "height_screens": 11
+      },
+      "grid_width_tiles": 480,
+      "grid_height_tiles": 110,
+      "fill_tile_id": 7,
+      "fill_attribute": "0xc01",
+      "original_fill_block_distinct_tiles": [
+        7
+      ],
+      "used_layout_block_id_range": [
+        0,
+        164
+      ],
+      "inferred_attribute_storage_bound": 1300,
+      "grid_tile_id_range": [
+        0,
+        1299
+      ],
+      "shape_low_nibble_cell_counts": {
+        "0": 19071,
+        "1": 33571,
+        "2": 10,
+        "3": 10,
+        "8": 12,
+        "9": 12,
+        "15": 114
+      },
+      "attribute_8000_cell_count": 87,
+      "binary_file": "terrain-stage-2-initial.u16le",
+      "binary_bytes": 105600,
+      "binary_sha1": "9ab8509a20455ddd50508b443d4b755d0c0e3186"
+    }
+  ],
+  "query_069C0_note": "Uses original ROM layout and pattern data; its coordinate argument is integer pixels and return is only the low attribute byte. It does not consult modified RAM grid.",
+  "verification": {
+    "direct_original_pattern_lookup_matched_cells": 120000,
+    "method": "Independent per-cell ROM address lookup compared against block-expanded samples; performed before report save.",
+    "runtime_ram_capture": false
+  }
+}

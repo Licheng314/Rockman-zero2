@@ -1,0 +1,79 @@
+{
+  "baseline_sha1": "c4d93a58f0f82c526dec8a3fdbda170336303689",
+  "scope": "Static instruction-derived registration, point/adjustment and attachment semantics. History replacement now verified in 08014AD8; see rectangle-history-evidence.json. No live RAM capture.",
+  "world_base": "0x02001000",
+  "current_count": "0x020011D2",
+  "history_count": "0x020011D3",
+  "current_records": "0x020011D4",
+  "history_records": "0x020014D4",
+  "record_stride": 24,
+  "registration_limit": 31,
+  "record_fields": {
+    "0x00": "u16 id",
+    "0x02": "u16 attribute",
+    "0x04": "u16 half width",
+    "0x06": "u16 half height",
+    "0x08": "s32 current center X",
+    "0x0C": "s32 current center Y",
+    "0x10": "s32 historical center X, or current X when unmatched",
+    "0x14": "s32 historical center Y, or current Y when unmatched"
+  },
+  "point_test_formula": "u32(x-cx+hw)<2*hw && u32(y-cy+hh-1)<2*hh",
+  "normal_coordinate_domain_bounds": "cx-hw <= x < cx+hw; cy-hh < y <= cy+hh",
+  "point_hit_return": "First matching current record attribute; writes currentX-historicalX to 0x02000020. No-hit returns 0 without clearing that side output.",
+  "boundary_example": {
+    "center_fixed": [
+      25600,
+      20480
+    ],
+    "half_extents_fixed": [
+      2048,
+      1024
+    ],
+    "samples": [
+      {
+        "label": "left edge",
+        "x_fixed": 23552,
+        "y_fixed": 20480,
+        "hit": true
+      },
+      {
+        "label": "right edge",
+        "x_fixed": 27648,
+        "y_fixed": 20480,
+        "hit": false
+      },
+      {
+        "label": "top edge",
+        "x_fixed": 25600,
+        "y_fixed": 19456,
+        "hit": false
+      },
+      {
+        "label": "one unit below top",
+        "x_fixed": 25600,
+        "y_fixed": 19457,
+        "hit": true
+      },
+      {
+        "label": "bottom edge",
+        "x_fixed": 25600,
+        "y_fixed": 21504,
+        "hit": true
+      },
+      {
+        "label": "one unit below bottom",
+        "x_fixed": 25600,
+        "y_fixed": 21505,
+        "hit": false
+      }
+    ]
+  },
+  "register_shape_format": "s16 dx, s16 dy, u16 width, u16 height; half-extents are width>>1 and height>>1",
+  "source_hashes": {
+    "099BC": "cb1516e1cc21bc56a38b186a5050b2a0afc1485c",
+    "09FE4": "a183d5bb4566220f1bc6a4d8ea875b2376216f7e",
+    "1F3D0": "d3f54791344ec95acbd8d97a371f84d1cc867aa3",
+    "1F478": "41fde47543ce9289a546e92ceb9c016b317d7b25"
+  }
+}

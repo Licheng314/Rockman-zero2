@@ -1,0 +1,494 @@
+{
+  "baseline_sha1": "c4d93a58f0f82c526dec8a3fdbda170336303689",
+  "method": "Static ROM reachable branches, literal reads and bounded table samples. No game execution or animation rendering.",
+  "functions": [
+    {
+      "start": "0x801eee0",
+      "end_exclusive": "0x801eefa",
+      "span_sha1": "02261174c864956b6b2741eee3912a9856d69b67",
+      "reachable_instructions": [
+        "0801EEE0: push {lr}",
+        "0801EEE2: sub sp, #4",
+        "0801EEE4: ldr r1, [pc, #0x14]",
+        "0801EEE6: str r1, [sp]",
+        "0801EEE8: ldrb r1, [r0, #9]",
+        "0801EEEA: lsls r1, r1, #2",
+        "0801EEEC: add r1, sp, r1",
+        "0801EEEE: ldr r1, [r1]",
+        "0801EEF0: bl #0x80ef118",
+        "0801EEF4: add sp, #4",
+        "0801EEF6: pop {r0}",
+        "0801EEF8: bx r0"
+      ],
+      "literals": [
+        {
+          "instruction": "0x801eee4",
+          "address": "0x801eefc",
+          "u32": "0x8037525"
+        }
+      ],
+      "calls": [
+        {
+          "instruction": "0x801eef0",
+          "target": "#0x80ef118"
+        }
+      ]
+    },
+    {
+      "start": "0x801ef00",
+      "end_exclusive": "0x801ef16",
+      "span_sha1": "2b04a5ced163ca9dc3cfcf0bf437f333f5fb2a57",
+      "reachable_instructions": [
+        "0801EF00: push {r4, lr}",
+        "0801EF02: ldr r4, [pc, #0x14]",
+        "0801EF04: ldrb r3, [r0, #9]",
+        "0801EF06: lsls r3, r3, #2",
+        "0801EF08: adds r3, r3, r4",
+        "0801EF0A: ldr r3, [r3]",
+        "0801EF0C: bl #0x80ef120",
+        "0801EF10: pop {r4}",
+        "0801EF12: pop {r0}",
+        "0801EF14: bx r0"
+      ],
+      "literals": [
+        {
+          "instruction": "0x801ef02",
+          "address": "0x801ef18",
+          "u32": "0x8333ae0"
+        }
+      ],
+      "calls": [
+        {
+          "instruction": "0x801ef0c",
+          "target": "#0x80ef120"
+        }
+      ]
+    },
+    {
+      "start": "0x801e9fc",
+      "end_exclusive": "0x801ea2e",
+      "span_sha1": "e282dde84b8c5a04e5fa2be810e511a846ec0125",
+      "reachable_instructions": [
+        "0801E9FC: push {r4, r5, lr}",
+        "0801E9FE: adds r4, r0, #0",
+        "0801EA00: adds r5, r1, #0",
+        "0801EA02: ldr r1, [pc, #0x2c]",
+        "0801EA04: adds r0, r4, r1",
+        "0801EA06: strb r5, [r0]",
+        "0801EA08: ldr r1, [pc, #0x28]",
+        "0801EA0A: ldrb r0, [r4, #9]",
+        "0801EA0C: lsls r0, r0, #2",
+        "0801EA0E: adds r0, r0, r1",
+        "0801EA10: ldr r1, [r0]",
+        "0801EA12: lsls r0, r5, #1",
+        "0801EA14: adds r0, r0, r1",
+        "0801EA16: ldrh r1, [r0]",
+        "0801EA18: adds r0, r4, #0",
+        "0801EA1A: bl #0x80127e4",
+        "0801EA1E: adds r0, r4, #0",
+        "0801EA20: adds r1, r5, #0",
+        "0801EA22: movs r2, #0",
+        "0801EA24: bl #0x801ef00",
+        "0801EA28: pop {r4, r5}",
+        "0801EA2A: pop {r0}",
+        "0801EA2C: bx r0"
+      ],
+      "literals": [
+        {
+          "instruction": "0x801ea02",
+          "address": "0x801ea30",
+          "u32": "0x17f"
+        },
+        {
+          "instruction": "0x801ea08",
+          "address": "0x801ea34",
+          "u32": "0x8333a48"
+        }
+      ],
+      "calls": [
+        {
+          "instruction": "0x801ea1a",
+          "target": "#0x80127e4"
+        },
+        {
+          "instruction": "0x801ea24",
+          "target": "#0x801ef00"
+        }
+      ]
+    },
+    {
+      "start": "0x8036bb4",
+      "end_exclusive": "0x8036be6",
+      "span_sha1": "f6e6bdafdc144ec20d89e0f70ff6c58e54ef0d90",
+      "reachable_instructions": [
+        "08036BB4: push {r4, r5, r6, lr}",
+        "08036BB6: adds r4, r0, #0",
+        "08036BB8: adds r5, r4, #0",
+        "08036BBA: adds r5, #0x71",
+        "08036BBC: movs r6, #0",
+        "08036BBE: ldrsb r6, [r5, r6]",
+        "08036BC0: ldrb r0, [r4, #0xd]",
+        "08036BC2: cmp r0, #0xd",
+        "08036BC4: beq #0x8036bcc",
+        "08036BC6: adds r0, r4, #0",
+        "08036BC8: bl #0x80128d4",
+        "08036BCC: movs r2, #0",
+        "08036BCE: ldrsb r2, [r5, r2]",
+        "08036BD0: cmp r6, r2",
+        "08036BD2: beq #0x8036be0",
+        "08036BD4: ldr r1, [pc, #0x10]",
+        "08036BD6: adds r0, r4, r1",
+        "08036BD8: ldrb r1, [r0]",
+        "08036BDA: adds r0, r4, #0",
+        "08036BDC: bl #0x803756c",
+        "08036BE0: pop {r4, r5, r6}",
+        "08036BE2: pop {r0}",
+        "08036BE4: bx r0"
+      ],
+      "literals": [
+        {
+          "instruction": "0x8036bd4",
+          "address": "0x8036be8",
+          "u32": "0x17f"
+        }
+      ],
+      "calls": [
+        {
+          "instruction": "0x8036bc8",
+          "target": "#0x80128d4"
+        },
+        {
+          "instruction": "0x8036bdc",
+          "target": "#0x803756c"
+        }
+      ]
+    },
+    {
+      "start": "0x8037524",
+      "end_exclusive": "0x8037560",
+      "span_sha1": "587beb801cbae30440193f49f624c39145db6d4d",
+      "reachable_instructions": [
+        "08037524: push {r4, r5, lr}",
+        "08037526: adds r5, r0, #0",
+        "08037528: ldrb r1, [r5, #0xa]",
+        "0803752A: movs r0, #4",
+        "0803752C: orrs r0, r1",
+        "0803752E: strb r0, [r5, #0xa]",
+        "08037530: adds r4, r5, #0",
+        "08037532: adds r4, #0x74",
+        "08037534: ldr r1, [pc, #0x28]",
+        "08037536: adds r2, r5, #0",
+        "08037538: adds r2, #0x54",
+        "0803753A: movs r3, #0xbf",
+        "0803753C: lsls r3, r3, #1",
+        "0803753E: adds r0, r5, r3",
+        "08037540: ldrb r3, [r0]",
+        "08037542: adds r0, r4, #0",
+        "08037544: bl #0x8006de4",
+        "08037548: str r5, [r4, #0x2c]",
+        "0803754A: ldr r0, [pc, #0x18]",
+        "0803754C: str r0, [r4, #0x24]",
+        "0803754E: adds r1, r5, #0",
+        "08037550: adds r1, #0xd8",
+        "08037552: ldr r0, [pc, #0x14]",
+        "08037554: ldr r0, [r0]",
+        "08037556: str r0, [r1]",
+        "08037558: str r0, [r1, #4]",
+        "0803755A: pop {r4, r5}",
+        "0803755C: pop {r0}",
+        "0803755E: bx r0"
+      ],
+      "literals": [
+        {
+          "instruction": "0x8037534",
+          "address": "0x8037560",
+          "u32": "0x83347d4"
+        },
+        {
+          "instruction": "0x803754a",
+          "address": "0x8037564",
+          "u32": "0x801ef55"
+        },
+        {
+          "instruction": "0x8037552",
+          "address": "0x8037568",
+          "u32": "0x8334b68"
+        }
+      ],
+      "calls": [
+        {
+          "instruction": "0x8037544",
+          "target": "#0x8006de4"
+        }
+      ]
+    },
+    {
+      "start": "0x803756c",
+      "end_exclusive": "0x8037592",
+      "span_sha1": "b516e7137681d3a050eb32d69bc5f8fafa876c50",
+      "reachable_instructions": [
+        "0803756C: push {r4, r5, r6, lr}",
+        "0803756E: adds r4, r0, #0",
+        "08037570: adds r5, r1, #0",
+        "08037572: adds r6, r2, #0",
+        "08037574: bl #0x8037594",
+        "08037578: adds r1, r4, #0",
+        "0803757A: adds r1, #0xb4",
+        "0803757C: str r0, [r1, #0x20]",
+        "0803757E: adds r0, r4, #0",
+        "08037580: adds r1, r5, #0",
+        "08037582: adds r2, r6, #0",
+        "08037584: bl #0x80375a8",
+        "08037588: adds r4, #0xd8",
+        "0803758A: str r0, [r4]",
+        "0803758C: pop {r4, r5, r6}",
+        "0803758E: pop {r0}",
+        "08037590: bx r0"
+      ],
+      "literals": [],
+      "calls": [
+        {
+          "instruction": "0x8037574",
+          "target": "#0x8037594"
+        },
+        {
+          "instruction": "0x8037584",
+          "target": "#0x80375a8"
+        }
+      ]
+    },
+    {
+      "start": "0x8037594",
+      "end_exclusive": "0x80375a4",
+      "span_sha1": "decde91a6132ccbbf1356cc7fced17abdbbce546",
+      "reachable_instructions": [
+        "08037594: ldr r0, [pc, #0xc]",
+        "08037596: lsls r1, r1, #2",
+        "08037598: adds r1, r1, r0",
+        "0803759A: ldr r0, [r1]",
+        "0803759C: lsls r2, r2, #2",
+        "0803759E: adds r2, r2, r0",
+        "080375A0: ldr r0, [r2]",
+        "080375A2: bx lr"
+      ],
+      "literals": [
+        {
+          "instruction": "0x8037594",
+          "address": "0x80375a4",
+          "u32": "0x8334918"
+        }
+      ],
+      "calls": []
+    },
+    {
+      "start": "0x80375a8",
+      "end_exclusive": "0x80375b8",
+      "span_sha1": "decde91a6132ccbbf1356cc7fced17abdbbce546",
+      "reachable_instructions": [
+        "080375A8: ldr r0, [pc, #0xc]",
+        "080375AA: lsls r1, r1, #2",
+        "080375AC: adds r1, r1, r0",
+        "080375AE: ldr r0, [r1]",
+        "080375B0: lsls r2, r2, #2",
+        "080375B2: adds r2, r2, r0",
+        "080375B4: ldr r0, [r2]",
+        "080375B6: bx lr"
+      ],
+      "literals": [
+        {
+          "instruction": "0x80375a8",
+          "address": "0x80375b8",
+          "u32": "0x8334c58"
+        }
+      ],
+      "calls": []
+    },
+    {
+      "start": "0x80375c4",
+      "end_exclusive": "0x8037626",
+      "span_sha1": "54643f1fea77338c23d091ddc24f13010189f8f1",
+      "reachable_instructions": [
+        "080375C4: push {lr}",
+        "080375C6: adds r2, r0, #0",
+        "080375C8: adds r3, r2, #0",
+        "080375CA: adds r3, #0xb4",
+        "080375CC: movs r1, #0xc6",
+        "080375CE: lsls r1, r1, #1",
+        "080375D0: adds r0, r2, r1",
+        "080375D2: ldrb r1, [r0]",
+        "080375D4: movs r0, #0x43",
+        "080375D6: ands r0, r1",
+        "080375D8: cmp r0, #0",
+        "080375DA: beq #0x80375ec",
+        "080375DC: adds r0, r2, #0",
+        "080375DE: adds r0, #0x74",
+        "080375E0: ldr r1, [pc, #4]",
+        "080375E2: bl #0x8006e08",
+        "080375E6: b #0x8037622",
+        "080375EC: movs r1, #0xfe",
+        "080375EE: lsls r1, r1, #1",
+        "080375F0: adds r0, r2, r1",
+        "080375F2: ldrb r0, [r0]",
+        "080375F4: cmp r0, #3",
+        "080375F6: bne #0x8037606",
+        "080375F8: adds r0, r2, #0",
+        "080375FA: adds r0, #0x74",
+        "080375FC: ldr r1, [r3, #0x20]",
+        "080375FE: movs r2, #4",
+        "08037600: bl #0x8006e80",
+        "08037604: b #0x8037622",
+        "08037606: cmp r0, #8",
+        "08037608: bne #0x8037618",
+        "0803760A: adds r0, r2, #0",
+        "0803760C: adds r0, #0x74",
+        "0803760E: ldr r1, [r3, #0x20]",
+        "08037610: movs r2, #0x10",
+        "08037612: bl #0x8006e80",
+        "08037616: b #0x8037622",
+        "08037618: adds r0, r2, #0",
+        "0803761A: adds r0, #0x74",
+        "0803761C: ldr r1, [r3, #0x20]",
+        "0803761E: bl #0x8006e08",
+        "08037622: pop {r0}",
+        "08037624: bx r0"
+      ],
+      "literals": [
+        {
+          "instruction": "0x80375e0",
+          "address": "0x80375e8",
+          "u32": "0x8334864"
+        }
+      ],
+      "calls": [
+        {
+          "instruction": "0x80375e2",
+          "target": "#0x8006e08"
+        },
+        {
+          "instruction": "0x8037600",
+          "target": "#0x8006e80"
+        },
+        {
+          "instruction": "0x8037612",
+          "target": "#0x8006e80"
+        },
+        {
+          "instruction": "0x803761e",
+          "target": "#0x8006e08"
+        }
+      ]
+    }
+  ],
+  "selector_samples": [
+    {
+      "logical_group_sample": 0,
+      "record_index_sample": 0,
+      "component_descriptor": {
+        "group_slot": "0x8334918",
+        "row_pointer": "0x8334894",
+        "record_slot": "0x8334894",
+        "record_pointer": "0x83347d4"
+      },
+      "terrain_edges": {
+        "group_slot": "0x8334c58",
+        "row_pointer": "0x8334b68",
+        "record_slot": "0x8334b68",
+        "record_pointer": "0x8334b48",
+        "edges_u16": [
+          2048,
+          1536,
+          0,
+          7680
+        ]
+      }
+    },
+    {
+      "logical_group_sample": 1,
+      "record_index_sample": 0,
+      "component_descriptor": {
+        "group_slot": "0x833491c",
+        "row_pointer": "0x8334894",
+        "record_slot": "0x8334894",
+        "record_pointer": "0x83347d4"
+      },
+      "terrain_edges": {
+        "group_slot": "0x8334c5c",
+        "row_pointer": "0x8334b68",
+        "record_slot": "0x8334b68",
+        "record_pointer": "0x8334b48",
+        "edges_u16": [
+          2048,
+          1536,
+          0,
+          7680
+        ]
+      }
+    },
+    {
+      "logical_group_sample": 2,
+      "record_index_sample": 0,
+      "component_descriptor": {
+        "group_slot": "0x8334920",
+        "row_pointer": "0x8334894",
+        "record_slot": "0x8334894",
+        "record_pointer": "0x83347d4"
+      },
+      "terrain_edges": {
+        "group_slot": "0x8334c60",
+        "row_pointer": "0x8334b68",
+        "record_slot": "0x8334b68",
+        "record_pointer": "0x8334b48",
+        "edges_u16": [
+          2048,
+          1536,
+          0,
+          7680
+        ]
+      }
+    },
+    {
+      "logical_group_sample": 3,
+      "record_index_sample": 0,
+      "component_descriptor": {
+        "group_slot": "0x8334924",
+        "row_pointer": "0x83348d4",
+        "record_slot": "0x83348d4",
+        "record_pointer": "0x8334804"
+      },
+      "terrain_edges": {
+        "group_slot": "0x8334c64",
+        "row_pointer": "0x8334ba8",
+        "record_slot": "0x8334ba8",
+        "record_pointer": "0x8334b50",
+        "edges_u16": [
+          3584,
+          3584,
+          0,
+          5632
+        ]
+      }
+    }
+  ],
+  "logical_group_animation_map_type0_prefix": {
+    "table": "0x0833467C",
+    "values_u16": [
+      0,
+      256,
+      512,
+      768
+    ],
+    "scope": "prefix only; total logical-group count not inferred"
+  },
+  "dispatch_type0": {
+    "initializer": "0x08037525 in a single local stack slot of1EEE0",
+    "install_table": "0x08333AE0",
+    "install_thumb_slot0": "0x803756d"
+  },
+  "findings": {
+    "shape_install": "3756C stores component descriptor at entity+0xD4 and terrain edges at+0xD8, does not write+0xDC",
+    "initialization": "37524 writes default terrain pointer to both+0xD8 and+0xDC",
+    "immediate": "1E9FC writes logical-group byte+0x17F, maps selector through type table, calls127E4 then1EF00(group,index0)",
+    "tick": "36BB4 compares signed8 index+0x71 around128D4, skips advancement for state0xD, installs only when index differs",
+    "limits": "No total table/frame count inferred; terrain8B edge records differ from component collision descriptors."
+  }
+}

@@ -1,0 +1,11 @@
+{
+ "sha1": "c4d93a58f0f82c526dec8a3fdbda170336303689",
+ "semantics": "wrap-boundary distance: dx=box[0x38]-pos.x (环绕模量 -0x7800), dy=box[0x3C]-pos.y (模量 -0x5000), 钳零后取 max",
+ "constants": {
+  "X_half": "0x7800 = 120px<<8 (GBA 半宽)",
+  "Y_half": "0x5000 = 80px<<8 (GBA 半高)",
+  "gate": "≤0xFFF ≈ 16px"
+ },
+ "box": "0x0202ED18 池节点 +0x38/+0x3C 参考点(相机相关)",
+ "consumer": "库装载状态机 0x080C5748 状态4 (实体平移后确认落位)"
+}

@@ -1,0 +1,1313 @@
+{
+ "base_sha1": "c4d93a58f0f82c526dec8a3fdbda170336303689",
+ "total": 120,
+ "err_class_distribution": {
+  "armips: invalid opcode (提取器翻译缺口)": 2,
+  "armips: parameter failure (翻译缺口)": 2,
+  "overlap (范围重叠)": 113,
+  "other": 3
+ },
+ "overlap_suspects": 120,
+ "jump_table_marks": 8,
+ "data_blob_suspects": 2,
+ "items": [
+  {
+   "address": "08000A00",
+   "start": "0x8000a00",
+   "size": 178,
+   "err": "armips: invalid opcode (提取器翻译缺口)",
+   "overlap_suspect": true,
+   "mov_pc": 0,
+   "data_blob_suspect": false
+  },
+  {
+   "address": "08001FE4",
+   "start": "0x8001fe4",
+   "size": 188,
+   "err": "armips: invalid opcode (提取器翻译缺口)",
+   "overlap_suspect": true,
+   "mov_pc": 0,
+   "data_blob_suspect": false
+  },
+  {
+   "address": "080020F0",
+   "start": "0x80020f0",
+   "size": 98,
+   "err": "armips: parameter failure (翻译缺口)",
+   "overlap_suspect": true,
+   "mov_pc": 0,
+   "data_blob_suspect": false
+  },
+  {
+   "address": "0800215C",
+   "start": "0x800215c",
+   "size": 76,
+   "err": "armips: parameter failure (翻译缺口)",
+   "overlap_suspect": true,
+   "mov_pc": 0,
+   "data_blob_suspect": false
+  },
+  {
+   "address": "08022590",
+   "start": "0x8022590",
+   "size": 280,
+   "err": "overlap (范围重叠)",
+   "overlap_suspect": true,
+   "mov_pc": 0,
+   "data_blob_suspect": false
+  },
+  {
+   "address": "080225AA",
+   "start": "0x80225aa",
+   "size": 254,
+   "err": "overlap (范围重叠)",
+   "overlap_suspect": true,
+   "mov_pc": 0,
+   "data_blob_suspect": false
+  },
+  {
+   "address": "08044A4C",
+   "start": "0x8044a4c",
+   "size": 1374,
+   "err": "overlap (范围重叠)",
+   "overlap_suspect": true,
+   "mov_pc": 0,
+   "data_blob_suspect": true
+  },
+  {
+   "address": "080706F8",
+   "start": "0x80706f8",
+   "size": 216,
+   "err": "overlap (范围重叠)",
+   "overlap_suspect": true,
+   "mov_pc": 0,
+   "data_blob_suspect": false
+  },
+  {
+   "address": "080719B4",
+   "start": "0x80719b4",
+   "size": 334,
+   "err": "overlap (范围重叠)",
+   "overlap_suspect": true,
+   "mov_pc": 0,
+   "data_blob_suspect": false
+  },
+  {
+   "address": "0807D502",
+   "start": "0x807d502",
+   "size": 348,
+   "err": "overlap (范围重叠)",
+   "overlap_suspect": true,
+   "mov_pc": 0,
+   "data_blob_suspect": false
+  },
+  {
+   "address": "0807D7E0",
+   "start": "0x807d7e0",
+   "size": 174,
+   "err": "overlap (范围重叠)",
+   "overlap_suspect": true,
+   "mov_pc": 0,
+   "data_blob_suspect": false
+  },
+  {
+   "address": "0807D7FE",
+   "start": "0x807d7fe",
+   "size": 144,
+   "err": "overlap (范围重叠)",
+   "overlap_suspect": true,
+   "mov_pc": 0,
+   "data_blob_suspect": false
+  },
+  {
+   "address": "0808DE64",
+   "start": "0x808de64",
+   "size": 750,
+   "err": "overlap (范围重叠)",
+   "overlap_suspect": true,
+   "mov_pc": 1,
+   "data_blob_suspect": false
+  },
+  {
+   "address": "0808E742",
+   "start": "0x808e742",
+   "size": 206,
+   "err": "overlap (范围重叠)",
+   "overlap_suspect": true,
+   "mov_pc": 0,
+   "data_blob_suspect": false
+  },
+  {
+   "address": "080949BA",
+   "start": "0x80949ba",
+   "size": 244,
+   "err": "overlap (范围重叠)",
+   "overlap_suspect": true,
+   "mov_pc": 0,
+   "data_blob_suspect": false
+  },
+  {
+   "address": "08098848",
+   "start": "0x8098848",
+   "size": 180,
+   "err": "overlap (范围重叠)",
+   "overlap_suspect": true,
+   "mov_pc": 0,
+   "data_blob_suspect": false
+  },
+  {
+   "address": "0809EBF0",
+   "start": "0x809ebf0",
+   "size": 366,
+   "err": "overlap (范围重叠)",
+   "overlap_suspect": true,
+   "mov_pc": 0,
+   "data_blob_suspect": false
+  },
+  {
+   "address": "0809EC0E",
+   "start": "0x809ec0e",
+   "size": 336,
+   "err": "overlap (范围重叠)",
+   "overlap_suspect": true,
+   "mov_pc": 0,
+   "data_blob_suspect": false
+  },
+  {
+   "address": "0809EEB8",
+   "start": "0x809eeb8",
+   "size": 454,
+   "err": "overlap (范围重叠)",
+   "overlap_suspect": true,
+   "mov_pc": 0,
+   "data_blob_suspect": false
+  },
+  {
+   "address": "0809EEEA",
+   "start": "0x809eeea",
+   "size": 404,
+   "err": "overlap (范围重叠)",
+   "overlap_suspect": true,
+   "mov_pc": 0,
+   "data_blob_suspect": false
+  },
+  {
+   "address": "080C3046",
+   "start": "0x80c3046",
+   "size": 0,
+   "err": "other",
+   "overlap_suspect": true,
+   "mov_pc": 0,
+   "data_blob_suspect": false
+  },
+  {
+   "address": "08009F90",
+   "start": "0x8009f90",
+   "size": 50,
+   "err": "overlap (范围重叠)",
+   "overlap_suspect": true,
+   "mov_pc": 0,
+   "data_blob_suspect": false
+  },
+  {
+   "address": "0800AA08",
+   "start": "0x800aa08",
+   "size": 438,
+   "err": "overlap (范围重叠)",
+   "overlap_suspect": true,
+   "mov_pc": 0,
+   "data_blob_suspect": false
+  },
+  {
+   "address": "08015E78",
+   "start": "0x8015e78",
+   "size": 1456,
+   "err": "overlap (范围重叠)",
+   "overlap_suspect": true,
+   "mov_pc": 0,
+   "data_blob_suspect": true
+  },
+  {
+   "address": "08020438",
+   "start": "0x8020438",
+   "size": 98,
+   "err": "overlap (范围重叠)",
+   "overlap_suspect": true,
+   "mov_pc": 0,
+   "data_blob_suspect": false
+  },
+  {
+   "address": "08021110",
+   "start": "0x8021110",
+   "size": 456,
+   "err": "overlap (范围重叠)",
+   "overlap_suspect": true,
+   "mov_pc": 0,
+   "data_blob_suspect": false
+  },
+  {
+   "address": "08044728",
+   "start": "0x8044728",
+   "size": 344,
+   "err": "overlap (范围重叠)",
+   "overlap_suspect": true,
+   "mov_pc": 0,
+   "data_blob_suspect": false
+  },
+  {
+   "address": "0804B0AC",
+   "start": "0x804b0ac",
+   "size": 504,
+   "err": "overlap (范围重叠)",
+   "overlap_suspect": true,
+   "mov_pc": 0,
+   "data_blob_suspect": false
+  },
+  {
+   "address": "0804E6F8",
+   "start": "0x804e6f8",
+   "size": 634,
+   "err": "overlap (范围重叠)",
+   "overlap_suspect": true,
+   "mov_pc": 0,
+   "data_blob_suspect": false
+  },
+  {
+   "address": "0804FAF0",
+   "start": "0x804faf0",
+   "size": 658,
+   "err": "overlap (范围重叠)",
+   "overlap_suspect": true,
+   "mov_pc": 1,
+   "data_blob_suspect": false
+  },
+  {
+   "address": "08052350",
+   "start": "0x8052350",
+   "size": 406,
+   "err": "overlap (范围重叠)",
+   "overlap_suspect": true,
+   "mov_pc": 0,
+   "data_blob_suspect": false
+  },
+  {
+   "address": "08054A54",
+   "start": "0x8054a54",
+   "size": 290,
+   "err": "overlap (范围重叠)",
+   "overlap_suspect": true,
+   "mov_pc": 0,
+   "data_blob_suspect": false
+  },
+  {
+   "address": "0805D040",
+   "start": "0x805d040",
+   "size": 782,
+   "err": "overlap (范围重叠)",
+   "overlap_suspect": true,
+   "mov_pc": 1,
+   "data_blob_suspect": false
+  },
+  {
+   "address": "0805DFF4",
+   "start": "0x805dff4",
+   "size": 348,
+   "err": "overlap (范围重叠)",
+   "overlap_suspect": true,
+   "mov_pc": 0,
+   "data_blob_suspect": false
+  },
+  {
+   "address": "0805EA5C",
+   "start": "0x805ea5c",
+   "size": 458,
+   "err": "overlap (范围重叠)",
+   "overlap_suspect": true,
+   "mov_pc": 0,
+   "data_blob_suspect": false
+  },
+  {
+   "address": "08062C20",
+   "start": "0x8062c20",
+   "size": 706,
+   "err": "overlap (范围重叠)",
+   "overlap_suspect": true,
+   "mov_pc": 1,
+   "data_blob_suspect": false
+  },
+  {
+   "address": "08062F78",
+   "start": "0x8062f78",
+   "size": 486,
+   "err": "overlap (范围重叠)",
+   "overlap_suspect": true,
+   "mov_pc": 0,
+   "data_blob_suspect": false
+  },
+  {
+   "address": "0806CF10",
+   "start": "0x806cf10",
+   "size": 88,
+   "err": "overlap (范围重叠)",
+   "overlap_suspect": true,
+   "mov_pc": 0,
+   "data_blob_suspect": false
+  },
+  {
+   "address": "0806FD04",
+   "start": "0x806fd04",
+   "size": 574,
+   "err": "overlap (范围重叠)",
+   "overlap_suspect": true,
+   "mov_pc": 0,
+   "data_blob_suspect": false
+  },
+  {
+   "address": "080710E4",
+   "start": "0x80710e4",
+   "size": 580,
+   "err": "overlap (范围重叠)",
+   "overlap_suspect": true,
+   "mov_pc": 0,
+   "data_blob_suspect": false
+  },
+  {
+   "address": "080741A8",
+   "start": "0x80741a8",
+   "size": 330,
+   "err": "overlap (范围重叠)",
+   "overlap_suspect": true,
+   "mov_pc": 0,
+   "data_blob_suspect": false
+  },
+  {
+   "address": "0807D890",
+   "start": "0x807d890",
+   "size": 54,
+   "err": "overlap (范围重叠)",
+   "overlap_suspect": true,
+   "mov_pc": 0,
+   "data_blob_suspect": false
+  },
+  {
+   "address": "0807E6E4",
+   "start": "0x807e6e4",
+   "size": 180,
+   "err": "overlap (范围重叠)",
+   "overlap_suspect": true,
+   "mov_pc": 0,
+   "data_blob_suspect": false
+  },
+  {
+   "address": "0807ED54",
+   "start": "0x807ed54",
+   "size": 474,
+   "err": "overlap (范围重叠)",
+   "overlap_suspect": true,
+   "mov_pc": 0,
+   "data_blob_suspect": false
+  },
+  {
+   "address": "0807EF30",
+   "start": "0x807ef30",
+   "size": 606,
+   "err": "overlap (范围重叠)",
+   "overlap_suspect": true,
+   "mov_pc": 0,
+   "data_blob_suspect": false
+  },
+  {
+   "address": "080858E4",
+   "start": "0x80858e4",
+   "size": 180,
+   "err": "overlap (范围重叠)",
+   "overlap_suspect": true,
+   "mov_pc": 0,
+   "data_blob_suspect": false
+  },
+  {
+   "address": "08086AF4",
+   "start": "0x8086af4",
+   "size": 76,
+   "err": "overlap (范围重叠)",
+   "overlap_suspect": true,
+   "mov_pc": 0,
+   "data_blob_suspect": false
+  },
+  {
+   "address": "0808E538",
+   "start": "0x808e538",
+   "size": 172,
+   "err": "overlap (范围重叠)",
+   "overlap_suspect": true,
+   "mov_pc": 0,
+   "data_blob_suspect": false
+  },
+  {
+   "address": "0808E5EC",
+   "start": "0x808e5ec",
+   "size": 548,
+   "err": "overlap (范围重叠)",
+   "overlap_suspect": true,
+   "mov_pc": 0,
+   "data_blob_suspect": false
+  },
+  {
+   "address": "0808EDD8",
+   "start": "0x808edd8",
+   "size": 152,
+   "err": "overlap (范围重叠)",
+   "overlap_suspect": true,
+   "mov_pc": 0,
+   "data_blob_suspect": false
+  },
+  {
+   "address": "0808F06C",
+   "start": "0x808f06c",
+   "size": 372,
+   "err": "overlap (范围重叠)",
+   "overlap_suspect": true,
+   "mov_pc": 0,
+   "data_blob_suspect": false
+  },
+  {
+   "address": "08094D3C",
+   "start": "0x8094d3c",
+   "size": 270,
+   "err": "overlap (范围重叠)",
+   "overlap_suspect": true,
+   "mov_pc": 1,
+   "data_blob_suspect": false
+  },
+  {
+   "address": "08095214",
+   "start": "0x8095214",
+   "size": 452,
+   "err": "overlap (范围重叠)",
+   "overlap_suspect": true,
+   "mov_pc": 1,
+   "data_blob_suspect": false
+  },
+  {
+   "address": "0809542C",
+   "start": "0x809542c",
+   "size": 166,
+   "err": "overlap (范围重叠)",
+   "overlap_suspect": true,
+   "mov_pc": 0,
+   "data_blob_suspect": false
+  },
+  {
+   "address": "08095F80",
+   "start": "0x8095f80",
+   "size": 518,
+   "err": "overlap (范围重叠)",
+   "overlap_suspect": true,
+   "mov_pc": 0,
+   "data_blob_suspect": false
+  },
+  {
+   "address": "080C2FF8",
+   "start": "0x80c2ff8",
+   "size": 244,
+   "err": "overlap (范围重叠)",
+   "overlap_suspect": true,
+   "mov_pc": 0,
+   "data_blob_suspect": false
+  },
+  {
+   "address": "080C3764",
+   "start": "0x80c3764",
+   "size": 184,
+   "err": "overlap (范围重叠)",
+   "overlap_suspect": true,
+   "mov_pc": 0,
+   "data_blob_suspect": false
+  },
+  {
+   "address": "080C4174",
+   "start": "0x80c4174",
+   "size": 1004,
+   "err": "overlap (范围重叠)",
+   "overlap_suspect": true,
+   "mov_pc": 1,
+   "data_blob_suspect": false
+  },
+  {
+   "address": "080C5BC8",
+   "start": "0x80c5bc8",
+   "size": 676,
+   "err": "overlap (范围重叠)",
+   "overlap_suspect": true,
+   "mov_pc": 1,
+   "data_blob_suspect": false
+  },
+  {
+   "address": "080CC554",
+   "start": "0x80cc554",
+   "size": 410,
+   "err": "overlap (范围重叠)",
+   "overlap_suspect": true,
+   "mov_pc": 0,
+   "data_blob_suspect": false
+  },
+  {
+   "address": "080CEDCC",
+   "start": "0x80cedcc",
+   "size": 540,
+   "err": "overlap (范围重叠)",
+   "overlap_suspect": true,
+   "mov_pc": 0,
+   "data_blob_suspect": false
+  },
+  {
+   "address": "080E1300",
+   "start": "0x80e1300",
+   "size": 400,
+   "err": "overlap (范围重叠)",
+   "overlap_suspect": true,
+   "mov_pc": 0,
+   "data_blob_suspect": false
+  },
+  {
+   "address": "08043400",
+   "start": "0x8043400",
+   "size": 166,
+   "err": "overlap (范围重叠)",
+   "overlap_suspect": true,
+   "mov_pc": 0,
+   "data_blob_suspect": false
+  },
+  {
+   "address": "080445F0",
+   "start": "0x80445f0",
+   "size": 66,
+   "err": "overlap (范围重叠)",
+   "overlap_suspect": true,
+   "mov_pc": 0,
+   "data_blob_suspect": false
+  },
+  {
+   "address": "08047C64",
+   "start": "0x8047c64",
+   "size": 78,
+   "err": "overlap (范围重叠)",
+   "overlap_suspect": true,
+   "mov_pc": 0,
+   "data_blob_suspect": false
+  },
+  {
+   "address": "08047D00",
+   "start": "0x8047d00",
+   "size": 364,
+   "err": "overlap (范围重叠)",
+   "overlap_suspect": true,
+   "mov_pc": 0,
+   "data_blob_suspect": false
+  },
+  {
+   "address": "08049DA0",
+   "start": "0x8049da0",
+   "size": 140,
+   "err": "overlap (范围重叠)",
+   "overlap_suspect": true,
+   "mov_pc": 0,
+   "data_blob_suspect": false
+  },
+  {
+   "address": "08051A38",
+   "start": "0x8051a38",
+   "size": 64,
+   "err": "overlap (范围重叠)",
+   "overlap_suspect": true,
+   "mov_pc": 0,
+   "data_blob_suspect": false
+  },
+  {
+   "address": "08057F88",
+   "start": "0x8057f88",
+   "size": 148,
+   "err": "overlap (范围重叠)",
+   "overlap_suspect": true,
+   "mov_pc": 0,
+   "data_blob_suspect": false
+  },
+  {
+   "address": "0805E150",
+   "start": "0x805e150",
+   "size": 648,
+   "err": "overlap (范围重叠)",
+   "overlap_suspect": true,
+   "mov_pc": 0,
+   "data_blob_suspect": false
+  },
+  {
+   "address": "08063790",
+   "start": "0x8063790",
+   "size": 218,
+   "err": "overlap (范围重叠)",
+   "overlap_suspect": true,
+   "mov_pc": 0,
+   "data_blob_suspect": false
+  },
+  {
+   "address": "080652B8",
+   "start": "0x80652b8",
+   "size": 180,
+   "err": "overlap (范围重叠)",
+   "overlap_suspect": true,
+   "mov_pc": 0,
+   "data_blob_suspect": false
+  },
+  {
+   "address": "080683CC",
+   "start": "0x80683cc",
+   "size": 608,
+   "err": "overlap (范围重叠)",
+   "overlap_suspect": true,
+   "mov_pc": 0,
+   "data_blob_suspect": false
+  },
+  {
+   "address": "0806D140",
+   "start": "0x806d140",
+   "size": 248,
+   "err": "overlap (范围重叠)",
+   "overlap_suspect": true,
+   "mov_pc": 0,
+   "data_blob_suspect": false
+  },
+  {
+   "address": "080725B0",
+   "start": "0x80725b0",
+   "size": 216,
+   "err": "overlap (范围重叠)",
+   "overlap_suspect": true,
+   "mov_pc": 0,
+   "data_blob_suspect": false
+  },
+  {
+   "address": "08072E80",
+   "start": "0x8072e80",
+   "size": 448,
+   "err": "overlap (范围重叠)",
+   "overlap_suspect": true,
+   "mov_pc": 0,
+   "data_blob_suspect": false
+  },
+  {
+   "address": "0807D66C",
+   "start": "0x807d66c",
+   "size": 358,
+   "err": "overlap (范围重叠)",
+   "overlap_suspect": true,
+   "mov_pc": 0,
+   "data_blob_suspect": false
+  },
+  {
+   "address": "0807F9F0",
+   "start": "0x807f9f0",
+   "size": 204,
+   "err": "overlap (范围重叠)",
+   "overlap_suspect": true,
+   "mov_pc": 0,
+   "data_blob_suspect": false
+  },
+  {
+   "address": "0807FAC0",
+   "start": "0x807fac0",
+   "size": 60,
+   "err": "overlap (范围重叠)",
+   "overlap_suspect": true,
+   "mov_pc": 0,
+   "data_blob_suspect": false
+  },
+  {
+   "address": "08081030",
+   "start": "0x8081030",
+   "size": 156,
+   "err": "overlap (范围重叠)",
+   "overlap_suspect": true,
+   "mov_pc": 0,
+   "data_blob_suspect": false
+  },
+  {
+   "address": "08082900",
+   "start": "0x8082900",
+   "size": 412,
+   "err": "overlap (范围重叠)",
+   "overlap_suspect": true,
+   "mov_pc": 0,
+   "data_blob_suspect": false
+  },
+  {
+   "address": "08083280",
+   "start": "0x8083280",
+   "size": 144,
+   "err": "overlap (范围重叠)",
+   "overlap_suspect": true,
+   "mov_pc": 0,
+   "data_blob_suspect": false
+  },
+  {
+   "address": "080857A0",
+   "start": "0x80857a0",
+   "size": 182,
+   "err": "overlap (范围重叠)",
+   "overlap_suspect": true,
+   "mov_pc": 0,
+   "data_blob_suspect": false
+  },
+  {
+   "address": "0808E3E4",
+   "start": "0x808e3e4",
+   "size": 82,
+   "err": "overlap (范围重叠)",
+   "overlap_suspect": true,
+   "mov_pc": 0,
+   "data_blob_suspect": false
+  },
+  {
+   "address": "0808E884",
+   "start": "0x808e884",
+   "size": 218,
+   "err": "overlap (范围重叠)",
+   "overlap_suspect": true,
+   "mov_pc": 0,
+   "data_blob_suspect": false
+  },
+  {
+   "address": "0808EEC4",
+   "start": "0x808eec4",
+   "size": 102,
+   "err": "overlap (范围重叠)",
+   "overlap_suspect": true,
+   "mov_pc": 0,
+   "data_blob_suspect": false
+  },
+  {
+   "address": "08091BBC",
+   "start": "0x8091bbc",
+   "size": 250,
+   "err": "overlap (范围重叠)",
+   "overlap_suspect": true,
+   "mov_pc": 0,
+   "data_blob_suspect": false
+  },
+  {
+   "address": "080987D8",
+   "start": "0x80987d8",
+   "size": 104,
+   "err": "overlap (范围重叠)",
+   "overlap_suspect": true,
+   "mov_pc": 0,
+   "data_blob_suspect": false
+  },
+  {
+   "address": "0809B894",
+   "start": "0x809b894",
+   "size": 218,
+   "err": "overlap (范围重叠)",
+   "overlap_suspect": true,
+   "mov_pc": 0,
+   "data_blob_suspect": false
+  },
+  {
+   "address": "0809BB30",
+   "start": "0x809bb30",
+   "size": 202,
+   "err": "overlap (范围重叠)",
+   "overlap_suspect": true,
+   "mov_pc": 0,
+   "data_blob_suspect": false
+  },
+  {
+   "address": "0809EDF4",
+   "start": "0x809edf4",
+   "size": 182,
+   "err": "overlap (范围重叠)",
+   "overlap_suspect": true,
+   "mov_pc": 0,
+   "data_blob_suspect": false
+  },
+  {
+   "address": "080A6294",
+   "start": "0x80a6294",
+   "size": 198,
+   "err": "overlap (范围重叠)",
+   "overlap_suspect": true,
+   "mov_pc": 0,
+   "data_blob_suspect": false
+  },
+  {
+   "address": "080A8E4C",
+   "start": "0x80a8e4c",
+   "size": 266,
+   "err": "overlap (范围重叠)",
+   "overlap_suspect": true,
+   "mov_pc": 0,
+   "data_blob_suspect": false
+  },
+  {
+   "address": "080AE0C0",
+   "start": "0x80ae0c0",
+   "size": 92,
+   "err": "overlap (范围重叠)",
+   "overlap_suspect": true,
+   "mov_pc": 0,
+   "data_blob_suspect": false
+  },
+  {
+   "address": "080B2C78",
+   "start": "0x80b2c78",
+   "size": 386,
+   "err": "overlap (范围重叠)",
+   "overlap_suspect": true,
+   "mov_pc": 0,
+   "data_blob_suspect": false
+  },
+  {
+   "address": "080C2E5C",
+   "start": "0x80c2e5c",
+   "size": 408,
+   "err": "overlap (范围重叠)",
+   "overlap_suspect": true,
+   "mov_pc": 0,
+   "data_blob_suspect": false
+  },
+  {
+   "address": "080C412C",
+   "start": "0x80c412c",
+   "size": 68,
+   "err": "overlap (范围重叠)",
+   "overlap_suspect": true,
+   "mov_pc": 0,
+   "data_blob_suspect": false
+  },
+  {
+   "address": "080CEAB4",
+   "start": "0x80ceab4",
+   "size": 128,
+   "err": "overlap (范围重叠)",
+   "overlap_suspect": true,
+   "mov_pc": 0,
+   "data_blob_suspect": false
+  },
+  {
+   "address": "080D2724",
+   "start": "0x80d2724",
+   "size": 146,
+   "err": "overlap (范围重叠)",
+   "overlap_suspect": true,
+   "mov_pc": 0,
+   "data_blob_suspect": false
+  },
+  {
+   "address": "080ED4B6",
+   "start": "0x80ed4b6",
+   "size": 588,
+   "err": "overlap (范围重叠)",
+   "overlap_suspect": true,
+   "mov_pc": 0,
+   "data_blob_suspect": false
+  },
+  {
+   "address": "08009E38",
+   "start": "0x8009e38",
+   "size": 62,
+   "err": "overlap (范围重叠)",
+   "overlap_suspect": true,
+   "mov_pc": 0,
+   "data_blob_suspect": false
+  },
+  {
+   "address": "08009EEC",
+   "start": "0x8009eec",
+   "size": 38,
+   "err": "overlap (范围重叠)",
+   "overlap_suspect": true,
+   "mov_pc": 0,
+   "data_blob_suspect": false
+  },
+  {
+   "address": "0800CA68",
+   "start": "0x800ca68",
+   "size": 44,
+   "err": "other",
+   "overlap_suspect": true,
+   "mov_pc": 0,
+   "data_blob_suspect": false
+  },
+  {
+   "address": "08023C94",
+   "start": "0x8023c94",
+   "size": 704,
+   "err": "overlap (范围重叠)",
+   "overlap_suspect": true,
+   "mov_pc": 0,
+   "data_blob_suspect": false
+  },
+  {
+   "address": "08033E18",
+   "start": "0x8033e18",
+   "size": 182,
+   "err": "overlap (范围重叠)",
+   "overlap_suspect": true,
+   "mov_pc": 0,
+   "data_blob_suspect": false
+  },
+  {
+   "address": "0803A534",
+   "start": "0x803a534",
+   "size": 34,
+   "err": "other",
+   "overlap_suspect": true,
+   "mov_pc": 0,
+   "data_blob_suspect": false
+  },
+  {
+   "address": "08054180",
+   "start": "0x8054180",
+   "size": 140,
+   "err": "overlap (范围重叠)",
+   "overlap_suspect": true,
+   "mov_pc": 0,
+   "data_blob_suspect": false
+  },
+  {
+   "address": "0805E8E8",
+   "start": "0x805e8e8",
+   "size": 88,
+   "err": "overlap (范围重叠)",
+   "overlap_suspect": true,
+   "mov_pc": 0,
+   "data_blob_suspect": false
+  },
+  {
+   "address": "0807D4F8",
+   "start": "0x807d4f8",
+   "size": 358,
+   "err": "overlap (范围重叠)",
+   "overlap_suspect": true,
+   "mov_pc": 0,
+   "data_blob_suspect": false
+  },
+  {
+   "address": "0808CD80",
+   "start": "0x808cd80",
+   "size": 178,
+   "err": "overlap (范围重叠)",
+   "overlap_suspect": true,
+   "mov_pc": 0,
+   "data_blob_suspect": false
+  },
+  {
+   "address": "080949B4",
+   "start": "0x80949b4",
+   "size": 250,
+   "err": "overlap (范围重叠)",
+   "overlap_suspect": true,
+   "mov_pc": 0,
+   "data_blob_suspect": false
+  },
+  {
+   "address": "080AD078",
+   "start": "0x80ad078",
+   "size": 390,
+   "err": "overlap (范围重叠)",
+   "overlap_suspect": true,
+   "mov_pc": 0,
+   "data_blob_suspect": false
+  },
+  {
+   "address": "080D8210",
+   "start": "0x80d8210",
+   "size": 398,
+   "err": "overlap (范围重叠)",
+   "overlap_suspect": true,
+   "mov_pc": 0,
+   "data_blob_suspect": false
+  },
+  {
+   "address": "080D8640",
+   "start": "0x80d8640",
+   "size": 162,
+   "err": "overlap (范围重叠)",
+   "overlap_suspect": true,
+   "mov_pc": 0,
+   "data_blob_suspect": false
+  },
+  {
+   "address": "080D86E4",
+   "start": "0x80d86e4",
+   "size": 26,
+   "err": "overlap (范围重叠)",
+   "overlap_suspect": true,
+   "mov_pc": 0,
+   "data_blob_suspect": false
+  },
+  {
+   "address": "080D8840",
+   "start": "0x80d8840",
+   "size": 22,
+   "err": "overlap (范围重叠)",
+   "overlap_suspect": true,
+   "mov_pc": 0,
+   "data_blob_suspect": false
+  },
+  {
+   "address": "080D8A90",
+   "start": "0x80d8a90",
+   "size": 326,
+   "err": "overlap (范围重叠)",
+   "overlap_suspect": true,
+   "mov_pc": 0,
+   "data_blob_suspect": false
+  },
+  {
+   "address": "080D8C04",
+   "start": "0x80d8c04",
+   "size": 88,
+   "err": "overlap (范围重叠)",
+   "overlap_suspect": true,
+   "mov_pc": 0,
+   "data_blob_suspect": false
+  },
+  {
+   "address": "080D8ED4",
+   "start": "0x80d8ed4",
+   "size": 120,
+   "err": "overlap (范围重叠)",
+   "overlap_suspect": true,
+   "mov_pc": 0,
+   "data_blob_suspect": false
+  },
+  {
+   "address": "080D8F4C",
+   "start": "0x80d8f4c",
+   "size": 100,
+   "err": "overlap (范围重叠)",
+   "overlap_suspect": true,
+   "mov_pc": 0,
+   "data_blob_suspect": false
+  }
+ ],
+ "note": "重叠嫌疑=候选区间与已覆盖段起点近邻(0x400 窗口), 需人工复核; 大区间(>1KB)=数据/代码混合嫌疑; 二轮修正: build.asm 以 .org+.include 对定位段起点, 修正后陈旧记录=已恢复但仍列入清单者",
+ "stale_records": [
+  "08000A00",
+  "08001FE4",
+  "080020F0",
+  "0800215C",
+  "08044A4C",
+  "08015E78"
+ ],
+ "real_gaps": 114,
+ "real_gap_list": [
+  "08022590",
+  "080225AA",
+  "080706F8",
+  "080719B4",
+  "0807D502",
+  "0807D7E0",
+  "0807D7FE",
+  "0808DE64",
+  "0808E742",
+  "080949BA",
+  "08098848",
+  "0809EBF0",
+  "0809EC0E",
+  "0809EEB8",
+  "0809EEEA",
+  "080C3046",
+  "08009F90",
+  "0800AA08",
+  "08020438",
+  "08021110",
+  "08044728",
+  "0804B0AC",
+  "0804E6F8",
+  "0804FAF0",
+  "08052350",
+  "08054A54",
+  "0805D040",
+  "0805DFF4",
+  "0805EA5C",
+  "08062C20",
+  "08062F78",
+  "0806CF10",
+  "0806FD04",
+  "080710E4",
+  "080741A8",
+  "0807D890",
+  "0807E6E4",
+  "0807ED54",
+  "0807EF30",
+  "080858E4",
+  "08086AF4",
+  "0808E538",
+  "0808E5EC",
+  "0808EDD8",
+  "0808F06C",
+  "08094D3C",
+  "08095214",
+  "0809542C",
+  "08095F80",
+  "080C2FF8",
+  "080C3764",
+  "080C4174",
+  "080C5BC8",
+  "080CC554",
+  "080CEDCC",
+  "080E1300",
+  "08043400",
+  "080445F0",
+  "08047C64",
+  "08047D00",
+  "08049DA0",
+  "08051A38",
+  "08057F88",
+  "0805E150",
+  "08063790",
+  "080652B8",
+  "080683CC",
+  "0806D140",
+  "080725B0",
+  "08072E80",
+  "0807D66C",
+  "0807F9F0",
+  "0807FAC0",
+  "08081030",
+  "08082900",
+  "08083280",
+  "080857A0",
+  "0808E3E4",
+  "0808E884",
+  "0808EEC4",
+  "08091BBC",
+  "080987D8",
+  "0809B894",
+  "0809BB30",
+  "0809EDF4",
+  "080A6294",
+  "080A8E4C",
+  "080AE0C0",
+  "080B2C78",
+  "080C2E5C",
+  "080C412C",
+  "080CEAB4",
+  "080D2724",
+  "080ED4B6",
+  "08009E38",
+  "08009EEC",
+  "0800CA68",
+  "08023C94",
+  "08033E18",
+  "0803A534",
+  "08054180",
+  "0805E8E8",
+  "0807D4F8",
+  "0808CD80",
+  "080949B4",
+  "080AD078",
+  "080D8210",
+  "080D8640",
+  "080D86E4",
+  "080D8840",
+  "080D8A90",
+  "080D8C04",
+  "080D8ED4",
+  "080D8F4C"
+ ],
+ "gap_inside_covered": 0,
+ "gap_true_holes": 114,
+ "inside_examples": [],
+ "hole_examples": [
+  "08022590",
+  "080225AA",
+  "080706F8",
+  "080719B4",
+  "0807D502",
+  "0807D7E0",
+  "0807D7FE",
+  "0808DE64",
+  "0808E742",
+  "080949BA",
+  "08098848",
+  "0809EBF0"
+ ],
+ "fresh_err_distribution": {
+  "overlap-rejected(过期拒绝状态)": 111,
+  "other": 3
+ },
+ "distinct_holes": 106,
+ "multi_candidate_holes": [
+  [
+   "0x8022590",
+   2
+  ],
+  [
+   "0x807d4f2",
+   2
+  ],
+  [
+   "0x807d7d2",
+   2
+  ],
+  [
+   "0x808e5e4",
+   2
+  ],
+  [
+   "0x80949b0",
+   2
+  ],
+  [
+   "0x809ebec",
+   2
+  ],
+  [
+   "0x809eeaa",
+   2
+  ],
+  [
+   "0x80c2ff4",
+   2
+  ]
+ ],
+ "sweep_result": {
+  "date": "2026-10-31",
+  "tool_fix": "extract_func BFS 边界钳位(最近已注册邻段起点-2)",
+  "recovered": 107,
+  "recovered_list_first": "08022590",
+  "fails": [
+   "080225AA",
+   "0807D7FE",
+   "0809EC0E",
+   "0809EEEA",
+   "08062F78",
+   "0806FD04",
+   "080C3046"
+  ],
+  "fail_reasons": "6=重叠(候选起点已被先恢复的邻段覆盖, 属合法拒绝); 1=无法反汇编(080C3046, 数据/不可解码)",
+  "coverage_before": "6270 段 / 897,960B(约91.1%)",
+  "coverage_after": "6373 段 / 911,420B(约92.7%)",
+  "conclusion": "旧结论'剩余105有深层原因'修正: 实为 BFS 越界导致的过期重叠拒绝, 单一工具修复即恢复 107/120"
+ },
+ "final_adjudication": {
+  "080225AA": "被 sub_08022590 覆盖 ✓",
+  "0807D7FE": "被 sub_0807D7E0 覆盖 ✓",
+  "0809EC0E": "被 sub_0809EBF0 覆盖 ✓",
+  "0809EEEA": "被 sub_0809EEB8 覆盖 ✓",
+  "080C3046": "被 sub_080C2FF8 覆盖 ✓('无法反汇编'判定过期)",
+  "08062F78": "二轮修复后恢复(468B,0降级) ✓",
+  "0806FD04": "二轮修复后恢复(208B,0降级) ✓",
+  "tool_fix_v2": "自适应收缩: 4B 指令(BL/宽LDR)从 bound-2 跨入邻段 → 逐次 cap-=2 直到无跨越",
+  "total": "120/120 闭环: 109 新段 + 11 被邻段覆盖",
+  "coverage_precise": "6375 段 / 912,096B / 代码区 983,040B(0x08000000-0x080F0000) = 92.78%"
+ },
+ "ram_table_survey": {
+  "0x0202E590": "u16 表, 与 0x0202E390(u8) 成对, 池字引用 ~110 处遍布全代码区(0x0800B918-0x080EC9FC)",
+  "reading": "全局共享的按库号索引合成表, 非 127E4 私有; E590/E390 池字恒成对(相距 8B)",
+  "open": "写入者定位(抽样的引用窗内无 strh 直写, 需全函数级扫描或动态断点)"
+ }
+}

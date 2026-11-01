@@ -1,0 +1,793 @@
+{
+  "baseline_sha1": "c4d93a58f0f82c526dec8a3fdbda170336303689",
+  "method": "Static original-ROM reachable Thumb graph and PC literals; no runtime/game observations.",
+  "functions": [
+    {
+      "start": "0x801eaf8",
+      "end_exclusive": "0x801eb9e",
+      "span_sha1": "feb902ee84df6433f0080b6ad20079b8ad2d6daf",
+      "reachable_instructions": [
+        "0801EAF8: push {r4, r5, r6, r7, lr}",
+        "0801EAFA: mov r7, r8",
+        "0801EAFC: push {r7}",
+        "0801EAFE: adds r6, r0, #0",
+        "0801EB00: ldr r0, [pc, #0x2c]",
+        "0801EB02: adds r1, r6, r0",
+        "0801EB04: ldrb r5, [r1]",
+        "0801EB06: movs r2, #0xcc",
+        "0801EB08: lsls r2, r2, #1",
+        "0801EB0A: adds r0, r6, r2",
+        "0801EB0C: adds r0, r0, r5",
+        "0801EB0E: ldrb r0, [r0]",
+        "0801EB10: mov r8, r0",
+        "0801EB12: adds r5, #1",
+        "0801EB14: movs r0, #0x3f",
+        "0801EB16: ands r5, r0",
+        "0801EB18: strb r5, [r1]",
+        "0801EB1A: adds r0, r6, #0",
+        "0801EB1C: bl #0x801ebdc",
+        "0801EB20: adds r1, r0, #0",
+        "0801EB22: ldrb r0, [r6, #0x10]",
+        "0801EB24: cmp r0, #0",
+        "0801EB26: beq #0x801eb38",
+        "0801EB28: ldr r0, [pc, #8]",
+        "0801EB2A: ldrh r7, [r0, #6]",
+        "0801EB2C: b #0x801eb3c",
+        "0801EB38: ldr r0, [pc, #0x64]",
+        "0801EB3A: ldrh r7, [r0, #4]",
+        "0801EB3C: adds r0, r1, #0",
+        "0801EB3E: adds r1, r7, #0",
+        "0801EB40: bl #0x801ebac",
+        "0801EB44: lsls r0, r0, #0x18",
+        "0801EB46: lsrs r2, r0, #0x18",
+        "0801EB48: ldr r1, [pc, #0x58]",
+        "0801EB4A: ldrb r0, [r6, #9]",
+        "0801EB4C: lsls r0, r0, #2",
+        "0801EB4E: adds r0, r0, r1",
+        "0801EB50: ldr r4, [r0]",
+        "0801EB52: adds r0, r6, #0",
+        "0801EB54: adds r1, r7, #0",
+        "0801EB56: mov r3, r8",
+        "0801EB58: bl #0x80ef124",
+        "0801EB5C: lsls r0, r0, #0x18",
+        "0801EB5E: lsrs r2, r0, #0x18",
+        "0801EB60: movs r1, #0xcc",
+        "0801EB62: lsls r1, r1, #1",
+        "0801EB64: adds r0, r6, r1",
+        "0801EB66: adds r0, r0, r5",
+        "0801EB68: strb r2, [r0]",
+        "0801EB6A: mov r0, r8",
+        "0801EB6C: bics r2, r0",
+        "0801EB6E: subs r1, #2",
+        "0801EB70: adds r0, r6, r1",
+        "0801EB72: strb r2, [r0]",
+        "0801EB74: lsrs r0, r5, #5",
+        "0801EB76: lsls r0, r0, #2",
+        "0801EB78: adds r1, #0x42",
+        "0801EB7A: adds r2, r6, r1",
+        "0801EB7C: adds r2, r2, r0",
+        "0801EB7E: movs r0, #0x1f",
+        "0801EB80: ands r5, r0",
+        "0801EB82: movs r1, #1",
+        "0801EB84: lsls r1, r5",
+        "0801EB86: ldr r0, [r2]",
+        "0801EB88: bics r0, r1",
+        "0801EB8A: str r0, [r2]",
+        "0801EB8C: ldr r2, [pc, #0x18]",
+        "0801EB8E: adds r1, r6, r2",
+        "0801EB90: movs r0, #0xff",
+        "0801EB92: strb r0, [r1]",
+        "0801EB94: pop {r3}",
+        "0801EB96: mov r8, r3",
+        "0801EB98: pop {r4, r5, r6, r7}",
+        "0801EB9A: pop {r0}",
+        "0801EB9C: bx r0"
+      ],
+      "literals": [
+        {
+          "instruction": "0x801eb00",
+          "address": "0x801eb30",
+          "u32": "0x195"
+        },
+        {
+          "instruction": "0x801eb28",
+          "address": "0x801eb34",
+          "u32": "0x202ec30"
+        },
+        {
+          "instruction": "0x801eb48",
+          "address": "0x801eba4",
+          "u32": "0x8333abc"
+        },
+        {
+          "instruction": "0x801eb8c",
+          "address": "0x801eba8",
+          "u32": "0x197"
+        },
+        {
+          "instruction": "0x801eb38",
+          "address": "0x801eba0",
+          "u32": "0x202ec30"
+        }
+      ],
+      "calls": [
+        {
+          "instruction": "0x801eb1c",
+          "target": "#0x801ebdc"
+        },
+        {
+          "instruction": "0x801eb40",
+          "target": "#0x801ebac"
+        },
+        {
+          "instruction": "0x801eb58",
+          "target": "#0x80ef124"
+        }
+      ]
+    },
+    {
+      "start": "0x801eab0",
+      "end_exclusive": "0x801eaf4",
+      "span_sha1": "ad23210494dadd8694fc6392046c8e126e44d025",
+      "reachable_instructions": [
+        "0801EAB0: push {r4, r5, lr}",
+        "0801EAB2: adds r4, r0, #0",
+        "0801EAB4: ldr r0, [pc, #0x3c]",
+        "0801EAB6: adds r5, r4, r0",
+        "0801EAB8: movs r0, #0",
+        "0801EABA: strb r0, [r5]",
+        "0801EABC: adds r0, r4, #0",
+        "0801EABE: bl #0x801eaf8",
+        "0801EAC2: ldrb r0, [r5]",
+        "0801EAC4: movs r2, #0xcc",
+        "0801EAC6: lsls r2, r2, #1",
+        "0801EAC8: adds r1, r4, r2",
+        "0801EACA: adds r0, r1, r0",
+        "0801EACC: ldrb r3, [r0]",
+        "0801EACE: movs r2, #0x40",
+        "0801EAD0: subs r2, #1",
+        "0801EAD2: adds r0, r1, r2",
+        "0801EAD4: strb r3, [r0]",
+        "0801EAD6: cmp r2, #0",
+        "0801EAD8: bne #0x801ead0",
+        "0801EADA: movs r1, #2",
+        "0801EADC: movs r2, #0",
+        "0801EADE: movs r3, #0xf0",
+        "0801EAE0: lsls r3, r3, #1",
+        "0801EAE2: adds r0, r4, r3",
+        "0801EAE4: subs r0, #4",
+        "0801EAE6: subs r1, #1",
+        "0801EAE8: str r2, [r0]",
+        "0801EAEA: cmp r1, #0",
+        "0801EAEC: bne #0x801eae4",
+        "0801EAEE: pop {r4, r5}",
+        "0801EAF0: pop {r0}",
+        "0801EAF2: bx r0"
+      ],
+      "literals": [
+        {
+          "instruction": "0x801eab4",
+          "address": "0x801eaf4",
+          "u32": "0x195"
+        }
+      ],
+      "calls": [
+        {
+          "instruction": "0x801eabe",
+          "target": "#0x801eaf8"
+        }
+      ]
+    },
+    {
+      "start": "0x801ebac",
+      "end_exclusive": "0x801ebda",
+      "span_sha1": "63ae7bfd0872748c8a95f972f3b9480af8a97fcc",
+      "reachable_instructions": [
+        "0801EBAC: push {r4, r5, lr}",
+        "0801EBAE: adds r4, r1, #0",
+        "0801EBB0: movs r3, #8",
+        "0801EBB2: movs r1, #0",
+        "0801EBB4: movs r5, #1",
+        "0801EBB6: adds r2, r0, #0",
+        "0801EBB8: adds r2, #0x10",
+        "0801EBBA: subs r2, #2",
+        "0801EBBC: subs r3, #1",
+        "0801EBBE: ldrh r0, [r2]",
+        "0801EBC0: ands r0, r4",
+        "0801EBC2: cmp r0, #0",
+        "0801EBC4: beq #0x801ebcc",
+        "0801EBC6: adds r0, r5, #0",
+        "0801EBC8: lsls r0, r3",
+        "0801EBCA: orrs r1, r0",
+        "0801EBCC: cmp r3, #0",
+        "0801EBCE: bne #0x801ebba",
+        "0801EBD0: lsls r0, r1, #0x18",
+        "0801EBD2: lsrs r0, r0, #0x18",
+        "0801EBD4: pop {r4, r5}",
+        "0801EBD6: pop {r1}",
+        "0801EBD8: bx r1"
+      ],
+      "literals": [],
+      "calls": []
+    },
+    {
+      "start": "0x801ebdc",
+      "end_exclusive": "0x801ebf0",
+      "span_sha1": "5552cfe52c603e0f9614fa4db3ac65f8828ffa19",
+      "reachable_instructions": [
+        "0801EBDC: push {lr}",
+        "0801EBDE: ldr r2, [pc, #0x10]",
+        "0801EBE0: ldrb r1, [r0, #9]",
+        "0801EBE2: lsls r1, r1, #2",
+        "0801EBE4: adds r1, r1, r2",
+        "0801EBE6: ldr r1, [r1]",
+        "0801EBE8: bl #0x80ef118",
+        "0801EBEC: pop {r1}",
+        "0801EBEE: bx r1"
+      ],
+      "literals": [
+        {
+          "instruction": "0x801ebde",
+          "address": "0x801ebf0",
+          "u32": "0x8333ac0"
+        }
+      ],
+      "calls": [
+        {
+          "instruction": "0x801ebe8",
+          "target": "#0x80ef118"
+        }
+      ]
+    },
+    {
+      "start": "0x803712c",
+      "end_exclusive": "0x803714e",
+      "span_sha1": "6f594607dcfab26fa78e1a666d6d35e837d428ce",
+      "reachable_instructions": [
+        "0803712C: push {lr}",
+        "0803712E: movs r2, #0xf2",
+        "08037130: lsls r2, r2, #1",
+        "08037132: adds r1, r0, r2",
+        "08037134: ldrb r0, [r1, #0x10]",
+        "08037136: cmp r0, #2",
+        "08037138: beq #0x8037148",
+        "0803713A: lsls r0, r0, #4",
+        "0803713C: ldr r1, [pc, #4]",
+        "0803713E: adds r0, r0, r1",
+        "08037140: b #0x803714a",
+        "08037148: adds r0, r1, #0",
+        "0803714A: pop {r1}",
+        "0803714C: bx r1"
+      ],
+      "literals": [
+        {
+          "instruction": "0x803713c",
+          "address": "0x8037144",
+          "u32": "0x83347a0"
+        }
+      ],
+      "calls": []
+    },
+    {
+      "start": "0x8023420",
+      "end_exclusive": "0x8023698",
+      "span_sha1": "a9d97808a21d9211f7a34e9b3599eb3be5643c4e",
+      "reachable_instructions": [
+        "08023420: push {r4, r5, r6, r7, lr}",
+        "08023422: mov r7, sl",
+        "08023424: mov r6, sb",
+        "08023426: mov r5, r8",
+        "08023428: push {r5, r6, r7}",
+        "0802342A: sub sp, #0x10",
+        "0802342C: adds r5, r0, #0",
+        "0802342E: movs r1, #0xfe",
+        "08023430: lsls r1, r1, #1",
+        "08023432: adds r0, r5, r1",
+        "08023434: ldrb r0, [r0]",
+        "08023436: cmp r0, #1",
+        "08023438: bne #0x8023448",
+        "0802343A: ldr r2, [pc, #8]",
+        "0802343C: ldrb r1, [r2, #0xd]",
+        "0802343E: movs r0, #0x40",
+        "08023440: orrs r0, r1",
+        "08023442: b #0x8023450",
+        "08023448: ldr r2, [pc, #0x148]",
+        "0802344A: ldrb r1, [r2, #0xd]",
+        "0802344C: movs r0, #0xbf",
+        "0802344E: ands r0, r1",
+        "08023450: strb r0, [r2, #0xd]",
+        "08023452: ldr r0, [r5, #0x54]",
+        "08023454: ldr r1, [r5, #0x58]",
+        "08023456: str r0, [sp, #4]",
+        "08023458: str r1, [sp, #8]",
+        "0802345A: movs r1, #0xc5",
+        "0802345C: lsls r1, r1, #1",
+        "0802345E: adds r4, r5, r1",
+        "08023460: ldrb r2, [r4]",
+        "08023462: mov sb, r2",
+        "08023464: adds r1, #1",
+        "08023466: adds r0, r5, r1",
+        "08023468: strb r2, [r0]",
+        "0802346A: adds r0, r5, #0",
+        "0802346C: bl #0x801eaf8",
+        "08023470: adds r0, r5, #0",
+        "08023472: adds r0, #0xa4",
+        "08023474: ldrh r0, [r0]",
+        "08023476: movs r2, #0xbf",
+        "08023478: lsls r2, r2, #1",
+        "0802347A: adds r1, r5, r2",
+        "0802347C: strb r0, [r1]",
+        "0802347E: adds r0, r5, #0",
+        "08023480: bl #0x8037338",
+        "08023484: adds r0, r5, #0",
+        "08023486: bl #0x801ea94",
+        "0802348A: ldrb r6, [r5, #0xd]",
+        "0802348C: str r4, [sp, #0xc]",
+        "0802348E: movs r0, #0x54",
+        "08023490: adds r0, r0, r5",
+        "08023492: mov sl, r0",
+        "08023494: movs r1, #0xd8",
+        "08023496: adds r1, r1, r5",
+        "08023498: mov r8, r1",
+        "0802349A: cmp r6, #0",
+        "0802349C: bne #0x80234ac",
+        "0802349E: ldrb r2, [r5, #0xa]",
+        "080234A0: lsrs r2, r2, #4",
+        "080234A2: movs r0, #1",
+        "080234A4: ands r2, r0",
+        "080234A6: mov r0, sl",
+        "080234A8: bl #0x801f478",
+        "080234AC: ldr r0, [r5, #0xc]",
+        "080234AE: ldr r1, [pc, #0xe8]",
+        "080234B0: ands r0, r1",
+        "080234B2: ldr r1, [pc, #0xe8]",
+        "080234B4: cmp r0, r1",
+        "080234B6: beq #0x80234d4",
+        "080234B8: cmp r6, #7",
+        "080234BA: bhi #0x80234d4",
+        "080234BC: adds r0, r5, #0",
+        "080234BE: bl #0x8037628",
+        "080234C2: ldr r1, [pc, #0xdc]",
+        "080234C4: lsls r0, r6, #2",
+        "080234C6: adds r0, r0, r1",
+        "080234C8: ldr r1, [r0]",
+        "080234CA: adds r0, r5, #0",
+        "080234CC: bl #0x80ef118",
+        "080234D0: lsls r0, r0, #0x18",
+        "080234D2: lsrs r6, r0, #0x18",
+        "080234D4: adds r4, r5, #0",
+        "080234D6: adds r4, #0xb4",
+        "080234D8: ldr r0, [sp, #4]",
+        "080234DA: ldr r1, [sp, #8]",
+        "080234DC: str r0, [r4]",
+        "080234DE: str r1, [r4, #4]",
+        "080234E0: ldr r1, [r5, #0x54]",
+        "080234E2: ldr r2, [r5, #0x58]",
+        "080234E4: str r1, [sp, #4]",
+        "080234E6: str r2, [sp, #8]",
+        "080234E8: mov r2, r8",
+        "080234EA: ldr r0, [r2]",
+        "080234EC: str r0, [r2, #4]",
+        "080234EE: ldr r1, [pc, #0xb4]",
+        "080234F0: lsls r0, r6, #2",
+        "080234F2: adds r0, r0, r1",
+        "080234F4: ldr r1, [r0]",
+        "080234F6: adds r0, r5, #0",
+        "080234F8: bl #0x80ef118",
+        "080234FC: ldrb r6, [r5, #0xd]",
+        "080234FE: adds r7, r4, #0",
+        "08023500: cmp r6, #3",
+        "08023502: bhi #0x8023512",
+        "08023504: ldr r0, [pc, #0xa0]",
+        "08023506: lsls r1, r6, #2",
+        "08023508: adds r1, r1, r0",
+        "0802350A: ldr r1, [r1]",
+        "0802350C: adds r0, r5, #0",
+        "0802350E: bl #0x80ef118",
+        "08023512: ldr r0, [sp, #4]",
+        "08023514: ldr r1, [sp, #8]",
+        "08023516: str r0, [r7]",
+        "08023518: str r1, [r7, #4]",
+        "0802351A: adds r0, r5, #0",
+        "0802351C: bl #0x803389c",
+        "08023520: adds r0, r5, #0",
+        "08023522: bl #0x8036bb4",
+        "08023526: mov r1, r8",
+        "08023528: ldr r2, [r1]",
+        "0802352A: ldrb r3, [r5, #0xa]",
+        "0802352C: lsrs r3, r3, #4",
+        "0802352E: movs r4, #1",
+        "08023530: ands r3, r4",
+        "08023532: str r4, [sp]",
+        "08023534: mov r0, sl",
+        "08023536: bl #0x801f1fc",
+        "0802353A: mov r0, r8",
+        "0802353C: ldr r2, [r0]",
+        "0802353E: ldrb r3, [r5, #0xa]",
+        "08023540: lsrs r3, r3, #4",
+        "08023542: ands r3, r4",
+        "08023544: str r4, [sp]",
+        "08023546: mov r0, sl",
+        "08023548: mov r1, r8",
+        "0802354A: bl #0x801f2e8",
+        "0802354E: adds r0, r5, #0",
+        "08023550: bl #0x80375c4",
+        "08023554: adds r0, r5, #0",
+        "08023556: bl #0x8037408",
+        "0802355A: movs r2, #0xc9",
+        "0802355C: lsls r2, r2, #1",
+        "0802355E: adds r1, r5, r2",
+        "08023560: movs r0, #0",
+        "08023562: strb r0, [r1]",
+        "08023564: adds r2, r5, #0",
+        "08023566: adds r2, #0xbc",
+        "08023568: ldr r0, [r5, #0x54]",
+        "0802356A: ldr r1, [r5, #0x58]",
+        "0802356C: str r0, [r2]",
+        "0802356E: str r1, [r2, #4]",
+        "08023570: ldr r3, [r7, #0x10]",
+        "08023572: movs r0, #0xfe",
+        "08023574: lsls r0, r0, #1",
+        "08023576: adds r2, r5, r0",
+        "08023578: ldrb r1, [r2, #6]",
+        "0802357A: movs r0, #4",
+        "0802357C: ands r0, r1",
+        "0802357E: cmp r0, #0",
+        "08023580: bne #0x8023588",
+        "08023582: ldrb r0, [r2]",
+        "08023584: cmp r0, #5",
+        "08023586: bne #0x80235c8",
+        "08023588: ldrb r0, [r5, #0x10]",
+        "0802358A: cmp r0, #0",
+        "0802358C: beq #0x80235b0",
+        "0802358E: ldr r0, [pc, #0x1c]",
+        "08023590: ldrh r0, [r0, #6]",
+        "08023592: b #0x80235b4",
+        "080235B0: ldr r0, [pc, #0x10]",
+        "080235B2: ldrh r0, [r0, #4]",
+        "080235B4: movs r1, #0x80",
+        "080235B6: lsls r1, r1, #8",
+        "080235B8: ands r0, r1",
+        "080235BA: cmp r0, #0",
+        "080235BC: bne #0x80235c8",
+        "080235BE: movs r0, #0xa0",
+        "080235C0: lsls r0, r0, #2",
+        "080235C2: b #0x80235cc",
+        "080235C8: movs r0, #0x80",
+        "080235CA: lsls r0, r0, #2",
+        "080235CC: adds r3, r3, r0",
+        "080235CE: lsls r0, r0, #1",
+        "080235D0: cmp r3, r0",
+        "080235D2: bls #0x80235e4",
+        "080235D4: ldr r0, [r7, #0x18]",
+        "080235D6: cmp r0, #0",
+        "080235D8: bne #0x80235f2",
+        "080235DA: adds r0, r5, #0",
+        "080235DC: bl #0x80ae1e8",
+        "080235E0: str r0, [r7, #0x18]",
+        "080235E2: b #0x80235f2",
+        "080235E4: ldr r2, [r7, #0x18]",
+        "080235E6: cmp r2, #0",
+        "080235E8: beq #0x80235f2",
+        "080235EA: movs r1, #0",
+        "080235EC: movs r0, #1",
+        "080235EE: strb r0, [r2, #0x11]",
+        "080235F0: str r1, [r7, #0x18]",
+        "080235F2: mov r2, r8",
+        "080235F4: ldr r1, [r2]",
+        "080235F6: adds r0, r5, #0",
+        "080235F8: bl #0x8022c40",
+        "080235FC: ldr r1, [sp, #0xc]",
+        "080235FE: strb r0, [r1]",
+        "08023600: lsls r0, r0, #0x18",
+        "08023602: lsrs r4, r0, #0x18",
+        "08023604: cmp r4, sb",
+        "08023606: beq #0x8023688",
+        "08023608: cmp r4, sb",
+        "0802360A: ble #0x802361e",
+        "0802360C: cmp r4, #0x59",
+        "0802360E: ble #0x802362e",
+        "08023610: mov r2, sb",
+        "08023612: cmp r2, #0x59",
+        "08023614: bgt #0x802362e",
+        "08023616: movs r0, #0x32",
+        "08023618: bl #0x801e6ac",
+        "0802361C: b #0x802362e",
+        "0802361E: cmp r4, #0x59",
+        "08023620: bgt #0x802362e",
+        "08023622: mov r0, sb",
+        "08023624: cmp r0, #0x59",
+        "08023626: ble #0x802362e",
+        "08023628: movs r0, #0x32",
+        "0802362A: bl #0x8003338",
+        "0802362E: adds r1, r4, #0",
+        "08023630: subs r1, #0xb",
+        "08023632: mov r0, sb",
+        "08023634: subs r0, #0xb",
+        "08023636: cmp r1, #0x4f",
+        "08023638: bls #0x802363e",
+        "0802363A: cmp r0, #0x4f",
+        "0802363C: bhi #0x8023682",
+        "0802363E: cmp r0, #0x4f",
+        "08023640: bls #0x8023676",
+        "08023642: ldr r6, [pc, #0x1c]",
+        "08023644: adds r0, r5, #0",
+        "08023646: movs r1, #0",
+        "08023648: adds r2, r6, #0",
+        "0802364A: bl #0x80afc20",
+        "0802364E: str r0, [r7, #0x1c]",
+        "08023650: cmp r4, sb",
+        "08023652: ble #0x8023664",
+        "08023654: adds r0, r5, #0",
+        "08023656: movs r1, #1",
+        "08023658: adds r2, r6, #0",
+        "0802365A: bl #0x80afc20",
+        "0802365E: b #0x802366e",
+        "08023664: adds r0, r5, #0",
+        "08023666: movs r1, #2",
+        "08023668: adds r2, r6, #0",
+        "0802366A: bl #0x80afc20",
+        "0802366E: movs r0, #0xf",
+        "08023670: bl #0x801e6ac",
+        "08023674: b #0x8023688",
+        "08023676: cmp r1, #0x4f",
+        "08023678: bls #0x8023688",
+        "0802367A: ldr r0, [r7, #0x1c]",
+        "0802367C: bl #0x80afc70",
+        "08023680: b #0x8023688",
+        "08023682: ldr r0, [r7, #0x1c]",
+        "08023684: bl #0x80afc70",
+        "08023688: add sp, #0x10",
+        "0802368A: pop {r3, r4, r5}",
+        "0802368C: mov r8, r3",
+        "0802368E: mov sb, r4",
+        "08023690: mov sl, r5",
+        "08023692: pop {r4, r5, r6, r7}",
+        "08023694: pop {r0}",
+        "08023696: bx r0"
+      ],
+      "literals": [
+        {
+          "instruction": "0x802343a",
+          "address": "0x8023444",
+          "u32": "0x202ebb0"
+        },
+        {
+          "instruction": "0x80234ae",
+          "address": "0x8023598",
+          "u32": "0xffff00"
+        },
+        {
+          "instruction": "0x80234b2",
+          "address": "0x802359c",
+          "u32": "0x20700"
+        },
+        {
+          "instruction": "0x80234c2",
+          "address": "0x80235a0",
+          "u32": "0x8333d6c"
+        },
+        {
+          "instruction": "0x80234ee",
+          "address": "0x80235a4",
+          "u32": "0x8333d8c"
+        },
+        {
+          "instruction": "0x8023504",
+          "address": "0x80235a8",
+          "u32": "0x8333dc4"
+        },
+        {
+          "instruction": "0x802358e",
+          "address": "0x80235ac",
+          "u32": "0x202ec30"
+        },
+        {
+          "instruction": "0x8023642",
+          "address": "0x8023660",
+          "u32": "0xffffff00"
+        },
+        {
+          "instruction": "0x80235b0",
+          "address": "0x80235c4",
+          "u32": "0x202ec30"
+        },
+        {
+          "instruction": "0x8023448",
+          "address": "0x8023594",
+          "u32": "0x202ebb0"
+        }
+      ],
+      "calls": [
+        {
+          "instruction": "0x802346c",
+          "target": "#0x801eaf8"
+        },
+        {
+          "instruction": "0x8023480",
+          "target": "#0x8037338"
+        },
+        {
+          "instruction": "0x8023486",
+          "target": "#0x801ea94"
+        },
+        {
+          "instruction": "0x80234a8",
+          "target": "#0x801f478"
+        },
+        {
+          "instruction": "0x80234be",
+          "target": "#0x8037628"
+        },
+        {
+          "instruction": "0x80234cc",
+          "target": "#0x80ef118"
+        },
+        {
+          "instruction": "0x80234f8",
+          "target": "#0x80ef118"
+        },
+        {
+          "instruction": "0x802350e",
+          "target": "#0x80ef118"
+        },
+        {
+          "instruction": "0x802351c",
+          "target": "#0x803389c"
+        },
+        {
+          "instruction": "0x8023522",
+          "target": "#0x8036bb4"
+        },
+        {
+          "instruction": "0x8023536",
+          "target": "#0x801f1fc"
+        },
+        {
+          "instruction": "0x802354a",
+          "target": "#0x801f2e8"
+        },
+        {
+          "instruction": "0x8023550",
+          "target": "#0x80375c4"
+        },
+        {
+          "instruction": "0x8023556",
+          "target": "#0x8037408"
+        },
+        {
+          "instruction": "0x80235dc",
+          "target": "#0x80ae1e8"
+        },
+        {
+          "instruction": "0x80235f8",
+          "target": "#0x8022c40"
+        },
+        {
+          "instruction": "0x8023618",
+          "target": "#0x801e6ac"
+        },
+        {
+          "instruction": "0x802364a",
+          "target": "#0x80afc20"
+        },
+        {
+          "instruction": "0x802365a",
+          "target": "#0x80afc20"
+        },
+        {
+          "instruction": "0x8023670",
+          "target": "#0x801e6ac"
+        },
+        {
+          "instruction": "0x802366a",
+          "target": "#0x80afc20"
+        },
+        {
+          "instruction": "0x802367c",
+          "target": "#0x80afc70"
+        },
+        {
+          "instruction": "0x8023684",
+          "target": "#0x80afc70"
+        },
+        {
+          "instruction": "0x802362a",
+          "target": "#0x8003338"
+        }
+      ]
+    },
+    {
+      "start": "0x80ef124",
+      "end_exclusive": "0x80ef126",
+      "span_sha1": "2dd664428fdb08b95915cebb9c549e0f969c8d1f",
+      "reachable_instructions": [
+        "080EF124: bx r4"
+      ],
+      "literals": [],
+      "calls": []
+    },
+    {
+      "start": "0x8036c80",
+      "end_exclusive": "0x8036cbc",
+      "span_sha1": "9eaff8e2dd6ec37e8458cb1fea476fd9f055c122",
+      "reachable_instructions": [
+        "08036C80: push {r4, lr}",
+        "08036C82: adds r4, r0, #0",
+        "08036C84: movs r0, #0x80",
+        "08036C86: lsls r0, r0, #8",
+        "08036C88: ands r0, r1",
+        "08036C8A: cmp r0, #0",
+        "08036C8C: beq #0x8036cb2",
+        "08036C8E: movs r0, #0x11",
+        "08036C90: rsbs r0, r0, #0",
+        "08036C92: ands r2, r0",
+        "08036C94: movs r0, #0x10",
+        "08036C96: ands r0, r3",
+        "08036C98: orrs r2, r0",
+        "08036C9A: movs r1, #0xf2",
+        "08036C9C: lsls r1, r1, #1",
+        "08036C9E: adds r0, r4, r1",
+        "08036CA0: ldrb r0, [r0, #0x11]",
+        "08036CA2: cmp r0, #1",
+        "08036CA4: bne #0x8036cb2",
+        "08036CA6: movs r0, #0x81",
+        "08036CA8: rsbs r0, r0, #0",
+        "08036CAA: ands r2, r0",
+        "08036CAC: movs r0, #0x80",
+        "08036CAE: ands r0, r3",
+        "08036CB0: orrs r2, r0",
+        "08036CB2: lsls r0, r2, #0x18",
+        "08036CB4: lsrs r0, r0, #0x18",
+        "08036CB6: pop {r4}",
+        "08036CB8: pop {r1}",
+        "08036CBA: bx r1"
+      ],
+      "literals": [],
+      "calls": []
+    }
+  ],
+  "tables": [
+    {
+      "address": "0x8333abc",
+      "byte_length": 4,
+      "label": "type0 postprocessor first entry only",
+      "hex": "816c0308",
+      "sha1": "946db19325b04f85554c77c4b04881fbea435013"
+    },
+    {
+      "address": "0x8333ac0",
+      "byte_length": 4,
+      "label": "type0 configuration getter first entry only",
+      "hex": "2d710308",
+      "sha1": "0818497351ff3bc71a40d584c60136c916795aa8"
+    },
+    {
+      "address": "0x83347a0",
+      "byte_length": 32,
+      "label": "two previously confirmed 16-byte preset configurations",
+      "hex": "4000800020001000020001000002000140008000200010000200010000010002",
+      "sha1": "50118363be985030a6e8fd2ddecce9e416e883b9"
+    }
+  ],
+  "derived_structure": {
+    "cursor": "E+0x195, next=(old+1)&0x3F",
+    "new_actions": "u8(E+0x196)=processed & ~old_ring_value",
+    "cache_marker": "E+0x197 set FF",
+    "history": "E+0x198..0x1D7, 64 u8 entries",
+    "per_slot_bitmaps": "E+0x1D8 and E+0x1DC; clear new slot bit",
+    "source": "u16 G+4 if E+0x10==0, otherwise u16 G+6; G=0202EC30",
+    "type0_override": "raw&8000 preserves old 10; if E+1F5==1 also preserves old 80"
+  },
+  "validation": {
+    "cases": 9737,
+    "preset_button_combinations": 2048,
+    "custom_mask_cases": 9,
+    "type0_postprocessor_cases": 7680,
+    "script": "entity-action-history-check.py",
+    "script_sha1": "9e7a8025e17a1e1d2b7b9baabe0a813c9dfb0b9d",
+    "support_script": "affine-piece-check.py",
+    "support_script_sha1": "a95ef37512459bdc0973952a029f4debafdc5395",
+    "scope": "Restricted original-ROM helper instruction interpretation using synthetic memory; core ring update analyzed statically, not executed as a whole."
+  }
+}

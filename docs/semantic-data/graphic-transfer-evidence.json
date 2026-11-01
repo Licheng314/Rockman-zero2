@@ -1,0 +1,101 @@
+{
+  "baseline_sha1": "c4d93a58f0f82c526dec8a3fdbda170336303689",
+  "scope": "Static raw graphic records for A8/A9 used by item 6 and 7 at stages 0/1. Destination ranges are for DD17C assigned tile base 0x390; PNG is an inferred 4x4 tile arrangement, not an emulator screenshot.",
+  "records": [
+    {
+      "bank": "0xa8",
+      "record": "0x8433a20",
+      "raw_20_bytes": "c8 f4 06 00 00 02 00 e4 80 00 21 00 bc f6 06 00 40 00 00 06",
+      "graphic_source": "0x84a2ee8",
+      "size_low22": 512,
+      "field_high10": 912,
+      "chunk_bytes": 128,
+      "flags_u16": "0x21",
+      "chunk_destination_stride": 1024,
+      "DD17C_assigned_tile_base": "0x390",
+      "DD17C_destination_ranges": [
+        {
+          "source": "0x84a2ee8",
+          "destination": "0x6017200",
+          "bytes": 128
+        },
+        {
+          "source": "0x84a2f68",
+          "destination": "0x6017600",
+          "bytes": 128
+        },
+        {
+          "source": "0x84a2fe8",
+          "destination": "0x6017a00",
+          "bytes": 128
+        },
+        {
+          "source": "0x84a3068",
+          "destination": "0x6017e00",
+          "bytes": 128
+        }
+      ],
+      "graphic_source_sha1": "380d9e4a7d48e6ee0ac209e50567eec619e42bb6",
+      "palette_source": "0x84a30e8"
+    },
+    {
+      "bank": "0xa9",
+      "record": "0x8433a34",
+      "raw_20_bytes": "f4 f6 06 00 00 02 00 e4 80 00 21 00 e8 f8 06 00 40 00 00 06",
+      "graphic_source": "0x84a3128",
+      "size_low22": 512,
+      "field_high10": 912,
+      "chunk_bytes": 128,
+      "flags_u16": "0x21",
+      "chunk_destination_stride": 1024,
+      "DD17C_assigned_tile_base": "0x390",
+      "DD17C_destination_ranges": [
+        {
+          "source": "0x84a3128",
+          "destination": "0x6017200",
+          "bytes": 128
+        },
+        {
+          "source": "0x84a31a8",
+          "destination": "0x6017600",
+          "bytes": 128
+        },
+        {
+          "source": "0x84a3228",
+          "destination": "0x6017a00",
+          "bytes": 128
+        },
+        {
+          "source": "0x84a32a8",
+          "destination": "0x6017e00",
+          "bytes": 128
+        }
+      ],
+      "graphic_source_sha1": "e49b56157993ff03428661ace602d1e8c62b9525",
+      "palette_source": "0x84a3328"
+    }
+  ],
+  "bios_wrappers": {
+    "080EEF68": {
+      "swi": "0x0C",
+      "name": "CpuFastSet"
+    },
+    "080EEF6C": {
+      "swi": "0x0B",
+      "name": "CpuSet"
+    },
+    "080EEF70": {
+      "swi": "0x12",
+      "name": "LZ77UnCompVram"
+    },
+    "080EEF74": {
+      "swi": "0x11",
+      "name": "LZ77UnCompWram"
+    },
+    "080EEF78": {
+      "swi": "0x15",
+      "name": "RLUnCompVram"
+    }
+  },
+  "bios_name_source": "https://github.com/devkitPro/libgba/blob/master/src/Compression.c"
+}

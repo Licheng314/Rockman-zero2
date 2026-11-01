@@ -1,0 +1,17 @@
+{
+  "checked_at": "2026-11-01T12:37:32.616593+08:00",
+  "check_script_sha1": "68652014a541413f3f03a581a3f2c0630a56d6ad",
+  "support_sha1": "a95ef37512459bdc0973952a029f4debafdc5395",
+  "result": {
+    "queue_cases": 256,
+    "palette_control_cases": 2,
+    "rom_sha1": "c4d93a58f0f82c526dec8a3fdbda170336303689",
+    "scope": "Original 02544 instructions. BIOS/02638 calls and DMA MMIO recorded, not executed; no pixel decode or hardware timing claim.",
+    "findings": [
+      "type0 invokes02638, never skip",
+      "type1 has small and large branches, no124B global cap",
+      "configured DMA copies RAM to VRAM then fills source RAM",
+      "reverse processing and queue reset"
+    ]
+  }
+}

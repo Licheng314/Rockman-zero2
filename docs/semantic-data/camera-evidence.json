@@ -1,0 +1,82 @@
+{
+  "baseline_sha1": "c4d93a58f0f82c526dec8a3fdbda170336303689",
+  "camera_base": "0x0202ED18",
+  "camera_mode_table": "0x083261A4",
+  "mode_callbacks": [
+    "0x80151e9",
+    "0x80151ed",
+    "0x801521d",
+    "0x8015261",
+    "0x8015379"
+  ],
+  "sample_script_config_command": "0x08326778",
+  "config_descriptor": {
+    "address": "0x832655c",
+    "raw_44_bytes": "03 08 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00",
+    "mode": 3,
+    "flags": 8,
+    "initial_words_4_to_10": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "signed16_fields_14_to_1A": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "bounds_1C_to_28": [
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  "screen_coordinate_example": {
+    "camera_center_px": [
+      300,
+      200
+    ],
+    "shake_px": [
+      1,
+      -2
+    ],
+    "entity_center_px": [
+      310,
+      210
+    ],
+    "piece_offset_px": [
+      -16,
+      -16
+    ],
+    "render_origin_px": [
+      181,
+      118
+    ],
+    "piece_top_left_px": [
+      113,
+      76
+    ]
+  },
+  "shake": {
+    "base": "0x0202EEC0",
+    "event_capacity": 16,
+    "event_stride": 12,
+    "strength_offset": 4,
+    "stored_xy_offset": [
+      8,
+      12
+    ],
+    "event_count_offset": "0x19C",
+    "phase_offset": "0x19E",
+    "retained_amplitude_offset": "0x1A0",
+    "amplitude_combination": "max(previous retained amplitude, each event strength << 8)",
+    "retention": "floor(amplitude * 15 / 16) in normal nonnegative domain",
+    "distance_attenuation": "No position reads in 15570; its incoming r0 is unused.",
+    "producer": "08015518",
+    "consumer": "08015570"
+  },
+  "method": "Static instruction and ROM data evidence; no runtime camera capture."
+}

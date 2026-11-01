@@ -1,0 +1,305 @@
+{
+ "0": {
+  "handler": "0x8084251",
+  "scripts": [
+   "0x6201"
+  ],
+  "descriptors": []
+ },
+ "1": {
+  "handler": "0x8084305",
+  "scripts": [],
+  "descriptors": []
+ },
+ "2": {
+  "handler": "0x808433d",
+  "scripts": [],
+  "descriptors": []
+ },
+ "3": {
+  "handler": "0x8065a05",
+  "scripts": [],
+  "descriptors": [
+   "0x833db44"
+  ]
+ },
+ "4": {
+  "handler": "0x8006c29",
+  "scripts": [],
+  "descriptors": []
+ },
+ "5": {
+  "handler": "0x8084369",
+  "scripts": [
+   "0x7200",
+   "0x7200"
+  ],
+  "descriptors": [
+   "0x83412d0"
+  ]
+ },
+ "6": {
+  "handler": "0x80844d5",
+  "scripts": [],
+  "descriptors": []
+ },
+ "7": {
+  "handler": "0x8084711",
+  "scripts": [],
+  "descriptors": []
+ },
+ "8": {
+  "handler": "0x8065a05",
+  "scripts": [],
+  "descriptors": [
+   "0x833db44"
+  ]
+ },
+ "9": {
+  "handler": "0x8006c29",
+  "scripts": [],
+  "descriptors": []
+ },
+ "10": {
+  "handler": "0x8084729",
+  "scripts": [
+   "0x7200"
+  ],
+  "descriptors": [
+   "0x83412d0"
+  ]
+ },
+ "11": {
+  "handler": "0x80847f5",
+  "scripts": [
+   "0x7200"
+  ],
+  "descriptors": [
+   "0x83412d0"
+  ]
+ },
+ "12": {
+  "handler": "0x8084889",
+  "scripts": [
+   "0x7203"
+  ],
+  "descriptors": [
+   "0x8341300"
+  ]
+ },
+ "13": {
+  "handler": "0x808497d",
+  "scripts": [
+   "0x7200"
+  ],
+  "descriptors": []
+ },
+ "14": {
+  "handler": "0x8084a69",
+  "scripts": [
+   "0x7200"
+  ],
+  "descriptors": []
+ },
+ "15": {
+  "handler": "0x8084af9",
+  "scripts": [
+   "0x7201"
+  ],
+  "descriptors": [
+   "0x83412d0"
+  ]
+ },
+ "16": {
+  "handler": "0x8084b9d",
+  "scripts": [
+   "0x7202"
+  ],
+  "descriptors": [
+   "0x83412d0"
+  ]
+ },
+ "17": {
+  "handler": "0x8084be9",
+  "scripts": [
+   "0x7204"
+  ],
+  "descriptors": [
+   "0x8341300"
+  ]
+ },
+ "18": {
+  "handler": "0x8084c6d",
+  "scripts": [
+   "0x7205"
+  ],
+  "descriptors": []
+ },
+ "19": {
+  "handler": "0x8084d61",
+  "scripts": [
+   "0x7206"
+  ],
+  "descriptors": []
+ },
+ "20": {
+  "handler": "0x8084df9",
+  "scripts": [
+   "0x7203"
+  ],
+  "descriptors": []
+ },
+ "21": {
+  "handler": "0x8084e6d",
+  "scripts": [
+   "0x7207"
+  ],
+  "descriptors": []
+ },
+ "22": {
+  "handler": "0x8084ebd",
+  "scripts": [
+   "0x7209"
+  ],
+  "descriptors": []
+ },
+ "23": {
+  "handler": "0x8084fa1",
+  "scripts": [
+   "0x7208"
+  ],
+  "descriptors": []
+ },
+ "24": {
+  "handler": "0x8084fe5",
+  "scripts": [
+   "0x720a"
+  ],
+  "descriptors": []
+ },
+ "25": {
+  "handler": "0x8085035",
+  "scripts": [
+   "0x720c"
+  ],
+  "descriptors": []
+ },
+ "26": {
+  "handler": "0x808511d",
+  "scripts": [
+   "0x720b"
+  ],
+  "descriptors": []
+ },
+ "27": {
+  "handler": "0x80851a9",
+  "scripts": [
+   "0x720d"
+  ],
+  "descriptors": [
+   "0x8341360",
+   "0x8341330"
+  ]
+ },
+ "28": {
+  "handler": "0x80854a1",
+  "scripts": [
+   "0x7203"
+  ],
+  "descriptors": []
+ },
+ "29": {
+  "handler": "0x8085519",
+  "scripts": [
+   "0x720d"
+  ],
+  "descriptors": [
+   "0x8341330"
+  ]
+ },
+ "30": {
+  "handler": "0x808562d",
+  "scripts": [
+   "0x720f"
+  ],
+  "descriptors": []
+ },
+ "31": {
+  "handler": "0x80856a5",
+  "scripts": [
+   "0x7210"
+  ],
+  "descriptors": []
+ },
+ "32": {
+  "handler": "0x80857a1",
+  "scripts": [
+   "0x7211"
+  ],
+  "descriptors": []
+ },
+ "33": {
+  "handler": "0x8085859",
+  "scripts": [
+   "0x720e"
+  ],
+  "descriptors": []
+ },
+ "34": {
+  "handler": "0x80858e5",
+  "scripts": [
+   "0x721c"
+  ],
+  "descriptors": []
+ },
+ "35": {
+  "handler": "0x8085999",
+  "scripts": [
+   "0x720d"
+  ],
+  "descriptors": []
+ },
+ "36": {
+  "handler": "0x8085a11",
+  "scripts": [
+   "0x720e"
+  ],
+  "descriptors": [
+   "0x8341330"
+  ]
+ },
+ "37": {
+  "handler": "0x8085aa9",
+  "scripts": [
+   "0x720d",
+   "0x720e"
+  ],
+  "descriptors": []
+ },
+ "38": {
+  "handler": "0x8085ba1",
+  "scripts": [],
+  "descriptors": [
+   "0x8341390"
+  ]
+ },
+ "39": {
+  "handler": "0x8085c2d",
+  "scripts": [],
+  "descriptors": []
+ },
+ "40": {
+  "handler": "0x8085d8d",
+  "scripts": [
+   "0x7212"
+  ],
+  "descriptors": []
+ },
+ "41": {
+  "handler": "0x8085ec9",
+  "scripts": [
+   "0x7212"
+  ],
+  "descriptors": []
+ }
+}

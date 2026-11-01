@@ -1,0 +1,12 @@
+; sub_08022B7C @ 0x08022B7C-08022B90  (自动生成, 经往返验证)
+.thumb
+sub_08022B7C:
+    push {lr}
+    ldr r3, [pc, #0x10]
+    ldrb r2, [r0, #9]
+    lsl r2, r2, #2
+    add r2, r2, r3
+    ldr r2, [r2]
+    bl EXT_080EF11C
+    pop {r0}
+    bx r0

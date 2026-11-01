@@ -1,0 +1,66 @@
+{
+  "rom_sha1": "c4d93a58f0f82c526dec8a3fdbda170336303689",
+  "results": [
+    {
+      "name": "sub_08031238",
+      "address": "0x8031238",
+      "compile_exit": 0,
+      "source_sha1": "5ed9c32cd42d55fa7916d4ea2031ce9d6c245a80",
+      "elf_extent": 26,
+      "section_extent": 28,
+      "ignored_section_padding": 2,
+      "function_match": true,
+      "whole_text_match": false,
+      "text_sha1": "444e50ad377d25b939718dc05b3bbf1495a83f4c"
+    },
+    {
+      "name": "sub_08006C28",
+      "address": "0x8006c28",
+      "compile_exit": 0,
+      "source_sha1": "adc55422d7585523efb05cdc7ddbda481c5efc86",
+      "elf_extent": 36,
+      "section_extent": 36,
+      "ignored_section_padding": 0,
+      "function_match": true,
+      "whole_text_match": true,
+      "text_sha1": "c57b19746825b94ebfa259f3f5c36cfa5c962f9e"
+    },
+    {
+      "name": "sub_08006C4C",
+      "address": "0x8006c4c",
+      "compile_exit": 0,
+      "source_sha1": "469238e007545c126400e75ebacfe00e27c6bd41",
+      "elf_extent": 26,
+      "section_extent": 28,
+      "ignored_section_padding": 2,
+      "function_match": true,
+      "whole_text_match": false,
+      "text_sha1": "9381f8ddf228f9388390540f62090bce16cc8cc0"
+    },
+    {
+      "name": "sub_08006BF0",
+      "address": "0x8006bf0",
+      "compile_exit": 0,
+      "source_sha1": "d9d8ddecb2b72f579b1a9e474f86e59cb7752500",
+      "elf_extent": 56,
+      "section_extent": 56,
+      "ignored_section_padding": 0,
+      "function_match": true,
+      "whole_text_match": true,
+      "text_sha1": "82a1bd1498375b3780b2fe1ec42ae5b274af31ea"
+    },
+    {
+      "name": "sub_08006B38",
+      "address": "0x8006b38",
+      "compile_exit": 0,
+      "source_sha1": "9c779c4b5267cefeefd43a3d63f8a38cb1ca8afe",
+      "elf_extent": 16,
+      "section_extent": 16,
+      "ignored_section_padding": 0,
+      "function_match": true,
+      "whole_text_match": true,
+      "text_sha1": "30a7dc58672352267fb83e28429cc9ee6cace7d9"
+    }
+  ],
+  "scope": "Fresh source compile in isolated audit directory, original toolchain; explicit real-address Thumb helper stub for 31238. No formal integration performed by this script."
+}

@@ -1,0 +1,349 @@
+{
+ "writers": [
+  {
+   "site": "0x8011292",
+   "seg": "sub_08011260",
+   "tbl": "E590",
+   "stores": [
+    "strh r1, [r0]"
+   ]
+  },
+  {
+   "site": "0x801129e",
+   "seg": "sub_08011260",
+   "tbl": "E390",
+   "stores": [
+    "strh r0, [r5]"
+   ]
+  },
+  {
+   "site": "0x8012c24",
+   "seg": "sub_08012C04",
+   "tbl": "E390",
+   "stores": [
+    "strb r4, [r0]"
+   ]
+  },
+  {
+   "site": "0x801398a",
+   "seg": "sub_08013978",
+   "tbl": "E590",
+   "stores": [
+    "strh r1, [r0]"
+   ]
+  },
+  {
+   "site": "0x8013994",
+   "seg": "sub_08013978",
+   "tbl": "E390",
+   "stores": [
+    "strh r0, [r1]",
+    "str r0, [r1, #0xc]",
+    "str r0, [r1, #0xc]"
+   ]
+  },
+  {
+   "site": "0x80400e8",
+   "seg": "sub_08040098",
+   "tbl": "E590",
+   "stores": [
+    "strb r0, [r2]"
+   ]
+  },
+  {
+   "site": "0x80592d4",
+   "seg": "sub_0805927C",
+   "tbl": "E590",
+   "stores": [
+    "strb r0, [r1]"
+   ]
+  },
+  {
+   "site": "0x805b6e2",
+   "seg": "sub_0805B674",
+   "tbl": "E390",
+   "stores": [
+    "strb r2, [r0]",
+    "strb r4, [r0, #0x11]"
+   ]
+  },
+  {
+   "site": "0x805b9f0",
+   "seg": "sub_0805B990",
+   "tbl": "E390",
+   "stores": [
+    "strb r2, [r0]",
+    "strb r4, [r0, #0x11]"
+   ]
+  },
+  {
+   "site": "0x8061d9e",
+   "seg": "sub_08061D50",
+   "tbl": "E390",
+   "stores": [
+    "str r5, [r0]",
+    "strb r5, [r0]",
+    "strb r5, [r0]"
+   ]
+  },
+  {
+   "site": "0x806557c",
+   "seg": "sub_08065554",
+   "tbl": "E390",
+   "stores": [
+    "strb r5, [r0]"
+   ]
+  },
+  {
+   "site": "0x80aa04e",
+   "seg": "sub_080AA020",
+   "tbl": "E390",
+   "stores": [
+    "strb r6, [r0]"
+   ]
+  },
+  {
+   "site": "0x80b7816",
+   "seg": "sub_080B77E0",
+   "tbl": "E390",
+   "stores": [
+    "strb r0, [r1]",
+    "strb r0, [r1]"
+   ]
+  },
+  {
+   "site": "0x80b7af6",
+   "seg": "sub_080B7A84",
+   "tbl": "E590",
+   "stores": [
+    "strh r1, [r5]"
+   ]
+  },
+  {
+   "site": "0x80c25a4",
+   "seg": "sub_080C256C",
+   "tbl": "E590",
+   "stores": [
+    "strh r4, [r0, #0x12]"
+   ]
+  },
+  {
+   "site": "0x80c25ae",
+   "seg": "sub_080C256C",
+   "tbl": "E390",
+   "stores": [
+    "strh r0, [r5, #0x12]"
+   ]
+  },
+  {
+   "site": "0x80c3444",
+   "seg": "sub_080C3400",
+   "tbl": "E590",
+   "stores": [
+    "strh r1, [r0]"
+   ]
+  },
+  {
+   "site": "0x80c344e",
+   "seg": "sub_080C3400",
+   "tbl": "E390",
+   "stores": [
+    "strh r0, [r6]"
+   ]
+  },
+  {
+   "site": "0x80c5020",
+   "seg": "sub_080C5008",
+   "tbl": "E590",
+   "stores": [
+    "strh r1, [r0]"
+   ]
+  },
+  {
+   "site": "0x80c502c",
+   "seg": "sub_080C5008",
+   "tbl": "E390",
+   "stores": [
+    "strh r0, [r6]"
+   ]
+  },
+  {
+   "site": "0x80c53ee",
+   "seg": "sub_080C53B4",
+   "tbl": "E390",
+   "stores": [
+    "strb r0, [r1]"
+   ]
+  },
+  {
+   "site": "0x80c577e",
+   "seg": "sub_080C5748",
+   "tbl": "E590",
+   "stores": [
+    "strh r1, [r0]"
+   ]
+  },
+  {
+   "site": "0x80c578a",
+   "seg": "sub_080C5748",
+   "tbl": "E390",
+   "stores": [
+    "strh r0, [r5]"
+   ]
+  },
+  {
+   "site": "0x80c581e",
+   "seg": "sub_080C5748",
+   "tbl": "E590",
+   "stores": [
+    "strh r1, [r0]"
+   ]
+  },
+  {
+   "site": "0x80c582a",
+   "seg": "sub_080C5748",
+   "tbl": "E390",
+   "stores": [
+    "strh r0, [r5]"
+   ]
+  },
+  {
+   "site": "0x80c5b18",
+   "seg": "sub_080C5AF4",
+   "tbl": "E590",
+   "stores": [
+    "strh r1, [r0]"
+   ]
+  },
+  {
+   "site": "0x80c5b26",
+   "seg": "sub_080C5AF4",
+   "tbl": "E390",
+   "stores": [
+    "strh r3, [r0]"
+   ]
+  },
+  {
+   "site": "0x80c6802",
+   "seg": "sub_080C67B8",
+   "tbl": "E590",
+   "stores": [
+    "strh r1, [r0]"
+   ]
+  },
+  {
+   "site": "0x80c680e",
+   "seg": "sub_080C67B8",
+   "tbl": "E390",
+   "stores": [
+    "strh r0, [r5]"
+   ]
+  },
+  {
+   "site": "0x80c68ac",
+   "seg": "sub_080C67B8",
+   "tbl": "E590",
+   "stores": [
+    "strh r1, [r0]"
+   ]
+  },
+  {
+   "site": "0x80c68b6",
+   "seg": "sub_080C67B8",
+   "tbl": "E390",
+   "stores": [
+    "strh r0, [r5]"
+   ]
+  },
+  {
+   "site": "0x80c6d4c",
+   "seg": "sub_080C6CFC",
+   "tbl": "E590",
+   "stores": [
+    "strh r1, [r0]"
+   ]
+  },
+  {
+   "site": "0x80c6d56",
+   "seg": "sub_080C6CFC",
+   "tbl": "E390",
+   "stores": [
+    "strh r0, [r5]"
+   ]
+  },
+  {
+   "site": "0x80c8114",
+   "seg": "sub_080C80E4",
+   "tbl": "E590",
+   "stores": [
+    "strh r1, [r0]"
+   ]
+  },
+  {
+   "site": "0x80c8120",
+   "seg": "sub_080C80E4",
+   "tbl": "E390",
+   "stores": [
+    "strh r0, [r5]"
+   ]
+  },
+  {
+   "site": "0x80c81ee",
+   "seg": "sub_080C81D0",
+   "tbl": "E590",
+   "stores": [
+    "strh r1, [r0]"
+   ]
+  },
+  {
+   "site": "0x80c81fa",
+   "seg": "sub_080C81D0",
+   "tbl": "E390",
+   "stores": [
+    "strh r0, [r5]"
+   ]
+  },
+  {
+   "site": "0x80c895c",
+   "seg": "sub_080C892C",
+   "tbl": "E590",
+   "stores": [
+    "strh r1, [r0]"
+   ]
+  },
+  {
+   "site": "0x80c8966",
+   "seg": "sub_080C892C",
+   "tbl": "E390",
+   "stores": [
+    "strh r0, [r5]"
+   ]
+  },
+  {
+   "site": "0x80d14ae",
+   "seg": "sub_080D1484",
+   "tbl": "E390",
+   "stores": [
+    "strb r2, [r0]"
+   ]
+  },
+  {
+   "site": "0x80eb538",
+   "seg": "sub_080EB518",
+   "tbl": "E590",
+   "stores": [
+    "strb r0, [r1]"
+   ]
+  }
+ ],
+ "pure_readers": 174,
+ "sha1": "c4d93a58f0f82c526dec8a3fdbda170336303689",
+ "semantics": {
+  "tables": "0x0202E590(u16)/0x0202E390(u8/halfword混写) 全局成对参数表, 按库号 i 索引(步长 2 字节)",
+  "writer_pattern": "E590[i]=基值(如 0x300), E390[i]=参数(如 8); 值部分派生自 ROM 描述符结构族(如 0x08432D00+i*16)",
+  "writer_region": "0x080C2xxx-0x080C8xxx 状态机群(子状态跳表) + 0x08011260/0x08013978 等",
+  "consumer": "127E4 尾部: e+0x48 低10位 = (E590[bank]+e[0x20])&0x3FF; e+0x49 高4位 = E390[bank*2+e[0x22]]",
+  "conclusion": "两表 = 运行时填充的'库→帧基址/参数'映射, 由库资源加载状态机写入; 127E4 只读"
+ },
+ "scan_method": "全 6375 段反汇编; ldr 池值∈{E590,E390} → 前向 40 条内以该寄存器为基址的 strh/strb/str = 写入点; 41 写入点/174 纯读"
+}

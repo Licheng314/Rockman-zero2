@@ -1,0 +1,40 @@
+; sub_080A0E1C @ 0x080A0E1C-080A0E66  (自动生成, 经往返验证)
+.thumb
+sub_080A0E1C:
+    push {r4, r5, lr}
+    add r4, r0, #0
+    lsl r1, r1, #0x18
+    lsr r5, r1, #0x18
+    ldr r0, [pc, #0x40]
+    ldr r0, [r0]
+    bl EXT_08006B50
+    add r3, r0, #0
+    cmp r3, #0
+    beq loc_080A0E60
+    add r1, r3, #0
+    add r1, #0x25
+    mov r2, #0
+    mov r0, #8
+    strb r0, [r1]
+    ldr r1, [pc, #0x2c]
+    mov r0, #0x1c
+    strb r0, [r3, #9]
+    ldr r0, [r1, #0x70]
+    ldr r0, [r0]
+    str r0, [r3, #0x14]
+    mov r0, #0
+    strh r2, [r3, #0x20]
+    add r1, r3, #0
+    add r1, #0x22
+    strb r0, [r1]
+    mov r0, #5
+    strb r0, [r3, #0x10]
+    strb r5, [r3, #0x11]
+    ldr r0, [r4]
+    str r0, [r3, #0x54]
+    ldr r0, [r4, #4]
+    str r0, [r3, #0x58]
+loc_080A0E60:
+    pop {r4, r5}
+    pop {r0}
+    bx r0

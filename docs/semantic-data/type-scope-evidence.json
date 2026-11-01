@@ -1,0 +1,109 @@
+{
+  "checked_at": "2026-11-01T12:37:32.310777+08:00",
+  "check_script_sha1": "0ec5616dbffad1122fe0fbf31327d1920087ad5a",
+  "support_sha1": "a95ef37512459bdc0973952a029f4debafdc5395",
+  "result": {
+    "factory_cases": 36,
+    "hooks": [],
+    "factories": [
+      {
+        "entry": "0x8077fb0",
+        "pool_handle": "0x202f078",
+        "type_table": "0x833d990",
+        "type": "0x20",
+        "vector": "0x833fd94",
+        "lifecycle": [
+          "0x8078085",
+          "0x80780a9",
+          "0x80780c1",
+          "0x8065a05",
+          "0x8006c29"
+        ],
+        "signature": "owner",
+        "returns_node": true
+      },
+      {
+        "entry": "0x80a2c9c",
+        "pool_handle": "0x202f07c",
+        "type_table": "0x8343064",
+        "type": "0x20",
+        "vector": "0x834476c",
+        "lifecycle": [
+          "0x80a2d55",
+          "0x80a2e51",
+          "0x80a2f9d",
+          "0x80983d1",
+          "0x8006c29"
+        ],
+        "signature": "owner",
+        "returns_node": true
+      },
+      {
+        "entry": "0x80b5640",
+        "pool_handle": "0x202f084",
+        "type_table": "0x8345998",
+        "type": "0x20",
+        "vector": "0x8346cd8",
+        "lifecycle": [
+          "0x80b569d",
+          "0x80b57c5",
+          "0x80b5815",
+          "0x80ac5ed",
+          "0x8006c29"
+        ],
+        "signature": "owner",
+        "returns_node": false
+      },
+      {
+        "entry": "0x8079c14",
+        "pool_handle": "0x202f078",
+        "type_table": "0x833d990",
+        "type": "0x22",
+        "vector": "0x833ff80",
+        "lifecycle": [
+          "0x8079c7d",
+          "0x8079f89",
+          "0x8079fa1",
+          "0x8065a05",
+          "0x8006c29"
+        ],
+        "signature": "owner",
+        "returns_node": true
+      },
+      {
+        "entry": "0x80a35fc",
+        "pool_handle": "0x202f07c",
+        "type_table": "0x8343064",
+        "type": "0x22",
+        "vector": "0x8344890",
+        "lifecycle": [
+          "0x80a365d",
+          "0x80a3675",
+          "0x80a36bd",
+          "0x80983d1",
+          "0x8006c29"
+        ],
+        "signature": "coords_flags",
+        "returns_node": false
+      },
+      {
+        "entry": "0x80b6070",
+        "pool_handle": "0x202f084",
+        "type_table": "0x8345998",
+        "type": "0x22",
+        "vector": "0x8346d74",
+        "lifecycle": [
+          "0x80b60c5",
+          "0x80b6155",
+          "0x80b619d",
+          "0x80ac5ed",
+          "0x8006c29"
+        ],
+        "signature": "coords",
+        "returns_node": false
+      }
+    ],
+    "rom_sha1": "c4d93a58f0f82c526dec8a3fdbda170336303689",
+    "scope": "Actual six constructors and allocator; initialization callbacks not executed."
+  }
+}

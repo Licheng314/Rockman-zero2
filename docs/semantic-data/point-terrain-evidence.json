@@ -1,0 +1,551 @@
+{
+  "baseline_sha1": "c4d93a58f0f82c526dec8a3fdbda170336303689",
+  "table": "0x08312B8C",
+  "local_parameter_domain": "u,v in 0..0xFFF, 24.8 fixed units",
+  "formulas": [
+    {
+      "shape": 0,
+      "handler_thumb": "0x8009b05",
+      "response_formula": "0",
+      "boundary_samples": []
+    },
+    {
+      "shape": 1,
+      "handler_thumb": "0x8009b09",
+      "response_formula": "~v",
+      "boundary_samples": []
+    },
+    {
+      "shape": 2,
+      "handler_thumb": "0x8009b0d",
+      "response_formula": "-max(v-(0x1000-(u>>1)),0)",
+      "boundary_samples": [
+        {
+          "u": 2048,
+          "v": 3072,
+          "threshold": 3072,
+          "response": 0
+        },
+        {
+          "u": 2048,
+          "v": 3073,
+          "threshold": 3072,
+          "response": -1
+        },
+        {
+          "u": 4095,
+          "v": 2049,
+          "threshold": 2049,
+          "response": 0
+        },
+        {
+          "u": 4095,
+          "v": 2050,
+          "threshold": 2049,
+          "response": -1
+        }
+      ]
+    },
+    {
+      "shape": 3,
+      "handler_thumb": "0x8009b2d",
+      "response_formula": "-max(v-(0x800-(u>>1)),0)",
+      "boundary_samples": [
+        {
+          "u": 0,
+          "v": 2048,
+          "threshold": 2048,
+          "response": 0
+        },
+        {
+          "u": 0,
+          "v": 2049,
+          "threshold": 2048,
+          "response": -1
+        },
+        {
+          "u": 2048,
+          "v": 1024,
+          "threshold": 1024,
+          "response": 0
+        },
+        {
+          "u": 2048,
+          "v": 1025,
+          "threshold": 1024,
+          "response": -1
+        },
+        {
+          "u": 4095,
+          "v": 1,
+          "threshold": 1,
+          "response": 0
+        },
+        {
+          "u": 4095,
+          "v": 2,
+          "threshold": 1,
+          "response": -1
+        }
+      ]
+    },
+    {
+      "shape": 4,
+      "handler_thumb": "0x8009b4d",
+      "response_formula": "-max(v-(0x1000-(u>>2)),0)",
+      "boundary_samples": [
+        {
+          "u": 2048,
+          "v": 3584,
+          "threshold": 3584,
+          "response": 0
+        },
+        {
+          "u": 2048,
+          "v": 3585,
+          "threshold": 3584,
+          "response": -1
+        },
+        {
+          "u": 4095,
+          "v": 3073,
+          "threshold": 3073,
+          "response": 0
+        },
+        {
+          "u": 4095,
+          "v": 3074,
+          "threshold": 3073,
+          "response": -1
+        }
+      ]
+    },
+    {
+      "shape": 5,
+      "handler_thumb": "0x8009b6d",
+      "response_formula": "-max(v-(0xC00-(u>>2)),0)",
+      "boundary_samples": [
+        {
+          "u": 0,
+          "v": 3072,
+          "threshold": 3072,
+          "response": 0
+        },
+        {
+          "u": 0,
+          "v": 3073,
+          "threshold": 3072,
+          "response": -1
+        },
+        {
+          "u": 2048,
+          "v": 2560,
+          "threshold": 2560,
+          "response": 0
+        },
+        {
+          "u": 2048,
+          "v": 2561,
+          "threshold": 2560,
+          "response": -1
+        },
+        {
+          "u": 4095,
+          "v": 2049,
+          "threshold": 2049,
+          "response": 0
+        },
+        {
+          "u": 4095,
+          "v": 2050,
+          "threshold": 2049,
+          "response": -1
+        }
+      ]
+    },
+    {
+      "shape": 6,
+      "handler_thumb": "0x8009b8d",
+      "response_formula": "-max(v-(0x800-(u>>2)),0)",
+      "boundary_samples": [
+        {
+          "u": 0,
+          "v": 2048,
+          "threshold": 2048,
+          "response": 0
+        },
+        {
+          "u": 0,
+          "v": 2049,
+          "threshold": 2048,
+          "response": -1
+        },
+        {
+          "u": 2048,
+          "v": 1536,
+          "threshold": 1536,
+          "response": 0
+        },
+        {
+          "u": 2048,
+          "v": 1537,
+          "threshold": 1536,
+          "response": -1
+        },
+        {
+          "u": 4095,
+          "v": 1025,
+          "threshold": 1025,
+          "response": 0
+        },
+        {
+          "u": 4095,
+          "v": 1026,
+          "threshold": 1025,
+          "response": -1
+        }
+      ]
+    },
+    {
+      "shape": 7,
+      "handler_thumb": "0x8009bad",
+      "response_formula": "-max(v-(0x400-(u>>2)),0)",
+      "boundary_samples": [
+        {
+          "u": 0,
+          "v": 1024,
+          "threshold": 1024,
+          "response": 0
+        },
+        {
+          "u": 0,
+          "v": 1025,
+          "threshold": 1024,
+          "response": -1
+        },
+        {
+          "u": 2048,
+          "v": 512,
+          "threshold": 512,
+          "response": 0
+        },
+        {
+          "u": 2048,
+          "v": 513,
+          "threshold": 512,
+          "response": -1
+        },
+        {
+          "u": 4095,
+          "v": 1,
+          "threshold": 1,
+          "response": 0
+        },
+        {
+          "u": 4095,
+          "v": 2,
+          "threshold": 1,
+          "response": -1
+        }
+      ]
+    },
+    {
+      "shape": 8,
+      "handler_thumb": "0x8009bcd",
+      "response_formula": "-max(v-(u>>1),0)",
+      "boundary_samples": [
+        {
+          "u": 0,
+          "v": 0,
+          "threshold": 0,
+          "response": 0
+        },
+        {
+          "u": 0,
+          "v": 1,
+          "threshold": 0,
+          "response": -1
+        },
+        {
+          "u": 2048,
+          "v": 1024,
+          "threshold": 1024,
+          "response": 0
+        },
+        {
+          "u": 2048,
+          "v": 1025,
+          "threshold": 1024,
+          "response": -1
+        },
+        {
+          "u": 4095,
+          "v": 2047,
+          "threshold": 2047,
+          "response": 0
+        },
+        {
+          "u": 4095,
+          "v": 2048,
+          "threshold": 2047,
+          "response": -1
+        }
+      ]
+    },
+    {
+      "shape": 9,
+      "handler_thumb": "0x8009be1",
+      "response_formula": "-max(v-(0x800+(u>>1)),0)",
+      "boundary_samples": [
+        {
+          "u": 0,
+          "v": 2048,
+          "threshold": 2048,
+          "response": 0
+        },
+        {
+          "u": 0,
+          "v": 2049,
+          "threshold": 2048,
+          "response": -1
+        },
+        {
+          "u": 2048,
+          "v": 3072,
+          "threshold": 3072,
+          "response": 0
+        },
+        {
+          "u": 2048,
+          "v": 3073,
+          "threshold": 3072,
+          "response": -1
+        },
+        {
+          "u": 4095,
+          "v": 4095,
+          "threshold": 4095,
+          "response": 0
+        }
+      ]
+    },
+    {
+      "shape": 10,
+      "handler_thumb": "0x8009c01",
+      "response_formula": "-max(v-(u>>2),0)",
+      "boundary_samples": [
+        {
+          "u": 0,
+          "v": 0,
+          "threshold": 0,
+          "response": 0
+        },
+        {
+          "u": 0,
+          "v": 1,
+          "threshold": 0,
+          "response": -1
+        },
+        {
+          "u": 2048,
+          "v": 512,
+          "threshold": 512,
+          "response": 0
+        },
+        {
+          "u": 2048,
+          "v": 513,
+          "threshold": 512,
+          "response": -1
+        },
+        {
+          "u": 4095,
+          "v": 1023,
+          "threshold": 1023,
+          "response": 0
+        },
+        {
+          "u": 4095,
+          "v": 1024,
+          "threshold": 1023,
+          "response": -1
+        }
+      ]
+    },
+    {
+      "shape": 11,
+      "handler_thumb": "0x8009c15",
+      "response_formula": "-max(v-(0x400+(u>>2)),0)",
+      "boundary_samples": [
+        {
+          "u": 0,
+          "v": 1024,
+          "threshold": 1024,
+          "response": 0
+        },
+        {
+          "u": 0,
+          "v": 1025,
+          "threshold": 1024,
+          "response": -1
+        },
+        {
+          "u": 2048,
+          "v": 1536,
+          "threshold": 1536,
+          "response": 0
+        },
+        {
+          "u": 2048,
+          "v": 1537,
+          "threshold": 1536,
+          "response": -1
+        },
+        {
+          "u": 4095,
+          "v": 2047,
+          "threshold": 2047,
+          "response": 0
+        },
+        {
+          "u": 4095,
+          "v": 2048,
+          "threshold": 2047,
+          "response": -1
+        }
+      ]
+    },
+    {
+      "shape": 12,
+      "handler_thumb": "0x8009c35",
+      "response_formula": "-max(v-(0x800+(u>>2)),0)",
+      "boundary_samples": [
+        {
+          "u": 0,
+          "v": 2048,
+          "threshold": 2048,
+          "response": 0
+        },
+        {
+          "u": 0,
+          "v": 2049,
+          "threshold": 2048,
+          "response": -1
+        },
+        {
+          "u": 2048,
+          "v": 2560,
+          "threshold": 2560,
+          "response": 0
+        },
+        {
+          "u": 2048,
+          "v": 2561,
+          "threshold": 2560,
+          "response": -1
+        },
+        {
+          "u": 4095,
+          "v": 3071,
+          "threshold": 3071,
+          "response": 0
+        },
+        {
+          "u": 4095,
+          "v": 3072,
+          "threshold": 3071,
+          "response": -1
+        }
+      ]
+    },
+    {
+      "shape": 13,
+      "handler_thumb": "0x8009c55",
+      "response_formula": "-max(v-(0xC00+(u>>2)),0)",
+      "boundary_samples": [
+        {
+          "u": 0,
+          "v": 3072,
+          "threshold": 3072,
+          "response": 0
+        },
+        {
+          "u": 0,
+          "v": 3073,
+          "threshold": 3072,
+          "response": -1
+        },
+        {
+          "u": 2048,
+          "v": 3584,
+          "threshold": 3584,
+          "response": 0
+        },
+        {
+          "u": 2048,
+          "v": 3585,
+          "threshold": 3584,
+          "response": -1
+        },
+        {
+          "u": 4095,
+          "v": 4095,
+          "threshold": 4095,
+          "response": 0
+        }
+      ]
+    },
+    {
+      "shape": 14,
+      "handler_thumb": "0x8009b09",
+      "response_formula": "~v",
+      "boundary_samples": []
+    },
+    {
+      "shape": 15,
+      "handler_thumb": "0x8009b09",
+      "response_formula": "~v",
+      "boundary_samples": []
+    }
+  ],
+  "point_vs_downward_examples": [
+    {
+      "shape": 2,
+      "u": 2048,
+      "local_y": 3072,
+      "point_response": 0,
+      "downward_query_v": 1023,
+      "downward_response": -1024
+    },
+    {
+      "shape": 9,
+      "u": 2048,
+      "local_y": 2048,
+      "point_response": 0,
+      "downward_query_v": 2047,
+      "downward_response": -2048
+    },
+    {
+      "shape": 14,
+      "u": 0,
+      "local_y": 0,
+      "point_response": -1,
+      "downward_query_v": 4095,
+      "downward_response": 0
+    }
+  ],
+  "domain_note": "Examples use local_y for point v, but complement local_y for 08312BCC arguments; no emulator run.",
+  "consumers": {
+    "08008354": "raw full u16 cell attribute, no shape occupancy check; global tile coordinate guard, out-of-domain returns 0x0E01",
+    "08008CFC": "point shape response plus dynamic rectangle fallback when zero; global tile coordinate guard, out-of-domain returns 0x0E01",
+    "08008D80": "static point shape response only, no dynamic fallback or global coordinate guard in this function",
+    "08008DE8": "negative-Y search; excludes exactly 0x800F, then dynamic 0A094; exhaustion +1",
+    "08008EA4": "negative-Y static search; excludes exactly 0x800F; exhaustion +1",
+    "08008F50": "positive-Y search excludes any attribute & 0x8000, then dynamic 0A11C; exhaustion -1"
+  },
+  "source_hashes": {
+    "point_formula_function_span": "20b8c45ef5dae63fcefa3ed44a9e2ef746cf4a6f",
+    "static_point_query_08D80": "f69ace573d863bf288a820c2399f0b1c53ed04ef",
+    "negative_y_search_08DE8": "1a0767907a453e9a399cb2cf18e16e5b963755d0"
+  }
+}

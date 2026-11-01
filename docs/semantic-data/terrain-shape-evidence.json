@@ -1,0 +1,599 @@
+{
+  "baseline_sha1": "c4d93a58f0f82c526dec8a3fdbda170336303689",
+  "scope": "Complete scalar formulas of 08312BCC for local u,v in 0..0xFFF; boundary samples are static formula derivations, not emulator executions. Other two tables contain exact pointers only.",
+  "response_tables": {
+    "0x8312bcc": [
+      "0x8009b05",
+      "0x8009b09",
+      "0x8009c75",
+      "0x8009c89",
+      "0x8009ca1",
+      "0x8009cb5",
+      "0x8009ccd",
+      "0x8009ce5",
+      "0x8009cfd",
+      "0x8009d19",
+      "0x8009d35",
+      "0x8009d51",
+      "0x8009d6d",
+      "0x8009d89",
+      "0x8009b05",
+      "0x8009b09"
+    ],
+    "0x8312c0c": [
+      "0x8009b05",
+      "0x8009b09",
+      "0x8009dd5",
+      "0x8009da5",
+      "0x8009eb9",
+      "0x8009e79",
+      "0x8009e39",
+      "0x8009e09",
+      "0x8009f15",
+      "0x8009eed",
+      "0x8009fc5",
+      "0x8009f91",
+      "0x8009f5d",
+      "0x8009f35",
+      "0x8009b05",
+      "0x8009b09"
+    ],
+    "0x8312c4c": [
+      "0x8009b05",
+      "0x8009b09",
+      "0x8009eed",
+      "0x8009f15",
+      "0x8009f35",
+      "0x8009f5d",
+      "0x8009f91",
+      "0x8009fc5",
+      "0x8009da5",
+      "0x8009dd5",
+      "0x8009e09",
+      "0x8009e39",
+      "0x8009e79",
+      "0x8009eb9",
+      "0x8009b05",
+      "0x8009b09"
+    ]
+  },
+  "formulas_08312BCC": [
+    {
+      "shape": 0,
+      "handler_thumb": "0x8009b05",
+      "rule": "0",
+      "boundary_samples": []
+    },
+    {
+      "shape": 1,
+      "handler_thumb": "0x8009b09",
+      "rule": "~v",
+      "boundary_samples": []
+    },
+    {
+      "shape": 2,
+      "handler_thumb": "0x8009c75",
+      "rule": "~v if v < (u >> 1) else 0",
+      "boundary_samples": [
+        {
+          "u": 0,
+          "v": 0,
+          "threshold": 0,
+          "response": 0
+        },
+        {
+          "u": 2048,
+          "v": 1023,
+          "threshold": 1024,
+          "response": -1024
+        },
+        {
+          "u": 2048,
+          "v": 1024,
+          "threshold": 1024,
+          "response": 0
+        },
+        {
+          "u": 4095,
+          "v": 2046,
+          "threshold": 2047,
+          "response": -2047
+        },
+        {
+          "u": 4095,
+          "v": 2047,
+          "threshold": 2047,
+          "response": 0
+        }
+      ]
+    },
+    {
+      "shape": 3,
+      "handler_thumb": "0x8009c89",
+      "rule": "~v if v < (0x800 + (u >> 1)) else 0",
+      "boundary_samples": [
+        {
+          "u": 0,
+          "v": 2047,
+          "threshold": 2048,
+          "response": -2048
+        },
+        {
+          "u": 0,
+          "v": 2048,
+          "threshold": 2048,
+          "response": 0
+        },
+        {
+          "u": 2048,
+          "v": 3071,
+          "threshold": 3072,
+          "response": -3072
+        },
+        {
+          "u": 2048,
+          "v": 3072,
+          "threshold": 3072,
+          "response": 0
+        },
+        {
+          "u": 4095,
+          "v": 4094,
+          "threshold": 4095,
+          "response": -4095
+        },
+        {
+          "u": 4095,
+          "v": 4095,
+          "threshold": 4095,
+          "response": 0
+        }
+      ]
+    },
+    {
+      "shape": 4,
+      "handler_thumb": "0x8009ca1",
+      "rule": "~v if v < (u >> 2) else 0",
+      "boundary_samples": [
+        {
+          "u": 0,
+          "v": 0,
+          "threshold": 0,
+          "response": 0
+        },
+        {
+          "u": 2048,
+          "v": 511,
+          "threshold": 512,
+          "response": -512
+        },
+        {
+          "u": 2048,
+          "v": 512,
+          "threshold": 512,
+          "response": 0
+        },
+        {
+          "u": 4095,
+          "v": 1022,
+          "threshold": 1023,
+          "response": -1023
+        },
+        {
+          "u": 4095,
+          "v": 1023,
+          "threshold": 1023,
+          "response": 0
+        }
+      ]
+    },
+    {
+      "shape": 5,
+      "handler_thumb": "0x8009cb5",
+      "rule": "~v if v < (0x400 + (u >> 2)) else 0",
+      "boundary_samples": [
+        {
+          "u": 0,
+          "v": 1023,
+          "threshold": 1024,
+          "response": -1024
+        },
+        {
+          "u": 0,
+          "v": 1024,
+          "threshold": 1024,
+          "response": 0
+        },
+        {
+          "u": 2048,
+          "v": 1535,
+          "threshold": 1536,
+          "response": -1536
+        },
+        {
+          "u": 2048,
+          "v": 1536,
+          "threshold": 1536,
+          "response": 0
+        },
+        {
+          "u": 4095,
+          "v": 2046,
+          "threshold": 2047,
+          "response": -2047
+        },
+        {
+          "u": 4095,
+          "v": 2047,
+          "threshold": 2047,
+          "response": 0
+        }
+      ]
+    },
+    {
+      "shape": 6,
+      "handler_thumb": "0x8009ccd",
+      "rule": "~v if v < (0x800 + (u >> 2)) else 0",
+      "boundary_samples": [
+        {
+          "u": 0,
+          "v": 2047,
+          "threshold": 2048,
+          "response": -2048
+        },
+        {
+          "u": 0,
+          "v": 2048,
+          "threshold": 2048,
+          "response": 0
+        },
+        {
+          "u": 2048,
+          "v": 2559,
+          "threshold": 2560,
+          "response": -2560
+        },
+        {
+          "u": 2048,
+          "v": 2560,
+          "threshold": 2560,
+          "response": 0
+        },
+        {
+          "u": 4095,
+          "v": 3070,
+          "threshold": 3071,
+          "response": -3071
+        },
+        {
+          "u": 4095,
+          "v": 3071,
+          "threshold": 3071,
+          "response": 0
+        }
+      ]
+    },
+    {
+      "shape": 7,
+      "handler_thumb": "0x8009ce5",
+      "rule": "~v if v < (0xC00 + (u >> 2)) else 0",
+      "boundary_samples": [
+        {
+          "u": 0,
+          "v": 3071,
+          "threshold": 3072,
+          "response": -3072
+        },
+        {
+          "u": 0,
+          "v": 3072,
+          "threshold": 3072,
+          "response": 0
+        },
+        {
+          "u": 2048,
+          "v": 3583,
+          "threshold": 3584,
+          "response": -3584
+        },
+        {
+          "u": 2048,
+          "v": 3584,
+          "threshold": 3584,
+          "response": 0
+        },
+        {
+          "u": 4095,
+          "v": 4094,
+          "threshold": 4095,
+          "response": -4095
+        },
+        {
+          "u": 4095,
+          "v": 4095,
+          "threshold": 4095,
+          "response": 0
+        }
+      ]
+    },
+    {
+      "shape": 8,
+      "handler_thumb": "0x8009cfd",
+      "rule": "~v if v < (0x1000 - (u >> 1)) else 0",
+      "boundary_samples": [
+        {
+          "u": 0,
+          "v": 4095,
+          "threshold": 4096,
+          "response": -4096
+        },
+        {
+          "u": 2048,
+          "v": 3071,
+          "threshold": 3072,
+          "response": -3072
+        },
+        {
+          "u": 2048,
+          "v": 3072,
+          "threshold": 3072,
+          "response": 0
+        },
+        {
+          "u": 4095,
+          "v": 2048,
+          "threshold": 2049,
+          "response": -2049
+        },
+        {
+          "u": 4095,
+          "v": 2049,
+          "threshold": 2049,
+          "response": 0
+        }
+      ]
+    },
+    {
+      "shape": 9,
+      "handler_thumb": "0x8009d19",
+      "rule": "~v if v < (0x1000 - (u >> 1)) else 0",
+      "boundary_samples": [
+        {
+          "u": 0,
+          "v": 4095,
+          "threshold": 4096,
+          "response": -4096
+        },
+        {
+          "u": 2048,
+          "v": 3071,
+          "threshold": 3072,
+          "response": -3072
+        },
+        {
+          "u": 2048,
+          "v": 3072,
+          "threshold": 3072,
+          "response": 0
+        },
+        {
+          "u": 4095,
+          "v": 2048,
+          "threshold": 2049,
+          "response": -2049
+        },
+        {
+          "u": 4095,
+          "v": 2049,
+          "threshold": 2049,
+          "response": 0
+        }
+      ]
+    },
+    {
+      "shape": 10,
+      "handler_thumb": "0x8009d35",
+      "rule": "~v if v < (0x1000 - (u >> 2)) else 0",
+      "boundary_samples": [
+        {
+          "u": 0,
+          "v": 4095,
+          "threshold": 4096,
+          "response": -4096
+        },
+        {
+          "u": 2048,
+          "v": 3583,
+          "threshold": 3584,
+          "response": -3584
+        },
+        {
+          "u": 2048,
+          "v": 3584,
+          "threshold": 3584,
+          "response": 0
+        },
+        {
+          "u": 4095,
+          "v": 3072,
+          "threshold": 3073,
+          "response": -3073
+        },
+        {
+          "u": 4095,
+          "v": 3073,
+          "threshold": 3073,
+          "response": 0
+        }
+      ]
+    },
+    {
+      "shape": 11,
+      "handler_thumb": "0x8009d51",
+      "rule": "~v if v < (0xC00 - (u >> 2)) else 0",
+      "boundary_samples": [
+        {
+          "u": 0,
+          "v": 3071,
+          "threshold": 3072,
+          "response": -3072
+        },
+        {
+          "u": 0,
+          "v": 3072,
+          "threshold": 3072,
+          "response": 0
+        },
+        {
+          "u": 2048,
+          "v": 2559,
+          "threshold": 2560,
+          "response": -2560
+        },
+        {
+          "u": 2048,
+          "v": 2560,
+          "threshold": 2560,
+          "response": 0
+        },
+        {
+          "u": 4095,
+          "v": 2048,
+          "threshold": 2049,
+          "response": -2049
+        },
+        {
+          "u": 4095,
+          "v": 2049,
+          "threshold": 2049,
+          "response": 0
+        }
+      ]
+    },
+    {
+      "shape": 12,
+      "handler_thumb": "0x8009d6d",
+      "rule": "~v if v < (0x800 - (u >> 2)) else 0",
+      "boundary_samples": [
+        {
+          "u": 0,
+          "v": 2047,
+          "threshold": 2048,
+          "response": -2048
+        },
+        {
+          "u": 0,
+          "v": 2048,
+          "threshold": 2048,
+          "response": 0
+        },
+        {
+          "u": 2048,
+          "v": 1535,
+          "threshold": 1536,
+          "response": -1536
+        },
+        {
+          "u": 2048,
+          "v": 1536,
+          "threshold": 1536,
+          "response": 0
+        },
+        {
+          "u": 4095,
+          "v": 1024,
+          "threshold": 1025,
+          "response": -1025
+        },
+        {
+          "u": 4095,
+          "v": 1025,
+          "threshold": 1025,
+          "response": 0
+        }
+      ]
+    },
+    {
+      "shape": 13,
+      "handler_thumb": "0x8009d89",
+      "rule": "~v if v < (0x400 - (u >> 2)) else 0",
+      "boundary_samples": [
+        {
+          "u": 0,
+          "v": 1023,
+          "threshold": 1024,
+          "response": -1024
+        },
+        {
+          "u": 0,
+          "v": 1024,
+          "threshold": 1024,
+          "response": 0
+        },
+        {
+          "u": 2048,
+          "v": 511,
+          "threshold": 512,
+          "response": -512
+        },
+        {
+          "u": 2048,
+          "v": 512,
+          "threshold": 512,
+          "response": 0
+        },
+        {
+          "u": 4095,
+          "v": 0,
+          "threshold": 1,
+          "response": -1
+        },
+        {
+          "u": 4095,
+          "v": 1,
+          "threshold": 1,
+          "response": 0
+        }
+      ]
+    },
+    {
+      "shape": 14,
+      "handler_thumb": "0x8009b05",
+      "rule": "0",
+      "boundary_samples": []
+    },
+    {
+      "shape": 15,
+      "handler_thumb": "0x8009b09",
+      "rule": "~v",
+      "boundary_samples": []
+    }
+  ],
+  "shape8_and_shape9_machine_code_identical": true,
+  "duplicate_code_sha1": "e171c70556c58346c64c5984487d0cd272cedb87",
+  "direction_queries": {
+    "0800901C": {
+      "axis": "positive Y",
+      "table": "0x08312BCC",
+      "arguments": "u=x&FFF; v=(~y)&FFF",
+      "update": "y -= response",
+      "attempt_exhaustion_return": -1
+    },
+    "08009190": {
+      "axis": "negative X",
+      "table": "0x08312C0C",
+      "arguments": "u=y&FFF; v=x&FFF",
+      "update": "x += response",
+      "attempt_exhaustion_return": 1
+    },
+    "0800930C": {
+      "axis": "positive X",
+      "table": "0x08312C4C",
+      "arguments": "u=y&FFF; v=(~x)&FFF",
+      "update": "x -= response",
+      "attempt_exhaustion_return": -1
+    }
+  },
+  "coordinate_unit": "1/256 pixel; whole terrain cell=0x1000 units=16 pixels",
+  "normal_attribute_skip_bits": "attribute & 0x8000 causes listed query paths to skip current shape response; higher-level property meaning unconfirmed"
+}

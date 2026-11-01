@@ -1,0 +1,120 @@
+{
+ "sha1": "c4d93a58f0f82c526dec8a3fdbda170336303689",
+ "canonical_layout": "槽0=own init / 槽1=own per-frame / 槽2=own / 槽3=exit(0x08065A05) / 槽4=retire(0x08006C29) / 槽5+=own 扩展",
+ "stats": {
+  "types": 88,
+  "five_phase_types": 35,
+  "long_types": 53,
+  "max": {
+   "type": 54,
+   "phases": 42,
+   "pa": "0x8341220"
+  },
+  "exit_at_3": 83,
+  "retire_at_4": 88
+ },
+ "fn0_fn1": "fn0/fn1 几乎每型独占(87 唯一值/88 型; 仅一对共享)",
+ "data": [
+  {
+   "type": 0,
+   "pa": "0x833daf0",
+   "phases": 21,
+   "kinds": [
+    "own",
+    "own",
+    "own",
+    "exit",
+    "retire",
+    "own",
+    "own",
+    "own",
+    "own",
+    "own",
+    "own",
+    "own",
+    "own",
+    "own",
+    "own",
+    "own",
+    "own",
+    "own",
+    "own",
+    "own",
+    "own"
+   ]
+  },
+  {
+   "type": 1,
+   "pa": "0x833dc0c",
+   "phases": 20,
+   "kinds": [
+    "own",
+    "own",
+    "own",
+    "exit",
+    "retire",
+    "own",
+    "own",
+    "own",
+    "own",
+    "own",
+    "own",
+    "own",
+    "own",
+    "own",
+    "own",
+    "own",
+    "own",
+    "own",
+    "own",
+    "own"
+   ]
+  },
+  {
+   "type": 2,
+   "pa": "0x833dd0c",
+   "phases": 15,
+   "kinds": [
+    "own",
+    "own",
+    "own",
+    "exit",
+    "retire",
+    "own",
+    "own",
+    "own",
+    "own",
+    "own",
+    "own",
+    "own",
+    "own",
+    "own",
+    "own"
+   ]
+  },
+  {
+   "type": 3,
+   "pa": "0x833dec8",
+   "phases": 5,
+   "kinds": [
+    "own",
+    "own",
+    "own",
+    "exit",
+    "retire"
+   ]
+  },
+  {
+   "type": 4,
+   "pa": "0x833dec8",
+   "phases": 5,
+   "kinds": [
+    "own",
+    "own",
+    "own",
+    "exit",
+    "retire"
+   ]
+  }
+ ]
+}

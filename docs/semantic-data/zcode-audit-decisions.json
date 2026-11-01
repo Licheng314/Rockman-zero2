@@ -1,0 +1,1673 @@
+{
+  "date": "2026-11-01",
+  "scope": "Repository artifacts since63cca84; not a token/billing audit. User reported500million tokens, not independently metered.",
+  "backup": "build/audit-20261101 plus Git history",
+  "decisions": [
+    {
+      "path": "docs/semantic-acc12-trajectory.md",
+      "decision": "candidate-only",
+      "reason": "保留原始地址/表和静态调查；未独立证明完整行为，退出当前完成清单",
+      "before": {
+        "path": "docs/semantic-acc12-trajectory.md",
+        "bytes": 2057,
+        "lines": 49,
+        "title_repetitions": 1,
+        "sha1": "c8aa3d35355cd169bba8c4d074b49b4d75929db9",
+        "in_zcode_committed_diff": true
+      },
+      "sha1_after": "8e280b204ba56db3a586e926ab66fe793be05ed9",
+      "bytes_after": 2370
+    },
+    {
+      "path": "docs/semantic-affine-piece-render.md",
+      "decision": "retained-existing-scope",
+      "reason": "保留交接前研究及已补齐六段对象，验证范围仍以各原报告为准",
+      "before": {
+        "path": "docs/semantic-affine-piece-render.md",
+        "bytes": 5994,
+        "lines": 80,
+        "title_repetitions": 1,
+        "sha1": "6842d616bb82df5bac838f707774fa14cbfed3ee",
+        "in_zcode_committed_diff": true
+      },
+      "sha1_after": "6842d616bb82df5bac838f707774fa14cbfed3ee",
+      "bytes_after": 5994
+    },
+    {
+      "path": "docs/semantic-anim-mode-transitions.md",
+      "decision": "candidate-only",
+      "reason": "保留原始地址/表和静态调查；未独立证明完整行为，退出当前完成清单",
+      "before": {
+        "path": "docs/semantic-anim-mode-transitions.md",
+        "bytes": 2630,
+        "lines": 56,
+        "title_repetitions": 1,
+        "sha1": "4994f93c32076447b0321a859825d55c948b5dde",
+        "in_zcode_committed_diff": true
+      },
+      "sha1_after": "983421822aa518330a04df51e9fabed226bef423",
+      "bytes_after": 2950
+    },
+    {
+      "path": "docs/semantic-anim-sequence-stepper.md",
+      "decision": "candidate-only",
+      "reason": "保留原始地址/表和静态调查；未独立证明完整行为，退出当前完成清单",
+      "before": {
+        "path": "docs/semantic-anim-sequence-stepper.md",
+        "bytes": 3170,
+        "lines": 75,
+        "title_repetitions": 1,
+        "sha1": "0dcaa367aa7bc6eae280f990370f87b2f4ea4729",
+        "in_zcode_committed_diff": true
+      },
+      "sha1_after": "cfdd609ad6438e7c247a5a9eac987509501e8c1f",
+      "bytes_after": 3509
+    },
+    {
+      "path": "docs/semantic-animation-collision-shapes.md",
+      "decision": "retained-existing-scope",
+      "reason": "保留交接前研究及已补齐六段对象，验证范围仍以各原报告为准",
+      "before": {
+        "path": "docs/semantic-animation-collision-shapes.md",
+        "bytes": 6757,
+        "lines": 90,
+        "title_repetitions": 1,
+        "sha1": "780cc6a24c47799d3eb97b0f2446c6d2277e1078",
+        "in_zcode_committed_diff": true
+      },
+      "sha1_after": "780cc6a24c47799d3eb97b0f2446c6d2277e1078",
+      "bytes_after": 6757
+    },
+    {
+      "path": "docs/semantic-animation-streams.md",
+      "decision": "retained-existing-scope",
+      "reason": "保留交接前研究及已补齐六段对象，验证范围仍以各原报告为准",
+      "before": {
+        "path": "docs/semantic-animation-streams.md",
+        "bytes": 6533,
+        "lines": 99,
+        "title_repetitions": 1,
+        "sha1": "4d84711d9d44dd28b24106b1c1336a26571afcd2",
+        "in_zcode_committed_diff": true
+      },
+      "sha1_after": "4d84711d9d44dd28b24106b1c1336a26571afcd2",
+      "bytes_after": 6533
+    },
+    {
+      "path": "docs/semantic-asset-chain-closed.md",
+      "decision": "rewritten-or-retired",
+      "reason": "重复、跨池归属或完成声明有实质错误；已用限定证据替代",
+      "before": {
+        "path": "docs/semantic-asset-chain-closed.md",
+        "bytes": 2226,
+        "lines": 47,
+        "title_repetitions": 1,
+        "sha1": "8b198ae10da6f9951fecdcacd6e835a061d6e524",
+        "in_zcode_committed_diff": true
+      },
+      "sha1_after": "e2b29e88681bbc5e3bd6b6efaffa8ad611020440",
+      "bytes_after": 447
+    },
+    {
+      "path": "docs/semantic-attachment-lifecycle.md",
+      "decision": "retained-existing-scope",
+      "reason": "保留交接前研究及已补齐六段对象，验证范围仍以各原报告为准",
+      "before": {
+        "path": "docs/semantic-attachment-lifecycle.md",
+        "bytes": 6755,
+        "lines": 72,
+        "title_repetitions": 1,
+        "sha1": "749defba197a0e6a04ad2391a7b2b680b43da077",
+        "in_zcode_committed_diff": true
+      },
+      "sha1_after": "749defba197a0e6a04ad2391a7b2b680b43da077",
+      "bytes_after": 6755
+    },
+    {
+      "path": "docs/semantic-attachment-parent-phases.md",
+      "decision": "retained-existing-scope",
+      "reason": "保留交接前研究及已补齐六段对象，验证范围仍以各原报告为准",
+      "before": {
+        "path": "docs/semantic-attachment-parent-phases.md",
+        "bytes": 5708,
+        "lines": 69,
+        "title_repetitions": 1,
+        "sha1": "0c1097bdfa5c1dcff31104d63fe7ba572282dd23",
+        "in_zcode_committed_diff": true
+      },
+      "sha1_after": "0c1097bdfa5c1dcff31104d63fe7ba572282dd23",
+      "bytes_after": 5708
+    },
+    {
+      "path": "docs/semantic-attachment-retirement.md",
+      "decision": "retained-existing-scope",
+      "reason": "保留交接前研究及已补齐六段对象，验证范围仍以各原报告为准",
+      "before": {
+        "path": "docs/semantic-attachment-retirement.md",
+        "bytes": 5109,
+        "lines": 63,
+        "title_repetitions": 1,
+        "sha1": "c8a63e303db423ae0504aa08e96c32bfdd9b9dcd",
+        "in_zcode_committed_diff": true
+      },
+      "sha1_after": "c8a63e303db423ae0504aa08e96c32bfdd9b9dcd",
+      "bytes_after": 5109
+    },
+    {
+      "path": "docs/semantic-attachment-spawn-wave.md",
+      "decision": "retained-existing-scope",
+      "reason": "保留交接前研究及已补齐六段对象，验证范围仍以各原报告为准",
+      "before": {
+        "path": "docs/semantic-attachment-spawn-wave.md",
+        "bytes": 5487,
+        "lines": 71,
+        "title_repetitions": 1,
+        "sha1": "eb1f6614d74d7cc8ad298d84b2201be56aeb2ef9",
+        "in_zcode_committed_diff": true
+      },
+      "sha1_after": "eb1f6614d74d7cc8ad298d84b2201be56aeb2ef9",
+      "bytes_after": 5487
+    },
+    {
+      "path": "docs/semantic-bank-loader-sm.md",
+      "decision": "candidate-only",
+      "reason": "保留原始地址/表和静态调查；未独立证明完整行为，退出当前完成清单",
+      "before": {
+        "path": "docs/semantic-bank-loader-sm.md",
+        "bytes": 2650,
+        "lines": 52,
+        "title_repetitions": 1,
+        "sha1": "ccfd4639ab389b5b6da1b88ed159834a2a101e89",
+        "in_zcode_committed_diff": true
+      },
+      "sha1_after": "15b185b9d3b9966bbfd90ecf47529dff11067b7d",
+      "bytes_after": 2966
+    },
+    {
+      "path": "docs/semantic-boss-frame-asset-chain.md",
+      "decision": "candidate-only",
+      "reason": "保留原始地址/表和静态调查；未独立证明完整行为，退出当前完成清单",
+      "before": {
+        "path": "docs/semantic-boss-frame-asset-chain.md",
+        "bytes": 2208,
+        "lines": 51,
+        "title_repetitions": 1,
+        "sha1": "5bc99618ca1b49c013dfbd6d6b7f7f17e7f630b4",
+        "in_zcode_committed_diff": true
+      },
+      "sha1_after": "a350701207a1b4fbb54d3b4010aae7a31985cf40",
+      "bytes_after": 2523
+    },
+    {
+      "path": "docs/semantic-camera.md",
+      "decision": "retained-existing-scope",
+      "reason": "保留交接前研究及已补齐六段对象，验证范围仍以各原报告为准",
+      "before": {
+        "path": "docs/semantic-camera.md",
+        "bytes": 8025,
+        "lines": 103,
+        "title_repetitions": 1,
+        "sha1": "bf4f43ab355579924ab552608414bca86602ee1e",
+        "in_zcode_committed_diff": true
+      },
+      "sha1_after": "bf4f43ab355579924ab552608414bca86602ee1e",
+      "bytes_after": 8025
+    },
+    {
+      "path": "docs/semantic-contact-bounds-flags.md",
+      "decision": "retained-existing-scope",
+      "reason": "保留交接前研究及已补齐六段对象，验证范围仍以各原报告为准",
+      "before": {
+        "path": "docs/semantic-contact-bounds-flags.md",
+        "bytes": 6203,
+        "lines": 83,
+        "title_repetitions": 1,
+        "sha1": "877bfb9b348302817bc032229fb66298d3d562d6",
+        "in_zcode_committed_diff": true
+      },
+      "sha1_after": "877bfb9b348302817bc032229fb66298d3d562d6",
+      "bytes_after": 6203
+    },
+    {
+      "path": "docs/semantic-contact-directions.md",
+      "decision": "retained-existing-scope",
+      "reason": "保留交接前研究及已补齐六段对象，验证范围仍以各原报告为准",
+      "before": {
+        "path": "docs/semantic-contact-directions.md",
+        "bytes": 6437,
+        "lines": 107,
+        "title_repetitions": 1,
+        "sha1": "11a3503e7dae06b3dc37b88939f6d7cae1f841fc",
+        "in_zcode_committed_diff": true
+      },
+      "sha1_after": "11a3503e7dae06b3dc37b88939f6d7cae1f841fc",
+      "bytes_after": 6437
+    },
+    {
+      "path": "docs/semantic-contact-dispatch.md",
+      "decision": "retained-existing-scope",
+      "reason": "保留交接前研究及已补齐六段对象，验证范围仍以各原报告为准",
+      "before": {
+        "path": "docs/semantic-contact-dispatch.md",
+        "bytes": 7747,
+        "lines": 103,
+        "title_repetitions": 1,
+        "sha1": "3169c8852710a96d5b7ac82c455ee99586ebc388",
+        "in_zcode_committed_diff": true
+      },
+      "sha1_after": "3169c8852710a96d5b7ac82c455ee99586ebc388",
+      "bytes_after": 7747
+    },
+    {
+      "path": "docs/semantic-d5-entry-hunt.md",
+      "decision": "candidate-only",
+      "reason": "保留原始地址/表和静态调查；未独立证明完整行为，退出当前完成清单",
+      "before": {
+        "path": "docs/semantic-d5-entry-hunt.md",
+        "bytes": 2071,
+        "lines": 37,
+        "title_repetitions": 1,
+        "sha1": "e9c33dd280afa481b3618990a557fdf5f4f2802c",
+        "in_zcode_committed_diff": true
+      },
+      "sha1_after": "f83cde9c729670a11b9364bcf7db651c5dbc614d",
+      "bytes_after": 2372
+    },
+    {
+      "path": "docs/semantic-dynamic-rectangles.md",
+      "decision": "retained-existing-scope",
+      "reason": "保留交接前研究及已补齐六段对象，验证范围仍以各原报告为准",
+      "before": {
+        "path": "docs/semantic-dynamic-rectangles.md",
+        "bytes": 6625,
+        "lines": 81,
+        "title_repetitions": 1,
+        "sha1": "fd2c370a1798f071f28227787094a284d9399b3c",
+        "in_zcode_committed_diff": true
+      },
+      "sha1_after": "fd2c370a1798f071f28227787094a284d9399b3c",
+      "bytes_after": 6625
+    },
+    {
+      "path": "docs/semantic-entity-action-history.md",
+      "decision": "retained-existing-scope",
+      "reason": "保留交接前研究及已补齐六段对象，验证范围仍以各原报告为准",
+      "before": {
+        "path": "docs/semantic-entity-action-history.md",
+        "bytes": 5603,
+        "lines": 70,
+        "title_repetitions": 1,
+        "sha1": "1f613f8b8bfd28332c341a107d19f87362f97415",
+        "in_zcode_committed_diff": true
+      },
+      "sha1_after": "1f613f8b8bfd28332c341a107d19f87362f97415",
+      "bytes_after": 5603
+    },
+    {
+      "path": "docs/semantic-entity-buffered-movement.md",
+      "decision": "retained-existing-scope",
+      "reason": "保留交接前研究及已补齐六段对象，验证范围仍以各原报告为准",
+      "before": {
+        "path": "docs/semantic-entity-buffered-movement.md",
+        "bytes": 5526,
+        "lines": 47,
+        "title_repetitions": 1,
+        "sha1": "109d88911e566c8775fe61b1522b1c9e10e40e4c",
+        "in_zcode_committed_diff": true
+      },
+      "sha1_after": "109d88911e566c8775fe61b1522b1c9e10e40e4c",
+      "bytes_after": 5526
+    },
+    {
+      "path": "docs/semantic-entity-collision-consumer.md",
+      "decision": "retained-existing-scope",
+      "reason": "保留交接前研究及已补齐六段对象，验证范围仍以各原报告为准",
+      "before": {
+        "path": "docs/semantic-entity-collision-consumer.md",
+        "bytes": 7900,
+        "lines": 111,
+        "title_repetitions": 1,
+        "sha1": "6b3a322cfae86e094fe302c6822eee98bda1923a",
+        "in_zcode_committed_diff": true
+      },
+      "sha1_after": "6b3a322cfae86e094fe302c6822eee98bda1923a",
+      "bytes_after": 7900
+    },
+    {
+      "path": "docs/semantic-entity-collision-pairing.md",
+      "decision": "retained-existing-scope",
+      "reason": "保留交接前研究及已补齐六段对象，验证范围仍以各原报告为准",
+      "before": {
+        "path": "docs/semantic-entity-collision-pairing.md",
+        "bytes": 6552,
+        "lines": 92,
+        "title_repetitions": 1,
+        "sha1": "212412810b92d88e1205a3c551d731f5f08d8c46",
+        "in_zcode_committed_diff": true
+      },
+      "sha1_after": "212412810b92d88e1205a3c551d731f5f08d8c46",
+      "bytes_after": 6552
+    },
+    {
+      "path": "docs/semantic-entity-collision-registry.md",
+      "decision": "retained-existing-scope",
+      "reason": "保留交接前研究及已补齐六段对象，验证范围仍以各原报告为准",
+      "before": {
+        "path": "docs/semantic-entity-collision-registry.md",
+        "bytes": 7821,
+        "lines": 112,
+        "title_repetitions": 1,
+        "sha1": "37d14d5d6a42b2378df9f9826f5531ee03abf779",
+        "in_zcode_committed_diff": true
+      },
+      "sha1_after": "37d14d5d6a42b2378df9f9826f5531ee03abf779",
+      "bytes_after": 7821
+    },
+    {
+      "path": "docs/semantic-entity-collision-resolution-interface.md",
+      "decision": "retained-existing-scope",
+      "reason": "保留交接前研究及已补齐六段对象，验证范围仍以各原报告为准",
+      "before": {
+        "path": "docs/semantic-entity-collision-resolution-interface.md",
+        "bytes": 7789,
+        "lines": 115,
+        "title_repetitions": 1,
+        "sha1": "5b2b94be302ae8d5f651b50582127fb8bb9a07e7",
+        "in_zcode_committed_diff": true
+      },
+      "sha1_after": "5b2b94be302ae8d5f651b50582127fb8bb9a07e7",
+      "bytes_after": 7789
+    },
+    {
+      "path": "docs/semantic-entity-collision-rotation.md",
+      "decision": "retained-existing-scope",
+      "reason": "保留交接前研究及已补齐六段对象，验证范围仍以各原报告为准",
+      "before": {
+        "path": "docs/semantic-entity-collision-rotation.md",
+        "bytes": 4048,
+        "lines": 60,
+        "title_repetitions": 1,
+        "sha1": "4ae34b4d97ac67aacdb5b68761a4c26651298af8",
+        "in_zcode_committed_diff": true
+      },
+      "sha1_after": "4ae34b4d97ac67aacdb5b68761a4c26651298af8",
+      "bytes_after": 4048
+    },
+    {
+      "path": "docs/semantic-entity-history-recognition.md",
+      "decision": "retained-existing-scope",
+      "reason": "保留交接前研究及已补齐六段对象，验证范围仍以各原报告为准",
+      "before": {
+        "path": "docs/semantic-entity-history-recognition.md",
+        "bytes": 6665,
+        "lines": 84,
+        "title_repetitions": 1,
+        "sha1": "621521fcd56d4ceda9ca15c3f27646cd80c4b67c",
+        "in_zcode_committed_diff": true
+      },
+      "sha1_after": "621521fcd56d4ceda9ca15c3f27646cd80c4b67c",
+      "bytes_after": 6665
+    },
+    {
+      "path": "docs/semantic-entity-interaction-counter.md",
+      "decision": "retained-existing-scope",
+      "reason": "保留交接前研究及已补齐六段对象，验证范围仍以各原报告为准",
+      "before": {
+        "path": "docs/semantic-entity-interaction-counter.md",
+        "bytes": 5374,
+        "lines": 72,
+        "title_repetitions": 1,
+        "sha1": "411839731181448fb78c2a7d854dd8b2531285d9",
+        "in_zcode_committed_diff": true
+      },
+      "sha1_after": "411839731181448fb78c2a7d854dd8b2531285d9",
+      "bytes_after": 5374
+    },
+    {
+      "path": "docs/semantic-entity-movement-attenuation.md",
+      "decision": "retained-existing-scope",
+      "reason": "保留交接前研究及已补齐六段对象，验证范围仍以各原报告为准",
+      "before": {
+        "path": "docs/semantic-entity-movement-attenuation.md",
+        "bytes": 6217,
+        "lines": 69,
+        "title_repetitions": 1,
+        "sha1": "2ff9aa8193133d62fe0d75eff83cb525a201c1f5",
+        "in_zcode_committed_diff": true
+      },
+      "sha1_after": "2ff9aa8193133d62fe0d75eff83cb525a201c1f5",
+      "bytes_after": 6217
+    },
+    {
+      "path": "docs/semantic-entity-render-angle.md",
+      "decision": "retained-existing-scope",
+      "reason": "保留交接前研究及已补齐六段对象，验证范围仍以各原报告为准",
+      "before": {
+        "path": "docs/semantic-entity-render-angle.md",
+        "bytes": 5475,
+        "lines": 76,
+        "title_repetitions": 1,
+        "sha1": "bd055699af3581202c9d04c271193091f61a77bd",
+        "in_zcode_committed_diff": true
+      },
+      "sha1_after": "bd055699af3581202c9d04c271193091f61a77bd",
+      "bytes_after": 5475
+    },
+    {
+      "path": "docs/semantic-entity-type-scope.md",
+      "decision": "repaired-and-verified",
+      "reason": "新增原ROM构造/控制流核对，明确外部模型范围",
+      "before": null,
+      "sha1_after": "8dfa36f55e7e35b9d92ab69db3d0abbe69ff5b9f",
+      "bytes_after": 1981
+    },
+    {
+      "path": "docs/semantic-ff94-projectile-family.md",
+      "decision": "candidate-only",
+      "reason": "保留原始地址/表和静态调查；未独立证明完整行为，退出当前完成清单",
+      "before": {
+        "path": "docs/semantic-ff94-projectile-family.md",
+        "bytes": 2651,
+        "lines": 44,
+        "title_repetitions": 1,
+        "sha1": "a8afb411e38d8d39b96bd623135569ff35d06894",
+        "in_zcode_committed_diff": true
+      },
+      "sha1_after": "d07db353a9a26cb1bad4badfb9a24bdda9d26a02",
+      "bytes_after": 2959
+    },
+    {
+      "path": "docs/semantic-graphic-transfer.md",
+      "decision": "retained-existing-scope",
+      "reason": "保留交接前研究及已补齐六段对象，验证范围仍以各原报告为准",
+      "before": {
+        "path": "docs/semantic-graphic-transfer.md",
+        "bytes": 8020,
+        "lines": 94,
+        "title_repetitions": 1,
+        "sha1": "0be0376139bce0029dc20b3fd83801bd3ba7f802",
+        "in_zcode_committed_diff": true
+      },
+      "sha1_after": "0be0376139bce0029dc20b3fd83801bd3ba7f802",
+      "bytes_after": 8020
+    },
+    {
+      "path": "docs/semantic-growth-transfer.md",
+      "decision": "retained-existing-scope",
+      "reason": "保留交接前研究及已补齐六段对象，验证范围仍以各原报告为准",
+      "before": {
+        "path": "docs/semantic-growth-transfer.md",
+        "bytes": 7087,
+        "lines": 94,
+        "title_repetitions": 1,
+        "sha1": "86ca2051f69405fccee7ac2f709b66ad0d8772f9",
+        "in_zcode_committed_diff": true
+      },
+      "sha1_after": "86ca2051f69405fccee7ac2f709b66ad0d8772f9",
+      "bytes_after": 7087
+    },
+    {
+      "path": "docs/semantic-hit-consumers.md",
+      "decision": "retained-existing-scope",
+      "reason": "保留交接前研究及已补齐六段对象，验证范围仍以各原报告为准",
+      "before": {
+        "path": "docs/semantic-hit-consumers.md",
+        "bytes": 6286,
+        "lines": 83,
+        "title_repetitions": 1,
+        "sha1": "e589d364677ddbb5dd4b241ee9ecca04bd0c9460",
+        "in_zcode_committed_diff": true
+      },
+      "sha1_after": "e589d364677ddbb5dd4b241ee9ecca04bd0c9460",
+      "bytes_after": 6286
+    },
+    {
+      "path": "docs/semantic-hit-damage.md",
+      "decision": "retained-existing-scope",
+      "reason": "保留交接前研究及已补齐六段对象，验证范围仍以各原报告为准",
+      "before": {
+        "path": "docs/semantic-hit-damage.md",
+        "bytes": 8446,
+        "lines": 125,
+        "title_repetitions": 1,
+        "sha1": "fcc0175910b0dcbe20580a42766a61021397ffc5",
+        "in_zcode_committed_diff": true
+      },
+      "sha1_after": "fcc0175910b0dcbe20580a42766a61021397ffc5",
+      "bytes_after": 8446
+    },
+    {
+      "path": "docs/semantic-horizontal-arbitration.md",
+      "decision": "retained-existing-scope",
+      "reason": "保留交接前研究及已补齐六段对象，验证范围仍以各原报告为准",
+      "before": {
+        "path": "docs/semantic-horizontal-arbitration.md",
+        "bytes": 6360,
+        "lines": 107,
+        "title_repetitions": 1,
+        "sha1": "9bd2936d0bf7fb5b109ad9d80bfa069dfcf1dcf4",
+        "in_zcode_committed_diff": true
+      },
+      "sha1_after": "9bd2936d0bf7fb5b109ad9d80bfa069dfcf1dcf4",
+      "bytes_after": 6360
+    },
+    {
+      "path": "docs/semantic-horizontal-clearance.md",
+      "decision": "retained-existing-scope",
+      "reason": "保留交接前研究及已补齐六段对象，验证范围仍以各原报告为准",
+      "before": {
+        "path": "docs/semantic-horizontal-clearance.md",
+        "bytes": 6510,
+        "lines": 116,
+        "title_repetitions": 1,
+        "sha1": "98392dcda972e52dd92eccf37e1b2dbb411f75a7",
+        "in_zcode_committed_diff": true
+      },
+      "sha1_after": "98392dcda972e52dd92eccf37e1b2dbb411f75a7",
+      "bytes_after": 6510
+    },
+    {
+      "path": "docs/semantic-horizontal-static-sampling.md",
+      "decision": "retained-existing-scope",
+      "reason": "保留交接前研究及已补齐六段对象，验证范围仍以各原报告为准",
+      "before": {
+        "path": "docs/semantic-horizontal-static-sampling.md",
+        "bytes": 6298,
+        "lines": 96,
+        "title_repetitions": 1,
+        "sha1": "d522a1b0da4c1783607555d14c16326b6726b836",
+        "in_zcode_committed_diff": true
+      },
+      "sha1_after": "d522a1b0da4c1783607555d14c16326b6726b836",
+      "bytes_after": 6298
+    },
+    {
+      "path": "docs/semantic-horizontal-terrain.md",
+      "decision": "retained-existing-scope",
+      "reason": "保留交接前研究及已补齐六段对象，验证范围仍以各原报告为准",
+      "before": {
+        "path": "docs/semantic-horizontal-terrain.md",
+        "bytes": 5008,
+        "lines": 88,
+        "title_repetitions": 1,
+        "sha1": "a1fdfce4ccd0cbdb43c40dc60e77768417ad1704",
+        "in_zcode_committed_diff": true
+      },
+      "sha1_after": "a1fdfce4ccd0cbdb43c40dc60e77768417ad1704",
+      "bytes_after": 5008
+    },
+    {
+      "path": "docs/semantic-input-state.md",
+      "decision": "retained-existing-scope",
+      "reason": "保留交接前研究及已补齐六段对象，验证范围仍以各原报告为准",
+      "before": {
+        "path": "docs/semantic-input-state.md",
+        "bytes": 7087,
+        "lines": 98,
+        "title_repetitions": 1,
+        "sha1": "5d8ea919919e625a71c80de791bf6c35c59249c4",
+        "in_zcode_committed_diff": true
+      },
+      "sha1_after": "5d8ea919919e625a71c80de791bf6c35c59249c4",
+      "bytes_after": 7087
+    },
+    {
+      "path": "docs/semantic-item-state.md",
+      "decision": "retained-existing-scope",
+      "reason": "保留交接前研究及已补齐六段对象，验证范围仍以各原报告为准",
+      "before": {
+        "path": "docs/semantic-item-state.md",
+        "bytes": 7009,
+        "lines": 82,
+        "title_repetitions": 1,
+        "sha1": "62c1f419d94f0eae69f9518f022abed166410591",
+        "in_zcode_committed_diff": true
+      },
+      "sha1_after": "62c1f419d94f0eae69f9518f022abed166410591",
+      "bytes_after": 7009
+    },
+    {
+      "path": "docs/semantic-lib72-frames.md",
+      "decision": "candidate-only",
+      "reason": "保留原始地址/表和静态调查；未独立证明完整行为，退出当前完成清单",
+      "before": {
+        "path": "docs/semantic-lib72-frames.md",
+        "bytes": 1734,
+        "lines": 40,
+        "title_repetitions": 1,
+        "sha1": "b302708dd3041e391b4c7d593c4c5c5dae23d15c",
+        "in_zcode_committed_diff": true
+      },
+      "sha1_after": "f7d3a34c70fc4f5974eca085159e84505fe1b3a7",
+      "bytes_after": 2038
+    },
+    {
+      "path": "docs/semantic-lifecycle-table-0x22.md",
+      "decision": "rewritten-or-retired",
+      "reason": "重复、跨池归属或完成声明有实质错误；已用限定证据替代",
+      "before": {
+        "path": "docs/semantic-lifecycle-table-0x22.md",
+        "bytes": 7020,
+        "lines": 118,
+        "title_repetitions": 2,
+        "sha1": "3996b72d7bb87a8b43b2cc13c06c12ece5b35ad7",
+        "in_zcode_committed_diff": true
+      },
+      "sha1_after": "099ff46b453e4a8ca4df9e0db4c1a592189141e5",
+      "bytes_after": 546
+    },
+    {
+      "path": "docs/semantic-map-regions.md",
+      "decision": "retained-existing-scope",
+      "reason": "保留交接前研究及已补齐六段对象，验证范围仍以各原报告为准",
+      "before": {
+        "path": "docs/semantic-map-regions.md",
+        "bytes": 6844,
+        "lines": 105,
+        "title_repetitions": 1,
+        "sha1": "cd1b13e23ed73e11a64ee6b16b7f1b777faba712",
+        "in_zcode_committed_diff": true
+      },
+      "sha1_after": "cd1b13e23ed73e11a64ee6b16b7f1b777faba712",
+      "bytes_after": 6844
+    },
+    {
+      "path": "docs/semantic-menu-labels.md",
+      "decision": "retained-existing-scope",
+      "reason": "保留交接前研究及已补齐六段对象，验证范围仍以各原报告为准",
+      "before": {
+        "path": "docs/semantic-menu-labels.md",
+        "bytes": 4901,
+        "lines": 58,
+        "title_repetitions": 1,
+        "sha1": "8f61979d87834c9bf00c54f001c9aa776ac6415f",
+        "in_zcode_committed_diff": true
+      },
+      "sha1_after": "8f61979d87834c9bf00c54f001c9aa776ac6415f",
+      "bytes_after": 4901
+    },
+    {
+      "path": "docs/semantic-menu-protocol.md",
+      "decision": "retained-existing-scope",
+      "reason": "保留交接前研究及已补齐六段对象，验证范围仍以各原报告为准",
+      "before": {
+        "path": "docs/semantic-menu-protocol.md",
+        "bytes": 7252,
+        "lines": 85,
+        "title_repetitions": 1,
+        "sha1": "388a29c5301697c38c42d66991b494e4f7da5b6d",
+        "in_zcode_committed_diff": true
+      },
+      "sha1_after": "388a29c5301697c38c42d66991b494e4f7da5b6d",
+      "bytes_after": 7252
+    },
+    {
+      "path": "docs/semantic-modules.md",
+      "decision": "catalog-consolidated",
+      "reason": "重写当前导航，分离已有证据、修复结果和候选调查",
+      "before": {
+        "path": "docs/semantic-modules.md",
+        "bytes": 50694,
+        "lines": 429,
+        "title_repetitions": 1,
+        "sha1": "a91b281adc84a513a15ebbd551ae3ae23a3882be",
+        "in_zcode_committed_diff": true
+      },
+      "sha1_after": "1d1c4874d2a0c6ec2dd3054a2b072f19eb63f9dd",
+      "bytes_after": 5550
+    },
+    {
+      "path": "docs/semantic-multi-exit-types.md",
+      "decision": "candidate-only",
+      "reason": "保留原始地址/表和静态调查；未独立证明完整行为，退出当前完成清单",
+      "before": {
+        "path": "docs/semantic-multi-exit-types.md",
+        "bytes": 2663,
+        "lines": 56,
+        "title_repetitions": 1,
+        "sha1": "4574bfdb12427ce517f26de9611b634a93c4f67d",
+        "in_zcode_committed_diff": true
+      },
+      "sha1_after": "7b9bd9620090a5faa6785bb826c794f6208abdfd",
+      "bytes_after": 2983
+    },
+    {
+      "path": "docs/semantic-needs-ai-recovery.md",
+      "decision": "candidate-only",
+      "reason": "保留原始地址/表和静态调查；未独立证明完整行为，退出当前完成清单",
+      "before": {
+        "path": "docs/semantic-needs-ai-recovery.md",
+        "bytes": 3444,
+        "lines": 62,
+        "title_repetitions": 1,
+        "sha1": "8e11019bffd4cfacca879f7fe3e704dd630ef3ea",
+        "in_zcode_committed_diff": true
+      },
+      "sha1_after": "53852c20db8e29f4daceabc0cd87a993cfd35992",
+      "bytes_after": 3770
+    },
+    {
+      "path": "docs/semantic-object-drawing.md",
+      "decision": "retained-existing-scope",
+      "reason": "保留交接前研究及已补齐六段对象，验证范围仍以各原报告为准",
+      "before": {
+        "path": "docs/semantic-object-drawing.md",
+        "bytes": 8289,
+        "lines": 98,
+        "title_repetitions": 1,
+        "sha1": "9b38b12c8fe40fedf91000f50a244c80d9ff92b2",
+        "in_zcode_committed_diff": true
+      },
+      "sha1_after": "9b38b12c8fe40fedf91000f50a244c80d9ff92b2",
+      "bytes_after": 8289
+    },
+    {
+      "path": "docs/semantic-object-pool-census.md",
+      "decision": "candidate-only",
+      "reason": "保留原始地址/表和静态调查；未独立证明完整行为，退出当前完成清单",
+      "before": {
+        "path": "docs/semantic-object-pool-census.md",
+        "bytes": 3212,
+        "lines": 68,
+        "title_repetitions": 1,
+        "sha1": "9eb41de719f9f175accdfc0f5c6c622750091076",
+        "in_zcode_committed_diff": true
+      },
+      "sha1_after": "8d421e3cc0bb60fd327ab05de2403d0fcfad57f3",
+      "bytes_after": 3544
+    },
+    {
+      "path": "docs/semantic-object-pools.md",
+      "decision": "retained-existing-scope",
+      "reason": "保留交接前研究及已补齐六段对象，验证范围仍以各原报告为准",
+      "before": {
+        "path": "docs/semantic-object-pools.md",
+        "bytes": 6345,
+        "lines": 87,
+        "title_repetitions": 1,
+        "sha1": "cef746eb0203841c870464a85866c78a87aca38b",
+        "in_zcode_committed_diff": true
+      },
+      "sha1_after": "cef746eb0203841c870464a85866c78a87aca38b",
+      "bytes_after": 6345
+    },
+    {
+      "path": "docs/semantic-palette-feedback.md",
+      "decision": "retained-existing-scope",
+      "reason": "保留交接前研究及已补齐六段对象，验证范围仍以各原报告为准",
+      "before": {
+        "path": "docs/semantic-palette-feedback.md",
+        "bytes": 7281,
+        "lines": 93,
+        "title_repetitions": 1,
+        "sha1": "6cd45a02bbcc638dbe86a3f45df51c76269ce294",
+        "in_zcode_committed_diff": true
+      },
+      "sha1_after": "6cd45a02bbcc638dbe86a3f45df51c76269ce294",
+      "bytes_after": 7281
+    },
+    {
+      "path": "docs/semantic-palette-loader.md",
+      "decision": "rewritten-or-retired",
+      "reason": "重复、跨池归属或完成声明有实质错误；已用限定证据替代",
+      "before": {
+        "path": "docs/semantic-palette-loader.md",
+        "bytes": 1160,
+        "lines": 37,
+        "title_repetitions": 1,
+        "sha1": "356800fe0376c5c3884bb54a2e55a133ac39307d",
+        "in_zcode_committed_diff": true
+      },
+      "sha1_after": "8001b8127145c615218dca02fab329ed2b8d30d6",
+      "bytes_after": 444
+    },
+    {
+      "path": "docs/semantic-parent-action-selector.md",
+      "decision": "retained-existing-scope",
+      "reason": "保留交接前研究及已补齐六段对象，验证范围仍以各原报告为准",
+      "before": {
+        "path": "docs/semantic-parent-action-selector.md",
+        "bytes": 7594,
+        "lines": 107,
+        "title_repetitions": 1,
+        "sha1": "b4265470b1da904894ace054d98022dc376fbd50",
+        "in_zcode_committed_diff": true
+      },
+      "sha1_after": "b4265470b1da904894ace054d98022dc376fbd50",
+      "bytes_after": 7594
+    },
+    {
+      "path": "docs/semantic-parent-associated-signals.md",
+      "decision": "retained-existing-scope",
+      "reason": "保留交接前研究及已补齐六段对象，验证范围仍以各原报告为准",
+      "before": {
+        "path": "docs/semantic-parent-associated-signals.md",
+        "bytes": 7012,
+        "lines": 70,
+        "title_repetitions": 1,
+        "sha1": "1ab1b91b216edc246a4355e4d0245a1cf0991050",
+        "in_zcode_committed_diff": true
+      },
+      "sha1_after": "1ab1b91b216edc246a4355e4d0245a1cf0991050",
+      "bytes_after": 7012
+    },
+    {
+      "path": "docs/semantic-parent-capture-callback.md",
+      "decision": "candidate-only",
+      "reason": "保留原始地址/表和静态调查；未独立证明完整行为，退出当前完成清单",
+      "before": {
+        "path": "docs/semantic-parent-capture-callback.md",
+        "bytes": 4816,
+        "lines": 80,
+        "title_repetitions": 1,
+        "sha1": "53a125a1a4a8a5a5a1c8314fa8274a683ac5991b",
+        "in_zcode_committed_diff": true
+      },
+      "sha1_after": "abd4f73b7a67f6d2e69782f12d0e83b61aae18aa",
+      "bytes_after": 5160
+    },
+    {
+      "path": "docs/semantic-parent-capture-protocol.md",
+      "decision": "retained-existing-scope",
+      "reason": "保留交接前研究及已补齐六段对象，验证范围仍以各原报告为准",
+      "before": {
+        "path": "docs/semantic-parent-capture-protocol.md",
+        "bytes": 6960,
+        "lines": 75,
+        "title_repetitions": 1,
+        "sha1": "97ce2daf7fb5355e98f50dc66f9c57fec5fed949",
+        "in_zcode_committed_diff": true
+      },
+      "sha1_after": "97ce2daf7fb5355e98f50dc66f9c57fec5fed949",
+      "bytes_after": 6960
+    },
+    {
+      "path": "docs/semantic-parent-environment.md",
+      "decision": "retained-existing-scope",
+      "reason": "保留交接前研究及已补齐六段对象，验证范围仍以各原报告为准",
+      "before": {
+        "path": "docs/semantic-parent-environment.md",
+        "bytes": 5045,
+        "lines": 48,
+        "title_repetitions": 1,
+        "sha1": "76ad3fb5cf98ac629383607e098b9949b9cfa909",
+        "in_zcode_committed_diff": true
+      },
+      "sha1_after": "76ad3fb5cf98ac629383607e098b9949b9cfa909",
+      "bytes_after": 5045
+    },
+    {
+      "path": "docs/semantic-parent-form-bridge.md",
+      "decision": "retained-existing-scope",
+      "reason": "保留交接前研究及已补齐六段对象，验证范围仍以各原报告为准",
+      "before": {
+        "path": "docs/semantic-parent-form-bridge.md",
+        "bytes": 5587,
+        "lines": 57,
+        "title_repetitions": 1,
+        "sha1": "e99419481adc1b1d912a4c6d87583e3a81cd9550",
+        "in_zcode_committed_diff": true
+      },
+      "sha1_after": "e99419481adc1b1d912a4c6d87583e3a81cd9550",
+      "bytes_after": 5587
+    },
+    {
+      "path": "docs/semantic-parent-launch-init.md",
+      "decision": "rewritten-or-retired",
+      "reason": "重复、跨池归属或完成声明有实质错误；已用限定证据替代",
+      "before": {
+        "path": "docs/semantic-parent-launch-init.md",
+        "bytes": 8101122,
+        "lines": 134280,
+        "title_repetitions": 1024,
+        "sha1": "f378d524be79bc9de4e6a30d80774debffe59f14",
+        "in_zcode_committed_diff": true
+      },
+      "sha1_after": "42984603f36acff10ba596637d2fdd3adda72a25",
+      "bytes_after": 2204
+    },
+    {
+      "path": "docs/semantic-parent-lifecycle-dispatch.md",
+      "decision": "rewritten-or-retired",
+      "reason": "重复、跨池归属或完成声明有实质错误；已用限定证据替代",
+      "before": {
+        "path": "docs/semantic-parent-lifecycle-dispatch.md",
+        "bytes": 14040,
+        "lines": 234,
+        "title_repetitions": 4,
+        "sha1": "28f62fea54a4579a8aff89b06a31d9d0c72ee43a",
+        "in_zcode_committed_diff": true
+      },
+      "sha1_after": "63ee495172a76e0e3b45f153d46441cb5dcff4ca",
+      "bytes_after": 715
+    },
+    {
+      "path": "docs/semantic-parent-link-segments.md",
+      "decision": "retained-existing-scope",
+      "reason": "保留交接前研究及已补齐六段对象，验证范围仍以各原报告为准",
+      "before": {
+        "path": "docs/semantic-parent-link-segments.md",
+        "bytes": 3092,
+        "lines": 29,
+        "title_repetitions": 1,
+        "sha1": "00a5ea2ffc123cce5c375c51867a1a657eb050e4",
+        "in_zcode_committed_diff": true
+      },
+      "sha1_after": "00a5ea2ffc123cce5c375c51867a1a657eb050e4",
+      "bytes_after": 3092
+    },
+    {
+      "path": "docs/semantic-parent-motion-cycle.md",
+      "decision": "retained-existing-scope",
+      "reason": "保留交接前研究及已补齐六段对象，验证范围仍以各原报告为准",
+      "before": {
+        "path": "docs/semantic-parent-motion-cycle.md",
+        "bytes": 6973,
+        "lines": 61,
+        "title_repetitions": 1,
+        "sha1": "90a29c64b62709399ed6c65125a9c357b58bc43d",
+        "in_zcode_committed_diff": true
+      },
+      "sha1_after": "90a29c64b62709399ed6c65125a9c357b58bc43d",
+      "bytes_after": 6973
+    },
+    {
+      "path": "docs/semantic-parent-outbound-step-fn1.md",
+      "decision": "candidate-only",
+      "reason": "保留原始地址/表和静态调查；未独立证明完整行为，退出当前完成清单",
+      "before": {
+        "path": "docs/semantic-parent-outbound-step-fn1.md",
+        "bytes": 3937,
+        "lines": 67,
+        "title_repetitions": 1,
+        "sha1": "2c0e18bd081c20e3ab861d20e0c4cff75ffc434e",
+        "in_zcode_committed_diff": true
+      },
+      "sha1_after": "fa9eccc6dcb30134b9a579f8f2c652266b4391f4",
+      "bytes_after": 4268
+    },
+    {
+      "path": "docs/semantic-parent-outbound-terrain.md",
+      "decision": "retained-existing-scope",
+      "reason": "保留交接前研究及已补齐六段对象，验证范围仍以各原报告为准",
+      "before": {
+        "path": "docs/semantic-parent-outbound-terrain.md",
+        "bytes": 5530,
+        "lines": 49,
+        "title_repetitions": 1,
+        "sha1": "0f13818ec0378d45807218e31db65de40be48ca1",
+        "in_zcode_committed_diff": true
+      },
+      "sha1_after": "0f13818ec0378d45807218e31db65de40be48ca1",
+      "bytes_after": 5530
+    },
+    {
+      "path": "docs/semantic-parent-return-phase-fn2.md",
+      "decision": "rewritten-or-retired",
+      "reason": "重复、跨池归属或完成声明有实质错误；已用限定证据替代",
+      "before": {
+        "path": "docs/semantic-parent-return-phase-fn2.md",
+        "bytes": 1374102,
+        "lines": 25121,
+        "title_repetitions": 256,
+        "sha1": "0ac3f0145252c5b54b4412f07fa23b5be66e73d7",
+        "in_zcode_committed_diff": true
+      },
+      "sha1_after": "268d1990f3b70f38f99c345c7d02a83e4b6f2bb2",
+      "bytes_after": 1416
+    },
+    {
+      "path": "docs/semantic-parent-spawner-type20.md",
+      "decision": "rewritten-or-retired",
+      "reason": "重复、跨池归属或完成声明有实质错误；已用限定证据替代",
+      "before": {
+        "path": "docs/semantic-parent-spawner-type20.md",
+        "bytes": 28802,
+        "lines": 499,
+        "title_repetitions": 8,
+        "sha1": "8c8b2ed2f3290c08d9da5fe14efee0e24410bfc9",
+        "in_zcode_committed_diff": true
+      },
+      "sha1_after": "562588117956f21b7b07b99dab22d2a453d860b2",
+      "bytes_after": 1164
+    },
+    {
+      "path": "docs/semantic-phase-array-layout.md",
+      "decision": "candidate-only",
+      "reason": "保留原始地址/表和静态调查；未独立证明完整行为，退出当前完成清单",
+      "before": {
+        "path": "docs/semantic-phase-array-layout.md",
+        "bytes": 2517,
+        "lines": 49,
+        "title_repetitions": 1,
+        "sha1": "4237af37c0ec9098aadd5822da19d7301b89b3c5",
+        "in_zcode_committed_diff": true
+      },
+      "sha1_after": "f8a28b95447fadb4bfc44405557fa5f1238f3bd3",
+      "bytes_after": 2837
+    },
+    {
+      "path": "docs/semantic-point-terrain.md",
+      "decision": "retained-existing-scope",
+      "reason": "保留交接前研究及已补齐六段对象，验证范围仍以各原报告为准",
+      "before": {
+        "path": "docs/semantic-point-terrain.md",
+        "bytes": 5527,
+        "lines": 80,
+        "title_repetitions": 1,
+        "sha1": "0a303b18b793f04bc693949dc96a1c75caa59ed7",
+        "in_zcode_committed_diff": true
+      },
+      "sha1_after": "0a303b18b793f04bc693949dc96a1c75caa59ed7",
+      "bytes_after": 5527
+    },
+    {
+      "path": "docs/semantic-pool-init-module.md",
+      "decision": "candidate-only",
+      "reason": "保留原始地址/表和静态调查；未独立证明完整行为，退出当前完成清单",
+      "before": {
+        "path": "docs/semantic-pool-init-module.md",
+        "bytes": 3025,
+        "lines": 71,
+        "title_repetitions": 1,
+        "sha1": "f8c52bfaa6805feea76dce29c1bfd59a3109ecb3",
+        "in_zcode_committed_diff": true
+      },
+      "sha1_after": "dc335a54a8badd7ced00450079c9fa015840ce67",
+      "bytes_after": 3360
+    },
+    {
+      "path": "docs/semantic-pool-system-closeout.md",
+      "decision": "candidate-only",
+      "reason": "保留原始地址/表和静态调查；未独立证明完整行为，退出当前完成清单",
+      "before": {
+        "path": "docs/semantic-pool-system-closeout.md",
+        "bytes": 2970,
+        "lines": 59,
+        "title_repetitions": 1,
+        "sha1": "765b4e6d0033bcd83fab24215b04d85f7d88db3f",
+        "in_zcode_committed_diff": true
+      },
+      "sha1_after": "a595ad5a15d4fd575733bbabf22260c7b009c82b",
+      "bytes_after": 3293
+    },
+    {
+      "path": "docs/semantic-queue-consumer.md",
+      "decision": "rewritten-or-retired",
+      "reason": "重复、跨池归属或完成声明有实质错误；已用限定证据替代",
+      "before": {
+        "path": "docs/semantic-queue-consumer.md",
+        "bytes": 1272,
+        "lines": 32,
+        "title_repetitions": 1,
+        "sha1": "ed29c2ec173e6f001b8df25c80741692194b079b",
+        "in_zcode_committed_diff": true
+      },
+      "sha1_after": "d1bbd7786485ed6ff14064904e7bacefdf8ce8d0",
+      "bytes_after": 444
+    },
+    {
+      "path": "docs/semantic-ram-bank-param-tables.md",
+      "decision": "candidate-only",
+      "reason": "保留原始地址/表和静态调查；未独立证明完整行为，退出当前完成清单",
+      "before": {
+        "path": "docs/semantic-ram-bank-param-tables.md",
+        "bytes": 2607,
+        "lines": 56,
+        "title_repetitions": 1,
+        "sha1": "793dc19e7b7ae187dfd845be452dabb9f8c83ce4",
+        "in_zcode_committed_diff": true
+      },
+      "sha1_after": "7f0e427a335906bb9b4ae276c63e06c4db04ace3",
+      "bytes_after": 2927
+    },
+    {
+      "path": "docs/semantic-record-layout.md",
+      "decision": "rewritten-or-retired",
+      "reason": "重复、跨池归属或完成声明有实质错误；已用限定证据替代",
+      "before": {
+        "path": "docs/semantic-record-layout.md",
+        "bytes": 1484,
+        "lines": 34,
+        "title_repetitions": 1,
+        "sha1": "287f4969b3134af7620b5fb596b20847b711ee0c",
+        "in_zcode_committed_diff": false
+      },
+      "sha1_after": "c2caa50748a948faa1fe76de0bbe80ffd248277c",
+      "bytes_after": 441
+    },
+    {
+      "path": "docs/semantic-recovery-queues.md",
+      "decision": "retained-existing-scope",
+      "reason": "保留交接前研究及已补齐六段对象，验证范围仍以各原报告为准",
+      "before": {
+        "path": "docs/semantic-recovery-queues.md",
+        "bytes": 5288,
+        "lines": 74,
+        "title_repetitions": 1,
+        "sha1": "f1bac0a39c45e0842ca303ed2807d08ee7fbd4a7",
+        "in_zcode_committed_diff": true
+      },
+      "sha1_after": "f1bac0a39c45e0842ca303ed2807d08ee7fbd4a7",
+      "bytes_after": 5288
+    },
+    {
+      "path": "docs/semantic-rectangle-history.md",
+      "decision": "retained-existing-scope",
+      "reason": "保留交接前研究及已补齐六段对象，验证范围仍以各原报告为准",
+      "before": {
+        "path": "docs/semantic-rectangle-history.md",
+        "bytes": 5120,
+        "lines": 74,
+        "title_repetitions": 1,
+        "sha1": "6bb32741b257a1812013c1cfbb22f65c6722adb1",
+        "in_zcode_committed_diff": true
+      },
+      "sha1_after": "6bb32741b257a1812013c1cfbb22f65c6722adb1",
+      "bytes_after": 5120
+    },
+    {
+      "path": "docs/semantic-render-pipeline-audit.md",
+      "decision": "repaired-and-verified",
+      "reason": "新增原ROM构造/控制流核对，明确外部模型范围",
+      "before": null,
+      "sha1_after": "2c4658193ef3c680da6a3f0b763c18e5bd012bde",
+      "bytes_after": 2951
+    },
+    {
+      "path": "docs/semantic-render-queue.md",
+      "decision": "rewritten-or-retired",
+      "reason": "重复、跨池归属或完成声明有实质错误；已用限定证据替代",
+      "before": {
+        "path": "docs/semantic-render-queue.md",
+        "bytes": 1277,
+        "lines": 32,
+        "title_repetitions": 1,
+        "sha1": "385d9fc36c2724a9d7e2c2b557121023a98fd9ad",
+        "in_zcode_committed_diff": true
+      },
+      "sha1_after": "b021b48096020ee14f38ede8b60635fd37e772a9",
+      "bytes_after": 441
+    },
+    {
+      "path": "docs/semantic-resource-storage.md",
+      "decision": "retained-existing-scope",
+      "reason": "保留交接前研究及已补齐六段对象，验证范围仍以各原报告为准",
+      "before": {
+        "path": "docs/semantic-resource-storage.md",
+        "bytes": 9207,
+        "lines": 99,
+        "title_repetitions": 1,
+        "sha1": "0fee1a5f7821ae02851ee04579cf9cacc01f567e",
+        "in_zcode_committed_diff": true
+      },
+      "sha1_after": "0fee1a5f7821ae02851ee04579cf9cacc01f567e",
+      "bytes_after": 9207
+    },
+    {
+      "path": "docs/semantic-reverse-static-sampling.md",
+      "decision": "retained-existing-scope",
+      "reason": "保留交接前研究及已补齐六段对象，验证范围仍以各原报告为准",
+      "before": {
+        "path": "docs/semantic-reverse-static-sampling.md",
+        "bytes": 6362,
+        "lines": 88,
+        "title_repetitions": 1,
+        "sha1": "b910b558882aa3fc24d6f3f24a6bc46933e0e944",
+        "in_zcode_committed_diff": true
+      },
+      "sha1_after": "b910b558882aa3fc24d6f3f24a6bc46933e0e944",
+      "bytes_after": 6362
+    },
+    {
+      "path": "docs/semantic-runtime-gates.md",
+      "decision": "retained-existing-scope",
+      "reason": "保留交接前研究及已补齐六段对象，验证范围仍以各原报告为准",
+      "before": {
+        "path": "docs/semantic-runtime-gates.md",
+        "bytes": 6172,
+        "lines": 97,
+        "title_repetitions": 1,
+        "sha1": "9d5ab281baf0d1f09656071096e949624c6e44a1",
+        "in_zcode_committed_diff": true
+      },
+      "sha1_after": "9d5ab281baf0d1f09656071096e949624c6e44a1",
+      "bytes_after": 6172
+    },
+    {
+      "path": "docs/semantic-scene-interpreter.md",
+      "decision": "retained-existing-scope",
+      "reason": "保留交接前研究及已补齐六段对象，验证范围仍以各原报告为准",
+      "before": {
+        "path": "docs/semantic-scene-interpreter.md",
+        "bytes": 6621,
+        "lines": 89,
+        "title_repetitions": 1,
+        "sha1": "e11b723af35d35d5a0738e8d06c2a03ec71fd18c",
+        "in_zcode_committed_diff": true
+      },
+      "sha1_after": "e11b723af35d35d5a0738e8d06c2a03ec71fd18c",
+      "bytes_after": 6621
+    },
+    {
+      "path": "docs/semantic-script-bank-switch.md",
+      "decision": "candidate-only",
+      "reason": "保留原始地址/表和静态调查；未独立证明完整行为，退出当前完成清单",
+      "before": {
+        "path": "docs/semantic-script-bank-switch.md",
+        "bytes": 3349,
+        "lines": 68,
+        "title_repetitions": 1,
+        "sha1": "c19fd1362008b9f8d1ae52a85f405ce6f96fddd8",
+        "in_zcode_committed_diff": true
+      },
+      "sha1_after": "7151f56fdd8513fbfe84e73cb5e4395fb9f10f98",
+      "bytes_after": 3681
+    },
+    {
+      "path": "docs/semantic-script-control.md",
+      "decision": "retained-existing-scope",
+      "reason": "保留交接前研究及已补齐六段对象，验证范围仍以各原报告为准",
+      "before": {
+        "path": "docs/semantic-script-control.md",
+        "bytes": 6877,
+        "lines": 103,
+        "title_repetitions": 1,
+        "sha1": "a4631f00c082e9a66ee8b394271bc342fcbb2ed9",
+        "in_zcode_committed_diff": true
+      },
+      "sha1_after": "a4631f00c082e9a66ee8b394271bc342fcbb2ed9",
+      "bytes_after": 6877
+    },
+    {
+      "path": "docs/semantic-slot-acquisition.md",
+      "decision": "retained-existing-scope",
+      "reason": "保留交接前研究及已补齐六段对象，验证范围仍以各原报告为准",
+      "before": {
+        "path": "docs/semantic-slot-acquisition.md",
+        "bytes": 6639,
+        "lines": 78,
+        "title_repetitions": 1,
+        "sha1": "0cbe949416f9955b3d39cdfd4473543611277b39",
+        "in_zcode_committed_diff": true
+      },
+      "sha1_after": "0cbe949416f9955b3d39cdfd4473543611277b39",
+      "bytes_after": 6639
+    },
+    {
+      "path": "docs/semantic-spawner-080ac60c.md",
+      "decision": "candidate-only",
+      "reason": "保留原始地址/表和静态调查；未独立证明完整行为，退出当前完成清单",
+      "before": {
+        "path": "docs/semantic-spawner-080ac60c.md",
+        "bytes": 2949,
+        "lines": 55,
+        "title_repetitions": 1,
+        "sha1": "caf5406f5ff9eda84e4645b77444fa04982183f5",
+        "in_zcode_committed_diff": true
+      },
+      "sha1_after": "10207ae49388b72069988083487bd92a22fea3b8",
+      "bytes_after": 3268
+    },
+    {
+      "path": "docs/semantic-special-terrain-policy.md",
+      "decision": "retained-existing-scope",
+      "reason": "保留交接前研究及已补齐六段对象，验证范围仍以各原报告为准",
+      "before": {
+        "path": "docs/semantic-special-terrain-policy.md",
+        "bytes": 6939,
+        "lines": 112,
+        "title_repetitions": 1,
+        "sha1": "8b4d376389428d8c1d2ef6bc4d9e8f7c71a22394",
+        "in_zcode_committed_diff": true
+      },
+      "sha1_after": "8b4d376389428d8c1d2ef6bc4d9e8f7c71a22394",
+      "bytes_after": 6939
+    },
+    {
+      "path": "docs/semantic-static-edge-sampling.md",
+      "decision": "retained-existing-scope",
+      "reason": "保留交接前研究及已补齐六段对象，验证范围仍以各原报告为准",
+      "before": {
+        "path": "docs/semantic-static-edge-sampling.md",
+        "bytes": 7834,
+        "lines": 90,
+        "title_repetitions": 1,
+        "sha1": "b114681f387ff26bb6b6af35372b4149c5763da0",
+        "in_zcode_committed_diff": true
+      },
+      "sha1_after": "b114681f387ff26bb6b6af35372b4149c5763da0",
+      "bytes_after": 7834
+    },
+    {
+      "path": "docs/semantic-surface-consumers.md",
+      "decision": "retained-existing-scope",
+      "reason": "保留交接前研究及已补齐六段对象，验证范围仍以各原报告为准",
+      "before": {
+        "path": "docs/semantic-surface-consumers.md",
+        "bytes": 6483,
+        "lines": 88,
+        "title_repetitions": 1,
+        "sha1": "9f67346764f366456bce22cc4dc975343cf4fc59",
+        "in_zcode_committed_diff": true
+      },
+      "sha1_after": "9f67346764f366456bce22cc4dc975343cf4fc59",
+      "bytes_after": 6483
+    },
+    {
+      "path": "docs/semantic-task-scheduler.md",
+      "decision": "retained-existing-scope",
+      "reason": "保留交接前研究及已补齐六段对象，验证范围仍以各原报告为准",
+      "before": {
+        "path": "docs/semantic-task-scheduler.md",
+        "bytes": 6163,
+        "lines": 86,
+        "title_repetitions": 1,
+        "sha1": "7c9b889af30de58e731d656cce7ac1674ffc73ab",
+        "in_zcode_committed_diff": true
+      },
+      "sha1_after": "7c9b889af30de58e731d656cce7ac1674ffc73ab",
+      "bytes_after": 6163
+    },
+    {
+      "path": "docs/semantic-terrain-loading.md",
+      "decision": "retained-existing-scope",
+      "reason": "保留交接前研究及已补齐六段对象，验证范围仍以各原报告为准",
+      "before": {
+        "path": "docs/semantic-terrain-loading.md",
+        "bytes": 7295,
+        "lines": 94,
+        "title_repetitions": 1,
+        "sha1": "2a05950b9b731ddcd6ffd55b7d26b180a519d72a",
+        "in_zcode_committed_diff": true
+      },
+      "sha1_after": "2a05950b9b731ddcd6ffd55b7d26b180a519d72a",
+      "bytes_after": 7295
+    },
+    {
+      "path": "docs/semantic-terrain-shapes.md",
+      "decision": "retained-existing-scope",
+      "reason": "保留交接前研究及已补齐六段对象，验证范围仍以各原报告为准",
+      "before": {
+        "path": "docs/semantic-terrain-shapes.md",
+        "bytes": 6682,
+        "lines": 97,
+        "title_repetitions": 1,
+        "sha1": "c2a0cf42545a1fc00d7cacb7ffde6a7b5c206be9",
+        "in_zcode_committed_diff": true
+      },
+      "sha1_after": "c2a0cf42545a1fc00d7cacb7ffde6a7b5c206be9",
+      "bytes_after": 6682
+    },
+    {
+      "path": "docs/semantic-terrain-speed.md",
+      "decision": "retained-existing-scope",
+      "reason": "保留交接前研究及已补齐六段对象，验证范围仍以各原报告为准",
+      "before": {
+        "path": "docs/semantic-terrain-speed.md",
+        "bytes": 5652,
+        "lines": 77,
+        "title_repetitions": 1,
+        "sha1": "7bb79ae0c728476fe639076e5bf1cfef2adf1133",
+        "in_zcode_committed_diff": true
+      },
+      "sha1_after": "7bb79ae0c728476fe639076e5bf1cfef2adf1133",
+      "bytes_after": 5652
+    },
+    {
+      "path": "docs/semantic-text-rendering.md",
+      "decision": "retained-existing-scope",
+      "reason": "保留交接前研究及已补齐六段对象，验证范围仍以各原报告为准",
+      "before": {
+        "path": "docs/semantic-text-rendering.md",
+        "bytes": 7309,
+        "lines": 101,
+        "title_repetitions": 1,
+        "sha1": "580f9424c0ccc78f6625b6ce01e0f13306f8d70d",
+        "in_zcode_committed_diff": true
+      },
+      "sha1_after": "580f9424c0ccc78f6625b6ce01e0f13306f8d70d",
+      "bytes_after": 7309
+    },
+    {
+      "path": "docs/semantic-tile-consumer.md",
+      "decision": "rewritten-or-retired",
+      "reason": "重复、跨池归属或完成声明有实质错误；已用限定证据替代",
+      "before": {
+        "path": "docs/semantic-tile-consumer.md",
+        "bytes": 1552,
+        "lines": 37,
+        "title_repetitions": 1,
+        "sha1": "64132322f9a75b2f5144fd3b99d38b2109ca5694",
+        "in_zcode_committed_diff": true
+      },
+      "sha1_after": "b1b29d5e21796586bde83ea9fb699b0a636be7ba",
+      "bytes_after": 444
+    },
+    {
+      "path": "docs/semantic-type-e0-resources.md",
+      "decision": "candidate-only",
+      "reason": "保留原始地址/表和静态调查；未独立证明完整行为，退出当前完成清单",
+      "before": {
+        "path": "docs/semantic-type-e0-resources.md",
+        "bytes": 2773,
+        "lines": 47,
+        "title_repetitions": 1,
+        "sha1": "729bb629441ea59ec568fd9a3e712a410287859e",
+        "in_zcode_committed_diff": true
+      },
+      "sha1_after": "1546dabe4c77f0ecffa2a17f61f28424cac8545f",
+      "bytes_after": 3091
+    },
+    {
+      "path": "docs/semantic-type-spawner-census.md",
+      "decision": "rewritten-or-retired",
+      "reason": "重复稿及B6094假阳性改判均已撤回；保留搜索索引，链接已验证池作用域",
+      "before": {
+        "path": "docs/semantic-type-spawner-census.md",
+        "bytes": 5194,
+        "lines": 108,
+        "title_repetitions": 2,
+        "sha1": "34803c28b2ebe3a1fc37a19b96cc2bb23cb9f7c0",
+        "in_zcode_committed_diff": true
+      },
+      "sha1_after": "c6255b81a886ebd61f51db1eae9a148712b14217",
+      "bytes_after": 974
+    },
+    {
+      "path": "docs/semantic-type21-identity.md",
+      "decision": "candidate-only",
+      "reason": "保留原始地址/表和静态调查；未独立证明完整行为，退出当前完成清单",
+      "before": {
+        "path": "docs/semantic-type21-identity.md",
+        "bytes": 2646,
+        "lines": 51,
+        "title_repetitions": 1,
+        "sha1": "1c24d65100fe229523c995b0a67d92ae38aee073",
+        "in_zcode_committed_diff": true
+      },
+      "sha1_after": "7a766a22b9f2b7660e502bea67a3982fb695bfee",
+      "bytes_after": 2961
+    },
+    {
+      "path": "docs/semantic-type22-spawners.md",
+      "decision": "rewritten-or-retired",
+      "reason": "重复、跨池归属或完成声明有实质错误；已用限定证据替代",
+      "before": {
+        "path": "docs/semantic-type22-spawners.md",
+        "bytes": 2108,
+        "lines": 52,
+        "title_repetitions": 1,
+        "sha1": "4fd4623797c5e2ee8f67290bfb85e748ee871c45",
+        "in_zcode_committed_diff": true
+      },
+      "sha1_after": "c84c7c1dacb64f4ea32a9bbc6641d63d185c6364",
+      "bytes_after": 710
+    },
+    {
+      "path": "docs/semantic-type23-spawn.md",
+      "decision": "retained-existing-scope",
+      "reason": "保留交接前研究及已补齐六段对象，验证范围仍以各原报告为准",
+      "before": {
+        "path": "docs/semantic-type23-spawn.md",
+        "bytes": 6899,
+        "lines": 71,
+        "title_repetitions": 1,
+        "sha1": "b32bf6591552c06ee3b2468b0cc73bfa4a973701",
+        "in_zcode_committed_diff": true
+      },
+      "sha1_after": "b32bf6591552c06ee3b2468b0cc73bfa4a973701",
+      "bytes_after": 6899
+    },
+    {
+      "path": "docs/semantic-type36-collision.md",
+      "decision": "candidate-only",
+      "reason": "保留原始地址/表和静态调查；未独立证明完整行为，退出当前完成清单",
+      "before": {
+        "path": "docs/semantic-type36-collision.md",
+        "bytes": 1822,
+        "lines": 44,
+        "title_repetitions": 1,
+        "sha1": "733a5c9e168afcf8978f8e5622e31adbb6ac6b19",
+        "in_zcode_committed_diff": true
+      },
+      "sha1_after": "8dd9e25934e7771bdf4cc0c952498b904726d687",
+      "bytes_after": 2130
+    },
+    {
+      "path": "docs/semantic-type36-ext.md",
+      "decision": "candidate-only",
+      "reason": "保留原始地址/表和静态调查；未独立证明完整行为，退出当前完成清单",
+      "before": {
+        "path": "docs/semantic-type36-ext.md",
+        "bytes": 1979,
+        "lines": 42,
+        "title_repetitions": 1,
+        "sha1": "b4cd1b31fbb1ce33e3fcf36c409c9fa7960a95fb",
+        "in_zcode_committed_diff": true
+      },
+      "sha1_after": "1d96eeda799b52d68c3919e505c55ebac6e0023c",
+      "bytes_after": 2285
+    },
+    {
+      "path": "docs/semantic-type36-pairing-table.md",
+      "decision": "candidate-only",
+      "reason": "保留原始地址/表和静态调查；未独立证明完整行为，退出当前完成清单",
+      "before": {
+        "path": "docs/semantic-type36-pairing-table.md",
+        "bytes": 2246,
+        "lines": 49,
+        "title_repetitions": 1,
+        "sha1": "66b1dba815cc2488bfec444d659fe890f83a205e",
+        "in_zcode_committed_diff": true
+      },
+      "sha1_after": "dc5144934d1e05bc00d5e0c8e268f89a8ee4dfa2",
+      "bytes_after": 2559
+    },
+    {
+      "path": "docs/semantic-type36-phase-collision-catalog.md",
+      "decision": "candidate-only",
+      "reason": "保留原始地址/表和静态调查；未独立证明完整行为，退出当前完成清单",
+      "before": {
+        "path": "docs/semantic-type36-phase-collision-catalog.md",
+        "bytes": 1987,
+        "lines": 45,
+        "title_repetitions": 1,
+        "sha1": "188c31f78b3297ead3d505c733cfd8afaae55bee",
+        "in_zcode_committed_diff": true
+      },
+      "sha1_after": "3b389c0e1c679ba806ecb76a646646a787561103",
+      "bytes_after": 2296
+    },
+    {
+      "path": "docs/semantic-type36-sm.md",
+      "decision": "candidate-only",
+      "reason": "保留原始地址/表和静态调查；未独立证明完整行为，退出当前完成清单",
+      "before": {
+        "path": "docs/semantic-type36-sm.md",
+        "bytes": 2403,
+        "lines": 53,
+        "title_repetitions": 1,
+        "sha1": "48802fee24c594c2bdb016a381d855345695def8",
+        "in_zcode_committed_diff": true
+      },
+      "sha1_after": "75ca08e240adbf969b446866ba824bdc7f0936c5",
+      "bytes_after": 2720
+    },
+    {
+      "path": "docs/semantic-variant-collision-descriptors.md",
+      "decision": "candidate-only",
+      "reason": "保留原始地址/表和静态调查；未独立证明完整行为，退出当前完成清单",
+      "before": {
+        "path": "docs/semantic-variant-collision-descriptors.md",
+        "bytes": 3739,
+        "lines": 58,
+        "title_repetitions": 1,
+        "sha1": "d947553fc2f9b78aa30e98cd5c77adb6b1721301",
+        "in_zcode_committed_diff": true
+      },
+      "sha1_after": "9d243b6f3752e06277cfeefce4a4d8a4984ddf7c",
+      "bytes_after": 4061
+    },
+    {
+      "path": "docs/semantic-variant-table-deep.md",
+      "decision": "candidate-only",
+      "reason": "保留原始地址/表和静态调查；未独立证明完整行为，退出当前完成清单",
+      "before": {
+        "path": "docs/semantic-variant-table-deep.md",
+        "bytes": 6247,
+        "lines": 95,
+        "title_repetitions": 1,
+        "sha1": "6ac72ffbc018f72807d2f8e33920ec32a947d840",
+        "in_zcode_committed_diff": true
+      },
+      "sha1_after": "ade45a7d4c7ff1404710691051cdee2824fd4f83",
+      "bytes_after": 6606
+    },
+    {
+      "path": "docs/semantic-variant1-attack-bank.md",
+      "decision": "candidate-only",
+      "reason": "保留原始地址/表和静态调查；未独立证明完整行为，退出当前完成清单",
+      "before": {
+        "path": "docs/semantic-variant1-attack-bank.md",
+        "bytes": 5897,
+        "lines": 123,
+        "title_repetitions": 1,
+        "sha1": "ab36239d53b0d501a9b561ad7da1ab781209a418",
+        "in_zcode_committed_diff": true
+      },
+      "sha1_after": "1c534a4a0714338d5b040f7c75d6155e09fa561c",
+      "bytes_after": 6284
+    },
+    {
+      "path": "docs/semantic-vertical-arbitration.md",
+      "decision": "retained-existing-scope",
+      "reason": "保留交接前研究及已补齐六段对象，验证范围仍以各原报告为准",
+      "before": {
+        "path": "docs/semantic-vertical-arbitration.md",
+        "bytes": 6358,
+        "lines": 96,
+        "title_repetitions": 1,
+        "sha1": "45b4fb5394a04c74a5504a4a6b8500e83270e1e0",
+        "in_zcode_committed_diff": true
+      },
+      "sha1_after": "45b4fb5394a04c74a5504a4a6b8500e83270e1e0",
+      "bytes_after": 6358
+    },
+    {
+      "path": "docs/semantic-wrap-boundary.md",
+      "decision": "rewritten-or-retired",
+      "reason": "重复、跨池归属或完成声明有实质错误；已用限定证据替代",
+      "before": {
+        "path": "docs/semantic-wrap-boundary.md",
+        "bytes": 1569,
+        "lines": 37,
+        "title_repetitions": 1,
+        "sha1": "a95752d0ad7fd462a696876c0a49366e4c151243",
+        "in_zcode_committed_diff": true
+      },
+      "sha1_after": "93cfb68ce8b08bf7073f3763189e6b84639c23db",
+      "bytes_after": 644
+    }
+  ]
+}

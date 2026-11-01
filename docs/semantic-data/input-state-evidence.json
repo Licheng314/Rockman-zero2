@@ -1,0 +1,289 @@
+{
+  "baseline_sha1": "c4d93a58f0f82c526dec8a3fdbda170336303689",
+  "anchors": {
+    "initialize": "08001F98",
+    "sample_two_channels": "08001FC4",
+    "sample_one_channel": "08001FE4",
+    "clear_state": "080020A0",
+    "display_task_sample_call": "08000788"
+  },
+  "channel_bases": [
+    "0x02000D10",
+    "0x02000D28"
+  ],
+  "channel_stride": 24,
+  "initialization_instruction_bytes": "18 20 20 75 04 20 60 75",
+  "sampler_instruction_sha1": "982aec47628112ecd72b5734babb915a7fbda478",
+  "default_delay_samples": 24,
+  "default_interval_samples": 4,
+  "trace_method": "Instruction-derived static sequence for one key: held samples 1..35, release 36, repress 37..38. Not a hardware/emulator capture. Only low 10 button bits are represented; actual sampler inversion stores u16 without 0x3FF masking.",
+  "trace": [
+    {
+      "sample": 1,
+      "held_low10": "0x40",
+      "pressed_low10": "0x40",
+      "repeat_low10": "0x40",
+      "counter_after": 23
+    },
+    {
+      "sample": 2,
+      "held_low10": "0x40",
+      "pressed_low10": "0x0",
+      "repeat_low10": "0x0",
+      "counter_after": 22
+    },
+    {
+      "sample": 3,
+      "held_low10": "0x40",
+      "pressed_low10": "0x0",
+      "repeat_low10": "0x0",
+      "counter_after": 21
+    },
+    {
+      "sample": 4,
+      "held_low10": "0x40",
+      "pressed_low10": "0x0",
+      "repeat_low10": "0x0",
+      "counter_after": 20
+    },
+    {
+      "sample": 5,
+      "held_low10": "0x40",
+      "pressed_low10": "0x0",
+      "repeat_low10": "0x0",
+      "counter_after": 19
+    },
+    {
+      "sample": 6,
+      "held_low10": "0x40",
+      "pressed_low10": "0x0",
+      "repeat_low10": "0x0",
+      "counter_after": 18
+    },
+    {
+      "sample": 7,
+      "held_low10": "0x40",
+      "pressed_low10": "0x0",
+      "repeat_low10": "0x0",
+      "counter_after": 17
+    },
+    {
+      "sample": 8,
+      "held_low10": "0x40",
+      "pressed_low10": "0x0",
+      "repeat_low10": "0x0",
+      "counter_after": 16
+    },
+    {
+      "sample": 9,
+      "held_low10": "0x40",
+      "pressed_low10": "0x0",
+      "repeat_low10": "0x0",
+      "counter_after": 15
+    },
+    {
+      "sample": 10,
+      "held_low10": "0x40",
+      "pressed_low10": "0x0",
+      "repeat_low10": "0x0",
+      "counter_after": 14
+    },
+    {
+      "sample": 11,
+      "held_low10": "0x40",
+      "pressed_low10": "0x0",
+      "repeat_low10": "0x0",
+      "counter_after": 13
+    },
+    {
+      "sample": 12,
+      "held_low10": "0x40",
+      "pressed_low10": "0x0",
+      "repeat_low10": "0x0",
+      "counter_after": 12
+    },
+    {
+      "sample": 13,
+      "held_low10": "0x40",
+      "pressed_low10": "0x0",
+      "repeat_low10": "0x0",
+      "counter_after": 11
+    },
+    {
+      "sample": 14,
+      "held_low10": "0x40",
+      "pressed_low10": "0x0",
+      "repeat_low10": "0x0",
+      "counter_after": 10
+    },
+    {
+      "sample": 15,
+      "held_low10": "0x40",
+      "pressed_low10": "0x0",
+      "repeat_low10": "0x0",
+      "counter_after": 9
+    },
+    {
+      "sample": 16,
+      "held_low10": "0x40",
+      "pressed_low10": "0x0",
+      "repeat_low10": "0x0",
+      "counter_after": 8
+    },
+    {
+      "sample": 17,
+      "held_low10": "0x40",
+      "pressed_low10": "0x0",
+      "repeat_low10": "0x0",
+      "counter_after": 7
+    },
+    {
+      "sample": 18,
+      "held_low10": "0x40",
+      "pressed_low10": "0x0",
+      "repeat_low10": "0x0",
+      "counter_after": 6
+    },
+    {
+      "sample": 19,
+      "held_low10": "0x40",
+      "pressed_low10": "0x0",
+      "repeat_low10": "0x0",
+      "counter_after": 5
+    },
+    {
+      "sample": 20,
+      "held_low10": "0x40",
+      "pressed_low10": "0x0",
+      "repeat_low10": "0x0",
+      "counter_after": 4
+    },
+    {
+      "sample": 21,
+      "held_low10": "0x40",
+      "pressed_low10": "0x0",
+      "repeat_low10": "0x0",
+      "counter_after": 3
+    },
+    {
+      "sample": 22,
+      "held_low10": "0x40",
+      "pressed_low10": "0x0",
+      "repeat_low10": "0x0",
+      "counter_after": 2
+    },
+    {
+      "sample": 23,
+      "held_low10": "0x40",
+      "pressed_low10": "0x0",
+      "repeat_low10": "0x0",
+      "counter_after": 1
+    },
+    {
+      "sample": 24,
+      "held_low10": "0x40",
+      "pressed_low10": "0x0",
+      "repeat_low10": "0x0",
+      "counter_after": 0
+    },
+    {
+      "sample": 25,
+      "held_low10": "0x40",
+      "pressed_low10": "0x0",
+      "repeat_low10": "0x40",
+      "counter_after": 3
+    },
+    {
+      "sample": 26,
+      "held_low10": "0x40",
+      "pressed_low10": "0x0",
+      "repeat_low10": "0x0",
+      "counter_after": 2
+    },
+    {
+      "sample": 27,
+      "held_low10": "0x40",
+      "pressed_low10": "0x0",
+      "repeat_low10": "0x0",
+      "counter_after": 1
+    },
+    {
+      "sample": 28,
+      "held_low10": "0x40",
+      "pressed_low10": "0x0",
+      "repeat_low10": "0x0",
+      "counter_after": 0
+    },
+    {
+      "sample": 29,
+      "held_low10": "0x40",
+      "pressed_low10": "0x0",
+      "repeat_low10": "0x40",
+      "counter_after": 3
+    },
+    {
+      "sample": 30,
+      "held_low10": "0x40",
+      "pressed_low10": "0x0",
+      "repeat_low10": "0x0",
+      "counter_after": 2
+    },
+    {
+      "sample": 31,
+      "held_low10": "0x40",
+      "pressed_low10": "0x0",
+      "repeat_low10": "0x0",
+      "counter_after": 1
+    },
+    {
+      "sample": 32,
+      "held_low10": "0x40",
+      "pressed_low10": "0x0",
+      "repeat_low10": "0x0",
+      "counter_after": 0
+    },
+    {
+      "sample": 33,
+      "held_low10": "0x40",
+      "pressed_low10": "0x0",
+      "repeat_low10": "0x40",
+      "counter_after": 3
+    },
+    {
+      "sample": 34,
+      "held_low10": "0x40",
+      "pressed_low10": "0x0",
+      "repeat_low10": "0x0",
+      "counter_after": 2
+    },
+    {
+      "sample": 35,
+      "held_low10": "0x40",
+      "pressed_low10": "0x0",
+      "repeat_low10": "0x0",
+      "counter_after": 1
+    },
+    {
+      "sample": 36,
+      "held_low10": "0x0",
+      "pressed_low10": "0x0",
+      "repeat_low10": "0x0",
+      "counter_after": 0
+    },
+    {
+      "sample": 37,
+      "held_low10": "0x40",
+      "pressed_low10": "0x40",
+      "repeat_low10": "0x40",
+      "counter_after": 23
+    },
+    {
+      "sample": 38,
+      "held_low10": "0x40",
+      "pressed_low10": "0x0",
+      "repeat_low10": "0x0",
+      "counter_after": 22
+    }
+  ],
+  "external_button_mapping_source": "https://github.com/devkitPro/libgba/blob/master/include/gba_input.h"
+}

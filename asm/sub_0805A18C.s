@@ -1,0 +1,108 @@
+; sub_0805A18C @ 0x0805A18C-0805A262  (自动生成, 经往返验证)
+.thumb
+sub_0805A18C:
+    push {r4, r5, lr}
+    add r4, r0, #0
+    ldrb r0, [r4, #0xe]
+    cmp r0, #4
+    bhi loc_0805A25C
+    lsl r0, r0, #2
+    ldr r1, [pc, #4]
+    add r0, r0, r1
+    ldr r0, [r0]
+    mov pc, r0
+    .dh 0xA1A4 ; TODO adr r1, #0x290
+    lsr r5, r0, #0x20
+    .dh 0xA1B8 ; TODO adr r1, #0x2e0
+    lsr r5, r0, #0x20
+    .dh 0xA20C ; TODO adr r2, #0x30
+    lsr r5, r0, #0x20
+    .dh 0xA234 ; TODO adr r2, #0xd0
+    lsr r5, r0, #0x20
+    .dh 0xA244 ; TODO adr r2, #0x110
+    lsr r5, r0, #0x20
+    .dh 0xA25C ; TODO adr r2, #0x170
+    lsr r5, r0, #0x20
+    ldrb r1, [r4, #0xa]
+    mov r0, #1
+    orr r0, r1
+    strb r0, [r4, #0xa]
+    ldr r1, [pc, #0x64]
+    add r0, r4, #0
+    bl EXT_080127E4
+    ldr r3, [pc, #0x60]
+    ldrh r2, [r3, #8]
+    mov r5, #1
+    add r0, r5, #0
+    and r0, r2
+    cmp r0, #0
+    beq loc_0805A1EA
+    ldrh r1, [r3, #0x12]
+    add r0, r5, #0
+    and r0, r1
+    cmp r0, #0
+    bne loc_0805A1EA
+    ldr r0, [pc, #0x4c]
+    and r0, r2
+    mov r1, #0x20
+    orr r0, r1
+    strh r0, [r3, #8]
+loc_0805A1EA:
+    mov r1, #0
+    mov r0, #0x50
+    strb r0, [r4, #0x12]
+    add r0, r4, #0
+    add r0, #0x8c
+    str r1, [r0]
+    add r0, #4
+    str r1, [r0]
+    add r0, #4
+    strb r1, [r0]
+    ldrb r1, [r4, #0xa]
+    mov r0, #0xfb
+    and r0, r1
+    strb r0, [r4, #0xa]
+    ldrb r0, [r4, #0xe]
+    add r0, #1
+    strb r0, [r4, #0xe]
+    add r0, r4, #0
+    bl EXT_080128D4
+    ldrb r0, [r4, #0x12]
+    sub r0, #1
+    strb r0, [r4, #0x12]
+    ldr r0, [r4, #0x18]
+    ldrb r1, [r0, #9]
+    mov r0, #0x80
+    and r0, r1
+    cmp r0, #0
+    beq loc_0805A25C
+    b loc_0805A256
+    .dh 0x0000 ; gap
+    .word 0x0000A724
+    .word 0x0202EC30
+    .word 0x0000FFFE
+    .dh 0x490B ; gap
+    .dh 0x1C20 ; gap
+    .dh 0xF05E ; gap
+    .dh 0xFAA8 ; gap
+    .dh 0x62E0 ; gap
+    .dh 0x7BA0 ; gap
+    .dh 0x3001 ; gap
+    .dh 0x73A0 ; gap
+    .dh 0x6AE0 ; gap
+    .dh 0x7B00 ; gap
+    .dh 0x2801 ; gap
+    .dh 0xD907 ; gap
+    .dh 0x4A06 ; gap
+    .dh 0x8A51 ; gap
+    .dh 0x2002 ; gap
+    .dh 0x4308 ; gap
+    .dh 0x8250 ; gap
+loc_0805A256:
+    ldrb r0, [r4, #0xe]
+    add r0, #1
+    strb r0, [r4, #0xe]
+loc_0805A25C:
+    pop {r4, r5}
+    pop {r0}
+    bx r0

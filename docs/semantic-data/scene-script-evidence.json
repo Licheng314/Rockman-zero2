@@ -1,0 +1,620 @@
+{
+  "baseline_sha1": "c4d93a58f0f82c526dec8a3fdbda170336303689",
+  "dispatch_table_start": "0x08326364",
+  "observed_handler_span_end": "0x083263F0",
+  "boundary_note": "35 contiguous Thumb handler pointers followed by a scene-pointer table; interpreter has no range guard beyond FF sentinel.",
+  "handlers": [
+    {
+      "opcode": "0x00",
+      "entry_address": "0x8326364",
+      "thumb_pointer": "0x801bc75"
+    },
+    {
+      "opcode": "0x01",
+      "entry_address": "0x8326368",
+      "thumb_pointer": "0x801bc8d"
+    },
+    {
+      "opcode": "0x02",
+      "entry_address": "0x832636c",
+      "thumb_pointer": "0x801bcdd"
+    },
+    {
+      "opcode": "0x03",
+      "entry_address": "0x8326370",
+      "thumb_pointer": "0x801bced"
+    },
+    {
+      "opcode": "0x04",
+      "entry_address": "0x8326374",
+      "thumb_pointer": "0x801bcf1"
+    },
+    {
+      "opcode": "0x05",
+      "entry_address": "0x8326378",
+      "thumb_pointer": "0x801bd49"
+    },
+    {
+      "opcode": "0x06",
+      "entry_address": "0x832637c",
+      "thumb_pointer": "0x801be8d"
+    },
+    {
+      "opcode": "0x07",
+      "entry_address": "0x8326380",
+      "thumb_pointer": "0x801c161"
+    },
+    {
+      "opcode": "0x08",
+      "entry_address": "0x8326384",
+      "thumb_pointer": "0x801c1d1"
+    },
+    {
+      "opcode": "0x09",
+      "entry_address": "0x8326388",
+      "thumb_pointer": "0x801c20d"
+    },
+    {
+      "opcode": "0x0A",
+      "entry_address": "0x832638c",
+      "thumb_pointer": "0x801c25d"
+    },
+    {
+      "opcode": "0x0B",
+      "entry_address": "0x8326390",
+      "thumb_pointer": "0x801c2bd"
+    },
+    {
+      "opcode": "0x0C",
+      "entry_address": "0x8326394",
+      "thumb_pointer": "0x801c2d1"
+    },
+    {
+      "opcode": "0x0D",
+      "entry_address": "0x8326398",
+      "thumb_pointer": "0x801c3f9"
+    },
+    {
+      "opcode": "0x0E",
+      "entry_address": "0x832639c",
+      "thumb_pointer": "0x801c481"
+    },
+    {
+      "opcode": "0x0F",
+      "entry_address": "0x83263a0",
+      "thumb_pointer": "0x801c4b1"
+    },
+    {
+      "opcode": "0x10",
+      "entry_address": "0x83263a4",
+      "thumb_pointer": "0x801c4e5"
+    },
+    {
+      "opcode": "0x11",
+      "entry_address": "0x83263a8",
+      "thumb_pointer": "0x801c521"
+    },
+    {
+      "opcode": "0x12",
+      "entry_address": "0x83263ac",
+      "thumb_pointer": "0x801c571"
+    },
+    {
+      "opcode": "0x13",
+      "entry_address": "0x83263b0",
+      "thumb_pointer": "0x801c5ad"
+    },
+    {
+      "opcode": "0x14",
+      "entry_address": "0x83263b4",
+      "thumb_pointer": "0x801c721"
+    },
+    {
+      "opcode": "0x15",
+      "entry_address": "0x83263b8",
+      "thumb_pointer": "0x801c755"
+    },
+    {
+      "opcode": "0x16",
+      "entry_address": "0x83263bc",
+      "thumb_pointer": "0x801c7b1"
+    },
+    {
+      "opcode": "0x17",
+      "entry_address": "0x83263c0",
+      "thumb_pointer": "0x801c929"
+    },
+    {
+      "opcode": "0x18",
+      "entry_address": "0x83263c4",
+      "thumb_pointer": "0x801ca35"
+    },
+    {
+      "opcode": "0x19",
+      "entry_address": "0x83263c8",
+      "thumb_pointer": "0x801cac5"
+    },
+    {
+      "opcode": "0x1A",
+      "entry_address": "0x83263cc",
+      "thumb_pointer": "0x801cb01"
+    },
+    {
+      "opcode": "0x1B",
+      "entry_address": "0x83263d0",
+      "thumb_pointer": "0x801cc41"
+    },
+    {
+      "opcode": "0x1C",
+      "entry_address": "0x83263d4",
+      "thumb_pointer": "0x801cc89"
+    },
+    {
+      "opcode": "0x1D",
+      "entry_address": "0x83263d8",
+      "thumb_pointer": "0x801ccd1"
+    },
+    {
+      "opcode": "0x1E",
+      "entry_address": "0x83263dc",
+      "thumb_pointer": "0x801cd31"
+    },
+    {
+      "opcode": "0x1F",
+      "entry_address": "0x83263e0",
+      "thumb_pointer": "0x801cd7d"
+    },
+    {
+      "opcode": "0x20",
+      "entry_address": "0x83263e4",
+      "thumb_pointer": "0x801cdb1"
+    },
+    {
+      "opcode": "0x21",
+      "entry_address": "0x83263e8",
+      "thumb_pointer": "0x801cde9"
+    },
+    {
+      "opcode": "0x22",
+      "entry_address": "0x83263ec",
+      "thumb_pointer": "0x801ce0d"
+    }
+  ],
+  "scripts": [
+    {
+      "start": "0x8326438",
+      "installation_evidence": "14DE8 direct installed fallback",
+      "record_count_including_FF": 15,
+      "commands": [
+        {
+          "address": "0x8326438",
+          "raw_hex": "09 02 00 00 ff ff 00 00",
+          "opcode": "0x9",
+          "subop": 2,
+          "operand_u32": "0xffff"
+        },
+        {
+          "address": "0x8326440",
+          "raw_hex": "17 07 00 00 00 00 00 00",
+          "opcode": "0x17",
+          "subop": 7,
+          "operand_u32": "0x0"
+        },
+        {
+          "address": "0x8326448",
+          "raw_hex": "18 01 00 00 00 00 00 00",
+          "opcode": "0x18",
+          "subop": 1,
+          "operand_u32": "0x0"
+        },
+        {
+          "address": "0x8326450",
+          "raw_hex": "01 01 00 00 3c 00 00 00",
+          "opcode": "0x1",
+          "subop": 1,
+          "operand_u32": "0x3c"
+        },
+        {
+          "address": "0x8326458",
+          "raw_hex": "17 05 00 00 00 00 00 00",
+          "opcode": "0x17",
+          "subop": 5,
+          "operand_u32": "0x0"
+        },
+        {
+          "address": "0x8326460",
+          "raw_hex": "01 01 00 00 3c 00 00 00",
+          "opcode": "0x1",
+          "subop": 1,
+          "operand_u32": "0x3c"
+        },
+        {
+          "address": "0x8326468",
+          "raw_hex": "17 02 00 00 00 00 00 00",
+          "opcode": "0x17",
+          "subop": 2,
+          "operand_u32": "0x0"
+        },
+        {
+          "address": "0x8326470",
+          "raw_hex": "16 00 00 00 00 00 00 00",
+          "opcode": "0x16",
+          "subop": 0,
+          "operand_u32": "0x0"
+        },
+        {
+          "address": "0x8326478",
+          "raw_hex": "16 02 00 00 00 00 00 00",
+          "opcode": "0x16",
+          "subop": 2,
+          "operand_u32": "0x0"
+        },
+        {
+          "address": "0x8326480",
+          "raw_hex": "16 00 00 00 00 00 00 00",
+          "opcode": "0x16",
+          "subop": 0,
+          "operand_u32": "0x0"
+        },
+        {
+          "address": "0x8326488",
+          "raw_hex": "19 02 3c 00 32 00 00 00",
+          "opcode": "0x19",
+          "subop": 2,
+          "operand_u32": "0x32"
+        },
+        {
+          "address": "0x8326490",
+          "raw_hex": "14 0a 00 00 00 00 00 00",
+          "opcode": "0x14",
+          "subop": 10,
+          "operand_u32": "0x0"
+        },
+        {
+          "address": "0x8326498",
+          "raw_hex": "14 00 00 00 00 00 00 00",
+          "opcode": "0x14",
+          "subop": 0,
+          "operand_u32": "0x0"
+        },
+        {
+          "address": "0x83264a0",
+          "raw_hex": "01 01 00 00 3c 00 00 00",
+          "opcode": "0x1",
+          "subop": 1,
+          "operand_u32": "0x3c"
+        },
+        {
+          "address": "0x83264a8",
+          "raw_hex": "ff 00 00 00 00 00 00 00",
+          "opcode": "0xff",
+          "subop": 0,
+          "operand_u32": "0x0"
+        }
+      ],
+      "control_commands": [
+        {
+          "address": "0x8326438",
+          "raw_hex": "09 02 00 00 ff ff 00 00",
+          "opcode": "0x9",
+          "subop": 2,
+          "operand_u32": "0xffff"
+        }
+      ]
+    },
+    {
+      "start": "0x83264b0",
+      "installation_evidence": "14DE8 compares current stream against this alternate; direct installation not located in this pass",
+      "record_count_including_FF": 17,
+      "commands": [
+        {
+          "address": "0x83264b0",
+          "raw_hex": "09 02 00 00 ff ff 00 00",
+          "opcode": "0x9",
+          "subop": 2,
+          "operand_u32": "0xffff"
+        },
+        {
+          "address": "0x83264b8",
+          "raw_hex": "17 07 00 00 00 00 00 00",
+          "opcode": "0x17",
+          "subop": 7,
+          "operand_u32": "0x0"
+        },
+        {
+          "address": "0x83264c0",
+          "raw_hex": "18 01 00 00 00 00 00 00",
+          "opcode": "0x18",
+          "subop": 1,
+          "operand_u32": "0x0"
+        },
+        {
+          "address": "0x83264c8",
+          "raw_hex": "14 00 00 00 00 00 00 00",
+          "opcode": "0x14",
+          "subop": 0,
+          "operand_u32": "0x0"
+        },
+        {
+          "address": "0x83264d0",
+          "raw_hex": "14 01 00 00 00 00 00 00",
+          "opcode": "0x14",
+          "subop": 1,
+          "operand_u32": "0x0"
+        },
+        {
+          "address": "0x83264d8",
+          "raw_hex": "01 01 00 00 3c 00 00 00",
+          "opcode": "0x1",
+          "subop": 1,
+          "operand_u32": "0x3c"
+        },
+        {
+          "address": "0x83264e0",
+          "raw_hex": "17 05 00 00 00 00 00 00",
+          "opcode": "0x17",
+          "subop": 5,
+          "operand_u32": "0x0"
+        },
+        {
+          "address": "0x83264e8",
+          "raw_hex": "01 01 00 00 3c 00 00 00",
+          "opcode": "0x1",
+          "subop": 1,
+          "operand_u32": "0x3c"
+        },
+        {
+          "address": "0x83264f0",
+          "raw_hex": "17 02 00 00 00 00 00 00",
+          "opcode": "0x17",
+          "subop": 2,
+          "operand_u32": "0x0"
+        },
+        {
+          "address": "0x83264f8",
+          "raw_hex": "16 00 00 00 00 00 00 00",
+          "opcode": "0x16",
+          "subop": 0,
+          "operand_u32": "0x0"
+        },
+        {
+          "address": "0x8326500",
+          "raw_hex": "16 02 00 00 00 00 00 00",
+          "opcode": "0x16",
+          "subop": 2,
+          "operand_u32": "0x0"
+        },
+        {
+          "address": "0x8326508",
+          "raw_hex": "16 00 00 00 00 00 00 00",
+          "opcode": "0x16",
+          "subop": 0,
+          "operand_u32": "0x0"
+        },
+        {
+          "address": "0x8326510",
+          "raw_hex": "19 02 3c 00 32 00 00 00",
+          "opcode": "0x19",
+          "subop": 2,
+          "operand_u32": "0x32"
+        },
+        {
+          "address": "0x8326518",
+          "raw_hex": "14 0a 00 00 00 00 00 00",
+          "opcode": "0x14",
+          "subop": 10,
+          "operand_u32": "0x0"
+        },
+        {
+          "address": "0x8326520",
+          "raw_hex": "14 00 00 00 00 00 00 00",
+          "opcode": "0x14",
+          "subop": 0,
+          "operand_u32": "0x0"
+        },
+        {
+          "address": "0x8326528",
+          "raw_hex": "01 01 00 00 3c 00 00 00",
+          "opcode": "0x1",
+          "subop": 1,
+          "operand_u32": "0x3c"
+        },
+        {
+          "address": "0x8326530",
+          "raw_hex": "ff 00 00 00 00 00 00 00",
+          "opcode": "0xff",
+          "subop": 0,
+          "operand_u32": "0x0"
+        }
+      ],
+      "control_commands": [
+        {
+          "address": "0x83264b0",
+          "raw_hex": "09 02 00 00 ff ff 00 00",
+          "opcode": "0x9",
+          "subop": 2,
+          "operand_u32": "0xffff"
+        }
+      ]
+    },
+    {
+      "start": "0x8326768",
+      "installation_evidence": "14EF8 -> 083263F0[0] -> first pointer",
+      "record_count_including_FF": 18,
+      "commands": [
+        {
+          "address": "0x8326768",
+          "raw_hex": "0b 01 00 00 98 65 32 08",
+          "opcode": "0xb",
+          "subop": 1,
+          "operand_u32": "0x8326598"
+        },
+        {
+          "address": "0x8326770",
+          "raw_hex": "0b 00 00 00 88 65 32 08",
+          "opcode": "0xb",
+          "subop": 0,
+          "operand_u32": "0x8326588"
+        },
+        {
+          "address": "0x8326778",
+          "raw_hex": "04 00 00 00 5c 65 32 08",
+          "opcode": "0x4",
+          "subop": 0,
+          "operand_u32": "0x832655c"
+        },
+        {
+          "address": "0x8326780",
+          "raw_hex": "09 00 00 00 00 00 00 00",
+          "opcode": "0x9",
+          "subop": 0,
+          "operand_u32": "0x0"
+        },
+        {
+          "address": "0x8326788",
+          "raw_hex": "14 01 00 00 00 00 00 00",
+          "opcode": "0x14",
+          "subop": 1,
+          "operand_u32": "0x0"
+        },
+        {
+          "address": "0x8326790",
+          "raw_hex": "01 01 00 00 01 00 00 00",
+          "opcode": "0x1",
+          "subop": 1,
+          "operand_u32": "0x1"
+        },
+        {
+          "address": "0x8326798",
+          "raw_hex": "0b 03 00 00 a8 65 32 08",
+          "opcode": "0xb",
+          "subop": 3,
+          "operand_u32": "0x83265a8"
+        },
+        {
+          "address": "0x83267a0",
+          "raw_hex": "0b 04 00 00 b8 65 32 08",
+          "opcode": "0xb",
+          "subop": 4,
+          "operand_u32": "0x83265b8"
+        },
+        {
+          "address": "0x83267a8",
+          "raw_hex": "0b 05 00 00 c8 65 32 08",
+          "opcode": "0xb",
+          "subop": 5,
+          "operand_u32": "0x83265c8"
+        },
+        {
+          "address": "0x83267b0",
+          "raw_hex": "14 00 00 00 00 00 00 00",
+          "opcode": "0x14",
+          "subop": 0,
+          "operand_u32": "0x0"
+        },
+        {
+          "address": "0x83267b8",
+          "raw_hex": "16 01 03 00 00 00 00 00",
+          "opcode": "0x16",
+          "subop": 1,
+          "operand_u32": "0x0"
+        },
+        {
+          "address": "0x83267c0",
+          "raw_hex": "16 00 00 00 00 00 00 00",
+          "opcode": "0x16",
+          "subop": 0,
+          "operand_u32": "0x0"
+        },
+        {
+          "address": "0x83267c8",
+          "raw_hex": "18 00 00 00 b8 00 00 00",
+          "opcode": "0x18",
+          "subop": 0,
+          "operand_u32": "0xb8"
+        },
+        {
+          "address": "0x83267d0",
+          "raw_hex": "0b 04 00 00 b8 65 32 08",
+          "opcode": "0xb",
+          "subop": 4,
+          "operand_u32": "0x83265b8"
+        },
+        {
+          "address": "0x83267d8",
+          "raw_hex": "0b 05 00 00 c8 65 32 08",
+          "opcode": "0xb",
+          "subop": 5,
+          "operand_u32": "0x83265c8"
+        },
+        {
+          "address": "0x83267e0",
+          "raw_hex": "09 01 00 00 00 00 00 00",
+          "opcode": "0x9",
+          "subop": 1,
+          "operand_u32": "0x0"
+        },
+        {
+          "address": "0x83267e8",
+          "raw_hex": "07 01 00 00 00 00 00 00",
+          "opcode": "0x7",
+          "subop": 1,
+          "operand_u32": "0x0"
+        },
+        {
+          "address": "0x83267f0",
+          "raw_hex": "ff 00 00 00 00 00 00 00",
+          "opcode": "0xff",
+          "subop": 0,
+          "operand_u32": "0x0"
+        }
+      ],
+      "control_commands": [
+        {
+          "address": "0x8326780",
+          "raw_hex": "09 00 00 00 00 00 00 00",
+          "opcode": "0x9",
+          "subop": 0,
+          "operand_u32": "0x0"
+        },
+        {
+          "address": "0x83267e0",
+          "raw_hex": "09 01 00 00 00 00 00 00",
+          "opcode": "0x9",
+          "subop": 1,
+          "operand_u32": "0x0"
+        }
+      ]
+    }
+  ],
+  "timed_wait_instruction_derived_examples": [
+    {
+      "operand": 0,
+      "counter_after_command": 0,
+      "following_calls_skipped": 0,
+      "next_command_same_update": true,
+      "next_command_update_offset": 0
+    },
+    {
+      "operand": 1,
+      "counter_after_command": 0,
+      "following_calls_skipped": 0,
+      "next_command_same_update": false,
+      "next_command_update_offset": 1
+    },
+    {
+      "operand": 60,
+      "counter_after_command": 59,
+      "following_calls_skipped": 59,
+      "next_command_same_update": false,
+      "next_command_update_offset": 60
+    }
+  ],
+  "installer_1B454_cleared_address": "0x02000FF0",
+  "installer_does_not_clear": [
+    "X+0x148 override",
+    "X+0xD4 wait",
+    "X+0xD0 update counter"
+  ],
+  "method": "Static reads and instruction-derived flow; no simulator execution."
+}

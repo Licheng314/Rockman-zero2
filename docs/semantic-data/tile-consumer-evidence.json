@@ -1,0 +1,11 @@
+{
+ "sha1": "c4d93a58f0f82c526dec8a3fdbda170336303689",
+ "0x08002544": "队列处理器: 先 DMA 清 VRAM(0x0600C000 区, 尺寸[0xC4]>>2), 再逆序遍历 16 项(步长 0xC)",
+ "entry_format": "{size4/flags@0, vram_off@4, src@8}; 类型位[0]&3: 0=跳过 1=CpuFastSet(0x0800EEF6C) 直拷≤124B",
+ "meaning": "每图块单独入队(≤124B=3.9 tile); 元数据 20B 项偏移字 = 图块像素在 blob 内偏移(0x30/0x3C0/0x21C0 递增)",
+ "render": "PNG 渲染需 blob 内图块偏移→4bpp 32B 映射(偏移差 0x390/0x1E00 非整块——布局待定案)",
+ "open": [
+  "blob 内图块布局定案",
+  "PNG 渲染"
+ ]
+}

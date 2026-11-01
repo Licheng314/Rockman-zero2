@@ -1,0 +1,135 @@
+{
+  "baseline_sha1": "c4d93a58f0f82c526dec8a3fdbda170336303689",
+  "global_control": "0x0202EC30",
+  "script_context": "0x0202EC40",
+  "override_offset_in_script_context": "0x148",
+  "opcode_09_dispatch_entry": "0x8326388",
+  "opcode_09_handler_thumb_pointer": "0x801c20d",
+  "entity_type0_action_dispatch_entry": "0x08333ADC",
+  "entity_type0_action_handler_thumb_pointer": "0x8037505",
+  "action_to_binding_slot_indices": [
+    4,
+    5,
+    6
+  ],
+  "binding_presets": [
+    {
+      "mode": 0,
+      "address": "0x83347a0",
+      "raw_hex": "40 00 80 00 20 00 10 00 02 00 01 00 00 02 00 01",
+      "slots_u16": [
+        "0x40",
+        "0x80",
+        "0x20",
+        "0x10",
+        "0x2",
+        "0x1",
+        "0x200",
+        "0x100"
+      ],
+      "abstract_actions_0_1_2": [
+        "0x2",
+        "0x1",
+        "0x200"
+      ]
+    },
+    {
+      "mode": 1,
+      "address": "0x83347b0",
+      "raw_hex": "40 00 80 00 20 00 10 00 02 00 01 00 00 01 00 02",
+      "slots_u16": [
+        "0x40",
+        "0x80",
+        "0x20",
+        "0x10",
+        "0x2",
+        "0x1",
+        "0x100",
+        "0x200"
+      ],
+      "abstract_actions_0_1_2": [
+        "0x2",
+        "0x1",
+        "0x100"
+      ]
+    }
+  ],
+  "examples": [
+    {
+      "mode": 0,
+      "override_word": "0x8000",
+      "G_plus_4": "0x8000",
+      "G_plus_6": "0x8000",
+      "assumption": "First entity exists and has type byte 9 = 0; examples ignore side effects of FFFF state-byte clearing."
+    },
+    {
+      "mode": 0,
+      "override_word": "0x9000",
+      "G_plus_4": "0x9002",
+      "G_plus_6": "0x9000",
+      "assumption": "First entity exists and has type byte 9 = 0; examples ignore side effects of FFFF state-byte clearing."
+    },
+    {
+      "mode": 0,
+      "override_word": "0xa000",
+      "G_plus_4": "0xa001",
+      "G_plus_6": "0xa000",
+      "assumption": "First entity exists and has type byte 9 = 0; examples ignore side effects of FFFF state-byte clearing."
+    },
+    {
+      "mode": 0,
+      "override_word": "0xc000",
+      "G_plus_4": "0xc200",
+      "G_plus_6": "0xc000",
+      "assumption": "First entity exists and has type byte 9 = 0; examples ignore side effects of FFFF state-byte clearing."
+    },
+    {
+      "mode": 0,
+      "override_word": "0xffff",
+      "G_plus_4": "0x0",
+      "G_plus_6": "0x0",
+      "assumption": "First entity exists and has type byte 9 = 0; examples ignore side effects of FFFF state-byte clearing."
+    },
+    {
+      "mode": 1,
+      "override_word": "0x8000",
+      "G_plus_4": "0x8000",
+      "G_plus_6": "0x8000",
+      "assumption": "First entity exists and has type byte 9 = 0; examples ignore side effects of FFFF state-byte clearing."
+    },
+    {
+      "mode": 1,
+      "override_word": "0x9000",
+      "G_plus_4": "0x9002",
+      "G_plus_6": "0x9000",
+      "assumption": "First entity exists and has type byte 9 = 0; examples ignore side effects of FFFF state-byte clearing."
+    },
+    {
+      "mode": 1,
+      "override_word": "0xa000",
+      "G_plus_4": "0xa001",
+      "G_plus_6": "0xa000",
+      "assumption": "First entity exists and has type byte 9 = 0; examples ignore side effects of FFFF state-byte clearing."
+    },
+    {
+      "mode": 1,
+      "override_word": "0xc000",
+      "G_plus_4": "0xc100",
+      "G_plus_6": "0xc000",
+      "assumption": "First entity exists and has type byte 9 = 0; examples ignore side effects of FFFF state-byte clearing."
+    },
+    {
+      "mode": 1,
+      "override_word": "0xffff",
+      "G_plus_4": "0x0",
+      "G_plus_6": "0x0",
+      "assumption": "First entity exists and has type byte 9 = 0; examples ignore side effects of FFFF state-byte clearing."
+    }
+  ],
+  "source_code_sha1": {
+    "1B730": "178ea8cba63becc307b68f96a1830d40e3792d3e",
+    "1C20C": "1ee91f5d14a7a6a8f586b5258416cee28352971f",
+    "37504": "854c9501de3187c20e5802da38b5dfa400b879a7"
+  },
+  "scope": "Static type-0 mapping and opcode-09 control semantics. Other entity types, full script table size and runtime action names are unproven."
+}

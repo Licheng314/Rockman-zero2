@@ -1,0 +1,12 @@
+{
+ "sha1": "c4d93a58f0f82c526dec8a3fdbda170336303689",
+ "chain_closed": {
+  "record": "0x084CC680 + 0x0202E790[变体*2] = 记录字节偏移",
+  "data": "记录+记录[0] 自相对(原始图块内联, 非LZ77)",
+  "stride": "20B 图块/调色板对(单元14 同族)",
+  "queue": "0x080027AC 排队→VRAM(基址=E590 合成)"
+ },
+ "render_ready": "离线渲染: 帧头→图块OAM→tile号→记录数据(4bpp)→PNG 可行",
+ "open": "attr2 tile号→像素偏移的精确映射(tile×32B 假设待渲染验证)",
+ "stride_note": "记录内偏移 = tile_index*20 ((r3<<2+r3)<<2): 帧 10 图块 × 20B = 200B 记录内布局"
+}

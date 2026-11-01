@@ -1,0 +1,202 @@
+[
+ {
+  "type": 11,
+  "pa": "0x833e59c",
+  "phases": 23,
+  "pairs": [
+   [
+    3,
+    "exit",
+    "retire"
+   ],
+   [
+    8,
+    "exit",
+    "retire"
+   ]
+  ],
+  "kinds": [
+   "own",
+   "own",
+   "own",
+   "exit",
+   "retire",
+   "own",
+   "own",
+   "own",
+   "exit",
+   "retire",
+   "own",
+   "own",
+   "own",
+   "own",
+   "own",
+   "own",
+   "own",
+   "own",
+   "retire",
+   "own",
+   "own",
+   "own",
+   "own"
+  ]
+ },
+ {
+  "type": 33,
+  "pa": "0x833ff4c",
+  "phases": 28,
+  "pairs": [
+   [
+    3,
+    "exit",
+    "retire"
+   ],
+   [
+    16,
+    "exit",
+    "retire"
+   ]
+  ],
+  "kinds": [
+   "own",
+   "own",
+   "own",
+   "exit",
+   "retire",
+   "own",
+   "own",
+   "own",
+   "own",
+   "own",
+   "own",
+   "own",
+   "own",
+   "own",
+   "own",
+   "own",
+   "exit",
+   "retire",
+   "own",
+   "own",
+   "own",
+   "own",
+   "own",
+   "own",
+   "own",
+   "own",
+   "own",
+   "own"
+  ]
+ },
+ {
+  "type": 54,
+  "pa": "0x8341220",
+  "phases": 42,
+  "pairs": [
+   [
+    3,
+    "exit",
+    "retire"
+   ],
+   [
+    8,
+    "exit",
+    "retire"
+   ]
+  ],
+  "kinds": [
+   "own",
+   "own",
+   "own",
+   "exit",
+   "retire",
+   "own",
+   "own",
+   "own",
+   "exit",
+   "retire",
+   "own",
+   "own",
+   "own",
+   "own",
+   "own",
+   "own",
+   "own",
+   "own",
+   "own",
+   "own",
+   "own",
+   "own",
+   "own",
+   "own",
+   "own",
+   "own",
+   "own",
+   "own",
+   "own",
+   "own",
+   "own",
+   "own"
+  ]
+ },
+ {
+  "type": 58,
+  "pa": "0x8341598",
+  "phases": 10,
+  "pairs": [
+   [
+    3,
+    "exit",
+    "retire"
+   ],
+   [
+    8,
+    "exit",
+    "retire"
+   ]
+  ],
+  "kinds": [
+   "own",
+   "own",
+   "own",
+   "exit",
+   "retire",
+   "own",
+   "own",
+   "own",
+   "exit",
+   "retire"
+  ]
+ },
+ {
+  "type": 74,
+  "pa": "0x8342288",
+  "phases": 12,
+  "pairs": [
+   [
+    3,
+    "exit",
+    "retire"
+   ],
+   [
+    8,
+    "exit",
+    "retire"
+   ]
+  ],
+  "kinds": [
+   "own",
+   "own",
+   "own",
+   "exit",
+   "retire",
+   "own",
+   "own",
+   "own",
+   "exit",
+   "retire",
+   "own",
+   "own"
+  ]
+ }
+]

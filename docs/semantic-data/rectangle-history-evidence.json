@@ -1,0 +1,317 @@
+{
+  "baseline_sha1": "c4d93a58f0f82c526dec8a3fdbda170336303689",
+  "snapshot_function": "08014AD8",
+  "normalized_control": "skip = u8(argument); copy/clear only when skip == 0",
+  "entry_branch": "08014BA2..08014BA6",
+  "source_pointer_literal": {
+    "instruction": "08014BB2",
+    "pool": "08014C5C",
+    "value": "0x020011D4"
+  },
+  "destination_offset": "0x300",
+  "current_count": "0x020011D2",
+  "history_count": "0x020011D3",
+  "copy_segment": "08014BB2..08014BF6",
+  "count_commit_segment": "08014BF6..08014C04",
+  "commit_rule": "historyCount=currentCount; currentCount=0",
+  "caller_regular": "E4390 passes u8(pending || entry-snapshot E144!=0) at 080E4764 after object update/registration paths",
+  "callers_state_5_6": "E4924 and E4A5C pass constant 1",
+  "copy_parameter_examples": [
+    {
+      "count": 0,
+      "active_bytes": 0,
+      "fast_bytes_parameter": 0,
+      "tail_bytes": 0,
+      "tail_CpuSet_word_count": 0
+    },
+    {
+      "count": 1,
+      "active_bytes": 24,
+      "fast_bytes_parameter": 0,
+      "tail_bytes": 24,
+      "tail_CpuSet_word_count": 6
+    },
+    {
+      "count": 2,
+      "active_bytes": 48,
+      "fast_bytes_parameter": 32,
+      "tail_bytes": 16,
+      "tail_CpuSet_word_count": 4
+    },
+    {
+      "count": 3,
+      "active_bytes": 72,
+      "fast_bytes_parameter": 64,
+      "tail_bytes": 8,
+      "tail_CpuSet_word_count": 2
+    },
+    {
+      "count": 4,
+      "active_bytes": 96,
+      "fast_bytes_parameter": 96,
+      "tail_bytes": 0,
+      "tail_CpuSet_word_count": 0
+    },
+    {
+      "count": 5,
+      "active_bytes": 120,
+      "fast_bytes_parameter": 96,
+      "tail_bytes": 24,
+      "tail_CpuSet_word_count": 6
+    },
+    {
+      "count": 6,
+      "active_bytes": 144,
+      "fast_bytes_parameter": 128,
+      "tail_bytes": 16,
+      "tail_CpuSet_word_count": 4
+    },
+    {
+      "count": 7,
+      "active_bytes": 168,
+      "fast_bytes_parameter": 160,
+      "tail_bytes": 8,
+      "tail_CpuSet_word_count": 2
+    },
+    {
+      "count": 8,
+      "active_bytes": 192,
+      "fast_bytes_parameter": 192,
+      "tail_bytes": 0,
+      "tail_CpuSet_word_count": 0
+    },
+    {
+      "count": 9,
+      "active_bytes": 216,
+      "fast_bytes_parameter": 192,
+      "tail_bytes": 24,
+      "tail_CpuSet_word_count": 6
+    },
+    {
+      "count": 10,
+      "active_bytes": 240,
+      "fast_bytes_parameter": 224,
+      "tail_bytes": 16,
+      "tail_CpuSet_word_count": 4
+    },
+    {
+      "count": 11,
+      "active_bytes": 264,
+      "fast_bytes_parameter": 256,
+      "tail_bytes": 8,
+      "tail_CpuSet_word_count": 2
+    },
+    {
+      "count": 12,
+      "active_bytes": 288,
+      "fast_bytes_parameter": 288,
+      "tail_bytes": 0,
+      "tail_CpuSet_word_count": 0
+    },
+    {
+      "count": 13,
+      "active_bytes": 312,
+      "fast_bytes_parameter": 288,
+      "tail_bytes": 24,
+      "tail_CpuSet_word_count": 6
+    },
+    {
+      "count": 14,
+      "active_bytes": 336,
+      "fast_bytes_parameter": 320,
+      "tail_bytes": 16,
+      "tail_CpuSet_word_count": 4
+    },
+    {
+      "count": 15,
+      "active_bytes": 360,
+      "fast_bytes_parameter": 352,
+      "tail_bytes": 8,
+      "tail_CpuSet_word_count": 2
+    },
+    {
+      "count": 16,
+      "active_bytes": 384,
+      "fast_bytes_parameter": 384,
+      "tail_bytes": 0,
+      "tail_CpuSet_word_count": 0
+    },
+    {
+      "count": 17,
+      "active_bytes": 408,
+      "fast_bytes_parameter": 384,
+      "tail_bytes": 24,
+      "tail_CpuSet_word_count": 6
+    },
+    {
+      "count": 18,
+      "active_bytes": 432,
+      "fast_bytes_parameter": 416,
+      "tail_bytes": 16,
+      "tail_CpuSet_word_count": 4
+    },
+    {
+      "count": 19,
+      "active_bytes": 456,
+      "fast_bytes_parameter": 448,
+      "tail_bytes": 8,
+      "tail_CpuSet_word_count": 2
+    },
+    {
+      "count": 20,
+      "active_bytes": 480,
+      "fast_bytes_parameter": 480,
+      "tail_bytes": 0,
+      "tail_CpuSet_word_count": 0
+    },
+    {
+      "count": 21,
+      "active_bytes": 504,
+      "fast_bytes_parameter": 480,
+      "tail_bytes": 24,
+      "tail_CpuSet_word_count": 6
+    },
+    {
+      "count": 22,
+      "active_bytes": 528,
+      "fast_bytes_parameter": 512,
+      "tail_bytes": 16,
+      "tail_CpuSet_word_count": 4
+    },
+    {
+      "count": 23,
+      "active_bytes": 552,
+      "fast_bytes_parameter": 544,
+      "tail_bytes": 8,
+      "tail_CpuSet_word_count": 2
+    },
+    {
+      "count": 24,
+      "active_bytes": 576,
+      "fast_bytes_parameter": 576,
+      "tail_bytes": 0,
+      "tail_CpuSet_word_count": 0
+    },
+    {
+      "count": 25,
+      "active_bytes": 600,
+      "fast_bytes_parameter": 576,
+      "tail_bytes": 24,
+      "tail_CpuSet_word_count": 6
+    },
+    {
+      "count": 26,
+      "active_bytes": 624,
+      "fast_bytes_parameter": 608,
+      "tail_bytes": 16,
+      "tail_CpuSet_word_count": 4
+    },
+    {
+      "count": 27,
+      "active_bytes": 648,
+      "fast_bytes_parameter": 640,
+      "tail_bytes": 8,
+      "tail_CpuSet_word_count": 2
+    },
+    {
+      "count": 28,
+      "active_bytes": 672,
+      "fast_bytes_parameter": 672,
+      "tail_bytes": 0,
+      "tail_CpuSet_word_count": 0
+    },
+    {
+      "count": 29,
+      "active_bytes": 696,
+      "fast_bytes_parameter": 672,
+      "tail_bytes": 24,
+      "tail_CpuSet_word_count": 6
+    },
+    {
+      "count": 30,
+      "active_bytes": 720,
+      "fast_bytes_parameter": 704,
+      "tail_bytes": 16,
+      "tail_CpuSet_word_count": 4
+    },
+    {
+      "count": 31,
+      "active_bytes": 744,
+      "fast_bytes_parameter": 736,
+      "tail_bytes": 8,
+      "tail_CpuSet_word_count": 2
+    }
+  ],
+  "copy_zero_note": "CpuFastSet call is unconditional, including zero fast count; this evidence records emitted parameters, not BIOS zero-count behavior. Live record membership is controlled by committed counts.",
+  "static_trace_units": "x values in integer pixels solely to illustrate list semantics; no runtime capture.",
+  "static_trace": [
+    {
+      "event": "register id7 at x100",
+      "current": {
+        "id7": 100
+      },
+      "history": {},
+      "registered_historical_x": 100,
+      "dx": 0
+    },
+    {
+      "event": "14AD8(0) snapshot",
+      "current": {},
+      "history": {
+        "id7": 100
+      }
+    },
+    {
+      "event": "register id7 at x103",
+      "current": {
+        "id7": 103
+      },
+      "history": {
+        "id7": 100
+      },
+      "registered_historical_x": 100,
+      "dx": 3
+    },
+    {
+      "event": "14AD8(1) skip",
+      "current": {
+        "id7": 103
+      },
+      "history": {
+        "id7": 100
+      },
+      "dx": 3
+    },
+    {
+      "event": "14AD8(0) snapshot",
+      "current": {},
+      "history": {
+        "id7": 103
+      }
+    },
+    {
+      "event": "register id7 at x103",
+      "current": {
+        "id7": 103
+      },
+      "history": {
+        "id7": 103
+      },
+      "registered_historical_x": 103,
+      "dx": 0
+    }
+  ],
+  "code_sha1": {
+    "copy_and_commit": "2fff2f23e4ff0154faf0eb347dbcf88f1742e9cc",
+    "entry_guard": "6c1d32b4c3f928b6c4a4b74d35a3623169f60337"
+  },
+  "trace_assumption": "Current empty state after snapshot denotes immediate count-commit boundary; later map/layer callbacks can register new records before 14AD8 returns. Trace assumes no such extra registration.",
+  "post_commit_registration_example": {
+    "stage_index": 2,
+    "stage_record": "0x08315BF8",
+    "layer_callback_table": "0x08315340",
+    "callback_pointer_slot": "0x08315370",
+    "callback_thumb_pointer": "0x0800B479",
+    "path": "14AD8 -> 08080B8 -> 08BB0 selects layer callbacks -> B478 -> 099BC; conditional on selected layer variant"
+  }
+}

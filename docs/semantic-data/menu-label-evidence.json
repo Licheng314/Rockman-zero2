@@ -1,0 +1,234 @@
+{
+  "baseline_sha1": "c4d93a58f0f82c526dec8a3fdbda170336303689",
+  "scope": "Read-only US ROM evidence; layout examined over 16 rows of 10 bytes as bounded by D5D30; glyphs outside established Latin mapping remain tokens.",
+  "categories": [
+    {
+      "category_index": 0,
+      "first_id": 1,
+      "count": 27,
+      "name_ref": "0xb5",
+      "description_ref": "0x11b",
+      "layout_pointer": "0x834a67c",
+      "layout_16x10_raw_hex": "02 02 02 01 01 01 01 03 03 03 02 02 02 01 01 01 01 03 03 03 02 02 02 01 01 01 01 03 03 03 04 04 04 01 01 01 01 05 05 05 04 04 04 10 10 11 11 05 05 05 04 04 04 10 10 11 11 05 05 05 18 18 12 12 14 14 13 13 19 19 18 18 12 12 14 14 13 13 19 19 1a 1a 08 08 08 09 09 09 1b 1b 1a 1a 08 08 08 09 09 09 1b 1b 0a 0a 08 08 08 09 09 09 0b 0b 0a 0a 15 15 16 16 17 17 0b 0b 0c 0c 15 15 16 16 17 17 0d 0d 0c 0c 06 06 06 07 07 07 0d 0d 0e 0e 06 06 06 07 07 07 0f 0f 0e 0e 06 06 06 07 07 07 0f 0f",
+      "layout_nonzero_distinct_ids": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27
+      ]
+    },
+    {
+      "category_index": 1,
+      "first_id": 28,
+      "count": 27,
+      "name_ref": "0xb6",
+      "description_ref": "0x11c",
+      "layout_pointer": "0x834a71c",
+      "layout_16x10_raw_hex": "1d 1d 1d 1c 1c 1c 1c 1e 1e 1e 1d 1d 1d 1c 1c 1c 1c 1e 1e 1e 1d 1d 1d 1c 1c 1c 1c 1e 1e 1e 1f 1f 1f 1c 1c 1c 1c 20 20 20 1f 1f 1f 21 21 22 22 20 20 20 1f 1f 1f 21 21 22 22 20 20 20 23 23 24 24 00 00 25 25 26 26 23 23 24 24 00 00 25 25 26 26 27 27 28 28 33 33 29 29 2a 2a 27 27 28 28 33 33 29 29 2a 2a 00 00 34 34 00 00 35 35 00 00 00 00 34 34 00 00 35 35 00 00 2b 2b 2c 2c 36 36 2d 2d 2e 2e 2b 2b 2c 2c 36 36 2d 2d 2e 2e 2f 2f 30 30 00 00 31 31 32 32 2f 2f 30 30 00 00 31 31 32 32",
+      "layout_nonzero_distinct_ids": [
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54
+      ]
+    },
+    {
+      "category_index": 2,
+      "first_id": 55,
+      "count": 27,
+      "name_ref": "0xb7",
+      "description_ref": "0x11d",
+      "layout_pointer": "0x834a7bc",
+      "layout_16x10_raw_hex": "38 38 38 37 37 37 37 39 39 39 38 38 38 37 37 37 37 39 39 39 38 38 38 37 37 37 37 39 39 39 3a 3a 3a 37 37 37 37 3b 3b 3b 3a 3a 3a 00 00 00 00 3b 3b 3b 3a 3a 3a 00 00 00 00 3b 3b 3b 42 42 43 43 3c 3c 44 44 45 45 42 42 43 43 3c 3c 44 44 45 45 46 46 47 47 3d 3d 48 48 49 49 46 46 47 47 3d 3d 48 48 49 49 00 00 3e 3e 00 00 3f 3f 00 00 00 00 3e 3e 00 00 3f 3f 00 00 4a 4a 4b 4b 40 40 4c 4c 4d 4d 4a 4a 4b 4b 40 40 4c 4c 4d 4d 4e 4e 4f 4f 41 41 50 50 51 51 4e 4e 4f 4f 41 41 50 50 51 51",
+      "layout_nonzero_distinct_ids": [
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69,
+        70,
+        71,
+        72,
+        73,
+        74,
+        75,
+        76,
+        77,
+        78,
+        79,
+        80,
+        81
+      ]
+    }
+  ],
+  "text_evidence": [
+    {
+      "reference": "0xB5",
+      "address": "0x0834D1DA",
+      "raw_hex": "18 39 36 37 29 ff",
+      "partial_text": "Nurse"
+    },
+    {
+      "reference": "0xB6",
+      "address": "0x0834D1E0",
+      "raw_hex": "0b 32 2d 31 25 30 ff",
+      "partial_text": "Animal"
+    },
+    {
+      "reference": "0xB7",
+      "address": "0x0834D1E7",
+      "raw_hex": "12 25 27 2f 29 36 ff",
+      "partial_text": "Hacker"
+    },
+    {
+      "reference": "0x11B",
+      "address": "0x0834DABE",
+      "raw_hex": "1e 2c 29 3d 00 32 39 36 37 29 fc 3d 33 39 00 26 25 27 2f fc 38 33 00 2c 29 25 30 38 2c e2 ff",
+      "partial_text": "They nurse\nyou back\nto health<GLYPH_E2>"
+    },
+    {
+      "reference": "0x11C",
+      "address": "0x0834DADD",
+      "raw_hex": "1e 2c 29 3d 00 26 33 33 37 38 fc 3d 33 39 36 fc 25 26 2d 30 2d 38 3d e2 ff",
+      "partial_text": "They boost\nyour\nability<GLYPH_E2>"
+    },
+    {
+      "reference": "0x11D",
+      "address": "0x0834DAF6",
+      "raw_hex": "1e 2c 29 3d fc 27 2c 25 32 2b 29 fc 28 25 38 25 e2 ff",
+      "partial_text": "They\nchange\ndata<GLYPH_E2>"
+    },
+    {
+      "reference": "0x5",
+      "address": "0x0834C9FA",
+      "raw_hex": "f0 03 ff",
+      "partial_text": "<GLYPH_0F3>"
+    },
+    {
+      "reference": "0x183",
+      "address": "0x0834E1F5",
+      "raw_hex": "0d 36 e2 e3 ff",
+      "partial_text": "Cr<GLYPH_E2><GLYPH_E3>"
+    },
+    {
+      "reference": "0x184",
+      "address": "0x0834E1FA",
+      "raw_hex": "1e 33 00 11 2d 3a 29 00 f0 03 00 1c 29 35 39 2d 36 29 28 ff",
+      "partial_text": "To Give <GLYPH_0F3> Required"
+    },
+    {
+      "reference": "0x188",
+      "address": "0x0834E25A",
+      "raw_hex": "0d 2c 33 33 37 29 00 25 00 0d 3d 26 29 36 f0 01 29 30 2a e2 ff",
+      "partial_text": "Choose a Cyber<GLYPH_0F1>elf<GLYPH_E2>"
+    },
+    {
+      "reference": "0x168",
+      "address": "0x0834E022",
+      "raw_hex": "1e 2c 25 32 2f 00 3d 33 39 e5 ff",
+      "partial_text": "Thank you<GLYPH_E5>"
+    },
+    {
+      "reference": "0x16C",
+      "address": "0x0834E06B",
+      "raw_hex": "1e 2c 25 32 2f 37 00 2a 33 36 fc 2a 29 29 28 2d 32 2b fc 31 29 e4 00 24 29 36 33 e2 ff",
+      "partial_text": "Thanks for\nfeeding\nme<GLYPH_E4> Zero<GLYPH_E2>"
+    },
+    {
+      "reference": "0x174",
+      "address": "0x0834E128",
+      "raw_hex": "13 00 32 29 29 28 fc 0f 32 29 36 2b 3d fc 0d 36 3d 37 38 25 30 37 e5 ff",
+      "partial_text": "I need\nEnergy\nCrystals<GLYPH_E5>"
+    }
+  ],
+  "growth_message_classes": [
+    {
+      "class": 0,
+      "pointer": "0x834a648",
+      "first_stage_refs": [
+        "0x169",
+        "0x16b"
+      ]
+    },
+    {
+      "class": 1,
+      "pointer": "0x834a650",
+      "first_stage_refs": [
+        "0x168",
+        "0x16a"
+      ]
+    },
+    {
+      "class": 2,
+      "pointer": "0x834a658",
+      "first_stage_refs": [
+        "0x169",
+        "0x16d"
+      ]
+    },
+    {
+      "class": 3,
+      "pointer": "0x834a65c",
+      "first_stage_refs": [
+        "0x168",
+        "0x16c"
+      ]
+    }
+  ]
+}

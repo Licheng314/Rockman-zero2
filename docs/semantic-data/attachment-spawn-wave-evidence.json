@@ -1,0 +1,257 @@
+{
+  "baseline_sha1": "c4d93a58f0f82c526dec8a3fdbda170336303689",
+  "method": "Reachable original-ROM creator/factory/allocator instructions and exact PC literals. Tests stub only graphics/audio callees, explicitly recorded.",
+  "functions": [
+    {
+      "start": "0x8055c78",
+      "end_exclusive": "0x8055d00",
+      "span_sha1": "bd6514b48b5be4f28f0239a2b49c3070f7142518",
+      "reachable_instructions": [
+        "08055C78: push {r4, lr}",
+        "08055C7A: sub sp, #8",
+        "08055C7C: adds r4, r0, #0",
+        "08055C7E: ldrb r0, [r4, #0xf]",
+        "08055C80: cmp r0, #0",
+        "08055C82: bne #0x8055c96",
+        "08055C84: ldr r1, [pc, #0x30]",
+        "08055C86: adds r0, r4, #0",
+        "08055C88: bl #0x80127e4",
+        "08055C8C: movs r0, #0x18",
+        "08055C8E: strb r0, [r4, #0x12]",
+        "08055C90: ldrb r0, [r4, #0xf]",
+        "08055C92: adds r0, #1",
+        "08055C94: strb r0, [r4, #0xf]",
+        "08055C96: adds r0, r4, #0",
+        "08055C98: bl #0x80128d4",
+        "08055C9C: ldrb r1, [r4, #0x12]",
+        "08055C9E: movs r0, #3",
+        "08055CA0: ands r0, r1",
+        "08055CA2: cmp r0, #0",
+        "08055CA4: bne #0x8055ce2",
+        "08055CA6: ldr r2, [r4, #0x54]",
+        "08055CA8: ldrb r1, [r4, #0xa]",
+        "08055CAA: movs r0, #0x10",
+        "08055CAC: ands r0, r1",
+        "08055CAE: cmp r0, #0",
+        "08055CB0: beq #0x8055cbc",
+        "08055CB2: movs r1, #0xa0",
+        "08055CB4: lsls r1, r1, #5",
+        "08055CB6: b #0x8055cbe",
+        "08055CBC: ldr r1, [pc, #0x40]",
+        "08055CBE: adds r0, r2, r1",
+        "08055CC0: str r0, [sp]",
+        "08055CC2: ldr r0, [r4, #0x58]",
+        "08055CC4: ldr r1, [pc, #0x3c]",
+        "08055CC6: adds r0, r0, r1",
+        "08055CC8: str r0, [sp, #4]",
+        "08055CCA: adds r0, r4, #0",
+        "08055CCC: mov r1, sp",
+        "08055CCE: movs r2, #2",
+        "08055CD0: movs r3, #0",
+        "08055CD2: bl #0x80a20a4",
+        "08055CD6: ldrb r0, [r4, #0x12]",
+        "08055CD8: cmp r0, #0xc",
+        "08055CDA: bne #0x8055ce2",
+        "08055CDC: movs r0, #0x95",
+        "08055CDE: bl #0x80032ec",
+        "08055CE2: ldrb r0, [r4, #0x12]",
+        "08055CE4: subs r0, #1",
+        "08055CE6: strb r0, [r4, #0x12]",
+        "08055CE8: lsls r0, r0, #0x18",
+        "08055CEA: lsrs r1, r0, #0x18",
+        "08055CEC: cmp r1, #0",
+        "08055CEE: bne #0x8055cf8",
+        "08055CF0: ldrb r0, [r4, #0xe]",
+        "08055CF2: adds r0, #1",
+        "08055CF4: strb r0, [r4, #0xe]",
+        "08055CF6: strb r1, [r4, #0xf]",
+        "08055CF8: add sp, #8",
+        "08055CFA: pop {r4}",
+        "08055CFC: pop {r0}",
+        "08055CFE: bx r0"
+      ],
+      "literals": [
+        {
+          "instruction": "0x8055c84",
+          "address": "0x8055cb8",
+          "u32": "0xa625"
+        },
+        {
+          "instruction": "0x8055cc4",
+          "address": "0x8055d04",
+          "u32": "0xffffe800"
+        },
+        {
+          "instruction": "0x8055cbc",
+          "address": "0x8055d00",
+          "u32": "0xffffec00"
+        }
+      ],
+      "calls": [
+        {
+          "instruction": "0x8055c88",
+          "target": "#0x80127e4"
+        },
+        {
+          "instruction": "0x8055c98",
+          "target": "#0x80128d4"
+        },
+        {
+          "instruction": "0x8055cd2",
+          "target": "#0x80a20a4"
+        },
+        {
+          "instruction": "0x8055cde",
+          "target": "#0x80032ec"
+        }
+      ]
+    },
+    {
+      "start": "0x80a20a4",
+      "end_exclusive": "0x80a20f6",
+      "span_sha1": "4506dcbeab2e3241259ca9b07a83884f4820e3f9",
+      "reachable_instructions": [
+        "080A20A4: push {r4, r5, r6, r7, lr}",
+        "080A20A6: adds r6, r0, #0",
+        "080A20A8: adds r7, r1, #0",
+        "080A20AA: lsls r2, r2, #0x18",
+        "080A20AC: lsrs r5, r2, #0x18",
+        "080A20AE: lsls r3, r3, #0x18",
+        "080A20B0: lsrs r4, r3, #0x18",
+        "080A20B2: ldr r0, [pc, #0x44]",
+        "080A20B4: ldr r0, [r0]",
+        "080A20B6: bl #0x8006b84",
+        "080A20BA: adds r3, r0, #0",
+        "080A20BC: cmp r3, #0",
+        "080A20BE: beq #0x80a20ee",
+        "080A20C0: adds r1, r3, #0",
+        "080A20C2: adds r1, #0x25",
+        "080A20C4: movs r2, #0",
+        "080A20C6: movs r0, #8",
+        "080A20C8: strb r0, [r1]",
+        "080A20CA: ldr r1, [pc, #0x30]",
+        "080A20CC: movs r0, #0x1f",
+        "080A20CE: strb r0, [r3, #9]",
+        "080A20D0: ldr r0, [r1, #0x7c]",
+        "080A20D2: ldr r0, [r0]",
+        "080A20D4: str r0, [r3, #0x14]",
+        "080A20D6: movs r0, #0",
+        "080A20D8: strh r2, [r3, #0x20]",
+        "080A20DA: adds r1, r3, #0",
+        "080A20DC: adds r1, #0x22",
+        "080A20DE: strb r0, [r1]",
+        "080A20E0: str r6, [r3, #0x28]",
+        "080A20E2: ldr r0, [r7]",
+        "080A20E4: ldr r1, [r7, #4]",
+        "080A20E6: str r0, [r3, #0x54]",
+        "080A20E8: str r1, [r3, #0x58]",
+        "080A20EA: strb r5, [r3, #0x10]",
+        "080A20EC: strb r4, [r3, #0x11]",
+        "080A20EE: adds r0, r3, #0",
+        "080A20F0: pop {r4, r5, r6, r7}",
+        "080A20F2: pop {r1}",
+        "080A20F4: bx r1"
+      ],
+      "literals": [
+        {
+          "instruction": "0x80a20b2",
+          "address": "0x80a20f8",
+          "u32": "0x202f07c"
+        },
+        {
+          "instruction": "0x80a20ca",
+          "address": "0x80a20fc",
+          "u32": "0x8343064"
+        }
+      ],
+      "calls": [
+        {
+          "instruction": "0x80a20b6",
+          "target": "#0x8006b84"
+        }
+      ]
+    },
+    {
+      "start": "0x8006b84",
+      "end_exclusive": "0x8006bb6",
+      "span_sha1": "2fa91585ab53c0dff6fce06fbb7b8584f808575e",
+      "reachable_instructions": [
+        "08006B84: push {lr}",
+        "08006B86: adds r3, r0, #0",
+        "08006B88: ldr r2, [r3, #0x10]",
+        "08006B8A: cmp r2, #0",
+        "08006B8C: beq #0x8006bb0",
+        "08006B8E: ldr r0, [r2]",
+        "08006B90: str r0, [r3, #0x10]",
+        "08006B92: ldrh r0, [r3, #0xa]",
+        "08006B94: subs r0, #1",
+        "08006B96: movs r1, #0",
+        "08006B98: strh r0, [r3, #0xa]",
+        "08006B9A: adds r0, r3, #0",
+        "08006B9C: adds r0, #0x14",
+        "08006B9E: str r0, [r2, #4]",
+        "08006BA0: ldr r0, [r3, #0x14]",
+        "08006BA2: str r0, [r2]",
+        "08006BA4: ldr r0, [r3, #0x14]",
+        "08006BA6: str r2, [r0, #4]",
+        "08006BA8: str r2, [r3, #0x14]",
+        "08006BAA: strh r1, [r2, #0xa]",
+        "08006BAC: str r1, [r2, #0xc]",
+        "08006BAE: str r1, [r2, #0x10]",
+        "08006BB0: adds r0, r2, #0",
+        "08006BB2: pop {r1}",
+        "08006BB4: bx r1"
+      ],
+      "literals": [],
+      "calls": []
+    }
+  ],
+  "derived_schedule": {
+    "counter_initial": 24,
+    "attempt_counter_values": [
+      24,
+      20,
+      16,
+      12,
+      8,
+      4
+    ],
+    "attempt_update_numbers": [
+      1,
+      5,
+      9,
+      13,
+      17,
+      21
+    ],
+    "phase_exit_update": 24,
+    "subtype": 2,
+    "variant": 0,
+    "offset_x_fixed": [
+      "-0x1400",
+      "+0x1400"
+    ],
+    "offset_y_fixed": "-0x1800",
+    "audio_id": "0x95",
+    "audio_counter": 12
+  },
+  "validation": {
+    "normal_waves": 18,
+    "boundary_invocations": 28,
+    "creator_update_calls": 460,
+    "factory_attempts": 120,
+    "successful_allocations": 72,
+    "failed_allocations": 48,
+    "audio_requests_observed": 22,
+    "script": "attachment-spawn-wave-check.py",
+    "script_sha1": "d54ad892fd1afe8763391a7370fe400d57722e39",
+    "support_script": "affine-piece-check.py",
+    "support_script_sha1": "a95ef37512459bdc0973952a029f4debafdc5395",
+    "explicit_noop_hooks": [
+      "080127E4 animation selection",
+      "080128D4 animation advance",
+      "080032EC audio request"
+    ],
+    "scope": "55C78 creator plus actual A20A4 factory and 06B84 allocator; synthetic fixed-capacity pool; graphics/audio side effects and child initialization/world updates not executed."
+  }
+}
