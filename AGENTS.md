@@ -2,6 +2,8 @@
 
 Read docs/HANDOVER.md and docs/CONTINUE.md before changing this project.
 
+Use this checkout as the sole working repository, connected to Licheng314/Rockman-zero2. Legacy Git metadata and migration evidence live only in ignored build/migration-20261101; do not recreate or resume the retired rmz2 checkout.
+
 - Preserve all existing research and uncommitted changes.
 - Use continue.ps1 Status / Verify / Start / Stop for normal operation.
 - One writer only. Batch extraction, extract_func, match_c and integrate_c share tools/project_guard.py's OS lock. Do not launch legacy writers or manually edit segments during another writer's run.

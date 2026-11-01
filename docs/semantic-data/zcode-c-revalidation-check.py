@@ -1,5 +1,5 @@
 from pathlib import Path
-import sys, subprocess, json, hashlib, re
+import sys, subprocess, json, hashlib, re, shlex
 
 ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT/'tools'))
@@ -11,6 +11,9 @@ OUT.mkdir(parents=True, exist_ok=True)
 items = [('sub_08031238',0x08031238),('sub_08006C28',0x08006C28),
          ('sub_08006C4C',0x08006C4C),('sub_08006BF0',0x08006BF0),('sub_08006B38',0x08006B38)]
 results=[]
+wsl_root = subprocess.run(
+    ['wsl.exe','-d','Ubuntu-24.04','--','wslpath','-a',ROOT.as_posix()],
+    capture_output=True,check=True).stdout.decode('utf-8').strip()
 with writer_lock():
     for name, addr in items:
         folder=OUT/name;folder.mkdir(exist_ok=True)
@@ -21,7 +24,7 @@ with writer_lock():
             helper=f'arm-none-eabi-as -mcpu=arm7tdmi -o {rel}/helper.o {rel}/helper.s\n'
         (folder/'link.ld').write_text(f'ENTRY({name})\nSECTIONS {{ .text 0x{addr:08x} : {{ *(.text*) *(.rodata*) }} .helper 0x080ef3f0 : {{ *(.helper) }} }}\n',encoding='utf-8')
         cmd=f'''set -e
-cd /mnt/d/NewStudio/Decompilation/rmz2
+cd {shlex.quote(wsl_root)}
 gcc -E -P -nostdinc -undef -std=gnu89 -o {rel}/source.i src/{name}.c
 tools/agbcc/bin/agbcc -mthumb-interwork -Wimplicit -Wparentheses -O2 -fshort-enums -o {rel}/source.s {rel}/source.i
 arm-none-eabi-as -mthumb-interwork -mcpu=arm7tdmi -o {rel}/source.o {rel}/source.s

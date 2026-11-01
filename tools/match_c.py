@@ -6,6 +6,7 @@
 全部编译在 WSL 内执行。
 """
 import os
+import shlex
 import subprocess
 import sys
 from project_guard import writer_lock
@@ -55,7 +56,10 @@ def main():
             sys.exit(f"WSL 命令失败: {cmd[:60]}")
         return out
 
-    P = "/mnt/d/NewStudio/Decompilation/rmz2"
+    translated = subprocess.run(
+        ["wsl.exe", "-d", "Ubuntu-24.04", "--", "wslpath", "-a", ROOT.replace("\\", "/")],
+        capture_output=True, check=True)
+    P = shlex.quote(translated.stdout.decode("utf-8").strip())
     print(wsl(
         f"cd {P} && gcc -E -P -nostdinc -undef -std=gnu89 -o build/c/{name}.i src/{name}.c && "
         f"tools/agbcc/bin/agbcc {CFLAGS} -o build/c/{name}.s build/c/{name}.i && "

@@ -10,7 +10,7 @@
 - 原自动队列已耗尽；剩余提取需要空洞分类与有针对性的边界/入口研究。
 - 资产和语义仅有局部成果；候选稿不计完成。
 
-首次公开为当前整理后的工程快照。本机旧Git历史和恢复现场保留在维护者工作区，不上传历史重复稿及本机运行记录。本仓库不附带游戏ROM、存档、构建结果或工具链二进制。
+首次公开为当前整理后的工程快照。2026-11-01已将本机工作与发布目录合并为一个工作目录，直接连接本仓库；旧Git历史封存在本机被忽略的build/migration-20261101内，不上传历史重复稿及本机运行记录。本仓库不附带游戏ROM、存档、构建结果或工具链二进制。
 
 ## Start here / 避免重复工作
 
@@ -39,7 +39,7 @@ $env:PYTHONUTF8 = '1'
 
 Verify会拆分基线中未覆盖数据，编入正式汇编，检查完整ROM SHA1，成功后发布到本机 `build/rmz2.gba`。正式覆盖只认 `tools/segments.json`，不要按asm文件数统计。
 
-C匹配另需WSL Ubuntu-24.04、agbcc及GNU ARM binutils。tools/match_c.py的WSL工程路径目前与维护者本机位置绑定，迁移时需调整；普通ROM重建不需要重新编译所有C。部分研究脚本使用同一美版ROM的 `baserom_us.gba` 文件名，需自行提供相同基线文件。
+C匹配另需WSL Ubuntu-24.04、agbcc及GNU ARM binutils。tools/match_c.py通过wslpath自动定位当前工程目录；普通ROM重建不需要重新编译所有C。部分研究脚本使用同一美版ROM的 `baserom_us.gba` 文件名，需自行提供相同基线文件。
 
 ## Contributing / 协作
 

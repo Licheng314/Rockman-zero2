@@ -11,3 +11,7 @@ funcdb.json
 __pycache__/
 tools/agbcc/
 assets/
+
+# 本机生成的重建脚本和模拟器显存快照
+/build.asm
+/analysis/dyn/

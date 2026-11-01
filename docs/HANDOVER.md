@@ -35,3 +35,9 @@
 保留未提交成果、build事务/队列恢复记录和未集成候选；不要git reset/clean或盲目重跑耗尽队列。正式修改走单写入锁、精确C字节、段无重叠和全ROMSHA1门禁。语义报告写清实际ROM执行、静态观察与模型/钩子的边界。
 
 本次证据/原文备份：build/audit-20261101，既有Git历史完整保留。较早经过与编译器活档可查Git中的历史HANDOVER及[研究记录](research-notes.md)，不再把历史快照复制到当前首页。
+
+## 唯一工作目录与GitHub
+
+2026-11-01已将工作资料迁到 `D:\NewStudio\Decompilation\public-release-clean-20261101`，此目录直接连接[GitHub仓库](https://github.com/Licheng314/Rockman-zero2)的main。日常研究、构建和发布都使用这里，不再维护独立发布副本。
+
+源码、ROM、存档、工具链、资源和续跑记录均已迁入；本机私有资料仍被Git忽略。旧Git历史与迁移前差异封存在build/migration-20261101，不会覆盖当前公开main。逐项校验和恢复说明见[工作目录说明](WORKSPACE.md)。旧目录退役，不在旧路径启动任务。
