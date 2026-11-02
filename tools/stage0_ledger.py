@@ -147,6 +147,11 @@ def resolve_usage(rows, rom, result):
                 if m in ('bx', 'blx') and ops == f'r{rd}':
                     usage = 'direct-indirect-call'
                     break
+                if m == 'bl' and rd <= 3:
+                    # A freshly loaded low register immediately before bl is an
+                    # ABI argument (register list is implicit in the operand).
+                    usage = 'passed-to-dispatcher'
+                    break
                 if m in ('mov', 'add') and first == 'pc' and f'r{rd}' in ops:
                     usage = 'direct-indirect-call'
                     break
