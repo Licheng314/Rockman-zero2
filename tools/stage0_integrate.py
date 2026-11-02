@@ -19,7 +19,26 @@ from stage0_inventory import walk_sources, assert_inventory_current
 BASE, END = 0x08000000, 0xF0000
 
 
-def prepare(include_startup):
+def pointer_seeds():
+    """Odd Thumb pointers into gaps that reached code actually consumes."""
+    from stage0_ledger import build as build_ledger, resolve_usage
+    result, segments, rom, readers, rows = build_ledger()
+    rows = resolve_usage(rows, rom, result)
+    seeds = {}
+    for row in rows:
+        for p in row['pointers']:
+            if not p['read_by_reached_code'] or not p['odd_bit'] or p['usage'] not in ('direct-indirect-call', 'stored-callback', 'passed-to-dispatcher'):
+                continue
+            t = p['target']
+            gap = row if row['start'] <= t < row['end'] else next((q for q in rows if q['start'] <= t < q['end']), None)
+            if gap is None:
+                continue
+            entry = seeds.setdefault(t, dict(target=BASE + t, gap=[gap['start'], gap['end']], pointers=[]))
+            entry['pointers'].append(dict(holder_offset=p['holder_offset'], value=p['value'], usage=p['usage'], reader=p['reader']))
+    return seeds
+
+
+def prepare(include_startup, seed_mode='switch'):
     inventory=json.loads((ROOT/'build/stage0/inventory.json').read_text(encoding='utf-8'))
     assert_inventory_current(inventory)
     old=json.loads((ROOT/'tools/segments.json').read_text(encoding='utf-8'))
@@ -36,9 +55,14 @@ def prepare(include_startup):
         for word in gap['literal_words']:
             for reader in word['readers']:add_word(word['offset'],dict(kind='pc-load',reader=reader))
         for word in gap['switch_words']:add_word(word['offset'],dict(kind='bounded-switch',dispatch=word['dispatch']))
-    seeds=sorted({e['offset'] for g in inventory['gaps'] for e in g['switch_entries']}
-                 |{e['offset'] for g in inventory['gaps'] for e in g['branch_entries']}
-                 |{e['offset'] for g in inventory['gaps'] for e in g['fallthrough_entries']})
+    seed_meta=None
+    if seed_mode=='pointer':
+        seed_meta=pointer_seeds()
+        seeds=sorted(seed_meta)
+    else:
+        seeds=sorted({e['offset'] for g in inventory['gaps'] for e in g['switch_entries']}
+                     |{e['offset'] for g in inventory['gaps'] for e in g['branch_entries']}
+                     |{e['offset'] for g in inventory['gaps'] for e in g['fallthrough_entries']})
     candidates={}; pool_bytes=set(); boundaries=[]
     for index,start in enumerate(seeds):
         gap=next(g for g in inventory['gaps'] if g['start']<=start<g['end'])
@@ -97,10 +121,12 @@ def prepare(include_startup):
     assert all(not (ROOT/p['file']).exists() for p in plans), 'Do not overwrite prior work'
     evidence=dict(input_segments_sha1=inventory['segments_sha1'],bounded_switches=inventory['bounded_switches'],seed_entries=seeds,boundary_issues=boundaries,
                   reached_seed_entries=[s for s in seeds if s in reached],unknown_edges=unknown,words=list(words.values()),
+                  pointer_seed_detail=seed_meta,
                   original_formal_bytes=sum(s['end']-s['start'] for s in old),
                   added_code_bytes=sum(p['end']-p['start'] for p in plans if p['kind']=='thumb-code'),
                   added_typed_word_bytes=4*len(words),startup_added=include_startup,
-                  scope='Original-ROM source-backed bounded switches and PC word loads. Existing formal regions untouched; raw gap bytes never exported as code.')
+                  scope=('Odd Thumb function pointers into gaps, read by reached code and transferred, stored as callbacks, or passed onward. Raw gap bytes never exported as code.' if seed_mode=='pointer' else
+                         'Original-ROM source-backed bounded switches and PC word loads. Existing formal regions untouched; raw gap bytes never exported as code.'))
     return combined,plans,evidence
 
 
@@ -114,9 +140,10 @@ def main():
     parser.add_argument('--startup',action='store_true')
     parser.add_argument('--apply',action='store_true')
     parser.add_argument('--evidence-name',default='stage0-bulk-evidence.json')
+    parser.add_argument('--seed-mode',default='switch',choices=('switch','pointer'))
     args=parser.parse_args()
     with writer_lock():
-        segments,plans,evidence=prepare(args.startup)
+        segments,plans,evidence=prepare(args.startup,args.seed_mode)
         summary={k:v for k,v in evidence.items() if k in ('added_code_bytes','added_typed_word_bytes','startup_added','boundary_issues')}
         print(json.dumps(dict(summary,new_segments=len(plans),total_formal_bytes=sum(s['end']-s['start'] for s in segments))),flush=True)
         if not args.apply:

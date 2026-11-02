@@ -154,6 +154,13 @@
   "file": "asm/sub_08000AF0.s"
  },
  {
+  "name": "stage0_code_08000B78",
+  "start": 2936,
+  "end": 2938,
+  "file": "asm/stage0_code_08000B78.s",
+  "kind": "thumb-code"
+ },
+ {
   "name": "sub_08000B7C",
   "start": 2940,
   "end": 3022,
@@ -539,6 +546,20 @@
   "start": 7972,
   "end": 7980,
   "file": "asm/stage0_pool_08001F24.s",
+  "kind": "literal-pool"
+ },
+ {
+  "name": "stage0_code_08001F2C",
+  "start": 7980,
+  "end": 7998,
+  "file": "asm/stage0_code_08001F2C.s",
+  "kind": "thumb-code"
+ },
+ {
+  "name": "stage0_pool_08001F40",
+  "start": 8000,
+  "end": 8012,
+  "file": "asm/stage0_pool_08001F40.s",
   "kind": "literal-pool"
  },
  {
@@ -16162,6 +16183,13 @@
   "kind": "literal-pool"
  },
  {
+  "name": "stage0_code_08038580",
+  "start": 230784,
+  "end": 230786,
+  "file": "asm/stage0_code_08038580.s",
+  "kind": "thumb-code"
+ },
+ {
   "name": "sub_08038588",
   "start": 230792,
   "end": 230922,
@@ -22932,6 +22960,20 @@
   "kind": "literal-pool"
  },
  {
+  "name": "stage0_code_0804F12C",
+  "start": 323884,
+  "end": 323904,
+  "file": "asm/stage0_code_0804F12C.s",
+  "kind": "thumb-code"
+ },
+ {
+  "name": "stage0_pool_0804F140",
+  "start": 323904,
+  "end": 323908,
+  "file": "asm/stage0_pool_0804F140.s",
+  "kind": "literal-pool"
+ },
+ {
   "name": "sub_0804F144",
   "start": 323908,
   "end": 323954,
@@ -27392,6 +27434,13 @@
   "end": 398280,
   "file": "asm/stage0_pool_080613C0.s",
   "kind": "literal-pool"
+ },
+ {
+  "name": "stage0_code_080613C8",
+  "start": 398280,
+  "end": 398282,
+  "file": "asm/stage0_code_080613C8.s",
+  "kind": "thumb-code"
  },
  {
   "name": "sub_080613CC",
@@ -38266,6 +38315,20 @@
   "kind": "literal-pool"
  },
  {
+  "name": "stage0_code_0808C330",
+  "start": 574256,
+  "end": 574276,
+  "file": "asm/stage0_code_0808C330.s",
+  "kind": "thumb-code"
+ },
+ {
+  "name": "stage0_pool_0808C344",
+  "start": 574276,
+  "end": 574280,
+  "file": "asm/stage0_pool_0808C344.s",
+  "kind": "literal-pool"
+ },
+ {
   "name": "sub_0808C348",
   "start": 574280,
   "end": 574360,
@@ -39733,6 +39796,20 @@
   "kind": "literal-pool"
  },
  {
+  "name": "stage0_code_08093150",
+  "start": 602448,
+  "end": 602468,
+  "file": "asm/stage0_code_08093150.s",
+  "kind": "thumb-code"
+ },
+ {
+  "name": "stage0_pool_08093164",
+  "start": 602468,
+  "end": 602472,
+  "file": "asm/stage0_pool_08093164.s",
+  "kind": "literal-pool"
+ },
+ {
   "name": "sub_08093168",
   "start": 602472,
   "end": 602542,
@@ -39936,6 +40013,13 @@
   "kind": "literal-pool"
  },
  {
+  "name": "stage0_code_080940DC",
+  "start": 606428,
+  "end": 606430,
+  "file": "asm/stage0_code_080940DC.s",
+  "kind": "thumb-code"
+ },
+ {
   "name": "sub_080940E0",
   "start": 606432,
   "end": 606538,
@@ -40095,6 +40179,20 @@
   "start": 608488,
   "end": 608492,
   "file": "asm/stage0_pool_080948E8.s",
+  "kind": "literal-pool"
+ },
+ {
+  "name": "stage0_code_080948EC",
+  "start": 608492,
+  "end": 608512,
+  "file": "asm/stage0_code_080948EC.s",
+  "kind": "thumb-code"
+ },
+ {
+  "name": "stage0_pool_08094900",
+  "start": 608512,
+  "end": 608516,
+  "file": "asm/stage0_pool_08094900.s",
   "kind": "literal-pool"
  },
  {
@@ -40955,6 +41053,20 @@
   "kind": "literal-pool"
  },
  {
+  "name": "stage0_code_08097CA0",
+  "start": 621728,
+  "end": 621748,
+  "file": "asm/stage0_code_08097CA0.s",
+  "kind": "thumb-code"
+ },
+ {
+  "name": "stage0_pool_08097CB4",
+  "start": 621748,
+  "end": 621752,
+  "file": "asm/stage0_pool_08097CB4.s",
+  "kind": "literal-pool"
+ },
+ {
   "name": "sub_08097CBC",
   "start": 621756,
   "end": 621892,
@@ -41381,6 +41493,13 @@
   "start": 627856,
   "end": 628062,
   "file": "asm/sub_08099490.s"
+ },
+ {
+  "name": "stage0_code_08099560",
+  "start": 628064,
+  "end": 628066,
+  "file": "asm/stage0_code_08099560.s",
+  "kind": "thumb-code"
  },
  {
   "name": "sub_08099564",
@@ -43819,6 +43938,13 @@
   "end": 659712,
   "file": "asm/stage0_pool_080A10F0.s",
   "kind": "literal-pool"
+ },
+ {
+  "name": "stage0_code_080A1100",
+  "start": 659712,
+  "end": 659714,
+  "file": "asm/stage0_code_080A1100.s",
+  "kind": "thumb-code"
  },
  {
   "name": "sub_080A1104",
@@ -61468,6 +61594,13 @@
   "kind": "literal-pool"
  },
  {
+  "name": "stage0_code_080D8DC4",
+  "start": 888260,
+  "end": 888262,
+  "file": "asm/stage0_code_080D8DC4.s",
+  "kind": "thumb-code"
+ },
+ {
   "name": "sub_080D8DC8",
   "start": 888264,
   "end": 888386,
@@ -61854,6 +61987,13 @@
   "start": 891924,
   "end": 891954,
   "file": "asm/sub_080D9C14.s"
+ },
+ {
+  "name": "stage0_code_080D9C34",
+  "start": 891956,
+  "end": 891958,
+  "file": "asm/stage0_code_080D9C34.s",
+  "kind": "thumb-code"
  },
  {
   "name": "sub_080D9C38",
@@ -68899,6 +69039,13 @@
   "kind": "literal-pool"
  },
  {
+  "name": "stage0_code_080ED4A8",
+  "start": 971944,
+  "end": 971958,
+  "file": "asm/stage0_code_080ED4A8.s",
+  "kind": "thumb-code"
+ },
+ {
   "name": "sub_080ED4B6",
   "start": 971958,
   "end": 972544,
@@ -68957,6 +69104,13 @@
   "kind": "literal-pool"
  },
  {
+  "name": "stage0_code_080ED984",
+  "start": 973188,
+  "end": 973252,
+  "file": "asm/stage0_code_080ED984.s",
+  "kind": "thumb-code"
+ },
+ {
   "name": "sub_080ED9C4",
   "start": 973252,
   "end": 973278,
@@ -68967,6 +69121,20 @@
   "start": 973280,
   "end": 973290,
   "file": "asm/sub_080ED9E0.s"
+ },
+ {
+  "name": "stage0_code_080ED9EC",
+  "start": 973292,
+  "end": 973310,
+  "file": "asm/stage0_code_080ED9EC.s",
+  "kind": "thumb-code"
+ },
+ {
+  "name": "stage0_code_080EDA00",
+  "start": 973312,
+  "end": 973330,
+  "file": "asm/stage0_code_080EDA00.s",
+  "kind": "thumb-code"
  },
  {
   "name": "sub_080EDA14",
@@ -69455,6 +69623,13 @@
   "end": 978620,
   "file": "asm/stage0_pool_080EEEAC.s",
   "kind": "literal-pool"
+ },
+ {
+  "name": "stage0_code_080EEF60",
+  "start": 978784,
+  "end": 978786,
+  "file": "asm/stage0_code_080EEF60.s",
+  "kind": "thumb-code"
  },
  {
   "name": "sub_080EEF64",
