@@ -1,0 +1,277 @@
+{
+ "blocks": [
+  {
+   "label": "alignment pad",
+   "start": 39682,
+   "end": 39684,
+   "element": "",
+   "proof": {
+    "rule": "2 zero bytes between segment ending 0x009B02 (4k+2) and 4-aligned 0x009B04"
+   }
+  },
+  {
+   "label": "alignment pad",
+   "start": 229898,
+   "end": 229900,
+   "element": "",
+   "proof": {
+    "rule": "2 zero bytes between segment ending 0x03820A (4k+2) and 4-aligned 0x03820C"
+   }
+  },
+  {
+   "label": "alignment pad",
+   "start": 229998,
+   "end": 230000,
+   "element": "",
+   "proof": {
+    "rule": "2 zero bytes between segment ending 0x03826E (4k+2) and 4-aligned 0x038270"
+   }
+  },
+  {
+   "label": "alignment pad",
+   "start": 236726,
+   "end": 236728,
+   "element": "",
+   "proof": {
+    "rule": "2 zero bytes between segment ending 0x039CB6 (4k+2) and 4-aligned 0x039CB8"
+   }
+  },
+  {
+   "label": "alignment pad",
+   "start": 236730,
+   "end": 236732,
+   "element": "",
+   "proof": {
+    "rule": "2 zero bytes between segment ending 0x039CBA (4k+2) and 4-aligned 0x039CBC"
+   }
+  },
+  {
+   "label": "alignment pad",
+   "start": 263670,
+   "end": 263672,
+   "element": "",
+   "proof": {
+    "rule": "2 zero bytes between segment ending 0x0405F6 (4k+2) and 4-aligned 0x0405F8"
+   }
+  },
+  {
+   "label": "alignment pad",
+   "start": 264754,
+   "end": 264756,
+   "element": "",
+   "proof": {
+    "rule": "2 zero bytes between segment ending 0x040A32 (4k+2) and 4-aligned 0x040A34"
+   }
+  },
+  {
+   "label": "alignment pad",
+   "start": 561406,
+   "end": 561408,
+   "element": "",
+   "proof": {
+    "rule": "2 zero bytes between segment ending 0x0890FE (4k+2) and 4-aligned 0x089100"
+   }
+  },
+  {
+   "label": "alignment pad",
+   "start": 624486,
+   "end": 624488,
+   "element": "",
+   "proof": {
+    "rule": "2 zero bytes between segment ending 0x098766 (4k+2) and 4-aligned 0x098768"
+   }
+  },
+  {
+   "label": "alignment pad",
+   "start": 727694,
+   "end": 727696,
+   "element": "",
+   "proof": {
+    "rule": "2 zero bytes between segment ending 0x0B1A8E (4k+2) and 4-aligned 0x0B1A90"
+   }
+  },
+  {
+   "label": "alignment pad",
+   "start": 744730,
+   "end": 744732,
+   "element": "",
+   "proof": {
+    "rule": "2 zero bytes between segment ending 0x0B5D1A (4k+2) and 4-aligned 0x0B5D1C"
+   }
+  },
+  {
+   "label": "alignment pad",
+   "start": 783230,
+   "end": 783232,
+   "element": "",
+   "proof": {
+    "rule": "2 zero bytes between segment ending 0x0BF37E (4k+2) and 4-aligned 0x0BF380"
+   }
+  },
+  {
+   "label": "alignment pad",
+   "start": 841682,
+   "end": 841684,
+   "element": "",
+   "proof": {
+    "rule": "2 zero bytes between segment ending 0x0CD7D2 (4k+2) and 4-aligned 0x0CD7D4"
+   }
+  },
+  {
+   "label": "alignment pad",
+   "start": 857158,
+   "end": 857160,
+   "element": "",
+   "proof": {
+    "rule": "2 zero bytes between segment ending 0x0D1446 (4k+2) and 4-aligned 0x0D1448"
+   }
+  },
+  {
+   "label": "alignment pad",
+   "start": 858114,
+   "end": 858116,
+   "element": "",
+   "proof": {
+    "rule": "2 zero bytes between segment ending 0x0D1802 (4k+2) and 4-aligned 0x0D1804"
+   }
+  },
+  {
+   "label": "alignment pad",
+   "start": 859254,
+   "end": 859256,
+   "element": "",
+   "proof": {
+    "rule": "2 zero bytes between segment ending 0x0D1C76 (4k+2) and 4-aligned 0x0D1C78"
+   }
+  },
+  {
+   "label": "alignment pad",
+   "start": 901634,
+   "end": 901636,
+   "element": "",
+   "proof": {
+    "rule": "2 zero bytes between segment ending 0x0DC202 (4k+2) and 4-aligned 0x0DC204"
+   }
+  },
+  {
+   "label": "alignment pad",
+   "start": 901750,
+   "end": 901752,
+   "element": "",
+   "proof": {
+    "rule": "2 zero bytes between segment ending 0x0DC276 (4k+2) and 4-aligned 0x0DC278"
+   }
+  },
+  {
+   "label": "alignment pad",
+   "start": 902486,
+   "end": 902488,
+   "element": "",
+   "proof": {
+    "rule": "2 zero bytes between segment ending 0x0DC556 (4k+2) and 4-aligned 0x0DC558"
+   }
+  },
+  {
+   "label": "alignment pad",
+   "start": 978638,
+   "end": 978640,
+   "element": "",
+   "proof": {
+    "rule": "2 zero bytes between segment ending 0x0EEECE (4k+2) and 4-aligned 0x0EEED0"
+   }
+  },
+  {
+   "label": "alignment pad",
+   "start": 978658,
+   "end": 978660,
+   "element": "",
+   "proof": {
+    "rule": "2 zero bytes between segment ending 0x0EEEE2 (4k+2) and 4-aligned 0x0EEEE4"
+   }
+  },
+  {
+   "label": "alignment pad",
+   "start": 978678,
+   "end": 978680,
+   "element": "",
+   "proof": {
+    "rule": "2 zero bytes between segment ending 0x0EEEF6 (4k+2) and 4-aligned 0x0EEEF8"
+   }
+  },
+  {
+   "label": "alignment pad",
+   "start": 978698,
+   "end": 978700,
+   "element": "",
+   "proof": {
+    "rule": "2 zero bytes between segment ending 0x0EEF0A (4k+2) and 4-aligned 0x0EEF0C"
+   }
+  },
+  {
+   "label": "alignment pad",
+   "start": 978718,
+   "end": 978720,
+   "element": "",
+   "proof": {
+    "rule": "2 zero bytes between segment ending 0x0EEF1E (4k+2) and 4-aligned 0x0EEF20"
+   }
+  },
+  {
+   "label": "alignment pad",
+   "start": 978762,
+   "end": 978764,
+   "element": "",
+   "proof": {
+    "rule": "2 zero bytes between segment ending 0x0EEF4A (4k+2) and 4-aligned 0x0EEF4C"
+   }
+  },
+  {
+   "label": "alignment pad",
+   "start": 978782,
+   "end": 978784,
+   "element": "",
+   "proof": {
+    "rule": "2 zero bytes between segment ending 0x0EEF5E (4k+2) and 4-aligned 0x0EEF60"
+   }
+  },
+  {
+   "label": "alignment pad",
+   "start": 980862,
+   "end": 980864,
+   "element": "",
+   "proof": {
+    "rule": "2 zero bytes between segment ending 0x0EF77E (4k+2) and 4-aligned 0x0EF780"
+   }
+  },
+  {
+   "label": "alignment pad",
+   "start": 980874,
+   "end": 980876,
+   "element": "",
+   "proof": {
+    "rule": "2 zero bytes between segment ending 0x0EF78A (4k+2) and 4-aligned 0x0EF78C"
+   }
+  },
+  {
+   "label": "alignment pad",
+   "start": 980946,
+   "end": 980948,
+   "element": "",
+   "proof": {
+    "rule": "2 zero bytes between segment ending 0x0EF7D2 (4k+2) and 4-aligned 0x0EF7D4"
+   }
+  },
+  {
+   "label": "alignment pad",
+   "start": 981002,
+   "end": 981004,
+   "element": "",
+   "proof": {
+    "rule": "2 zero bytes between segment ending 0x0EF80A (4k+2) and 4-aligned 0x0EF80C"
+   }
+  }
+ ],
+ "original_formal_bytes": 979192,
+ "added_data_bytes": 60,
+ "scope": "Typed data blocks with per-block read/copy proof; no unproven range included."
+}
