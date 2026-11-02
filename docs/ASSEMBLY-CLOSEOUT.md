@@ -44,7 +44,7 @@
 
 ## 剩余 3784 字节 / 85 空洞：静态证据已耗尽（含完整负控记录）
 
-全部保留**待确认**。共同反例：无任何 ROM 字指针指向、无已解码分支/直落目标、五个分派家族与两级链全部 0 命中、CpuSet/CpuFastSet/memcpy 复制源扫描 0 命中、降级分支恢复的 13 条 CFG 边无一致目标、正式段内 15950 条未可达已解码指令的分支/调用边同样 0 命中。主要区块（逐块备注见 `build/stage0/final-gaps.json` 与 `final-gap-notes.json`）：
+全部保留**待确认**。共同反例：无任何 ROM 字指针指向、无已解码分支/直落目标、五个分派家族与两级链全部 0 命中、CpuSet/CpuFastSet/memcpy 复制源扫描 0 命中、降级分支恢复的 13 条 CFG 边无一致目标、正式段内 15950 条未可达已解码指令的分支/调用边同样 0 命中。主要区块（逐块备注见 [stage0-final-gaps-20261103.json](semantic-data/stage0-final-gaps-20261103.json) 与 [stage0-final-gap-notes-20261103.json](semantic-data/stage0-final-gap-notes-20261103.json)；负控可重跑工具 `tools/stage0_negative_controls.py`，基线记录 [stage0-negative-controls-20261103.json](semantic-data/stage0-negative-controls-20261103.json)）：
 
 - 0x080EFA2C-0x080F0000（1492B）：贴图表 B 与数据混合，尾部 0x0800FF00 起有完整 Thumb 函数（218B，正常序言/终结）。
 - 0x080ED07E-0x080ED21C（414B）：ARM 指令区，无引用。

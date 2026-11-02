@@ -1,0 +1,516 @@
+{
+ "uncovered_bytes": 3784,
+ "gap_count": 85,
+ "rows": [
+  {
+   "start": 981548,
+   "end": 983040,
+   "bytes": 1492,
+   "note": "no static reference found: no ROM word pointer, no decoded branch/fallthrough target, all dispatch families and negative controls exhausted; see stage0-negative-controls-20261103.json"
+  },
+  {
+   "start": 970878,
+   "end": 971292,
+   "bytes": 414,
+   "note": "no static reference found: no ROM word pointer, no decoded branch/fallthrough target, all dispatch families and negative controls exhausted; see stage0-negative-controls-20261103.json"
+  },
+  {
+   "start": 971622,
+   "end": 971884,
+   "bytes": 262,
+   "note": "no static reference found: no ROM word pointer, no decoded branch/fallthrough target, all dispatch families and negative controls exhausted; see stage0-negative-controls-20261103.json"
+  },
+  {
+   "start": 202694,
+   "end": 202800,
+   "bytes": 106,
+   "note": "no static reference found: no ROM word pointer, no decoded branch/fallthrough target, all dispatch families and negative controls exhausted; see stage0-negative-controls-20261103.json"
+  },
+  {
+   "start": 67308,
+   "end": 67400,
+   "bytes": 92,
+   "note": "no static reference found: no ROM word pointer, no decoded branch/fallthrough target, all dispatch families and negative controls exhausted; see stage0-negative-controls-20261103.json"
+  },
+  {
+   "start": 974050,
+   "end": 974124,
+   "bytes": 74,
+   "note": "no static reference found: no ROM word pointer, no decoded branch/fallthrough target, all dispatch families and negative controls exhausted; see stage0-negative-controls-20261103.json"
+  },
+  {
+   "start": 970522,
+   "end": 970588,
+   "bytes": 66,
+   "note": "no static reference found: no ROM word pointer, no decoded branch/fallthrough target, all dispatch families and negative controls exhausted; see stage0-negative-controls-20261103.json"
+  },
+  {
+   "start": 73560,
+   "end": 73620,
+   "bytes": 60,
+   "note": "no static reference found: no ROM word pointer, no decoded branch/fallthrough target, all dispatch families and negative controls exhausted; see stage0-negative-controls-20261103.json"
+  },
+  {
+   "start": 705784,
+   "end": 705844,
+   "bytes": 60,
+   "note": "no static reference found: no ROM word pointer, no decoded branch/fallthrough target, all dispatch families and negative controls exhausted; see stage0-negative-controls-20261103.json"
+  },
+  {
+   "start": 247964,
+   "end": 248020,
+   "bytes": 56,
+   "note": "no static reference found: no ROM word pointer, no decoded branch/fallthrough target, all dispatch families and negative controls exhausted; see stage0-negative-controls-20261103.json"
+  },
+  {
+   "start": 249896,
+   "end": 249952,
+   "bytes": 56,
+   "note": "no static reference found: no ROM word pointer, no decoded branch/fallthrough target, all dispatch families and negative controls exhausted; see stage0-negative-controls-20261103.json"
+  },
+  {
+   "start": 42732,
+   "end": 42784,
+   "bytes": 52,
+   "note": "no static reference found: no ROM word pointer, no decoded branch/fallthrough target, all dispatch families and negative controls exhausted; see stage0-negative-controls-20261103.json"
+  },
+  {
+   "start": 57048,
+   "end": 57100,
+   "bytes": 52,
+   "note": "no static reference found: no ROM word pointer, no decoded branch/fallthrough target, all dispatch families and negative controls exhausted; see stage0-negative-controls-20261103.json"
+  },
+  {
+   "start": 971528,
+   "end": 971576,
+   "bytes": 48,
+   "note": "no static reference found: no ROM word pointer, no decoded branch/fallthrough target, all dispatch families and negative controls exhausted; see stage0-negative-controls-20261103.json"
+  },
+  {
+   "start": 62216,
+   "end": 62260,
+   "bytes": 44,
+   "note": "no static reference found: no ROM word pointer, no decoded branch/fallthrough target, all dispatch families and negative controls exhausted; see stage0-negative-controls-20261103.json"
+  },
+  {
+   "start": 979242,
+   "end": 979280,
+   "bytes": 38,
+   "note": "no static reference found: no ROM word pointer, no decoded branch/fallthrough target, all dispatch families and negative controls exhausted; see stage0-negative-controls-20261103.json"
+  },
+  {
+   "start": 13240,
+   "end": 13276,
+   "bytes": 36,
+   "note": "no static reference found: no ROM word pointer, no decoded branch/fallthrough target, all dispatch families and negative controls exhausted; see stage0-negative-controls-20261103.json"
+  },
+  {
+   "start": 62998,
+   "end": 63032,
+   "bytes": 34,
+   "note": "no static reference found: no ROM word pointer, no decoded branch/fallthrough target, all dispatch families and negative controls exhausted; see stage0-negative-controls-20261103.json"
+  },
+  {
+   "start": 13364,
+   "end": 13396,
+   "bytes": 32,
+   "note": "no static reference found: no ROM word pointer, no decoded branch/fallthrough target, all dispatch families and negative controls exhausted; see stage0-negative-controls-20261103.json"
+  },
+  {
+   "start": 53520,
+   "end": 53552,
+   "bytes": 32,
+   "note": "no static reference found: no ROM word pointer, no decoded branch/fallthrough target, all dispatch families and negative controls exhausted; see stage0-negative-controls-20261103.json"
+  },
+  {
+   "start": 71720,
+   "end": 71752,
+   "bytes": 32,
+   "note": "no static reference found: no ROM word pointer, no decoded branch/fallthrough target, all dispatch families and negative controls exhausted; see stage0-negative-controls-20261103.json"
+  },
+  {
+   "start": 783636,
+   "end": 783668,
+   "bytes": 32,
+   "note": "no static reference found: no ROM word pointer, no decoded branch/fallthrough target, all dispatch families and negative controls exhausted; see stage0-negative-controls-20261103.json"
+  },
+  {
+   "start": 872676,
+   "end": 872708,
+   "bytes": 32,
+   "note": "no static reference found: no ROM word pointer, no decoded branch/fallthrough target, all dispatch families and negative controls exhausted; see stage0-negative-controls-20261103.json"
+  },
+  {
+   "start": 56132,
+   "end": 56160,
+   "bytes": 28,
+   "note": "no static reference found: no ROM word pointer, no decoded branch/fallthrough target, all dispatch families and negative controls exhausted; see stage0-negative-controls-20261103.json"
+  },
+  {
+   "start": 233020,
+   "end": 233048,
+   "bytes": 28,
+   "note": "no static reference found: no ROM word pointer, no decoded branch/fallthrough target, all dispatch families and negative controls exhausted; see stage0-negative-controls-20261103.json"
+  },
+  {
+   "start": 19048,
+   "end": 19072,
+   "bytes": 24,
+   "note": "no static reference found: no ROM word pointer, no decoded branch/fallthrough target, all dispatch families and negative controls exhausted; see stage0-negative-controls-20261103.json"
+  },
+  {
+   "start": 34812,
+   "end": 34836,
+   "bytes": 24,
+   "note": "no static reference found: no ROM word pointer, no decoded branch/fallthrough target, all dispatch families and negative controls exhausted; see stage0-negative-controls-20261103.json"
+  },
+  {
+   "start": 48980,
+   "end": 49004,
+   "bytes": 24,
+   "note": "no static reference found: no ROM word pointer, no decoded branch/fallthrough target, all dispatch families and negative controls exhausted; see stage0-negative-controls-20261103.json"
+  },
+  {
+   "start": 84060,
+   "end": 84084,
+   "bytes": 24,
+   "note": "no static reference found: no ROM word pointer, no decoded branch/fallthrough target, all dispatch families and negative controls exhausted; see stage0-negative-controls-20261103.json"
+  },
+  {
+   "start": 971328,
+   "end": 971352,
+   "bytes": 24,
+   "note": "no static reference found: no ROM word pointer, no decoded branch/fallthrough target, all dispatch families and negative controls exhausted; see stage0-negative-controls-20261103.json"
+  },
+  {
+   "start": 66948,
+   "end": 66968,
+   "bytes": 20,
+   "note": "no static reference found: no ROM word pointer, no decoded branch/fallthrough target, all dispatch families and negative controls exhausted; see stage0-negative-controls-20261103.json"
+  },
+  {
+   "start": 228424,
+   "end": 228444,
+   "bytes": 20,
+   "note": "no static reference found: no ROM word pointer, no decoded branch/fallthrough target, all dispatch families and negative controls exhausted; see stage0-negative-controls-20261103.json"
+  },
+  {
+   "start": 913176,
+   "end": 913196,
+   "bytes": 20,
+   "note": "no static reference found: no ROM word pointer, no decoded branch/fallthrough target, all dispatch families and negative controls exhausted; see stage0-negative-controls-20261103.json"
+  },
+  {
+   "start": 27750,
+   "end": 27768,
+   "bytes": 18,
+   "note": "no static reference found: no ROM word pointer, no decoded branch/fallthrough target, all dispatch families and negative controls exhausted; see stage0-negative-controls-20261103.json"
+  },
+  {
+   "start": 980802,
+   "end": 980820,
+   "bytes": 18,
+   "note": "no static reference found: no ROM word pointer, no decoded branch/fallthrough target, all dispatch families and negative controls exhausted; see stage0-negative-controls-20261103.json"
+  },
+  {
+   "start": 10532,
+   "end": 10548,
+   "bytes": 16,
+   "note": "no static reference found: no ROM word pointer, no decoded branch/fallthrough target, all dispatch families and negative controls exhausted; see stage0-negative-controls-20261103.json"
+  },
+  {
+   "start": 219508,
+   "end": 219524,
+   "bytes": 16,
+   "note": "no static reference found: no ROM word pointer, no decoded branch/fallthrough target, all dispatch families and negative controls exhausted; see stage0-negative-controls-20261103.json"
+  },
+  {
+   "start": 19018,
+   "end": 19032,
+   "bytes": 14,
+   "note": "no static reference found: no ROM word pointer, no decoded branch/fallthrough target, all dispatch families and negative controls exhausted; see stage0-negative-controls-20261103.json"
+  },
+  {
+   "start": 980822,
+   "end": 980836,
+   "bytes": 14,
+   "note": "no static reference found: no ROM word pointer, no decoded branch/fallthrough target, all dispatch families and negative controls exhausted; see stage0-negative-controls-20261103.json"
+  },
+  {
+   "start": 980838,
+   "end": 980852,
+   "bytes": 14,
+   "note": "no static reference found: no ROM word pointer, no decoded branch/fallthrough target, all dispatch families and negative controls exhausted; see stage0-negative-controls-20261103.json"
+  },
+  {
+   "start": 2788,
+   "end": 2800,
+   "bytes": 12,
+   "note": "no static reference found: no ROM word pointer, no decoded branch/fallthrough target, all dispatch families and negative controls exhausted; see stage0-negative-controls-20261103.json"
+  },
+  {
+   "start": 60088,
+   "end": 60100,
+   "bytes": 12,
+   "note": "no static reference found: no ROM word pointer, no decoded branch/fallthrough target, all dispatch families and negative controls exhausted; see stage0-negative-controls-20261103.json"
+  },
+  {
+   "start": 61724,
+   "end": 61736,
+   "bytes": 12,
+   "note": "no static reference found: no ROM word pointer, no decoded branch/fallthrough target, all dispatch families and negative controls exhausted; see stage0-negative-controls-20261103.json"
+  },
+  {
+   "start": 69460,
+   "end": 69472,
+   "bytes": 12,
+   "note": "no static reference found: no ROM word pointer, no decoded branch/fallthrough target, all dispatch families and negative controls exhausted; see stage0-negative-controls-20261103.json"
+  },
+  {
+   "start": 73460,
+   "end": 73472,
+   "bytes": 12,
+   "note": "no static reference found: no ROM word pointer, no decoded branch/fallthrough target, all dispatch families and negative controls exhausted; see stage0-negative-controls-20261103.json"
+  },
+  {
+   "start": 970368,
+   "end": 970380,
+   "bytes": 12,
+   "note": "no static reference found: no ROM word pointer, no decoded branch/fallthrough target, all dispatch families and negative controls exhausted; see stage0-negative-controls-20261103.json"
+  },
+  {
+   "start": 980884,
+   "end": 980896,
+   "bytes": 12,
+   "note": "no static reference found: no ROM word pointer, no decoded branch/fallthrough target, all dispatch families and negative controls exhausted; see stage0-negative-controls-20261103.json"
+  },
+  {
+   "start": 201354,
+   "end": 201364,
+   "bytes": 10,
+   "note": "no static reference found: no ROM word pointer, no decoded branch/fallthrough target, all dispatch families and negative controls exhausted; see stage0-negative-controls-20261103.json"
+  },
+  {
+   "start": 980898,
+   "end": 980908,
+   "bytes": 10,
+   "note": "no static reference found: no ROM word pointer, no decoded branch/fallthrough target, all dispatch families and negative controls exhausted; see stage0-negative-controls-20261103.json"
+  },
+  {
+   "start": 67928,
+   "end": 67936,
+   "bytes": 8,
+   "note": "no static reference found: no ROM word pointer, no decoded branch/fallthrough target, all dispatch families and negative controls exhausted; see stage0-negative-controls-20261103.json"
+  },
+  {
+   "start": 42538,
+   "end": 42544,
+   "bytes": 6,
+   "note": "no static reference found: no ROM word pointer, no decoded branch/fallthrough target, all dispatch families and negative controls exhausted; see stage0-negative-controls-20261103.json"
+  },
+  {
+   "start": 66034,
+   "end": 66040,
+   "bytes": 6,
+   "note": "no static reference found: no ROM word pointer, no decoded branch/fallthrough target, all dispatch families and negative controls exhausted; see stage0-negative-controls-20261103.json"
+  },
+  {
+   "start": 87238,
+   "end": 87244,
+   "bytes": 6,
+   "note": "no static reference found: no ROM word pointer, no decoded branch/fallthrough target, all dispatch families and negative controls exhausted; see stage0-negative-controls-20261103.json"
+  },
+  {
+   "start": 42984,
+   "end": 42988,
+   "bytes": 4,
+   "note": "no static reference found: no ROM word pointer, no decoded branch/fallthrough target, all dispatch families and negative controls exhausted; see stage0-negative-controls-20261103.json"
+  },
+  {
+   "start": 43806,
+   "end": 43810,
+   "bytes": 4,
+   "note": "no static reference found: no ROM word pointer, no decoded branch/fallthrough target, all dispatch families and negative controls exhausted; see stage0-negative-controls-20261103.json"
+  },
+  {
+   "start": 48632,
+   "end": 48636,
+   "bytes": 4,
+   "note": "no static reference found: no ROM word pointer, no decoded branch/fallthrough target, all dispatch families and negative controls exhausted; see stage0-negative-controls-20261103.json"
+  },
+  {
+   "start": 50440,
+   "end": 50444,
+   "bytes": 4,
+   "note": "no static reference found: no ROM word pointer, no decoded branch/fallthrough target, all dispatch families and negative controls exhausted; see stage0-negative-controls-20261103.json"
+  },
+  {
+   "start": 59928,
+   "end": 59932,
+   "bytes": 4,
+   "note": "no static reference found: no ROM word pointer, no decoded branch/fallthrough target, all dispatch families and negative controls exhausted; see stage0-negative-controls-20261103.json"
+  },
+  {
+   "start": 62548,
+   "end": 62552,
+   "bytes": 4,
+   "note": "no static reference found: no ROM word pointer, no decoded branch/fallthrough target, all dispatch families and negative controls exhausted; see stage0-negative-controls-20261103.json"
+  },
+  {
+   "start": 62760,
+   "end": 62764,
+   "bytes": 4,
+   "note": "no static reference found: no ROM word pointer, no decoded branch/fallthrough target, all dispatch families and negative controls exhausted; see stage0-negative-controls-20261103.json"
+  },
+  {
+   "start": 62932,
+   "end": 62936,
+   "bytes": 4,
+   "note": "no static reference found: no ROM word pointer, no decoded branch/fallthrough target, all dispatch families and negative controls exhausted; see stage0-negative-controls-20261103.json"
+  },
+  {
+   "start": 63212,
+   "end": 63216,
+   "bytes": 4,
+   "note": "no static reference found: no ROM word pointer, no decoded branch/fallthrough target, all dispatch families and negative controls exhausted; see stage0-negative-controls-20261103.json"
+  },
+  {
+   "start": 64824,
+   "end": 64828,
+   "bytes": 4,
+   "note": "no static reference found: no ROM word pointer, no decoded branch/fallthrough target, all dispatch families and negative controls exhausted; see stage0-negative-controls-20261103.json"
+  },
+  {
+   "start": 71864,
+   "end": 71868,
+   "bytes": 4,
+   "note": "no static reference found: no ROM word pointer, no decoded branch/fallthrough target, all dispatch families and negative controls exhausted; see stage0-negative-controls-20261103.json"
+  },
+  {
+   "start": 86504,
+   "end": 86508,
+   "bytes": 4,
+   "note": "no static reference found: no ROM word pointer, no decoded branch/fallthrough target, all dispatch families and negative controls exhausted; see stage0-negative-controls-20261103.json"
+  },
+  {
+   "start": 385294,
+   "end": 385298,
+   "bytes": 4,
+   "note": "no static reference found: no ROM word pointer, no decoded branch/fallthrough target, all dispatch families and negative controls exhausted; see stage0-negative-controls-20261103.json"
+  },
+  {
+   "start": 870172,
+   "end": 870176,
+   "bytes": 4,
+   "note": "no static reference found: no ROM word pointer, no decoded branch/fallthrough target, all dispatch families and negative controls exhausted; see stage0-negative-controls-20261103.json"
+  },
+  {
+   "start": 955124,
+   "end": 955128,
+   "bytes": 4,
+   "note": "no static reference found: no ROM word pointer, no decoded branch/fallthrough target, all dispatch families and negative controls exhausted; see stage0-negative-controls-20261103.json"
+  },
+  {
+   "start": 958708,
+   "end": 958712,
+   "bytes": 4,
+   "note": "no static reference found: no ROM word pointer, no decoded branch/fallthrough target, all dispatch families and negative controls exhausted; see stage0-negative-controls-20261103.json"
+  },
+  {
+   "start": 959776,
+   "end": 959780,
+   "bytes": 4,
+   "note": "no static reference found: no ROM word pointer, no decoded branch/fallthrough target, all dispatch families and negative controls exhausted; see stage0-negative-controls-20261103.json"
+  },
+  {
+   "start": 962536,
+   "end": 962540,
+   "bytes": 4,
+   "note": "no static reference found: no ROM word pointer, no decoded branch/fallthrough target, all dispatch families and negative controls exhausted; see stage0-negative-controls-20261103.json"
+  },
+  {
+   "start": 973432,
+   "end": 973436,
+   "bytes": 4,
+   "note": "no static reference found: no ROM word pointer, no decoded branch/fallthrough target, all dispatch families and negative controls exhausted; see stage0-negative-controls-20261103.json"
+  },
+  {
+   "start": 974476,
+   "end": 974480,
+   "bytes": 4,
+   "note": "no static reference found: no ROM word pointer, no decoded branch/fallthrough target, all dispatch families and negative controls exhausted; see stage0-negative-controls-20261103.json"
+  },
+  {
+   "start": 980878,
+   "end": 980882,
+   "bytes": 4,
+   "note": "no static reference found: no ROM word pointer, no decoded branch/fallthrough target, all dispatch families and negative controls exhausted; see stage0-negative-controls-20261103.json"
+  },
+  {
+   "start": 66914,
+   "end": 66916,
+   "bytes": 2,
+   "note": "no static reference found: no ROM word pointer, no decoded branch/fallthrough target, all dispatch families and negative controls exhausted; see stage0-negative-controls-20261103.json"
+  },
+  {
+   "start": 90872,
+   "end": 90874,
+   "bytes": 2,
+   "note": "no static reference found: no ROM word pointer, no decoded branch/fallthrough target, all dispatch families and negative controls exhausted; see stage0-negative-controls-20261103.json"
+  },
+  {
+   "start": 360024,
+   "end": 360026,
+   "bytes": 2,
+   "note": "no static reference found: no ROM word pointer, no decoded branch/fallthrough target, all dispatch families and negative controls exhausted; see stage0-negative-controls-20261103.json"
+  },
+  {
+   "start": 360034,
+   "end": 360036,
+   "bytes": 2,
+   "note": "no static reference found: no ROM word pointer, no decoded branch/fallthrough target, all dispatch families and negative controls exhausted; see stage0-negative-controls-20261103.json"
+  },
+  {
+   "start": 798216,
+   "end": 798218,
+   "bytes": 2,
+   "note": "no static reference found: no ROM word pointer, no decoded branch/fallthrough target, all dispatch families and negative controls exhausted; see stage0-negative-controls-20261103.json"
+  },
+  {
+   "start": 841328,
+   "end": 841330,
+   "bytes": 2,
+   "note": "no static reference found: no ROM word pointer, no decoded branch/fallthrough target, all dispatch families and negative controls exhausted; see stage0-negative-controls-20261103.json"
+  },
+  {
+   "start": 979222,
+   "end": 979224,
+   "bytes": 2,
+   "note": "no static reference found: no ROM word pointer, no decoded branch/fallthrough target, all dispatch families and negative controls exhausted; see stage0-negative-controls-20261103.json"
+  },
+  {
+   "start": 979226,
+   "end": 979228,
+   "bytes": 2,
+   "note": "no static reference found: no ROM word pointer, no decoded branch/fallthrough target, all dispatch families and negative controls exhausted; see stage0-negative-controls-20261103.json"
+  },
+  {
+   "start": 979230,
+   "end": 979232,
+   "bytes": 2,
+   "note": "no static reference found: no ROM word pointer, no decoded branch/fallthrough target, all dispatch families and negative controls exhausted; see stage0-negative-controls-20261103.json"
+  },
+  {
+   "start": 979234,
+   "end": 979236,
+   "bytes": 2,
+   "note": "no static reference found: no ROM word pointer, no decoded branch/fallthrough target, all dispatch families and negative controls exhausted; see stage0-negative-controls-20261103.json"
+  },
+  {
+   "start": 979238,
+   "end": 979240,
+   "bytes": 2,
+   "note": "no static reference found: no ROM word pointer, no decoded branch/fallthrough target, all dispatch families and negative controls exhausted; see stage0-negative-controls-20261103.json"
+  }
+ ]
+}

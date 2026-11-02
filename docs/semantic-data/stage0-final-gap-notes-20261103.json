@@ -1,0 +1,1416 @@
+[
+ {
+  "start": 981548,
+  "end": 983040,
+  "bytes": 1492,
+  "zero_ratio": 0.6,
+  "rom_pointer_words": 0,
+  "best_thumb_decode": {
+   "span": 1492,
+   "start": "0xefa2c"
+  },
+  "best_arm_run": {
+   "bytes": 120,
+   "start": "0xefbfc"
+  },
+  "pointers": [
+   {
+    "holder_offset": 910252,
+    "value": 135199276,
+    "target": 981548,
+    "odd_bit": false,
+    "holder": {
+     "kind": "segment",
+     "seg_name": "sub_080DE318",
+     "seg_kind": null,
+     "seg_extent": [
+      910104,
+      910490
+     ]
+    },
+    "read_by_reached_code": true,
+    "reader": 910226,
+    "usage": "other"
+   }
+  ]
+ },
+ {
+  "start": 970878,
+  "end": 971292,
+  "bytes": 414,
+  "zero_ratio": 0.13,
+  "rom_pointer_words": 0,
+  "best_thumb_decode": {
+   "span": 300,
+   "start": "0xed0b8"
+  },
+  "best_arm_run": {
+   "bytes": 212,
+   "start": "0xed07c"
+  },
+  "pointers": []
+ },
+ {
+  "start": 971622,
+  "end": 971884,
+  "bytes": 262,
+  "zero_ratio": 0.07,
+  "rom_pointer_words": 0,
+  "best_thumb_decode": {
+   "span": 48,
+   "start": "0xed39a"
+  },
+  "best_arm_run": {
+   "bytes": 20,
+   "start": "0xed42c"
+  },
+  "pointers": []
+ },
+ {
+  "start": 202694,
+  "end": 202800,
+  "bytes": 106,
+  "zero_ratio": 0.02,
+  "rom_pointer_words": 0,
+  "best_thumb_decode": {
+   "span": 10,
+   "start": "0x317c6"
+  },
+  "best_arm_run": {
+   "bytes": 28,
+   "start": "0x31810"
+  },
+  "pointers": []
+ },
+ {
+  "start": 67308,
+  "end": 67400,
+  "bytes": 92,
+  "zero_ratio": 0.11,
+  "rom_pointer_words": 0,
+  "best_thumb_decode": {
+   "span": 66,
+   "start": "0x106ec"
+  },
+  "best_arm_run": {
+   "bytes": 92,
+   "start": "0x106ec"
+  },
+  "pointers": []
+ },
+ {
+  "start": 974050,
+  "end": 974124,
+  "bytes": 74,
+  "zero_ratio": 0.05,
+  "rom_pointer_words": 0,
+  "best_thumb_decode": {
+   "span": 40,
+   "start": "0xedcfc"
+  },
+  "best_arm_run": {
+   "bytes": 36,
+   "start": "0xedcfc"
+  },
+  "pointers": []
+ },
+ {
+  "start": 970522,
+  "end": 970588,
+  "bytes": 66,
+  "zero_ratio": 0.14,
+  "rom_pointer_words": 0,
+  "best_thumb_decode": {
+   "span": 12,
+   "start": "0xecf20"
+  },
+  "best_arm_run": {
+   "bytes": 68,
+   "start": "0xecf18"
+  },
+  "pointers": []
+ },
+ {
+  "start": 73560,
+  "end": 73620,
+  "bytes": 60,
+  "zero_ratio": 0.15,
+  "rom_pointer_words": 0,
+  "best_thumb_decode": {
+   "span": 38,
+   "start": "0x11f58"
+  },
+  "best_arm_run": {
+   "bytes": 60,
+   "start": "0x11f58"
+  },
+  "pointers": []
+ },
+ {
+  "start": 705784,
+  "end": 705844,
+  "bytes": 60,
+  "zero_ratio": 0.1,
+  "rom_pointer_words": 1,
+  "best_thumb_decode": {
+   "span": 54,
+   "start": "0xac4f8"
+  },
+  "best_arm_run": {
+   "bytes": 40,
+   "start": "0xac4f8"
+  },
+  "pointers": []
+ },
+ {
+  "start": 247964,
+  "end": 248020,
+  "bytes": 56,
+  "zero_ratio": 0.09,
+  "rom_pointer_words": 1,
+  "best_thumb_decode": {
+   "span": 50,
+   "start": "0x3c89c"
+  },
+  "best_arm_run": {
+   "bytes": 44,
+   "start": "0x3c8a8"
+  },
+  "pointers": []
+ },
+ {
+  "start": 249896,
+  "end": 249952,
+  "bytes": 56,
+  "zero_ratio": 0.09,
+  "rom_pointer_words": 1,
+  "best_thumb_decode": {
+   "span": 50,
+   "start": "0x3d028"
+  },
+  "best_arm_run": {
+   "bytes": 44,
+   "start": "0x3d034"
+  },
+  "pointers": []
+ },
+ {
+  "start": 42732,
+  "end": 42784,
+  "bytes": 52,
+  "zero_ratio": 0.12,
+  "rom_pointer_words": 0,
+  "best_thumb_decode": {
+   "span": 36,
+   "start": "0xa6ec"
+  },
+  "best_arm_run": {
+   "bytes": 52,
+   "start": "0xa6ec"
+  },
+  "pointers": []
+ },
+ {
+  "start": 57048,
+  "end": 57100,
+  "bytes": 52,
+  "zero_ratio": 0.12,
+  "rom_pointer_words": 0,
+  "best_thumb_decode": {
+   "span": 36,
+   "start": "0xded8"
+  },
+  "best_arm_run": {
+   "bytes": 52,
+   "start": "0xded8"
+  },
+  "pointers": []
+ },
+ {
+  "start": 971528,
+  "end": 971576,
+  "bytes": 48,
+  "zero_ratio": 0.1,
+  "rom_pointer_words": 0,
+  "best_thumb_decode": {
+   "span": 26,
+   "start": "0xed308"
+  },
+  "best_arm_run": {
+   "bytes": 36,
+   "start": "0xed314"
+  },
+  "pointers": []
+ },
+ {
+  "start": 62216,
+  "end": 62260,
+  "bytes": 44,
+  "zero_ratio": 0.2,
+  "rom_pointer_words": 0,
+  "best_thumb_decode": {
+   "span": 26,
+   "start": "0xf308"
+  },
+  "best_arm_run": {
+   "bytes": 44,
+   "start": "0xf308"
+  },
+  "pointers": []
+ },
+ {
+  "start": 979242,
+  "end": 979280,
+  "bytes": 38,
+  "zero_ratio": 0.0,
+  "rom_pointer_words": 0,
+  "best_thumb_decode": {
+   "span": 4,
+   "start": "0xef12a"
+  },
+  "best_arm_run": {
+   "bytes": 12,
+   "start": "0xef144"
+  },
+  "pointers": []
+ },
+ {
+  "start": 13240,
+  "end": 13276,
+  "bytes": 36,
+  "zero_ratio": 0.14,
+  "rom_pointer_words": 0,
+  "best_thumb_decode": {
+   "span": 28,
+   "start": "0x33b8"
+  },
+  "best_arm_run": {
+   "bytes": 36,
+   "start": "0x33b8"
+  },
+  "pointers": []
+ },
+ {
+  "start": 62998,
+  "end": 63032,
+  "bytes": 34,
+  "zero_ratio": 0.26,
+  "rom_pointer_words": 0,
+  "best_thumb_decode": {
+   "span": 20,
+   "start": "0xf616"
+  },
+  "best_arm_run": {
+   "bytes": 36,
+   "start": "0xf614"
+  },
+  "pointers": []
+ },
+ {
+  "start": 13364,
+  "end": 13396,
+  "bytes": 32,
+  "zero_ratio": 0.19,
+  "rom_pointer_words": 0,
+  "best_thumb_decode": {
+   "span": 10,
+   "start": "0x3442"
+  },
+  "best_arm_run": {
+   "bytes": 32,
+   "start": "0x3434"
+  },
+  "pointers": []
+ },
+ {
+  "start": 53520,
+  "end": 53552,
+  "bytes": 32,
+  "zero_ratio": 0.22,
+  "rom_pointer_words": 0,
+  "best_thumb_decode": {
+   "span": 18,
+   "start": "0xd110"
+  },
+  "best_arm_run": {
+   "bytes": 32,
+   "start": "0xd110"
+  },
+  "pointers": []
+ },
+ {
+  "start": 71720,
+  "end": 71752,
+  "bytes": 32,
+  "zero_ratio": 0.22,
+  "rom_pointer_words": 0,
+  "best_thumb_decode": {
+   "span": 18,
+   "start": "0x11828"
+  },
+  "best_arm_run": {
+   "bytes": 32,
+   "start": "0x11828"
+  },
+  "pointers": []
+ },
+ {
+  "start": 783636,
+  "end": 783668,
+  "bytes": 32,
+  "zero_ratio": 0.03,
+  "rom_pointer_words": 1,
+  "best_thumb_decode": {
+   "span": 28,
+   "start": "0xbf514"
+  },
+  "best_arm_run": {
+   "bytes": 32,
+   "start": "0xbf514"
+  },
+  "pointers": []
+ },
+ {
+  "start": 872676,
+  "end": 872708,
+  "bytes": 32,
+  "zero_ratio": 0.03,
+  "rom_pointer_words": 1,
+  "best_thumb_decode": {
+   "span": 28,
+   "start": "0xd50e4"
+  },
+  "best_arm_run": {
+   "bytes": 32,
+   "start": "0xd50e4"
+  },
+  "pointers": []
+ },
+ {
+  "start": 56132,
+  "end": 56160,
+  "bytes": 28,
+  "zero_ratio": 0.11,
+  "rom_pointer_words": 0,
+  "best_thumb_decode": {
+   "span": 20,
+   "start": "0xdb44"
+  },
+  "best_arm_run": {
+   "bytes": 28,
+   "start": "0xdb44"
+  },
+  "pointers": []
+ },
+ {
+  "start": 233020,
+  "end": 233048,
+  "bytes": 28,
+  "zero_ratio": 0.07,
+  "rom_pointer_words": 0,
+  "best_thumb_decode": {
+   "span": 8,
+   "start": "0x38e3c"
+  },
+  "best_arm_run": {
+   "bytes": 28,
+   "start": "0x38e3c"
+  },
+  "pointers": []
+ },
+ {
+  "start": 19048,
+  "end": 19072,
+  "bytes": 24,
+  "zero_ratio": 0.17,
+  "rom_pointer_words": 0,
+  "best_thumb_decode": {
+   "span": 22,
+   "start": "0x4a68"
+  },
+  "best_arm_run": {
+   "bytes": 24,
+   "start": "0x4a68"
+  },
+  "pointers": []
+ },
+ {
+  "start": 34812,
+  "end": 34836,
+  "bytes": 24,
+  "zero_ratio": 0.21,
+  "rom_pointer_words": 0,
+  "best_thumb_decode": {
+   "span": 18,
+   "start": "0x87fc"
+  },
+  "best_arm_run": {
+   "bytes": 24,
+   "start": "0x87fc"
+  },
+  "pointers": []
+ },
+ {
+  "start": 48980,
+  "end": 49004,
+  "bytes": 24,
+  "zero_ratio": 0.12,
+  "rom_pointer_words": 0,
+  "best_thumb_decode": {
+   "span": 12,
+   "start": "0xbf54"
+  },
+  "best_arm_run": {
+   "bytes": 24,
+   "start": "0xbf54"
+  },
+  "pointers": []
+ },
+ {
+  "start": 84060,
+  "end": 84084,
+  "bytes": 24,
+  "zero_ratio": 0.12,
+  "rom_pointer_words": 0,
+  "best_thumb_decode": {
+   "span": 12,
+   "start": "0x14864"
+  },
+  "best_arm_run": {
+   "bytes": 12,
+   "start": "0x14868"
+  },
+  "pointers": []
+ },
+ {
+  "start": 971328,
+  "end": 971352,
+  "bytes": 24,
+  "zero_ratio": 0.25,
+  "rom_pointer_words": 0,
+  "best_thumb_decode": {
+   "span": 22,
+   "start": "0xed240"
+  },
+  "best_arm_run": {
+   "bytes": 24,
+   "start": "0xed240"
+  },
+  "pointers": []
+ },
+ {
+  "start": 66948,
+  "end": 66968,
+  "bytes": 20,
+  "zero_ratio": 0.15,
+  "rom_pointer_words": 0,
+  "best_thumb_decode": {
+   "span": 12,
+   "start": "0x10584"
+  },
+  "best_arm_run": {
+   "bytes": 8,
+   "start": "0x10584"
+  },
+  "pointers": []
+ },
+ {
+  "start": 228424,
+  "end": 228444,
+  "bytes": 20,
+  "zero_ratio": 0.15,
+  "rom_pointer_words": 0,
+  "best_thumb_decode": {
+   "span": 18,
+   "start": "0x37c48"
+  },
+  "best_arm_run": {
+   "bytes": 20,
+   "start": "0x37c48"
+  },
+  "pointers": []
+ },
+ {
+  "start": 913176,
+  "end": 913196,
+  "bytes": 20,
+  "zero_ratio": 0.15,
+  "rom_pointer_words": 0,
+  "best_thumb_decode": {
+   "span": 12,
+   "start": "0xdef18"
+  },
+  "best_arm_run": {
+   "bytes": 8,
+   "start": "0xdef18"
+  },
+  "pointers": []
+ },
+ {
+  "start": 27750,
+  "end": 27768,
+  "bytes": 18,
+  "zero_ratio": 0.17,
+  "rom_pointer_words": 0,
+  "best_thumb_decode": {
+   "span": 18,
+   "start": "0x6c66"
+  },
+  "best_arm_run": {
+   "bytes": 20,
+   "start": "0x6c64"
+  },
+  "pointers": []
+ },
+ {
+  "start": 980802,
+  "end": 980820,
+  "bytes": 18,
+  "zero_ratio": 0.44,
+  "rom_pointer_words": 0,
+  "best_thumb_decode": {
+   "span": 18,
+   "start": "0xef742"
+  },
+  "best_arm_run": {
+   "bytes": 20,
+   "start": "0xef740"
+  },
+  "pointers": []
+ },
+ {
+  "start": 10532,
+  "end": 10548,
+  "bytes": 16,
+  "zero_ratio": 0.25,
+  "rom_pointer_words": 0,
+  "best_thumb_decode": {
+   "span": 10,
+   "start": "0x2924"
+  },
+  "best_arm_run": {
+   "bytes": 16,
+   "start": "0x2924"
+  },
+  "pointers": []
+ },
+ {
+  "start": 219508,
+  "end": 219524,
+  "bytes": 16,
+  "zero_ratio": 0.25,
+  "rom_pointer_words": 0,
+  "best_thumb_decode": {
+   "span": 4,
+   "start": "0x35974"
+  },
+  "best_arm_run": {
+   "bytes": 16,
+   "start": "0x35974"
+  },
+  "pointers": []
+ },
+ {
+  "start": 19018,
+  "end": 19032,
+  "bytes": 14,
+  "zero_ratio": 0.36,
+  "rom_pointer_words": 0,
+  "best_thumb_decode": {
+   "span": 12,
+   "start": "0x4a4a"
+  },
+  "best_arm_run": {
+   "bytes": 16,
+   "start": "0x4a48"
+  },
+  "pointers": []
+ },
+ {
+  "start": 980822,
+  "end": 980836,
+  "bytes": 14,
+  "zero_ratio": 0.57,
+  "rom_pointer_words": 0,
+  "best_thumb_decode": {
+   "span": 14,
+   "start": "0xef756"
+  },
+  "best_arm_run": {
+   "bytes": 16,
+   "start": "0xef754"
+  },
+  "pointers": []
+ },
+ {
+  "start": 980838,
+  "end": 980852,
+  "bytes": 14,
+  "zero_ratio": 0.5,
+  "rom_pointer_words": 0,
+  "best_thumb_decode": {
+   "span": 14,
+   "start": "0xef766"
+  },
+  "best_arm_run": {
+   "bytes": 16,
+   "start": "0xef764"
+  },
+  "pointers": []
+ },
+ {
+  "start": 2788,
+  "end": 2800,
+  "bytes": 12,
+  "zero_ratio": 0.08,
+  "rom_pointer_words": 0,
+  "best_thumb_decode": {
+   "span": 8,
+   "start": "0xae4"
+  },
+  "best_arm_run": {
+   "bytes": 12,
+   "start": "0xae4"
+  },
+  "pointers": []
+ },
+ {
+  "start": 60088,
+  "end": 60100,
+  "bytes": 12,
+  "zero_ratio": 0.08,
+  "rom_pointer_words": 0,
+  "best_thumb_decode": {
+   "span": 8,
+   "start": "0xeab8"
+  },
+  "best_arm_run": {
+   "bytes": 12,
+   "start": "0xeab8"
+  },
+  "pointers": []
+ },
+ {
+  "start": 61724,
+  "end": 61736,
+  "bytes": 12,
+  "zero_ratio": 0.17,
+  "rom_pointer_words": 0,
+  "best_thumb_decode": {
+   "span": 8,
+   "start": "0xf11c"
+  },
+  "best_arm_run": {
+   "bytes": 12,
+   "start": "0xf11c"
+  },
+  "pointers": []
+ },
+ {
+  "start": 69460,
+  "end": 69472,
+  "bytes": 12,
+  "zero_ratio": 0.17,
+  "rom_pointer_words": 0,
+  "best_thumb_decode": {
+   "span": 8,
+   "start": "0x10f54"
+  },
+  "best_arm_run": {
+   "bytes": 12,
+   "start": "0x10f54"
+  },
+  "pointers": []
+ },
+ {
+  "start": 73460,
+  "end": 73472,
+  "bytes": 12,
+  "zero_ratio": 0.17,
+  "rom_pointer_words": 0,
+  "best_thumb_decode": {
+   "span": 8,
+   "start": "0x11ef4"
+  },
+  "best_arm_run": {
+   "bytes": 12,
+   "start": "0x11ef4"
+  },
+  "pointers": []
+ },
+ {
+  "start": 970368,
+  "end": 970380,
+  "bytes": 12,
+  "zero_ratio": 0.17,
+  "rom_pointer_words": 0,
+  "best_thumb_decode": {
+   "span": 4,
+   "start": "0xece80"
+  },
+  "best_arm_run": {
+   "bytes": 12,
+   "start": "0xece80"
+  },
+  "pointers": []
+ },
+ {
+  "start": 980884,
+  "end": 980896,
+  "bytes": 12,
+  "zero_ratio": 0.17,
+  "rom_pointer_words": 0,
+  "best_thumb_decode": {
+   "span": 12,
+   "start": "0xef794"
+  },
+  "best_arm_run": {
+   "bytes": 12,
+   "start": "0xef794"
+  },
+  "pointers": [
+   {
+    "holder_offset": 459104,
+    "value": 135198616,
+    "target": 980888,
+    "odd_bit": false,
+    "holder": {
+     "kind": "segment",
+     "seg_name": "sub_0806FFDC",
+     "seg_kind": null,
+     "seg_extent": [
+      458716,
+      459214
+     ]
+    },
+    "read_by_reached_code": true,
+    "reader": 459084,
+    "usage": "passed-to-dispatcher"
+   }
+  ]
+ },
+ {
+  "start": 201354,
+  "end": 201364,
+  "bytes": 10,
+  "zero_ratio": 0.3,
+  "rom_pointer_words": 0,
+  "best_thumb_decode": {
+   "span": 6,
+   "start": "0x3128a"
+  },
+  "best_arm_run": {
+   "bytes": 12,
+   "start": "0x31288"
+  },
+  "pointers": []
+ },
+ {
+  "start": 980898,
+  "end": 980908,
+  "bytes": 10,
+  "zero_ratio": 0.0,
+  "rom_pointer_words": 0,
+  "best_thumb_decode": {
+   "span": 10,
+   "start": "0xef7a2"
+  },
+  "best_arm_run": {
+   "bytes": 12,
+   "start": "0xef7a0"
+  },
+  "pointers": []
+ },
+ {
+  "start": 67928,
+  "end": 67936,
+  "bytes": 8,
+  "zero_ratio": 0.5,
+  "rom_pointer_words": 0,
+  "best_thumb_decode": {
+   "span": 0,
+   "start": null
+  },
+  "best_arm_run": {
+   "bytes": 0,
+   "start": null
+  },
+  "pointers": []
+ },
+ {
+  "start": 42538,
+  "end": 42544,
+  "bytes": 6,
+  "zero_ratio": 0.67,
+  "rom_pointer_words": 0,
+  "best_thumb_decode": {
+   "span": 0,
+   "start": null
+  },
+  "best_arm_run": {
+   "bytes": 0,
+   "start": null
+  },
+  "pointers": []
+ },
+ {
+  "start": 66034,
+  "end": 66040,
+  "bytes": 6,
+  "zero_ratio": 0.67,
+  "rom_pointer_words": 0,
+  "best_thumb_decode": {
+   "span": 0,
+   "start": null
+  },
+  "best_arm_run": {
+   "bytes": 0,
+   "start": null
+  },
+  "pointers": []
+ },
+ {
+  "start": 87238,
+  "end": 87244,
+  "bytes": 6,
+  "zero_ratio": 0.67,
+  "rom_pointer_words": 0,
+  "best_thumb_decode": {
+   "span": 0,
+   "start": null
+  },
+  "best_arm_run": {
+   "bytes": 0,
+   "start": null
+  },
+  "pointers": []
+ },
+ {
+  "start": 42984,
+  "end": 42988,
+  "bytes": 4,
+  "zero_ratio": 0.5,
+  "rom_pointer_words": 0,
+  "best_thumb_decode": {
+   "span": 0,
+   "start": null
+  },
+  "best_arm_run": {
+   "bytes": 0,
+   "start": null
+  },
+  "pointers": []
+ },
+ {
+  "start": 43806,
+  "end": 43810,
+  "bytes": 4,
+  "zero_ratio": 0.5,
+  "rom_pointer_words": 0,
+  "best_thumb_decode": {
+   "span": 0,
+   "start": null
+  },
+  "best_arm_run": {
+   "bytes": 0,
+   "start": null
+  },
+  "pointers": []
+ },
+ {
+  "start": 48632,
+  "end": 48636,
+  "bytes": 4,
+  "zero_ratio": 0.5,
+  "rom_pointer_words": 0,
+  "best_thumb_decode": {
+   "span": 0,
+   "start": null
+  },
+  "best_arm_run": {
+   "bytes": 0,
+   "start": null
+  },
+  "pointers": []
+ },
+ {
+  "start": 50440,
+  "end": 50444,
+  "bytes": 4,
+  "zero_ratio": 0.5,
+  "rom_pointer_words": 0,
+  "best_thumb_decode": {
+   "span": 0,
+   "start": null
+  },
+  "best_arm_run": {
+   "bytes": 0,
+   "start": null
+  },
+  "pointers": []
+ },
+ {
+  "start": 59928,
+  "end": 59932,
+  "bytes": 4,
+  "zero_ratio": 0.5,
+  "rom_pointer_words": 0,
+  "best_thumb_decode": {
+   "span": 0,
+   "start": null
+  },
+  "best_arm_run": {
+   "bytes": 0,
+   "start": null
+  },
+  "pointers": []
+ },
+ {
+  "start": 62548,
+  "end": 62552,
+  "bytes": 4,
+  "zero_ratio": 0.5,
+  "rom_pointer_words": 0,
+  "best_thumb_decode": {
+   "span": 0,
+   "start": null
+  },
+  "best_arm_run": {
+   "bytes": 0,
+   "start": null
+  },
+  "pointers": []
+ },
+ {
+  "start": 62760,
+  "end": 62764,
+  "bytes": 4,
+  "zero_ratio": 0.25,
+  "rom_pointer_words": 0,
+  "best_thumb_decode": {
+   "span": 0,
+   "start": null
+  },
+  "best_arm_run": {
+   "bytes": 0,
+   "start": null
+  },
+  "pointers": []
+ },
+ {
+  "start": 62932,
+  "end": 62936,
+  "bytes": 4,
+  "zero_ratio": 0.5,
+  "rom_pointer_words": 0,
+  "best_thumb_decode": {
+   "span": 0,
+   "start": null
+  },
+  "best_arm_run": {
+   "bytes": 0,
+   "start": null
+  },
+  "pointers": []
+ },
+ {
+  "start": 63212,
+  "end": 63216,
+  "bytes": 4,
+  "zero_ratio": 0.5,
+  "rom_pointer_words": 0,
+  "best_thumb_decode": {
+   "span": 0,
+   "start": null
+  },
+  "best_arm_run": {
+   "bytes": 0,
+   "start": null
+  },
+  "pointers": []
+ },
+ {
+  "start": 64824,
+  "end": 64828,
+  "bytes": 4,
+  "zero_ratio": 0.5,
+  "rom_pointer_words": 0,
+  "best_thumb_decode": {
+   "span": 0,
+   "start": null
+  },
+  "best_arm_run": {
+   "bytes": 0,
+   "start": null
+  },
+  "pointers": []
+ },
+ {
+  "start": 71864,
+  "end": 71868,
+  "bytes": 4,
+  "zero_ratio": 0.5,
+  "rom_pointer_words": 0,
+  "best_thumb_decode": {
+   "span": 0,
+   "start": null
+  },
+  "best_arm_run": {
+   "bytes": 0,
+   "start": null
+  },
+  "pointers": []
+ },
+ {
+  "start": 86504,
+  "end": 86508,
+  "bytes": 4,
+  "zero_ratio": 0.5,
+  "rom_pointer_words": 0,
+  "best_thumb_decode": {
+   "span": 0,
+   "start": null
+  },
+  "best_arm_run": {
+   "bytes": 0,
+   "start": null
+  },
+  "pointers": []
+ },
+ {
+  "start": 385294,
+  "end": 385298,
+  "bytes": 4,
+  "zero_ratio": 0.5,
+  "rom_pointer_words": 0,
+  "best_thumb_decode": {
+   "span": 0,
+   "start": null
+  },
+  "best_arm_run": {
+   "bytes": 0,
+   "start": null
+  },
+  "pointers": []
+ },
+ {
+  "start": 870172,
+  "end": 870176,
+  "bytes": 4,
+  "zero_ratio": 0.5,
+  "rom_pointer_words": 0,
+  "best_thumb_decode": {
+   "span": 0,
+   "start": null
+  },
+  "best_arm_run": {
+   "bytes": 0,
+   "start": null
+  },
+  "pointers": []
+ },
+ {
+  "start": 955124,
+  "end": 955128,
+  "bytes": 4,
+  "zero_ratio": 0.0,
+  "rom_pointer_words": 0,
+  "best_thumb_decode": {
+   "span": 0,
+   "start": null
+  },
+  "best_arm_run": {
+   "bytes": 0,
+   "start": null
+  },
+  "pointers": []
+ },
+ {
+  "start": 958708,
+  "end": 958712,
+  "bytes": 4,
+  "zero_ratio": 0.0,
+  "rom_pointer_words": 0,
+  "best_thumb_decode": {
+   "span": 0,
+   "start": null
+  },
+  "best_arm_run": {
+   "bytes": 0,
+   "start": null
+  },
+  "pointers": []
+ },
+ {
+  "start": 959776,
+  "end": 959780,
+  "bytes": 4,
+  "zero_ratio": 0.0,
+  "rom_pointer_words": 0,
+  "best_thumb_decode": {
+   "span": 0,
+   "start": null
+  },
+  "best_arm_run": {
+   "bytes": 0,
+   "start": null
+  },
+  "pointers": []
+ },
+ {
+  "start": 962536,
+  "end": 962540,
+  "bytes": 4,
+  "zero_ratio": 0.0,
+  "rom_pointer_words": 0,
+  "best_thumb_decode": {
+   "span": 0,
+   "start": null
+  },
+  "best_arm_run": {
+   "bytes": 0,
+   "start": null
+  },
+  "pointers": []
+ },
+ {
+  "start": 973432,
+  "end": 973436,
+  "bytes": 4,
+  "zero_ratio": 0.5,
+  "rom_pointer_words": 0,
+  "best_thumb_decode": {
+   "span": 0,
+   "start": null
+  },
+  "best_arm_run": {
+   "bytes": 0,
+   "start": null
+  },
+  "pointers": []
+ },
+ {
+  "start": 974476,
+  "end": 974480,
+  "bytes": 4,
+  "zero_ratio": 0.0,
+  "rom_pointer_words": 0,
+  "best_thumb_decode": {
+   "span": 0,
+   "start": null
+  },
+  "best_arm_run": {
+   "bytes": 0,
+   "start": null
+  },
+  "pointers": []
+ },
+ {
+  "start": 980620,
+  "end": 980624,
+  "bytes": 4,
+  "zero_ratio": 1.0,
+  "rom_pointer_words": 0,
+  "best_thumb_decode": {
+   "span": 0,
+   "start": null
+  },
+  "best_arm_run": {
+   "bytes": 0,
+   "start": null
+  },
+  "pointers": []
+ },
+ {
+  "start": 980878,
+  "end": 980882,
+  "bytes": 4,
+  "zero_ratio": 0.0,
+  "rom_pointer_words": 0,
+  "best_thumb_decode": {
+   "span": 0,
+   "start": null
+  },
+  "best_arm_run": {
+   "bytes": 0,
+   "start": null
+  },
+  "pointers": []
+ },
+ {
+  "start": 66914,
+  "end": 66916,
+  "bytes": 2,
+  "zero_ratio": 0.0,
+  "rom_pointer_words": 0,
+  "best_thumb_decode": {
+   "span": 0,
+   "start": null
+  },
+  "best_arm_run": {
+   "bytes": 0,
+   "start": null
+  },
+  "pointers": []
+ },
+ {
+  "start": 90872,
+  "end": 90874,
+  "bytes": 2,
+  "zero_ratio": 0.0,
+  "rom_pointer_words": 0,
+  "best_thumb_decode": {
+   "span": 0,
+   "start": null
+  },
+  "best_arm_run": {
+   "bytes": 0,
+   "start": null
+  },
+  "pointers": []
+ },
+ {
+  "start": 360024,
+  "end": 360026,
+  "bytes": 2,
+  "zero_ratio": 0.0,
+  "rom_pointer_words": 0,
+  "best_thumb_decode": {
+   "span": 0,
+   "start": null
+  },
+  "best_arm_run": {
+   "bytes": 0,
+   "start": null
+  },
+  "pointers": []
+ },
+ {
+  "start": 360034,
+  "end": 360036,
+  "bytes": 2,
+  "zero_ratio": 0.0,
+  "rom_pointer_words": 0,
+  "best_thumb_decode": {
+   "span": 0,
+   "start": null
+  },
+  "best_arm_run": {
+   "bytes": 0,
+   "start": null
+  },
+  "pointers": []
+ },
+ {
+  "start": 798216,
+  "end": 798218,
+  "bytes": 2,
+  "zero_ratio": 0.0,
+  "rom_pointer_words": 0,
+  "best_thumb_decode": {
+   "span": 0,
+   "start": null
+  },
+  "best_arm_run": {
+   "bytes": 0,
+   "start": null
+  },
+  "pointers": []
+ },
+ {
+  "start": 841328,
+  "end": 841330,
+  "bytes": 2,
+  "zero_ratio": 0.0,
+  "rom_pointer_words": 0,
+  "best_thumb_decode": {
+   "span": 0,
+   "start": null
+  },
+  "best_arm_run": {
+   "bytes": 0,
+   "start": null
+  },
+  "pointers": []
+ },
+ {
+  "start": 979222,
+  "end": 979224,
+  "bytes": 2,
+  "zero_ratio": 0.0,
+  "rom_pointer_words": 0,
+  "best_thumb_decode": {
+   "span": 0,
+   "start": null
+  },
+  "best_arm_run": {
+   "bytes": 0,
+   "start": null
+  },
+  "pointers": []
+ },
+ {
+  "start": 979226,
+  "end": 979228,
+  "bytes": 2,
+  "zero_ratio": 0.0,
+  "rom_pointer_words": 0,
+  "best_thumb_decode": {
+   "span": 0,
+   "start": null
+  },
+  "best_arm_run": {
+   "bytes": 0,
+   "start": null
+  },
+  "pointers": []
+ },
+ {
+  "start": 979230,
+  "end": 979232,
+  "bytes": 2,
+  "zero_ratio": 0.0,
+  "rom_pointer_words": 0,
+  "best_thumb_decode": {
+   "span": 0,
+   "start": null
+  },
+  "best_arm_run": {
+   "bytes": 0,
+   "start": null
+  },
+  "pointers": []
+ },
+ {
+  "start": 979234,
+  "end": 979236,
+  "bytes": 2,
+  "zero_ratio": 0.0,
+  "rom_pointer_words": 0,
+  "best_thumb_decode": {
+   "span": 0,
+   "start": null
+  },
+  "best_arm_run": {
+   "bytes": 0,
+   "start": null
+  },
+  "pointers": []
+ },
+ {
+  "start": 979238,
+  "end": 979240,
+  "bytes": 2,
+  "zero_ratio": 0.0,
+  "rom_pointer_words": 0,
+  "best_thumb_decode": {
+   "span": 0,
+   "start": null
+  },
+  "best_arm_run": {
+   "bytes": 0,
+   "start": null
+  },
+  "pointers": []
+ }
+]
