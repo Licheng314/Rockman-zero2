@@ -1,0 +1,12 @@
+; Typed data: config record.
+stage0_data_080EF774:
+    .db 0x0D
+    .db 0x05
+    .db 0x07
+    .db 0x04
+    .db 0x08
+    .db 0x04
+    .db 0x01
+    .db 0x04
+    .db 0x0A
+    .db 0x05

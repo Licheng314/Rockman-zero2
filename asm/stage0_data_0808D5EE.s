@@ -1,0 +1,4 @@
+; Typed data: alignment pad.
+stage0_data_0808D5EE:
+    .db 0x00
+    .db 0x00

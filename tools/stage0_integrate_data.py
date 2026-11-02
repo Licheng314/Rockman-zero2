@@ -24,6 +24,9 @@ def build_lines(name, start, end, element, rom):
     elif element == 'halfword':
         assert start % 2 == 0 and end % 2 == 0, hex(start)
         step, fmt = 2, '.dh 0x{:04X}'
+    elif element == 'alignment':
+        assert all(b == 0 for b in rom[start:end]), hex(start)
+        step, fmt = 1, '.db 0x{:02X}'
     else:
         step, fmt = 1, '.db 0x{:02X}'
     lines = [f'; Typed data: {name}.', f'stage0_data_{BASE + start:08X}:']
@@ -53,7 +56,7 @@ def main():
         start, end = block['start'], block['end']
         assert 0 <= start < end <= 0xF0000, hex(start)
         assert not any(covered[start:end]), f'{hex(start)} overlaps formal segments'
-        assert block['element'] in ('word', 'halfword', 'byte')
+        assert block['element'] in ('word', 'halfword', 'byte', 'alignment')
         assert block['evidence'], 'Every block needs a concrete proof'
         blocks.append(block)
     for a, b in zip(blocks, blocks[1:]):
@@ -62,7 +65,7 @@ def main():
     for block in blocks:
         name = block['label']
         lines, items = build_lines(name, block['start'], block['end'], block['element'], rom)
-        kind = {'word': 'literal-pool', 'halfword': 'typed-data', 'byte': 'typed-data'}[block['element']]
+        kind = {'word': 'literal-pool', 'halfword': 'typed-data', 'byte': 'typed-data', 'alignment': 'alignment-data'}[block['element']]
         plans.append(dict(name=f'stage0_data_{BASE + block["start"]:08X}', start=block['start'], end=block['end'],
                           file=f'asm/stage0_data_{BASE + block["start"]:08X}.s', kind=kind, lines=lines, items=items,
                           label=name, evidence=block['evidence']))
