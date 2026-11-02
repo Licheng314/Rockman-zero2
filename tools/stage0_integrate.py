@@ -36,7 +36,9 @@ def prepare(include_startup):
         for word in gap['literal_words']:
             for reader in word['readers']:add_word(word['offset'],dict(kind='pc-load',reader=reader))
         for word in gap['switch_words']:add_word(word['offset'],dict(kind='bounded-switch',dispatch=word['dispatch']))
-    seeds=sorted({e['offset'] for g in inventory['gaps'] for e in g['switch_entries']})
+    seeds=sorted({e['offset'] for g in inventory['gaps'] for e in g['switch_entries']}
+                 |{e['offset'] for g in inventory['gaps'] for e in g['branch_entries']}
+                 |{e['offset'] for g in inventory['gaps'] for e in g['fallthrough_entries']})
     candidates={}; pool_bytes=set(); boundaries=[]
     for index,start in enumerate(seeds):
         gap=next(g for g in inventory['gaps'] if g['start']<=start<g['end'])

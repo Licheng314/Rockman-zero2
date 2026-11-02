@@ -129,13 +129,16 @@ def resolve_usage(rows, rom, result):
             rd = (hw >> 8) & 7
             index = bisect.bisect_right(ordered, a)
             usage = 'other'
-            for step in range(1, 9):
+            for step in range(0, 9):
                 pos = index + step
                 if pos >= len(ordered):
                     break
                 b = ordered[pos]
-                if b - a > 24:
-                    break
+                if b - a > 24 or b <= a:
+                    if b <= a and step:
+                        continue
+                    if b > a:
+                        break
                 ins = instructions[b]
                 if b - a != ins['size'] and step > 1 and not instructions[ordered[pos - 1]]['size']:
                     pass
