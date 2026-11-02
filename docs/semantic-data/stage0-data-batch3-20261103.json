@@ -1,0 +1,34 @@
+{
+ "blocks": [
+  {
+   "label": "config word-pair record",
+   "start": 980640,
+   "end": 980648,
+   "element": "",
+   "proof": {
+    "read": "0x0800B486 ldr r0,=0x080EF6A0; ldr r1,[r0,#4]; ldr r0,[r0] \u2014 both words read"
+   }
+  },
+  {
+   "label": "config word-pair records",
+   "start": 980656,
+   "end": 980688,
+   "element": "",
+   "proof": {
+    "read": "word-pair readers at 0x0800D7B6/0x0800D7C0/0x0800D926/0x0800D930/0x0800FA3E for bases 0x080EF6B0/0x080EF6B8/0x080EF6C0/0x080EF6C8"
+   }
+  },
+  {
+   "label": "tile lookup table A",
+   "start": 981036,
+   "end": 981548,
+   "element": "",
+   "proof": {
+    "access": "0x080DE336 handler: sl=0x080EF82C, entries indexed ((r2&m1)<<6)+((r2&m2)<<5)+base then CpuFastSet 8 words (0x080DE38E) and ldm/stm shifted words (0x080DE3D2); extent bounded by table B base 0x080EFA2C (pool 0x080DE3AC)"
+   }
+  }
+ ],
+ "original_formal_bytes": 978640,
+ "added_data_bytes": 552,
+ "scope": "Typed data blocks with per-block read/copy proof; no unproven range included."
+}

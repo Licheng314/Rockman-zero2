@@ -65,7 +65,7 @@ def main():
     for block in blocks:
         name = block['label']
         lines, items = build_lines(name, block['start'], block['end'], block['element'], rom)
-        kind = {'word': 'literal-pool', 'halfword': 'typed-data', 'byte': 'typed-data', 'alignment': 'alignment-data'}[block['element']]
+        kind = block.get('kind') or {'word': 'literal-pool', 'halfword': 'typed-data', 'byte': 'typed-data', 'alignment': 'alignment-data'}[block['element']]
         plans.append(dict(name=f'stage0_data_{BASE + block["start"]:08X}', start=block['start'], end=block['end'],
                           file=f'asm/stage0_data_{BASE + block["start"]:08X}.s', kind=kind, lines=lines, items=items,
                           label=name, evidence=block['evidence']))

@@ -96222,11 +96222,25 @@
   "kind": "literal-pool"
  },
  {
+  "name": "stage0_data_080EF6A0",
+  "start": 980640,
+  "end": 980648,
+  "file": "asm/stage0_data_080EF6A0.s",
+  "kind": "typed-data"
+ },
+ {
   "name": "stage0_data_080EF6A8",
   "start": 980648,
   "end": 980656,
   "file": "asm/stage0_data_080EF6A8.s",
   "kind": "literal-pool"
+ },
+ {
+  "name": "stage0_data_080EF6B0",
+  "start": 980656,
+  "end": 980688,
+  "file": "asm/stage0_data_080EF6B0.s",
+  "kind": "typed-data"
  },
  {
   "name": "stage0_data_080EF6D0",
@@ -96374,5 +96388,12 @@
   "end": 981036,
   "file": "asm/stage0_data_080EF80C.s",
   "kind": "literal-pool"
+ },
+ {
+  "name": "stage0_data_080EF82C",
+  "start": 981036,
+  "end": 981548,
+  "file": "asm/stage0_data_080EF82C.s",
+  "kind": "typed-data"
  }
 ]
