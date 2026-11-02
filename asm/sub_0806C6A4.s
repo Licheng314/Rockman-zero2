@@ -14,20 +14,13 @@ loc_0806C6B0:
     ldr r0, [r0]
     mov pc, r0
     .dh 0x0000 ; TODO movs r0, r0
-    .dh 0xC6C0 ; TODO stm r6!, {r6, r7}
-    lsr r6, r0, #0x20
-    .dh 0xC6D8 ; TODO stm r6!, {r3, r4, r6, r7}
-    lsr r6, r0, #0x20
-    .dh 0xC6FA ; TODO stm r6!, {r1, r3, r4, r5, r6, r7}
-    lsr r6, r0, #0x20
-    .dh 0xC720 ; TODO stm r7!, {r5}
-    lsr r6, r0, #0x20
-    .dh 0xC748 ; TODO stm r7!, {r3, r6}
-    lsr r6, r0, #0x20
-    .dh 0xC774 ; TODO stm r7!, {r2, r4, r5, r6}
-    lsr r6, r0, #0x20
-    .dh 0xC7A0 ; TODO stm r7!, {r5, r7}
-    lsr r6, r0, #0x20
+    .word 0x0806C6C0 ; proven PC/switch data
+    .word 0x0806C6D8 ; proven PC/switch data
+    .word 0x0806C6FA ; proven PC/switch data
+    .word 0x0806C720 ; proven PC/switch data
+    .word 0x0806C748 ; proven PC/switch data
+    .word 0x0806C774 ; proven PC/switch data
+    .word 0x0806C7A0 ; proven PC/switch data
     add r0, r4, #0
     add r0, #0x74
     ldr r1, [pc, #0x38]
@@ -57,85 +50,76 @@ loc_0806C6B0:
     add r0, #1
     b loc_0806C7BA
     .dh 0x0000 ; gap
-    .word 0x0833E53C
-    .word 0x00000B03
-    .dh 0x1C20 ; gap
-    .dh 0xF7A6 ; gap
-    .dh 0xF8D7 ; gap
-    .dh 0x7CA0 ; gap
-    .dh 0x3001 ; gap
-    .dh 0x74A0 ; gap
-    .dh 0x0600 ; gap
-    .dh 0x0E00 ; gap
-    .dh 0x2802 ; gap
-    .dh 0xD943 ; gap
-    .dh 0x21B0 ; gap
-    .dh 0x0109 ; gap
-    .dh 0x1C20 ; gap
-    .dh 0xF7A6 ; gap
-    .dh 0xF853 ; gap
-    .dh 0x2000 ; gap
-    .dh 0x74A0 ; gap
-    .dh 0x7BA0 ; gap
-    .dh 0x3001 ; gap
-    .dh 0xE038 ; gap
-    .dh 0x1C20 ; gap
-    .dh 0xF7A6 ; gap
-    .dh 0xF8C3 ; gap
-    .dh 0x7CA0 ; gap
-    .dh 0x3001 ; gap
-    .dh 0x74A0 ; gap
-    .dh 0x0600 ; gap
-    .dh 0x0E00 ; gap
-    .dh 0x2802 ; gap
-    .dh 0xD92F ; gap
-    .dh 0x4904 ; gap
-    .dh 0x1C20 ; gap
-    .dh 0xF7A6 ; gap
-    .dh 0xF840 ; gap
-    .dh 0x2000 ; gap
-    .dh 0x74A0 ; gap
-    .dh 0x7BA0 ; gap
-    .dh 0x3001 ; gap
-    .dh 0xE025 ; gap
+    .word 0x0833E53C ; proven PC/switch data
+    .word 0x00000B03 ; proven PC/switch data
+    add r0, r4, #0
+    bl EXT_080128D4
+    ldrb r0, [r4, #0x12]
+    add r0, #1
+    strb r0, [r4, #0x12]
+    lsl r0, r0, #0x18
+    lsr r0, r0, #0x18
+    cmp r0, #2
+    bls loc_0806C7BC
+    mov r1, #0xb0
+    lsl r1, r1, #4
+    add r0, r4, #0
+    bl EXT_080127E4
+    mov r0, #0
+    strb r0, [r4, #0x12]
+    ldrb r0, [r4, #0xe]
+    add r0, #1
+    b loc_0806C7BA
+    add r0, r4, #0
+    bl EXT_080128D4
+    ldrb r0, [r4, #0x12]
+    add r0, #1
+    strb r0, [r4, #0x12]
+    lsl r0, r0, #0x18
+    lsr r0, r0, #0x18
+    cmp r0, #2
+    bls loc_0806C7BC
+    ldr r1, [pc, #0x10]
+    add r0, r4, #0
+    bl EXT_080127E4
+    mov r0, #0
+    strb r0, [r4, #0x12]
+    ldrb r0, [r4, #0xe]
+    add r0, #1
+    b loc_0806C7BA
     .dh 0x0000 ; gap
-    .dh 0x0B01 ; gap
+    .word 0x00000B01 ; proven PC/switch data
+    add r0, r4, #0
+    bl EXT_080128D4
+    ldrb r0, [r4, #0x12]
+    add r0, #1
+    strb r0, [r4, #0x12]
+    lsl r0, r0, #0x18
+    lsr r0, r0, #0x18
+    cmp r0, #0xe
+    bls loc_0806C7BC
+    ldr r1, [pc, #0x10]
+    add r0, r4, #0
+    bl EXT_080127E4
+    mov r0, #0
+    strb r0, [r4, #0x12]
+    ldrb r0, [r4, #0xe]
+    add r0, #1
+    b loc_0806C7BA
     .dh 0x0000 ; gap
-    .dh 0x1C20 ; gap
-    .dh 0xF7A6 ; gap
-    .dh 0xF8AD ; gap
-    .dh 0x7CA0 ; gap
-    .dh 0x3001 ; gap
-    .dh 0x74A0 ; gap
-    .dh 0x0600 ; gap
-    .dh 0x0E00 ; gap
-    .dh 0x280E ; gap
-    .dh 0xD919 ; gap
-    .dh 0x4904 ; gap
-    .dh 0x1C20 ; gap
-    .dh 0xF7A6 ; gap
-    .dh 0xF82A ; gap
-    .dh 0x2000 ; gap
-    .dh 0x74A0 ; gap
-    .dh 0x7BA0 ; gap
-    .dh 0x3001 ; gap
-    .dh 0xE00F ; gap
-    .dh 0x0000 ; gap
-    .dh 0x0B02 ; gap
-    .dh 0x0000 ; gap
-    .dh 0x1C20 ; gap
-    .dh 0xF7A6 ; gap
-    .dh 0xF897 ; gap
-    .dh 0x7CA0 ; gap
-    .dh 0x3001 ; gap
-    .dh 0x74A0 ; gap
-    .dh 0x0600 ; gap
-    .dh 0x0E00 ; gap
-    .dh 0x2802 ; gap
-    .dh 0xD903 ; gap
-    .dh 0x2002 ; gap
-    .dh 0x7360 ; gap
-    .dh 0x2000 ; gap
+    .word 0x00000B02 ; proven PC/switch data
+    add r0, r4, #0
+    bl EXT_080128D4
+    ldrb r0, [r4, #0x12]
+    add r0, #1
+    strb r0, [r4, #0x12]
+    lsl r0, r0, #0x18
+    lsr r0, r0, #0x18
+    cmp r0, #2
+    bls loc_0806C7BC
+    mov r0, #2
+    strb r0, [r4, #0xd]
+    mov r0, #0
 loc_0806C7BA:
     strb r0, [r4, #0xe]
 loc_0806C7BC:

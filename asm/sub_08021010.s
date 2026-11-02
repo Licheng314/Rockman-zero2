@@ -90,31 +90,32 @@ sub_08021010:
 loc_080210C0:
     mov r0, #0
     b loc_080210FA
-    .word 0x020011E4
-    .word 0xFFFFFE1C
-    .dh 0x4651 ; gap
-    .dh 0x1ACA ; gap
-    .dh 0x1E48 ; gap
-    .dh 0x18C1 ; gap
-    .dh 0x1B78 ; gap
-    .dh 0x4282 ; gap
-    .dh 0xDA00 ; gap
-    .dh 0x1C02 ; gap
-    .dh 0x1978 ; gap
-    .dh 0x4288 ; gap
-    .dh 0xDA00 ; gap
-    .dh 0x1C01 ; gap
-    .dh 0x2301 ; gap
-    .dh 0x4499 ; gap
-    .dh 0x9E0D ; gap
-    .dh 0x9600 ; gap
-    .dh 0x1C10 ; gap
-    .dh 0x464A ; gap
-    .dh 0x464B ; gap
-    .dh 0xF000 ; gap
-    .dh 0xF8F3 ; gap
-    .dh 0x0600 ; gap
-    .dh 0x0E00 ; gap
+    .word 0x020011E4 ; proven PC/switch data
+    .word 0xFFFFFE1C ; proven PC/switch data
+    mov r1, r10
+    sub r2, r1, r3
+    sub r0, r1, #1
+    add r1, r0, r3
+    sub r0, r7, r5
+    cmp r2, r0
+    bge loc_080210DC
+    add r2, r0, #0
+loc_080210DC:
+    add r0, r7, r5
+    cmp r0, r1
+    bge loc_080210E4
+    add r1, r0, #0
+loc_080210E4:
+    mov r3, #1
+    add r9, r3
+    ldr r6, [sp, #0x34]
+    str r6, [sp]
+    add r0, r2, #0
+    mov r2, r9
+    mov r3, r9
+    bl EXT_080212DC
+    lsl r0, r0, #0x18
+    lsr r0, r0, #0x18
 loc_080210FA:
     add sp, #0xc
     pop {r3, r4, r5}

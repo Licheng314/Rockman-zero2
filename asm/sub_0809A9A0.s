@@ -38,32 +38,31 @@ loc_0809A9B8:
     cmp r0, r3
     bhs #0x809aa14
     b loc_0809AA06
-    .word 0x00000D06
-    .word 0x083436A4
-    .dh 0x429A ; gap
-    .dh 0xD90D ; gap
-    .dh 0x4A05 ; gap
-    .dh 0x1888 ; gap
-    .dh 0x8030 ; gap
-    .dh 0x0400 ; gap
-    .dh 0x0C00 ; gap
-    .dh 0x4298 ; gap
-    .dh 0xD906 ; gap
+    .word 0x00000D06 ; proven PC/switch data
+    .word 0x083436A4 ; proven PC/switch data
+    cmp r2, r3
+    bls loc_0809AA14
+    ldr r2, [pc, #0x14]
+    add r0, r1, r2
+    strh r0, [r6]
+    lsl r0, r0, #0x10
+    lsr r0, r0, #0x10
+    cmp r0, r3
+    bls loc_0809AA14
 loc_0809AA06:
     add r0, r5, #0
     bl EXT_0809AC10
     b loc_0809AA24
     .dh 0x0000 ; gap
-    .dh 0xFDC0 ; gap
-    .dh 0xFFFF ; gap
-    .dh 0x2400 ; gap
-    .dh 0x8033 ; gap
-    .dh 0x1C28 ; gap
-    .dh 0xF000 ; gap
-    .dh 0xF8F9 ; gap
-    .dh 0x2002 ; gap
-    .dh 0x7368 ; gap
-    .dh 0x73AC ; gap
+    .word 0xFFFFFDC0 ; proven PC/switch data
+loc_0809AA14:
+    mov r4, #0
+    strh r3, [r6]
+    add r0, r5, #0
+    bl EXT_0809AC10
+    mov r0, #2
+    strb r0, [r5, #0xd]
+    strb r4, [r5, #0xe]
 loc_0809AA24:
     pop {r4, r5, r6}
     pop {r0}

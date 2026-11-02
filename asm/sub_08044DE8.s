@@ -17,13 +17,13 @@ sub_08044DE8:
     ldr r0, [pc, #8]
     b loc_08044E1E
     .dh 0x0000 ; gap
-    .word 0x0202E130
-    .word 0xFFFFC000
-    .dh 0x4806 ; gap
-    .dh 0x6800 ; gap
-    .dh 0x6D41 ; gap
-    .dh 0x2080 ; gap
-    .dh 0x01C0 ; gap
+    .word 0x0202E130 ; proven PC/switch data
+    .word 0xFFFFC000 ; proven PC/switch data
+    ldr r0, [pc, #0x18]
+    ldr r0, [r0]
+    ldr r1, [r0, #0x54]
+    mov r0, #0x80
+    lsl r0, r0, #7
 loc_08044E1E:
     add r1, r1, r0
     add r0, r5, #0

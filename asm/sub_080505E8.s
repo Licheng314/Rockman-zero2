@@ -18,20 +18,13 @@ loc_080505FE:
     add r0, r0, r1
     ldr r0, [r0]
     mov pc, r0
-    lsl r4, r1, #0x18
-    lsr r5, r0, #0x20
-    lsl r4, r4, #0x18
-    lsr r5, r0, #0x20
-    lsl r2, r2, #0x1b
-    lsr r5, r0, #0x20
-    lsl r4, r2, #0x1d
-    lsr r5, r0, #0x20
-    lsl r2, r3, #0x1d
-    lsr r5, r0, #0x20
-    lsl r4, r7, #0x1d
-    lsr r5, r0, #0x20
-    lsl r4, r7, #0x1d
-    lsr r5, r0, #0x20
+    .word 0x0805060C ; proven PC/switch data
+    .word 0x08050624 ; proven PC/switch data
+    .word 0x080506D2 ; proven PC/switch data
+    .word 0x08050754 ; proven PC/switch data
+    .word 0x0805075A ; proven PC/switch data
+    .word 0x0805077C ; proven PC/switch data
+    .word 0x0805077C ; proven PC/switch data
     ldrb r1, [r5, #0xa]
     mov r0, #0xfe
     and r0, r1
@@ -163,31 +156,30 @@ loc_0805065A:
     bl EXT_080A0344
     b loc_08050776
     .dh 0x0000 ; gap
-    .word 0x0202E188
-    .word 0x000343FD
-    .word 0x00269EC3
-    .word 0xFFFFFC40
-    .word 0xFFFFFE80
-    .word 0xFFFFFD80
-    .word 0xFFFFFCE0
-    .word 0xFFFFFD00
-    .dh 0x20B4 ; gap
-    .dh 0x74A8 ; gap
-    .dh 0xE00D ; gap
-    .dh 0x7CA8 ; gap
-    .dh 0x3801 ; gap
-    .dh 0x74A8 ; gap
-    .dh 0x0600 ; gap
-    .dh 0x2800 ; gap
-    .dh 0xD10A ; gap
-    .dh 0x4A09 ; gap
-    .dh 0x8A51 ; gap
-    .dh 0x2002 ; gap
-    .dh 0x4308 ; gap
-    .dh 0x8250 ; gap
-    .dh 0x1C28 ; gap
-    .dh 0xF7FE ; gap
-    .dh 0xF95B ; gap
+    .word 0x0202E188 ; proven PC/switch data
+    .word 0x000343FD ; proven PC/switch data
+    .word 0x00269EC3 ; proven PC/switch data
+    .word 0xFFFFFC40 ; proven PC/switch data
+    .word 0xFFFFFE80 ; proven PC/switch data
+    .word 0xFFFFFD80 ; proven PC/switch data
+    .word 0xFFFFFCE0 ; proven PC/switch data
+    .word 0xFFFFFD00 ; proven PC/switch data
+    mov r0, #0xb4
+    strb r0, [r5, #0x12]
+    b loc_08050776
+    ldrb r0, [r5, #0x12]
+    sub r0, #1
+    strb r0, [r5, #0x12]
+    lsl r0, r0, #0x18
+    cmp r0, #0
+    bne loc_0805077C
+    ldr r2, [pc, #0x24]
+    ldrh r1, [r2, #0x12]
+    mov r0, #2
+    orr r0, r1
+    strh r0, [r2, #0x12]
+    add r0, r5, #0
+    bl EXT_0804EA2C
 loc_08050776:
     ldrb r0, [r5, #0xe]
     add r0, #1

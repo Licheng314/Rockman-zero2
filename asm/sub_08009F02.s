@@ -2,11 +2,9 @@
 .thumb
 sub_08009F02:
     b loc_08009F0E
-    .dh 0x07FF ; gap
-    .dh 0x0000 ; gap
-    .dh 0xF800 ; gap
-    .dh 0xFFFF ; gap
-    .dh 0x2000 ; gap
+    .word 0x000007FF ; proven PC/switch data
+    .word 0xFFFFF800 ; proven PC/switch data
+    mov r0, #0
 loc_08009F0E:
     pop {r1}
     bx r1

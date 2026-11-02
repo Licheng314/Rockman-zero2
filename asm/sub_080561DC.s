@@ -19,7 +19,7 @@ sub_080561DC:
     bhs #0x8056200
     mov r0, #0x80
     b loc_08056202
-    .dh 0x2048 ; gap
+    mov r0, #0x48
 loc_08056202:
     strb r0, [r1, #0x12]
     ldrb r0, [r1, #0xf]
@@ -43,8 +43,8 @@ loc_0805620A:
     blo #0x805622c
     mov r0, #8
     b loc_08056230
-    .dh 0x7B88 ; gap
-    .dh 0x3001 ; gap
+    ldrb r0, [r1, #0xe]
+    add r0, #1
 loc_08056230:
     strb r0, [r1, #0xe]
     strb r3, [r1, #0xf]

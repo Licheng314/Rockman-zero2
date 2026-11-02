@@ -19,62 +19,36 @@ sub_08057034:
     ldr r0, [r0]
     mov pc, r0
     .dh 0x0000 ; TODO movs r0, r0
-    strb r4, [r3, #1]
-    lsr r5, r0, #0x20
-    strb r0, [r1, #3]
-    lsr r5, r0, #0x20
-    strb r0, [r1, #3]
-    lsr r5, r0, #0x20
-    strb r0, [r1, #3]
-    lsr r5, r0, #0x20
-    strb r0, [r2, #3]
-    lsr r5, r0, #0x20
-    strb r0, [r0, #3]
-    lsr r5, r0, #0x20
-    strb r0, [r2, #3]
-    lsr r5, r0, #0x20
-    strb r0, [r2, #3]
-    lsr r5, r0, #0x20
-    strb r0, [r0, #3]
-    lsr r5, r0, #0x20
-    strb r0, [r2, #3]
-    lsr r5, r0, #0x20
-    strb r0, [r2, #3]
-    lsr r5, r0, #0x20
-    strb r0, [r2, #3]
-    lsr r5, r0, #0x20
-    strb r0, [r2, #3]
-    lsr r5, r0, #0x20
-    strb r0, [r2, #3]
-    lsr r5, r0, #0x20
-    strb r0, [r2, #3]
-    lsr r5, r0, #0x20
-    strb r0, [r2, #3]
-    lsr r5, r0, #0x20
-    strb r0, [r2, #3]
-    lsr r5, r0, #0x20
-    strb r0, [r0, #3]
-    lsr r5, r0, #0x20
-    strb r0, [r2, #3]
-    lsr r5, r0, #0x20
-    strb r0, [r2, #3]
-    lsr r5, r0, #0x20
-    strb r0, [r2, #3]
-    lsr r5, r0, #0x20
-    strb r0, [r2, #3]
-    lsr r5, r0, #0x20
-    strb r0, [r2, #3]
-    lsr r5, r0, #0x20
-    strb r0, [r2, #3]
-    lsr r5, r0, #0x20
-    strb r0, [r2, #3]
-    lsr r5, r0, #0x20
-    strb r4, [r0, #3]
-    lsr r5, r0, #0x20
+    .word 0x0805705C ; proven PC/switch data
+    .word 0x080570C8 ; proven PC/switch data
+    .word 0x080570C8 ; proven PC/switch data
+    .word 0x080570C8 ; proven PC/switch data
+    .word 0x080570D0 ; proven PC/switch data
+    .word 0x080570C0 ; proven PC/switch data
+    .word 0x080570D0 ; proven PC/switch data
+    .word 0x080570D0 ; proven PC/switch data
+    .word 0x080570C0 ; proven PC/switch data
+    .word 0x080570D0 ; proven PC/switch data
+    .word 0x080570D0 ; proven PC/switch data
+    .word 0x080570D0 ; proven PC/switch data
+    .word 0x080570D0 ; proven PC/switch data
+    .word 0x080570D0 ; proven PC/switch data
+    .word 0x080570D0 ; proven PC/switch data
+    .word 0x080570D0 ; proven PC/switch data
+    .word 0x080570D0 ; proven PC/switch data
+    .word 0x080570C0 ; proven PC/switch data
+    .word 0x080570D0 ; proven PC/switch data
+    .word 0x080570D0 ; proven PC/switch data
+    .word 0x080570D0 ; proven PC/switch data
+    .word 0x080570D0 ; proven PC/switch data
+    .word 0x080570D0 ; proven PC/switch data
+    .word 0x080570D0 ; proven PC/switch data
+    .word 0x080570D0 ; proven PC/switch data
+    .word 0x080570C4 ; proven PC/switch data
     mov r2, #1
     b loc_080570C8
-    .dh 0x2001 ; gap
-    .dh 0x4682 ; gap
+    mov r0, #1
+    mov r10, r0
 loc_080570C8:
     add r0, r4, #0
     add r0, #0xc0
@@ -111,9 +85,9 @@ loc_080570D0:
     bne loc_08057118
     mov r2, #4
     b loc_0805737A
-    .word 0x0202E188
-    .word 0x000343FD
-    .word 0x00269EC3
+    .word 0x0202E188 ; proven PC/switch data
+    .word 0x000343FD ; proven PC/switch data
+    .word 0x00269EC3 ; proven PC/switch data
 loc_08057118:
     add r0, r3, #0
     .dh 0x4370 ; TODO muls r0, r6, r0
@@ -157,7 +131,7 @@ loc_08057154:
     cmp r0, #2
     beq loc_08057172
     b loc_08057238
-    .word 0x0202EBF0
+    .word 0x0202EBF0 ; proven PC/switch data
 loc_08057168:
     cmp r0, #7
     beq loc_080571D4
@@ -188,8 +162,8 @@ loc_08057190:
 loc_08057198:
     mov r2, #5
     b loc_0805737A
-    .word 0x000343FD
-    .word 0x00269EC3
+    .word 0x000343FD ; proven PC/switch data
+    .word 0x00269EC3 ; proven PC/switch data
 loc_080571A4:
     ldr r1, [r5]
     ldr r0, [pc, #0x24]
@@ -213,8 +187,8 @@ loc_080571C2:
     b loc_0805737A
 loc_080571CA:
     b loc_08057378
-    .word 0x000343FD
-    .word 0x00269EC3
+    .word 0x000343FD ; proven PC/switch data
+    .word 0x00269EC3 ; proven PC/switch data
 loc_080571D4:
     ldr r1, [r5]
     ldr r0, [pc, #0x28]
@@ -240,8 +214,8 @@ loc_080571FA:
     mov r2, #5
     b loc_0805737A
     .dh 0x0000 ; gap
-    .word 0x000343FD
-    .word 0x00269EC3
+    .word 0x000343FD ; proven PC/switch data
+    .word 0x00269EC3 ; proven PC/switch data
 loc_08057208:
     ldr r1, [r5]
     ldr r0, [pc, #0x24]
@@ -265,8 +239,8 @@ loc_08057226:
     b loc_0805737A
 loc_0805722E:
     b loc_08057378
-    .word 0x000343FD
-    .word 0x00269EC3
+    .word 0x000343FD ; proven PC/switch data
+    .word 0x00269EC3 ; proven PC/switch data
 loc_08057238:
     ldr r1, [r5]
     ldr r0, [pc, #0x3c]
@@ -303,8 +277,8 @@ loc_0805726C:
 loc_08057274:
     mov r2, #0x1a
     b loc_0805737A
-    .word 0x000343FD
-    .word 0x00269EC3
+    .word 0x000343FD ; proven PC/switch data
+    .word 0x00269EC3 ; proven PC/switch data
 loc_08057280:
     ldr r1, [r5]
     ldr r0, [pc, #0x2c]
@@ -329,8 +303,8 @@ loc_08057280:
     cmp r1, #9
     bhi loc_0805737A
     b loc_08057378
-    .word 0x000343FD
-    .word 0x00269EC3
+    .word 0x000343FD ; proven PC/switch data
+    .word 0x00269EC3 ; proven PC/switch data
 loc_080572B8:
     add r0, r4, #0
     add r0, #0xb4
@@ -368,8 +342,8 @@ loc_080572DE:
     cmp r0, #7
     bhi loc_0805737A
     b loc_08057378
-    .word 0x000343FD
-    .word 0x00269EC3
+    .word 0x000343FD ; proven PC/switch data
+    .word 0x00269EC3 ; proven PC/switch data
 loc_08057304:
     ldr r1, [r5]
     ldr r0, [pc, #0x18]
@@ -385,8 +359,8 @@ loc_08057304:
     mov r2, #7
     b loc_08057340
     .dh 0x0000 ; gap
-    .word 0x000343FD
-    .word 0x00269EC3
+    .word 0x000343FD ; proven PC/switch data
+    .word 0x00269EC3 ; proven PC/switch data
 loc_08057328:
     ldr r1, [r5]
     ldr r0, [pc, #0x1c]
@@ -405,8 +379,8 @@ loc_08057340:
     bhi loc_0805737A
     mov r2, #2
     b loc_0805737A
-    .word 0x000343FD
-    .word 0x00269EC3
+    .word 0x000343FD ; proven PC/switch data
+    .word 0x00269EC3 ; proven PC/switch data
 loc_08057350:
     ldr r1, [r5]
     ldr r0, [pc, #0x6c]
@@ -465,8 +439,8 @@ loc_0805737A:
     mov r0, r10
     b loc_080573E6
     .dh 0x0000 ; gap
-    .word 0x000343FD
-    .word 0x00269EC3
+    .word 0x000343FD ; proven PC/switch data
+    .word 0x00269EC3 ; proven PC/switch data
 loc_080573C8:
     cmp r2, #2
     blt loc_080573DC

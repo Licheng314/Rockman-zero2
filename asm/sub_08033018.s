@@ -20,8 +20,8 @@ loc_08033022:
     neg r0, r0
     b loc_08033042
     .dh 0x0000 ; gap
-    .word 0x083359A8
-    .dh 0x1C10 ; gap
+    .word 0x083359A8 ; proven PC/switch data
+    add r0, r2, #0
 loc_08033042:
     pop {r4}
     pop {r1}

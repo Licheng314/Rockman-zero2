@@ -15,10 +15,10 @@ sub_08085966:
     mov r0, #0x2c
     bl EXT_080032EC
     b loc_08085990
-    .dh 0x2013 ; gap
-    .dh 0x7360 ; gap
-    .dh 0x2000 ; gap
-    .dh 0x73A0 ; gap
+    mov r0, #0x13
+    strb r0, [r4, #0xd]
+    mov r0, #0
+    strb r0, [r4, #0xe]
 loc_08085990:
     add sp, #8
     pop {r4, r5, r6, r7}

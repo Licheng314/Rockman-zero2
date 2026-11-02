@@ -4,6 +4,7 @@ import base64
 import hashlib
 import json
 import os
+import re
 from pathlib import Path
 import subprocess
 import sys
@@ -120,12 +121,40 @@ def transaction_paths(paths):
             journal.unlink(missing_ok=True)
 
 
+def instrument_extents(script, segments):
+    """Assert each include emits exactly its declared range before the next ORG.
+
+    Otherwise a later ORG can conceal missing bytes or overwritten neighbors
+    while the final ROM still happens to match the original.
+    """
+    by_file = {s['file']: s for s in segments}
+    if len(by_file) != len(segments):
+        raise RuntimeError('Each formal segment must have one distinct source')
+    seen = set()
+    lines = []
+    for line in script.splitlines():
+        lines.append(line)
+        match = re.fullmatch(r'\.include "([^"]+)"', line)
+        if match and match[1] in by_file:
+            if match[1] in seen:
+                raise RuntimeError('Formal source included more than once')
+            seen.add(match[1])
+            segment = by_file[match[1]]
+            lines.extend([f'.if org() != 0x{0x08000000+segment["end"]:08X}',
+                          f'.error "Incorrect formal extent: {segment["name"]}"', '.endif'])
+    if seen != set(by_file):
+        raise RuntimeError('A formal segment is missing from the build')
+    return '\n'.join(lines) + '\n'
+
+
 def build_checked():
     rom = (ROOT/'baserom.gba').read_bytes()
     if hashlib.sha1(rom).hexdigest() != EXPECT:
         raise RuntimeError('Unexpected baserom SHA1; refusing to build.')
     run([sys.executable, 'tools/split.py'])
     script = (ROOT/'build.asm').read_text(encoding='utf-8')
+    segments = json.loads((ROOT/'tools/segments.json').read_text(encoding='utf-8'))
+    script = instrument_extents(script, segments)
     script = script.replace('"build/rmz2.gba"', '"build/rmz2.pending.gba"')
     target = ROOT/'build/rmz2.pending.gba'
     target.unlink(missing_ok=True)

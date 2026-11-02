@@ -1,0 +1,14 @@
+{
+  "scope": "Historical in-place Thumb decode receipts; not all stage-0 ranges",
+  "reports": [
+    "stage0-existing-decode.json",
+    "stage0-existing-decode-followup.json"
+  ],
+  "decoded_instructions_verified": 21462,
+  "decoded_bytes_verified": 45670,
+  "original_requested_entries_verified": 846,
+  "current_source_files_verified": 237,
+  "source_hash_chains_verified": 239,
+  "inventory_source_fingerprint": "e758f2e7a575b8c5de4e98b9eabcc2d43a1074f0cf4a27dd71f267878fce2fed",
+  "original_rom_sha1": "c4d93a58f0f82c526dec8a3fdbda170336303689"
+}

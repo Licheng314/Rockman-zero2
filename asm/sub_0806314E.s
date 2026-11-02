@@ -1,7 +1,8 @@
-; sub_0806314E @ 0x0806314E-0806315E  (自动生成, 经往返验证)
+; block_0806314C: repaired complete Thumb BL; sub_0806314E was a false half-instruction entry.
 .thumb
-sub_0806314E:
-    .dh 0xF810, 0xBC38 ; TODO ldrb fp, [r0, #-0x38]
+block_0806314C:
+    bl EXT_08063170
+    pop {r3, r4, r5}
     mov r8, r3
     mov r9, r4
     mov r10, r5

@@ -1,0 +1,39 @@
+{
+  "added_address_bytes": 6,
+  "scope": "Three complete Thumb-1 BL instructions at evidenced fallthrough boundaries; retain existing source filenames and body, retire false halfword entry names.",
+  "repairs": [
+    {
+      "file": "asm/sub_0806314E.s",
+      "old_name": "sub_0806314E",
+      "new_name": "block_0806314C",
+      "old_start": 405838,
+      "new_start": 405836,
+      "end": 405854,
+      "bl_target": 134623600,
+      "before_sha1": "0ca17c2d8840906ed8dd03158feb955ed9816016",
+      "after_sha1": "73e7d86b82851c222f52466bcaabcf778bcdd399"
+    },
+    {
+      "file": "asm/sub_0806FDD6.s",
+      "old_name": "sub_0806FDD6",
+      "new_name": "block_0806FDD4",
+      "old_start": 458198,
+      "new_start": 458196,
+      "end": 458562,
+      "bl_target": 134253820,
+      "before_sha1": "a0321e65d85c26b7ce4774cfe56c888f2200b722",
+      "after_sha1": "3f3d99c560a46fb2cabbd67251c5df7ce1d5a2ca"
+    },
+    {
+      "file": "asm/sub_080C5D06.s",
+      "old_name": "sub_080C5D06",
+      "new_name": "block_080C5D04",
+      "old_start": 810246,
+      "new_start": 810244,
+      "end": 810604,
+      "bl_target": 134293476,
+      "before_sha1": "f524ade1892f5fc40165cba607edd0c0f1dc94f7",
+      "after_sha1": "8de67ee5c451f6aca7ed15f1a28a88f9c1f92755"
+    }
+  ]
+}

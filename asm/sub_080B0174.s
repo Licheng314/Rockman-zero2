@@ -15,29 +15,23 @@ sub_080B0174:
     ldr r0, [r0]
     mov pc, r0
     .dh 0x0000 ; TODO movs r0, r0
-    lsl r4, r2, #6
-    lsr r3, r1, #0x20
-    lsl r0, r7, #6
-    lsr r3, r1, #0x20
-    lsl r0, r5, #6
-    lsr r3, r1, #0x20
-    lsl r0, r6, #6
-    lsr r3, r1, #0x20
-    lsl r0, r7, #6
-    lsr r3, r1, #0x20
-    lsl r2, r1, #7
-    lsr r3, r1, #0x20
+    .word 0x080B0194 ; proven PC/switch data
+    .word 0x080B01B8 ; proven PC/switch data
+    .word 0x080B01A8 ; proven PC/switch data
+    .word 0x080B01B0 ; proven PC/switch data
+    .word 0x080B01B8 ; proven PC/switch data
+    .word 0x080B01CA ; proven PC/switch data
     ldrb r0, [r2, #0x12]
     cmp r0, #0x19
     bls loc_080B01F0
     b loc_080B01BE
-    .dh 0x7C90 ; gap
-    .dh 0x283F ; gap
-    .dh 0xD91C ; gap
-    .dh 0xE002 ; gap
-    .dh 0x7C90 ; gap
-    .dh 0x281B ; gap
-    .dh 0xD918 ; gap
+    ldrb r0, [r2, #0x12]
+    cmp r0, #0x3f
+    bls loc_080B01F0
+    b loc_080B01BE
+    ldrb r0, [r2, #0x12]
+    cmp r0, #0x1b
+    bls loc_080B01F0
 loc_080B01BE:
     ldrb r0, [r2, #0xe]
     add r0, #1
@@ -45,25 +39,25 @@ loc_080B01BE:
     strb r0, [r2, #0xe]
     strb r1, [r2, #0x12]
     b loc_080B01F0
-    .dh 0x7C90 ; gap
-    .dh 0x2819 ; gap
-    .dh 0xD90F ; gap
-    .dh 0x4908 ; gap
-    .dh 0x7A50 ; gap
-    .dh 0x0080 ; gap
-    .dh 0x1840 ; gap
-    .dh 0x2103 ; gap
-    .dh 0x60D1 ; gap
-    .dh 0x6800 ; gap
-    .dh 0x68C0 ; gap
-    .dh 0x6150 ; gap
-    .dh 0x7A91 ; gap
-    .dh 0x20FE ; gap
-    .dh 0x4008 ; gap
-    .dh 0x7290 ; gap
-    .dh 0x7B90 ; gap
-    .dh 0x3001 ; gap
-    .dh 0x7390 ; gap
+    ldrb r0, [r2, #0x12]
+    cmp r0, #0x19
+    bls loc_080B01F0
+    ldr r1, [pc, #0x20]
+    ldrb r0, [r2, #9]
+    lsl r0, r0, #2
+    add r0, r0, r1
+    mov r1, #3
+    str r1, [r2, #0xc]
+    ldr r0, [r0]
+    ldr r0, [r0, #0xc]
+    str r0, [r2, #0x14]
+    ldrb r1, [r2, #0xa]
+    mov r0, #0xfe
+    and r0, r1
+    strb r0, [r2, #0xa]
+    ldrb r0, [r2, #0xe]
+    add r0, #1
+    strb r0, [r2, #0xe]
 loc_080B01F0:
     pop {r0}
     bx r0

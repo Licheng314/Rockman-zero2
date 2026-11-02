@@ -27,41 +27,40 @@ loc_0808ED46:
     ldr r0, [r0]
     mov pc, r0
     .dh 0x0000 ; TODO movs r0, r0
-    .dh 0xED6C, 0x0808 ; TODO stcl p8, c0, [ip, #-0x20]!
-    .dh 0xEDB0, 0x0808 ; TODO ldc p8, c0, [r0, #0x20]!
-    .dh 0xEDB0, 0x0808 ; TODO ldc p8, c0, [r0, #0x20]!
-    .dh 0xEDB8, 0x0808 ; TODO ldc p8, c0, [r8, #0x20]!
-    .dh 0xEDB8, 0x0808 ; TODO ldc p8, c0, [r8, #0x20]!
-    .dh 0xEDD0, 0x0808 ; TODO ldcl p8, c0, [r0, #0x20]
-    .dh 0xEDD0, 0x0808 ; TODO ldcl p8, c0, [r0, #0x20]
-    .dh 0xEDD0, 0x0808 ; TODO ldcl p8, c0, [r0, #0x20]
-    .dh 0xEDD0, 0x0808 ; TODO ldcl p8, c0, [r0, #0x20]
-    .dh 0xEDD0, 0x0808 ; TODO ldcl p8, c0, [r0, #0x20]
-    .dh 0xEDD0, 0x0808 ; TODO ldcl p8, c0, [r0, #0x20]
-    .dh 0xEDD0, 0x0808 ; TODO ldcl p8, c0, [r0, #0x20]
-    .dh 0xEDD0, 0x0808 ; TODO ldcl p8, c0, [r0, #0x20]
-    .dh 0xEDD0, 0x0808 ; TODO ldcl p8, c0, [r0, #0x20]
-    .dh 0xEDD0, 0x0808 ; TODO ldcl p8, c0, [r0, #0x20]
-    .dh 0xEDD0, 0x0808 ; TODO ldcl p8, c0, [r0, #0x20]
-    .dh 0xEDD0, 0x0808 ; TODO ldcl p8, c0, [r0, #0x20]
-    .dh 0xEDC8, 0x0808 ; TODO stcl p8, c0, [r8, #0x20]
+    .word 0x0808ED6C ; proven PC/switch data
+    .word 0x0808EDB0 ; proven PC/switch data
+    .word 0x0808EDB0 ; proven PC/switch data
+    .word 0x0808EDB8 ; proven PC/switch data
+    .word 0x0808EDB8 ; proven PC/switch data
+    .word 0x0808EDD0 ; proven PC/switch data
+    .word 0x0808EDD0 ; proven PC/switch data
+    .word 0x0808EDD0 ; proven PC/switch data
+    .word 0x0808EDD0 ; proven PC/switch data
+    .word 0x0808EDD0 ; proven PC/switch data
+    .word 0x0808EDD0 ; proven PC/switch data
+    .word 0x0808EDD0 ; proven PC/switch data
+    .word 0x0808EDD0 ; proven PC/switch data
+    .word 0x0808EDD0 ; proven PC/switch data
+    .word 0x0808EDD0 ; proven PC/switch data
+    .word 0x0808EDD0 ; proven PC/switch data
+    .word 0x0808EDD0 ; proven PC/switch data
+    .word 0x0808EDC8 ; proven PC/switch data
     ldr r0, [r4, #0x54]
     mov r1, #0x80
     lsl r1, r1, #1
     b loc_0808EDBC
-    .dh 0x6D60 ; gap
-    .dh 0x4902 ; gap
+    ldr r0, [r4, #0x54]
+    ldr r1, [pc, #8]
 loc_0808EDBC:
     add r0, r0, r1
     str r0, [r4, #0x54]
     b loc_0808EDD0
     .dh 0x0000 ; gap
-    .dh 0xFF00 ; gap
-    .dh 0xFFFF ; gap
-    .dh 0x2100 ; gap
-    .dh 0x2004 ; gap
-    .dh 0x7360 ; gap
-    .dh 0x73A1 ; gap
+    .word 0xFFFFFF00 ; proven PC/switch data
+    mov r1, #0
+    mov r0, #4
+    strb r0, [r4, #0xd]
+    strb r1, [r4, #0xe]
 loc_0808EDD0:
     pop {r4}
     pop {r0}

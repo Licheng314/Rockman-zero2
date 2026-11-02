@@ -5,10 +5,10 @@ sub_0805EC0E:
     strb r2, [r4, #0xe]
     mov r0, #0x13
     b loc_0805EC1E
-    .dh 0x2007 ; gap
-    .dh 0x7360 ; gap
-    .dh 0x73A2 ; gap
-    .dh 0x2012 ; gap
+    mov r0, #7
+    strb r0, [r4, #0xd]
+    strb r2, [r4, #0xe]
+    mov r0, #0x12
 loc_0805EC1E:
     strb r0, [r4, #0xf]
     pop {r4, r5, r6}

@@ -6,29 +6,30 @@ sub_0809EF8A:
     ldr r1, [pc, #4]
     b loc_0809EFC4
     .dh 0x0000 ; gap
-    .word 0x00003305
-    .dh 0x1C20 ; gap
-    .dh 0x30C0 ; gap
-    .dh 0x6800 ; gap
-    .dh 0x21A4 ; gap
-    .dh 0x0189 ; gap
-    .dh 0x1840 ; gap
-    .dh 0x6DAA ; gap
-    .dh 0x1A80 ; gap
-    .dh 0x2800 ; gap
-    .dh 0xDA00 ; gap
-    .dh 0x3007 ; gap
-    .dh 0x10C1 ; gap
-    .dh 0x7C20 ; gap
-    .dh 0x4348 ; gap
-    .dh 0x4912 ; gap
-    .dh 0x1840 ; gap
-    .dh 0x1810 ; gap
-    .dh 0x65A0 ; gap
-    .dh 0x7B60 ; gap
-    .dh 0x2800 ; gap
-    .dh 0xD109 ; gap
-    .dh 0x4910 ; gap
+    .word 0x00003305 ; proven PC/switch data
+    add r0, r4, #0
+    add r0, #0xc0
+    ldr r0, [r0]
+    mov r1, #0xa4
+    lsl r1, r1, #6
+    add r0, r0, r1
+    ldr r2, [r5, #0x58]
+    sub r0, r0, r2
+    cmp r0, #0
+    bge loc_0809EFAE
+    add r0, #7
+loc_0809EFAE:
+    asr r1, r0, #3
+    ldrb r0, [r4, #0x10]
+    mul r0, r1
+    ldr r1, [pc, #0x48]
+    add r0, r0, r1
+    add r0, r2, r0
+    str r0, [r4, #0x58]
+    ldrb r0, [r4, #0xd]
+    cmp r0, #0
+    bne loc_0809EFD6
+    ldr r1, [pc, #0x40]
 loc_0809EFC4:
     add r0, r4, #0
     bl EXT_080127E4
@@ -58,10 +59,8 @@ loc_0809EFD6:
     lsl r1, r1, #2
     strb r1, [r4, #0x12]
     b loc_0809F04A
-    .dh 0xD700 ; gap
-    .dh 0xFFFF ; gap
-    .dh 0x3302 ; gap
-    .dh 0x0000 ; gap
+    .word 0xFFFFD700 ; proven PC/switch data
+    .word 0x00003302 ; proven PC/switch data
 loc_0809F008:
     cmp r0, #2
     bne loc_0809F058
@@ -77,7 +76,7 @@ loc_0809F008:
     bne loc_0809F028
     ldr r1, [pc, #0]
     b loc_0809F02E
-    .word 0x00003309
+    .word 0x00003309 ; proven PC/switch data
 loc_0809F028:
     cmp r0, #8
     bne loc_0809F03C
@@ -87,7 +86,7 @@ loc_0809F02E:
     bl EXT_080127E4
     b loc_0809F044
     .dh 0x0000 ; gap
-    .word 0x00003306
+    .word 0x00003306 ; proven PC/switch data
 loc_0809F03C:
     ldr r1, [pc, #0x14]
     add r0, r4, #0
@@ -101,7 +100,7 @@ loc_0809F04A:
     strb r0, [r4, #0xd]
     b loc_0809F078
     .dh 0x0000 ; gap
-    .word 0x00003303
+    .word 0x00003303 ; proven PC/switch data
 loc_0809F058:
     cmp r0, #3
     bne loc_0809F078

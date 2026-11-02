@@ -3,19 +3,71 @@ import unittest
 from unittest.mock import patch
 import tempfile
 from pathlib import Path
+import subprocess
 
 from thumb_v4 import valid_thumb1
-from stage0_inventory import walk_sources, BASE
+from stage0_inventory import walk_sources, BASE, source_fingerprint
 import extract_func
 import project_guard as guard
 from stage0_switches import bounded_switches
+from stage0_decode_existing import trace_unknown
 from capstone import Cs, CS_ARCH_ARM, CS_MODE_THUMB
 
 
 class Stage0Tests(unittest.TestCase):
+    def test_uninterrupted_nontransfer_flow_can_correct_a_legacy_word(self):
+        rom=bytes.fromhex('01 20 01 30 70 47 00 00');owner=dict(start=0,end=8,file='fixture')
+        locate=lambda a:owner if 0<=a<8 else None
+        overrides={}
+        new,proof,deferred=trace_unknown(rom,{}, {0:dict(kind='bounded-switch')},locate,bytearray(0xF0000),{}, {b:4 for b in range(4,8)},overrides)
+        self.assertEqual(set(new),{0,2,4});self.assertIn(4,overrides);self.assertFalse(deferred)
+        rom=bytes.fromhex('00 f0 10 f8 01 00 03 02')
+        overrides={}
+        new,proof,deferred=trace_unknown(rom,{}, {0:dict(kind='entry')},locate,bytearray(0xF0000),{}, {b:4 for b in range(4,8)},overrides)
+        self.assertEqual(set(new),{0});self.assertFalse(overrides)
+        self.assertEqual(deferred[0]['reason'],'unproven-legacy-word-fallthrough')
+    def test_source_change_invalidates_a_snapshot_without_range_changes(self):
+        with tempfile.TemporaryDirectory() as folder:
+            root=Path(folder);(root/'asm').mkdir()
+            p=root/'asm/a.s';p.write_text('.dh 0\n',encoding='utf-8')
+            segments=[dict(start=0,end=2,file='asm/a.s')]
+            before=source_fingerprint(segments,root)
+            p.write_text('lsl r0, r0, #0\n',encoding='utf-8')
+            self.assertNotEqual(before,source_fingerprint(segments,root))
+    def test_extent_gate_catches_missing_bytes_hidden_by_next_org(self):
+        with tempfile.TemporaryDirectory() as folder:
+            root=Path(folder);(root/'asm').mkdir()
+            (root/'asm/short.s').write_text('.dh 0\n',encoding='utf-8')
+            script='.gba\n.create "out.bin",0x08000000\n.org 0x08000000\n.include "asm/short.s"\n.org 0x08000004\n.db 0\n.close\n'
+            path=root/'build.asm';path.write_text(script,encoding='utf-8')
+            binary=str(guard.ROOT/'tools/bin/armips.exe')
+            before=subprocess.run([binary,str(path)],cwd=root,capture_output=True)
+            self.assertEqual(before.returncode,0,before.stdout+before.stderr)
+            self.assertEqual((root/'out.bin').read_bytes(),bytes(5))
+            protected=guard.instrument_extents(script,[dict(name='short',file='asm/short.s',start=0,end=4)])
+            path.write_text(protected,encoding='utf-8')
+            after=subprocess.run([binary,str(path)],cwd=root,capture_output=True)
+            self.assertNotEqual(after.returncode,0)
+            self.assertIn(b'Incorrect formal extent',after.stdout+after.stderr)
+    def test_guarded_entry_can_correct_an_unreferenced_legacy_word(self):
+        rom=bytes.fromhex('01 20 70 47');owner=dict(start=0,end=4,file='fixture')
+        locate=lambda a:owner if 0<=a<4 else None
+        legacy={b:0 for b in range(4)};overrides={}
+        new,proof,deferred=trace_unknown(rom,{}, {0:dict(kind='bounded-switch')},locate,bytearray(0xF0000),{},legacy,overrides)
+        self.assertEqual(set(new),{0,2});self.assertIn(0,overrides);self.assertFalse(deferred)
+        hard=bytearray(0xF0000);hard[:4]=b'\1'*4
+        new,proof,deferred=trace_unknown(rom,{}, {0:dict(kind='bounded-switch')},locate,hard,{}, {b:0 for b in range(4)})
+        self.assertFalse(new);self.assertEqual(deferred[0]['reason'],'data-barrier')
+
+    def test_a_bl_prefix_can_correct_a_legacy_word_on_its_suffix(self):
+        rom=bytes.fromhex('00 f0 00 f8 70 47');owner=dict(start=0,end=6,file='fixture')
+        locate=lambda a:owner if 0<=a<6 else None
+        overrides={}
+        new,proof,deferred=trace_unknown(rom,{}, {0:dict(kind='fallthrough',reader=-2)},locate,bytearray(0xF0000),{}, {b:2 for b in range(2,6)},overrides)
+        self.assertEqual(set(new),{0,4});self.assertIn(2,overrides);self.assertFalse(deferred)
     def test_thumb_aliases_preserve_the_actual_encoding_form(self):
         md=Cs(CS_ARCH_ARM,CS_MODE_THUMB)
-        for raw, expected in [('78 43','mul r0, r7'),('68 44','add r0, sp'),('69 44','add r1, sp'),('00 00','lsl r0, r0, #0')]:
+        for raw, expected in [('78 43','mul r0, r7'),('68 44','add r0, sp'),('69 44','add r1, sp'),('00 00','lsl r0, r0, #0'),('e3 41','ror r3, r4')]:
             ins=next(md.disasm(bytes.fromhex(raw),BASE))
             self.assertEqual(extract_func.fmt(ins,0,'fixture',{0:ins},set()),expected)
     def test_switch_requires_a_real_range_guard(self):

@@ -57,12 +57,12 @@ loc_08012458:
     bhs #0x801248e
     mov r8, r1
     b loc_0801249A
-    .dh 0x4541 ; gap
-    .dh 0xD104 ; gap
-    .dh 0x7F18 ; gap
-    .dh 0x7F29 ; gap
-    .dh 0x4288 ; gap
-    .dh 0xD900 ; gap
+    cmp r1, r8
+    bne loc_0801249C
+    ldrb r0, [r3, #0x1c]
+    ldrb r1, [r5, #0x1c]
+    cmp r0, r1
+    bls loc_0801249C
 loc_0801249A:
     add r5, r3, #0
 loc_0801249C:

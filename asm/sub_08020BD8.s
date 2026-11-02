@@ -23,7 +23,7 @@ sub_08020BD8:
     mov r0, #0xff
     b loc_08020D18
     .dh 0x0000 ; gap
-    .word 0x02001000
+    .word 0x02001000 ; proven PC/switch data
 loc_08020C08:
     ldr r2, [sp, #0x68]
     cmp r2, #0
@@ -133,20 +133,20 @@ loc_08020C7A:
     mov r3, r8
     bl EXT_080EF124
     b loc_08020D0C
-    .word 0x08333B04
-    .word 0x08333B14
-    .word 0x020011DC
-    .dh 0x4648 ; gap
-    .dh 0x6803 ; gap
-    .dh 0xE001 ; gap
-    .dh 0x4649 ; gap
-    .dh 0x680B ; gap
-    .dh 0x4640 ; gap
-    .dh 0x1C29 ; gap
-    .dh 0x4652 ; gap
-    .dh 0xF0CE ; gap
-    .dh 0xFA12 ; gap
-    .dh 0xE006 ; gap
+    .word 0x08333B04 ; proven PC/switch data
+    .word 0x08333B14 ; proven PC/switch data
+    .word 0x020011DC ; proven PC/switch data
+    mov r0, r9
+    ldr r3, [r0]
+    b loc_08020CF2
+    mov r1, r9
+    ldr r3, [r1]
+loc_08020CF2:
+    mov r0, r8
+    add r1, r5, #0
+    mov r2, r10
+    bl EXT_080EF120
+    b loc_08020D0C
 loc_08020CFE:
     mov r2, r9
     ldr r3, [r2]

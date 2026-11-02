@@ -31,10 +31,9 @@ sub_080C37CE:
     strb r0, [r5, #0xd]
     b loc_080C3816
     .dh 0x0000 ; gap
-    .word 0x080EF450
-    .dh 0x1C28 ; gap
-    .dh 0xF74F ; gap
-    .dh 0xF85F ; gap
+    .word 0x080EF450 ; proven PC/switch data
+    add r0, r5, #0
+    bl EXT_080128D4
 loc_080C3816:
     pop {r4, r5}
     pop {r0}

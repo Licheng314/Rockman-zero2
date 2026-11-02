@@ -58,13 +58,13 @@ loc_08000C32:
     ldr r0, [pc, #0x10]
     strb r2, [r0]
     b loc_08000C62
-    .word 0x04000006
-    .word 0x03001590
-    .word 0x00000167
-    .word 0x04000005
-    .dh 0x4905 ; gap
-    .dh 0x2000 ; gap
-    .dh 0x7008 ; gap
+    .word 0x04000006 ; proven PC/switch data
+    .word 0x03001590 ; proven PC/switch data
+    .word 0x00000167 ; proven PC/switch data
+    .word 0x04000005 ; proven PC/switch data
+    ldr r1, [pc, #0x14]
+    mov r0, #0
+    strb r0, [r1]
 loc_08000C62:
     ldr r0, [pc, #0x14]
     add r2, r3, r0

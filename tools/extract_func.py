@@ -30,7 +30,8 @@ md = Cs(CS_ARCH_ARM, CS_MODE_THUMB)
 
 COND_BR = {"beq","bne","bcs","bcc","bhs","blo","bmi","bpl","bvs","bvc","bhi","bls","bge","blt","bgt","ble"}
 UAL_MAP = {"lsls":"lsl","lsrs":"lsr","asrs":"asr","adds":"add","subs":"sub","movs":"mov",
-           "ands":"and","orrs":"orr","eors":"eor","bics":"bic","muls":"mul","negs":"neg"}
+           "ands":"and","orrs":"orr","eors":"eor","bics":"bic","muls":"mul","negs":"neg",
+           "ldm":"ldmia","stm":"stmia","rors":"ror"}
 REG_ALIAS = {"ip": "r12", "sl": "r10", "sb": "r9", "fp": "r11"}
 
 
@@ -237,7 +238,7 @@ def main():
         out = open("build/rmz2.candidate.gba", "rb").read()
         sha = hashlib.sha1(out).hexdigest()
         if sha == EXPECT:
-            os.replace("build/rmz2.candidate.gba", "build/rmz2.gba")
+            build_checked()
             print(f"  轮次{rnd}: ✅ 全ROM SHA1一致 (降级 {len(raw)}/{len(instrs)})")
             return 0
         bad = set()

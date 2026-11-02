@@ -45,56 +45,45 @@ loc_080A40FC:
     ldr r0, [r0]
     mov pc, r0
     .dh 0x0000 ; TODO movs r0, r0
-    asr r4, r5
-    lsr r2, r1, #0x20
-    .dh 0x4140 ; TODO adcs r0, r0
-    lsr r2, r1, #0x20
-    .dh 0x414E ; TODO adcs r6, r1
-    lsr r2, r1, #0x20
-    .dh 0x415C ; TODO adcs r4, r3
-    lsr r2, r1, #0x20
-    .dh 0x4170 ; TODO adcs r0, r6
-    lsr r2, r1, #0x20
-    .dh 0x417E ; TODO adcs r6, r7
-    lsr r2, r1, #0x20
+    .word 0x080A412C ; proven PC/switch data
+    .word 0x080A4140 ; proven PC/switch data
+    .word 0x080A414E ; proven PC/switch data
+    .word 0x080A415C ; proven PC/switch data
+    .word 0x080A4170 ; proven PC/switch data
+    .word 0x080A417E ; proven PC/switch data
     add r0, r4, #0
     bl EXT_080128D4
     ldrb r0, [r5, #0xd]
     cmp r0, #0xc
     bne loc_080A4194
     b loc_080A418E
-    .dh 0x4907 ; gap
-    .dh 0x1C20 ; gap
-    .dh 0xF76E ; gap
-    .dh 0xFB47 ; gap
-    .dh 0x7B60 ; gap
-    .dh 0x3001 ; gap
-    .dh 0x7360 ; gap
-    .dh 0x1C20 ; gap
-    .dh 0xF76E ; gap
-    .dh 0xFBB9 ; gap
-    .dh 0x7B68 ; gap
-    .dh 0x280D ; gap
-    .dh 0xD115 ; gap
-    .dh 0xE011 ; gap
+    ldr r1, [pc, #0x1c]
+    add r0, r4, #0
+    bl EXT_080127E4
+    ldrb r0, [r4, #0xd]
+    add r0, #1
+    strb r0, [r4, #0xd]
+    add r0, r4, #0
+    bl EXT_080128D4
+    ldrb r0, [r5, #0xd]
+    cmp r0, #0xd
+    bne loc_080A4194
+    b loc_080A418E
     .dh 0x0000 ; gap
-    .dh 0x4C01 ; gap
-    .dh 0x0000 ; gap
-    .dh 0x4914 ; gap
-    .dh 0x1C20 ; gap
-    .dh 0xF76E ; gap
-    .dh 0xFB36 ; gap
-    .dh 0x7B60 ; gap
-    .dh 0x3001 ; gap
-    .dh 0x7360 ; gap
-    .dh 0x1C20 ; gap
-    .dh 0xF76E ; gap
-    .dh 0xFBA8 ; gap
-    .dh 0x1C20 ; gap
-    .dh 0x3073 ; gap
-    .dh 0x7800 ; gap
-    .dh 0x2803 ; gap
-    .dh 0xD102 ; gap
+    .word 0x00004C01 ; proven PC/switch data
+    ldr r1, [pc, #0x50]
+    add r0, r4, #0
+    bl EXT_080127E4
+    ldrb r0, [r4, #0xd]
+    add r0, #1
+    strb r0, [r4, #0xd]
+    add r0, r4, #0
+    bl EXT_080128D4
+    add r0, r4, #0
+    add r0, #0x73
+    ldrb r0, [r0]
+    cmp r0, #3
+    bne loc_080A4194
 loc_080A418E:
     ldrb r0, [r4, #0xd]
     add r0, #1

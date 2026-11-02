@@ -14,32 +14,19 @@ loc_080C7F40:
     ldr r0, [r0]
     mov pc, r0
     .dh 0x0000 ; TODO movs r0, r0
-    ldrb r0, [r2, #0x1d]
-    lsr r4, r1, #0x20
-    ldrb r0, [r0, #0x1e]
-    lsr r4, r1, #0x20
-    ldrb r4, [r4, #0x1e]
-    lsr r4, r1, #0x20
-    strh r4, [r3]
-    lsr r4, r1, #0x20
-    strh r4, [r7]
-    lsr r4, r1, #0x20
-    strh r6, [r3, #4]
-    lsr r4, r1, #0x20
-    strh r6, [r3, #4]
-    lsr r4, r1, #0x20
-    strh r6, [r3, #4]
-    lsr r4, r1, #0x20
-    strh r6, [r3, #4]
-    lsr r4, r1, #0x20
-    strh r6, [r3, #4]
-    lsr r4, r1, #0x20
-    strh r6, [r3, #4]
-    lsr r4, r1, #0x20
-    strh r4, [r4, #2]
-    lsr r4, r1, #0x20
-    strh r6, [r3, #4]
-    lsr r4, r1, #0x20
+    .word 0x080C7F50 ; proven PC/switch data
+    .word 0x080C7F80 ; proven PC/switch data
+    .word 0x080C7FA4 ; proven PC/switch data
+    .word 0x080C801C ; proven PC/switch data
+    .word 0x080C803C ; proven PC/switch data
+    .word 0x080C809E ; proven PC/switch data
+    .word 0x080C809E ; proven PC/switch data
+    .word 0x080C809E ; proven PC/switch data
+    .word 0x080C809E ; proven PC/switch data
+    .word 0x080C809E ; proven PC/switch data
+    .word 0x080C809E ; proven PC/switch data
+    .word 0x080C8064 ; proven PC/switch data
+    .word 0x080C809E ; proven PC/switch data
     ldr r0, [pc, #0x80]
     mov r2, #0xc3
     lsl r2, r2, #1
@@ -103,76 +90,69 @@ loc_080C7FE8:
     strb r0, [r4, #0x12]
     mov r0, #0xa
     b loc_080C809C
-    .word 0x0202E790
-    .word 0x0202E190
-    .word 0x0000C308
-    .word 0x0000C310
-    .word 0x0000C30E
-    .word 0x0000C31C
-    .dh 0x1C20 ; gap
-    .dh 0xF74A ; gap
-    .dh 0xFC59 ; gap
-    .dh 0x1C20 ; gap
-    .dh 0x3073 ; gap
-    .dh 0x7800 ; gap
-    .dh 0x2803 ; gap
-    .dh 0xD138 ; gap
-    .dh 0x4902 ; gap
-    .dh 0x1C20 ; gap
-    .dh 0xF74A ; gap
-    .dh 0xFBD8 ; gap
-    .dh 0x2001 ; gap
-    .dh 0xE031 ; gap
-    .dh 0xC31D ; gap
-    .dh 0x0000 ; gap
-    .dh 0x1C20 ; gap
-    .dh 0xF74A ; gap
-    .dh 0xFC49 ; gap
-    .dh 0x69A2 ; gap
-    .dh 0x7A51 ; gap
-    .dh 0x2004 ; gap
-    .dh 0x4008 ; gap
-    .dh 0x2800 ; gap
-    .dh 0xD027 ; gap
-    .dh 0x20FB ; gap
-    .dh 0x4008 ; gap
-    .dh 0x7250 ; gap
-    .dh 0x4902 ; gap
-    .dh 0x1C20 ; gap
-    .dh 0xF74A ; gap
-    .dh 0xFBC4 ; gap
-    .dh 0x2001 ; gap
-    .dh 0xE01D ; gap
-    .dh 0xC30F ; gap
-    .dh 0x0000 ; gap
-    .dh 0x1C20 ; gap
-    .dh 0xF74A ; gap
-    .dh 0xFC35 ; gap
-    .dh 0x7CA0 ; gap
-    .dh 0x2800 ; gap
-    .dh 0xD002 ; gap
-    .dh 0x3801 ; gap
-    .dh 0x74A0 ; gap
-    .dh 0xE013 ; gap
-    .dh 0x6D60 ; gap
-    .dh 0x21E0 ; gap
-    .dh 0x0089 ; gap
-    .dh 0x1840 ; gap
-    .dh 0x6560 ; gap
-    .dh 0x4808 ; gap
-    .dh 0x1C21 ; gap
-    .dh 0x3154 ; gap
-    .dh 0xF74D ; gap
-    .dh 0xF87F ; gap
-    .dh 0x4907 ; gap
-    .dh 0x4288 ; gap
-    .dh 0xD906 ; gap
-    .dh 0x7AA0 ; gap
-    .dh 0x21FE ; gap
-    .dh 0x4001 ; gap
-    .dh 0x72A1 ; gap
-    .dh 0x7B60 ; gap
-    .dh 0x3001 ; gap
+    .word 0x0202E790 ; proven PC/switch data
+    .word 0x0202E190 ; proven PC/switch data
+    .word 0x0000C308 ; proven PC/switch data
+    .word 0x0000C310 ; proven PC/switch data
+    .word 0x0000C30E ; proven PC/switch data
+    .word 0x0000C31C ; proven PC/switch data
+    add r0, r4, #0
+    bl EXT_080128D4
+    add r0, r4, #0
+    add r0, #0x73
+    ldrb r0, [r0]
+    cmp r0, #3
+    bne loc_080C809E
+    ldr r1, [pc, #8]
+    add r0, r4, #0
+    bl EXT_080127E4
+    mov r0, #1
+    b loc_080C809C
+    .word 0x0000C31D ; proven PC/switch data
+    add r0, r4, #0
+    bl EXT_080128D4
+    ldr r2, [r4, #0x18]
+    ldrb r1, [r2, #9]
+    mov r0, #4
+    and r0, r1
+    cmp r0, #0
+    beq loc_080C809E
+    mov r0, #0xfb
+    and r0, r1
+    strb r0, [r2, #9]
+    ldr r1, [pc, #8]
+    add r0, r4, #0
+    bl EXT_080127E4
+    mov r0, #1
+    b loc_080C809C
+    .word 0x0000C30F ; proven PC/switch data
+    add r0, r4, #0
+    bl EXT_080128D4
+    ldrb r0, [r4, #0x12]
+    cmp r0, #0
+    beq loc_080C8076
+    sub r0, #1
+    strb r0, [r4, #0x12]
+    b loc_080C809E
+loc_080C8076:
+    ldr r0, [r4, #0x54]
+    mov r1, #0xe0
+    lsl r1, r1, #2
+    add r0, r0, r1
+    str r0, [r4, #0x54]
+    ldr r0, [pc, #0x20]
+    add r1, r4, #0
+    add r1, #0x54
+    bl EXT_08015188
+    ldr r1, [pc, #0x1c]
+    cmp r0, r1
+    bls loc_080C809E
+    ldrb r0, [r4, #0xa]
+    mov r1, #0xfe
+    and r1, r0
+    strb r1, [r4, #0xa]
+    ldrb r0, [r4, #0xd]
+    add r0, #1
 loc_080C809C:
     strb r0, [r4, #0xd]
 loc_080C809E:

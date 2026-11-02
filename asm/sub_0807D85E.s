@@ -3,26 +3,29 @@
 sub_0807D85E:
     mov r0, #0
     b loc_0807D886
-    .dh 0x7A98 ; gap
-    .dh 0x0900 ; gap
-    .dh 0x2201 ; gap
-    .dh 0x1C11 ; gap
-    .dh 0x4381 ; gap
-    .dh 0x2000 ; gap
-    .dh 0x42AC ; gap
-    .dh 0xDA00 ; gap
-    .dh 0x2001 ; gap
-    .dh 0x4048 ; gap
-    .dh 0x2800 ; gap
-    .dh 0xD004 ; gap
-    .dh 0x2100 ; gap
-    .dh 0x2002 ; gap
-    .dh 0x7358 ; gap
-    .dh 0x7399 ; gap
-    .dh 0xE001 ; gap
-    .dh 0x735A ; gap
+    ldrb r0, [r3, #0xa]
+    lsr r0, r0, #4
+    mov r2, #1
+    add r1, r2, #0
+    bic r1, r0
+    mov r0, #0
+    cmp r4, r5
+    bge loc_0807D874
+    mov r0, #1
+loc_0807D874:
+    eor r0, r1
+    cmp r0, #0
+    beq loc_0807D884
+    mov r1, #0
+    mov r0, #2
+    strb r0, [r3, #0xd]
+    strb r1, [r3, #0xe]
+    b loc_0807D888
+loc_0807D884:
+    strb r2, [r3, #0xd]
 loc_0807D886:
     strb r0, [r3, #0xe]
+loc_0807D888:
     pop {r4, r5}
     pop {r0}
     bx r0

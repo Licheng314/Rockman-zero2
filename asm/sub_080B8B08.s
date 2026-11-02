@@ -42,21 +42,20 @@ loc_080B8B26:
     bl EXT_08012CD0
     strb r4, [r7, #0x11]
     b loc_080B8B78
-    .dh 0x4649 ; gap
-    .dh 0x318C ; gap
-    .dh 0x6808 ; gap
-    .dh 0x2202 ; gap
-    .dh 0x4252 ; gap
-    .dh 0x4010 ; gap
-    .dh 0x6008 ; gap
-    .dh 0x3104 ; gap
-    .dh 0x6808 ; gap
-    .dh 0x4010 ; gap
-    .dh 0x6008 ; gap
-    .dh 0x4648 ; gap
-    .dh 0xF75A ; gap
-    .dh 0xF847 ; gap
-    .dh 0x747E ; gap
+    mov r1, r9
+    add r1, #0x8c
+    ldr r0, [r1]
+    mov r2, #2
+    neg r2, r2
+    and r0, r2
+    str r0, [r1]
+    add r1, #4
+    ldr r0, [r1]
+    and r0, r2
+    str r0, [r1]
+    mov r0, r9
+    bl EXT_08012C04
+    strb r6, [r7, #0x11]
 loc_080B8B78:
     ldrb r0, [r7, #0x12]
     cmp r0, #1
@@ -102,10 +101,10 @@ loc_080B8B80:
     strb r0, [r7, #0xd]
     b loc_080B8D92
     .dh 0x0000 ; gap
-    .word 0x08432D00
-    .word 0x0202E590
-    .word 0x08432D0C
-    .word 0x0202E390
+    .word 0x08432D00 ; proven PC/switch data
+    .word 0x0202E590 ; proven PC/switch data
+    .word 0x08432D0C ; proven PC/switch data
+    .word 0x0202E390 ; proven PC/switch data
 loc_080B8BE4:
     ldrb r1, [r7, #0x12]
     add r0, r1, #1

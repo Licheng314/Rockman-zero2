@@ -27,83 +27,94 @@ loc_080EF204:
     lsl r1, r1, #4
     lsl r3, r3, #4
     b loc_080EF204
-    .dh 0x00E4 ; gap
-    .dh 0x42A1 ; gap
-    .dh 0xD204 ; gap
-    .dh 0x4281 ; gap
-    .dh 0xD202 ; gap
-    .dh 0x0049 ; gap
-    .dh 0x005B ; gap
-    .dh 0xE7F8 ; gap
-    .dh 0x2200 ; gap
-    .dh 0x4288 ; gap
-    .dh 0xD300 ; gap
-    .dh 0x1A40 ; gap
-    .dh 0x084C ; gap
-    .dh 0x42A0 ; gap
-    .dh 0xD305 ; gap
-    .dh 0x1B00 ; gap
-    .dh 0x469C ; gap
-    .dh 0x2401 ; gap
-    .dh 0x41E3 ; gap
-    .dh 0x431A ; gap
-    .dh 0x4663 ; gap
-    .dh 0x088C ; gap
-    .dh 0x42A0 ; gap
-    .dh 0xD305 ; gap
-    .dh 0x1B00 ; gap
-    .dh 0x469C ; gap
-    .dh 0x2402 ; gap
-    .dh 0x41E3 ; gap
-    .dh 0x431A ; gap
-    .dh 0x4663 ; gap
-    .dh 0x08CC ; gap
-    .dh 0x42A0 ; gap
-    .dh 0xD305 ; gap
-    .dh 0x1B00 ; gap
-    .dh 0x469C ; gap
-    .dh 0x2403 ; gap
-    .dh 0x41E3 ; gap
-    .dh 0x431A ; gap
-    .dh 0x4663 ; gap
-    .dh 0x469C ; gap
-    .dh 0x2800 ; gap
-    .dh 0xD003 ; gap
-    .dh 0x091B ; gap
-    .dh 0xD001 ; gap
-    .dh 0x0909 ; gap
-    .dh 0xE7D9 ; gap
-    .dh 0x240E ; gap
-    .dh 0x0724 ; gap
-    .dh 0x4022 ; gap
-    .dh 0xD014 ; gap
-    .dh 0x4663 ; gap
-    .dh 0x2403 ; gap
-    .dh 0x41E3 ; gap
-    .dh 0x421A ; gap
-    .dh 0xD001 ; gap
-    .dh 0x08CC ; gap
-    .dh 0x1900 ; gap
-    .dh 0x4663 ; gap
-    .dh 0x2402 ; gap
-    .dh 0x41E3 ; gap
-    .dh 0x421A ; gap
-    .dh 0xD001 ; gap
-    .dh 0x088C ; gap
-    .dh 0x1900 ; gap
-    .dh 0x4663 ; gap
-    .dh 0x2401 ; gap
-    .dh 0x41E3 ; gap
-    .dh 0x421A ; gap
-    .dh 0xD001 ; gap
-    .dh 0x084C ; gap
-    .dh 0x1900 ; gap
-    .dh 0xBC10 ; gap
-    .dh 0x2C00 ; gap
-    .dh 0xD500 ; gap
-    .dh 0x4240 ; gap
-    .dh 0xBC10 ; gap
-    .dh 0x46F7 ; gap
+    lsl r4, r4, #3
+loc_080EF214:
+    cmp r1, r4
+    bhs loc_080EF222
+    cmp r1, r0
+    bhs loc_080EF222
+    lsl r1, r1, #1
+    lsl r3, r3, #1
+    b loc_080EF214
+loc_080EF222:
+    mov r2, #0
+    cmp r0, r1
+    blo loc_080EF22A
+    sub r0, r0, r1
+loc_080EF22A:
+    lsr r4, r1, #1
+    cmp r0, r4
+    blo loc_080EF23C
+    sub r0, r0, r4
+    mov r12, r3
+    mov r4, #1
+    ror r3, r4
+    orr r2, r3
+    mov r3, r12
+loc_080EF23C:
+    lsr r4, r1, #2
+    cmp r0, r4
+    blo loc_080EF24E
+    sub r0, r0, r4
+    mov r12, r3
+    mov r4, #2
+    ror r3, r4
+    orr r2, r3
+    mov r3, r12
+loc_080EF24E:
+    lsr r4, r1, #3
+    cmp r0, r4
+    blo loc_080EF260
+    sub r0, r0, r4
+    mov r12, r3
+    mov r4, #3
+    ror r3, r4
+    orr r2, r3
+    mov r3, r12
+loc_080EF260:
+    mov r12, r3
+    cmp r0, #0
+    beq loc_080EF26E
+    lsr r3, r3, #4
+    beq loc_080EF26E
+    lsr r1, r1, #4
+    b loc_080EF222
+loc_080EF26E:
+    mov r4, #0xe
+    lsl r4, r4, #0x1c
+    and r2, r4
+    beq loc_080EF2A0
+    mov r3, r12
+    mov r4, #3
+    ror r3, r4
+    tst r2, r3
+    beq loc_080EF284
+    lsr r4, r1, #3
+    add r0, r0, r4
+loc_080EF284:
+    mov r3, r12
+    mov r4, #2
+    ror r3, r4
+    tst r2, r3
+    beq loc_080EF292
+    lsr r4, r1, #2
+    add r0, r0, r4
+loc_080EF292:
+    mov r3, r12
+    mov r4, #1
+    ror r3, r4
+    tst r2, r3
+    beq loc_080EF2A0
+    lsr r4, r1, #1
+    add r0, r0, r4
+loc_080EF2A0:
+    pop {r4}
+    cmp r4, #0
+    bpl loc_080EF2A8
+    neg r0, r0
+loc_080EF2A8:
+    pop {r4}
+    mov pc, lr
 loc_080EF2AC:
     push {lr}
     bl sub_080EF1E4

@@ -14,14 +14,14 @@ from concurrent.futures import ThreadPoolExecutor
 
 import extract_func as extract
 from project_guard import ROOT, writer_lock, transaction_paths, build_checked
-from stage0_inventory import walk_sources
+from stage0_inventory import walk_sources, assert_inventory_current
 
 BASE, END = 0x08000000, 0xF0000
 
 
 def prepare(include_startup):
     inventory=json.loads((ROOT/'build/stage0/inventory.json').read_text(encoding='utf-8'))
-    assert inventory['segments_sha1']==hashlib.sha1((ROOT/'tools/segments.json').read_bytes()).hexdigest(), 'Refresh inventory'
+    assert_inventory_current(inventory)
     old=json.loads((ROOT/'tools/segments.json').read_text(encoding='utf-8'))
     rom=(ROOT/'baserom.gba').read_bytes()
     mask=bytearray(END)

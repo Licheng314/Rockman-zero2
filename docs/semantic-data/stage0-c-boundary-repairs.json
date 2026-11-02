@@ -1,0 +1,41 @@
+{
+  "repairs": [
+    {
+      "name": "Animation_Setup",
+      "old_end": 19356,
+      "new_end": 19354,
+      "elf_extent": 94,
+      "section_extent": 96,
+      "compiled_section_padding_hex": "c046",
+      "rom_alignment_hex": "0000",
+      "padding_segment": {
+        "name": "stage0_alignment_08004B9A",
+        "start": 19354,
+        "end": 19356,
+        "file": "asm/stage0_alignment_08004B9A.s",
+        "kind": "alignment-data"
+      },
+      "manifest": "asm\\Animation_Setup.manifest",
+      "source_sha1": "ac9acb76660a59a4b6f118caa42f4bface5facad"
+    },
+    {
+      "name": "sub_0801E4D8",
+      "old_end": 124148,
+      "new_end": 124146,
+      "elf_extent": 26,
+      "section_extent": 28,
+      "compiled_section_padding_hex": "c046",
+      "rom_alignment_hex": "0000",
+      "padding_segment": {
+        "name": "stage0_alignment_0801E4F2",
+        "start": 124146,
+        "end": 124148,
+        "file": "asm/stage0_alignment_0801E4F2.s",
+        "kind": "alignment-data"
+      },
+      "manifest": "asm\\sub_0801E4D8.manifest",
+      "source_sha1": "664e7e13adca509cd7703abe99ff26d08a2af012"
+    }
+  ],
+  "scope": "Fresh C compilation proves ELF function sizes; section padding may differ from original and must not be integrated as function bytes. ROM alignment is represented separately. No coverage gain or added C functions."
+}

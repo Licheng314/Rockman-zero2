@@ -97,9 +97,9 @@ loc_080833E8:
     add r0, r4, #0
     b loc_08083402
     .dh 0x0000 ; gap
-    .word 0x083410E8
-    .word 0x080EF450
-    .dh 0x6E31 ; gap
+    .word 0x083410E8 ; proven PC/switch data
+    .word 0x080EF450 ; proven PC/switch data
+    ldr r1, [r6, #0x60]
 loc_08083402:
     bl EXT_080EF150
     add r1, r0, #0
@@ -157,9 +157,9 @@ loc_0808342C:
     mov r1, #0xc0
     lsl r1, r1, #4
     b loc_0808347E
-    .word 0x0202E188
-    .word 0x000343FD
-    .word 0x00269EC3
+    .word 0x0202E188 ; proven PC/switch data
+    .word 0x000343FD ; proven PC/switch data
+    .word 0x00269EC3 ; proven PC/switch data
 loc_0808347C:
     ldr r1, [pc, #0x38]
 loc_0808347E:
@@ -192,7 +192,7 @@ loc_08083488:
     strb r2, [r6, #0xd]
     b loc_080834C6
     .dh 0x0000 ; gap
-    .word 0xFFFFF400
+    .word 0xFFFFF400 ; proven PC/switch data
 loc_080834BC:
     mov r0, #5
     strb r0, [r6, #0xd]

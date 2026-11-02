@@ -49,17 +49,17 @@ loc_08035612:
     add r0, r0, r1
     b loc_08035648
     .dh 0x0000 ; gap
-    .word 0x0202E140
-    .word 0x0202EBF0
-    .word 0x0000FFFE
-    .word 0x0202EBB0
-    .word 0x083359B0
-    .word 0x0000FFFF
-    .word 0x083359B4
-    .dh 0x3002 ; gap
-    .dh 0x3301 ; gap
-    .dh 0x2B01 ; gap
-    .dh 0xD802 ; gap
+    .word 0x0202E140 ; proven PC/switch data
+    .word 0x0202EBF0 ; proven PC/switch data
+    .word 0x0000FFFE ; proven PC/switch data
+    .word 0x0202EBB0 ; proven PC/switch data
+    .word 0x083359B0 ; proven PC/switch data
+    .word 0x0000FFFF ; proven PC/switch data
+    .word 0x083359B4 ; proven PC/switch data
+    add r0, #2
+    add r3, #1
+    cmp r3, #1
+    bhi loc_0803564E
 loc_08035648:
     ldrh r1, [r0]
     cmp r2, r1

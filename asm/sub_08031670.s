@@ -27,8 +27,8 @@ loc_08031698:
     lsl r0, r1, #0x18
     asr r0, r0, #0x18
     b loc_080316A6
-    .dh 0x2001 ; gap
-    .dh 0x4240 ; gap
+    mov r0, #1
+    neg r0, r0
 loc_080316A6:
     pop {r4, r5}
     pop {r1}

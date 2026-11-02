@@ -8,7 +8,7 @@ sub_080C3092:
     add r0, r2, #0
     orr r1, r0
     b loc_080C30A6
-    .word 0x00002E02
+    .word 0x00002E02 ; proven PC/switch data
 loc_080C30A4:
     ldr r1, [pc, #8]
 loc_080C30A6:
@@ -16,10 +16,10 @@ loc_080C30A6:
     bl EXT_080127E4
     b loc_080C30BA
     .dh 0x0000 ; gap
-    .word 0x00002F02
-    .dh 0x6D60 ; gap
-    .dh 0x38C0 ; gap
-    .dh 0x6560 ; gap
+    .word 0x00002F02 ; proven PC/switch data
+    ldr r0, [r4, #0x54]
+    sub r0, #0xc0
+    str r0, [r4, #0x54]
 loc_080C30BA:
     ldr r0, [pc, #0x1c]
     add r1, r4, #0
@@ -35,8 +35,8 @@ loc_080C30BA:
     add r0, #1
     strb r0, [r4, #0xd]
     b loc_080C30E6
-    .word 0x0202ED18
-    .word 0x00000FFF
+    .word 0x0202ED18 ; proven PC/switch data
+    .word 0x00000FFF ; proven PC/switch data
 loc_080C30E0:
     add r0, r4, #0
     bl EXT_080BF834

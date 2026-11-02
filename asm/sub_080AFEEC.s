@@ -71,14 +71,14 @@ loc_080AFF0E:
     mov r1, #0
     bl EXT_08002AEC
     b loc_080AFFB6
-    .word 0x0202F8F8
-    .word 0x080EF7B8
-    .word 0x02000F90
-    .word 0x12001200
-    .word 0x01000200
-    .word 0x06000800
-    .word 0x08390EDC
-    .word 0x08390EE8
+    .word 0x0202F8F8 ; proven PC/switch data
+    .word 0x080EF7B8 ; proven PC/switch data
+    .word 0x02000F90 ; proven PC/switch data
+    .word 0x12001200 ; proven PC/switch data
+    .word 0x01000200 ; proven PC/switch data
+    .word 0x06000800 ; proven PC/switch data
+    .word 0x08390EDC ; proven PC/switch data
+    .word 0x08390EE8 ; proven PC/switch data
 loc_080AFFA0:
     mov r2, r8
     ldrb r0, [r2, #0x10]
@@ -103,7 +103,7 @@ loc_080AFFC0:
     beq loc_080AFFDA
     b loc_080B0100
     .dh 0x0000 ; gap
-    .word 0x08345DAC
+    .word 0x08345DAC ; proven PC/switch data
 loc_080AFFD0:
     cmp r4, #2
     beq loc_080B004A
@@ -138,28 +138,29 @@ loc_080AFFFC:
     mov r4, #0xff
     b loc_080B003E
     .dh 0x0000 ; gap
-    .word 0x01000050
-    .dh 0x4642 ; gap
-    .dh 0x7C90 ; gap
-    .dh 0x780A ; gap
-    .dh 0x1A80 ; gap
-    .dh 0x0041 ; gap
-    .dh 0x1809 ; gap
-    .dh 0x00C9 ; gap
-    .dh 0x20FF ; gap
-    .dh 0x1A40 ; gap
-    .dh 0x0400 ; gap
-    .dh 0x0C04 ; gap
-    .dh 0x2800 ; gap
-    .dh 0xDA00 ; gap
-    .dh 0x2400 ; gap
-    .dh 0x2001 ; gap
-    .dh 0x4002 ; gap
-    .dh 0x2A00 ; gap
-    .dh 0xD102 ; gap
-    .dh 0x0420 ; gap
-    .dh 0x4240 ; gap
-    .dh 0x0C04 ; gap
+    .word 0x01000050 ; proven PC/switch data
+    mov r2, r8
+    ldrb r0, [r2, #0x12]
+    ldrb r2, [r1]
+    sub r0, r0, r2
+    lsl r1, r0, #1
+    add r1, r1, r0
+    lsl r1, r1, #3
+    mov r0, #0xff
+    sub r0, r0, r1
+    lsl r0, r0, #0x10
+    lsr r4, r0, #0x10
+    cmp r0, #0
+    bge loc_080B0030
+    mov r4, #0
+loc_080B0030:
+    mov r0, #1
+    and r2, r0
+    cmp r2, #0
+    bne loc_080B003E
+    lsl r0, r4, #0x10
+    neg r0, r0
+    lsr r4, r0, #0x10
 loc_080B003E:
     strh r4, [r3]
     add r3, #2
@@ -195,7 +196,7 @@ loc_080B006C:
     ble loc_080B006C
     b loc_080B00E2
     .dh 0x0000 ; gap
-    .word 0x01000050
+    .word 0x01000050 ; proven PC/switch data
 loc_080B0088:
     mov r0, #0xa0
     lsl r0, r0, #1

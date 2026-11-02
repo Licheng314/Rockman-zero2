@@ -15,12 +15,11 @@ sub_080389D0:
     beq loc_080389FA
     b loc_08038A6C
     .dh 0x0000 ; gap
-    .word 0x0202EBB0
-    .dh 0x2020 ; gap
-    .dh 0xF7E5 ; gap
-    .dh 0xFE5B ; gap
-    .dh 0x2001 ; gap
-    .dh 0xE039 ; gap
+    .word 0x0202EBB0 ; proven PC/switch data
+    mov r0, #0x20
+    bl EXT_0801E6AC
+    mov r0, #1
+    b loc_08038A6E
 loc_080389FA:
     add r0, r4, #0
     bl EXT_08037A60
@@ -52,6 +51,7 @@ loc_08038A1E:
     ldrb r2, [r0]
     cmp r2, #0
     beq loc_08038A64
+loc_08038A36:
     add r1, r7, r3
     ldrb r0, [r1]
     cmp r0, r4
@@ -64,13 +64,13 @@ loc_08038A1E:
     bl EXT_0801E6AC
     b loc_08038A6C
     .dh 0x0000 ; gap
-    .word 0x00000206
-    .word 0x083359A4
-    .word 0x083359A6
-    .dh 0x3301 ; gap
-    .dh 0x3A01 ; gap
-    .dh 0x2A00 ; gap
-    .dh 0xD1E8 ; gap
+    .word 0x00000206 ; proven PC/switch data
+    .word 0x083359A4 ; proven PC/switch data
+    .word 0x083359A6 ; proven PC/switch data
+    add r3, #1
+    sub r2, #1
+    cmp r2, #0
+    bne loc_08038A36
 loc_08038A64:
     add r12, r6
     add r5, #1
@@ -78,6 +78,7 @@ loc_08038A64:
     ble loc_08038A1E
 loc_08038A6C:
     mov r0, #0
+loc_08038A6E:
     pop {r3, r4, r5}
     mov r8, r3
     mov r9, r4

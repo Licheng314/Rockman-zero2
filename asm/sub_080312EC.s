@@ -34,9 +34,9 @@ loc_08031324:
     add r3, r0, r4
     add r0, r3, #0
     b loc_08031334
-    .word 0x083359A4
-    .dh 0x2001 ; gap
-    .dh 0x4240 ; gap
+    .word 0x083359A4 ; proven PC/switch data
+    mov r0, #1
+    neg r0, r0
 loc_08031334:
     pop {r4, r5}
     pop {r1}

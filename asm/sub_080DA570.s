@@ -21,27 +21,27 @@ loc_080DA58A:
     bl EXT_080DA5D0
     b loc_080DA5C4
     .dh 0x0000 ; gap
-    .word 0x0834B9BC
-    .dh 0x4803 ; gap
-    .dh 0x7901 ; gap
-    .dh 0x2002 ; gap
-    .dh 0x4008 ; gap
-    .dh 0x2800 ; gap
-    .dh 0xD005 ; gap
-    .dh 0x4901 ; gap
-    .dh 0xE004 ; gap
-    .dh 0xEBB0 ; gap
-    .dh 0x0202 ; gap
-    .dh 0xB96C ; gap
-    .dh 0x0834 ; gap
-    .dh 0x4905 ; gap
-    .dh 0x00D8 ; gap
-    .dh 0x1840 ; gap
-    .dh 0x6801 ; gap
-    .dh 0x7960 ; gap
-    .dh 0x0300 ; gap
-    .dh 0x1809 ; gap
-    .dh 0x6551 ; gap
+    .word 0x0834B9BC ; proven PC/switch data
+    ldr r0, [pc, #0xc]
+    ldrb r1, [r0, #4]
+    mov r0, #2
+    and r0, r1
+    cmp r0, #0
+    beq loc_080DA5B4
+    ldr r1, [pc, #4]
+    b loc_080DA5B6
+    .word 0x0202EBB0 ; proven PC/switch data
+    .word 0x0834B96C ; proven PC/switch data
+loc_080DA5B4:
+    ldr r1, [pc, #0x14]
+loc_080DA5B6:
+    lsl r0, r3, #3
+    add r0, r0, r1
+    ldr r1, [r0]
+    ldrb r0, [r4, #5]
+    lsl r0, r0, #0xc
+    add r1, r1, r0
+    str r1, [r2, #0x54]
 loc_080DA5C4:
     pop {r4}
     pop {r0}

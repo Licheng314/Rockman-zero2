@@ -17,19 +17,20 @@ sub_080EE5C0:
     mov r0, #0xf
     strb r0, [r1, #0x1b]
     b loc_080EE5FA
-    .dh 0x0E40 ; gap
-    .dh 0x42A0 ; gap
-    .dh 0xD302 ; gap
-    .dh 0x20F0 ; gap
-    .dh 0x76C8 ; gap
-    .dh 0xE006 ; gap
-    .dh 0x20FF ; gap
-    .dh 0x76C8 ; gap
-    .dh 0x78CA ; gap
-    .dh 0x788B ; gap
-    .dh 0x18D0 ; gap
-    .dh 0x0900 ; gap
-    .dh 0xE007 ; gap
+    lsr r0, r0, #0x19
+    cmp r0, r4
+    blo loc_080EE5EC
+    mov r0, #0xf0
+    strb r0, [r1, #0x1b]
+    b loc_080EE5FA
+loc_080EE5EC:
+    mov r0, #0xff
+    strb r0, [r1, #0x1b]
+    ldrb r2, [r1, #3]
+    ldrb r3, [r1, #2]
+    add r0, r2, r3
+    lsr r0, r0, #4
+    b loc_080EE60A
 loc_080EE5FA:
     ldrb r2, [r1, #3]
     ldrb r3, [r1, #2]
@@ -39,6 +40,7 @@ loc_080EE5FA:
     cmp r0, #0xf
     bls loc_080EE60C
     mov r0, #0xf
+loc_080EE60A:
     strb r0, [r1, #0xa]
 loc_080EE60C:
     ldrb r2, [r1, #6]

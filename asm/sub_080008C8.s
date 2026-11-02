@@ -25,11 +25,11 @@ sub_080008C8:
     bhs #0x8000900
     mov r0, #0
     b loc_08000906
-    .word 0x03000380
-    .word 0x00001202
-    .dh 0x1820 ; gap
-    .dh 0x8028 ; gap
-    .dh 0x1C10 ; gap
+    .word 0x03000380 ; proven PC/switch data
+    .word 0x00001202 ; proven PC/switch data
+    add r0, r4, r0
+    strh r0, [r5]
+    add r0, r2, #0
 loc_08000906:
     pop {r4, r5}
     pop {r1}

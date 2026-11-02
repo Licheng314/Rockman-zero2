@@ -30,8 +30,8 @@ loc_08037CB2:
     lsl r0, r1, #0x18
     asr r0, r0, #0x18
     b loc_08037CC0
-    .dh 0x2001 ; gap
-    .dh 0x4240 ; gap
+    mov r0, #1
+    neg r0, r0
 loc_08037CC0:
     pop {r4, r5}
     pop {r1}

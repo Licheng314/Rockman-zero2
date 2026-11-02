@@ -47,32 +47,32 @@ sub_08008BB0:
     ldr r6, [r4, #8]
     add r0, r7, #0
     b loc_08008C44
-    .word 0x0831348C
-    .word 0x08312C8C
-    .dh 0x6F69 ; gap
-    .dh 0x880B ; gap
-    .dh 0x4098 ; gap
-    .dh 0x1880 ; gap
-    .dh 0x0040 ; gap
-    .dh 0x1840 ; gap
-    .dh 0x8901 ; gap
-    .dh 0x2002 ; gap
-    .dh 0x464A ; gap
-    .dh 0x1A80 ; gap
-    .dh 0x0080 ; gap
-    .dh 0x4101 ; gap
-    .dh 0x200F ; gap
-    .dh 0x4001 ; gap
-    .dh 0x6F2A ; gap
-    .dh 0x0048 ; gap
-    .dh 0x1840 ; gap
-    .dh 0x0080 ; gap
-    .dh 0x1880 ; gap
-    .dh 0x6807 ; gap
-    .dh 0x6843 ; gap
-    .dh 0x4698 ; gap
-    .dh 0x6886 ; gap
-    .dh 0x6820 ; gap
+    .word 0x0831348C ; proven PC/switch data
+    .word 0x08312C8C ; proven PC/switch data
+    ldr r1, [r5, #0x74]
+    ldrh r3, [r1]
+    lsl r0, r3
+    add r0, r0, r2
+    lsl r0, r0, #1
+    add r0, r0, r1
+    ldrh r1, [r0, #8]
+    mov r0, #2
+    mov r2, r9
+    sub r0, r0, r2
+    lsl r0, r0, #2
+    asr r1, r0
+    mov r0, #0xf
+    and r1, r0
+    ldr r2, [r5, #0x70]
+    lsl r0, r1, #1
+    add r0, r0, r1
+    lsl r0, r0, #2
+    add r0, r0, r2
+    ldr r7, [r0]
+    ldr r3, [r0, #4]
+    mov r8, r3
+    ldr r6, [r0, #8]
+    ldr r0, [r4]
 loc_08008C44:
     cmp r0, r7
     bne loc_08008C4E
@@ -140,8 +140,8 @@ loc_08008CA6:
     ldrh r1, [r2]
     orr r0, r1
     b loc_08008CD4
-    .word 0x02000F94
-    .word 0x00006044
+    .word 0x02000F94 ; proven PC/switch data
+    .word 0x00006044 ; proven PC/switch data
 loc_08008CCC:
     ldr r2, [pc, #0x28]
     lsl r1, r6, #8

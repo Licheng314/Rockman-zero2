@@ -9,17 +9,17 @@ sub_080832E2:
     strb r0, [r4, #0xd]
     strb r5, [r4, #0xe]
     b loc_0808330A
-    .dh 0x1C20 ; gap
-    .dh 0x30B8 ; gap
-    .dh 0x6DA1 ; gap
-    .dh 0x6800 ; gap
-    .dh 0x4281 ; gap
-    .dh 0xDD04 ; gap
-    .dh 0x65A0 ; gap
-    .dh 0x2100 ; gap
-    .dh 0x200C ; gap
-    .dh 0x7360 ; gap
-    .dh 0x73A1 ; gap
+    add r0, r4, #0
+    add r0, #0xb8
+    ldr r1, [r4, #0x58]
+    ldr r0, [r0]
+    cmp r1, r0
+    ble loc_0808330A
+    str r0, [r4, #0x58]
+    mov r1, #0
+    mov r0, #0xc
+    strb r0, [r4, #0xd]
+    strb r1, [r4, #0xe]
 loc_0808330A:
     pop {r4, r5}
     pop {r0}

@@ -11,6 +11,7 @@ import re
 import struct
 
 from project_guard import ROOT, EXPECT, writer_lock, run
+from stage0_inventory import assert_inventory_current
 
 
 def main():
@@ -21,7 +22,7 @@ def main():
     with writer_lock():
         evidence=json.loads((ROOT/'docs/semantic-data'/args.evidence_name).read_text(encoding='utf-8'))
         current=json.loads((ROOT/'build/stage0/inventory.json').read_text(encoding='utf-8'))
-        assert current['segments_sha1']==hashlib.sha1((ROOT/'tools/segments.json').read_bytes()).hexdigest()
+        assert_inventory_current(current)
         segments=json.loads((ROOT/'tools/segments.json').read_text(encoding='utf-8'))
         formal={s['name']:s for s in segments}
         switches={s['dispatch']:s for s in current['bounded_switches']}

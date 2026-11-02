@@ -8,64 +8,65 @@ sub_0807424A:
     ldr r0, [r0, #0x28]
     ldrb r0, [r0, #0x1c]
     b loc_080742CC
-    .dh 0xA20F ; gap
-    .dh 0x0000 ; gap
-    .dh 0x4906 ; gap
-    .dh 0x1C20 ; gap
-    .dh 0xF79E ; gap
-    .dh 0xFAC0 ; gap
-    .dh 0x7AB0 ; gap
-    .dh 0x0902 ; gap
-    .dh 0x2001 ; gap
-    .dh 0x4002 ; gap
-    .dh 0x2A00 ; gap
-    .dh 0xD005 ; gap
-    .dh 0x7AA0 ; gap
-    .dh 0x2110 ; gap
-    .dh 0x4308 ; gap
-    .dh 0xE004 ; gap
-    .dh 0xA214 ; gap
-    .dh 0x0000 ; gap
-    .dh 0x7AA1 ; gap
-    .dh 0x20EF ; gap
-    .dh 0x4008 ; gap
-    .dh 0x72A0 ; gap
-    .dh 0x1C20 ; gap
-    .dh 0x304C ; gap
-    .dh 0x7002 ; gap
-    .dh 0x1C23 ; gap
-    .dh 0x334A ; gap
-    .dh 0x2501 ; gap
-    .dh 0x0112 ; gap
-    .dh 0x7819 ; gap
-    .dh 0x2011 ; gap
-    .dh 0x4240 ; gap
-    .dh 0x4008 ; gap
-    .dh 0x4310 ; gap
-    .dh 0x7018 ; gap
-    .dh 0x6D70 ; gap
-    .dh 0x6DB1 ; gap
-    .dh 0x6560 ; gap
-    .dh 0x65A1 ; gap
-    .dh 0x7AB1 ; gap
-    .dh 0x2010 ; gap
-    .dh 0x4008 ; gap
-    .dh 0x2800 ; gap
-    .dh 0xD004 ; gap
-    .dh 0x2040 ; gap
-    .dh 0x4240 ; gap
-    .dh 0x65E0 ; gap
-    .dh 0x6665 ; gap
-    .dh 0xE003 ; gap
-    .dh 0x2040 ; gap
-    .dh 0x65E0 ; gap
-    .dh 0x3841 ; gap
-    .dh 0x6660 ; gap
-    .dh 0x7AE0 ; gap
-    .dh 0x2110 ; gap
-    .dh 0x4301 ; gap
-    .dh 0x72E1 ; gap
-    .dh 0x7F30 ; gap
+    .word 0x0000A20F ; proven PC/switch data
+    ldr r1, [pc, #0x18]
+    add r0, r4, #0
+    bl EXT_080127E4
+    ldrb r0, [r6, #0xa]
+    lsr r2, r0, #4
+    mov r0, #1
+    and r2, r0
+    cmp r2, #0
+    beq loc_0807427C
+    ldrb r0, [r4, #0xa]
+    mov r1, #0x10
+    orr r0, r1
+    b loc_08074282
+    .word 0x0000A214 ; proven PC/switch data
+loc_0807427C:
+    ldrb r1, [r4, #0xa]
+    mov r0, #0xef
+    and r0, r1
+loc_08074282:
+    strb r0, [r4, #0xa]
+    add r0, r4, #0
+    add r0, #0x4c
+    strb r2, [r0]
+    add r3, r4, #0
+    add r3, #0x4a
+    mov r5, #1
+    lsl r2, r2, #4
+    ldrb r1, [r3]
+    mov r0, #0x11
+    neg r0, r0
+    and r0, r1
+    orr r0, r2
+    strb r0, [r3]
+    ldr r0, [r6, #0x54]
+    ldr r1, [r6, #0x58]
+    str r0, [r4, #0x54]
+    str r1, [r4, #0x58]
+    ldrb r1, [r6, #0xa]
+    mov r0, #0x10
+    and r0, r1
+    cmp r0, #0
+    beq loc_080742BA
+    mov r0, #0x40
+    neg r0, r0
+    str r0, [r4, #0x5c]
+    str r5, [r4, #0x64]
+    b loc_080742C2
+loc_080742BA:
+    mov r0, #0x40
+    str r0, [r4, #0x5c]
+    sub r0, #0x41
+    str r0, [r4, #0x64]
+loc_080742C2:
+    ldrb r0, [r4, #0xb]
+    mov r1, #0x10
+    orr r1, r0
+    strb r1, [r4, #0xb]
+    ldrb r0, [r6, #0x1c]
 loc_080742CC:
     strb r0, [r4, #0x1d]
     add r0, r4, #0

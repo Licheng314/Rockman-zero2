@@ -31,8 +31,8 @@ sub_08035984:
     beq loc_080359CA
     mov r4, #1
     b loc_080359CA
-    .word 0x08335B18
-    .word 0x00000195
+    .word 0x08335B18 ; proven PC/switch data
+    .word 0x00000195 ; proven PC/switch data
 loc_080359C8:
     mov r4, #0
 loc_080359CA:
@@ -90,10 +90,10 @@ loc_08035A1C:
     add r0, r6, r5
     ldrb r2, [r0]
     b loc_08035A36
-    .dh 0x1E50 ; gap
-    .dh 0x2803 ; gap
-    .dh 0xD800 ; gap
-    .dh 0x2200 ; gap
+    sub r0, r2, #1
+    cmp r0, #3
+    bhi loc_08035A36
+    mov r2, #0
 loc_08035A36:
     add r0, r2, #0
     pop {r4, r5, r6}

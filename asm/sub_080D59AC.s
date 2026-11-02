@@ -37,13 +37,13 @@ sub_080D59AC:
     ldrb r4, [r1]
     add r6, r0, #0
     b loc_080D5A06
-    .word 0x0834A1D4
-    .word 0x0000024A
-    .dh 0x3401 ; gap
-    .dh 0x19F0 ; gap
-    .dh 0x7004 ; gap
-    .dh 0x2101 ; gap
-    .dh 0x4489 ; gap
+    .word 0x0834A1D4 ; proven PC/switch data
+    .word 0x0000024A ; proven PC/switch data
+    add r4, #1
+    add r0, r6, r7
+    strb r4, [r0]
+    mov r1, #1
+    add r9, r1
 loc_080D5A06:
     mov r0, r8
     add r1, r5, #0

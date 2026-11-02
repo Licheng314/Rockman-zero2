@@ -76,8 +76,8 @@ loc_080DB6C4:
     bl EXT_080127E4
     b loc_080DB6FA
     .dh 0x0000 ; gap
-    .word 0x00000206
-    .word 0x0834BC5C
+    .word 0x00000206 ; proven PC/switch data
+    .word 0x0834BC5C ; proven PC/switch data
 loc_080DB6EC:
     ldr r0, [pc, #0x14]
     lsl r1, r4, #1
@@ -90,12 +90,12 @@ loc_080DB6FA:
     bl EXT_080128D4
     b loc_080DB72A
     .dh 0x0000 ; gap
-    .word 0x0834BC44
-    .dh 0x7AA9 ; gap
-    .dh 0x20FE ; gap
-    .dh 0x4008 ; gap
-    .dh 0x72A8 ; gap
-    .dh 0xE00B ; gap
+    .word 0x0834BC44 ; proven PC/switch data
+    ldrb r1, [r5, #0xa]
+    mov r0, #0xfe
+    and r0, r1
+    strb r0, [r5, #0xa]
+    b loc_080DB72A
 loc_080DB712:
     ldr r1, [pc, #0x24]
     ldrb r0, [r5, #9]

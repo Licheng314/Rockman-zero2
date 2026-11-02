@@ -15,9 +15,9 @@ sub_080D58A8:
     mov r0, #1
     neg r0, r0
     b loc_080D58CC
-    .word 0x0834A5AC
-    .dh 0x0608 ; gap
-    .dh 0x1600 ; gap
+    .word 0x0834A5AC ; proven PC/switch data
+    lsl r0, r1, #0x18
+    asr r0, r0, #0x18
 loc_080D58CC:
     pop {r1}
     bx r1

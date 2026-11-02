@@ -48,7 +48,7 @@ loc_0802267C:
     str r4, [r0, #0x40]
     str r5, [r0, #0x44]
     b loc_08022696
-    .dh 0x2300 ; gap
+    mov r3, #0
 loc_08022696:
     lsl r0, r3, #0x10
     lsr r0, r0, #0x10

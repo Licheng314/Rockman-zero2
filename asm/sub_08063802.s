@@ -2,13 +2,13 @@
 .thumb
 sub_08063802:
     b loc_08063812
-    .dh 0x1C20 ; gap
-    .dh 0x30C8 ; gap
-    .dh 0x6800 ; gap
-    .dh 0x4A18 ; gap
-    .dh 0x1880 ; gap
-    .dh 0x6560 ; gap
-    .dh 0x2008 ; gap
+    add r0, r4, #0
+    add r0, #0xc8
+    ldr r0, [r0]
+    ldr r2, [pc, #0x60]
+    add r0, r0, r2
+    str r0, [r4, #0x54]
+    mov r0, #8
 loc_08063812:
     str r0, [r4, #0x64]
     mov r0, #0

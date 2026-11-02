@@ -9,19 +9,16 @@ sub_0808109A:
     add r0, r4, #0
     bl EXT_08080C64
     b loc_080810C6
-    .dh 0x0C84 ; gap
-    .dh 0x0834 ; gap
-    .dh 0xD990 ; gap
-    .dh 0x0833 ; gap
-    .dh 0x6AE0 ; gap
-    .dh 0xF79D ; gap
-    .dh 0xFA0F ; gap
-    .dh 0x2800 ; gap
-    .dh 0xD003 ; gap
-    .dh 0x62E5 ; gap
-    .dh 0x2002 ; gap
-    .dh 0x7360 ; gap
-    .dh 0x73A5 ; gap
+    .word 0x08340C84 ; proven PC/switch data
+    .word 0x0833D990 ; proven PC/switch data
+    ldr r0, [r4, #0x2c]
+    bl EXT_0801E4D8
+    cmp r0, #0
+    beq loc_080810C6
+    str r5, [r4, #0x2c]
+    mov r0, #2
+    strb r0, [r4, #0xd]
+    strb r5, [r4, #0xe]
 loc_080810C6:
     pop {r4, r5}
     pop {r0}

@@ -46,9 +46,9 @@ sub_08028BD8:
     strb r5, [r1]
     b loc_08028C3C
     .dh 0x0000 ; gap
-    .word 0xFFFFFE80
-    .dh 0x38FF ; gap
-    .dh 0x7008 ; gap
+    .word 0xFFFFFE80 ; proven PC/switch data
+    sub r0, #0xff
+    strb r0, [r1]
 loc_08028C3C:
     add r0, r4, #0
     bl EXT_08028C48

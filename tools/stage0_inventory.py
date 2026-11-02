@@ -14,9 +14,27 @@ import struct
 from capstone import Cs, CS_ARCH_ARM, CS_MODE_THUMB
 from thumb_v4 import valid_thumb1
 from stage0_switches import bounded_switches
+from project_guard import writer_lock
 
 ROOT = Path(__file__).resolve().parents[1]
 BASE, END = 0x08000000, 0xF0000
+
+
+def source_fingerprint(segments, root=ROOT):
+    """Address ranges alone cannot detect changed raw/instruction source text."""
+    digest=hashlib.sha256()
+    for segment in sorted(segments,key=lambda s:s['start']):
+        source=root/segment['file']
+        for path in (source,source.with_suffix('.manifest')):
+            digest.update(path.relative_to(root).as_posix().encode('utf-8')+b'\0')
+            digest.update(hashlib.sha256(path.read_bytes()).digest() if path.exists() else b'missing')
+    return digest.hexdigest()
+
+
+def assert_inventory_current(snapshot):
+    assert snapshot['segments_sha1']==hashlib.sha1((ROOT/'tools/segments.json').read_bytes()).hexdigest(), 'Refresh inventory: ranges changed'
+    segments=json.loads((ROOT/'tools/segments.json').read_text(encoding='utf-8'))
+    assert snapshot.get('source_fingerprint')==source_fingerprint(segments), 'Refresh inventory: source or manifest changed'
 
 
 def walk_sources(instructions, seeds, rom):
@@ -74,7 +92,7 @@ def inventory():
     for s in segments:
         source = (ROOT/s['file']).read_text(encoding='utf-8')
         manifest = (ROOT/s['file']).with_suffix('.manifest')
-        if s.get('kind') in ('arm-code','cartridge-header','literal-pool','switch-table'):
+        if s.get('kind') in ('arm-code','cartridge-header','literal-pool','switch-table','alignment-data'):
             skipped[s['kind']] += 1
             continue
         if 'C 匹配产物' in source:
@@ -163,6 +181,7 @@ def inventory():
         index = bisect_right(gap_starts, target)-1
         records[index]['fallthrough_entries'].append(dict(offset=target, callers=callers))
     result = {'segments_sha1': hashlib.sha1((ROOT/'tools/segments.json').read_bytes()).hexdigest(),
+              'source_fingerprint': source_fingerprint(segments),
               'formal_segments': len(segments), 'formal_bytes': sum(covered),
               'uncovered_bytes': END-sum(covered), 'gap_count': len(gaps),
               'source_backed_instructions': len(instructions), 'skipped': dict(skipped),
@@ -179,7 +198,8 @@ def inventory():
 
 
 if __name__ == '__main__':
-    result = inventory()
+    with writer_lock():
+        result = inventory()
     out = ROOT/'build/stage0'; out.mkdir(parents=True, exist_ok=True)
     (out/'inventory.json').write_text(json.dumps(result, indent=2)+'\n', encoding='utf-8')
     summary={k:v for k,v in result.items() if k not in ('gaps','instructions','bounded_switches','formal_switch_targets_missing_decoded_source')}

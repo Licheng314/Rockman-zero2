@@ -88,6 +88,7 @@ class RecoveryTests(unittest.TestCase):
     def test_failed_build_keeps_last_verified_rom(self):
         with tempfile.TemporaryDirectory() as folder:
             root=Path(folder);(root/'build').mkdir()
+            (root/'tools').mkdir();(root/'tools/segments.json').write_text('[]')
             (root/'baserom.gba').write_bytes(b'baseline')
             (root/'build/rmz2.gba').write_bytes(b'last verified output')
             (root/'build.asm').write_text('.create "build/rmz2.gba", 0x08000000',encoding='utf-8')

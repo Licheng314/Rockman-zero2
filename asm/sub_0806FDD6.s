@@ -1,7 +1,8 @@
-; sub_0806FDD6 @ 0x0806FDD6-0806FF42  (自动生成, 经往返验证)
+; block_0806FDD4: repaired complete Thumb BL; sub_0806FDD6 was a false half-instruction entry.
 .thumb
-sub_0806FDD6:
-    .dh 0xFF92, 0x0400 ; TODO vraddhn.i32 d0, q1, q0
+block_0806FDD4:
+    bl EXT_08008CFC
+    lsl r0, r0, #0x10
     ldr r2, [sp, #0x10]
     cmp r0, #0
     beq loc_0806FE28

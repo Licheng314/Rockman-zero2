@@ -14,123 +14,108 @@ loc_0801C936:
     add r0, r0, r1
     ldr r0, [r0]
     mov pc, r0
-    .dh 0xC944 ; TODO ldm r1!, {r2, r6}
-    lsr r1, r0, #0x20
-    .dh 0xC964 ; TODO ldm r1!, {r2, r5, r6}
-    lsr r1, r0, #0x20
-    .dh 0xC970 ; TODO ldm r1!, {r4, r5, r6}
-    lsr r1, r0, #0x20
-    .dh 0xC97A ; TODO ldm r1, {r1, r3, r4, r5, r6}
-    lsr r1, r0, #0x20
-    .dh 0xC990 ; TODO ldm r1!, {r4, r7}
-    lsr r1, r0, #0x20
-    .dh 0xC9A6 ; TODO ldm r1, {r1, r2, r5, r7}
-    lsr r1, r0, #0x20
-    .dh 0xC9CC ; TODO ldm r1!, {r2, r3, r6, r7}
-    lsr r1, r0, #0x20
-    .dh 0xCA00 ; gap
-    .dh 0x0801 ; gap
-    .dh 0xCA1C ; gap
-    .dh 0x0801 ; gap
-    .dh 0x68E1 ; gap
-    .dh 0x8888 ; gap
-    .dh 0x8849 ; gap
-    .dh 0xF0C2 ; gap
-    .dh 0xFAF7 ; gap
-    .dh 0xE05A ; gap
-    .dh 0x68E0 ; gap
-    .dh 0x8880 ; gap
-    .dh 0xF0C2 ; gap
-    .dh 0xFAEA ; gap
-    .dh 0xE055 ; gap
-    .dh 0x4804 ; gap
-    .dh 0x8840 ; gap
-    .dh 0x2800 ; gap
-    .dh 0xD051 ; gap
-    .dh 0x68E0 ; gap
-    .dh 0x3808 ; gap
-    .dh 0x60E0 ; gap
-    .dh 0x2001 ; gap
-    .dh 0xE04D ; gap
-    .dh 0xF658 ; gap
-    .dh 0x0202 ; gap
-    .dh 0x68E2 ; gap
-    .dh 0x2102 ; gap
-    .dh 0x5E50 ; gap
-    .dh 0x0040 ; gap
-    .dh 0x23AE ; gap
-    .dh 0x005B ; gap
-    .dh 0x18E1 ; gap
-    .dh 0x1809 ; gap
-    .dh 0x6850 ; gap
-    .dh 0x8008 ; gap
-    .dh 0xE03F ; gap
-    .dh 0x68E2 ; gap
-    .dh 0x2102 ; gap
-    .dh 0x5E50 ; gap
-    .dh 0x0040 ; gap
-    .dh 0x23AE ; gap
-    .dh 0x005B ; gap
-    .dh 0x18E5 ; gap
-    .dh 0x1829 ; gap
-    .dh 0x8808 ; gap
-    .dh 0x4E03 ; gap
-    .dh 0x42B0 ; gap
-    .dh 0xD033 ; gap
-    .dh 0x8891 ; gap
-    .dh 0xF0C2 ; gap
-    .dh 0xFACC ; gap
-    .dh 0xE010 ; gap
+    .word 0x0801C944 ; proven PC/switch data
+    .word 0x0801C964 ; proven PC/switch data
+    .word 0x0801C970 ; proven PC/switch data
+    .word 0x0801C97A ; proven PC/switch data
+    .word 0x0801C990 ; proven PC/switch data
+    .word 0x0801C9A6 ; proven PC/switch data
+    .word 0x0801C9CC ; proven PC/switch data
+    .word 0x0801CA00 ; proven PC/switch data
+    .word 0x0801CA1C ; proven PC/switch data
+    ldr r1, [r4, #0xc]
+    ldrh r0, [r1, #4]
+    ldrh r1, [r1, #2]
+    bl EXT_080DEF5C
+    b loc_0801CA26
+    ldr r0, [r4, #0xc]
+    ldrh r0, [r0, #4]
+    bl EXT_080DEF4C
+    b loc_0801CA26
+    ldr r0, [pc, #0x10]
+    ldrh r0, [r0, #2]
+    cmp r0, #0
+    beq loc_0801CA26
+    ldr r0, [r4, #0xc]
+    sub r0, #8
+    str r0, [r4, #0xc]
+    mov r0, #1
+    b loc_0801CA28
+    .word 0x0202F658 ; proven PC/switch data
+    ldr r2, [r4, #0xc]
+    mov r1, #2
+    ldrsh r0, [r2, r1]
+    lsl r0, r0, #1
+    mov r3, #0xae
+    lsl r3, r3, #1
+    add r1, r4, r3
+    add r1, r1, r0
+    ldr r0, [r2, #4]
+    strh r0, [r1]
+    b loc_0801CA26
+    ldr r2, [r4, #0xc]
+    mov r1, #2
+    ldrsh r0, [r2, r1]
+    lsl r0, r0, #1
+    mov r3, #0xae
+    lsl r3, r3, #1
+    add r5, r4, r3
+    add r1, r5, r0
+    ldrh r0, [r1]
+    ldr r6, [pc, #0xc]
+    cmp r0, r6
+    beq loc_0801CA26
+    ldrh r1, [r2, #4]
+    bl EXT_080DEF5C
+    b loc_0801C9E8
     .dh 0x0000 ; gap
-    .dh 0xFFFF ; gap
+    .word 0x0000FFFF ; proven PC/switch data
+    ldr r0, [r4, #0xc]
+    mov r3, #2
+    ldrsh r0, [r0, r3]
+    lsl r0, r0, #1
+    mov r1, #0xae
+    lsl r1, r1, #1
+    add r5, r4, r1
+    add r1, r5, r0
+    ldrh r0, [r1]
+    ldr r6, [pc, #0x1c]
+    cmp r0, r6
+    beq loc_0801CA26
+    bl EXT_080DEF4C
+loc_0801C9E8:
+    ldr r0, [r4, #0xc]
+    mov r2, #2
+    ldrsh r1, [r0, r2]
+    lsl r1, r1, #1
+    add r1, r5, r1
+    ldrh r2, [r1]
+    add r0, r6, #0
+    orr r0, r2
+    strh r0, [r1]
+    b loc_0801CA26
+    .word 0x0000FFFF ; proven PC/switch data
+    ldr r0, [r4, #0xc]
+    mov r3, #2
+    ldrsh r0, [r0, r3]
+    lsl r0, r0, #1
+    mov r2, #0xae
+    lsl r2, r2, #1
+    add r1, r4, r2
+    add r1, r1, r0
+    ldr r0, [pc, #4]
+    strh r0, [r1]
+    b loc_0801CA26
     .dh 0x0000 ; gap
-    .dh 0x68E0 ; gap
-    .dh 0x2302 ; gap
-    .dh 0x5EC0 ; gap
-    .dh 0x0040 ; gap
-    .dh 0x21AE ; gap
-    .dh 0x0049 ; gap
-    .dh 0x1865 ; gap
-    .dh 0x1829 ; gap
-    .dh 0x8808 ; gap
-    .dh 0x4E07 ; gap
-    .dh 0x42B0 ; gap
-    .dh 0xD020 ; gap
-    .dh 0xF0C2 ; gap
-    .dh 0xFAB2 ; gap
-    .dh 0x68E0 ; gap
-    .dh 0x2202 ; gap
-    .dh 0x5E81 ; gap
-    .dh 0x0049 ; gap
-    .dh 0x1869 ; gap
-    .dh 0x880A ; gap
-    .dh 0x1C30 ; gap
-    .dh 0x4310 ; gap
-    .dh 0x8008 ; gap
-    .dh 0xE014 ; gap
-    .dh 0xFFFF ; gap
-    .dh 0x0000 ; gap
-    .dh 0x68E0 ; gap
-    .dh 0x2302 ; gap
-    .dh 0x5EC0 ; gap
-    .dh 0x0040 ; gap
-    .dh 0x22AE ; gap
-    .dh 0x0052 ; gap
-    .dh 0x18A1 ; gap
-    .dh 0x1809 ; gap
-    .dh 0x4801 ; gap
-    .dh 0x8008 ; gap
-    .dh 0xE007 ; gap
-    .dh 0x0000 ; gap
-    .dh 0xFFFF ; gap
-    .dh 0x0000 ; gap
-    .dh 0x4A04 ; gap
-    .dh 0x8811 ; gap
-    .dh 0x2002 ; gap
-    .dh 0x4308 ; gap
-    .dh 0x8010 ; gap
+    .word 0x0000FFFF ; proven PC/switch data
+    ldr r2, [pc, #0x10]
+    ldrh r1, [r2]
+    mov r0, #2
+    orr r0, r1
+    strh r0, [r2]
 loc_0801CA26:
     mov r0, #0
+loc_0801CA28:
     pop {r4, r5, r6}
     pop {r1}
     bx r1

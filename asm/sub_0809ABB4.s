@@ -26,13 +26,13 @@ sub_0809ABB4:
     ldrb r0, [r1]
     b loc_0809ABFC
     .dh 0x0000 ; gap
-    .word 0x0202E130
-    .word 0xFFFFF000
-    .word 0x083436A4
-    .dh 0x7A0A ; gap
-    .dh 0x4290 ; gap
-    .dh 0xD900 ; gap
-    .dh 0x7A08 ; gap
+    .word 0x0202E130 ; proven PC/switch data
+    .word 0xFFFFF000 ; proven PC/switch data
+    .word 0x083436A4 ; proven PC/switch data
+    ldrb r2, [r1, #8]
+    cmp r0, r2
+    bls loc_0809ABFC
+    ldrb r0, [r1, #8]
 loc_0809ABFC:
     sub r0, #0x15
     mov r1, #0xa

@@ -39,11 +39,11 @@ loc_08054B48:
     sub r0, #1
     strb r0, [r5]
     b loc_08054B6A
-    .dh 0x7BA0 ; gap
-    .dh 0x3001 ; gap
-    .dh 0x73A0 ; gap
-    .dh 0x2000 ; gap
-    .dh 0x73E0 ; gap
+    ldrb r0, [r4, #0xe]
+    add r0, #1
+    strb r0, [r4, #0xe]
+    mov r0, #0
+    strb r0, [r4, #0xf]
 loc_08054B6A:
     add sp, #8
     pop {r3}

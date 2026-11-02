@@ -18,274 +18,140 @@ loc_080E5C8C:
     ldr r0, [r0]
     mov pc, r0
     .dh 0x0000 ; TODO movs r0, r0
-    ldrb r4, [r3, r2]
-    lsr r6, r1, #0x20
-    ldrsh r2, [r7, r2]
-    lsr r6, r1, #0x20
-    ldrsh r2, [r1, r5]
-    lsr r6, r1, #0x20
-    ldrsh r0, [r5, r5]
-    lsr r6, r1, #0x20
-    ldrsh r0, [r6, r2]
-    lsr r6, r1, #0x20
-    ldrsh r0, [r6, r2]
-    lsr r6, r1, #0x20
-    ldrsh r0, [r6, r2]
-    lsr r6, r1, #0x20
-    ldrsh r0, [r6, r2]
-    lsr r6, r1, #0x20
-    ldrsh r0, [r6, r2]
-    lsr r6, r1, #0x20
-    ldrsh r0, [r6, r2]
-    lsr r6, r1, #0x20
-    ldrsh r0, [r6, r2]
-    lsr r6, r1, #0x20
-    ldrsh r0, [r6, r2]
-    lsr r6, r1, #0x20
-    ldrsh r0, [r6, r2]
-    lsr r6, r1, #0x20
-    ldrsh r0, [r6, r2]
-    lsr r6, r1, #0x20
-    ldrsh r0, [r6, r2]
-    lsr r6, r1, #0x20
-    ldrsh r0, [r6, r2]
-    lsr r6, r1, #0x20
-    ldrsh r0, [r6, r2]
-    lsr r6, r1, #0x20
-    ldrsh r0, [r6, r2]
-    lsr r6, r1, #0x20
-    ldrsh r0, [r6, r2]
-    lsr r6, r1, #0x20
-    ldrsh r0, [r6, r2]
-    lsr r6, r1, #0x20
-    ldrsh r0, [r6, r2]
-    lsr r6, r1, #0x20
-    ldrsh r0, [r6, r2]
-    lsr r6, r1, #0x20
-    ldrsh r0, [r6, r2]
-    lsr r6, r1, #0x20
-    ldrsh r0, [r6, r2]
-    lsr r6, r1, #0x20
-    ldrsh r0, [r6, r2]
-    lsr r6, r1, #0x20
-    ldrsh r0, [r6, r2]
-    lsr r6, r1, #0x20
-    ldrsh r0, [r6, r2]
-    lsr r6, r1, #0x20
-    ldrsh r0, [r6, r2]
-    lsr r6, r1, #0x20
-    ldrsh r0, [r6, r2]
-    lsr r6, r1, #0x20
-    ldrsh r0, [r6, r2]
-    lsr r6, r1, #0x20
-    ldrsh r0, [r6, r2]
-    lsr r6, r1, #0x20
-    ldrsh r0, [r6, r2]
-    lsr r6, r1, #0x20
-    ldrsh r0, [r6, r2]
-    lsr r6, r1, #0x20
-    ldrsh r0, [r6, r2]
-    lsr r6, r1, #0x20
-    ldrsh r0, [r6, r2]
-    lsr r6, r1, #0x20
-    ldrsh r0, [r6, r2]
-    lsr r6, r1, #0x20
-    ldrsh r0, [r6, r2]
-    lsr r6, r1, #0x20
-    ldrsh r0, [r6, r2]
-    lsr r6, r1, #0x20
-    ldrsh r0, [r6, r2]
-    lsr r6, r1, #0x20
-    ldrsh r0, [r6, r2]
-    lsr r6, r1, #0x20
-    ldrsh r0, [r6, r2]
-    lsr r6, r1, #0x20
-    ldrsh r0, [r6, r2]
-    lsr r6, r1, #0x20
-    ldrsh r0, [r6, r2]
-    lsr r6, r1, #0x20
-    ldrsh r0, [r6, r2]
-    lsr r6, r1, #0x20
-    ldrsh r0, [r6, r2]
-    lsr r6, r1, #0x20
-    ldrsh r0, [r6, r2]
-    lsr r6, r1, #0x20
-    ldrsh r0, [r6, r2]
-    lsr r6, r1, #0x20
-    ldrsh r0, [r6, r2]
-    lsr r6, r1, #0x20
-    ldrsh r0, [r6, r2]
-    lsr r6, r1, #0x20
-    ldrsh r0, [r6, r2]
-    lsr r6, r1, #0x20
-    ldrsh r0, [r6, r2]
-    lsr r6, r1, #0x20
-    ldrsh r0, [r6, r2]
-    lsr r6, r1, #0x20
-    ldrsh r0, [r6, r2]
-    lsr r6, r1, #0x20
-    ldrsh r0, [r6, r2]
-    lsr r6, r1, #0x20
-    ldrsh r0, [r6, r2]
-    lsr r6, r1, #0x20
-    ldrsh r0, [r6, r2]
-    lsr r6, r1, #0x20
-    ldrsh r0, [r6, r2]
-    lsr r6, r1, #0x20
-    ldrsh r0, [r6, r2]
-    lsr r6, r1, #0x20
-    ldrsh r0, [r6, r2]
-    lsr r6, r1, #0x20
-    ldrsh r0, [r6, r2]
-    lsr r6, r1, #0x20
-    ldrsh r0, [r6, r2]
-    lsr r6, r1, #0x20
-    ldrsh r0, [r6, r2]
-    lsr r6, r1, #0x20
-    ldrsh r0, [r6, r2]
-    lsr r6, r1, #0x20
-    ldrsh r0, [r6, r2]
-    lsr r6, r1, #0x20
-    ldrsh r0, [r6, r2]
-    lsr r6, r1, #0x20
-    ldrsh r0, [r6, r2]
-    lsr r6, r1, #0x20
-    ldrsh r0, [r6, r2]
-    lsr r6, r1, #0x20
-    ldrsh r0, [r6, r2]
-    lsr r6, r1, #0x20
-    ldrsh r0, [r6, r2]
-    lsr r6, r1, #0x20
-    ldrsh r0, [r6, r2]
-    lsr r6, r1, #0x20
-    ldrsh r0, [r6, r2]
-    lsr r6, r1, #0x20
-    ldrsh r0, [r6, r2]
-    lsr r6, r1, #0x20
-    ldrsh r0, [r6, r2]
-    lsr r6, r1, #0x20
-    ldrsh r0, [r6, r2]
-    lsr r6, r1, #0x20
-    ldrsh r0, [r6, r2]
-    lsr r6, r1, #0x20
-    ldrsh r0, [r6, r2]
-    lsr r6, r1, #0x20
-    ldrsh r0, [r6, r2]
-    lsr r6, r1, #0x20
-    ldrsh r0, [r6, r2]
-    lsr r6, r1, #0x20
-    ldrsh r0, [r6, r2]
-    lsr r6, r1, #0x20
-    ldrsh r0, [r6, r2]
-    lsr r6, r1, #0x20
-    ldrsh r0, [r6, r2]
-    lsr r6, r1, #0x20
-    ldrsh r0, [r6, r2]
-    lsr r6, r1, #0x20
-    ldrsh r0, [r6, r2]
-    lsr r6, r1, #0x20
-    ldrsh r0, [r6, r2]
-    lsr r6, r1, #0x20
-    ldrsh r0, [r6, r2]
-    lsr r6, r1, #0x20
-    ldrsh r0, [r6, r2]
-    lsr r6, r1, #0x20
-    ldrsh r0, [r6, r2]
-    lsr r6, r1, #0x20
-    ldrsh r0, [r6, r2]
-    lsr r6, r1, #0x20
-    ldrsh r0, [r6, r2]
-    lsr r6, r1, #0x20
-    ldrsh r0, [r6, r2]
-    lsr r6, r1, #0x20
-    ldrsh r0, [r6, r2]
-    lsr r6, r1, #0x20
-    ldrsh r0, [r6, r2]
-    lsr r6, r1, #0x20
-    ldrsh r0, [r6, r2]
-    lsr r6, r1, #0x20
-    ldrsh r0, [r6, r2]
-    lsr r6, r1, #0x20
-    ldrsh r0, [r6, r2]
-    lsr r6, r1, #0x20
-    ldrsh r0, [r6, r2]
-    lsr r6, r1, #0x20
-    ldrsh r0, [r6, r2]
-    lsr r6, r1, #0x20
-    ldrsh r0, [r6, r2]
-    lsr r6, r1, #0x20
-    ldrsh r0, [r6, r2]
-    lsr r6, r1, #0x20
-    ldrsh r0, [r6, r2]
-    lsr r6, r1, #0x20
-    ldrsh r0, [r6, r2]
-    lsr r6, r1, #0x20
-    ldrsh r0, [r6, r2]
-    lsr r6, r1, #0x20
-    ldrsh r2, [r4, r3]
-    lsr r6, r1, #0x20
-    ldrsh r0, [r2, r6]
-    lsr r6, r1, #0x20
-    ldrsh r4, [r4, r6]
-    lsr r6, r1, #0x20
-    str r0, [r0, #8]
-    lsr r6, r1, #0x20
-    str r4, [r1, #0x30]
-    lsr r6, r1, #0x20
-    str r0, [r2, #0x34]
-    lsr r6, r1, #0x20
-    str r0, [r2, #0x38]
-    lsr r6, r1, #0x20
-    str r0, [r6, #0x38]
-    lsr r6, r1, #0x20
-    str r4, [r0, #0x54]
-    lsr r6, r1, #0x20
-    str r2, [r3, #0x54]
-    lsr r6, r1, #0x20
-    str r2, [r0, #0x58]
-    lsr r6, r1, #0x20
-    str r0, [r7, #0x6c]
-    lsr r6, r1, #0x20
-    str r4, [r4, #0x74]
-    lsr r6, r1, #0x20
-    str r2, [r6, #0x78]
-    lsr r6, r1, #0x20
-    str r2, [r3, #0x7c]
-    lsr r6, r1, #0x20
-    ldrsh r0, [r6, r2]
-    lsr r6, r1, #0x20
-    ldrsh r0, [r6, r2]
-    lsr r6, r1, #0x20
-    ldrsh r0, [r6, r2]
-    lsr r6, r1, #0x20
-    ldrsh r0, [r6, r2]
-    lsr r6, r1, #0x20
-    ldrsh r0, [r6, r2]
-    lsr r6, r1, #0x20
-    ldrsh r0, [r6, r2]
-    lsr r6, r1, #0x20
-    ldrsh r0, [r6, r2]
-    lsr r6, r1, #0x20
-    ldrsh r0, [r6, r2]
-    lsr r6, r1, #0x20
-    ldrsh r0, [r6, r2]
-    lsr r6, r1, #0x20
-    ldrsh r0, [r6, r2]
-    lsr r6, r1, #0x20
-    ldrsh r0, [r6, r2]
-    lsr r6, r1, #0x20
-    ldrsh r0, [r6, r2]
-    lsr r6, r1, #0x20
-    ldr r2, [r6]
-    lsr r6, r1, #0x20
-    ldr r0, [r3, #4]
-    lsr r6, r1, #0x20
-    ldr r2, [r4, #0x28]
-    lsr r6, r1, #0x20
-    ldr r0, [r7, #0x28]
-    lsr r6, r1, #0x20
-    ldr r2, [r1, #0x30]
-    lsr r6, r1, #0x20
+    .word 0x080E5C9C ; proven PC/switch data
+    .word 0x080E5EBA ; proven PC/switch data
+    .word 0x080E5F4A ; proven PC/switch data
+    .word 0x080E5F68 ; proven PC/switch data
+    .word 0x080E5EB0 ; proven PC/switch data
+    .word 0x080E5EB0 ; proven PC/switch data
+    .word 0x080E5EB0 ; proven PC/switch data
+    .word 0x080E5EB0 ; proven PC/switch data
+    .word 0x080E5EB0 ; proven PC/switch data
+    .word 0x080E5EB0 ; proven PC/switch data
+    .word 0x080E5EB0 ; proven PC/switch data
+    .word 0x080E5EB0 ; proven PC/switch data
+    .word 0x080E5EB0 ; proven PC/switch data
+    .word 0x080E5EB0 ; proven PC/switch data
+    .word 0x080E5EB0 ; proven PC/switch data
+    .word 0x080E5EB0 ; proven PC/switch data
+    .word 0x080E5EB0 ; proven PC/switch data
+    .word 0x080E5EB0 ; proven PC/switch data
+    .word 0x080E5EB0 ; proven PC/switch data
+    .word 0x080E5EB0 ; proven PC/switch data
+    .word 0x080E5EB0 ; proven PC/switch data
+    .word 0x080E5EB0 ; proven PC/switch data
+    .word 0x080E5EB0 ; proven PC/switch data
+    .word 0x080E5EB0 ; proven PC/switch data
+    .word 0x080E5EB0 ; proven PC/switch data
+    .word 0x080E5EB0 ; proven PC/switch data
+    .word 0x080E5EB0 ; proven PC/switch data
+    .word 0x080E5EB0 ; proven PC/switch data
+    .word 0x080E5EB0 ; proven PC/switch data
+    .word 0x080E5EB0 ; proven PC/switch data
+    .word 0x080E5EB0 ; proven PC/switch data
+    .word 0x080E5EB0 ; proven PC/switch data
+    .word 0x080E5EB0 ; proven PC/switch data
+    .word 0x080E5EB0 ; proven PC/switch data
+    .word 0x080E5EB0 ; proven PC/switch data
+    .word 0x080E5EB0 ; proven PC/switch data
+    .word 0x080E5EB0 ; proven PC/switch data
+    .word 0x080E5EB0 ; proven PC/switch data
+    .word 0x080E5EB0 ; proven PC/switch data
+    .word 0x080E5EB0 ; proven PC/switch data
+    .word 0x080E5EB0 ; proven PC/switch data
+    .word 0x080E5EB0 ; proven PC/switch data
+    .word 0x080E5EB0 ; proven PC/switch data
+    .word 0x080E5EB0 ; proven PC/switch data
+    .word 0x080E5EB0 ; proven PC/switch data
+    .word 0x080E5EB0 ; proven PC/switch data
+    .word 0x080E5EB0 ; proven PC/switch data
+    .word 0x080E5EB0 ; proven PC/switch data
+    .word 0x080E5EB0 ; proven PC/switch data
+    .word 0x080E5EB0 ; proven PC/switch data
+    .word 0x080E5EB0 ; proven PC/switch data
+    .word 0x080E5EB0 ; proven PC/switch data
+    .word 0x080E5EB0 ; proven PC/switch data
+    .word 0x080E5EB0 ; proven PC/switch data
+    .word 0x080E5EB0 ; proven PC/switch data
+    .word 0x080E5EB0 ; proven PC/switch data
+    .word 0x080E5EB0 ; proven PC/switch data
+    .word 0x080E5EB0 ; proven PC/switch data
+    .word 0x080E5EB0 ; proven PC/switch data
+    .word 0x080E5EB0 ; proven PC/switch data
+    .word 0x080E5EB0 ; proven PC/switch data
+    .word 0x080E5EB0 ; proven PC/switch data
+    .word 0x080E5EB0 ; proven PC/switch data
+    .word 0x080E5EB0 ; proven PC/switch data
+    .word 0x080E5EB0 ; proven PC/switch data
+    .word 0x080E5EB0 ; proven PC/switch data
+    .word 0x080E5EB0 ; proven PC/switch data
+    .word 0x080E5EB0 ; proven PC/switch data
+    .word 0x080E5EB0 ; proven PC/switch data
+    .word 0x080E5EB0 ; proven PC/switch data
+    .word 0x080E5EB0 ; proven PC/switch data
+    .word 0x080E5EB0 ; proven PC/switch data
+    .word 0x080E5EB0 ; proven PC/switch data
+    .word 0x080E5EB0 ; proven PC/switch data
+    .word 0x080E5EB0 ; proven PC/switch data
+    .word 0x080E5EB0 ; proven PC/switch data
+    .word 0x080E5EB0 ; proven PC/switch data
+    .word 0x080E5EB0 ; proven PC/switch data
+    .word 0x080E5EB0 ; proven PC/switch data
+    .word 0x080E5EB0 ; proven PC/switch data
+    .word 0x080E5EB0 ; proven PC/switch data
+    .word 0x080E5EB0 ; proven PC/switch data
+    .word 0x080E5EB0 ; proven PC/switch data
+    .word 0x080E5EB0 ; proven PC/switch data
+    .word 0x080E5EB0 ; proven PC/switch data
+    .word 0x080E5EB0 ; proven PC/switch data
+    .word 0x080E5EB0 ; proven PC/switch data
+    .word 0x080E5EB0 ; proven PC/switch data
+    .word 0x080E5EB0 ; proven PC/switch data
+    .word 0x080E5EB0 ; proven PC/switch data
+    .word 0x080E5EB0 ; proven PC/switch data
+    .word 0x080E5EB0 ; proven PC/switch data
+    .word 0x080E5EB0 ; proven PC/switch data
+    .word 0x080E5EB0 ; proven PC/switch data
+    .word 0x080E5EB0 ; proven PC/switch data
+    .word 0x080E5EB0 ; proven PC/switch data
+    .word 0x080E5EB0 ; proven PC/switch data
+    .word 0x080E5EB0 ; proven PC/switch data
+    .word 0x080E5EB0 ; proven PC/switch data
+    .word 0x080E5EB0 ; proven PC/switch data
+    .word 0x080E5EB0 ; proven PC/switch data
+    .word 0x080E5EB0 ; proven PC/switch data
+    .word 0x080E5EE2 ; proven PC/switch data
+    .word 0x080E5F90 ; proven PC/switch data
+    .word 0x080E5FA4 ; proven PC/switch data
+    .word 0x080E6080 ; proven PC/switch data
+    .word 0x080E630C ; proven PC/switch data
+    .word 0x080E6350 ; proven PC/switch data
+    .word 0x080E6390 ; proven PC/switch data
+    .word 0x080E63B0 ; proven PC/switch data
+    .word 0x080E6544 ; proven PC/switch data
+    .word 0x080E655A ; proven PC/switch data
+    .word 0x080E6582 ; proven PC/switch data
+    .word 0x080E66F8 ; proven PC/switch data
+    .word 0x080E6764 ; proven PC/switch data
+    .word 0x080E67B2 ; proven PC/switch data
+    .word 0x080E67DA ; proven PC/switch data
+    .word 0x080E5EB0 ; proven PC/switch data
+    .word 0x080E5EB0 ; proven PC/switch data
+    .word 0x080E5EB0 ; proven PC/switch data
+    .word 0x080E5EB0 ; proven PC/switch data
+    .word 0x080E5EB0 ; proven PC/switch data
+    .word 0x080E5EB0 ; proven PC/switch data
+    .word 0x080E5EB0 ; proven PC/switch data
+    .word 0x080E5EB0 ; proven PC/switch data
+    .word 0x080E5EB0 ; proven PC/switch data
+    .word 0x080E5EB0 ; proven PC/switch data
+    .word 0x080E5EB0 ; proven PC/switch data
+    .word 0x080E5EB0 ; proven PC/switch data
+    .word 0x080E6832 ; proven PC/switch data
+    .word 0x080E6858 ; proven PC/switch data
+    .word 0x080E6AA2 ; proven PC/switch data
+    .word 0x080E6AB8 ; proven PC/switch data
+    .word 0x080E6B0A ; proven PC/switch data
 loc_080E5EB0:
     add r0, r5, #0
     bl EXT_080E6C8C
@@ -300,7 +166,7 @@ loc_080E5EB0:
     bl EXT_080DEFCC
     b loc_080E5EDA
     .dh 0x0000 ; gap
-    .word 0x0202EBB0
+    .word 0x0202EBB0 ; proven PC/switch data
 loc_080E5ED4:
     mov r0, #7
     bl EXT_080DEFCC
@@ -338,8 +204,8 @@ loc_080E5F04:
     mov r0, #0xb
     bl EXT_080DEFCC
     b loc_080E5F2E
-    .word 0x0202F658
-    .word 0x0202EBB0
+    .word 0x0202F658 ; proven PC/switch data
+    .word 0x0202EBB0 ; proven PC/switch data
 loc_080E5F28:
     mov r0, #8
     bl EXT_080DEFCC
@@ -369,20 +235,19 @@ loc_080E5F5A:
     bl EXT_080DEFCC
     b loc_080E5F82
     .dh 0x0000 ; gap
-    .word 0x0202F658
-    .dh 0x4808 ; gap
-    .dh 0x8840 ; gap
-    .dh 0x2800 ; gap
-    .dh 0xD003 ; gap
-    .dh 0x2803 ; gap
-    .dh 0xD001 ; gap
-    .dh 0xF000 ; gap
-    .dh 0xFE0D ; gap
-    .dh 0x2008 ; gap
-    .dh 0xF7F9 ; gap
-    .dh 0xF827 ; gap
-    .dh 0x2000 ; gap
-    .dh 0x8168 ; gap
+    .word 0x0202F658 ; proven PC/switch data
+    ldr r0, [pc, #0x20]
+    ldrh r0, [r0, #2]
+    cmp r0, #0
+    beq loc_080E5F78
+    cmp r0, #3
+    beq loc_080E5F78
+    bl EXT_080E6B92
+loc_080E5F78:
+    mov r0, #8
+    bl EXT_080DEFCC
+    mov r0, #0
+    strh r0, [r5, #0xa]
 loc_080E5F82:
     mov r0, #0x67
     strb r0, [r5, #3]

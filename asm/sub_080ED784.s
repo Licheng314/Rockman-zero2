@@ -160,13 +160,14 @@ loc_080ED89C:
     add r6, r0, #0
     ldr r7, [r4, #0x2c]
     b loc_080ED8B6
-    .dh 0xD806 ; gap
-    .dh 0x6AE0 ; gap
-    .dh 0x42B8 ; gap
-    .dh 0xD901 ; gap
-    .dh 0x1C07 ; gap
-    .dh 0xE000 ; gap
-    .dh 0xD300 ; gap
+    bhi loc_080ED8B8
+    ldr r0, [r4, #0x2c]
+    cmp r0, r7
+    bls loc_080ED8B4
+    add r7, r0, #0
+    b loc_080ED8B6
+loc_080ED8B4:
+    blo loc_080ED8B8
 loc_080ED8B6:
     mov r8, r4
 loc_080ED8B8:

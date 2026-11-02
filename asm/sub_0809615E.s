@@ -4,18 +4,14 @@ sub_0809615E:
     str r0, [r5, #0x14]
     b loc_0809617C
     .dh 0x0000 ; gap
-    .dh 0xEBF0 ; gap
-    .dh 0x0202 ; gap
-    .dh 0x270E ; gap
-    .dh 0x0000 ; gap
-    .dh 0xEBB0 ; gap
-    .dh 0x0202 ; gap
-    .dh 0xD990 ; gap
-    .dh 0x0833 ; gap
-    .dh 0x7AA9 ; gap
-    .dh 0x20FE ; gap
-    .dh 0x4008 ; gap
-    .dh 0x72A8 ; gap
+    .word 0x0202EBF0 ; proven PC/switch data
+    .word 0x0000270E ; proven PC/switch data
+    .word 0x0202EBB0 ; proven PC/switch data
+    .word 0x0833D990 ; proven PC/switch data
+    ldrb r1, [r5, #0xa]
+    mov r0, #0xfe
+    and r0, r1
+    strb r0, [r5, #0xa]
 loc_0809617C:
     pop {r3}
     mov r8, r3

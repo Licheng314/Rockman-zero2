@@ -27,8 +27,8 @@ sub_080285E8:
     mov r0, #0
     b loc_08028626
     .dh 0x0000 ; gap
-    .word 0x08333EA0
-    .dh 0x1A40 ; gap
+    .word 0x08333EA0 ; proven PC/switch data
+    sub r0, r0, r1
 loc_08028626:
     strb r0, [r4]
     add sp, #8

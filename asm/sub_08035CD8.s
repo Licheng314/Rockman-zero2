@@ -18,8 +18,8 @@ loc_08035CE0:
     mov r0, #1
     neg r0, r0
     b loc_08035CFE
-    .word 0x08335CD8
-    .dh 0x1C10 ; gap
+    .word 0x08335CD8 ; proven PC/switch data
+    add r0, r2, #0
 loc_08035CFE:
     pop {r4}
     pop {r1}

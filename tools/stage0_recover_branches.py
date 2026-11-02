@@ -13,6 +13,7 @@ from datetime import datetime, timezone, timedelta
 from project_guard import ROOT, writer_lock, run, recover_transaction, build_checked
 from thumb_v4 import valid_thumb1
 from capstone import Cs, CS_ARCH_ARM, CS_MODE_THUMB
+from stage0_inventory import assert_inventory_current
 
 
 def main():
@@ -22,7 +23,7 @@ def main():
     folder = ROOT/'build/stage0'
     evidence = json.loads((folder/'inventory.json').read_text(encoding='utf-8'))
     import hashlib
-    assert evidence['segments_sha1'] == hashlib.sha1((ROOT/'tools/segments.json').read_bytes()).hexdigest(), 'Rebuild inventory first'
+    assert_inventory_current(evidence)
     key = 'fallthrough_entries' if args.fallthrough else 'branch_entries'
     entries = sorted({row['offset'] for gap in evidence['gaps'] for row in gap[key]})
     state = {'pid': os.getpid(), 'status': 'running', 'mode': key, 'entries': entries, 'results': []}

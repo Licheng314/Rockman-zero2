@@ -26,63 +26,58 @@ loc_080447E8:
     bne loc_08044878
     b loc_08044842
     .dh 0x0000 ; gap
-    .dh 0xA305 ; gap
-    .dh 0x0000 ; gap
-    .dh 0x1C30 ; gap
-    .dh 0xF7CE ; gap
-    .dh 0xF861 ; gap
-    .dh 0x69B0 ; gap
-    .dh 0x7A41 ; gap
-    .dh 0x2080 ; gap
-    .dh 0x4008 ; gap
-    .dh 0x2800 ; gap
-    .dh 0xD02C ; gap
-    .dh 0x7AB1 ; gap
-    .dh 0x2010 ; gap
-    .dh 0x4008 ; gap
-    .dh 0x21A0 ; gap
-    .dh 0x0109 ; gap
-    .dh 0x2800 ; gap
-    .dh 0xD000 ; gap
-    .dh 0x4907 ; gap
-    .dh 0x9100 ; gap
-    .dh 0x4807 ; gap
-    .dh 0x9001 ; gap
-    .dh 0x1C30 ; gap
-    .dh 0x4669 ; gap
-    .dh 0xF073 ; gap
-    .dh 0xFFA8 ; gap
-    .dh 0x1C31 ; gap
-    .dh 0x31DC ; gap
-    .dh 0x6008 ; gap
+    .word 0x0000A305 ; proven PC/switch data
+    add r0, r6, #0
+    bl EXT_080128D4
+    ldr r0, [r6, #0x18]
+    ldrb r1, [r0, #9]
+    mov r0, #0x80
+    and r0, r1
+    cmp r0, #0
+    beq loc_08044878
+    ldrb r1, [r6, #0xa]
+    mov r0, #0x10
+    and r0, r1
+    mov r1, #0xa0
+    lsl r1, r1, #4
+    cmp r0, #0
+    beq loc_0804482E
+    ldr r1, [pc, #0x1c]
+loc_0804482E:
+    str r1, [sp]
+    ldr r0, [pc, #0x1c]
+    str r0, [sp, #4]
+    add r0, r6, #0
+    mov r1, sp
+    bl EXT_080B878C
+    add r1, r6, #0
+    add r1, #0xdc
+    str r0, [r1]
 loc_08044842:
     ldrb r0, [r6, #0xe]
     add r0, #1
     strb r0, [r6, #0xe]
     b loc_08044878
     .dh 0x0000 ; gap
-    .dh 0xF600 ; gap
-    .dh 0xFFFF ; gap
-    .dh 0xE400 ; gap
-    .dh 0xFFFF ; gap
-    .dh 0x1C30 ; gap
-    .dh 0xF7CE ; gap
-    .dh 0xF83D ; gap
-    .dh 0x1C30 ; gap
-    .dh 0x30DC ; gap
-    .dh 0x6800 ; gap
-    .dh 0x7B00 ; gap
-    .dh 0x2801 ; gap
-    .dh 0xD908 ; gap
-    .dh 0x7AB1 ; gap
-    .dh 0x20FE ; gap
-    .dh 0x4008 ; gap
-    .dh 0x72B0 ; gap
-    .dh 0x4A04 ; gap
-    .dh 0x8A51 ; gap
-    .dh 0x2002 ; gap
-    .dh 0x4308 ; gap
-    .dh 0x8250 ; gap
+    .word 0xFFFFF600 ; proven PC/switch data
+    .word 0xFFFFE400 ; proven PC/switch data
+    add r0, r6, #0
+    bl EXT_080128D4
+    add r0, r6, #0
+    add r0, #0xdc
+    ldr r0, [r0]
+    ldrb r0, [r0, #0xc]
+    cmp r0, #1
+    bls loc_08044878
+    ldrb r1, [r6, #0xa]
+    mov r0, #0xfe
+    and r0, r1
+    strb r0, [r6, #0xa]
+    ldr r2, [pc, #0x10]
+    ldrh r1, [r2, #0x12]
+    mov r0, #2
+    orr r0, r1
+    strh r0, [r2, #0x12]
 loc_08044878:
     add sp, #8
     pop {r4, r5, r6}

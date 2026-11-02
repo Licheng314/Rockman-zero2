@@ -37,15 +37,15 @@ sub_080EC59C:
     strb r2, [r0]
     b loc_080EC646
     .dh 0x0000 ; gap
-    .word 0x00000DDE
-    .word 0x02000D10
-    .word 0x00000DE4
-    .word 0x00000DE9
-    .dh 0x2000 ; gap
-    .dh 0x70A3 ; gap
-    .dh 0x70E3 ; gap
-    .dh 0x80A0 ; gap
-    .dh 0xE023 ; gap
+    .word 0x00000DDE ; proven PC/switch data
+    .word 0x02000D10 ; proven PC/switch data
+    .word 0x00000DE4 ; proven PC/switch data
+    .word 0x00000DE9 ; proven PC/switch data
+    mov r0, #0
+    strb r3, [r4, #2]
+    strb r3, [r4, #3]
+    strh r0, [r4, #4]
+    b loc_080EC646
 loc_080EC5FE:
     ldr r1, [pc, #0x4c]
     add r0, r4, r1
