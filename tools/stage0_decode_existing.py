@@ -129,10 +129,27 @@ def prepare():
                         if lines[n].strip().startswith('.word'):
                             for b in range(p,p+size):legacy_words[b]=p
         return owner if layouts[name] is not None else None
-    entries={}
+    entries={};md=Cs(CS_ARCH_ARM,CS_MODE_THUMB)
     for table in inv['bounded_switches']:
         for t in table['targets']:
             if t not in known:entries[t]=dict(kind='bounded-switch',dispatch=table['dispatch'])
+    # Downgraded branch halfwords (`; TODO` .dh lines) still hold proven CFG
+    # edges: the bytes are real branches, only the assembler syntax failed.
+    for s in segments:owner_at(s['start'])
+    for name in layouts:
+        layout=layouts[name]
+        if layout is None:continue
+        for a,size,n in layout['manifest']['items']:
+            if size!=2 or a in known or n>=len(layout['lines']):continue
+            text=layout['lines'][n].strip()
+            if not text.startswith('.dh') or 'TODO' not in text:continue
+            if not valid_thumb1(rom,a,2):continue
+            ins=next(md.disasm(rom[a:a+2],BASE+a,count=1),None)
+            if ins is None or not ins.mnemonic.startswith('b'):continue
+            m=re.fullmatch(r'#(0x[0-9a-f]+|[0-9]+)',ins.op_str)
+            if m:
+                t=int(m[1],0)-BASE
+                if 0<=t<END and t not in known:entries.setdefault(t,dict(kind='downgraded-branch',reader=a))
     for a,row in known.items():
         if any(protected[a:a+row['size']]):continue
         for t,kind in edges(a,row['mnemonic'],row['operands'],row['size']):
