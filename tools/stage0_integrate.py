@@ -38,6 +38,23 @@ def pointer_seeds():
     return seeds
 
 
+def dispatch_seeds():
+    """Targets of dispatch tables whose indexed reads are proven in source."""
+    report=json.loads((ROOT/'build/stage0/dispatch-tables.json').read_text(encoding='utf-8'))
+    assert_inventory_current(dict(segments_sha1=report['input_segments_sha1'], source_fingerprint=report['source_fingerprint']))
+    inventory=json.loads((ROOT/'build/stage0/inventory.json').read_text(encoding='utf-8'))
+    gaps={g['start']:(g['start'],g['end']) for g in inventory['gaps']}
+    seeds={}
+    for table in report['tables']:
+        for e in table['gap_entries']:
+            gap=gaps.get(e['target'])
+            if gap is None:
+                continue
+            entry=seeds.setdefault(e['target'],dict(target=BASE+e['target'],gap=list(gap),words=[]))
+            entry['words'].append(dict(word=e['word'],value=e['value'],table=table['base']))
+    return seeds
+
+
 def prepare(include_startup, seed_mode='switch'):
     inventory=json.loads((ROOT/'build/stage0/inventory.json').read_text(encoding='utf-8'))
     assert_inventory_current(inventory)
@@ -58,6 +75,9 @@ def prepare(include_startup, seed_mode='switch'):
     seed_meta=None
     if seed_mode=='pointer':
         seed_meta=pointer_seeds()
+        seeds=sorted(seed_meta)
+    elif seed_mode=='dispatch':
+        seed_meta=dispatch_seeds()
         seeds=sorted(seed_meta)
     else:
         seeds=sorted({e['offset'] for g in inventory['gaps'] for e in g['switch_entries']}
@@ -125,7 +145,7 @@ def prepare(include_startup, seed_mode='switch'):
                   original_formal_bytes=sum(s['end']-s['start'] for s in old),
                   added_code_bytes=sum(p['end']-p['start'] for p in plans if p['kind']=='thumb-code'),
                   added_typed_word_bytes=4*len(words),startup_added=include_startup,
-                  scope=('Odd Thumb function pointers into gaps, read by reached code and transferred, stored as callbacks, or passed onward. Raw gap bytes never exported as code.' if seed_mode=='pointer' else
+                  scope=('Targets of dispatch tables whose indexed reads are proven in reached source (0x080333B0 family). Raw gap bytes never exported as code.' if seed_mode=='dispatch' else 'Odd Thumb function pointers into gaps, read by reached code and transferred, stored as callbacks, or passed onward. Raw gap bytes never exported as code.' if seed_mode=='pointer' else
                          'Original-ROM source-backed bounded switches and PC word loads. Existing formal regions untouched; raw gap bytes never exported as code.'))
     return combined,plans,evidence
 
@@ -140,7 +160,7 @@ def main():
     parser.add_argument('--startup',action='store_true')
     parser.add_argument('--apply',action='store_true')
     parser.add_argument('--evidence-name',default='stage0-bulk-evidence.json')
-    parser.add_argument('--seed-mode',default='switch',choices=('switch','pointer'))
+    parser.add_argument('--seed-mode',default='switch',choices=('switch','pointer','dispatch'))
     args=parser.parse_args()
     with writer_lock():
         segments,plans,evidence=prepare(args.startup,args.seed_mode)
