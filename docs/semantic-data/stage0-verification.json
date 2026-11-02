@@ -1,13 +1,13 @@
 {
-  "verified_at": "2026-11-01T18:37:08.288834+08:00",
+  "verified_at": "2026-11-03T01:57:31.398007+08:00",
   "batch_evidence": "stage0-bulk-evidence.json",
   "data_words_verified": 9211,
   "exact_emission_extents_verified": 4300,
   "new_thumb_raw_fallback_count": 0,
   "full_rom_bytes": 8388608,
   "full_rom_sha1": "c4d93a58f0f82c526dec8a3fdbda170336303689",
-  "formal_bytes": 960170,
-  "remaining_uncovered_bytes": 22870,
+  "formal_bytes": 979252,
+  "remaining_uncovered_bytes": 3788,
   "overall_goal_achieved": false,
   "scope": "All ranges and data reference proofs of this batch; historical classifications and remaining gaps are not declared complete."
 }
