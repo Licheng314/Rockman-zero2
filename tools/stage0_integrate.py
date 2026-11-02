@@ -43,14 +43,16 @@ def dispatch_seeds():
     report=json.loads((ROOT/'build/stage0/dispatch-tables.json').read_text(encoding='utf-8'))
     assert_inventory_current(dict(segments_sha1=report['input_segments_sha1'], source_fingerprint=report['source_fingerprint']))
     inventory=json.loads((ROOT/'build/stage0/inventory.json').read_text(encoding='utf-8'))
-    gaps={g['start']:(g['start'],g['end']) for g in inventory['gaps']}
+    gap_list=sorted((g['start'],g['end']) for g in inventory['gaps'])
+    gap_starts=[g[0] for g in gap_list]
+    from bisect import bisect_right as _br
     seeds={}
     for table in report['tables']:
         for e in table['gap_entries']:
-            gap=gaps.get(e['target'])
-            if gap is None:
+            i=_br(gap_starts,e['target'])-1
+            if i<0 or e['target']>=gap_list[i][1]:
                 continue
-            entry=seeds.setdefault(e['target'],dict(target=BASE+e['target'],gap=list(gap),words=[]))
+            entry=seeds.setdefault(e['target'],dict(target=BASE+e['target'],gap=list(gap_list[i]),words=[]))
             entry['words'].append(dict(word=e['word'],value=e['value'],table=table['base']))
     return seeds
 

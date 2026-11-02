@@ -1,0 +1,12 @@
+; stage0_code_080DD158 @ 0x080DD158-080DD162  (自动生成, 经往返验证)
+.thumb
+stage0_code_080DD158:
+    ldr r0, [r0, #0x28]
+loc_080DD15A:
+    ldr r1, [pc, #8]
+loc_080DD15C:
+    add r0, r0, r1
+loc_080DD15E:
+    ldr r0, [r0]
+loc_080DD160:
+    bx lr
