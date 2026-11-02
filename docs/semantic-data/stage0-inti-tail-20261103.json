@@ -1,0 +1,16 @@
+{
+ "blocks": [
+  {
+   "label": "INTI signature zero tail",
+   "start": 980620,
+   "end": 980624,
+   "element": "",
+   "proof": {
+    "rule": "4 zero bytes completing the 8-byte \"INTI\u0000\u0000\u0000\u0000\" signature between proven data records stage0_data_080EF688 and stage0_data_080EF690"
+   }
+  }
+ ],
+ "original_formal_bytes": 979252,
+ "added_data_bytes": 4,
+ "scope": "Typed data blocks with per-block read/copy proof; no unproven range included."
+}

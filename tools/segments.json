@@ -96390,6 +96390,13 @@
   "kind": "literal-pool"
  },
  {
+  "name": "stage0_data_080EF68C",
+  "start": 980620,
+  "end": 980624,
+  "file": "asm/stage0_data_080EF68C.s",
+  "kind": "alignment-data"
+ },
+ {
   "name": "stage0_data_080EF690",
   "start": 980624,
   "end": 980632,

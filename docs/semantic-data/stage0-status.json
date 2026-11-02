@@ -1,14 +1,14 @@
 {
  "updated_at": "2026-11-03",
  "objective": "Complete stage0 assembly extraction and classification without disguising unknown data as code",
- "status": "overnight-20261103-fixpoint-reached",
+ "status": "overnight-20261103-static-fixpoint-confirmed",
  "baseline_formal_bytes": 912454,
- "formal_segments": 14716,
- "formal_bytes": 979252,
+ "formal_segments": 14717,
+ "formal_bytes": 979256,
  "capacity_bytes": 983040,
- "formal_coverage_percent": 99.614665,
- "uncovered_bytes": 3788,
- "gap_count": 86,
+ "formal_coverage_percent": 99.615072,
+ "uncovered_bytes": 3784,
+ "gap_count": 85,
  "formal_switch_entries_without_decoded_source": 0,
  "uncovered_direct_branch_targets": 0,
  "uncovered_fallthrough_targets": 1,
@@ -69,5 +69,24 @@
   "stage0-dispatch-trampolines-20261103.json",
   "stage0-data-batch3-20261103.json",
   "stage0-align2-20261103.json"
- ]
+ ],
+ "residual_audit": {
+  "total_lines": 5178,
+  "bytes": 10356,
+  "zero_gap_lines": 2644,
+  "downgraded_encoding_lines": 2424,
+  "reader_pool_words": 60,
+  "switch_words": 8,
+  "downgraded_branch_edges": 13,
+  "decode_new_entries": 0
+ },
+ "negative_controls": {
+  "whole_rom_word_pointer_scan": 0,
+  "thumb_bl_into_gaps_data_coincidence_only": 14,
+  "arm_bl_into_gaps_data_coincidence_only": 2,
+  "five_trampoline_dispatch_families": 0,
+  "two_level_chains": 0,
+  "copy_source_scan": 0,
+  "unreached_decoded_instruction_edges": 0
+ }
 }
