@@ -83,6 +83,21 @@ class Stage0Tests(unittest.TestCase):
         self.assertEqual(rows[0]['targets'],[0x30,0x32])
         del instructions[0]
         self.assertEqual(bounded_switches(instructions,rom),[])
+    def test_switch_accepts_error_call_guard(self):
+        # cmp; bls <dispatch>; bl <out-of-line halt>: the real 0x080E6C9C shape.
+        rom=bytearray(0x40)
+        rom[:18]=bytes.fromhex('01 28 01 d9 00 f0 0c f8 80 00 03 49 40 18 00 68 87 46')
+        rom[0x18:0x1c]=(BASE+0x1c).to_bytes(4,'little')
+        rom[0x1c:0x20]=(BASE+0x30).to_bytes(4,'little')
+        rom[0x20:0x24]=(BASE+0x32).to_bytes(4,'little')
+        md=Cs(CS_ARCH_ARM,CS_MODE_THUMB)
+        instructions={i.address-BASE:dict(size=i.size,mnemonic=i.mnemonic,operands=i.op_str,source='fixture') for i in md.disasm(bytes(rom[:18]),BASE)}
+        rows=bounded_switches(instructions,rom)
+        self.assertEqual(len(rows),1)
+        self.assertEqual(rows[0]['targets'],[0x30,0x32])
+        # The error call must leave the dispatch sequence, not point into it.
+        instructions[4]['operands']=f'#{hex(BASE+0x10)}'
+        self.assertEqual(bounded_switches(instructions,rom),[])
     def test_v5_and_thumb2_encodings_cannot_seed_code(self):
         for raw in ['b0 eb 02 02', '10 fb 04 08', '80 47', '00 be', '00 bf']:
             b=bytes.fromhex(raw)

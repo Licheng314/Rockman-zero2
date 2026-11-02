@@ -41,6 +41,13 @@ def bounded_switches(instructions, rom):
                 continue
         elif all(k in instructions for k in (shiftpc-6,shiftpc-4,shiftpc-2)) and instructions[shiftpc-4]['mnemonic']=='bls' and instructions[shiftpc-4]['operands']==f'#{hex(BASE+shiftpc)}' and instructions[shiftpc-2]['mnemonic']=='b':
             comparepc=shiftpc-6;compare=instructions[comparepc]
+        elif all(k in instructions for k in (shiftpc-8,shiftpc-6,shiftpc-4)) and instructions[shiftpc-6]['mnemonic']=='bls' and instructions[shiftpc-6]['operands']==f'#{hex(BASE+shiftpc)}' and instructions[shiftpc-4]['mnemonic']=='bl':
+            # cmp; bls <dispatch>; bl <halt handler>: the error call must leave
+            # the dispatch sequence, and cmp must guard the same index register.
+            error=re.fullmatch(r'#(0x[0-9a-f]+|\d+)',instructions[shiftpc-4]['operands'])
+            if not error or shiftpc-8 <= int(error[1],0)-BASE <= a:
+                continue
+            comparepc=shiftpc-8;compare=instructions[comparepc]
         cm=re.fullmatch(re.escape(index)+r', #(0x[0-9a-f]+|\d+)',compare['operands']) if compare and compare['mnemonic']=='cmp' else None
         if not cm:
             continue
