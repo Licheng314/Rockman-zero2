@@ -2980,6 +2980,13 @@
   "file": "asm/sub_080099BC.s"
  },
  {
+  "name": "stage0_code_08009B04",
+  "start": 39684,
+  "end": 39692,
+  "file": "asm/stage0_code_08009B04.s",
+  "kind": "thumb-code"
+ },
+ {
   "name": "sub_08009B0C",
   "start": 39692,
   "end": 39722,
@@ -22344,6 +22351,20 @@
   "file": "asm/sub_08037F78.s"
  },
  {
+  "name": "stage0_code_0803820C",
+  "start": 229900,
+  "end": 229998,
+  "file": "asm/stage0_code_0803820C.s",
+  "kind": "thumb-code"
+ },
+ {
+  "name": "stage0_pool_08038270",
+  "start": 230000,
+  "end": 230020,
+  "file": "asm/stage0_pool_08038270.s",
+  "kind": "literal-pool"
+ },
+ {
   "name": "stage0_code_08038284",
   "start": 230020,
   "end": 230120,
@@ -23176,6 +23197,13 @@
   "start": 236724,
   "end": 236726,
   "file": "asm/sub_08039CB4.s"
+ },
+ {
+  "name": "stage0_code_08039CB8",
+  "start": 236728,
+  "end": 236730,
+  "file": "asm/stage0_code_08039CB8.s",
+  "kind": "thumb-code"
  },
  {
   "name": "sub_08039CBC",
@@ -93863,6 +93891,13 @@
   "file": "asm/sub_080EAFAC.s"
  },
  {
+  "name": "stage0_code_080EAFD4",
+  "start": 962516,
+  "end": 962520,
+  "file": "asm/stage0_code_080EAFD4.s",
+  "kind": "thumb-code"
+ },
+ {
   "name": "sub_080EAFD8",
   "start": 962520,
   "end": 962530,
@@ -95894,6 +95929,55 @@
   "end": 978620,
   "file": "asm/stage0_pool_080EEEAC.s",
   "kind": "literal-pool"
+ },
+ {
+  "name": "stage0_code_080EEEBC",
+  "start": 978620,
+  "end": 978638,
+  "file": "asm/stage0_code_080EEEBC.s",
+  "kind": "thumb-code"
+ },
+ {
+  "name": "stage0_code_080EEED0",
+  "start": 978640,
+  "end": 978658,
+  "file": "asm/stage0_code_080EEED0.s",
+  "kind": "thumb-code"
+ },
+ {
+  "name": "stage0_code_080EEEE4",
+  "start": 978660,
+  "end": 978678,
+  "file": "asm/stage0_code_080EEEE4.s",
+  "kind": "thumb-code"
+ },
+ {
+  "name": "stage0_code_080EEEF8",
+  "start": 978680,
+  "end": 978698,
+  "file": "asm/stage0_code_080EEEF8.s",
+  "kind": "thumb-code"
+ },
+ {
+  "name": "stage0_code_080EEF0C",
+  "start": 978700,
+  "end": 978718,
+  "file": "asm/stage0_code_080EEF0C.s",
+  "kind": "thumb-code"
+ },
+ {
+  "name": "stage0_code_080EEF20",
+  "start": 978720,
+  "end": 978762,
+  "file": "asm/stage0_code_080EEF20.s",
+  "kind": "thumb-code"
+ },
+ {
+  "name": "stage0_code_080EEF4C",
+  "start": 978764,
+  "end": 978782,
+  "file": "asm/stage0_code_080EEF4C.s",
+  "kind": "thumb-code"
  },
  {
   "name": "stage0_code_080EEF60",

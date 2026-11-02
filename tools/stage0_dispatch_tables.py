@@ -18,7 +18,7 @@ from stage0_inventory import inventory, ROOT
 
 ROM_LO = 0x08000000
 TRANSFER = lambda m, ops, rd: (
-    (m == 'bl' and ops == '#0x80ef118') or
+    (m == 'bl' and ops in ('#0x80ef118', '#0x80ef11c', '#0x80ef120', '#0x80ef124', '#0x80ef128')) or
     (m in ('bx', 'blx') and ops == rd) or
     (m == 'mov' and ops == 'pc, ' + rd))
 
