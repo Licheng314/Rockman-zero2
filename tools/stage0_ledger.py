@@ -144,6 +144,9 @@ def resolve_usage(rows, rom, result):
                     pass
                 m, ops = ins['mnemonic'], ins['operands']
                 first = ops.split(',', 1)[0].strip()
+                rest = ops[len(first):].lstrip(' ,')
+                reads_rd = f'r{rd}' in rest or ops == f'r{rd}'
+                writes_rd = first == f'r{rd}'
                 if m in ('bx', 'blx') and ops == f'r{rd}':
                     usage = 'direct-indirect-call'
                     break
@@ -161,8 +164,26 @@ def resolve_usage(rows, rom, result):
                 if m == 'bl' and f'r{rd}' in ops:
                     usage = 'passed-to-dispatcher'
                     break
-                if m.startswith('ldr') and first == f'r{rd}' and m != 'ldr':
-                    usage = 'data-pointer'
+                if reads_rd and not writes_rd:
+                    # Pointer consumed as an addressing source (e.g. base + index).
+                    if m.startswith('ldr'):
+                        usage = 'data-pointer'
+                        break
+                    continue
+                if writes_rd and not reads_rd and m != 'mov':
+                    # Redefined from another source: the pointer is dead here.
+                    if m.startswith('ldr') or m in ('ldrh', 'ldrb', 'ldrsb', 'ldrsh', 'movs'):
+                        usage = 'redefined'
+                        break
+                    continue
+                if writes_rd and not reads_rd and m == 'mov':
+                    # mov rd, rX replaces the pointer unless rX is rd itself.
+                    if rest != f'r{rd}':
+                        usage = 'redefined'
+                        break
+                    continue
+                if writes_rd and reads_rd and m.startswith('ldr'):
+                    usage = 'redefined'
                     break
                 if m in ('ldrh', 'ldrb', 'ldrsb', 'ldrsh') and first == f'r{rd}':
                     usage = 'data-pointer'
