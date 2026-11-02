@@ -11,7 +11,12 @@
   "read_word_pointers_into_gaps": 2,
   "raw_thumb_bl_shapes_into_gaps": 14,
   "raw_arm_bl_shapes_into_gaps": 2,
-  "unreached_decoded_branch_edges_into_gaps": 0
+  "unreached_decoded_branch_edges_into_gaps": 0,
+  "ram_write_site_static_binding": "no constant ROM pointer written into any dispatchable RAM table base; stored values are runtime-computed (0x0800E3F70/0x0800EDDBA chains)",
+  "three_level_chains": {
+   "l3_tables": 931,
+   "gap_targets": 0
+  }
  },
  "thumb_bl_shapes": [
   [
@@ -82,5 +87,6 @@
   ]
  ],
  "unreached_edges": [],
- "scope": "Negative controls only: absence of evidence for the remaining gaps. Raw BL shapes are recorded as coincidence candidates, never as proof."
+ "scope": "Negative controls only: absence of evidence for the remaining gaps. Raw BL shapes are recorded as coincidence candidates, never as proof.",
+ "emulator_check": "no mGBA or scriptable GBA emulator found on PATH, Program Files, LocalAppData Programs, Downloads or Tools; fallback to static analysis per plan"
 }

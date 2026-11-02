@@ -81,12 +81,19 @@
   "decode_new_entries": 0
  },
  "negative_controls": {
-  "whole_rom_word_pointer_scan": 0,
-  "thumb_bl_into_gaps_data_coincidence_only": 14,
-  "arm_bl_into_gaps_data_coincidence_only": 2,
-  "five_trampoline_dispatch_families": 0,
-  "two_level_chains": 0,
-  "copy_source_scan": 0,
-  "unreached_decoded_instruction_edges": 0
- }
+  "gap_literal_word_bytes": 0,
+  "gap_branch_entries": 0,
+  "gap_fallthrough_entries": 1,
+  "gap_switch_entries": 0,
+  "read_word_pointers_into_gaps": 2,
+  "raw_thumb_bl_shapes_into_gaps": 14,
+  "raw_arm_bl_shapes_into_gaps": 2,
+  "unreached_decoded_branch_edges_into_gaps": 0,
+  "ram_write_site_static_binding": "no constant ROM pointer written into any dispatchable RAM table base; stored values are runtime-computed (0x0800E3F70/0x0800EDDBA chains)",
+  "three_level_chains": {
+   "l3_tables": 931,
+   "gap_targets": 0
+  }
+ },
+ "emulator_check": "no mGBA or scriptable GBA emulator found on PATH, Program Files, LocalAppData Programs, Downloads or Tools; fallback to static analysis per plan"
 }
