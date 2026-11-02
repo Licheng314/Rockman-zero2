@@ -1,0 +1,10 @@
+{
+  "offset": 209962,
+  "end": 209964,
+  "rom_hex": "0000",
+  "preceding_return": 209960,
+  "next_pc_read_word": 209964,
+  "source": "asm/stage0_alignment_0803342A.s",
+  "classification": "alignment-data",
+  "reason": "Two zero bytes between reachable BX LR and 4-byte-aligned, PC-read literal word; not an instruction"
+}

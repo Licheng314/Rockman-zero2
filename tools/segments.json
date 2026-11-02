@@ -14434,6 +14434,78 @@
   "kind": "literal-pool"
  },
  {
+  "name": "stage0_indirect_080333C8",
+  "start": 209864,
+  "end": 209962,
+  "file": "asm/stage0_indirect_080333C8.s"
+ },
+ {
+  "name": "stage0_alignment_0803342A",
+  "start": 209962,
+  "end": 209964,
+  "file": "asm/stage0_alignment_0803342A.s",
+  "kind": "alignment-data"
+ },
+ {
+  "name": "stage0_pool_0803342C",
+  "start": 209964,
+  "end": 209984,
+  "file": "asm/stage0_pool_0803342C.s",
+  "kind": "literal-pool"
+ },
+ {
+  "name": "stage0_indirect_08033440",
+  "start": 209984,
+  "end": 210084,
+  "file": "asm/stage0_indirect_08033440.s"
+ },
+ {
+  "name": "stage0_pool_080334A4",
+  "start": 210084,
+  "end": 210104,
+  "file": "asm/stage0_pool_080334A4.s",
+  "kind": "literal-pool"
+ },
+ {
+  "name": "stage0_indirect_080334B8",
+  "start": 210104,
+  "end": 210204,
+  "file": "asm/stage0_indirect_080334B8.s"
+ },
+ {
+  "name": "stage0_pool_0803351C",
+  "start": 210204,
+  "end": 210224,
+  "file": "asm/stage0_pool_0803351C.s",
+  "kind": "literal-pool"
+ },
+ {
+  "name": "stage0_indirect_08033530",
+  "start": 210224,
+  "end": 210324,
+  "file": "asm/stage0_indirect_08033530.s"
+ },
+ {
+  "name": "stage0_pool_08033594",
+  "start": 210324,
+  "end": 210344,
+  "file": "asm/stage0_pool_08033594.s",
+  "kind": "literal-pool"
+ },
+ {
+  "name": "stage0_indirect_080335A8",
+  "start": 210344,
+  "end": 210444,
+  "file": "asm/stage0_indirect_080335A8.s"
+ },
+ {
+  "name": "stage0_pool_0803360C",
+  "start": 210444,
+  "end": 210464,
+  "file": "asm/stage0_pool_0803360C.s",
+  "kind": "literal-pool"
+ },
+ {
   "name": "sub_08033620",
   "start": 210464,
   "end": 210656,

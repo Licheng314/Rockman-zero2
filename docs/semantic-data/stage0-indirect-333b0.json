@@ -1,0 +1,74 @@
+{
+  "scope": "Five directly observed entries of the indexed call at 080333B0; no claim about entire table",
+  "table_address": 3360040,
+  "table_outside_stage0_denominator": true,
+  "helper_address": 979224,
+  "entries": [
+    {
+      "table_index": 0,
+      "table_address": 3360040,
+      "thumb_pointer": 134427593,
+      "code_start": 209864,
+      "code_end": 209962,
+      "code_bytes": 98,
+      "instruction_count": 49,
+      "source": "asm/stage0_indirect_080333C8.s",
+      "pool_start": 209964,
+      "pool_end": 209984
+    },
+    {
+      "table_index": 1,
+      "table_address": 3360044,
+      "thumb_pointer": 134427713,
+      "code_start": 209984,
+      "code_end": 210084,
+      "code_bytes": 100,
+      "instruction_count": 50,
+      "source": "asm/stage0_indirect_08033440.s",
+      "pool_start": 210084,
+      "pool_end": 210104
+    },
+    {
+      "table_index": 2,
+      "table_address": 3360048,
+      "thumb_pointer": 134427833,
+      "code_start": 210104,
+      "code_end": 210204,
+      "code_bytes": 100,
+      "instruction_count": 50,
+      "source": "asm/stage0_indirect_080334B8.s",
+      "pool_start": 210204,
+      "pool_end": 210224
+    },
+    {
+      "table_index": 3,
+      "table_address": 3360052,
+      "thumb_pointer": 134427953,
+      "code_start": 210224,
+      "code_end": 210324,
+      "code_bytes": 100,
+      "instruction_count": 50,
+      "source": "asm/stage0_indirect_08033530.s",
+      "pool_start": 210324,
+      "pool_end": 210344
+    },
+    {
+      "table_index": 4,
+      "table_address": 3360056,
+      "thumb_pointer": 134428073,
+      "code_start": 210344,
+      "code_end": 210444,
+      "code_bytes": 100,
+      "instruction_count": 50,
+      "source": "asm/stage0_indirect_080335A8.s",
+      "pool_start": 210444,
+      "pool_end": 210464
+    }
+  ],
+  "new_code_bytes": 498,
+  "new_pc_literal_bytes": 100,
+  "new_alignment_bytes": 2,
+  "covered_gap_start": 209864,
+  "covered_gap_end": 210464,
+  "rom_sha1": "c4d93a58f0f82c526dec8a3fdbda170336303689"
+}

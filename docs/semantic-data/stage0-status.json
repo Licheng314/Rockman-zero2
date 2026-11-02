@@ -1,14 +1,14 @@
 {
   "updated_at": "2026-11-02",
   "objective": "Complete stage0 assembly extraction and classification without disguising unknown data as code",
-  "status": "in-progress",
+  "status": "paused-by-user-after-current-batch",
   "baseline_formal_bytes": 912454,
-  "formal_segments": 10815,
-  "formal_bytes": 961136,
+  "formal_segments": 10826,
+  "formal_bytes": 961736,
   "capacity_bytes": 983040,
-  "formal_coverage_percent": 97.77180989583333,
-  "uncovered_bytes": 21904,
-  "gap_count": 3208,
+  "formal_coverage_percent": 97.83284505208333,
+  "uncovered_bytes": 21304,
+  "gap_count": 3207,
   "formal_switch_entries_without_decoded_source": 0,
   "uncovered_direct_branch_targets": 2,
   "uncovered_fallthrough_targets": 1,
@@ -20,14 +20,17 @@
   "exact_new_extents_verified": 4300,
   "rom_sha1": "c4d93a58f0f82c526dec8a3fdbda170336303689",
   "next_work": [
-    "Prove and extract indirect-call targets from actual indexed function-pointer dispatch, starting at0x333B0",
+    "Resume only on user request; classify remaining21304-byte gaps",
     "Resolve RAM-copied code and remaining large gaps",
-    "Classify every remaining gap and audit legacy raw halfwords",
+    "Trace other real indirect dispatches and audit legacy raw halfwords",
     "Keep original983040-byte denominator and code/data split; verify all extents and whole ROM"
   ],
   "overall_goal_achieved": false,
   "old_formal_new_decoded_instruction_bytes": 45670,
   "old_formal_new_decoded_instruction_count": 21462,
-  "global_formal_extents_verified": 10815,
-  "new_verified_pc_word_bytes": 960
+  "global_formal_extents_verified": 10826,
+  "new_verified_pc_word_bytes": 960,
+  "new_verified_indirect_code_bytes": 498,
+  "new_verified_indirect_literal_bytes": 100,
+  "new_verified_indirect_alignment_bytes": 2
 }
