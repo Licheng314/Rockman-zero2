@@ -1,0 +1,116 @@
+{
+ "blocks": [
+  {
+   "label": "frame-index 16-bit table",
+   "start": 980048,
+   "end": 980560,
+   "element": "",
+   "proof": {
+    "read": "0x080037F2 ldrh r0,[r8+(idx&0xFF)*2] with r8=0x080EF450 from pool 0x080038DC",
+    "extent": "mask 0xFF * 2 -> 0x200 bytes"
+   }
+  },
+  {
+   "label": "14-word function pointer table",
+   "start": 980560,
+   "end": 980616,
+   "element": "",
+   "proof": {
+    "copy": "0x08000A10 ldm/stm loop, counter r1=13 -> 14 words copied to RAM (0x080EF650-0x080EF688)"
+   }
+  },
+  {
+   "label": "INTI marker word",
+   "start": 980616,
+   "end": 980620,
+   "element": "",
+   "proof": {
+    "read": "0x080022A4 ldr r0,[r0] with r0=0x080EF688 from pool 0x08002300; value stored to stack"
+   }
+  },
+  {
+   "label": "config record",
+   "start": 980624,
+   "end": 980632,
+   "element": "",
+   "proof": {
+    "copy": "memcpy 0x080EF3F0 at 0x0800A666 with len r2=8, src=0x080EF690 from pool 0x0800A6C0"
+   }
+  },
+  {
+   "label": "config record",
+   "start": 980632,
+   "end": 980640,
+   "element": "",
+   "proof": {
+    "copy": "memcpy 0x080EF3F0 at 0x0800AC38 with len r2=8, src=0x080EF698 from pool 0x0800AD18"
+   }
+  },
+  {
+   "label": "config record",
+   "start": 980648,
+   "end": 980656,
+   "element": "",
+   "proof": {
+    "copy": "memcpy 0x080EF3F0 at 0x0800D3BE with len r2=8, src=0x080EF6A8 from pool 0x0800D43C"
+   }
+  },
+  {
+   "label": "config record",
+   "start": 980688,
+   "end": 980696,
+   "element": "",
+   "proof": {
+    "copy": "memcpy 0x080EF3F0 at 0x0800FB8E with len r2=8, src=0x080EF6D0 from pool 0x0800FBFC"
+   }
+  },
+  {
+   "label": "3-word dispatch vtable",
+   "start": 980760,
+   "end": 980772,
+   "element": "",
+   "proof": {
+    "copy+call": "0x080034FCE ldr r1,=0x080EF718; ldm r1!,{r3,r4,r5} (12 bytes) to stack; indexed ldr r1,[sp,idx*4]; bl 0x080EF118 (bx r1)"
+   }
+  },
+  {
+   "label": "3-word dispatch vtable",
+   "start": 980788,
+   "end": 980800,
+   "element": "",
+   "proof": {
+    "copy+call": "0x0800353AA ldr r1,=0x080EF734; ldm r1!,{r3,r4,r5} (12 bytes) to stack; indexed ldr r1,[sp,idx*4]; bl 0x080EF118 (bx r1)"
+   }
+  },
+  {
+   "label": "config records",
+   "start": 980864,
+   "end": 980874,
+   "element": "",
+   "proof": {
+    "copy": "memcpy 0x080EF3F0 at 0x08006E07E len r2=3 src=0x080EF780 (pool 0x08006E0DC) and at 0x08006E08A len r2=6 src=0x080EF784 (pool 0x08006E0E0)"
+   }
+  },
+  {
+   "label": "config record",
+   "start": 980908,
+   "end": 980912,
+   "element": "",
+   "proof": {
+    "copy": "memcpy 0x080EF3F0 at 0x08007DB2C with len r2=4, src=0x080EF7AC from pool 0x08007DB60"
+   }
+  },
+  {
+   "label": "8-word record",
+   "start": 981004,
+   "end": 981036,
+   "element": "",
+   "proof": {
+    "copy": "0x0800DE1D6 ldr r0,=0x080EF80C; movs r2,#8; bl 0x080EEF68 (SWI 0x0C CpuFastSet) -> 32 bytes"
+   }
+  }
+ ],
+ "original_formal_bytes": 964146,
+ "added_data_bytes": 674,
+ "scope": "Typed data blocks with per-block read/copy proof; no unproven range included."
+}
