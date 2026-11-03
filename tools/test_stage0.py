@@ -11,10 +11,23 @@ import extract_func
 import project_guard as guard
 from stage0_switches import bounded_switches
 from stage0_decode_existing import trace_unknown
+from stage0_dispatch_tables import find_tables, table_entries
 from capstone import Cs, CS_ARCH_ARM, CS_MODE_THUMB
 
 
 class Stage0Tests(unittest.TestCase):
+    def test_dispatcher_with_longer_index_setup_reaches_external_table(self):
+        rom=Path('baserom.gba').read_bytes()
+        md=Cs(CS_ARCH_ARM, CS_MODE_THUMB)
+        instructions={i.address-BASE:dict(size=i.size,mnemonic=i.mnemonic,operands=i.op_str,
+                                          source='asm/sub_0803175C.s')
+                      for i in md.disasm(rom[0x3175C:0x3177A],BASE+0x3175C)}
+        gaps=[(0x317C8,0x31830)]
+        tables=find_tables(rom,instructions,gaps)
+        self.assertEqual(tables[0x08334468],{0x3175E})
+        entries=table_entries(rom,0x08334468,gaps)
+        self.assertEqual(len(entries),13)
+        self.assertEqual(entries[0]['target'],0x317C8)
     def test_uninterrupted_nontransfer_flow_can_correct_a_legacy_word(self):
         rom=bytes.fromhex('01 20 01 30 70 47 00 00');owner=dict(start=0,end=8,file='fixture')
         locate=lambda a:owner if 0<=a<8 else None

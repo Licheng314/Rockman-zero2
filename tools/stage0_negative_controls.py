@@ -1,10 +1,9 @@
 """Negative-control suite for the remaining unconfirmed stage-0 gaps.
 
-Re-runs every reference net that could prove a gap entry and asserts the
-observed counts stay at the recorded baselines. A nonzero delta means new
-evidence appeared: re-run the extraction pipelines instead of trusting this
-report. Coincidence findings (raw BL shapes inside data) are counted and
-listed so a human can re-judge them without repeating the scan.
+Re-runs selected reference nets and records current counts for comparison
+with prior receipts. A count change calls for re-analysis. Absence of a hit
+within these detectors is not proof that all static references are absent.
+Raw BL shapes inside data remain coincidence candidates for human review.
 """
 import argparse
 import bisect
@@ -54,11 +53,18 @@ def main():
             if hw & 0xF800 == 0x4800:
                 read_pool_words.add(((a + 4) & ~3) + (hw & 255) * 4)
     fresh = 0
-    for p in range(0, END - 3, 4):
+    all_word_pointers = 0
+    outside_word_pointers = 0
+    for p in range(0, len(rom) - 3, 4):
         w = struct.unpack_from('<I', rom, p)[0]
-        if 0x08000000 <= w < 0x080F0000 and gap_of((w & ~1) - BASE) and p in read_pool_words:
-            fresh += 1
+        if 0x08000000 <= w < 0x080F0000 and gap_of((w & ~1) - BASE):
+            all_word_pointers += 1
+            outside_word_pointers += p >= END
+            if p in read_pool_words:
+                fresh += 1
     controls['read_word_pointers_into_gaps'] = fresh
+    controls['all_rom_word_pointers_into_gaps'] = all_word_pointers
+    controls['word_pointers_outside_main_code_into_gaps'] = outside_word_pointers
 
     # 3. raw Thumb BL shapes into gaps across the whole ROM (data hits included)
     thumb_bl = []

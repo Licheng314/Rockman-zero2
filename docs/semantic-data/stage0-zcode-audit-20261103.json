@@ -1,0 +1,43 @@
+{
+  "scope": "Independent acceptance review of ZCode overnight stage0 report; no new code integrated",
+  "reviewed_commit": "15d0ae3eca083f1a970ef3ca85b08a7c65bc1a70",
+  "formal_bytes": 979256,
+  "denominator": 983040,
+  "coverage_percent": 99.61507161458333,
+  "remaining_gaps": 85,
+  "remaining_bytes": 3784,
+  "full_rom_sha1": "c4d93a58f0f82c526dec8a3fdbda170336303689",
+  "original_pointer_scan_limit": 983040,
+  "corrected_full_rom_pointer_hits_into_gaps": 93,
+  "corrected_hits_outside_main_code": 91,
+  "proven_dispatch": {
+    "source": "asm/sub_0803175C.s",
+    "reader": 202590,
+    "pool": 202620,
+    "table_base": 137577576,
+    "trampoline": 135196952,
+    "gap": [
+      202694,
+      202800
+    ],
+    "entry_offsets": [
+      202696,
+      202704,
+      202712,
+      202720,
+      202728,
+      202736,
+      202744,
+      202752,
+      202760,
+      202768,
+      202776,
+      202784,
+      202792
+    ],
+    "entry_count": 13,
+    "validated_thumb1_bytes": 104,
+    "leading_two_bytes_hex": "0000"
+  },
+  "decision": "Stage0 remains unfinished. Prior static-fixpoint and dynamic-only claims are disproved by source-backed indexed dispatch."
+}

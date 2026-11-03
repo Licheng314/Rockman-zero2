@@ -15,6 +15,7 @@ from collections import Counter, defaultdict
 
 from extract_func import disasm_bfs
 from stage0_inventory import inventory, ROOT
+from stage0_dispatch_tables import find_tables, table_entries
 
 BASE, END = 0x08000000, 0xF0000
 ROM_SHA1 = 'c4d93a58f0f82c526dec8a3fdbda170336303689'
@@ -37,6 +38,9 @@ def decode_probe(rom, start, bound):
 
 def classify(row):
     """Order matters: strongest evidence first. Never invent confidence."""
+    if row.get('dispatch_table_entries'):
+        return ('mixed-code-entry', 'medium',
+                'Proven indexed function-pointer entries inside this gap; boundaries and other bytes need separate classification')
     if row['direct_branches'] or row['fallthrough_entries'] or row['switch_entries']:
         return ('uncovered-code-entry', 'high',
                 'Proven control-flow entry (direct branch / fallthrough / bounded switch)')
@@ -99,7 +103,7 @@ def build():
 
     # One whole-ROM pass: any word whose value (with the Thumb bit optionally
     # set) targets a gap is recorded against that gap, wherever the holder lives.
-    for p in range(0, END - 3, 4):
+    for p in range(0, len(rom) - 3, 4):
         word = struct.unpack_from('<I', rom, p)[0]
         if not 0x08000000 <= word < 0x08000000 + END:
             continue
@@ -202,6 +206,15 @@ def main():
     args = parser.parse_args()
     result, segments, rom, readers, rows = build()
     rows = resolve_usage(rows, rom, result)
+    gaps = [(row['start'], row['end']) for row in rows]
+    dispatchers = find_tables(rom, {int(k): v for k, v in result['instructions'].items()}, gaps)
+    starts = [row['start'] for row in rows]
+    for base, reader_addresses in dispatchers.items():
+        for entry in table_entries(rom, base, gaps):
+            index = bisect.bisect_right(starts, entry['target']) - 1
+            if index >= 0 and entry['target'] < rows[index]['end']:
+                rows[index].setdefault('dispatch_table_entries', []).append(
+                    dict(base=base, readers=sorted(reader_addresses), **entry))
     for row in rows:
         kind, confidence, reason = classify(row)
         row['candidate_type'] = kind
@@ -209,6 +222,7 @@ def main():
         row['reason'] = reason
         row['next_step'] = {
             'uncovered-code-entry': 'Extract via bounded entry with stage0_integrate pipeline.',
+            'mixed-code-entry': 'Extract only the proven entry routines; classify surrounding bytes separately.',
             'code-candidate-indirect': 'Verify dispatcher bx, decode from pointer target, batch-integrate.',
             'data-candidate': 'Identify element width/length, integrate as typed data.',
             'alignment-candidate': 'Check neighbour segment boundaries before integrating as alignment-data.',

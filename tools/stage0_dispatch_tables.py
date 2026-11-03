@@ -51,11 +51,14 @@ def find_tables(rom, instructions, gaps):
         first = struct.unpack_from('<I', rom, off)[0]
         if not 0x08000000 <= first < 0x080F0000:
             continue
-        for j in range(1, 6):
-            if i + j >= len(ordered) or ordered[i + j] - a > 16:
+        for j in range(1, 10):
+            if i + j >= len(ordered) or ordered[i + j] - a > 24:
                 break
             b = ordered[i + j]
             mid = instructions[b]
+            previous = ordered[i + j - 1]
+            if mid['source'] != row['source'] or b != previous + instructions[previous]['size']:
+                break
             mm = mid['mnemonic']
             ops = mid['operands']
             step = None
