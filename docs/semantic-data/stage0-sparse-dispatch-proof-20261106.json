@@ -1,0 +1,143 @@
+[
+  {
+    "base": 137578060,
+    "readers": [
+      219330
+    ],
+    "gap_entries": [
+      {
+        "word": 137578068,
+        "value": 134437249,
+        "target": 219520,
+        "gap": [
+          219508,
+          219524
+        ],
+        "index": 2
+      }
+    ],
+    "source": "asm/sub_080358B4.s",
+    "proof": "Object byte at +0x177, branch skips index 0, shift by 2 and LDR r1 before BL 080EF118 (BX r1)."
+  },
+  {
+    "base": 137578072,
+    "readers": [
+      219380
+    ],
+    "gap_entries": [
+      {
+        "word": 137578080,
+        "value": 134437237,
+        "target": 219508,
+        "gap": [
+          219508,
+          219524
+        ],
+        "index": 2
+      },
+      {
+        "word": 137578084,
+        "value": 134437241,
+        "target": 219512,
+        "gap": [
+          219508,
+          219524
+        ],
+        "index": 3
+      },
+      {
+        "word": 137578088,
+        "value": 134437245,
+        "target": 219516,
+        "gap": [
+          219508,
+          219524
+        ],
+        "index": 4
+      }
+    ],
+    "source": "asm/sub_080358E4.s",
+    "proof": "Object byte at +0x178, branch skips index 0, shift by 2 and LDR r1 before BL 080EF118 (BX r1)."
+  },
+  {
+    "base": 137584404,
+    "readers": [
+      231838,
+      231860
+    ],
+    "gap_entries": [
+      {
+        "word": 137584440,
+        "value": 134465693,
+        "target": 247964,
+        "gap": [
+          247964,
+          248020
+        ],
+        "index": 9
+      },
+      {
+        "word": 137584444,
+        "value": 134467625,
+        "target": 249896,
+        "gap": [
+          249896,
+          249952
+        ],
+        "index": 10
+      }
+    ],
+    "source": "asm/sub_08038958.s",
+    "proof": "Object byte at +9 indexes the table. The first two lookup paths discard objects for null entries; the later paths load r2 and BL 080EF11C (BX r2)."
+  },
+  {
+    "base": 137584540,
+    "readers": [
+      232986
+    ],
+    "gap_entries": [
+      {
+        "word": 137584540,
+        "value": 134450749,
+        "target": 233020,
+        "gap": [
+          233020,
+          233048
+        ],
+        "index": 0
+      },
+      {
+        "word": 137584544,
+        "value": 134450757,
+        "target": 233028,
+        "gap": [
+          233020,
+          233048
+        ],
+        "index": 1
+      },
+      {
+        "word": 137584548,
+        "value": 134450765,
+        "target": 233036,
+        "gap": [
+          233020,
+          233048
+        ],
+        "index": 2
+      },
+      {
+        "word": 137584556,
+        "value": 134450773,
+        "target": 233044,
+        "gap": [
+          233020,
+          233048
+        ],
+        "index": 4
+      }
+    ],
+    "source": "asm/sub_08038E10.s",
+    "proof": "Object byte at +0xd indexes the table. LDR r2 and CMP r2,#0 precede BL 080EF11C (BX r2)."
+  }
+]
