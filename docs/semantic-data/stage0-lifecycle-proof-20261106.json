@@ -1,0 +1,106 @@
+{
+  "input_segments_sha1": "4ab7cac78275389e460ce65d896c06d8f7f53948",
+  "source_fingerprint": "b7dd9e27563f38280362c1806d7ae51a9f58518de517d91ceb12c9207a138eab",
+  "tables": [
+    {
+      "base": 137648420,
+      "root": 137637988,
+      "type_index": 63,
+      "readers": [
+        705694
+      ],
+      "publish": 705710,
+      "callback_slot": 20,
+      "consumers": [
+        73756,
+        73790
+      ],
+      "gap_entries": [
+        {
+          "word": 137648428,
+          "value": 134923513,
+          "target": 705784,
+          "gap": [
+            705784,
+            705844
+          ]
+        }
+      ]
+    },
+    {
+      "base": 137659920,
+      "root": 137648536,
+      "type_index": 74,
+      "readers": [
+        706662
+      ],
+      "publish": 706678,
+      "callback_slot": 20,
+      "consumers": [
+        73756,
+        73790
+      ],
+      "gap_entries": [
+        {
+          "word": 137659928,
+          "value": 135001365,
+          "target": 783636,
+          "gap": [
+            783636,
+            783668
+          ]
+        }
+      ]
+    },
+    {
+      "base": 137666672,
+      "root": 137659964,
+      "type_index": 33,
+      "readers": [
+        784700
+      ],
+      "publish": 784716,
+      "callback_slot": 20,
+      "consumers": [
+        73756,
+        73790
+      ],
+      "gap_entries": [
+        {
+          "word": 137666680,
+          "value": 135087901,
+          "target": 870172,
+          "gap": [
+            870172,
+            870176
+          ]
+        }
+      ]
+    },
+    {
+      "base": 137666820,
+      "root": 137666716,
+      "type_index": 3,
+      "readers": [
+        871772
+      ],
+      "publish": 871788,
+      "callback_slot": 20,
+      "consumers": [
+        73756,
+        73790
+      ],
+      "gap_entries": [
+        {
+          "word": 137666828,
+          "value": 135090405,
+          "target": 872676,
+          "gap": [
+            872676,
+            872708
+          ]
+        }
+      ]
+    }
+  ]
+}

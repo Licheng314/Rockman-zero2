@@ -1,0 +1,559 @@
+{
+  "input_segments_sha1": "ab89349fa9f2332ae77d74f90c1d781dafeed0a8",
+  "source_fingerprint": "d5705ba463288c68f5f91ef12f56df6621596134ffc266cec2af4678d795ded5",
+  "root": 137445516,
+  "tables": [
+    {
+      "base": 137445588,
+      "kind": "map",
+      "map_id": 0,
+      "descriptor_word": 137445516,
+      "descriptor": 137446420,
+      "descriptor_field": 4,
+      "gap_entries": [
+        {
+          "word": 137445596,
+          "value": 134260269,
+          "target": 42540,
+          "gap": [
+            42538,
+            42544
+          ],
+          "record": 0,
+          "slot": 2,
+          "call": 35640
+        }
+      ]
+    },
+    {
+      "base": 137446548,
+      "kind": "map",
+      "map_id": 1,
+      "descriptor_word": 137445520,
+      "descriptor": 137449288,
+      "descriptor_field": 4,
+      "gap_entries": [
+        {
+          "word": 137446548,
+          "value": 134260461,
+          "target": 42732,
+          "gap": [
+            42732,
+            42784
+          ],
+          "record": 0,
+          "slot": 0,
+          "call": 33006
+        },
+        {
+          "word": 137446556,
+          "value": 134260713,
+          "target": 42984,
+          "gap": [
+            42984,
+            42988
+          ],
+          "record": 0,
+          "slot": 2,
+          "call": 35640
+        }
+      ]
+    },
+    {
+      "base": 137452748,
+      "kind": "map",
+      "map_id": 3,
+      "descriptor_word": 137445528,
+      "descriptor": 137457344,
+      "descriptor_field": 4,
+      "gap_entries": [
+        {
+          "word": 137452756,
+          "value": 134266361,
+          "target": 48632,
+          "gap": [
+            48632,
+            48636
+          ],
+          "record": 0,
+          "slot": 2,
+          "call": 35640
+        }
+      ]
+    },
+    {
+      "base": 137452764,
+      "kind": "layer",
+      "map_id": 3,
+      "descriptor_word": 137445528,
+      "descriptor": 137457344,
+      "descriptor_field": 112,
+      "gap_entries": [
+        {
+          "word": 137452820,
+          "value": 134266709,
+          "target": 48980,
+          "gap": [
+            48980,
+            49004
+          ],
+          "record": 4,
+          "slot": 2,
+          "call": 33502
+        }
+      ]
+    },
+    {
+      "base": 137457624,
+      "kind": "map",
+      "map_id": 4,
+      "descriptor_word": 137445532,
+      "descriptor": 137463060,
+      "descriptor_field": 4,
+      "gap_entries": [
+        {
+          "word": 137457632,
+          "value": 134268169,
+          "target": 50440,
+          "gap": [
+            50440,
+            50444
+          ],
+          "record": 0,
+          "slot": 2,
+          "call": 35640
+        }
+      ]
+    },
+    {
+      "base": 137463244,
+      "kind": "map",
+      "map_id": 5,
+      "descriptor_word": 137445536,
+      "descriptor": 137466260,
+      "descriptor_field": 4,
+      "gap_entries": [
+        {
+          "word": 137463244,
+          "value": 134271249,
+          "target": 53520,
+          "gap": [
+            53520,
+            53552
+          ],
+          "record": 0,
+          "slot": 0,
+          "call": 33006
+        }
+      ]
+    },
+    {
+      "base": 137466488,
+      "kind": "layer",
+      "map_id": 6,
+      "descriptor_word": 137445540,
+      "descriptor": 137468516,
+      "descriptor_field": 112,
+      "gap_entries": [
+        {
+          "word": 137466532,
+          "value": 134273861,
+          "target": 56132,
+          "gap": [
+            56132,
+            56160
+          ],
+          "record": 3,
+          "slot": 2,
+          "call": 33502
+        }
+      ]
+    },
+    {
+      "base": 137468688,
+      "kind": "map",
+      "map_id": 7,
+      "descriptor_word": 137445544,
+      "descriptor": 137472652,
+      "descriptor_field": 4,
+      "gap_entries": [
+        {
+          "word": 137468688,
+          "value": 134274777,
+          "target": 57048,
+          "gap": [
+            57048,
+            57100
+          ],
+          "record": 0,
+          "slot": 0,
+          "call": 33006
+        }
+      ]
+    },
+    {
+      "base": 137472808,
+      "kind": "map",
+      "map_id": 8,
+      "descriptor_word": 137445548,
+      "descriptor": 137478668,
+      "descriptor_field": 4,
+      "gap_entries": [
+        {
+          "word": 137472816,
+          "value": 134277657,
+          "target": 59928,
+          "gap": [
+            59928,
+            59932
+          ],
+          "record": 0,
+          "slot": 2,
+          "call": 35640
+        }
+      ]
+    },
+    {
+      "base": 137472824,
+      "kind": "layer",
+      "map_id": 8,
+      "descriptor_word": 137445548,
+      "descriptor": 137478668,
+      "descriptor_field": 112,
+      "gap_entries": [
+        {
+          "word": 137472868,
+          "value": 134277817,
+          "target": 60088,
+          "gap": [
+            60088,
+            60100
+          ],
+          "record": 3,
+          "slot": 2,
+          "call": 33502
+        }
+      ]
+    },
+    {
+      "base": 137478812,
+      "kind": "layer",
+      "map_id": 9,
+      "descriptor_word": 137445552,
+      "descriptor": 137482400,
+      "descriptor_field": 112,
+      "gap_entries": [
+        {
+          "word": 137478844,
+          "value": 134279453,
+          "target": 61724,
+          "gap": [
+            61724,
+            61736
+          ],
+          "record": 2,
+          "slot": 2,
+          "call": 33502
+        }
+      ]
+    },
+    {
+      "base": 137482592,
+      "kind": "map",
+      "map_id": 10,
+      "descriptor_word": 137445556,
+      "descriptor": 137485980,
+      "descriptor_field": 4,
+      "gap_entries": [
+        {
+          "word": 137482592,
+          "value": 134279945,
+          "target": 62216,
+          "gap": [
+            62216,
+            62260
+          ],
+          "record": 0,
+          "slot": 0,
+          "call": 33006
+        },
+        {
+          "word": 137482604,
+          "value": 134280277,
+          "target": 62548,
+          "gap": [
+            62548,
+            62552
+          ],
+          "record": 0,
+          "slot": 3,
+          "call": 33482
+        }
+      ]
+    },
+    {
+      "base": 137486168,
+      "kind": "map",
+      "map_id": 11,
+      "descriptor_word": 137445560,
+      "descriptor": 137487396,
+      "descriptor_field": 4,
+      "gap_entries": [
+        {
+          "word": 137486176,
+          "value": 134280661,
+          "target": 62932,
+          "gap": [
+            62932,
+            62936
+          ],
+          "record": 0,
+          "slot": 2,
+          "call": 35640
+        }
+      ]
+    },
+    {
+      "base": 137487524,
+      "kind": "map",
+      "map_id": 12,
+      "descriptor_word": 137445564,
+      "descriptor": 137488752,
+      "descriptor_field": 4,
+      "gap_entries": [
+        {
+          "word": 137487524,
+          "value": 134280729,
+          "target": 63000,
+          "gap": [
+            62998,
+            63032
+          ],
+          "record": 0,
+          "slot": 0,
+          "call": 33006
+        },
+        {
+          "word": 137487532,
+          "value": 134280941,
+          "target": 63212,
+          "gap": [
+            63212,
+            63216
+          ],
+          "record": 0,
+          "slot": 2,
+          "call": 35640
+        }
+      ]
+    },
+    {
+      "base": 137491304,
+      "kind": "map",
+      "map_id": 14,
+      "descriptor_word": 137445572,
+      "descriptor": 137493324,
+      "descriptor_field": 4,
+      "gap_entries": [
+        {
+          "word": 137491312,
+          "value": 134282553,
+          "target": 64824,
+          "gap": [
+            64824,
+            64828
+          ],
+          "record": 0,
+          "slot": 2,
+          "call": 35640
+        }
+      ]
+    },
+    {
+      "base": 137493468,
+      "kind": "map",
+      "map_id": 15,
+      "descriptor_word": 137445576,
+      "descriptor": 137495008,
+      "descriptor_field": 4,
+      "gap_entries": [
+        {
+          "word": 137493476,
+          "value": 134283765,
+          "target": 66036,
+          "gap": [
+            66034,
+            66040
+          ],
+          "record": 0,
+          "slot": 2,
+          "call": 35640
+        }
+      ]
+    },
+    {
+      "base": 137493484,
+      "kind": "layer",
+      "map_id": 15,
+      "descriptor_word": 137445576,
+      "descriptor": 137495008,
+      "descriptor_field": 112,
+      "gap_entries": [
+        {
+          "word": 137493516,
+          "value": 134284677,
+          "target": 66948,
+          "gap": [
+            66948,
+            66968
+          ],
+          "record": 2,
+          "slot": 2,
+          "call": 33502
+        }
+      ]
+    },
+    {
+      "base": 137495184,
+      "kind": "map",
+      "map_id": 16,
+      "descriptor_word": 137445580,
+      "descriptor": 137498044,
+      "descriptor_field": 4,
+      "gap_entries": [
+        {
+          "word": 137495184,
+          "value": 134285037,
+          "target": 67308,
+          "gap": [
+            67308,
+            67400
+          ],
+          "record": 0,
+          "slot": 0,
+          "call": 33006
+        },
+        {
+          "word": 137495192,
+          "value": 134285657,
+          "target": 67928,
+          "gap": [
+            67928,
+            67936
+          ],
+          "record": 0,
+          "slot": 2,
+          "call": 35640
+        },
+        {
+          "word": 137495196,
+          "value": 134285661,
+          "target": 67932,
+          "gap": [
+            67928,
+            67936
+          ],
+          "record": 0,
+          "slot": 3,
+          "call": 33482
+        }
+      ]
+    },
+    {
+      "base": 137495200,
+      "kind": "layer",
+      "map_id": 16,
+      "descriptor_word": 137445580,
+      "descriptor": 137498044,
+      "descriptor_field": 112,
+      "gap_entries": [
+        {
+          "word": 137495232,
+          "value": 134287189,
+          "target": 69460,
+          "gap": [
+            69460,
+            69472
+          ],
+          "record": 2,
+          "slot": 2,
+          "call": 33502
+        }
+      ]
+    },
+    {
+      "base": 137498228,
+      "kind": "map",
+      "map_id": 17,
+      "descriptor_word": 137445584,
+      "descriptor": 137499744,
+      "descriptor_field": 4,
+      "gap_entries": [
+        {
+          "word": 137498228,
+          "value": 134289449,
+          "target": 71720,
+          "gap": [
+            71720,
+            71752
+          ],
+          "record": 0,
+          "slot": 0,
+          "call": 33006
+        },
+        {
+          "word": 137498236,
+          "value": 134289593,
+          "target": 71864,
+          "gap": [
+            71864,
+            71868
+          ],
+          "record": 0,
+          "slot": 2,
+          "call": 35640
+        }
+      ]
+    },
+    {
+      "base": 137498244,
+      "kind": "layer",
+      "map_id": 17,
+      "descriptor_word": 137445584,
+      "descriptor": 137499744,
+      "descriptor_field": 112,
+      "gap_entries": [
+        {
+          "word": 137498360,
+          "value": 134291189,
+          "target": 73460,
+          "gap": [
+            73460,
+            73472
+          ],
+          "record": 9,
+          "slot": 2,
+          "call": 33502
+        },
+        {
+          "word": 137498372,
+          "value": 134291289,
+          "target": 73560,
+          "gap": [
+            73560,
+            73620
+          ],
+          "record": 10,
+          "slot": 2,
+          "call": 33502
+        }
+      ]
+    }
+  ],
+  "layer_publication": [
+    35932,
+    35936,
+    35938
+  ],
+  "scope": "Only map descriptors whose ID matches the root slot, and actual callback fields."
+}

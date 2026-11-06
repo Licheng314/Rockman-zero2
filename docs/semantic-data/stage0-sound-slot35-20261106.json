@@ -1,0 +1,28 @@
+{
+  "rom_sha1": "c4d93a58f0f82c526dec8a3fdbda170336303689",
+  "ranges": [
+    {
+      "name": "stage0_sound_clear_track_080ED240",
+      "start": 971328,
+      "end": 971350,
+      "kind": "thumb-code",
+      "file": "asm/stage0_sound_clear_track_080ED240.s"
+    },
+    {
+      "name": "stage0_alignment_data_080ED256",
+      "start": 971350,
+      "end": 971352,
+      "kind": "alignment-data",
+      "file": "asm/stage0_alignment_data_080ED256.s"
+    }
+  ],
+  "copy_proof": "stage0-audio-dispatch-proof-20261106.json",
+  "rom_table": 135264932,
+  "ram_destination": 33810112,
+  "slot": 35,
+  "ram_slot": 33810252,
+  "wrapper": 135192228,
+  "wrapper_literal": 135192244,
+  "trampoline": 135196952,
+  "entry": 135189056
+}
