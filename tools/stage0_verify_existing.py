@@ -34,7 +34,8 @@ def main():
             edges[source['file']][source['before_sha1']].add(source['after_sha1'])
     for repair_report in ('stage0-split-bl-repairs.json', 'stage0-split-literals-20261106.json',
                           'stage0-reencode-thumb-20261106.json', 'stage0-inline-data-20261106.json',
-                          'stage0-reencode-branches-20261106.json'):
+                          'stage0-reencode-branches-20261106.json', 'stage0-legacy-pools-20261106.json',
+                          'stage0-final-padding-20261106.json'):
         repairs = json.loads((EVIDENCE / repair_report).read_bytes())['repairs']
         for repair in repairs:
             if 'after_sha1' in repair:

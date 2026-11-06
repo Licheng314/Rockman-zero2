@@ -136,7 +136,7 @@ loc_0804EAC4:
     mov r0, #0
     strb r0, [r6]
     b loc_0804EAC4
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment before referenced word
     .word 0x0833C08B ; proven PC/switch data
     .word 0x0833C08F ; proven PC/switch data
 loc_0804EBBC:

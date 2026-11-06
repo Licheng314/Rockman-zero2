@@ -1,9 +1,6 @@
-; sub_080ABC8E @ 0x080ABC8E-080ABCDE  (自动生成, 经往返验证)
+; block_080ABC94 at 0x080ABC94. Entry after verified literal pool.
 .thumb
-sub_080ABC8E:
-    .dh 0x0000 ; TODO movs r0, r0
-    add r0, #0x64
-    lsr r4, r6, #0x20
+block_080ABC94:
     push {r4, r5, r6, lr}
     add r5, r0, #0
     lsl r2, r2, #0x18

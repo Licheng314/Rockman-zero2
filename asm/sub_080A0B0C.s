@@ -120,7 +120,7 @@ loc_080A0BDA:
     cmp r2, r0
     ble loc_080A0C00
     b loc_080A0C46
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment before referenced word
     .word 0x00000FFF
 loc_080A0BF8:
     sub r1, r1, r0

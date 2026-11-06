@@ -1,10 +1,6 @@
-; sub_0808F11A @ 0x0808F11A-0808F1E0  (自动生成, 经往返验证)
+; block_0808F124 at 0x0808F124. Entry after verified literal pool.
 .thumb
-sub_0808F11A:
-    .dh 0x0000 ; TODO movs r0, r0
-    ldrb r2, [r0]
-    .dh 0x0000 ; TODO movs r0, r0
-    .dh 0xF450, 0x080E ; TODO orrs r8, r0, #0x8e0000
+block_0808F124:
     mov r1, #0
     mov r0, #1
     strb r0, [r4, #0x12]

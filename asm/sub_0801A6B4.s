@@ -63,12 +63,10 @@ loc_0801A6EE:
     add r0, r7, r3
     strb r4, [r0]
     bl EXT_0801AF1C
-    .dh 0xEC30, 0x0202 ; TODO ldc p2, c0, [r0], #-8
-    str r0, [r6, #0x3c]
-    lsr r2, r6, #0x20
-    str r0, [r3, #0x34]
-    lsr r2, r6, #0x20
-    .dh 0xEBB4, 0x0202 ; TODO subs.w r2, r4, r2
+    .word 0x0202EC30 ; proven PC literal
+    .word 0x083263F0 ; proven PC literal
+    .word 0x08326358 ; proven PC literal
+    .word 0x0202EBB4 ; proven PC literal
 loc_0801A740:
     cmp r0, #1
     bne loc_0801A75C

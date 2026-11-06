@@ -1,0 +1,358 @@
+{
+  "capacity_bytes": 983040,
+  "formal_segments": 14927,
+  "bytes_by_source_representation": {
+    "alignment-data": 6458,
+    "arm-code": 1032,
+    "cartridge-header": 188,
+    "inline-alignment": 5244,
+    "inline-word": 49704,
+    "integrated-c": 1278,
+    "literal-pool": 39692,
+    "thumb-source": 876680,
+    "typed-data": 2764
+  },
+  "input_source_fingerprint": "e6ac41fab8b31b041bce281d4d835ba221adb775f48bd327d8fa591b9688cfb7",
+  "known_data_word_conflicts": [
+    {
+      "offset": 119300,
+      "value": 33557776,
+      "references": [
+        {
+          "kind": "pc-load",
+          "reader": 119264
+        }
+      ],
+      "instruction_rows": [
+        {
+          "offset": 119300,
+          "size": 2,
+          "file": "asm/sub_0801D1D8.s",
+          "line": 29,
+          "text": "lsr r0, r2, #0x14"
+        },
+        {
+          "offset": 119302,
+          "size": 2,
+          "file": "asm/sub_0801D1D8.s",
+          "line": 30,
+          "text": "lsl r0, r0, #8"
+        }
+      ]
+    },
+    {
+      "offset": 119308,
+      "value": 134337040,
+      "references": [
+        {
+          "kind": "pc-load",
+          "reader": 119292
+        }
+      ],
+      "instruction_rows": [
+        {
+          "offset": 119308,
+          "size": 2,
+          "file": "asm/sub_0801D1D8.s",
+          "line": 32,
+          "text": "bhs #0x801d230"
+        },
+        {
+          "offset": 119310,
+          "size": 2,
+          "file": "asm/sub_0801D1D8.s",
+          "line": 33,
+          "text": "lsr r1, r0, #0x20"
+        }
+      ]
+    },
+    {
+      "offset": 381060,
+      "value": 134598792,
+      "references": [
+        {
+          "kind": "pc-load",
+          "reader": 381046
+        }
+      ],
+      "instruction_rows": [
+        {
+          "offset": 381060,
+          "size": 2,
+          "file": "asm/sub_0805D040.s",
+          "line": 36,
+          "text": "beq EXT_0805CF98"
+        },
+        {
+          "offset": 381062,
+          "size": 2,
+          "file": "asm/sub_0805D040.s",
+          "line": 37,
+          "text": "lsr r5, r0, #0x20"
+        }
+      ]
+    },
+    {
+      "offset": 404536,
+      "value": 134622268,
+      "references": [
+        {
+          "kind": "pc-load",
+          "reader": 404526
+        }
+      ],
+      "instruction_rows": [
+        {
+          "offset": 404536,
+          "size": 2,
+          "file": "asm/sub_08062C20.s",
+          "line": 17,
+          "text": "cmp r4, #0x3c"
+        },
+        {
+          "offset": 404538,
+          "size": 2,
+          "file": "asm/sub_08062C20.s",
+          "line": 18,
+          "text": "lsr r6, r0, #0x20"
+        }
+      ]
+    },
+    {
+      "offset": 609620,
+      "value": 134827352,
+      "references": [
+        {
+          "kind": "pc-load",
+          "reader": 609610
+        }
+      ],
+      "instruction_rows": [
+        {
+          "offset": 609620,
+          "size": 2,
+          "file": "asm/sub_08094D3C.s",
+          "line": 17,
+          "text": "ldr r5, [pc, #0x160]"
+        },
+        {
+          "offset": 609622,
+          "size": 2,
+          "file": "asm/sub_08094D3C.s",
+          "line": 18,
+          "text": "lsr r1, r1, #0x20"
+        }
+      ]
+    },
+    {
+      "offset": 809952,
+      "value": 135027684,
+      "references": [
+        {
+          "kind": "pc-load",
+          "reader": 809942
+        }
+      ],
+      "instruction_rows": [
+        {
+          "offset": 809952,
+          "size": 2,
+          "file": "asm/sub_080C5BC8.s",
+          "line": 17,
+          "text": "ldrh r4, [r4, r7]"
+        },
+        {
+          "offset": 809954,
+          "size": 2,
+          "file": "asm/sub_080C5BC8.s",
+          "line": 18,
+          "text": "lsr r4, r1, #0x20"
+        }
+      ]
+    },
+    {
+      "offset": 825244,
+      "value": 135042976,
+      "references": [
+        {
+          "kind": "pc-load",
+          "reader": 825234
+        }
+      ],
+      "instruction_rows": [
+        {
+          "offset": 825244,
+          "size": 2,
+          "file": "asm/sub_080C9784.s",
+          "line": 17,
+          "text": "str r7, [sp, #0x280]"
+        },
+        {
+          "offset": 825246,
+          "size": 2,
+          "file": "asm/sub_080C9784.s",
+          "line": 18,
+          "text": "lsr r4, r1, #0x20"
+        }
+      ]
+    },
+    {
+      "offset": 886004,
+      "value": 137671948,
+      "references": [
+        {
+          "kind": "pc-load",
+          "reader": 885926
+        }
+      ],
+      "instruction_rows": [
+        {
+          "offset": 886004,
+          "size": 2,
+          "file": "asm/sub_080D84F4.s",
+          "line": 4,
+          "text": "push {r2, r3, lr}"
+        },
+        {
+          "offset": 886006,
+          "size": 2,
+          "file": "asm/sub_080D84F4.s",
+          "line": 5,
+          "text": "lsr r4, r6, #0x20"
+        }
+      ]
+    },
+    {
+      "offset": 886336,
+      "value": 137672012,
+      "references": [
+        {
+          "kind": "pc-load",
+          "reader": 886260
+        }
+      ],
+      "instruction_rows": [
+        {
+          "offset": 886336,
+          "size": 2,
+          "file": "asm/sub_080D8640.s",
+          "line": 4,
+          "text": "push {r2, r3, r6, lr}"
+        },
+        {
+          "offset": 886338,
+          "size": 2,
+          "file": "asm/sub_080D8640.s",
+          "line": 5,
+          "text": "lsr r4, r6, #0x20"
+        }
+      ]
+    },
+    {
+      "offset": 886848,
+      "value": 137672028,
+      "references": [
+        {
+          "kind": "pc-load",
+          "reader": 886830
+        }
+      ],
+      "instruction_rows": [
+        {
+          "offset": 886848,
+          "size": 2,
+          "file": "asm/sub_080D8840.s",
+          "line": 4,
+          "text": "push {r2, r3, r4, r6, lr}"
+        },
+        {
+          "offset": 886850,
+          "size": 2,
+          "file": "asm/sub_080D8840.s",
+          "line": 5,
+          "text": "lsr r4, r6, #0x20"
+        }
+      ]
+    },
+    {
+      "offset": 887812,
+      "value": 137672104,
+      "references": [
+        {
+          "kind": "pc-load",
+          "reader": 887794
+        }
+      ],
+      "instruction_rows": [
+        {
+          "offset": 887812,
+          "size": 2,
+          "file": "asm/sub_080D8C04.s",
+          "line": 4,
+          "text": "push {r3, r5, r7, lr}"
+        },
+        {
+          "offset": 887814,
+          "size": 2,
+          "file": "asm/sub_080D8C04.s",
+          "line": 5,
+          "text": "lsr r4, r6, #0x20"
+        }
+      ]
+    },
+    {
+      "offset": 888532,
+      "value": 137672136,
+      "references": [
+        {
+          "kind": "pc-load",
+          "reader": 888474
+        }
+      ],
+      "instruction_rows": [
+        {
+          "offset": 888532,
+          "size": 2,
+          "file": "asm/sub_080D8ED4.s",
+          "line": 4,
+          "text": "push {r3, r6, r7, lr}"
+        },
+        {
+          "offset": 888534,
+          "size": 2,
+          "file": "asm/sub_080D8ED4.s",
+          "line": 5,
+          "text": "lsr r4, r6, #0x20"
+        }
+      ]
+    },
+    {
+      "offset": 945328,
+      "value": 135163060,
+      "references": [
+        {
+          "kind": "pc-load",
+          "reader": 945318
+        }
+      ],
+      "instruction_rows": [
+        {
+          "offset": 945328,
+          "size": 2,
+          "file": "asm/sub_080E6C8C.s",
+          "line": 22,
+          "text": "ldr r4, [r6, #0x48]"
+        },
+        {
+          "offset": 945330,
+          "size": 2,
+          "file": "asm/sub_080E6C8C.s",
+          "line": 23,
+          "text": "lsr r6, r1, #0x20"
+        }
+      ]
+    }
+  ],
+  "unclassified_raw_rows": [],
+  "scope": "Source representation census and positive PC-load/switch conflicts. Does not prove every instruction is runtime reachable."
+}

@@ -1,8 +1,6 @@
-; sub_080712AE @ 0x080712AE-08071328  (自动生成, 经往返验证)
+; block_080712B4 at 0x080712B4. Entry after verified literal pool.
 .thumb
-sub_080712AE:
-    .dh 0x0000 ; TODO movs r0, r0
-    .dh 0xED64, 0x0833 ; TODO stcl p8, c0, [r4, #-0xcc]!
+block_080712B4:
     mov r1, #0x80
     lsl r1, r1, #5
     add r0, r5, #0

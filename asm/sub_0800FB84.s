@@ -55,7 +55,7 @@ sub_0800FB84:
 loc_0800FBF6:
     mov r0, #1
     b loc_0800FC0E
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment before referenced word
     .word 0x080EF6D0
     .word 0x000007FF
     .word 0x08312C8C

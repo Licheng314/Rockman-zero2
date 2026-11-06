@@ -16,6 +16,6 @@ loc_0804FB00:
     ldr r0, [r0]
     mov pc, r0
     .dh 0x0000 ; alignment after unconditional transfer
-    .dh 0xFB10, 0x0804 ; TODO smlabb r8, r0, r4, r0
+    .word 0x0804FB10 ; proven PC literal
     .word 0x0804FB28 ; proven PC/switch data
     .word 0x0804FB7C ; proven PC/switch data

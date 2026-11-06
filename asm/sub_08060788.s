@@ -63,7 +63,7 @@ loc_080607EA:
     str r0, [r4, #0x54]
     mov r0, #0x20
     b loc_0806081E
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment before referenced word
     .word 0xFFFFB000
 loc_0806080C:
     add r0, r4, #0

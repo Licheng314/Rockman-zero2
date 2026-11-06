@@ -1,0 +1,470 @@
+{
+  "rom_sha1": "c4d93a58f0f82c526dec8a3fdbda170336303689",
+  "formal_segments": 14927,
+  "retired_function_boundaries": {
+    "305996": 306004,
+    "885264": 885272,
+    "886500": 886508,
+    "887440": 887456,
+    "888652": 888660
+  },
+  "shifted_code_boundaries": {
+    "463534": 463540,
+    "586010": 586020,
+    "703630": 703636
+  },
+  "evidence": {
+    "305996": {
+      "kind": "pc-literal",
+      "value": 137606456,
+      "readers": [
+        305848
+      ]
+    },
+    "306000": {
+      "kind": "pc-literal",
+      "value": 134532249,
+      "readers": [
+        305858
+      ]
+    },
+    "885264": {
+      "kind": "pc-literal",
+      "value": 137671976,
+      "readers": [
+        885216
+      ]
+    },
+    "885268": {
+      "kind": "pc-literal",
+      "value": 137666976,
+      "readers": [
+        885236
+      ]
+    },
+    "886500": {
+      "kind": "pc-literal",
+      "value": 137672020,
+      "readers": [
+        886376
+      ]
+    },
+    "886504": {
+      "kind": "pc-literal",
+      "value": 135197776,
+      "readers": [
+        886420
+      ]
+    },
+    "887440": {
+      "kind": "pc-literal",
+      "value": 137672056,
+      "readers": [
+        887356
+      ]
+    },
+    "887444": {
+      "kind": "pc-literal",
+      "value": 135105989,
+      "readers": [
+        887370
+      ]
+    },
+    "887448": {
+      "kind": "pc-literal",
+      "value": 36869,
+      "readers": [
+        887394
+      ]
+    },
+    "887452": {
+      "kind": "pc-literal",
+      "value": 137666976,
+      "readers": [
+        887408
+      ]
+    },
+    "888652": {
+      "kind": "pc-literal",
+      "value": 137672144,
+      "readers": [
+        888542
+      ]
+    },
+    "888656": {
+      "kind": "pc-literal",
+      "value": 33745968,
+      "readers": [
+        888568
+      ]
+    },
+    "463534": {
+      "kind": "alignment",
+      "aligned_literal": 463536,
+      "readers": [
+        463486
+      ],
+      "boundary": {
+        "transfer": 463532,
+        "mnemonic": "b",
+        "operands": "#0x8071316"
+      }
+    },
+    "463536": {
+      "kind": "pc-literal",
+      "value": 137620836,
+      "readers": [
+        463486
+      ]
+    },
+    "586010": {
+      "kind": "alignment",
+      "aligned_literal": 586012,
+      "readers": [
+        585890
+      ],
+      "boundary": {
+        "transfer": 586008,
+        "mnemonic": "b",
+        "operands": "#0x808f1da"
+      }
+    },
+    "586012": {
+      "kind": "pc-literal",
+      "value": 30722,
+      "readers": [
+        585890
+      ]
+    },
+    "586016": {
+      "kind": "pc-literal",
+      "value": 135197776,
+      "readers": [
+        585944
+      ]
+    },
+    "703630": {
+      "kind": "alignment",
+      "aligned_literal": 703632,
+      "readers": [
+        703610
+      ],
+      "boundary": {
+        "transfer": 703628,
+        "mnemonic": "bx",
+        "operands": "lr"
+      }
+    },
+    "703632": {
+      "kind": "pc-literal",
+      "value": 137637988,
+      "readers": [
+        703610
+      ]
+    },
+    "108336": {
+      "kind": "pc-literal",
+      "value": 33745968,
+      "readers": [
+        108240
+      ],
+      "boundary": {
+        "call": 108332,
+        "target": 110364,
+        "exit": 110378,
+        "rationale": "Target unwinds caller stack and branches through saved caller return. 080E773C reaches the shared epilogue via 080E7742."
+      }
+    },
+    "108340": {
+      "kind": "pc-literal",
+      "value": 137520112,
+      "readers": [
+        108262
+      ]
+    },
+    "108344": {
+      "kind": "pc-literal",
+      "value": 137519960,
+      "readers": [
+        108266
+      ]
+    },
+    "108348": {
+      "kind": "pc-literal",
+      "value": 33745844,
+      "readers": [
+        108268
+      ]
+    },
+    "326412": {
+      "kind": "pc-literal",
+      "value": 134544144,
+      "readers": [
+        326402
+      ]
+    },
+    "945768": {
+      "kind": "pc-literal",
+      "value": 33745840,
+      "readers": [
+        945740
+      ],
+      "boundary": {
+        "call": 945764,
+        "target": 948542,
+        "exit": 948560,
+        "rationale": "Target unwinds caller stack and branches through saved caller return. 080E773C reaches the shared epilogue via 080E7742."
+      }
+    },
+    "945848": {
+      "kind": "pc-literal",
+      "value": 33745840,
+      "readers": [
+        945824
+      ],
+      "boundary": {
+        "call": 945844,
+        "target": 948542,
+        "exit": 948560,
+        "rationale": "Target unwinds caller stack and branches through saved caller return. 080E773C reaches the shared epilogue via 080E7742."
+      }
+    },
+    "945868": {
+      "kind": "pc-literal",
+      "value": 554,
+      "readers": [
+        945856
+      ]
+    },
+    "117758": {
+      "kind": "alignment",
+      "aligned_literal": 117760,
+      "readers": [
+        117742
+      ],
+      "boundary": {
+        "transfer": 117756,
+        "mnemonic": "b",
+        "operands": "#0x801cc18"
+      }
+    },
+    "117798": {
+      "kind": "alignment",
+      "aligned_literal": 117800,
+      "readers": [
+        117782
+      ],
+      "boundary": {
+        "transfer": 117796,
+        "mnemonic": "b",
+        "operands": "#0x801cc3c"
+      }
+    },
+    "322482": {
+      "kind": "alignment",
+      "aligned_literal": 322484,
+      "readers": [
+        322312,
+        322356
+      ],
+      "boundary": {
+        "transfer": 322480,
+        "mnemonic": "b",
+        "operands": "#0x804eac4"
+      }
+    },
+    "384854": {
+      "kind": "alignment",
+      "aligned_literal": 384856,
+      "readers": [
+        384796
+      ],
+      "boundary": {
+        "transfer": 384852,
+        "mnemonic": "b",
+        "operands": "#0x805df70"
+      }
+    },
+    "978478": {
+      "kind": "alignment",
+      "aligned_literal": 978480,
+      "readers": [
+        978464
+      ],
+      "boundary": {
+        "transfer": 978476,
+        "mnemonic": "b",
+        "operands": "#0x80eee3a"
+      }
+    },
+    "941962": {
+      "kind": "alignment",
+      "aligned_literal": 941964,
+      "readers": [
+        941928
+      ],
+      "boundary": {
+        "call": 941958,
+        "target": 945042,
+        "exit": 945054,
+        "rationale": "Target unwinds caller stack and branches through saved caller return. 080E773C reaches the shared epilogue via 080E7742."
+      }
+    },
+    "945866": {
+      "kind": "alignment",
+      "aligned_literal": 945868,
+      "readers": [
+        945856
+      ],
+      "boundary": {
+        "call": 945862,
+        "target": 948542,
+        "exit": 948560,
+        "rationale": "Target unwinds caller stack and branches through saved caller return. 080E773C reaches the shared epilogue via 080E7742."
+      }
+    },
+    "945898": {
+      "kind": "alignment",
+      "aligned_literal": 945900,
+      "readers": [
+        945878
+      ],
+      "boundary": {
+        "call": 945894,
+        "target": 948028,
+        "exit": 948560,
+        "rationale": "Target unwinds caller stack and branches through saved caller return. 080E773C reaches the shared epilogue via 080E7742."
+      }
+    },
+    "970364": {
+      "kind": "thumb-adr-to-arm",
+      "target": 970368,
+      "transfer": 970366
+    },
+    "970518": {
+      "kind": "thumb-adr-to-arm",
+      "target": 970524,
+      "transfer": 970520
+    },
+    "970874": {
+      "kind": "thumb-adr-to-arm",
+      "target": 970880,
+      "transfer": 970876
+    },
+    "39688": {
+      "kind": "indexed-thumb-callback",
+      "table": 3222412,
+      "slots": [
+        3222468,
+        3222472
+      ],
+      "table_reader": 36424,
+      "slot_reader": 36436,
+      "dispatcher": 36442,
+      "thunk": 979232,
+      "bytes": "c8437047"
+    }
+  },
+  "repairs": [
+    {
+      "file": "asm/stage0_code_08009B04.s",
+      "before_sha1": "b62a8c06e32335934f0d5cdf229fa546b7c092f1",
+      "after_sha1": "059d1aadd69e575414911bbad33d5bf41581149e"
+    },
+    {
+      "file": "asm/stage0_code_080ECF10.s",
+      "before_sha1": "f883380b91216cae8f71b8df22f892dfb788934b",
+      "after_sha1": "fecb950aa7bd2ec29e87b935fb1ddf3622c1a356"
+    },
+    {
+      "file": "asm/stage0_code_080ECFA4.s",
+      "before_sha1": "704b6f5ae9b9589cac4cb837f51672e4a974be4f",
+      "after_sha1": "b7fd3d23cba9fc809627127190a6a2380e652a33"
+    },
+    {
+      "file": "asm/sub_0801A6B4.s",
+      "before_sha1": "5ac266018525118244fe0d5ba74f139e25b0801e",
+      "after_sha1": "69c19fe58d8582cd444ed11770e088c6b40dc0f4"
+    },
+    {
+      "file": "asm/sub_0801CB00.s",
+      "before_sha1": "d97e63e1f88a3d6ab6ff792d2e7885e17f98ae26",
+      "after_sha1": "93e30ffd2148c1ffa7e4e6ec7e2f81a3e077ea1a"
+    },
+    {
+      "file": "asm/sub_0804AB4C.s",
+      "before_sha1": "00bfe1f39dd18f84d47e4dd6e12ff0f5427d2bc0",
+      "after_sha1": "e255cfb02392582fe9b699e954e92ae34b246e20"
+    },
+    {
+      "file": "asm/sub_0804EA84.s",
+      "before_sha1": "add07f304c26883fe28236d14c5c725176068107",
+      "after_sha1": "d85a9d64ecf0f66118ac648ed6a16ab7959464b7"
+    },
+    {
+      "file": "asm/sub_0804FAF0.s",
+      "before_sha1": "4cbfdba12efc7c77e558af9730db52c6d178df2c",
+      "after_sha1": "c18d23e0774983317fdb69e5a338a01cab320ae1"
+    },
+    {
+      "file": "asm/sub_0805DDC0.s",
+      "before_sha1": "548898e8d72358a22570e67e21c5299b266ef6f8",
+      "after_sha1": "685352be5cf05a8bfcd2412424ffe3a92ab80f47"
+    },
+    {
+      "file": "asm/sub_080712AE.s",
+      "before_sha1": "caf4ef919b688f35da3268d45e356fe05453506c",
+      "after_sha1": "30fe936003f9a76abbeba1639b5adfa7124f968f"
+    },
+    {
+      "file": "asm/sub_0808F11A.s",
+      "before_sha1": "75b2cc4e3d4cdcc660086517cc0f30d67f50ed22",
+      "after_sha1": "3e860ad4870c452934abd81929d3422d8854e456"
+    },
+    {
+      "file": "asm/sub_080ABC8E.s",
+      "before_sha1": "37c3500c5975c805345718cf918f6866753c5d56",
+      "after_sha1": "ba0693259cef7923a4226750f3df9d0c10275d8b"
+    },
+    {
+      "file": "asm/sub_080D8210.s",
+      "before_sha1": "ca3725028aeb43585d7f93e69cc57b4235119058",
+      "after_sha1": "9ef602876250d68aa35aafd414ac37146860d99b"
+    },
+    {
+      "file": "asm/sub_080D86E4.s",
+      "before_sha1": "8859d6a0b19d8bcdd8fa824d8fbfa78f69fe0d39",
+      "after_sha1": "de104b4e0e0188c05bf90ed79a92ebe19ef723cb"
+    },
+    {
+      "file": "asm/sub_080D8A90.s",
+      "before_sha1": "0f5e6fa2919a7d649cfddbd7717f32d4ccf3561d",
+      "after_sha1": "5e9daeaeee9b26fa214ac00346e421cc49a22fb9"
+    },
+    {
+      "file": "asm/sub_080D8F4C.s",
+      "before_sha1": "b35a676e766a9ae8a830486dc0c5e6c5fc0020ef",
+      "after_sha1": "d6d69ee1c556b1b25bce83754c18f7438526365c"
+    },
+    {
+      "file": "asm/sub_080E5C78.s",
+      "before_sha1": "0c96bd0ca00350c54e18da808decb1264eaad71c",
+      "after_sha1": "94226ae9b287344fe9b3cd8fc040cdcaba30f8cf"
+    },
+    {
+      "file": "asm/sub_080E6C8C.s",
+      "before_sha1": "042fa7226e8e782d870bfa845d694f04c3cf3a29",
+      "after_sha1": "ae4afc4d155894312438ebb6d6aaef66fd392f61"
+    },
+    {
+      "file": "asm/sub_080ECE7C.s",
+      "before_sha1": "f7265644be5902de196e61afdbbebbb7df3d967f",
+      "after_sha1": "0967b3908a609496077e40ee63629619d703a0c4"
+    },
+    {
+      "file": "asm/sub_080EECE8.s",
+      "before_sha1": "f3c33cb8e182e6a26e3dfe79276edcd565f40d28",
+      "after_sha1": "7f9e100726e25a8fad650183fa163808d43868b2"
+    }
+  ]
+}

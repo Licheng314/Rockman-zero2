@@ -1,7 +1,5 @@
-; sub_0804AB4C @ 0x0804AB4C-0804AB54  (自动生成, 经往返验证)
-.thumb
-sub_0804AB4C:
-    push {r3, r4, r5, lr}
-    lsr r3, r6, #0x20
-    .dh 0xCC99 ; TODO ldm r4, {r0, r3, r4, r7}
-    lsr r4, r0, #0x20
+; Typed data: PC-relative literal pool.
+; Data is emitted at the formal address.
+stage0_pool_0804AB4C:
+    .word 0x0833B538 ; proven PC literal
+    .word 0x0804CC99 ; proven PC literal

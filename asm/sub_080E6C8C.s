@@ -162,7 +162,7 @@ loc_080E6E48:
     mov r0, #0x67
     bl EXT_080DF038
     bl EXT_080E793E
-    .dh 0xEBB0, 0x0202 ; TODO subs.w r2, r0, r2
+    .word 0x0202EBB0 ; proven PC literal
 loc_080E6E6C:
     mov r0, #0x72
     bl EXT_080DEFCC
@@ -196,15 +196,14 @@ loc_080E6EA0:
     add r0, #1
     strb r0, [r4, #0x10]
     bl EXT_080E793E
-    .dh 0xEBB0, 0x0202 ; TODO subs.w r2, r0, r2
+    .word 0x0202EBB0 ; proven PC literal
     .word 0x0000021D ; proven PC/switch data
 loc_080E6EC0:
     ldr r0, [pc, #8]
     bl EXT_080DF038
     bl EXT_080E793E
-    .dh 0x0000 ; TODO movs r0, r0
-    lsl r2, r5, #8
-    .dh 0x0000 ; TODO movs r0, r0
+    .dh 0x0000 ; alignment before referenced word
+    .word 0x0000022A ; proven PC literal
 loc_080E6ED0:
     mov r0, #3
     bl EXT_080E7940
@@ -217,4 +216,4 @@ loc_080E6EE2:
     mov r1, #0x80
     lsl r1, r1, #3
     bl EXT_080E773C
-    .dh 0x0000 ; TODO movs r0, r0
+    .dh 0x0000 ; alignment before referenced word

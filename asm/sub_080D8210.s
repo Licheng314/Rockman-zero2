@@ -1,7 +1,5 @@
-; sub_080D8210 @ 0x080D8210-080D8218  (自动生成, 经往返验证)
-.thumb
-sub_080D8210:
-    push {r3, r5, lr}
-    lsr r4, r6, #0x20
-    .dh 0xA1A0 ; TODO adr r1, #0x280
-    lsr r4, r6, #0x20
+; Typed data: PC-relative literal pool.
+; Data is emitted at the formal address.
+stage0_pool_080D8210:
+    .word 0x0834B528 ; proven PC literal
+    .word 0x0834A1A0 ; proven PC literal

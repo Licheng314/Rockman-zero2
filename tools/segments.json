@@ -3157,8 +3157,15 @@
  {
   "name": "stage0_code_08009B04",
   "start": 39684,
-  "end": 39692,
+  "end": 39688,
   "file": "asm/stage0_code_08009B04.s",
+  "kind": "thumb-code"
+ },
+ {
+  "name": "stage0_code_08009B08",
+  "start": 39688,
+  "end": 39692,
+  "file": "asm/stage0_code_08009B08.s",
   "kind": "thumb-code"
  },
  {
@@ -31617,10 +31624,11 @@
   "kind": "literal-pool"
  },
  {
-  "name": "sub_0804AB4C",
+  "name": "stage0_pool_0804AB4C",
   "start": 305996,
   "end": 306004,
-  "file": "asm/sub_0804AB4C.s"
+  "file": "asm/sub_0804AB4C.s",
+  "kind": "literal-pool"
  },
  {
   "name": "stage0_pool_0804AB54",
@@ -44031,8 +44039,22 @@
   "file": "asm/sub_080710E4.s"
  },
  {
-  "name": "sub_080712AE",
+  "name": "stage0_align_080712AE",
   "start": 463534,
+  "end": 463536,
+  "file": "asm/stage0_align_080712AE.s",
+  "kind": "alignment-data"
+ },
+ {
+  "name": "stage0_pool_080712B0",
+  "start": 463536,
+  "end": 463540,
+  "file": "asm/stage0_pool_080712B0.s",
+  "kind": "literal-pool"
+ },
+ {
+  "name": "block_080712B4",
+  "start": 463540,
   "end": 463656,
   "file": "asm/sub_080712AE.s"
  },
@@ -54238,8 +54260,22 @@
   "file": "asm/sub_0808F06C.s"
  },
  {
-  "name": "sub_0808F11A",
+  "name": "stage0_align_0808F11A",
   "start": 586010,
+  "end": 586012,
+  "file": "asm/stage0_align_0808F11A.s",
+  "kind": "alignment-data"
+ },
+ {
+  "name": "stage0_pool_0808F11C",
+  "start": 586012,
+  "end": 586020,
+  "file": "asm/stage0_pool_0808F11C.s",
+  "kind": "literal-pool"
+ },
+ {
+  "name": "block_0808F124",
+  "start": 586020,
   "end": 586208,
   "file": "asm/sub_0808F11A.s"
  },
@@ -65856,8 +65892,22 @@
   "kind": "thumb-code"
  },
  {
-  "name": "sub_080ABC8E",
+  "name": "stage0_align_080ABC8E",
   "start": 703630,
+  "end": 703632,
+  "file": "asm/stage0_align_080ABC8E.s",
+  "kind": "alignment-data"
+ },
+ {
+  "name": "stage0_pool_080ABC90",
+  "start": 703632,
+  "end": 703636,
+  "file": "asm/stage0_pool_080ABC90.s",
+  "kind": "literal-pool"
+ },
+ {
+  "name": "block_080ABC94",
+  "start": 703636,
   "end": 703710,
   "file": "asm/sub_080ABC8E.s"
  },
@@ -85155,10 +85205,11 @@
   "file": "asm/sub_080D8138.s"
  },
  {
-  "name": "sub_080D8210",
+  "name": "stage0_pool_080D8210",
   "start": 885264,
   "end": 885272,
-  "file": "asm/sub_080D8210.s"
+  "file": "asm/sub_080D8210.s",
+  "kind": "literal-pool"
  },
  {
   "name": "sub_080D8218",
@@ -85339,10 +85390,11 @@
   "kind": "alignment-data"
  },
  {
-  "name": "sub_080D86E4",
+  "name": "stage0_pool_080D86E4",
   "start": 886500,
   "end": 886508,
-  "file": "asm/sub_080D86E4.s"
+  "file": "asm/sub_080D86E4.s",
+  "kind": "literal-pool"
  },
  {
   "name": "sub_080D86EC",
@@ -85447,10 +85499,11 @@
   "kind": "literal-pool"
  },
  {
-  "name": "sub_080D8A90",
+  "name": "stage0_pool_080D8A90",
   "start": 887440,
   "end": 887456,
-  "file": "asm/sub_080D8A90.s"
+  "file": "asm/sub_080D8A90.s",
+  "kind": "literal-pool"
  },
  {
   "name": "sub_080D8AA0",
@@ -85595,10 +85648,11 @@
   "file": "asm/sub_080D8ED8.s"
  },
  {
-  "name": "sub_080D8F4C",
+  "name": "stage0_pool_080D8F4C",
   "start": 888652,
   "end": 888660,
-  "file": "asm/sub_080D8F4C.s"
+  "file": "asm/sub_080D8F4C.s",
+  "kind": "literal-pool"
  },
  {
   "name": "sub_080D8F54",

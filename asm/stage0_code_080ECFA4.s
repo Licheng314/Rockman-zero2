@@ -215,6 +215,6 @@ loc_080ED076:
 loc_080ED078:
     ldr r3, [r4, #0x28]
 loc_080ED07A:
-    .dh 0xA001 ; TODO adr r0, #4
+    add r0, pc, #4
 loc_080ED07C:
     bx r0

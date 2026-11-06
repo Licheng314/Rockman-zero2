@@ -29,7 +29,7 @@ sub_080402C8:
     str r0, [r4, #0x5c]
     sub r0, #0x41
     b loc_08040310
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment before referenced word
     .word 0x0000A213
 loc_08040308:
     mov r0, #0x40

@@ -55,7 +55,7 @@ loc_080204DE:
     ble loc_0802050C
     sub r4, #1
     b loc_0802050E
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment before referenced word
     .word 0x00000FFF
 loc_0802050C:
     add r4, #1

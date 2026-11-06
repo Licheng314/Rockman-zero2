@@ -22,7 +22,7 @@ sub_08020BD8:
     bne loc_08020C08
     mov r0, #0xff
     b loc_08020D18
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment before referenced word
     .word 0x02001000 ; proven PC/switch data
 loc_08020C08:
     ldr r2, [sp, #0x68]

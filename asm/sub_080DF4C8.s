@@ -274,7 +274,7 @@ loc_080DF6D8:
     mov r0, #1
     bl EXT_080032EC
     b loc_080DF71E
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment before referenced word
     .word 0x02000D10 ; proven PC/switch data
 loc_080DF704:
     mov r0, #0x80

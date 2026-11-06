@@ -192,7 +192,7 @@ loc_0805DEAC:
     add r1, #0xd1
     strb r0, [r1]
     b loc_0805DF70
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment before referenced word
     .word 0x0202E188 ; proven PC/switch data
     .word 0x000343FD ; proven PC/switch data
     .word 0x00269EC3 ; proven PC/switch data

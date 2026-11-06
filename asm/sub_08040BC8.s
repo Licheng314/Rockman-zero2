@@ -30,7 +30,7 @@ loc_08040BE0:
     bhi loc_08040C0C
     strb r1, [r4, #0xd]
     b loc_08040C10
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment before referenced word
     .word 0x0000A208
 loc_08040C0C:
     mov r0, #0xe

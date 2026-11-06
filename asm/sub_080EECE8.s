@@ -146,7 +146,7 @@ loc_080EEE20:
     add r1, r6, #0
     bl EXT_080EF11C
     b loc_080EEE3A
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment before referenced word
     .word 0x0203E6C4 ; proven PC/switch data
 loc_080EEE34:
     ldr r0, [r6, #0x40]

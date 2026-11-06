@@ -1,6 +1,5 @@
-; sub_080D86E4 @ 0x080D86E4-080D86EC  (自动生成, 经往返验证)
-.thumb
-sub_080D86E4:
-    push {r2, r4, r6, lr}
-    lsr r4, r6, #0x20
-    .dh 0xF450, 0x080E ; TODO orrs r8, r0, #0x8e0000
+; Typed data: PC-relative literal pool.
+; Data is emitted at the formal address.
+stage0_pool_080D86E4:
+    .word 0x0834B554 ; proven PC literal
+    .word 0x080EF450 ; proven PC literal

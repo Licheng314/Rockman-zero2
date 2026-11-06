@@ -252,4 +252,4 @@ loc_080E5F82:
     mov r0, #0x67
     strb r0, [r5, #3]
     bl EXT_080E6B92
-    .dh 0x0000 ; TODO movs r0, r0
+    .dh 0x0000 ; alignment before referenced word

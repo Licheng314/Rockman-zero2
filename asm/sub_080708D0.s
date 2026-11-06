@@ -29,7 +29,7 @@ loc_080708E8:
     beq loc_0807090C
     ldr r1, [pc, #4]
     b loc_08070910
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment before referenced word
     .word 0xFFFFEC00
 loc_0807090C:
     mov r1, #0xa0

@@ -7,6 +7,6 @@ loc_080ECF12:
 loc_080ECF14:
     beq EXT_080ECF5C
 loc_080ECF16:
-    .dh 0xA101 ; TODO adr r1, #4
+    add r1, pc, #4
 loc_080ECF18:
     bx r1

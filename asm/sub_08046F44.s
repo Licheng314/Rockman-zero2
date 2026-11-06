@@ -21,7 +21,7 @@ sub_08046F44:
     beq loc_08046F78
     ldr r0, [pc, #8]
     b loc_08046F7C
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment before referenced word
     .word 0x0000A502
     .word 0xFFFFFE80
 loc_08046F78:

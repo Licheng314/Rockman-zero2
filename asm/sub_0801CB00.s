@@ -113,7 +113,7 @@ loc_0801CBDC:
     add r1, r12
     ldr r0, [pc, #8]
     b loc_0801CC18
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment before referenced word
     .word 0xFFFFFE00 ; proven PC/switch data
     .word 0x00008010 ; proven PC/switch data
 loc_0801CC08:
@@ -134,7 +134,7 @@ loc_0801CC20:
     str r0, [r1, #0xc]
     mov r0, #1
     b loc_0801CC3C
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment before referenced word
     .word 0x00008020 ; proven PC/switch data
 loc_0801CC2C:
     str r2, [r3, #0x54]

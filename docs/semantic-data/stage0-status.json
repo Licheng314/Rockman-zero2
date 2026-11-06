@@ -1,9 +1,9 @@
 {
   "updated_at": "2026-11-06",
   "objective": "Complete stage0 assembly extraction and classification without disguising unknown data as code",
-  "status": "address-coverage-complete-legacy-source-audit-open",
+  "status": "address-coverage-complete-positive-literal-conflicts-open",
   "baseline_formal_bytes": 912454,
-  "formal_segments": 14920,
+  "formal_segments": 14927,
   "formal_bytes": 983040,
   "capacity_bytes": 983040,
   "formal_coverage_percent": 100.0,
@@ -16,13 +16,13 @@
   "exact_new_extents_verified": 4300,
   "rom_sha1": "c4d93a58f0f82c526dec8a3fdbda170336303689",
   "next_work": [
-    "Repair legacy boundaries that placed proven PC-relative literal words under Thumb function labels, then re-audit residual alignment and instructions",
-    "Audit final full-ROM build and source classification"
+    "Resolve the thirteen evidenced literal words still printed as instruction rows, including former segment starts",
+    "Re-run the fixed-range source census and exact full-ROM verification"
   ],
   "overall_goal_achieved": false,
   "old_formal_new_decoded_instruction_bytes": 46574,
   "old_formal_new_decoded_instruction_count": 21895,
-  "global_formal_extents_verified": 14920,
+  "global_formal_extents_verified": 14927,
   "new_verified_pc_word_bytes": 960,
   "new_verified_indirect_code_bytes": 498,
   "new_verified_indirect_literal_bytes": 100,
@@ -81,7 +81,10 @@
     "stage0-inline-data-20261106.json",
     "stage0-existing-dispatch-tail-20261106.json",
     "stage0-switch-setup-20261106.json",
-    "stage0-reencode-branches-20261106.json"
+    "stage0-reencode-branches-20261106.json",
+    "stage0-legacy-pools-20261106.json",
+    "stage0-final-padding-20261106.json",
+    "stage0-closeout-audit.json"
   ],
   "residual_audit": {
     "total_lines": 5178,
@@ -154,10 +157,10 @@
     "complete_word_locations_reconciled": 272
   },
   "legacy_unclassified_raw_source": {
-    "lines": 41,
-    "bytes": 100,
-    "todo_bytes": 68,
-    "zero_gap_bytes": 32,
+    "lines": 0,
+    "bytes": 0,
+    "todo_bytes": 0,
+    "zero_gap_bytes": 0,
     "nonzero_gap_bytes": 0,
     "scope": "Legacy Thumb manifest .dh gap/TODO/svc/preserved raw markers, excluding already classified data and integrated C"
   },
@@ -182,5 +185,15 @@
       "bx": 3,
       "bge": 2
     }
+  },
+  "legacy_pool_and_padding_closeout": {
+    "fully_reclassified_old_segments": 5,
+    "code_starts_moved_past_pool": 3,
+    "final_alignment_bytes": 22
+  },
+  "remaining_literal_conflicts": {
+    "words": 13,
+    "bytes": 52,
+    "audit": "stage0-closeout-audit.json"
   }
 }

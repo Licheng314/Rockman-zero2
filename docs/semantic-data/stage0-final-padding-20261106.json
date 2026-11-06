@@ -1,0 +1,369 @@
+{
+  "rom_sha1": "c4d93a58f0f82c526dec8a3fdbda170336303689",
+  "alignment_bytes": 22,
+  "repairs": [
+    {
+      "file": "asm/sub_0800FB84.s",
+      "offset": 64506,
+      "before_sha1": "a0ebd722c51344e5d99191e3cdbb371ef8f6ec0f",
+      "after_sha1": "b332ed757996851a3ea5a186c2d21fa05d15ff69",
+      "preceding_branch": 64504,
+      "branch_destination": 64526,
+      "literal": 64508,
+      "literal_readers": [
+        64398
+      ],
+      "pointer_shape_sites": [
+        {
+          "offset": 2560936,
+          "word": 134282235,
+          "kind": "direct-sound-sample",
+          "tone_wave_pointer": 1050228,
+          "header": 2552080,
+          "start": 2552096,
+          "end": 2573638,
+          "rate_word": 21528576
+        },
+        {
+          "offset": 2563352,
+          "word": 134282235,
+          "kind": "direct-sound-sample",
+          "tone_wave_pointer": 1050228,
+          "header": 2552080,
+          "start": 2552096,
+          "end": 2573638,
+          "rate_word": 21528576
+        },
+        {
+          "offset": 2885484,
+          "word": 134282235,
+          "kind": "direct-sound-sample",
+          "tone_wave_pointer": 1050612,
+          "header": 2878888,
+          "start": 2878904,
+          "end": 2886818,
+          "rate_word": 21528576
+        }
+      ]
+    },
+    {
+      "file": "asm/sub_0802049C.s",
+      "offset": 132358,
+      "before_sha1": "35bb7d1694800bdaa6c1c7c1bd00e65e4948f9d6",
+      "after_sha1": "75728d29c83b1841d818b4013d8625f172e36af8",
+      "preceding_branch": 132356,
+      "branch_destination": 132366,
+      "literal": 132360,
+      "literal_readers": [
+        132306
+      ],
+      "pointer_shape_sites": [
+        {
+          "offset": 2992472,
+          "word": 134350087,
+          "kind": "direct-sound-sample",
+          "tone_wave_pointer": 1050864,
+          "header": 2988028,
+          "start": 2988044,
+          "end": 2994919,
+          "rate_word": 21528576
+        }
+      ]
+    },
+    {
+      "file": "asm/sub_08020BD8.s",
+      "offset": 134146,
+      "before_sha1": "097c31be8151390c594c6b72cefc75566aec371c",
+      "after_sha1": "d8be9ecd1f6f0d08655230ee5046fd1f9c63f578",
+      "preceding_branch": 134144,
+      "branch_destination": 134424,
+      "literal": 134148,
+      "literal_readers": [
+        134128
+      ],
+      "pointer_shape_sites": [
+        {
+          "offset": 4399636,
+          "word": 134351875,
+          "kind": "animation-frame-records",
+          "bank_slot": 4385288,
+          "sequence_table": 4399612,
+          "sequence_slot": 4399616,
+          "start": 4399632,
+          "end": 4399642,
+          "frames": [
+            [
+              1,
+              12
+            ],
+            [
+              2,
+              8
+            ],
+            [
+              3,
+              12
+            ],
+            [
+              2,
+              8
+            ]
+          ],
+          "control": [
+            0,
+            254
+          ]
+        }
+      ]
+    },
+    {
+      "file": "asm/sub_080402C8.s",
+      "offset": 262914,
+      "before_sha1": "43c3c6cd60d5274c4ddcabb8866392864a6eb7de",
+      "after_sha1": "030a0c335d2df8a069c0f8a9c0c39720dd078241",
+      "preceding_branch": 262912,
+      "branch_destination": 262928,
+      "literal": 262916,
+      "literal_readers": [
+        262888
+      ],
+      "pointer_shape_sites": [
+        {
+          "offset": 1867216,
+          "word": 134480643,
+          "kind": "direct-sound-sample",
+          "tone_wave_pointer": 1049532,
+          "header": 1863548,
+          "start": 1863564,
+          "end": 1898536,
+          "rate_word": 21528576
+        }
+      ]
+    },
+    {
+      "file": "asm/sub_08040BC8.s",
+      "offset": 265222,
+      "before_sha1": "f0c391206ac5edb0bb1e4c3724b3424e81350b21",
+      "after_sha1": "79adda29ab3891538d6163622cf81f5939493e5e",
+      "preceding_branch": 265220,
+      "branch_destination": 265232,
+      "literal": 265224,
+      "literal_readers": [
+        265170
+      ],
+      "pointer_shape_sites": [
+        {
+          "offset": 2781100,
+          "word": 134482951,
+          "kind": "direct-sound-sample",
+          "tone_wave_pointer": 1050432,
+          "header": 2757892,
+          "start": 2757908,
+          "end": 2784761,
+          "rate_word": 21528576
+        }
+      ]
+    },
+    {
+      "file": "asm/sub_08046F44.s",
+      "offset": 290670,
+      "before_sha1": "dfccc92f6cc9a112e47a640b2e06e962199d4a74",
+      "after_sha1": "dc4e454971c6b304cd43952ecb2189b6d27a73a8",
+      "preceding_branch": 290668,
+      "branch_destination": 290684,
+      "literal": 290672,
+      "literal_readers": [
+        290638
+      ],
+      "pointer_shape_sites": [
+        {
+          "offset": 4002800,
+          "word": 134508399,
+          "kind": "gba-lz77-stream",
+          "start": 3997384,
+          "end": 4010387,
+          "decoded_bytes": 16448,
+          "decoded_sha1": "24def8a4ec46245c392d5deb250da29f7db3db8f",
+          "intersecting_tokens": [
+            {
+              "start": 4002800,
+              "end": 4002801,
+              "kind": "literal"
+            },
+            {
+              "start": 4002801,
+              "end": 4002802,
+              "kind": "literal"
+            },
+            {
+              "start": 4002802,
+              "end": 4002804,
+              "kind": "backreference"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "asm/sub_08060788.s",
+      "offset": 395270,
+      "before_sha1": "03d6c4ab52461f23cfd99df6849fba5a46657266",
+      "after_sha1": "e293bee6a53d46660ffaf950d6749450ccb6923a",
+      "preceding_branch": 395268,
+      "branch_destination": 395294,
+      "literal": 395272,
+      "literal_readers": [
+        395260
+      ],
+      "pointer_shape_sites": [
+        {
+          "offset": 2324912,
+          "word": 134612999,
+          "kind": "direct-sound-sample",
+          "tone_wave_pointer": 1049976,
+          "header": 2317160,
+          "start": 2317176,
+          "end": 2329347,
+          "rate_word": 21528576
+        },
+        {
+          "offset": 2338404,
+          "word": 134612999,
+          "kind": "direct-sound-sample",
+          "tone_wave_pointer": 1049988,
+          "header": 2329348,
+          "start": 2329364,
+          "end": 2341538,
+          "rate_word": 21528576
+        },
+        {
+          "offset": 2585848,
+          "word": 134612999,
+          "kind": "direct-sound-sample",
+          "tone_wave_pointer": 1050240,
+          "header": 2573640,
+          "start": 2573656,
+          "end": 2595880,
+          "rate_word": 21528576
+        }
+      ]
+    },
+    {
+      "file": "asm/sub_080708D0.s",
+      "offset": 461062,
+      "before_sha1": "e167b80bc3052228304f22583111fb1b116c9628",
+      "after_sha1": "c640d337eecadbb298befe136598fb08a88257ab",
+      "preceding_branch": 461060,
+      "branch_destination": 461072,
+      "literal": 461064,
+      "literal_readers": [
+        461030,
+        461058
+      ],
+      "pointer_shape_sites": [
+        {
+          "offset": 1173500,
+          "word": 134678791,
+          "kind": "direct-sound-sample",
+          "tone_wave_pointer": 1048236,
+          "header": 1171960,
+          "start": 1171976,
+          "end": 1178736,
+          "rate_word": 21528576
+        },
+        {
+          "offset": 1886404,
+          "word": 134678791,
+          "kind": "direct-sound-sample",
+          "tone_wave_pointer": 1049532,
+          "header": 1863548,
+          "start": 1863564,
+          "end": 1898536,
+          "rate_word": 21528576
+        },
+        {
+          "offset": 2998968,
+          "word": 134678791,
+          "kind": "direct-sound-sample",
+          "tone_wave_pointer": 1050876,
+          "header": 2994920,
+          "start": 2994936,
+          "end": 3003530,
+          "rate_word": 21528576
+        }
+      ]
+    },
+    {
+      "file": "asm/sub_08070984.s",
+      "offset": 461306,
+      "before_sha1": "ffb77aefc723f99e145701e0b600c86ebb2b2239",
+      "after_sha1": "039ed7509cb90d0ca13a8c328235f3a3685d7f12",
+      "preceding_branch": 461304,
+      "branch_destination": 461390,
+      "literal": 461308,
+      "literal_readers": [
+        461212
+      ],
+      "pointer_shape_sites": [
+        {
+          "offset": 1698208,
+          "word": 134679035,
+          "kind": "direct-sound-sample",
+          "tone_wave_pointer": 1049232,
+          "header": 1691320,
+          "start": 1691336,
+          "end": 1699123,
+          "rate_word": 21528576
+        }
+      ]
+    },
+    {
+      "file": "asm/sub_080A0B0C.s",
+      "offset": 658418,
+      "before_sha1": "7f4e66c3deb0984467b06044548f71a64db199cf",
+      "after_sha1": "cfcbc67a89d46b0cef017064e020e59b714c067d",
+      "preceding_branch": 658416,
+      "branch_destination": 658502,
+      "literal": 658420,
+      "literal_readers": [
+        658410
+      ],
+      "pointer_shape_sites": [
+        {
+          "offset": 1649252,
+          "word": 134876147,
+          "kind": "direct-sound-sample",
+          "tone_wave_pointer": 1049124,
+          "header": 1637800,
+          "start": 1637816,
+          "end": 1650720,
+          "rate_word": 21528576
+        }
+      ]
+    },
+    {
+      "file": "asm/sub_080DF4C8.s",
+      "offset": 915198,
+      "before_sha1": "606b86be6410388d4f16cf2c21648440773d66ed",
+      "after_sha1": "0ebbb5242d9ad55c2dd31d50e0c232ff9c9bc662",
+      "preceding_branch": 915196,
+      "branch_destination": 915230,
+      "literal": 915200,
+      "literal_readers": [
+        915166
+      ],
+      "pointer_shape_sites": [
+        {
+          "offset": 2107436,
+          "word": 135132927,
+          "kind": "direct-sound-sample",
+          "tone_wave_pointer": 1049760,
+          "header": 2102052,
+          "start": 2102068,
+          "end": 2110397,
+          "rate_word": 21528576
+        }
+      ]
+    }
+  ]
+}
