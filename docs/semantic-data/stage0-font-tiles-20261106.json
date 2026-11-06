@@ -1,0 +1,25 @@
+{
+ "blocks": [
+  {
+   "label": "Text glyph tiles in the nominal code area",
+   "start": 981548,
+   "end": 983040,
+   "element": "",
+   "proof": {
+    "source": "asm/sub_080DE318.s",
+    "analysis": "docs/semantic-text-rendering.md",
+    "reader": "Thumb renderer uses 9-bit glyph bounds, derives offset ((glyph & 0xFFF0) << 6) + ((glyph & 15) << 5), and copies eight words from each of EF82C and EFA2C with CpuFastSet.",
+    "bank": [
+     981036,
+     1013804
+    ],
+    "tile_bytes": 32,
+    "enumerated_tile_starts": 1024,
+    "extent": "Only the uncovered intersection with the fixed 0xF0000 analysis boundary is integrated."
+   }
+  }
+ ],
+ "original_formal_bytes": 980136,
+ "added_data_bytes": 1492,
+ "scope": "Typed data blocks with per-block read/copy proof; no unproven range included."
+}

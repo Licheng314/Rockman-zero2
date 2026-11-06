@@ -1,0 +1,73 @@
+{
+  "ranges": [
+    {
+      "start": 970524,
+      "end": 970588,
+      "kind": "arm-code",
+      "name": "stage0_arm_code_080ECF1C",
+      "file": "asm/stage0_arm_code_080ECF1C.s",
+      "proof": {
+        "thumb_adr": 970518,
+        "thumb_bx": 970520,
+        "arm_entry": 970524,
+        "arm_add_pc": 970580,
+        "arm_bx": 970584,
+        "thumb_return": 970618,
+        "armips_macro_instruction_count": 0
+      }
+    },
+    {
+      "start": 970880,
+      "end": 971292,
+      "kind": "arm-code",
+      "name": "stage0_arm_code_080ED080",
+      "file": "asm/stage0_arm_code_080ED080.s",
+      "proof": {
+        "thumb_adr": 970874,
+        "thumb_bx": 970876,
+        "arm_entry": 970880,
+        "arm_add_pc": 971284,
+        "arm_bx": 971288,
+        "thumb_return": 971292,
+        "armips_macro_instruction_count": 3
+      }
+    },
+    {
+      "start": 202694,
+      "end": 202696,
+      "kind": "alignment-data",
+      "name": "stage0_alignment_data_080317C6",
+      "file": "asm/stage0_alignment_data_080317C6.s",
+      "proof": {
+        "preceding_unconditional_bx": 202692,
+        "following_entry": 202696,
+        "alignment": 4
+      }
+    },
+    {
+      "start": 970522,
+      "end": 970524,
+      "kind": "alignment-data",
+      "name": "stage0_alignment_data_080ECF1A",
+      "file": "asm/stage0_alignment_data_080ECF1A.s",
+      "proof": {
+        "preceding_unconditional_bx": 970520,
+        "following_entry": 970524,
+        "alignment": 4
+      }
+    },
+    {
+      "start": 970878,
+      "end": 970880,
+      "kind": "alignment-data",
+      "name": "stage0_alignment_data_080ED07E",
+      "file": "asm/stage0_alignment_data_080ED07E.s",
+      "proof": {
+        "preceding_unconditional_bx": 970876,
+        "following_entry": 970880,
+        "alignment": 4
+      }
+    }
+  ],
+  "original_rom_sha1": "c4d93a58f0f82c526dec8a3fdbda170336303689"
+}

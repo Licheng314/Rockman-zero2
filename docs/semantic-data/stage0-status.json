@@ -1,18 +1,14 @@
 {
-  "updated_at": "2026-11-03",
+  "updated_at": "2026-11-06",
   "objective": "Complete stage0 assembly extraction and classification without disguising unknown data as code",
-  "status": "paused-after-independent-audit-static-entries-found",
+  "status": "in-progress",
   "baseline_formal_bytes": 912454,
-  "formal_segments": 14717,
-  "formal_bytes": 979256,
+  "formal_segments": 14734,
+  "formal_bytes": 981628,
   "capacity_bytes": 983040,
-  "formal_coverage_percent": 99.61507161458333,
-  "uncovered_bytes": 3784,
-  "gap_count": 85,
-  "formal_switch_entries_without_decoded_source": 0,
-  "uncovered_direct_branch_targets": 0,
-  "uncovered_fallthrough_targets": 1,
-  "uncovered_pc_word_bytes": 0,
+  "formal_coverage_percent": 99.85636393229167,
+  "uncovered_bytes": 1412,
+  "gap_count": 87,
   "c_integrated_count_unchanged": 35,
   "new_bulk_thumb_instruction_bytes": 6308,
   "new_bulk_arm_instruction_bytes": 520,
@@ -20,24 +16,18 @@
   "exact_new_extents_verified": 4300,
   "rom_sha1": "c4d93a58f0f82c526dec8a3fdbda170336303689",
   "next_work": [
-    "Resume only on user request; verify and integrate the 13 indexed Thumb entries in gap 0x317C6-0x31830, classifying its leading two bytes separately",
-    "Re-audit external pointer tables across the full 8MiB ROM and current source-backed dispatchers",
-    "Classify remaining 3784 uncovered bytes and audit residual raw halfwords without assuming static methods exhausted",
-    "Keep the fixed 983040-byte denominator, all formal extents, and exact original ROM SHA1"
+    "Rebuild current gap and control-flow inventory",
+    "Resolve remaining external table consumers and use local mGBA to trace ambiguous ranges",
+    "Audit legacy raw halfwords and classify each remaining gap"
   ],
   "overall_goal_achieved": false,
   "old_formal_new_decoded_instruction_bytes": 45670,
   "old_formal_new_decoded_instruction_count": 21462,
-  "global_formal_extents_verified": 14717,
+  "global_formal_extents_verified": 14734,
   "new_verified_pc_word_bytes": 960,
   "new_verified_indirect_code_bytes": 498,
   "new_verified_indirect_literal_bytes": 100,
   "new_verified_indirect_alignment_bytes": 2,
-  "ledger_classification": {
-    "unconfirmed/low": 3676,
-    "mixed-code-entry/medium": 106,
-    "uncovered-code-entry/high": 2
-  },
   "residual_raw_halfwords_in_code_segments": {
     "lines": 5178,
     "bytes": 10356,
@@ -70,7 +60,12 @@
     "stage0-align2-20261103.json",
     "stage0-zcode-audit-20261103.json",
     "stage0-ledger-audit-20261103-final.json",
-    "stage0-negative-controls-audit-20261103.json"
+    "stage0-negative-controls-audit-20261103.json",
+    "stage0-dispatch-20261106.json",
+    "stage0-arm-interwork-20261106.json",
+    "stage0-audio-dispatch-20261106.json",
+    "stage0-audio-dispatch-proof-20261106.json",
+    "stage0-font-tiles-20261106.json"
   ],
   "residual_audit": {
     "total_lines": 5178,
@@ -82,24 +77,6 @@
     "downgraded_branch_edges": 13,
     "decode_new_entries": 0
   },
-  "negative_controls": {
-    "gap_literal_word_bytes": 0,
-    "gap_branch_entries": 0,
-    "gap_fallthrough_entries": 1,
-    "gap_switch_entries": 0,
-    "read_word_pointers_into_gaps": 2,
-    "raw_thumb_bl_shapes_into_gaps": 14,
-    "raw_arm_bl_shapes_into_gaps": 2,
-    "unreached_decoded_branch_edges_into_gaps": 0,
-    "ram_write_site_static_binding": "no constant ROM pointer written into any dispatchable RAM table base; stored values are runtime-computed (0x0800E3F70/0x0800EDDBA chains)",
-    "three_level_chains": {
-      "l3_tables": 931,
-      "gap_targets": 0
-    },
-    "all_rom_word_pointers_into_gaps": 93,
-    "word_pointers_outside_main_code_into_gaps": 91,
-    "source_backed_external_table_entries_into_gaps": 13
-  },
   "emulator_check": "no mGBA or scriptable GBA emulator found on PATH, Program Files, LocalAppData Programs, Downloads or Tools; fallback to static analysis per plan",
   "audit_20261103": {
     "report": "stage0-zcode-audit-20261103.json",
@@ -108,5 +85,34 @@
     "overnight_static_fixpoint_claim": "rejected; a source-backed indexed dispatcher was missed",
     "remaining_code_proven_not_integrated_bytes": 104,
     "residual_raw_file_count_note": "Overnight files=6948 exceeds raw lines=5178 and is not a valid files-with-raw count; re-audit needed"
+  },
+  "prior_audit_snapshot": {
+    "ledger_classification": {
+      "unconfirmed/low": 3676,
+      "mixed-code-entry/medium": 106,
+      "uncovered-code-entry/high": 2
+    },
+    "negative_controls": {
+      "gap_literal_word_bytes": 0,
+      "gap_branch_entries": 0,
+      "gap_fallthrough_entries": 1,
+      "gap_switch_entries": 0,
+      "read_word_pointers_into_gaps": 2,
+      "raw_thumb_bl_shapes_into_gaps": 14,
+      "raw_arm_bl_shapes_into_gaps": 2,
+      "unreached_decoded_branch_edges_into_gaps": 0,
+      "ram_write_site_static_binding": "no constant ROM pointer written into any dispatchable RAM table base; stored values are runtime-computed (0x0800E3F70/0x0800EDDBA chains)",
+      "three_level_chains": {
+        "l3_tables": 931,
+        "gap_targets": 0
+      },
+      "all_rom_word_pointers_into_gaps": 93,
+      "word_pointers_outside_main_code_into_gaps": 91,
+      "source_backed_external_table_entries_into_gaps": 13
+    },
+    "uncovered_direct_branch_targets": 0,
+    "uncovered_fallthrough_targets": 1,
+    "uncovered_pc_word_bytes": 0,
+    "formal_switch_entries_without_decoded_source": 0
   }
 }

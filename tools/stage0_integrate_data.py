@@ -47,7 +47,9 @@ def main():
     spec = json.loads((ROOT / args.spec).read_text(encoding='utf-8'))
     rom = (ROOT / 'baserom.gba').read_bytes()
     assert hashlib.sha1(rom).hexdigest() == extract.EXPECT
-    old = json.loads((ROOT / 'tools/segments.json').read_text(encoding='utf-8'))
+    segments_path = ROOT / 'tools/segments.json'
+    segment_snapshot = segments_path.read_bytes()
+    old = json.loads(segment_snapshot)
     covered = bytearray(0xF0000)
     for s in old:
         covered[s['start']:s['end']] = b'\1' * (s['end'] - s['start'])
@@ -92,18 +94,13 @@ def main():
         path.with_suffix('.manifest').write_text(json.dumps(dict(start=plan['start'], end=plan['end'], items=plan['items'])) + '\n', encoding='utf-8')
 
     with writer_lock(), transaction_paths(paths):
+        assert segments_path.read_bytes() == segment_snapshot, 'Segments changed during planning'
         with ThreadPoolExecutor(max_workers=24) as pool:
             list(pool.map(write_plan, plans))
         (ROOT / 'tools/segments.json').write_text(json.dumps(combined, indent=1) + '\n', encoding='utf-8')
         evidence_path.write_text(json.dumps(evidence, indent=1) + '\n', encoding='utf-8')
-        result = extract.rebuild()
-        assert result.returncode == 0, (result.stdout + result.stderr)[-2000:]
-        got = (ROOT / 'build/rmz2.candidate.gba').read_bytes()
-        assert hashlib.sha1(got).hexdigest() == extract.EXPECT, 'ROM mismatch; rolling back'
-        for p in plans:
-            assert got[p['start']:p['end']] == rom[p['start']:p['end']], p['name']
-        (ROOT / 'baserom.gba').write_bytes(got)
-    print('Verified full ROM:', build_checked(), flush=True)
+        verified = build_checked()
+    print('Verified full ROM:', verified, flush=True)
 
 
 if __name__ == '__main__':
