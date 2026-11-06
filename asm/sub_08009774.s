@@ -67,7 +67,7 @@ loc_080097EA:
     beq loc_0800980C
     sub r4, #1
     b loc_08009810
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0000077F
     .word 0x020011B8
     .word 0x0000800F
@@ -93,7 +93,7 @@ loc_08009822:
     mov r2, #0
     bl EXT_0800A510
     b loc_08009850
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0000077F
 loc_08009834:
     add r0, r4, #0

@@ -12,7 +12,7 @@ sub_08002880:
     mov r0, #1
     neg r0, r0
     b loc_080028D6
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x02000D60
 loc_0800289C:
     lsl r2, r0, #1

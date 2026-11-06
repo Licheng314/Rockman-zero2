@@ -91,7 +91,7 @@ loc_08029442:
     strh r0, [r5, #0xe]
     mov r0, r8
     b loc_0802946A
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x00000175
 loc_08029460:
     cmp r4, #0

@@ -18,15 +18,15 @@ def bounded_switches(instructions, rom):
         if any(x is None or x['size']!=2 for x in seq):
             continue
         shift, load, add, deref=seq
-        sm=re.fullmatch(r'(r\d+), \1, #2',shift['operands']) if shift['mnemonic'] in ('lsl','lsls') else None
+        sm=re.fullmatch(r'(r\d+), (r\d+), #2',shift['operands']) if shift['mnemonic'] in ('lsl','lsls') else None
         if not sm:
             continue
-        index=sm[1]
+        scaled,index=sm.groups()
         lm=re.fullmatch(r'(r\d+), \[pc(?:, #(?:0x[0-9a-f]+|\d+))?\]',load['operands']) if load['mnemonic']=='ldr' else None
         if not lm:
             continue
         base=lm[1]; operands=add['operands'].split(', ')
-        if add['mnemonic'] not in ('add','adds') or len(operands)!=3 or set(operands[1:])!={base,index}:
+        if base==scaled or add['mnemonic'] not in ('add','adds') or len(operands)!=3 or set(operands[1:])!={base,scaled}:
             continue
         dest=operands[0]
         dm=re.fullmatch(r'(r\d+), \['+dest+r'\]',deref['operands']) if deref['mnemonic']=='ldr' else None

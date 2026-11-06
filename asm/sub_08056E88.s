@@ -167,7 +167,7 @@ loc_08056FCE:
     add r0, #1
     strb r0, [r5, #0xe]
     b loc_08057022
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0xFFFFF300
     .word 0xFFFFF000
 loc_08056FE0:

@@ -65,7 +65,7 @@ loc_0805AB2E:
     beq loc_0805AB44
     ldr r0, [pc, #4]
     b loc_0805AB48
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0xFFFFFF00
 loc_0805AB44:
     mov r0, #0x80
@@ -135,7 +135,7 @@ loc_0805ABC2:
     add r0, #1
     strb r0, [r4, #0xf]
     b loc_0805ABE2
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0000A915
 loc_0805ABD0:
     add r0, r4, #0

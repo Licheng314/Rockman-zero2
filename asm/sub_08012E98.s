@@ -366,7 +366,7 @@ loc_0801312A:
     strb r0, [r2, #0x10]
     strb r1, [r2, #0x11]
     b loc_080131B0
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0202E990
     .word 0x0000021F
     .word 0x00000211
@@ -497,7 +497,7 @@ loc_08013266:
     add r0, r4, #0
     bl EXT_080136DC
     b loc_080132E6
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0202E990
     .word 0x0202EBAC
 loc_08013278:

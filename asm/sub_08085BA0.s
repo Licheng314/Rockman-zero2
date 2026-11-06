@@ -61,7 +61,7 @@ loc_08085C0A:
     bne loc_08085C20
     mov r0, #0x13
     b loc_08085C22
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x08341390
 loc_08085C20:
     mov r0, #0x1a

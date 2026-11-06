@@ -72,7 +72,7 @@ loc_0800887E:
     mov r1, sp
     bl EXT_08005664
     b loc_08008922
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x02000F94
 loc_080088A8:
     ldr r0, [r7, #0x5c]
@@ -113,7 +113,7 @@ loc_080088E6:
     mov r1, sp
     bl EXT_08006604
     b loc_08008916
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x02001000
     .word 0x0202D01C
     .word 0xFFFD47C4

@@ -36,7 +36,7 @@ sub_080EC59C:
     add r0, r4, r5
     strb r2, [r0]
     b loc_080EC646
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x00000DDE ; proven PC/switch data
     .word 0x02000D10 ; proven PC/switch data
     .word 0x00000DE4 ; proven PC/switch data

@@ -169,7 +169,7 @@ loc_080EA00E:
     beq loc_080EA054
     bic r1, r4
     b loc_080EA056
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0835E6A0
     .word 0x02000D10
 loc_080EA054:

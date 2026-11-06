@@ -109,7 +109,7 @@ loc_0802A20E:
     str r0, [r5, #0x5c]
     ldr r0, [pc, #0x10]
     b loc_0802A24E
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x00000175
     .word 0x0000017B
     .word 0x0000017D

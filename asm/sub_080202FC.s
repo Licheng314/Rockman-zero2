@@ -123,7 +123,7 @@ loc_080203DA:
     bne loc_08020414
     str r4, [sp, #0x14]
     b loc_08020414
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x00000FFF
     .word 0xFFFFFF00
 loc_080203FC:

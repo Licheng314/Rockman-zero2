@@ -32,7 +32,7 @@ sub_080A3EDC:
     ble loc_080A3FCE
     add r0, r1, #1
     b loc_080A3FCC
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x08344B10
     .word 0x08344A38
 loc_080A3F28:
@@ -94,7 +94,7 @@ loc_080A3F5C:
     mov r1, #0x80
     lsl r1, r1, #4
     b loc_080A3FA4
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x08344A38
 loc_080A3FA0:
     ldr r0, [r5, #0x54]

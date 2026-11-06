@@ -93,7 +93,7 @@ loc_08038BBE:
     cmp r0, #3
     beq loc_08038C04
     b loc_08038C26
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x00000177
 loc_08038BE0:
     ldr r3, [r5]

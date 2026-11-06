@@ -19,7 +19,7 @@ sub_080BCF28:
     add r0, r4, #0
     bl EXT_080BCD00
     b loc_080BCFC6
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x08345998
 loc_080BCF54:
     add r0, r4, #0
@@ -34,7 +34,7 @@ loc_080BCF54:
     cmp r0, #1
     beq loc_080BCFA4
     b loc_080BCFC6
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0xFFFFFD40
 loc_080BCF74:
     ldrb r1, [r4, #0x12]

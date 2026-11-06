@@ -103,7 +103,7 @@ sub_080CA994:
     add r1, #0xc1
     mov r0, #5
     b loc_080CAA9A
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x083490F8
     .word 0x00002401
     .word 0x083490BC

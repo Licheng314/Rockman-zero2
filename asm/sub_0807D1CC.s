@@ -34,7 +34,7 @@ loc_0807D1FA:
     cmp r0, #0
     beq loc_0807D232
     b loc_0807D290
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x08340670
 loc_0807D218:
     cmp r0, #5
@@ -83,7 +83,7 @@ loc_0807D232:
     add r2, r4, #0
     bl EXT_08098414
     b loc_0807D290
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x00005801
     .word 0xFFFFEE00
 loc_0807D27C:

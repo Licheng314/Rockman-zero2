@@ -22,7 +22,7 @@ sub_080AFB3C:
     mov r0, #0x10
     orr r0, r1
     b loc_080AFB76
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x00FFFF00
     .word 0x00020700
 loc_080AFB70:

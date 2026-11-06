@@ -26,7 +26,7 @@ sub_0805D0D6:
     mov r0, #0xf0
     bl EXT_080032EC
     b loc_0805D32C
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0xFFFFF000 ; proven PC/switch data
     .word 0x00000C1C ; proven PC/switch data
     .word 0x08432D00 ; proven PC/switch data
@@ -82,7 +82,7 @@ loc_0805D148:
     mov r1, #0
     bl EXT_080BDAE4
     b loc_0805D346
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0xFFFFF000 ; proven PC/switch data
     .word 0x0202E188 ; proven PC/switch data
     .word 0x000343FD ; proven PC/switch data

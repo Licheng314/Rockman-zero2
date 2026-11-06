@@ -45,7 +45,7 @@ sub_08074AAC:
     beq loc_08074B10
     mov r0, #0xd4
     b loc_08074B12
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0xFFFFE200
 loc_08074B10:
     mov r0, #0x2c

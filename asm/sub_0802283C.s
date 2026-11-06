@@ -25,7 +25,7 @@ loc_0802285E:
     add r5, r5, r0
     mov r2, #1
     b loc_0802287A
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0xFFFFF000
     .word 0x00000FFF
 loc_08022874:

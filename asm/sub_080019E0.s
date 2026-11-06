@@ -46,7 +46,7 @@ sub_080019E0:
     ldr r0, [pc, #0x2c]
     str r0, [r1]
     b loc_08001A74
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x03001590
     .word 0x08000B79
     .word 0x04000200

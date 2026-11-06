@@ -163,7 +163,7 @@ loc_08020112:
     bne loc_0802019A
     str r5, [sp, #0x34]
     b loc_0802019A
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x00000FFF
     .word 0xFFFFFF00
     .word 0x00000C01

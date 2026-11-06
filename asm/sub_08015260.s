@@ -79,7 +79,7 @@ loc_080152DE:
     beq loc_08015300
     ldr r5, [sp]
     b loc_08015306
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0xFFFFF000
     .word 0xFFFFE800
 loc_08015300:
@@ -121,7 +121,7 @@ loc_0801532A:
 loc_0801533E:
     str r0, [r7, #0x30]
     b loc_0801534A
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0xFFFFFC00
 loc_08015348:
     str r5, [r7, #0x30]

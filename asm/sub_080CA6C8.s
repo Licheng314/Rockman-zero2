@@ -53,7 +53,7 @@ loc_080CA6E4:
     ldr r0, [r0, #0xc]
     str r0, [r5, #0x14]
     b loc_080CA824
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0202EBB0
     .word 0x0834863C
 loc_080CA734:

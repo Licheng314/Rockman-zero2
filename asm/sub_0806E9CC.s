@@ -74,7 +74,7 @@ loc_0806EA5A:
     mov r1, #0x10
     orr r0, r1
     b loc_0806EA76
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x00001705
     .word 0x0202E130
 loc_0806EA70:
@@ -141,7 +141,7 @@ loc_0806EAD6:
     mov r0, #0x10
     orr r0, r1
     b loc_0806EAEE
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0202E130
 loc_0806EAE8:
     ldrb r1, [r6, #0xa]

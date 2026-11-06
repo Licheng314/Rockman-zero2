@@ -59,7 +59,7 @@ loc_080640CA:
     beq loc_080640E0
     ldr r0, [pc, #4]
     b loc_080640E4
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0xFFFFFF00 ; proven PC/switch data
 loc_080640E0:
     mov r0, #0x80
@@ -340,7 +340,7 @@ loc_08064348:
     mov r0, #0x40
     strb r0, [r6, #0x12]
     b loc_080643FC
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0xFFFFF000 ; proven PC/switch data
     .word 0x0202E188 ; proven PC/switch data
     .word 0x000343FD ; proven PC/switch data

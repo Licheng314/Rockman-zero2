@@ -21,7 +21,7 @@ sub_08042050:
     mov r0, #0x40
     neg r0, r0
     b loc_08042086
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x00000E01
     .word 0x00000E08
 loc_08042084:

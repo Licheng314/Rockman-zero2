@@ -25,7 +25,7 @@ loc_080447E8:
     cmp r0, #0
     bne loc_08044878
     b loc_08044842
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0000A305 ; proven PC/switch data
     add r0, r6, #0
     bl EXT_080128D4
@@ -58,7 +58,7 @@ loc_08044842:
     add r0, #1
     strb r0, [r6, #0xe]
     b loc_08044878
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0xFFFFF600 ; proven PC/switch data
     .word 0xFFFFE400 ; proven PC/switch data
     add r0, r6, #0

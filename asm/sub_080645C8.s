@@ -102,7 +102,7 @@ loc_08064688:
     mov r0, #5
     strb r0, [r4, #0xd]
     b loc_080646CC
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0833D8C8
 loc_08064694:
     ldrb r1, [r4, #0xa]
@@ -169,7 +169,7 @@ loc_08064700:
     add r0, #1
     mov r1, #0xf
     b loc_08064722
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x00002FFF
     .word 0x0202EBF0
 loc_0806471C:

@@ -78,7 +78,7 @@ loc_08022600:
     bge loc_0802262E
     add r5, r1, #0
     b loc_0802262E
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x020011DC
     .word 0xFFFFFE24
 loc_0802262C:

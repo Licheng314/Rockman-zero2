@@ -46,7 +46,7 @@ sub_080268C4:
     mov r1, r12
     strh r0, [r1, #0xe]
     b loc_08026946
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x00000195
     .word 0x00000175
 loc_08026928:

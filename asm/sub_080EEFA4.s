@@ -22,7 +22,7 @@ sub_080EEFA4:
     sub r0, r0, r1
     lsl r0, r0, #0xf
     b loc_080EEFEC
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x04000204
     .word 0x0000FFFC
     .word 0x080EEF81

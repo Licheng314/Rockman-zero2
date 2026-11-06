@@ -28,7 +28,7 @@ sub_0806B92C:
     and r0, r1
     strb r0, [r2]
     b loc_0806B98A
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0202E130
 loc_0806B968:
     mov r2, #1

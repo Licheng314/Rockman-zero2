@@ -112,7 +112,7 @@ loc_0801510A:
     cmp r0, r2
     bhi loc_08015182
     b loc_08015180
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x000003FE
 loc_0801511C:
     ldrh r1, [r3, #0x22]

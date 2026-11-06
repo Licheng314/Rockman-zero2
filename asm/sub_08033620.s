@@ -47,7 +47,7 @@ sub_08033620:
     ldrb r0, [r2]
     add r4, #4
     b loc_080336A6
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x00000175
 loc_08033684:
     ldrb r1, [r5, #0xd]

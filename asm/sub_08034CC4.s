@@ -111,7 +111,7 @@ loc_08034DA4:
     lsl r0, r5, #0x18
     lsr r0, r0, #0x18
     b loc_08034DBA
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x00000177
     .word 0x0000017B
     .word 0x00000179

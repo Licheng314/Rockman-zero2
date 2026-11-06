@@ -34,8 +34,7 @@ sub_0807FA3A:
     mov r0, #1
     strb r0, [r4, #0xd]
     b loc_0807FAB4
-    .dh 0x5F09 ; gap
-    .dh 0x0000 ; gap
+    .word 0x00005F09 ; proven PC/switch data
 loc_0807FA84:
     ldr r0, [r4, #0x28]
     cmp r0, #0

@@ -10,7 +10,7 @@ sub_08009BAC:
     bgt loc_08009BC4
     mov r0, #0
     b loc_08009BC6
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0xFFFFFC00
 loc_08009BC4:
     neg r0, r0

@@ -28,7 +28,7 @@ loc_0809F794:
     cmp r1, #0
     bge loc_0809F7DC
     b loc_0809F7D4
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0xFFFFF200
     .word 0xFFFFF800
 loc_0809F7C4:

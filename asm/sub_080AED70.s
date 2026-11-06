@@ -34,7 +34,7 @@ sub_080AED70:
     mov r0, #0x10
     orr r0, r1
     b loc_080AEDCA
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0202E188
     .word 0x000343FD
     .word 0x00269EC3

@@ -62,7 +62,7 @@ loc_080A8FBC:
     cmp r0, #0
     beq loc_080A8FF4
     b loc_080A90C0
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0202EC30
 loc_080A8FDC:
     mov r1, r8
@@ -194,7 +194,7 @@ loc_080A90C0:
     add r0, r4, #0
     bl EXT_080A912C
     b loc_080A911A
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0xFFFFF800
     .word 0x000007FF
     .word 0x08343064

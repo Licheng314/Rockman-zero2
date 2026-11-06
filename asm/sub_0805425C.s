@@ -30,7 +30,7 @@ loc_0805428C:
     add r0, r0, r1
     ldr r0, [r0]
     mov pc, r0
-    .dh 0x0000 ; TODO movs r0, r0
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0000A619 ; proven PC/switch data
     .word 0x080542A0 ; proven PC/switch data
     .word 0x0805439C ; proven PC/switch data
@@ -135,7 +135,7 @@ loc_080543E8:
     ldr r0, [r4, #0x58]
     ldr r1, [pc, #4]
     b loc_0805454C
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0xFFFFE400 ; proven PC/switch data
     ldr r2, [pc, #0x30]
     ldr r1, [r2]
@@ -199,7 +199,7 @@ loc_0805443A:
     beq loc_08054490
     ldr r1, [pc, #0x10]
     b loc_08054494
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0202E188 ; proven PC/switch data
     .word 0x000343FD ; proven PC/switch data
     .word 0x00269EC3 ; proven PC/switch data
@@ -213,7 +213,7 @@ loc_08054494:
     ldr r0, [r4, #0x58]
     ldr r1, [pc, #4]
     b loc_0805454C
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0xFFFFE400 ; proven PC/switch data
     ldr r2, [pc, #0x30]
     ldr r1, [r2]
@@ -239,7 +239,7 @@ loc_08054494:
     beq loc_080544E8
     ldr r1, [pc, #0x10]
     b loc_080544EC
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0202E188 ; proven PC/switch data
     .word 0x000343FD ; proven PC/switch data
     .word 0x00269EC3 ; proven PC/switch data
@@ -253,7 +253,7 @@ loc_080544EC:
     ldr r0, [r4, #0x58]
     ldr r1, [pc, #4]
     b loc_080545B0
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0xFFFFE400 ; proven PC/switch data
     ldr r2, [pc, #0x30]
     ldr r1, [r2]
@@ -279,7 +279,7 @@ loc_080544EC:
     beq loc_08054540
     ldr r1, [pc, #0x10]
     b loc_08054544
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0202E188 ; proven PC/switch data
     .word 0x000343FD ; proven PC/switch data
     .word 0x00269EC3 ; proven PC/switch data
@@ -325,7 +325,7 @@ loc_0805454C:
     beq loc_080545A4
     ldr r1, [pc, #0x10]
     b loc_080545A8
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0202E188 ; proven PC/switch data
     .word 0x000343FD ; proven PC/switch data
     .word 0x00269EC3 ; proven PC/switch data

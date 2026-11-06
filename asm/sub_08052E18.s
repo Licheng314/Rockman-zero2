@@ -61,7 +61,7 @@ loc_08052E7C:
     cmp r0, #2
     beq loc_08052EB2
     b loc_08052F2E
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0000A60F
     .word 0x0202E188
     .word 0x000343FD

@@ -49,7 +49,7 @@ loc_0806237C:
     cmp r1, r0
     ble loc_080623B6
     b loc_080623B2
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0xFFFFD100
 loc_080623A4:
     ldr r0, [r4]

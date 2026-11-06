@@ -8,7 +8,7 @@ sub_08009E08:
     ble loc_08009E1C
     mvn r0, r1
     b loc_08009E32
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x000003FF
 loc_08009E1C:
     ldr r0, [pc, #0xc]

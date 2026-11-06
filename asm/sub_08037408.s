@@ -114,7 +114,7 @@ loc_080374A6:
     cmp r0, #0xff
     bhi loc_080374F8
     b loc_080374F6
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x00000195
     .word 0x00000189
 loc_080374F0:

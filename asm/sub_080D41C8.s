@@ -184,7 +184,7 @@ loc_080D4336:
     bne loc_080D4348
     mov r0, #0
     b loc_080D4464
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0xFFFFE800
     .word 0xFFFFF000
 loc_080D4348:
@@ -275,7 +275,7 @@ loc_080D43E4:
     add r1, r1, r2
     bl EXT_0800E9AC
     b loc_080D4408
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0xFFFFF800
 loc_080D43FC:
     ldr r0, [r5, #0x54]

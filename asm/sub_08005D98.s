@@ -32,7 +32,7 @@ sub_08005D98:
     ble loc_08005DDC
     str r4, [sp, #0xc]
     b loc_08005DE0
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x000001FF
 loc_08005DDC:
     mov r0, #0

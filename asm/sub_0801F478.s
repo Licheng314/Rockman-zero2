@@ -49,7 +49,7 @@ sub_0801F478:
     add r0, r0, r1
     str r0, [r5]
     b loc_0801F4E6
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x020011DC
     .word 0xFFFFFE24
 loc_0801F4E4:

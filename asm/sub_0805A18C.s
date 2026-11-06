@@ -71,7 +71,7 @@ loc_0805A1EA:
     cmp r0, #0
     beq loc_0805A25C
     b loc_0805A256
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0000A724 ; proven PC/switch data
     .word 0x0202EC30 ; proven PC/switch data
     .word 0x0000FFFE ; proven PC/switch data

@@ -38,7 +38,7 @@ loc_08037E8E:
     bgt loc_08037EBC
     mov r0, #0
     b loc_08037EBE
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0xFFFFC000
     .word 0x00003FFF
 loc_08037EBC:

@@ -13,7 +13,7 @@ loc_080C7F40:
     add r0, r0, r1
     ldr r0, [r0]
     mov pc, r0
-    .dh 0x0000 ; TODO movs r0, r0
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x080C7F50 ; proven PC/switch data
     .word 0x080C7F80 ; proven PC/switch data
     .word 0x080C7FA4 ; proven PC/switch data

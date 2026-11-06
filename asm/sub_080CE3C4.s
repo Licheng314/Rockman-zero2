@@ -102,7 +102,7 @@ loc_080CE464:
     ldr r0, [r0, #8]
     str r0, [r3, #0x14]
     b loc_080CE4C2
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0202EBB4
     .word 0x083498E0
     .word 0x0834863C

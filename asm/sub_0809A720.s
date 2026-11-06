@@ -43,7 +43,7 @@ loc_0809A73A:
     ldr r0, [r0, #0xc]
     str r0, [r3, #0x14]
     b loc_0809A7F0
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0202EBB0
     .word 0x08343064
 loc_0809A77C:

@@ -46,7 +46,7 @@ loc_0800F66E:
     mov r1, #0
     bl EXT_08002D68
     b loc_0800F6AE
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0831348C
     .word 0x02001000
     .word 0x0831E9F0

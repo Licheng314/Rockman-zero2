@@ -24,7 +24,7 @@ sub_080D7D40:
     add r1, r4, #0
     bl EXT_080D568C
     b loc_080D7E06
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0834A1A0
 loc_080D7D78:
     mov r0, #0

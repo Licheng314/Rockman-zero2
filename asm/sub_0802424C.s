@@ -87,7 +87,7 @@ loc_08024290:
     strb r3, [r2]
     mov r0, #5
     b loc_08024602
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x00000175
     .word 0x00000177
     .word 0x00000179
@@ -438,7 +438,7 @@ loc_08024528:
     strb r3, [r2]
     mov r0, #3
     b loc_08024602
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x00000195
     .word 0x00000175
     .word 0x00000177

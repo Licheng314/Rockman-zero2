@@ -32,7 +32,7 @@ sub_08048454:
     strh r0, [r4]
     strb r7, [r5]
     b loc_080484D2
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0000FFFF
 loc_0804849C:
     ldrb r0, [r4, #0xa]

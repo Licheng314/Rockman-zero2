@@ -53,7 +53,7 @@ loc_08048DDC:
     ldr r0, [r4, #0x54]
     ldr r1, [pc, #0x14]
     b loc_08048E16
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0000A509
     .word 0x0833AD0C
     .word 0x0000FF7F

@@ -47,7 +47,7 @@ loc_0803F8C4:
     bhi loc_0803F8E0
     mov r0, #0
     b loc_0803F8E4
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0202ED18
 loc_0803F8E0:
     mov r0, #1

@@ -26,7 +26,7 @@ sub_080285E8:
     bhs #0x8028624
     mov r0, #0
     b loc_08028626
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x08333EA0 ; proven PC/switch data
     sub r0, r0, r1
 loc_08028626:

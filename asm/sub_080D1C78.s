@@ -54,7 +54,7 @@ sub_080D1C78:
     cmp r0, #0
     beq loc_080D1CF2
     b loc_080D1DD4
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0834863C
 loc_080D1CEC:
     cmp r0, #2
@@ -87,7 +87,7 @@ loc_080D1CF2:
     str r0, [r5, #0x30]
     ldr r0, [pc, #0xc]
     b loc_080D1DD2
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x08349BA8
     .word 0x08349E58
     .word 0x00000401

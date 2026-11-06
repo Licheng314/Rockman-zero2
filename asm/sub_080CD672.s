@@ -70,7 +70,7 @@ loc_080CD6F6:
     ldr r0, [r4, #0x54]
     sub r5, r1, r0
     b loc_080CD720
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0202E130
 loc_080CD70C:
     ldr r0, [r4, #0x58]

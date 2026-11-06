@@ -120,7 +120,7 @@ loc_0802129E:
     mov r6, r12
     strb r0, [r6]
     b loc_080212C8
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x020011DC
 loc_080212AC:
     cmp r3, r4

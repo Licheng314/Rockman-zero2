@@ -224,7 +224,7 @@ loc_080D7C64:
     mov r0, #0xfe
     and r0, r1
     b loc_080D7C8A
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0202E188
     .word 0x000343FD
     .word 0x00269EC3

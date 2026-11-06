@@ -65,7 +65,7 @@ loc_080BAB22:
     add r4, r4, r0
     str r4, [r6, #0x60]
     b loc_080BAB84
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x08347164
     .word 0x08345998
 loc_080BAB68:

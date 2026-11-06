@@ -136,7 +136,7 @@ loc_08045656:
     mov r0, #0x1a
     strb r0, [r4, #0xd]
     b loc_080456A4
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x00005FFF
 loc_0804566C:
     cmp r1, #9
@@ -156,7 +156,7 @@ loc_08045676:
     mov r0, #0x13
     strb r0, [r4, #0xd]
     b loc_080456A4
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0202EBF0
 loc_08045690:
     cmp r1, #6

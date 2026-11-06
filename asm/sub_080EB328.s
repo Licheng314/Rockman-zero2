@@ -74,7 +74,7 @@ loc_080EB3B6:
     add r0, r6, #0
     bl EXT_080EBB64
     b loc_080EB3D4
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x00000DD8
 loc_080EB3C8:
     mov r1, #0

@@ -20,7 +20,7 @@ sub_08046A70:
     beq loc_08046AA8
     ldr r0, [pc, #0xc]
     b loc_08046AAC
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0000A504
     .word 0x0833AA94
     .word 0xFFFFFF00

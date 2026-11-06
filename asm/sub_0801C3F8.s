@@ -26,7 +26,7 @@ sub_0801C3F8:
     ldrb r1, [r2]
     orr r0, r1
     b loc_0801C448
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0202EBB0
 loc_0801C430:
     ldr r0, [pc, #0x18]

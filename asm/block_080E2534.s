@@ -34,9 +34,8 @@ block_080E2534:
     mov r2, #2
     bl EXT_080DE510
     b loc_080E25A0
-    .dh 0x0000 ; gap
-    .dh 0x0604 ; gap
-    .dh 0x0010 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
+    .word 0x00100604 ; proven PC/switch data
     .word 0x00007340
     .word 0x0834C47C
     .word 0x0834C9E4

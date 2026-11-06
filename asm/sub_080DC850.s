@@ -85,7 +85,7 @@ loc_080DC8E8:
 loc_080DC8F2:
     add r0, r4, #0
     b loc_080DC902
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0202F094
     .word 0x0834B8B4
 loc_080DC900:

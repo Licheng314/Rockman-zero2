@@ -97,7 +97,7 @@ loc_0808E252:
     cmp r0, #0
     bne loc_0808E334
     b loc_0808E320
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0202EBB0
     .word 0x00007601
     .word 0xFFFFFDF6
@@ -199,7 +199,7 @@ loc_0808E320:
     strb r0, [r5, #0xd]
     mov r0, #0
     b loc_0808E336
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0202EBB0
     .word 0x00007601
     .word 0xFFFFFDF6

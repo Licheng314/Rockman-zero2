@@ -58,7 +58,7 @@ sub_08029820:
     mov r0, #2
     strb r0, [r1]
     b loc_080298EA
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x00000181
     .word 0x0000017F
     .word 0x00000177
@@ -97,7 +97,7 @@ loc_080298EA:
     add r0, r4, #0
     bl EXT_08029940
     b loc_0802993A
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x00000177
     .word 0x0000017B
 loc_080298FC:

@@ -88,7 +88,7 @@ loc_08028794:
     strb r1, [r0]
     mov r0, #5
     b loc_080287F8
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x00000183
     .word 0x08333EAC
 loc_080287D8:

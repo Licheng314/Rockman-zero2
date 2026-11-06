@@ -54,7 +54,7 @@ loc_080D5FBC:
     add r0, r8
     ldrb r3, [r0]
     b loc_080D5FDC
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0834A85C
     .word 0x02000D10
 loc_080D5FD8:
@@ -95,7 +95,7 @@ loc_080D6004:
     add r0, r0, r1
     mov r12, r0
     b loc_080D6024
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0834A85C
 loc_080D6020:
     cmp r6, #0

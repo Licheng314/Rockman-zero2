@@ -127,7 +127,7 @@ loc_08082470:
     add r0, #0xbd
     strb r7, [r0]
     b loc_080824BA
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0833D990
 loc_08082494:
     ldr r1, [pc, #0x30]

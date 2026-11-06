@@ -122,7 +122,7 @@ loc_0808E69E:
     str r0, [r4, #0x14]
     strb r1, [r4, #0xd]
     b EXT_0808E80A
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x00007608
     .word 0x08342070
     .word 0xFFFFFD00

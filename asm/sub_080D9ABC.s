@@ -24,7 +24,7 @@ sub_080D9ABC:
     add r0, r5, #0
     bl EXT_080D9B44
     b loc_080D9B36
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0834A1A0
 loc_080D9AF4:
     ldrb r4, [r5, #0x13]
@@ -45,7 +45,7 @@ loc_080D9AF4:
     add r4, #1
     strb r4, [r5, #0x13]
     b loc_080D9B2C
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0834B674
 loc_080D9B20:
     add r0, r5, #0

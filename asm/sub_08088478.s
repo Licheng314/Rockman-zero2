@@ -22,7 +22,7 @@ sub_08088478:
     mov r0, #0x19
     strb r0, [r1]
     b loc_080884C6
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x00002504
 loc_080884AC:
     ldr r1, [pc, #0x70]

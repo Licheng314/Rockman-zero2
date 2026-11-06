@@ -305,7 +305,7 @@ loc_08056176:
     strb r0, [r5, #0xe]
     strb r1, [r5, #0xf]
     b loc_080561CE
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0xFFFFEC00
     .word 0x0202ED18
     .word 0x0202E188

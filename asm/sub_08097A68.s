@@ -142,7 +142,7 @@ loc_08097B6C:
 loc_08097B76:
     strb r0, [r4, #0xf]
     b loc_08097C7A
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x08342FB8
 loc_08097B80:
     ldrb r0, [r4, #0x10]
@@ -239,7 +239,7 @@ loc_08097C30:
     ldr r0, [r4, #0x68]
     str r0, [r4, #0x60]
     b loc_08097C7A
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x08342FB8
 loc_08097C50:
     ldr r0, [r4, #0x28]

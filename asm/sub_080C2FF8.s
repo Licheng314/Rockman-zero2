@@ -60,7 +60,7 @@ loc_080C304E:
     bhi loc_080C3070
     mov r0, #0xff
     b loc_080C3076
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x00002F01
 loc_080C3070:
     sub r0, #2

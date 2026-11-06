@@ -37,7 +37,7 @@ sub_0806D2F4:
     ldr r0, [r0, #0xc]
     str r0, [r6, #0x14]
     b loc_0806D426
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0833D990
 loc_0806D344:
     ldr r1, [pc, #0x58]
@@ -82,7 +82,7 @@ loc_0806D344:
     cmp r0, #0
     beq loc_0806D3AA
     b loc_0806D3C8
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0833D990
 loc_0806D3A4:
     cmp r0, #2

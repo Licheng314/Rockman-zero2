@@ -23,7 +23,7 @@ sub_080E3D88:
     mov r0, #1
     neg r0, r0
     b loc_080E3DC2
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x02000CA0
 loc_080E3DBC:
     mov r0, #0

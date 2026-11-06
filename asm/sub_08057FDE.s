@@ -20,9 +20,8 @@ loc_08057FE4:
     mov r2, #0x20
     orr r1, r2
     b loc_08058014
-    .dh 0x0000 ; gap
-    .dh 0xCAE8 ; gap
-    .dh 0x0833 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
+    .word 0x0833CAE8 ; proven PC/switch data
 loc_08058008:
     add r0, r4, #0
     add r0, #0xbc

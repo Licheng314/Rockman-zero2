@@ -74,7 +74,7 @@ loc_0801EE54:
     cmp r4, #0
     bne loc_0801EE38
     b loc_0801EE6C
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x08333A58
 loc_0801EE68:
     add r0, r3, #0

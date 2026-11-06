@@ -51,7 +51,7 @@ loc_080C9352:
     ldrb r0, [r4, #0xe]
     add r0, #1
     b loc_080C939E
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x08348F24
 loc_080C9388:
     add r0, r4, #0

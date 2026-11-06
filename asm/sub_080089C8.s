@@ -56,7 +56,7 @@ sub_080089C8:
     cmp r2, r0
     bne loc_08008A50
     b loc_08008A8A
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x02001000
     .word 0x0831408C
     .word 0x0831348C
@@ -108,7 +108,7 @@ loc_08008A8A:
     cmp r2, r0
     bne loc_08008ABC
     b loc_08008AF8
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x08732CB0
     .word 0x02001000
     .word 0x000007D4

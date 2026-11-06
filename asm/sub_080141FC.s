@@ -85,7 +85,7 @@ loc_08014286:
     bgt loc_080142AC
     mov r0, #0xf
     b loc_080142B8
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x08325E04
 loc_080142AC:
     cmp r2, #0x18

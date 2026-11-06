@@ -59,7 +59,7 @@ sub_0803C010:
     ldr r0, [r0, #8]
     str r0, [r4, #0x14]
     b loc_0803C0A6
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x08337DA8
     .word 0x0000FFFF
     .word 0x00000103

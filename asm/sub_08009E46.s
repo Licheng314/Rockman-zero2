@@ -4,10 +4,8 @@ sub_08009E46:
     ble loc_08009E54
     mvn r0, r1
     b loc_08009E72
-    .dh 0x03FF ; gap
-    .dh 0x0000 ; gap
-    .dh 0x07FF ; gap
-    .dh 0x0000 ; gap
+    .word 0x000003FF ; proven PC/switch data
+    .word 0x000007FF ; proven PC/switch data
 loc_08009E54:
     ldr r0, [pc, #0x10]
     add r1, r1, r0

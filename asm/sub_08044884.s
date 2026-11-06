@@ -140,7 +140,7 @@ loc_0804497A:
     cmp r1, #0
     bge loc_08044A3A
     b loc_080449D0
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0000A306
     .word 0xFFFFE800
 loc_080449A4:

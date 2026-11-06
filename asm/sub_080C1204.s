@@ -80,7 +80,7 @@ loc_080C126C:
     lsl r3, r3, #6
     add r0, r0, r3
     b loc_080C12C6
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x00001D02
     .word 0x08348840
     .word 0x00002401

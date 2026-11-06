@@ -29,7 +29,7 @@ sub_080E0760:
     mov r1, #6
     bl EXT_080DFBC0
     b loc_080E07F4
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x00000235
 loc_080E07A8:
     mov r1, #0x8d
@@ -52,7 +52,7 @@ loc_080E07C4:
     mov r1, #0
     bl EXT_080E0E64
     b loc_080E07EC
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0202F8E0
 loc_080E07D4:
     ldr r0, [pc, #8]

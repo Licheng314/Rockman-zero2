@@ -106,7 +106,7 @@ loc_08062DA0:
     mov r2, #0x80
     lsl r2, r2, #3
     b loc_08062DE2
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0xFFFFFBFF ; proven PC/switch data
     .word 0xFFFFF7FF ; proven PC/switch data
     .word 0xFFFFFA00 ; proven PC/switch data

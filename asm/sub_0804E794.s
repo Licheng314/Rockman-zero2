@@ -129,7 +129,7 @@ loc_0804E850:
     str r0, [r6, #0x64]
     lsl r0, r4, #3
     b loc_0804E8AE
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x02001000
     .word 0x0002D03E
 loc_0804E8A4:

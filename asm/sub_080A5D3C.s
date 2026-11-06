@@ -84,7 +84,7 @@ sub_080A5D3C:
     lsl r1, r1, #4
     add r0, r0, r1
     b loc_080A5DFE
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x00005C10
     .word 0x0834501C
     .word 0x08344F8C

@@ -18,149 +18,79 @@ loc_080E6CA4:
     add r0, r0, r1
     ldr r0, [r0]
     mov pc, r0
-    .dh 0x0000 ; TODO movs r0, r0
+    .dh 0x0000 ; alignment after unconditional transfer
     ldr r4, [r6, #0x48]
     lsr r6, r1, #0x20
-    ldr r4, [r1, #0x5c]
-    lsr r6, r1, #0x20
-    ldr r0, [r3, #0x5c]
-    lsr r6, r1, #0x20
-    ldr r4, [r2, #0x60]
-    lsr r6, r1, #0x20
-    ldr r6, [r2, #0x6c]
-    lsr r6, r1, #0x20
-    ldr r0, [r6, #0x6c]
-    lsr r6, r1, #0x20
-    ldr r0, [r2, #0x70]
-    lsr r6, r1, #0x20
-    ldr r4, [r3, #0x74]
-    lsr r6, r1, #0x20
-    ldr r6, [r0, #0x78]
-    lsr r6, r1, #0x20
-    strb r0, [r5]
-    lsr r6, r1, #0x20
-    strb r2, [r7]
-    lsr r6, r1, #0x20
-    strb r4, [r7, #0xf]
-    lsr r6, r1, #0x20
-    strb r4, [r1, #0x10]
-    lsr r6, r1, #0x20
-    strb r2, [r6, #0x12]
-    lsr r6, r1, #0x20
-    ldr r2, [r5, #0x74]
-    lsr r6, r1, #0x20
-    ldr r6, [r0, #0x78]
-    lsr r6, r1, #0x20
-    strb r0, [r5]
-    lsr r6, r1, #0x20
-    strb r2, [r7]
-    lsr r6, r1, #0x20
-    strb r4, [r3, #0x13]
-    lsr r6, r1, #0x20
-    strb r4, [r5, #0x13]
-    lsr r6, r1, #0x20
-    strb r6, [r5, #0x15]
-    lsr r6, r1, #0x20
-    strb r6, [r0, #0x17]
-    lsr r6, r1, #0x20
-    strb r6, [r1, #0x18]
-    lsr r6, r1, #0x20
-    ldr r0, [r7, #0x74]
-    lsr r6, r1, #0x20
-    ldr r6, [r0, #0x78]
-    lsr r6, r1, #0x20
-    strb r0, [r5]
-    lsr r6, r1, #0x20
-    strb r2, [r7]
-    lsr r6, r1, #0x20
-    strb r4, [r0, #0x1d]
-    lsr r6, r1, #0x20
-    strb r4, [r2, #0x1d]
-    lsr r6, r1, #0x20
-    ldrb r2, [r0, #5]
-    lsr r6, r1, #0x20
-    ldrb r2, [r0, #5]
-    lsr r6, r1, #0x20
-    ldrb r2, [r0, #5]
-    lsr r6, r1, #0x20
-    ldrb r2, [r0, #5]
-    lsr r6, r1, #0x20
-    ldr r2, [r5, #0x74]
-    lsr r6, r1, #0x20
-    ldr r6, [r0, #0x78]
-    lsr r6, r1, #0x20
-    strb r0, [r5]
-    lsr r6, r1, #0x20
-    strb r2, [r7]
-    lsr r6, r1, #0x20
-    strb r4, [r3, #0x13]
-    lsr r6, r1, #0x20
-    strb r4, [r5, #0x13]
-    lsr r6, r1, #0x20
-    strb r6, [r5, #0x15]
-    lsr r6, r1, #0x20
-    strb r6, [r0, #0x17]
-    lsr r6, r1, #0x20
-    strb r6, [r1, #0x18]
-    lsr r6, r1, #0x20
-    strb r4, [r1, #0x1f]
-    lsr r6, r1, #0x20
-    ldrb r2, [r0, #5]
-    lsr r6, r1, #0x20
-    ldrb r2, [r0, #5]
-    lsr r6, r1, #0x20
-    ldrb r2, [r0, #5]
-    lsr r6, r1, #0x20
-    ldrb r2, [r0, #5]
-    lsr r6, r1, #0x20
-    ldrb r2, [r0, #5]
-    lsr r6, r1, #0x20
-    ldrb r2, [r0, #5]
-    lsr r6, r1, #0x20
-    ldr r4, [r3, #0x74]
-    lsr r6, r1, #0x20
-    ldr r6, [r0, #0x78]
-    lsr r6, r1, #0x20
-    strb r0, [r5]
-    lsr r6, r1, #0x20
-    strb r2, [r7]
-    lsr r6, r1, #0x20
-    strb r4, [r7, #0xf]
-    lsr r6, r1, #0x20
-    strb r4, [r1, #0x10]
-    lsr r6, r1, #0x20
-    strb r2, [r6, #0x12]
-    lsr r6, r1, #0x20
-    ldrb r2, [r0, #5]
-    lsr r6, r1, #0x20
-    ldrb r2, [r0, #5]
-    lsr r6, r1, #0x20
-    ldrb r2, [r0, #5]
-    lsr r6, r1, #0x20
-    ldrb r2, [r0, #5]
-    lsr r6, r1, #0x20
-    ldrb r2, [r0, #5]
-    lsr r6, r1, #0x20
-    ldrb r2, [r0, #5]
-    lsr r6, r1, #0x20
-    ldrb r0, [r2]
-    lsr r6, r1, #0x20
-    ldrb r4, [r4, #1]
-    lsr r6, r1, #0x20
-    ldrb r6, [r7, #1]
-    lsr r6, r1, #0x20
-    ldrb r4, [r4, #2]
-    lsr r6, r1, #0x20
-    ldrb r4, [r7, #2]
-    lsr r6, r1, #0x20
-    ldrb r4, [r1, #3]
-    lsr r6, r1, #0x20
-    ldrb r6, [r6, #3]
-    lsr r6, r1, #0x20
-    ldrb r0, [r3, #4]
-    lsr r6, r1, #0x20
-    ldrb r0, [r6, #4]
-    lsr r6, r1, #0x20
+    .word 0x080E6DCC ; proven PC/switch data
+    .word 0x080E6DD8 ; proven PC/switch data
+    .word 0x080E6E14 ; proven PC/switch data
+    .word 0x080E6ED6 ; proven PC/switch data
+    .word 0x080E6EF0 ; proven PC/switch data
+    .word 0x080E6F10 ; proven PC/switch data
+    .word 0x080E6F5C ; proven PC/switch data
+    .word 0x080E6F86 ; proven PC/switch data
+    .word 0x080E7028 ; proven PC/switch data
+    .word 0x080E703A ; proven PC/switch data
+    .word 0x080E73FC ; proven PC/switch data
+    .word 0x080E740C ; proven PC/switch data
+    .word 0x080E74B2 ; proven PC/switch data
+    .word 0x080E6F6A ; proven PC/switch data
+    .word 0x080E6F86 ; proven PC/switch data
+    .word 0x080E7028 ; proven PC/switch data
+    .word 0x080E703A ; proven PC/switch data
+    .word 0x080E74DC ; proven PC/switch data
+    .word 0x080E74EC ; proven PC/switch data
+    .word 0x080E756E ; proven PC/switch data
+    .word 0x080E75C6 ; proven PC/switch data
+    .word 0x080E760E ; proven PC/switch data
+    .word 0x080E6F78 ; proven PC/switch data
+    .word 0x080E6F86 ; proven PC/switch data
+    .word 0x080E7028 ; proven PC/switch data
+    .word 0x080E703A ; proven PC/switch data
+    .word 0x080E7744 ; proven PC/switch data
+    .word 0x080E7754 ; proven PC/switch data
+    .word 0x080E7942 ; proven PC/switch data
+    .word 0x080E7942 ; proven PC/switch data
+    .word 0x080E7942 ; proven PC/switch data
+    .word 0x080E7942 ; proven PC/switch data
+    .word 0x080E6F6A ; proven PC/switch data
+    .word 0x080E6F86 ; proven PC/switch data
+    .word 0x080E7028 ; proven PC/switch data
+    .word 0x080E703A ; proven PC/switch data
+    .word 0x080E74DC ; proven PC/switch data
+    .word 0x080E74EC ; proven PC/switch data
+    .word 0x080E756E ; proven PC/switch data
+    .word 0x080E75C6 ; proven PC/switch data
+    .word 0x080E760E ; proven PC/switch data
+    .word 0x080E77CC ; proven PC/switch data
+    .word 0x080E7942 ; proven PC/switch data
+    .word 0x080E7942 ; proven PC/switch data
+    .word 0x080E7942 ; proven PC/switch data
+    .word 0x080E7942 ; proven PC/switch data
+    .word 0x080E7942 ; proven PC/switch data
+    .word 0x080E7942 ; proven PC/switch data
+    .word 0x080E6F5C ; proven PC/switch data
+    .word 0x080E6F86 ; proven PC/switch data
+    .word 0x080E7028 ; proven PC/switch data
+    .word 0x080E703A ; proven PC/switch data
+    .word 0x080E73FC ; proven PC/switch data
+    .word 0x080E740C ; proven PC/switch data
+    .word 0x080E74B2 ; proven PC/switch data
+    .word 0x080E7942 ; proven PC/switch data
+    .word 0x080E7942 ; proven PC/switch data
+    .word 0x080E7942 ; proven PC/switch data
+    .word 0x080E7942 ; proven PC/switch data
+    .word 0x080E7942 ; proven PC/switch data
+    .word 0x080E7942 ; proven PC/switch data
+    .word 0x080E7810 ; proven PC/switch data
+    .word 0x080E7864 ; proven PC/switch data
+    .word 0x080E787E ; proven PC/switch data
+    .word 0x080E78A4 ; proven PC/switch data
+    .word 0x080E78BC ; proven PC/switch data
+    .word 0x080E78CC ; proven PC/switch data
+    .word 0x080E78F6 ; proven PC/switch data
+    .word 0x080E7918 ; proven PC/switch data
+    .word 0x080E7930 ; proven PC/switch data
     mov r0, #0x64
     bl EXT_080DF038
     ldrb r0, [r6, #3]
@@ -267,8 +197,7 @@ loc_080E6EA0:
     strb r0, [r4, #0x10]
     bl EXT_080E793E
     .dh 0xEBB0, 0x0202 ; TODO subs.w r2, r0, r2
-    lsl r5, r3, #8
-    .dh 0x0000 ; TODO movs r0, r0
+    .word 0x0000021D ; proven PC/switch data
 loc_080E6EC0:
     ldr r0, [pc, #8]
     bl EXT_080DF038

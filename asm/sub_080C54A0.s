@@ -35,7 +35,7 @@ sub_080C54A0:
     add r0, r4, #0
     bl EXT_080127E4
     b loc_080C5552
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0000A201 ; proven PC/switch data
     .word 0x0000A206 ; proven PC/switch data
     add r0, r4, #0
@@ -51,7 +51,7 @@ sub_080C54A0:
     add r0, r4, #0
     bl EXT_080127E4
     b loc_080C5552
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0xFFFFFC00 ; proven PC/switch data
     .word 0x0000A207 ; proven PC/switch data
     add r0, r4, #0

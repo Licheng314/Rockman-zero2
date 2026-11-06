@@ -93,7 +93,7 @@ loc_080AADC6:
     add r0, #1
     strb r0, [r4, #0xd]
     b loc_080AAE4E
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0xFFFFF000
     .word 0x080EF450
 loc_080AADFC:

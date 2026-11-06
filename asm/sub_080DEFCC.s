@@ -30,7 +30,7 @@ sub_080DEFCC:
     mov r0, #5
     strb r0, [r4, #0xd]
     b loc_080DF02E
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0202F658
     .word 0x0834F364
     .word 0x0834F314

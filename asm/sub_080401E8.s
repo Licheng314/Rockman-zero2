@@ -91,7 +91,7 @@ loc_08040286:
     bne loc_080402A4
     add r3, #1
     b loc_08040286
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0833A508
     .word 0x0833A214
 loc_080402A4:

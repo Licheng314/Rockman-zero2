@@ -135,7 +135,7 @@ loc_0804CB58:
 loc_0804CBCE:
     ldr r3, [pc, #0x1c]
     b loc_0804CBF6
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x02000F90
     .word 0x0000DBFF
     .word 0x02000FE0

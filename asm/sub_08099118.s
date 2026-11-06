@@ -27,7 +27,7 @@ sub_08099118:
     .dh 0x2110 ; TODO movs r1, #0x10
     orr r0, r1
     .dh 0xE005 ; TODO b #0x809915e
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x00000812
 loc_08099158:
     ldrb r1, [r5, #0xa]

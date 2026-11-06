@@ -187,7 +187,7 @@ loc_0805EBAC:
     cmp r2, r0
     bgt loc_0805EBF8
     b loc_0805EBEA
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0202E188
     .word 0x000343FD
     .word 0x00269EC3

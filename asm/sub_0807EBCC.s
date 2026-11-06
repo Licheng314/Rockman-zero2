@@ -40,7 +40,7 @@ sub_0807EBCC:
     ldr r0, [r0, #0xc]
     str r0, [r7, #0x14]
     b loc_0807ECFC
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0202EBB0
     .word 0x0833D990
 loc_0807EC24:
@@ -129,7 +129,7 @@ loc_0807EC24:
     ldr r0, [r0, #0x10]
     str r0, [r7, #0x14]
     b loc_0807ECFC
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0202E188
     .word 0x000343FD
     .word 0x00269EC3

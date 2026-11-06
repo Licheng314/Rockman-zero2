@@ -154,7 +154,7 @@ loc_080342F2:
     add r0, r8
     strb r5, [r0]
     b loc_080343DA
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x000002B9 ; proven PC/switch data
 loc_08034300:
     mov r3, r10
@@ -272,7 +272,7 @@ loc_080343C0:
 loc_080343DA:
     mov r0, #3
     b loc_080343E6
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x08335C64 ; proven PC/switch data
 loc_080343E4:
     mov r0, #1

@@ -40,7 +40,7 @@ loc_080CD17A:
     lsl r1, r1, #1
     add r0, r7, r1
     b loc_080CD1A6
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0xFFFFE800
     .word 0xFFFFFF00
     .word 0x7FFFFFFF

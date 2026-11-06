@@ -26,7 +26,7 @@ sub_0807AA70:
     add r0, r7, #0
     bl EXT_0807A7A0
     b loc_0807AAEA
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0833D990
 loc_0807AAAC:
     mov r1, r9

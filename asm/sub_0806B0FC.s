@@ -55,7 +55,7 @@ loc_0806B11E:
     bhi loc_0806B180
     mov r0, #1
     b loc_0806B182
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0202E130
     .word 0x0000DFFF
     .word 0x00013FFF

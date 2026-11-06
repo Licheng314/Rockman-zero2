@@ -22,7 +22,7 @@ sub_080D3384:
     beq loc_080D33BC
     ldr r0, [pc, #0xc]
     b loc_080D33DA
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0202EBB0
     .word 0x0202EBF0
     .word 0x00000259
@@ -39,7 +39,7 @@ loc_080D33C2:
     bne loc_080D33D8
     ldr r0, [pc, #4]
     b loc_080D33DA
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x00000256
 loc_080D33D8:
     ldr r0, [pc, #4]

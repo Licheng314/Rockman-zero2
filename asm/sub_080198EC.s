@@ -183,7 +183,7 @@ loc_08019A18:
     mov r0, #4
     strb r0, [r6]
     b loc_08019C4C
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0202EC30
     .word 0x030032E0
     .word 0x083263F0
@@ -270,7 +270,7 @@ loc_08019AD8:
     mov r0, #7
     strb r0, [r6]
     b loc_08019C4C
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0202EC30
     .word 0x030032E0
     .word 0x083263F0
@@ -359,7 +359,7 @@ loc_08019B98:
     mov r0, #0xa
     strb r0, [r6]
     b loc_08019C4C
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0202EC30
     .word 0x030032E0
     .word 0x083263F0

@@ -42,7 +42,7 @@ loc_080C44FC:
     lsl r0, r0, #0x10
     lsr r1, r0, #0x10
     b loc_080C4518
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0000C310 ; proven PC/switch data
     .word 0x080EF450 ; proven PC/switch data
 loc_080C4514:

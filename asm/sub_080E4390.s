@@ -124,7 +124,7 @@ loc_080E4498:
     sub r0, #1
     strh r0, [r1]
     b loc_080E44C4
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0202E12C
 loc_080E44A8:
     bl EXT_0800322C
@@ -166,7 +166,7 @@ loc_080E44D4:
     add r0, r7, #0
     bl EXT_080E0E64
     b loc_080E4906
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x02000F90
     .word 0x0000F0FF
 loc_080E4504:

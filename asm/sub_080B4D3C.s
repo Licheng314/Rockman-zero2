@@ -58,7 +58,7 @@ loc_080B4D9E:
     add r0, #1
     strb r0, [r4, #0xd]
     b loc_080B4DDA
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x00002804
 loc_080B4DB4:
     add r0, r4, #0

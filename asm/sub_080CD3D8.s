@@ -15,7 +15,7 @@ sub_080CD3D8:
     bne loc_080CD3FC
     ldr r1, [pc, #4]
     b loc_080CD40E
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x00006F01
 loc_080CD3FC:
     cmp r0, #1
@@ -31,7 +31,7 @@ loc_080CD40E:
     add r0, r4, #0
     bl EXT_080127E4
     b loc_080CD424
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x00006F04
 loc_080CD41C:
     ldr r1, [pc, #0x70]

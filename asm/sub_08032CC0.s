@@ -61,7 +61,7 @@ loc_08032D2E:
     ldr r0, [pc, #4]
     ldrh r0, [r0, #6]
     b loc_08032D44
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0202EC30
 loc_08032D40:
     ldr r0, [pc, #0x10]

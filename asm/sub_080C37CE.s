@@ -30,7 +30,7 @@ sub_080C37CE:
     add r0, #1
     strb r0, [r5, #0xd]
     b loc_080C3816
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x080EF450 ; proven PC/switch data
     add r0, r5, #0
     bl EXT_080128D4

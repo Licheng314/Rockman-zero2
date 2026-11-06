@@ -43,7 +43,7 @@ sub_080AD6CC:
 loc_080AD71E:
     mov r0, #3
     b loc_080AD736
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0202F084
     .word 0x08345998
     .word 0x02001000

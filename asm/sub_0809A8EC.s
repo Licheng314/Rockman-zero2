@@ -54,7 +54,7 @@ loc_0809A930:
     bls loc_0809A980
     strh r1, [r2]
     b loc_0809A980
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x00000D06
     .word 0x0202E130
     .word 0xFFFFF000

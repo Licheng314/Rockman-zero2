@@ -17,7 +17,7 @@ sub_0803C6AC:
     mov r3, #0
     bl EXT_0803C9A8
     b loc_0803C6E8
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x00000179
 loc_0803C6D4:
     cmp r0, #3

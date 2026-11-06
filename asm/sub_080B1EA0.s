@@ -33,7 +33,7 @@ loc_080B1EC8:
     lsl r2, r2, #1
     add r0, r0, r2
     b loc_080B1EF6
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x02000FE0
     .word 0x02000D10
 loc_080B1EE8:
@@ -56,7 +56,7 @@ loc_080B1EF8:
     bne loc_080B1F10
     mov r0, #0
     b loc_080B1F2E
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0xFFFFFF00
 loc_080B1F10:
     mov r0, #0x80

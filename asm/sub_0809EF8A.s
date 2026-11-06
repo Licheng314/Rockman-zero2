@@ -5,7 +5,7 @@ sub_0809EF8A:
     bne loc_0809EFD6
     ldr r1, [pc, #4]
     b loc_0809EFC4
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x00003305 ; proven PC/switch data
     add r0, r4, #0
     add r0, #0xc0
@@ -85,7 +85,7 @@ loc_0809F02E:
     add r0, r4, #0
     bl EXT_080127E4
     b loc_0809F044
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x00003306 ; proven PC/switch data
 loc_0809F03C:
     ldr r1, [pc, #0x14]
@@ -99,7 +99,7 @@ loc_0809F04A:
     add r0, #1
     strb r0, [r4, #0xd]
     b loc_0809F078
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x00003303 ; proven PC/switch data
 loc_0809F058:
     cmp r0, #3

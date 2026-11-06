@@ -101,7 +101,7 @@ loc_08056C10:
     bge loc_08056C62
     str r0, [r5, #0x54]
     b loc_08056C5E
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0000A622
     .word 0x0833C480
 loc_08056C48:

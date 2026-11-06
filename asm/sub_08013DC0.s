@@ -40,7 +40,7 @@ loc_08013E0C:
     bgt loc_08013E1C
     mov r0, #1
     b loc_08013E86
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0008BFFF
 loc_08013E1C:
     ldr r0, [pc, #0x10]
@@ -52,7 +52,7 @@ loc_08013E1C:
     ble loc_08013E38
     mov r0, #2
     b loc_08013E86
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x000E0FFF
     .word 0x0008BFFF
 loc_08013E38:

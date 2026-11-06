@@ -8,16 +8,11 @@ sub_0808296A:
     lsl r3, r3, #4
     add r0, r2, r3
     b loc_08082990
-    .dh 0x10E8 ; gap
-    .dh 0x0834 ; gap
-    .dh 0xFF00 ; gap
-    .dh 0xFFFF ; gap
-    .dh 0xE188 ; gap
-    .dh 0x0202 ; gap
-    .dh 0x43FD ; gap
-    .dh 0x0003 ; gap
-    .dh 0x9EC3 ; gap
-    .dh 0x0026 ; gap
+    .word 0x083410E8 ; proven PC/switch data
+    .word 0xFFFFFF00 ; proven PC/switch data
+    .word 0x0202E188 ; proven PC/switch data
+    .word 0x000343FD ; proven PC/switch data
+    .word 0x00269EC3 ; proven PC/switch data
 loc_0808298C:
     ldr r1, [pc, #0x3c]
     add r0, r2, r1
@@ -48,7 +43,7 @@ loc_08082990:
     ldr r1, [r5, #0x58]
     bl EXT_08009684
     b loc_080829D8
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0xFFFFF400
 loc_080829D0:
     ldr r0, [r5, #0x54]
@@ -96,7 +91,7 @@ loc_080829EA:
     ldr r1, [r5, #0x58]
     bl EXT_0800958C
     b loc_08082A54
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x080EF450
     .word 0xFFFFF800
 loc_08082A38:

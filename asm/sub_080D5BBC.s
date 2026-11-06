@@ -30,7 +30,7 @@ sub_080D5BBC:
     bne loc_080D5C00
     ldr r0, [pc, #8]
     b loc_080D5C0C
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x00000233
     .word 0x0000011F
 loc_080D5C00:

@@ -13,57 +13,33 @@ loc_080C9790:
     add r0, r0, r1
     ldr r0, [r0]
     mov pc, r0
-    .dh 0x0000 ; TODO movs r0, r0
+    .dh 0x0000 ; alignment after unconditional transfer
     str r7, [sp, #0x280]
     lsr r4, r1, #0x20
-    ldr r0, [sp]
-    lsr r4, r1, #0x20
-    ldr r0, [sp, #0x258]
-    lsr r4, r1, #0x20
-    ldr r0, [sp, #0x3e0]
-    lsr r4, r1, #0x20
-    ldr r1, [sp, #0xa0]
-    lsr r4, r1, #0x20
-    ldr r1, [sp, #0x320]
-    lsr r4, r1, #0x20
-    ldr r1, [sp, #0x3f0]
-    lsr r4, r1, #0x20
-    ldr r2, [sp, #0x110]
-    lsr r4, r1, #0x20
-    ldr r2, [sp, #0x1a0]
-    lsr r4, r1, #0x20
-    ldr r2, [sp, #0x380]
-    lsr r4, r1, #0x20
-    ldr r3, [sp, #0xa0]
-    lsr r4, r1, #0x20
-    ldr r3, [sp, #0x1f0]
-    lsr r4, r1, #0x20
-    ldr r4, [sp, #0x18]
-    lsr r4, r1, #0x20
-    ldr r4, [sp, #0xa0]
-    lsr r4, r1, #0x20
-    ldr r4, [sp, #0x360]
-    lsr r4, r1, #0x20
-    ldr r5, [sp, #0x50]
-    lsr r4, r1, #0x20
-    ldr r5, [sp, #0x240]
-    lsr r4, r1, #0x20
-    ldr r5, [sp, #0x2a8]
-    lsr r4, r1, #0x20
-    ldr r5, [sp, #0x330]
-    lsr r4, r1, #0x20
-    ldr r5, [sp, #0x3c0]
-    lsr r4, r1, #0x20
-    ldr r6, [sp, #0x38]
-    lsr r4, r1, #0x20
-    ldr r6, [sp, #0x128]
-    lsr r4, r1, #0x20
-    ldr r6, [sp, #0x218]
-    lsr r4, r1, #0x20
-    ldr r6, [sp, #0x320]
-    lsr r4, r1, #0x20
-    ldr r7, [sp, #0x40]
-    lsr r4, r1, #0x20
+    .word 0x080C9800 ; proven PC/switch data
+    .word 0x080C9896 ; proven PC/switch data
+    .word 0x080C98F8 ; proven PC/switch data
+    .word 0x080C9928 ; proven PC/switch data
+    .word 0x080C99C8 ; proven PC/switch data
+    .word 0x080C99FC ; proven PC/switch data
+    .word 0x080C9A44 ; proven PC/switch data
+    .word 0x080C9A68 ; proven PC/switch data
+    .word 0x080C9AE0 ; proven PC/switch data
+    .word 0x080C9B28 ; proven PC/switch data
+    .word 0x080C9B7C ; proven PC/switch data
+    .word 0x080C9C06 ; proven PC/switch data
+    .word 0x080C9C28 ; proven PC/switch data
+    .word 0x080C9CD8 ; proven PC/switch data
+    .word 0x080C9D14 ; proven PC/switch data
+    .word 0x080C9D90 ; proven PC/switch data
+    .word 0x080C9DAA ; proven PC/switch data
+    .word 0x080C9DCC ; proven PC/switch data
+    .word 0x080C9DF0 ; proven PC/switch data
+    .word 0x080C9E0E ; proven PC/switch data
+    .word 0x080C9E4A ; proven PC/switch data
+    .word 0x080C9E86 ; proven PC/switch data
+    .word 0x080C9EC8 ; proven PC/switch data
+    .word 0x080C9F10 ; proven PC/switch data
     ldr r0, [pc, #0x44]
     ldrb r1, [r0, #5]
     mov r0, #0x40
@@ -151,7 +127,7 @@ loc_080C9850:
     bne loc_080C98C4
     mov r0, #2
     b loc_080C98E4
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x08349004
     .word 0x0202EBB0
 loc_080C98C4:

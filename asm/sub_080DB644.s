@@ -75,7 +75,7 @@ loc_080DB6C4:
     add r0, r5, #0
     bl EXT_080127E4
     b loc_080DB6FA
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x00000206 ; proven PC/switch data
     .word 0x0834BC5C ; proven PC/switch data
 loc_080DB6EC:
@@ -89,7 +89,7 @@ loc_080DB6FA:
     add r0, r5, #0
     bl EXT_080128D4
     b loc_080DB72A
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0834BC44 ; proven PC/switch data
     ldrb r1, [r5, #0xa]
     mov r0, #0xfe

@@ -18,7 +18,7 @@ sub_0800F4B8:
     mov r0, #0x3c
     str r0, [r2, #0x4c]
     b loc_0800F51E
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0831348C
 loc_0800F4E0:
     cmp r0, #9
@@ -46,7 +46,7 @@ loc_0800F500:
     ldr r0, [pc, #4]
     str r0, [r2, #0x4c]
     b loc_0800F51E
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x00000654
 loc_0800F514:
     mov r0, #0x80

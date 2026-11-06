@@ -103,7 +103,7 @@ loc_080CEF88:
     ldr r0, [r0, #0xc]
     str r0, [r4, #0x14]
     b loc_080CEFDE
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x02001000 ; proven PC/switch data
     .word 0x0002D01E ; proven PC/switch data
     .word 0x08320E60 ; proven PC/switch data

@@ -16,7 +16,7 @@ sub_0800EA80:
     mov r0, #0xe0
     lsl r0, r0, #0xd
     b loc_0800EAAC
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x00001B30
     .word 0x0202ED74
 loc_0800EAA8:

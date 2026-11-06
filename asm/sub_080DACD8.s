@@ -25,7 +25,7 @@ sub_080DACD8:
     beq loc_080DAD18
     ldr r1, [pc, #0xc]
     b loc_080DAD1A
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0834BB58
     .word 0x0202EBB0
     .word 0x0834BAE8
@@ -45,7 +45,7 @@ loc_080DAD1A:
     add r0, r4, #0
     bl EXT_080128D4
     b loc_080DAD5E
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0834BB20
 loc_080DAD3C:
     ldrb r1, [r4, #0xa]

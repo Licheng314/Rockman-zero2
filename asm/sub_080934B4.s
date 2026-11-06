@@ -25,7 +25,7 @@ loc_080934D6:
     sub r0, #1
     strb r0, [r4, #0x12]
     b loc_08093518
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x00009001
 loc_080934E8:
     ldr r0, [pc, #0x14]
@@ -39,7 +39,7 @@ loc_080934E8:
     cmp r2, r0
     ble loc_08093510
     b loc_08093518
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0202E130
     .word 0x00006FFF
 loc_08093508:

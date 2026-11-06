@@ -71,7 +71,7 @@ loc_0808B75A:
     lsl r0, r0, #1
     str r0, [r4, #0x60]
     b loc_0808B830
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0xFFFFF200
     .word 0x00008001
     .word 0x080EF450

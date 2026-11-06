@@ -109,7 +109,7 @@ loc_080889E6:
     add r0, #0xbe
     strb r2, [r0]
     b loc_08088A0E
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x080EF450
 loc_08088A08:
     add r0, r5, #0

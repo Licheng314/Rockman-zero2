@@ -29,7 +29,7 @@ loc_0803D212:
     add r0, r5, #0
     bl EXT_080128AC
     b loc_0803D22E
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x08338930
 loc_0803D228:
     add r0, r5, #0

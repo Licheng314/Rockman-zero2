@@ -40,7 +40,7 @@ loc_08015D42:
     and r0, r1
     strh r0, [r6, #0xa]
     b loc_08015DB6
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x08326278 ; proven PC/switch data
     .word 0x0202EC30 ; proven PC/switch data
     .word 0x0202ED18 ; proven PC/switch data
@@ -108,7 +108,7 @@ loc_08015DCE:
     mov r0, #1
     bl EXT_0801B51C
     b loc_08015E0A
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x02000CA0 ; proven PC/switch data
     .word 0x08326278 ; proven PC/switch data
     .word 0x0202EC30 ; proven PC/switch data

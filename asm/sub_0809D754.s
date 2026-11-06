@@ -82,7 +82,7 @@ loc_0809D802:
     add r0, #1
     strb r0, [r4, #0xd]
     b loc_0809D872
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x00001D0C ; proven PC/switch data
     ldr r1, [pc, #0x14]
     add r0, r4, #0

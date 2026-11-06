@@ -63,7 +63,7 @@ loc_0800EC52:
     mov r0, #0x85
     bl EXT_08002EA0
     b loc_0800EC8E
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x02001000
     .word 0x0002D030
     .word 0x0002D020
@@ -114,7 +114,7 @@ loc_0800ECC2:
     mov r0, #0x86
     bl EXT_08002EA0
     b loc_0800ECF6
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x02001000
     .word 0x0002D032
     .word 0x000007D6
@@ -210,7 +210,7 @@ loc_0800ED8E:
     mov r0, #0x88
     bl EXT_08002EA0
     b loc_0800EDC2
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x02001000
     .word 0x0002D032
     .word 0x000007D4
@@ -259,7 +259,7 @@ loc_0800EDF6:
     mov r0, #0x8a
     bl EXT_08002EA0
     b loc_0800EE2A
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x02001000
     .word 0x0002D032
     .word 0x000007D4
@@ -351,7 +351,7 @@ loc_0800EE8C:
     mov r0, #0xf5
     bl EXT_080032EC
     b loc_0800EEEC
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0002D033
     .word 0x0002D030
     .word 0xFFF01000

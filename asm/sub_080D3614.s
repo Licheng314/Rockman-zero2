@@ -50,7 +50,7 @@ loc_080D366C:
     strb r0, [r3, #0x17]
     ldr r0, [pc, #4]
     b loc_080D36A0
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0000026E
 loc_080D3680:
     ldr r0, [pc, #0]
@@ -62,7 +62,7 @@ loc_080D3688:
     beq loc_080D3698
     ldr r0, [pc, #4]
     b loc_080D36A0
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0000026D
 loc_080D3698:
     mov r0, #1

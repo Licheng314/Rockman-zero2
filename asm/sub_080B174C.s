@@ -90,7 +90,7 @@ loc_080B1784:
     ldr r0, [r6, #0x54]
     sub r0, r0, r1
     b loc_080B1828
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x080EF450
 loc_080B1808:
     mvn r0, r7

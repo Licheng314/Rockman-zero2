@@ -16,7 +16,7 @@ sub_080D60CC:
     bne loc_080D60F0
     mov r0, #1
     b loc_080D60F2
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x02000D10
 loc_080D60F0:
     mov r0, #0

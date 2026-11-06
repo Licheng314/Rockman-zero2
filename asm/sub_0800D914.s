@@ -183,7 +183,7 @@ loc_0800DA7C:
     asr r0, r0, #4
     str r0, [r3]
     b loc_0800DAF0
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x080EF6C0
     .word 0x080EF6B8
     .word 0x02000F94

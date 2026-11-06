@@ -22,7 +22,7 @@ sub_08032BF8:
     beq loc_08032C28
     mov r0, #0x40
     b loc_08032CAE
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x00000195
 loc_08032C28:
     mov r9, r3

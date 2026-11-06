@@ -19,7 +19,7 @@ sub_08064840:
     mov r1, #0x80
     lsl r1, r1, #7
     b loc_08064874
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0000AD05
     .word 0x0202E130
 loc_08064870:

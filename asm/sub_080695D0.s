@@ -44,7 +44,7 @@ loc_0806960C:
     add r0, r3, #0
     bl EXT_08069648
     b loc_0806963C
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0833D990
 loc_0806962C:
     ldr r0, [pc, #0x14]

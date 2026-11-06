@@ -33,7 +33,7 @@ loc_0805468E:
     mov r1, #0x10
     orr r0, r1
     b loc_080546BE
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0202E130
 loc_080546B8:
     ldrb r1, [r4, #0xa]

@@ -77,7 +77,7 @@ loc_080518DE:
     mov r3, #0
     bl EXT_080B61B4
     b loc_08051942
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0202E188
     .word 0x000343FD
     .word 0x00269EC3

@@ -81,7 +81,7 @@ sub_08021E18:
     lsl r0, r0, #0x18
     lsr r0, r0, #0x18
     b loc_08021ECA
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x020011E4
     .word 0xFFFFFE1C
 loc_08021EC8:

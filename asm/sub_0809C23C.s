@@ -23,7 +23,7 @@ sub_0809C23C:
     add r0, r2, #0
     bl EXT_0809C0C4
     b loc_0809C390
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x08343064
 loc_0809C270:
     add r5, r2, #0
@@ -160,7 +160,7 @@ loc_0809C356:
     mov r1, r12
     strh r0, [r1]
     b loc_0809C38A
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x080EF450
 loc_0809C374:
     mov r0, #0

@@ -89,7 +89,7 @@ loc_080B0BCA:
     ldrsh r0, [r5, r1]
     neg r0, r0
     b loc_080B0C36
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0202E188
     .word 0x000343FD
     .word 0x00269EC3

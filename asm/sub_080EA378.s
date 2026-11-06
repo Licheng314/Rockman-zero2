@@ -69,7 +69,7 @@ loc_080EA3CC:
     strh r1, [r2]
     strh r5, [r0]
     b loc_080EA450
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x02000D10
     .word 0x00000303
     .word 0x0835E6FC

@@ -51,7 +51,7 @@ loc_0800F8A6:
     cmp r1, #1
     beq loc_0800F8F6
     b loc_0800F93C
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x02001000
     .word 0x0002D028
     .word 0x0002D02C
@@ -155,7 +155,7 @@ loc_0800F94E:
     mov r5, r9
     strh r5, [r0]
     b loc_0800F9CE
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0836D17C
     .word 0x0836D184
     .word 0x02001000

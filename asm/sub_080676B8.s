@@ -52,7 +52,7 @@ loc_080676F4:
     beq loc_08067724
     mov r0, #0xb
     b loc_0806772A
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0000800F
 loc_08067724:
     strb r1, [r4, #0xd]

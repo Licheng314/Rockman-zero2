@@ -69,7 +69,7 @@ loc_080D9BF4:
     bne loc_080D9C08
     ldr r0, [pc, #4]
     b loc_080D9BC0
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0202F090
     .word 0x0834A1A0
 loc_080D9C08:

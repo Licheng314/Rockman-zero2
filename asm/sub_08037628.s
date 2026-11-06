@@ -201,7 +201,7 @@ loc_08037786:
     lsr r4, r1, #3
     and r4, r5
     b loc_080377B6
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x00000195
 loc_080377B4:
     mov r4, r9

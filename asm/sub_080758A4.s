@@ -47,7 +47,7 @@ sub_080758A4:
     str r0, [r4, #0x54]
     strb r2, [r4, #0x12]
     b loc_08075918
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x00003201
 loc_0807590C:
     ldr r0, [r5, #0x54]

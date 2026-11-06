@@ -17,7 +17,7 @@ sub_080D5DD4:
     bl EXT_080D5E10
     lsl r0, r0, #0x18
     b loc_080D5E08
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x02000D10
 loc_080D5DFC:
     add r0, r4, #0

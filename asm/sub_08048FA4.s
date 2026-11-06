@@ -38,7 +38,7 @@ sub_08048FA4:
     orr r1, r0
     strb r1, [r4, #0xa]
     b loc_08049020
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0833AEBC
     .word 0x0000A514
     .word 0xFFFF8800

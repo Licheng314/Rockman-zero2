@@ -10,7 +10,7 @@ sub_080D73A0:
     ldr r0, [r1]
     add r0, #0x20
     b loc_080D73C2
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0202E180
 loc_080D73B8:
     ldr r1, [pc, #0x24]

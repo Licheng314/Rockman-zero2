@@ -30,7 +30,7 @@ sub_08002994:
     str r0, [r1, #8]
     ldr r0, [r1, #8]
     b loc_08002AA2
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x03002AC0
     .word 0x001F001F
     .word 0x03E003E0
@@ -115,7 +115,7 @@ loc_08002A6C:
     str r0, [r2, #8]
     mov r0, #0
     b loc_08002A94
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x00000402
 loc_08002A84:
     ldrb r1, [r3]

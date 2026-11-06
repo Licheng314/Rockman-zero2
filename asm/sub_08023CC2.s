@@ -57,7 +57,7 @@ sub_08023CC2:
     strb r3, [r2]
     mov r0, #5
     b loc_08023F4E
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x00000175 ; proven PC/switch data
     .word 0x00000177 ; proven PC/switch data
     .word 0x00000179 ; proven PC/switch data
@@ -124,7 +124,7 @@ loc_08023D7E:
     strb r3, [r2]
     mov r0, #7
     b loc_08023F4E
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x00000175 ; proven PC/switch data
     .word 0x00000177 ; proven PC/switch data
     .word 0x00000179 ; proven PC/switch data
@@ -258,7 +258,7 @@ loc_08023E6C:
     strb r0, [r1]
     strb r5, [r2]
     b loc_08023F4C
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x000002B6 ; proven PC/switch data
     .word 0x00000175 ; proven PC/switch data
     .word 0x00000177 ; proven PC/switch data

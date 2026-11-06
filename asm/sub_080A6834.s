@@ -81,7 +81,7 @@ loc_080A686E:
     mov r0, #1
     strb r0, [r4, #0xf]
     b loc_080A6914
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x08343064
 loc_080A68DC:
     add r0, r7, #1

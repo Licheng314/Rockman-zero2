@@ -38,7 +38,7 @@ loc_080DF210:
     cmp r4, #5
     ble loc_080DF210
     b loc_080DF26E
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0202F650
     .word 0x0834F3BC
 loc_080DF240:

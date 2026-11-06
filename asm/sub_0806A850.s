@@ -103,7 +103,7 @@ loc_0806A910:
     mov r0, #0x10
     orr r0, r6
     b loc_0806A934
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0833E364
     .word 0x0833E2B0
     .word 0x080EF450

@@ -116,7 +116,7 @@ loc_0809ECC0:
     add r0, r5, #0
     bl EXT_0809ED64
     b EXT_0809ED56
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0202E188
     .word 0x000343FD
     .word 0x00269EC3

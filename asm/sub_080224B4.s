@@ -63,13 +63,13 @@ loc_08022510:
     beq loc_08022524
     orr r1, r0
     b loc_08022532
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0xFFFF7FFF
 loc_08022524:
     ldr r0, [pc, #4]
     and r1, r0
     b loc_08022532
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0xFFFFEFFF
 loc_08022530:
     mov r1, #0

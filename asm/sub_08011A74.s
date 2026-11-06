@@ -42,7 +42,7 @@ sub_08011A74:
     lsl r0, r0, #0xe
     str r0, [r1]
     b loc_08011B00
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x02000F94
     .word 0x0000FFFC
     .word 0x0000059F

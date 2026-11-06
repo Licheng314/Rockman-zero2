@@ -14,7 +14,7 @@ loc_0801CE6C:
     add r0, r0, r1
     ldr r0, [r0]
     mov pc, r0
-    .dh 0x0000 ; TODO movs r0, r0
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0801CE78 ; proven PC/switch data
     .word 0x0801CE9C ; proven PC/switch data
     .word 0x0801D058 ; proven PC/switch data
@@ -108,7 +108,7 @@ loc_0801CF30:
 loc_0801CF36:
     strb r1, [r3, #7]
     b loc_0801CF94
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0202F8E0 ; proven PC/switch data
     .word 0x000075B8 ; proven PC/switch data
     .word 0x0202EBF0 ; proven PC/switch data
@@ -147,7 +147,7 @@ loc_0801CF72:
     add r0, r1, #5
     add r0, r2, r0
     b loc_0801CF92
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0202EBB0 ; proven PC/switch data
 loc_0801CF90:
     add r0, r2, r1

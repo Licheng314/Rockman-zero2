@@ -69,7 +69,7 @@ loc_08058570:
     add r0, r5, #0
     bl EXT_08058490
     b loc_080585BE
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0000BFFF
 loc_080585AC:
     add r0, r5, #0

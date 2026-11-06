@@ -46,7 +46,7 @@ loc_080BA606:
     ldr r1, [r0]
     mov r0, #1
     b loc_080BA628
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x00006B02
 loc_080BA620:
     add r0, r5, #0

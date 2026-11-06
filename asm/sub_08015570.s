@@ -88,7 +88,7 @@ loc_080155CE:
     asr r2, r2, #1
     str r2, [r6, #4]
     b loc_0801562C
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0202EEC4
     .word 0x080EF450
     .word 0x000343FD

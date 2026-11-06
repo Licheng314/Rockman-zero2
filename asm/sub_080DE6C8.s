@@ -29,7 +29,7 @@ loc_080DE6F0:
     ldrb r6, [r3]
     add r0, r5, r6
     b loc_080DE708
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0202F0A0
 loc_080DE704:
     ldrb r6, [r3]

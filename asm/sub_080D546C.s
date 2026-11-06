@@ -46,7 +46,7 @@ sub_080D546C:
 loc_080D54C2:
     mov r0, #2
     b loc_080D5584
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x27100000
 loc_080D54CC:
     add r0, r5, #0
@@ -75,7 +75,7 @@ loc_080D54DC:
     bgt loc_080D5508
     mov r0, #0
     b loc_080D5584
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x000013FF
     .word 0x000027FE
 loc_080D5508:

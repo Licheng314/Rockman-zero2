@@ -71,7 +71,7 @@ loc_080E0BC4:
     mov r1, #0
     mov r0, #5
     b loc_080E0D1E
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x00000236
     .word 0x02000D10
     .word 0x00000237
@@ -181,7 +181,7 @@ loc_080E0CAC:
     ble loc_080E0D0E
     mov r0, #0
     b loc_080E0D0C
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0835E350
     .word 0x00000235
     .word 0x00000236

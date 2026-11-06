@@ -115,7 +115,7 @@ loc_080855EE:
     mov r0, #3
     strb r0, [r1]
     b loc_08085620
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0000720D
     .word 0x08341330
     .word 0x0202E188

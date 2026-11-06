@@ -17,7 +17,7 @@ loc_080A1470:
     add r1, r5, #0
     add r1, #0x52
     mov pc, r0
-    .dh 0x0000 ; TODO movs r0, r0
+    .dh 0x0000 ; alignment after unconditional transfer
     asr r0, r1, #0x12
     lsr r2, r1, #0x20
     asr r0, r4, #0x12

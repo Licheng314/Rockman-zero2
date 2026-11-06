@@ -66,14 +66,10 @@ loc_080C2F16:
     add r0, r0, r3
     sub r0, r1, r0
     b loc_080C2FB8
-    .dh 0xE590 ; gap
-    .dh 0x0202 ; gap
-    .dh 0xE390 ; gap
-    .dh 0x0202 ; gap
-    .dh 0x2D00 ; gap
-    .dh 0x0843 ; gap
-    .dh 0x2D0C ; gap
-    .dh 0x0843 ; gap
+    .word 0x0202E590 ; proven PC/switch data
+    .word 0x0202E390 ; proven PC/switch data
+    .word 0x08432D00 ; proven PC/switch data
+    .word 0x08432D0C ; proven PC/switch data
     .word 0x0202E3EC
     .word 0x0202F088
     .word 0x0834863C
@@ -83,7 +79,7 @@ loc_080C2F8C:
     add r0, r0, r3
     sub r0, r1, r0
     b loc_080C2FB8
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0xFFFFE400
 loc_080C2F9C:
     ldr r3, [r7, #0x54]

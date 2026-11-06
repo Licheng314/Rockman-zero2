@@ -137,7 +137,7 @@ loc_080403BE:
     beq loc_080403E0
     ldr r0, [pc, #4]
     b loc_080403E4
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0xFFFFFC00
 loc_080403E0:
     mov r0, #0x80

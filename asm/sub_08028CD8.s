@@ -91,7 +91,7 @@ loc_08028D0E:
     orr r0, r4
     strb r0, [r1, #0xa]
     b loc_08028F32
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x00000175
     .word 0x00000177
     .word 0x0000017B
@@ -135,7 +135,7 @@ loc_08028DA0:
     mov r1, #0x10
     orr r0, r1
     b loc_08028DF8
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x00000195
 loc_08028DF0:
     mov r0, r8

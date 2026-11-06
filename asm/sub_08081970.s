@@ -114,7 +114,7 @@ loc_08081A2A:
     ble loc_08081A58
     str r2, [r5, #0x64]
     b loc_08081A60
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0202E130
 loc_08081A58:
     ldr r1, [pc, #0x54]
@@ -162,7 +162,7 @@ loc_08081A82:
     mov r1, #0
     mov r0, #9
     b loc_08081AD0
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0xFFFFFC00
     .word 0xFFFFF300
     .word 0xFFFFFA00

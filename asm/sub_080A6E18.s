@@ -53,7 +53,7 @@ loc_080A6E72:
     cmp r0, #1
     beq loc_080A6EDC
     b loc_080A6F28
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x08343064
 loc_080A6E84:
     add r0, r5, #0

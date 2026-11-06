@@ -70,7 +70,7 @@ sub_080A65A4:
     beq loc_080A6640
     ldr r0, [pc, #8]
     b loc_080A6644
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0834507C
     .word 0xFFFFFE80
 loc_080A6640:
@@ -84,7 +84,7 @@ loc_080A6644:
     beq loc_080A6658
     ldr r0, [pc, #4]
     b loc_080A665C
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0xFFFFFE80
 loc_080A6658:
     mov r0, #0xc0

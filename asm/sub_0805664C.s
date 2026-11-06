@@ -28,7 +28,7 @@ sub_0805664C:
     bge loc_0805668C
     str r2, [r5, #0x54]
     b loc_08056692
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0202E130
     .word 0x0000BBFF
 loc_0805668C:

@@ -14,7 +14,7 @@ sub_0803B414:
     bgt loc_0803B434
     mov r0, #0
     b loc_0803B4BC
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0202F070
 loc_0803B434:
     ldr r0, [r6, #0x28]

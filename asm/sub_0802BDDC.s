@@ -46,7 +46,7 @@ sub_0802BDDC:
     add r0, r4, #0
     bl EXT_0802BEF4
     b loc_0802BEDA
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x00000181
     .word 0x00000177
     .word 0x0000017B

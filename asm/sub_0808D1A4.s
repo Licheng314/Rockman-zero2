@@ -14,7 +14,7 @@ sub_0808D1A4:
     and r0, r1
     mov r2, #0
     b loc_0808D1EE
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0202EBB0
 loc_0808D1C4:
     ldrb r0, [r3, #0xe]

@@ -46,7 +46,7 @@ loc_080B3048:
     beq loc_080B3068
     orr r3, r2
     b loc_080B306A
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0833E89C
 loc_080B3068:
     add r3, r2, #0
@@ -66,7 +66,7 @@ loc_080B306A:
     beq loc_080B3090
     orr r3, r2
     b loc_080B3092
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0833E8B8
 loc_080B3090:
     add r3, r2, #0
@@ -140,7 +140,7 @@ loc_080B30E6:
     beq loc_080B3138
     orr r3, r2
     b loc_080B313A
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0202E188
     .word 0x000343FD
     .word 0x00269EC3
@@ -167,7 +167,7 @@ loc_080B313A:
     add r0, r4, #0
     bl EXT_080B2AD0
     b loc_080B31AC
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x08345998
 loc_080B316C:
     ldr r0, [r4, #0x54]
@@ -189,7 +189,7 @@ loc_080B316C:
     beq loc_080B3198
     ldr r0, [pc, #4]
     b loc_080B319C
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0xFFFFFE40
 loc_080B3198:
     mov r0, #0xe0

@@ -90,7 +90,7 @@ loc_08083A14:
     lsl r3, r3, #4
     add r0, r2, r3
     b loc_08083A68
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0202E188
     .word 0x000343FD
     .word 0x00269EC3
@@ -140,7 +140,7 @@ loc_08083A8A:
     ldrb r0, [r5, #0xe]
     add r0, #1
     b loc_08083B7A
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0xFFFFFE80
     .word 0x02001000
     .word 0x0002C004
@@ -160,7 +160,7 @@ loc_08083AC8:
     ldrb r0, [r5, #0xe]
     add r0, #1
     b loc_08083B7A
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0202E130
 loc_08083AEC:
     add r1, r5, #0

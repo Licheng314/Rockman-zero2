@@ -27,7 +27,7 @@ sub_0804E060:
     bne loc_0804E0DC
     mov r0, #0xd
     b loc_0804E0DE
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0202E188
     .word 0x000343FD
     .word 0x00269EC3
@@ -61,7 +61,7 @@ loc_0804E0C8:
     bls loc_0804E0DC
     mov r0, #0xf
     b loc_0804E0DE
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0202EBF0
 loc_0804E0DC:
     mov r0, #8

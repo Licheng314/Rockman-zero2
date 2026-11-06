@@ -81,7 +81,7 @@ loc_080A272E:
     ldr r0, [r0, #0xc]
     str r0, [r5, #0x14]
     b loc_080A27D8
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x00003702
     .word 0x0202ED18
     .word 0x08343064
@@ -117,7 +117,7 @@ loc_080A27B0:
     bge loc_080A27D0
     sub r0, #0x60
     b loc_080A27D6
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0202E130
 loc_080A27D0:
     cmp r7, r0

@@ -81,7 +81,7 @@ loc_08008E78:
     mov r1, r9
     sub r0, r0, r1
     b loc_08008E96
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x08312B8C
     .word 0x00000FFF
 loc_08008E94:

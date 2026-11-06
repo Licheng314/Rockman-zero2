@@ -60,7 +60,7 @@ sub_080913E4:
     add r0, #0x80
     str r0, [r6, #0x5c]
     b loc_08091496
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x00008A06
     .word 0x083425DC
     .word 0x0202E188

@@ -72,7 +72,7 @@ loc_0800AA6E:
     lsl r0, r0, #1
     strh r0, [r5]
     b loc_0800AAAE
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x02000F94
     .word 0x0836D178
     .word 0x0836D180

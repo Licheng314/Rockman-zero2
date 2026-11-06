@@ -67,7 +67,7 @@ sub_080BDDE4:
     lsl r0, r0, #0x10
     asr r0, r0, #0x10
     b loc_080BDEAA
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x00009B01
     .word 0x080EF450
 loc_080BDE7C:

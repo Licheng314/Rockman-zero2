@@ -20,7 +20,7 @@ sub_080B6224:
     cmp r5, #1
     beq loc_080B6292
     b loc_080B6312
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x08345998
 loc_080B6250:
     add r0, r4, #0

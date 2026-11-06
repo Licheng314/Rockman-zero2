@@ -59,7 +59,7 @@ loc_08085B14:
     beq loc_08085B34
     sub r0, #1
     b loc_08085B92
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0000720D
     .word 0x0202E188
     .word 0x000343FD

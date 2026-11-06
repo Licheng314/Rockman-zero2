@@ -10,7 +10,7 @@ sub_080E84F0:
     bne loc_080E8508
     mov r0, #0
     b loc_080E850A
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x02000D10
 loc_080E8508:
     mov r0, #1

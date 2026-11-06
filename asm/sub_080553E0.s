@@ -99,7 +99,7 @@ loc_08055478:
     bge loc_080554CA
     str r0, [r5, #0x54]
     b loc_080554C6
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0000A611
     .word 0x0833C480
 loc_080554B0:

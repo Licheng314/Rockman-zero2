@@ -50,7 +50,7 @@ loc_08046912:
     add r1, #0xbd
     strb r0, [r1]
     b loc_08046A28
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0202EC30
     .word 0x0202E188
     .word 0x000343FD
@@ -79,7 +79,7 @@ loc_08046950:
     sub r0, #1
     strb r0, [r5]
     b loc_080469A4
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0202EBF0
 loc_08046984:
     ldr r2, [pc, #0x2c]
@@ -105,7 +105,7 @@ loc_080469A4:
     cmp r2, #0
     beq loc_080469CA
     b loc_080469DA
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0202E188
     .word 0x000343FD
     .word 0x00269EC3

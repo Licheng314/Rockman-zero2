@@ -22,7 +22,7 @@ sub_0801B730:
     and r1, r0
     strh r1, [r4, #6]
     b loc_0801B7F6
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0202EC30
     .word 0x02000D10
     .word 0x00007FFF
@@ -48,7 +48,7 @@ loc_0801B768:
     add r0, r4, #0
     bl EXT_08022FB8
     b loc_0801B7F6
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0000FFFF
     .word 0x0202EC30
 loc_0801B7A0:

@@ -47,7 +47,7 @@ loc_0806EDAE:
     add r0, r2, #1
     strb r0, [r4, #0xf]
     b loc_0806EE2A
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0xFFFFF000
 loc_0806EDD8:
     cmp r0, #1
@@ -73,7 +73,7 @@ loc_0806EDD8:
     add r0, #1
     strb r0, [r4, #0xf]
     b loc_0806EE2A
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x00001701
 loc_0806EE10:
     add r0, r4, #0

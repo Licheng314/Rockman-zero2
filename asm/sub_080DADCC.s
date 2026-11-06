@@ -15,7 +15,7 @@ sub_080DADCC:
     add r0, r4, #0
     bl EXT_080127E4
     b loc_080DADFC
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0202EBB0
     .word 0x00004202
 loc_080DADF4:

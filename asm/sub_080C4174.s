@@ -13,41 +13,24 @@ loc_080C4180:
     add r0, r0, r1
     ldr r0, [r0]
     mov pc, r0
-    .dh 0x0000 ; TODO movs r0, r0
-    .dh 0x4190 ; TODO sbcs r0, r2
-    lsr r4, r1, #0x20
-    .dh 0x41D0 ; TODO rors r0, r2
-    lsr r4, r1, #0x20
-    .dh 0x41DE ; TODO rors r6, r3
-    lsr r4, r1, #0x20
-    cmp r0, r6
-    lsr r4, r1, #0x20
-    cmn r0, r2
-    lsr r4, r1, #0x20
-    cmn r0, r7
-    lsr r4, r1, #0x20
-    orr r0, r2
-    lsr r4, r1, #0x20
-    orr r0, r5
-    lsr r4, r1, #0x20
-    .dh 0x4360 ; TODO muls r0, r4, r0
-    lsr r4, r1, #0x20
-    .dh 0x4374 ; TODO muls r4, r6, r4
-    lsr r4, r1, #0x20
-    .dh 0x43D4 ; TODO mvns r4, r2
-    lsr r4, r1, #0x20
-    .dh 0x4400 ; TODO add r0, r0
-    lsr r4, r1, #0x20
-    .dh 0x443C ; TODO add r4, r7
-    lsr r4, r1, #0x20
-    add r8, r1
-    lsr r4, r1, #0x20
-    add r12, r5
-    lsr r4, r1, #0x20
-    add lr, r8
-    lsr r4, r1, #0x20
-    cmp r4, r8
-    lsr r4, r1, #0x20
+    .dh 0x0000 ; alignment after unconditional transfer
+    .word 0x080C4190 ; proven PC/switch data
+    .word 0x080C41D0 ; proven PC/switch data
+    .word 0x080C41DE ; proven PC/switch data
+    .word 0x080C42B0 ; proven PC/switch data
+    .word 0x080C42D0 ; proven PC/switch data
+    .word 0x080C42F8 ; proven PC/switch data
+    .word 0x080C4310 ; proven PC/switch data
+    .word 0x080C4328 ; proven PC/switch data
+    .word 0x080C4360 ; proven PC/switch data
+    .word 0x080C4374 ; proven PC/switch data
+    .word 0x080C43D4 ; proven PC/switch data
+    .word 0x080C4400 ; proven PC/switch data
+    .word 0x080C443C ; proven PC/switch data
+    .word 0x080C4488 ; proven PC/switch data
+    .word 0x080C44AC ; proven PC/switch data
+    .word 0x080C44C6 ; proven PC/switch data
+    .word 0x080C4544 ; proven PC/switch data
     ldr r1, [pc, #0x6c]
     add r0, r4, #0
     bl EXT_080127E4
@@ -100,7 +83,7 @@ loc_080C421E:
     mov r0, #5
     strb r0, [r4, #0xd]
     b EXT_080C455A
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0000C308
     .word 0x0000C310
     .word 0x0000C30E

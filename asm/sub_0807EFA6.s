@@ -17,9 +17,8 @@ sub_0807EFA6:
     add r0, #4
     strb r3, [r0]
     b loc_0807F06C
-    .dh 0x0000 ; gap
-    .dh 0xEBB0 ; gap
-    .dh 0x0202 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
+    .word 0x0202EBB0 ; proven PC/switch data
 loc_0807EFCC:
     mov r0, #0x20
     and r0, r1

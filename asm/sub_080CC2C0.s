@@ -29,7 +29,7 @@ loc_080CC2D8:
     cmp r1, #0
     ble loc_080CC350
     b loc_080CC30E
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0xFFFFD800
 loc_080CC2FC:
     mov r1, #0xa0

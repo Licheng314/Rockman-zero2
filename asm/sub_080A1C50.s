@@ -80,7 +80,7 @@ sub_080A1C50:
     ldr r0, [r0]
     neg r0, r0
     b loc_080A1D26
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0000390A
     .word 0x08344624
     .word 0x08344674

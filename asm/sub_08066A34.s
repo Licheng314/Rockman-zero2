@@ -18,7 +18,7 @@ sub_08066A34:
     and r0, r1
     mov r2, #0
     b loc_08066A90
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0202EBB0
 loc_08066A5C:
     mov r0, #0x20
@@ -96,7 +96,7 @@ loc_08066AC4:
     add r0, r4, #0
     bl EXT_08066B9C
     b loc_08066B90
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0833D990
 loc_08066AF4:
     add r0, r4, #0
@@ -155,7 +155,7 @@ loc_08066B40:
     add r0, r4, #0
     bl EXT_080EF118
     b loc_08066B90
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0833DC20
 loc_08066B74:
     add r0, r4, #0

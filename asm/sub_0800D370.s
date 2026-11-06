@@ -16,7 +16,7 @@ sub_0800D370:
     str r0, [r2, #0x44]
     mov r0, #0xb4
     b loc_0800D3AC
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0831348C
 loc_0800D394:
     cmp r1, #9

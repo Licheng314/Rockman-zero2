@@ -29,7 +29,7 @@ loc_080B9782:
     cmp r0, #1
     beq loc_080B985C
     b loc_080B98C0
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x08345998
 loc_080B9794:
     ldrb r0, [r5, #0x11]

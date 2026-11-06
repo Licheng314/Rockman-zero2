@@ -33,7 +33,7 @@ sub_08049268:
     and r0, r1
     strb r0, [r4, #0xa]
     b loc_080492D4
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0000A501
     .word 0xFFFF8800
 loc_080492B4:

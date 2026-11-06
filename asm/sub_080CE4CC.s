@@ -27,7 +27,7 @@ sub_080CE4CC:
     add r0, r1, #1
     strb r0, [r5, #0xf]
     b loc_080CE702
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x080EF7D4 ; proven PC/switch data
     .word 0x080EF7DE ; proven PC/switch data
 loc_080CE510:
@@ -168,7 +168,7 @@ loc_080CE5FE:
     ldrb r0, [r5, #0xd]
     add r0, #1
     b loc_080CE700
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0202EBB0 ; proven PC/switch data
     .word 0x083498E0 ; proven PC/switch data
     ldr r0, [r7]
@@ -257,7 +257,7 @@ loc_080CE5FE:
     ldrb r0, [r5, #0xd]
     add r0, #1
     b loc_080CE700
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x08319AF0 ; proven PC/switch data
     ldrb r0, [r5, #0x12]
     sub r0, #1

@@ -51,7 +51,7 @@ loc_080B5150:
     mov r1, #1
     orr r0, r1
     b loc_080B517A
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x080EF450
 loc_080B5174:
     ldrb r1, [r4, #0xa]

@@ -25,7 +25,7 @@ sub_0809ABB4:
     bhs #0x809abf4
     ldrb r0, [r1]
     b loc_0809ABFC
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0202E130 ; proven PC/switch data
     .word 0xFFFFF000 ; proven PC/switch data
     .word 0x083436A4 ; proven PC/switch data

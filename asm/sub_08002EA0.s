@@ -33,7 +33,7 @@ loc_08002EC4:
     bl EXT_08004B9C
     ldrb r0, [r4, #0xf]
     b loc_08002EEA
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x02000E40
     .word 0x02000E50
 loc_08002EE8:

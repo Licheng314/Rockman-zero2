@@ -24,7 +24,7 @@ sub_080DAC78:
     beq loc_080DACB4
     ldr r0, [pc, #0xc]
     b loc_080DACB6
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0834B8B4
     .word 0x0202EBB0
     .word 0x0834BAE8

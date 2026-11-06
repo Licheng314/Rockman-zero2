@@ -16,7 +16,7 @@ sub_0809EEB8:
     ldr r0, [r0]
     ldr r0, [r0, #0xc]
     b EXT_0809F076
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x08343064
 loc_0809EEDC:
     add r0, r4, #0
@@ -72,7 +72,7 @@ loc_0809EF34:
     ldr r2, [pc, #8]
     add r0, r0, r2
     b loc_0809EF58
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0xFFFFFE80
     .word 0xFFFFFD00
 loc_0809EF50:
@@ -94,7 +94,7 @@ loc_0809EF58:
     bne EXT_0809EFD6
     ldr r1, [pc, #8]
     b EXT_0809EFC4
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0xFFFFD700
     .word 0x00003308
 loc_0809EF7C:

@@ -58,7 +58,7 @@ loc_08093950:
     lsl r0, r0, #8
     add r1, r1, r0
     b loc_0809398E
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x08342A7D
 loc_0809397C:
     ldr r0, [pc, #0x30]

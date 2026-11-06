@@ -22,15 +22,11 @@ sub_080857EE:
     bls loc_08085830
     mov r0, #0x17
     b loc_0808584A
-    .dh 0x0000 ; gap
-    .dh 0xE188 ; gap
-    .dh 0x0202 ; gap
-    .dh 0x43FD ; gap
-    .dh 0x0003 ; gap
-    .dh 0x9EC3 ; gap
-    .dh 0x0026 ; gap
-    .dh 0x7211 ; gap
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
+    .word 0x0202E188 ; proven PC/switch data
+    .word 0x000343FD ; proven PC/switch data
+    .word 0x00269EC3 ; proven PC/switch data
+    .word 0x00007211 ; proven PC/switch data
     .word 0x0202ED18
 loc_08085830:
     add r1, r4, #0

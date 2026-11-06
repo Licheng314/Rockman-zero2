@@ -39,7 +39,7 @@ loc_08055748:
     strb r1, [r4, #0xe]
     strb r0, [r4, #0xf]
     b loc_08055788
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0833C3A8
     .word 0x00000155
 loc_08055780:

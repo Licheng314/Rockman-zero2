@@ -46,7 +46,7 @@ loc_0807062A:
     strb r0, [r1]
     add r2, r6, #0
     b loc_080706E8
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0202E188 ; proven PC/switch data
     .word 0x000343FD ; proven PC/switch data
     .word 0x00269EC3 ; proven PC/switch data

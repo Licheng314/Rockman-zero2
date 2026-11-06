@@ -94,7 +94,7 @@ loc_08008472:
     bl EXT_080EF1E8
     ldr r1, [r6, #4]
     b loc_080084B2
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0xFFFF8800
     .word 0xFFFFB000
 loc_080084A4:

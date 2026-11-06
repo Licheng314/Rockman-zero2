@@ -113,7 +113,7 @@ loc_080AEBF4:
     ldr r0, [r4, #0x74]
     neg r3, r0
     b loc_080AEC46
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x080EF450
     .word 0x0000013F
 loc_080AEC44:

@@ -110,7 +110,7 @@ loc_0805F9DE:
     bhi loc_0805F9F0
     mov r0, #9
     b loc_0805FB1A
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x00269EC3
     .word 0x0202E188
 loc_0805F9F0:
@@ -140,7 +140,7 @@ loc_0805F9F4:
     bhi loc_0805FA30
     mov r0, #6
     b loc_0805FB1A
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0202EBF0
     .word 0x00269EC3
     .word 0x0202E188
@@ -360,7 +360,7 @@ loc_0805FB9C:
     beq loc_0805FBD8
     mov r0, #0xf
     b loc_0805FBDA
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x000343FD
     .word 0x00269EC3
 loc_0805FBD8:

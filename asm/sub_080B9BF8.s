@@ -31,7 +31,7 @@ sub_080B9BF8:
     mov r1, #0x10
     orr r0, r1
     b loc_080B9C46
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x00006D05
 loc_080B9C40:
     ldrb r1, [r4, #0xa]

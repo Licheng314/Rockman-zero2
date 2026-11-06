@@ -111,7 +111,7 @@ loc_0805CD62:
     add r1, #0xbf
     strb r0, [r1]
     b loc_0805CDF8
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0833CE4C
     .word 0x00005036
     .word 0x00005035
@@ -154,7 +154,7 @@ loc_0805CDF8:
     beq loc_0805CE14
     mov r0, #0
     b loc_0805CE18
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x00005035
     .word 0x0202E188
     .word 0x000343FD

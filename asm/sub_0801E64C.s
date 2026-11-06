@@ -24,7 +24,7 @@ sub_0801E64C:
     mov r2, #8
     bl EXT_080EEF68
     b loc_0801E69E
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x08333758
     .word 0x03002CC0
     .word 0x0202E140

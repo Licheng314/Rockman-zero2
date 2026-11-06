@@ -14,7 +14,7 @@ sub_08099D48:
     beq loc_08099D68
     ldr r0, [pc, #4]
     b loc_08099D6C
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0xFFFFFF00
 loc_08099D68:
     mov r0, #0x80
@@ -54,7 +54,7 @@ loc_08099D82:
     add r0, r4, #0
     bl EXT_08099B68
     b loc_08099EFE
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x08343064
 loc_08099DB8:
     ldrb r0, [r4, #0xf]

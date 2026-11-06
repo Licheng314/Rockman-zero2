@@ -75,7 +75,7 @@ loc_0807B314:
     orr r0, r1
     strb r0, [r2]
     b loc_0807B3A6
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0000503E
     .word 0x08340208
     .word 0x0807BD95

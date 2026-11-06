@@ -28,7 +28,7 @@ loc_08084B22:
     mov r0, #0x10
     orr r0, r1
     b loc_08084B3A
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0202E130
 loc_08084B34:
     ldrb r1, [r5, #0xa]

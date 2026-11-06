@@ -74,7 +74,7 @@ loc_0801632C:
     mov r0, #0xe
     strb r0, [r5]
     b loc_0801641C
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0202ED74
     .word 0xFFFFBC00
     .word 0xFFFFFEBC
@@ -112,7 +112,7 @@ loc_080163DC:
     mov r0, #0x10
     strb r0, [r4]
     b loc_0801641C
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0202EC40
     .word 0x083263F0
 loc_080163FC:

@@ -137,7 +137,7 @@ loc_0800B0B6:
     mov r0, #0x72
     bl EXT_08002EA0
     b loc_0800B102
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x02001000
     .word 0x0002D022
     .word 0x000007D4
@@ -210,7 +210,7 @@ loc_0800B146:
     bne loc_0800B1B2
     strb r5, [r1]
     b loc_0800B1B2
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x02001000
     .word 0x0002D022
     .word 0x000007D4

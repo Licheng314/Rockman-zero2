@@ -89,7 +89,7 @@ loc_080AB478:
     mov r1, #0x10
     orr r0, r1
     b loc_080AB4D6
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x00008B03 ; proven PC/switch data
 loc_080AB4D0:
     ldrb r1, [r5, #0xa]
@@ -146,7 +146,7 @@ loc_080AB526:
     mov r0, #0x10
     strb r0, [r5, #0x12]
     b loc_080AB5AC
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x000007FF ; proven PC/switch data
     ldrb r0, [r5, #0x12]
     sub r0, #1
@@ -179,7 +179,7 @@ loc_080AB554:
     b loc_080AB6BA
 loc_080AB57C:
     b loc_080AB5AC
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x080EF450 ; proven PC/switch data
     ldrb r0, [r5, #0x13]
     add r0, #2

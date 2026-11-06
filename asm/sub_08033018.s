@@ -19,7 +19,7 @@ loc_08033022:
     mov r0, #1
     neg r0, r0
     b loc_08033042
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x083359A8 ; proven PC/switch data
     add r0, r2, #0
 loc_08033042:

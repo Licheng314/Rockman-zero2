@@ -63,7 +63,7 @@ loc_080AF2FE:
     ldrb r0, [r6, #0xa]
     orr r0, r1
     b loc_080AF32E
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x00009503
     .word 0x0202E188
     .word 0x000343FD

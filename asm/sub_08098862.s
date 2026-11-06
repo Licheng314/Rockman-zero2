@@ -10,7 +10,7 @@ sub_08098862:
     add r0, r7, #0
     bl EXT_080988FC
     b loc_080988EE
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x08343064 ; proven PC/switch data
     ldrb r0, [r1, #0xd]
     cmp r0, #2
@@ -29,7 +29,7 @@ sub_08098862:
     ldr r0, [r0, #0xc]
     str r0, [r7, #0x14]
     b loc_080988EE
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x08343064 ; proven PC/switch data
 loc_080988A4:
     add r0, r7, #0

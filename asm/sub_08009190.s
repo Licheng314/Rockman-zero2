@@ -47,7 +47,7 @@ loc_080091AC:
     and r0, r4
     sub r4, r0, #1
     b loc_0800922C
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x020011B8
     .word 0xFFFFF000
 loc_080091F4:
@@ -74,7 +74,7 @@ loc_080091F4:
 loc_0800921E:
     sub r0, r4, r5
     b loc_08009234
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x08312C0C
     .word 0x00000FFF
 loc_0800922C:

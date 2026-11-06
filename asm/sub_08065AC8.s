@@ -11,7 +11,7 @@ sub_08065AC8:
     bne loc_08065AE4
     mov r0, #0
     b loc_08065AE6
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0202F070
 loc_08065AE4:
     add r0, #0x54

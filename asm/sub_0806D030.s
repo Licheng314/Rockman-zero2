@@ -103,7 +103,7 @@ loc_0806D0DE:
     add r0, r0, r2
     ldrb r1, [r0]
     b loc_0806D124
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x02001000
     .word 0x0002D020
 loc_0806D10C:

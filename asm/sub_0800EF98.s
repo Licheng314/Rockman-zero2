@@ -41,7 +41,7 @@ loc_0800EFD2:
     bhi loc_0800F006
     add r0, #1
     b loc_0800F004
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x02001000
     .word 0x02000FD0
     .word 0x00001010
@@ -65,7 +65,7 @@ loc_0800F006:
     bhi loc_0800F02A
     add r0, #1
     b loc_0800F028
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0002D049
 loc_0800F020:
     ldrh r0, [r4, #0x12]

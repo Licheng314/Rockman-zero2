@@ -41,7 +41,7 @@ loc_080A719A:
     cmp r0, #1
     beq loc_080A71D0
     b loc_080A7252
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x08343064
 loc_080A71AC:
     add r0, r4, #0

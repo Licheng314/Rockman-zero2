@@ -168,7 +168,7 @@ loc_080513E4:
     mov r3, #1
     bl EXT_080A0344
     b loc_080514FE
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0202E188 ; proven PC/switch data
     .word 0x000343FD ; proven PC/switch data
     .word 0x00269EC3 ; proven PC/switch data

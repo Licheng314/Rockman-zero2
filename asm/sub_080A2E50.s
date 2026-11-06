@@ -111,7 +111,7 @@ loc_080A2F12:
     mov r0, #0x10
     orr r0, r1
     b loc_080A2F3A
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x08343064
 loc_080A2F34:
     ldrb r1, [r5, #0xa]

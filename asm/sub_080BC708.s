@@ -37,7 +37,7 @@ loc_080BC72C:
     sub r0, #0x20
     strh r0, [r1]
     b loc_080BC76E
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0xFFFFFF00
 loc_080BC754:
     ldrb r1, [r4, #0xa]

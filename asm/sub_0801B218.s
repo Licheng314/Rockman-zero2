@@ -65,7 +65,7 @@ loc_0801B298:
     bl EXT_08003264
     mov r0, #0xb5
     b loc_0801B314
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0202EC30
 loc_0801B2A8:
     ldr r1, [r4]

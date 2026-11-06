@@ -28,7 +28,7 @@ loc_080EE4F2:
     add r0, r5, r0
     ldrb r0, [r0]
     b loc_080EE562
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x080FFCCC
 loc_080EE500:
     cmp r5, #0x23

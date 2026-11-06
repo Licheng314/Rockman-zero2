@@ -18,7 +18,7 @@ sub_080093C4:
     mov r0, #1
     neg r0, r0
     b loc_080094A4
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0000077F
 loc_080093EC:
     mov r6, #0
@@ -94,7 +94,7 @@ loc_08009476:
 loc_0800947A:
     ldr r2, [pc, #8]
     b loc_08009498
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x000004FF
     .word 0x7FFFFFFF
 loc_08009488:

@@ -43,7 +43,7 @@ loc_080A7802:
     cmp r2, #0
     beq loc_080A781E
     b loc_080A78C8
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x08343064
 loc_080A7818:
     cmp r2, #2

@@ -87,7 +87,7 @@ loc_080921CA:
     strb r4, [r5, #0xd]
     strb r4, [r5, #0xe]
     b loc_08092232
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x08342858
     .word 0x08342810
     .word 0x083427F8

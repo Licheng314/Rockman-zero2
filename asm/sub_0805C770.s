@@ -33,7 +33,7 @@ loc_0805C798:
     beq loc_0805C7BC
     mov r0, #0x2a
     b loc_0805C7BE
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0000A91C
 loc_0805C7BC:
     mov r0, #0x2b

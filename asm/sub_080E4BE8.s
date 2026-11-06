@@ -15,7 +15,7 @@ sub_080E4BE8:
     bne loc_080E4C10
     ldr r1, [pc, #8]
     b loc_080E4D3C
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x00007254
     .word 0x00000A04
 loc_080E4C10:
@@ -44,7 +44,7 @@ loc_080E4C24:
     mov r1, #0x80
     lsl r1, r1, #4
     b loc_080E4D3C
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0202EC30
     .word 0x0202EBF0
 loc_080E4C4C:

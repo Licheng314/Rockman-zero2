@@ -53,7 +53,7 @@ loc_08052196:
     ldr r0, [r2]
     add r0, r0, r1
     b loc_080521CC
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0000A601
     .word 0x0833C480
 loc_080521BC:

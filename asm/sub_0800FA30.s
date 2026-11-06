@@ -117,7 +117,7 @@ loc_0800FAE2:
     add r4, r4, r5
     strh r7, [r4]
     b loc_0800FB5A
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x080EF6C8
     .word 0x02001000
     .word 0x0002D01C

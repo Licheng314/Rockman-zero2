@@ -36,7 +36,7 @@ sub_08025AC8:
     lsl r1, r1, #2
     sub r6, r1, r0
     b loc_08025B1A
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x00000187
 loc_08025B18:
     mov r6, #0

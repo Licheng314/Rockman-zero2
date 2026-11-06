@@ -53,7 +53,7 @@ loc_080C6462:
     cmp r1, r0
     bge loc_080C64BA
     b loc_080C64B4
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0xFFFFD800
 loc_080C647C:
     add r0, r4, #0

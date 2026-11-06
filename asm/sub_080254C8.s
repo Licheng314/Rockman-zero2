@@ -124,7 +124,7 @@ loc_080255A6:
     ldr r0, [pc, #4]
     ldrh r0, [r0, #6]
     b loc_080255BC
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0202EC30
 loc_080255B8:
     ldr r0, [pc, #0x14]
@@ -139,7 +139,7 @@ loc_080255BC:
     add r0, r0, r3
     lsl r0, r0, #7
     b loc_080255D6
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0202EC30
 loc_080255D4:
     lsl r0, r3, #9

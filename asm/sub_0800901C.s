@@ -49,7 +49,7 @@ loc_08009038:
     ldr r0, [pc, #8]
     and r4, r0
     b loc_080090BC
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x020011B8
     .word 0xFFFFF000
 loc_08009084:
@@ -76,7 +76,7 @@ loc_08009084:
 loc_080090AE:
     sub r0, r4, r5
     b loc_080090C6
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x08312BCC
     .word 0x00000FFF
 loc_080090BC:

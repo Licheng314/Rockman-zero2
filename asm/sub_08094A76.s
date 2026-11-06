@@ -10,12 +10,9 @@ sub_08094A76:
     mov r1, #0
     mov r0, #3
     b loc_08094A98
-    .dh 0xE188 ; gap
-    .dh 0x0202 ; gap
-    .dh 0x43FD ; gap
-    .dh 0x0003 ; gap
-    .dh 0x9EC3 ; gap
-    .dh 0x0026 ; gap
+    .word 0x0202E188 ; proven PC/switch data
+    .word 0x000343FD ; proven PC/switch data
+    .word 0x00269EC3 ; proven PC/switch data
 loc_08094A94:
     mov r1, #0
     mov r0, #4

@@ -50,7 +50,7 @@ loc_08087C6C:
     ldrb r0, [r5, #0xa]
     orr r0, r3
     b loc_08087CBE
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x08341658
 loc_08087CB8:
     ldrb r1, [r5, #0xa]

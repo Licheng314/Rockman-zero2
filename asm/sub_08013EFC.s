@@ -10,7 +10,7 @@ sub_08013EFC:
     bls loc_08013F18
     mov r0, #0
     b loc_08013F1A
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0xFFF7BFFF
     .word 0x00036FFE
 loc_08013F18:

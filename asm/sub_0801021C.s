@@ -67,7 +67,7 @@ loc_08010260:
     cmp r1, #0
     beq loc_08010300
     b loc_08010346
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x02001000
     .word 0x0002D03D
     .word 0x0002D03E
@@ -178,7 +178,7 @@ loc_08010356:
     mov r1, r9
     bl EXT_080EF150
     b loc_080103F6
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0836D164
     .word 0x0836D16C
     .word 0x08732CEC

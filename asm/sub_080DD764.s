@@ -39,7 +39,7 @@ loc_080DD77A:
     mov r0, #1
     orr r0, r1
     b loc_080DD7C2
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x00000DDC
     .word 0x000075B8
     .word 0x00000209
@@ -66,7 +66,7 @@ loc_080DD7CC:
     add r0, r2, #0
     bl EXT_080DD808
     b loc_080DD7FE
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0834B8B4
 loc_080DD7EC:
     ldr r1, [pc, #0x14]

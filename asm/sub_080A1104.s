@@ -49,7 +49,7 @@ sub_080A1104:
     mov r1, #0x10
     orr r0, r1
     b loc_080A117E
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x08343064
     .word 0x083445A4
     .word 0x0000A718

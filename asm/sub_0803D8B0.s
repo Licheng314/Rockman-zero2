@@ -20,7 +20,7 @@ sub_0803D8B0:
     cmp r5, #1
     beq loc_0803D8E0
     b loc_0803D934
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x08339C74
 loc_0803D8DC:
     cmp r5, #0

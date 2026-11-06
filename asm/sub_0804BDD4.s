@@ -78,7 +78,7 @@ loc_0804BE14:
     lsl r1, r1, #4
     add r0, r0, r1
     b loc_0804BE82
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0000A108
     .word 0xFFFFCB00
 loc_0804BE7C:

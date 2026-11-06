@@ -13,7 +13,7 @@ loc_0805A278:
     add r0, r0, r1
     ldr r0, [r0]
     mov pc, r0
-    .dh 0x0000 ; TODO movs r0, r0
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0805A288 ; proven PC/switch data
     .word 0x0805A29C ; proven PC/switch data
     .word 0x0805A364 ; proven PC/switch data
@@ -134,7 +134,7 @@ loc_0805A350:
     cmp r3, #1
     bne loc_0805A39C
     b loc_0805A3A0
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0202F074 ; proven PC/switch data
     .word 0x0833A138 ; proven PC/switch data
     .word 0x0000A725 ; proven PC/switch data

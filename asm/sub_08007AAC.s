@@ -98,7 +98,7 @@ loc_08007B44:
     asr r0, r0, #8
     strh r0, [r7, #0x34]
     b loc_08007B76
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x030032E0
 loc_08007B68:
     mov r0, r9

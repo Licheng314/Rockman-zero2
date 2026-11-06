@@ -175,7 +175,7 @@ loc_080D1144:
     asr r0, r0, #8
     sub r0, r2, r0
     b loc_080D1168
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x080EF450
 loc_080D1150:
     ldrb r0, [r5]
@@ -276,7 +276,7 @@ loc_080D1190:
     mov r0, #0x20
     neg r0, r0
     b loc_080D1224
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x080EF450
     .word 0x0202E188
     .word 0x000343FD

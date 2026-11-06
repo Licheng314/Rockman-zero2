@@ -62,7 +62,7 @@ loc_0808CA28:
     mov r0, #2
     strb r0, [r4, #0xe]
     b loc_0808CB9E
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0xFFFFFE80
     .word 0x00007501
 loc_0808CA60:
@@ -139,7 +139,7 @@ loc_0808CAD8:
     add r0, #0xbd
     strb r5, [r0]
     b loc_0808CB9E
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x08341D20
     .word 0x0202F078
     .word 0x0833D990
@@ -166,7 +166,7 @@ loc_0808CB0C:
     cmp r2, #0
     beq loc_0808CB4A
     b loc_0808CB44
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0202E130
 loc_0808CB40:
     cmp r2, #0

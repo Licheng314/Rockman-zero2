@@ -20,7 +20,7 @@ loc_080D5804:
     bne loc_080D5804
     mov r0, #0
     b loc_080D582A
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0000020A
 loc_080D5828:
     mov r0, #1

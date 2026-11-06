@@ -50,7 +50,7 @@ loc_080D985C:
     add r0, r5, #0
     bl EXT_08012A14
     b loc_080D988C
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x080EF450
 loc_080D9874:
     mov r0, #2

@@ -20,7 +20,7 @@ sub_08037338:
     ldr r0, [pc, #0xc]
     ldrh r0, [r0, #6]
     b loc_08037370
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x00FFFF00
     .word 0x00020700
     .word 0x0202EC30
@@ -72,7 +72,7 @@ loc_08037370:
     orr r0, r1
     lsr r1, r0, #0x1f
     b loc_080373DC
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0202EC30
     .word 0x000002B6
 loc_080373D4:

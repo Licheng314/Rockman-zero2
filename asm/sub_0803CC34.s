@@ -17,7 +17,7 @@ sub_0803CC34:
     add r0, r4, #0
     bl EXT_0803CE30
     b loc_0803CC8C
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x00FFFF00
     .word 0x00020700
 loc_0803CC60:

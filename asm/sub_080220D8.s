@@ -74,7 +74,7 @@ loc_08022150:
     mov r3, r9
     bl EXT_080223F8
     b loc_0802217E
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0000FEC0
 loc_08022170:
     add r0, r5, #0

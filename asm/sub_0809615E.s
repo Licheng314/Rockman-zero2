@@ -3,7 +3,7 @@
 sub_0809615E:
     str r0, [r5, #0x14]
     b loc_0809617C
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0202EBF0 ; proven PC/switch data
     .word 0x0000270E ; proven PC/switch data
     .word 0x0202EBB0 ; proven PC/switch data

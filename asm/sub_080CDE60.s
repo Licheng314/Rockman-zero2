@@ -101,7 +101,7 @@ loc_080CDEE8:
     str r0, [r5, #0x30]
     ldr r0, [pc, #0xc]
     b loc_080CDF42
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0202E130
     .word 0x08349864
     .word 0x00000401
@@ -245,7 +245,7 @@ loc_080CE032:
     add r0, #1
     strb r0, [r5, #0xe]
     b loc_080CE0C6
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x00007901
     .word 0x08349864
     .word 0x00000401
@@ -273,7 +273,7 @@ loc_080CE068:
     cmp r7, r0
     ble loc_080CE0AA
     b loc_080CE0AE
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0202ED18
     .word 0x00004FFF
 loc_080CE09C:

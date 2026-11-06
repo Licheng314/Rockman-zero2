@@ -26,7 +26,7 @@ sub_0802A3D4:
     ldr r0, [pc, #0xc]
     add r2, r4, r0
     b loc_0802A41C
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x00000179
     .word 0x0000017D
     .word 0x00000181

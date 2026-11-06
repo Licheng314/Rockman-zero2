@@ -71,7 +71,7 @@ loc_0809DF52:
     mov r0, #0x80
     lsl r0, r0, #3
     b loc_0809DF8E
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0xFFFFF000
 loc_0809DF8C:
     ldr r0, [pc, #0x28]

@@ -130,7 +130,7 @@ loc_08058F8E:
     add r0, r0, r1
     str r0, [r4, #0x58]
     b loc_08058FCA
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0202ED18
 loc_08058FA8:
     ldr r0, [r4, #0x60]

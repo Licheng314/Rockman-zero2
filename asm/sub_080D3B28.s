@@ -45,7 +45,7 @@ loc_080D3B78:
     beq loc_080D3B88
     ldr r0, [pc, #4]
     b loc_080D3B8E
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x00000283
 loc_080D3B88:
     mov r0, #1

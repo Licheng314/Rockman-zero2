@@ -43,7 +43,7 @@ sub_080C3864:
     add r0, #2
     strb r0, [r4, #0xd]
     b loc_080C395C
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0xFFFFF900 ; proven PC/switch data
     .word 0x0000C202 ; proven PC/switch data
 loc_080C38D4:
@@ -56,7 +56,7 @@ loc_080C38D4:
     strb r0, [r2, #9]
     ldr r1, [pc, #4]
     b loc_080C3922
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0000C201 ; proven PC/switch data
     add r0, r4, #0
     bl EXT_080128D4

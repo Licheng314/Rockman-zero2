@@ -13,21 +13,15 @@ loc_080C5BD4:
     add r0, r0, r1
     ldr r0, [r0]
     mov pc, r0
-    .dh 0x0000 ; TODO movs r0, r0
+    .dh 0x0000 ; alignment after unconditional transfer
     ldrh r4, [r4, r7]
     lsr r4, r1, #0x20
-    ldrh r4, [r7, r7]
-    lsr r4, r1, #0x20
-    ldrb r0, [r2, r0]
-    lsr r4, r1, #0x20
-    ldrb r4, [r4, r2]
-    lsr r4, r1, #0x20
-    ldrb r4, [r1, r3]
-    lsr r4, r1, #0x20
-    ldrb r0, [r4, r6]
-    lsr r4, r1, #0x20
-    ldrsh r6, [r2, r0]
-    lsr r4, r1, #0x20
+    .word 0x080C5BFC ; proven PC/switch data
+    .word 0x080C5C10 ; proven PC/switch data
+    .word 0x080C5CA4 ; proven PC/switch data
+    .word 0x080C5CCC ; proven PC/switch data
+    .word 0x080C5DA0 ; proven PC/switch data
+    .word 0x080C5E16 ; proven PC/switch data
     mov r1, #0x8d
     lsl r1, r1, #8
     add r0, r5, #0
@@ -67,7 +61,7 @@ loc_080C5BD4:
     mov r0, #1
     orr r0, r1
     b loc_080C5C62
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0202E188
     .word 0x000343FD
     .word 0x00269EC3

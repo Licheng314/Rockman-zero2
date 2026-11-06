@@ -12,7 +12,7 @@ sub_080CE768:
     ldrb r0, [r1, #7]
     sub r0, #2
     b loc_080CE786
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0202EBF0
 loc_080CE784:
     mov r0, #0

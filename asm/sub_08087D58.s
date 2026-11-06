@@ -96,7 +96,7 @@ loc_08087DD4:
     add r0, #1
     strb r0, [r4, #0xe]
     b loc_08087E9E
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x00006B08 ; proven PC/switch data
     mov r0, #0xe5
     bl EXT_080032EC
@@ -124,7 +124,7 @@ loc_08087DD4:
     strb r2, [r4, #0xd]
     strb r0, [r4, #0xe]
     b loc_08087E7C
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x00006B0B ; proven PC/switch data
 loc_08087E78:
     strb r1, [r4, #0xd]

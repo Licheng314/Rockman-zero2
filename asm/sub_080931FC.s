@@ -39,7 +39,7 @@ loc_08093222:
     bne loc_0809324C
     mov r0, #2
     b loc_08093250
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x00009001
 loc_0809324C:
     mov r1, #0

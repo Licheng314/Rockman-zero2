@@ -28,7 +28,7 @@ loc_080634B4:
     mov r0, #9
     strb r0, [r4, #0xd]
     b loc_08063518
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0202E188
     .word 0x000343FD
     .word 0x00269EC3
@@ -62,7 +62,7 @@ loc_080634DE:
     beq loc_0806350C
     mov r0, #8
     b loc_0806350E
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0202E188
     .word 0x000343FD
     .word 0x00269EC3

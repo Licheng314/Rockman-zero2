@@ -45,7 +45,7 @@ sub_08028BD8:
     bhs #0x8028c38
     strb r5, [r1]
     b loc_08028C3C
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0xFFFFFE80 ; proven PC/switch data
     sub r0, #0xff
     strb r0, [r1]

@@ -43,7 +43,7 @@ sub_080ADCA4:
     orr r0, r2
     strb r0, [r3]
     b loc_080ADD22
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x08345BCE
 loc_080ADD04:
     mov r2, #0

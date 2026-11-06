@@ -26,7 +26,7 @@ sub_080021A8:
     strh r0, [r3, #2]
     mov r0, #0
     b loc_080021E8
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x02000D40
     .word 0x00000ABA
 loc_080021E4:

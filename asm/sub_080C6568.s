@@ -13,7 +13,7 @@ loc_080C6574:
     add r0, r0, r1
     ldr r0, [r0]
     mov pc, r0
-    .dh 0x0000 ; TODO movs r0, r0
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x080C6584 ; proven PC/switch data
     .word 0x080C65A4 ; proven PC/switch data
     .word 0x080C65BA ; proven PC/switch data
@@ -145,7 +145,7 @@ loc_080C661E:
     ldr r0, [pc, #4]
     str r0, [r4, #0x60]
     b loc_080C66EE
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0xFFFFF400 ; proven PC/switch data
     add r0, r4, #0
     bl EXT_080128D4

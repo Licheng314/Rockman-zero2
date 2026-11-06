@@ -97,7 +97,7 @@ loc_0806E852:
     beq loc_0806E878
     orr r3, r2
     b loc_0806E87A
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0833E9D0
 loc_0806E878:
     add r3, r2, #0
@@ -117,7 +117,7 @@ loc_0806E87A:
     beq loc_0806E8A0
     orr r3, r2
     b loc_0806E8A2
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0833E9EC
 loc_0806E8A0:
     add r3, r2, #0

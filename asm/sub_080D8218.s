@@ -73,7 +73,7 @@ loc_080D829E:
     ldrb r3, [r7, #0x12]
     add r2, r0, r3
     b loc_080D82C0
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0834B52C
     .word 0x080EF450
     .word 0x000FFFFF

@@ -75,7 +75,7 @@ sub_08057BEC:
     mov r0, #0xe1
     lsl r0, r0, #3
     b loc_08057CE4
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0xFFFF3000
     .word 0x0833CAA0
     .word 0x0833CA98

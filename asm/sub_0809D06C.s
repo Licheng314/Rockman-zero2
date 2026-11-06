@@ -39,7 +39,7 @@ sub_0809D06C:
     ldr r0, [r6, #0x54]
     ldr r1, [pc, #8]
     b loc_0809D0F0
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x00001A08
     .word 0xFFFFF800
 loc_0809D0C8:

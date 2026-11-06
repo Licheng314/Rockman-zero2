@@ -12,7 +12,7 @@ sub_08012C04:
     add r2, #0x22
     ldr r0, [pc, #4]
     b loc_08012C26
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0202E190
 loc_08012C20:
     add r2, r3, #0

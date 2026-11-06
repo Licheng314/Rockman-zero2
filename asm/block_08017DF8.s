@@ -62,7 +62,7 @@ loc_08017E34:
     and r0, r1
     strh r0, [r4, #0x12]
     b loc_08017EC2
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0202EC30
     .word 0x030032E0
     .word 0x083263F0

@@ -138,7 +138,7 @@ loc_0806F504:
     bne loc_0806F54C
     strb r7, [r4]
     b loc_0806F54C
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0202E130
 loc_0806F544:
     add r0, r6, #0

@@ -151,7 +151,7 @@ loc_0807880E:
     cmp r4, #0
     bne loc_0807880E
     b loc_080788E2
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0000A60C
     .word 0x080EF450
     .word 0x0833FEF0

@@ -27,7 +27,7 @@ sub_0805D8F8:
     str r0, [r6, #0x5c]
     str r1, [r6, #0x64]
     b loc_0805D944
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0000AA10 ; proven PC/switch data
     .word 0xFFFFFE00 ; proven PC/switch data
 loc_0805D938:
@@ -173,7 +173,7 @@ loc_0805DA58:
     b loc_0805DBAE
 loc_0805DA68:
     b loc_0805DB5E
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0202E188 ; proven PC/switch data
     .word 0x000343FD ; proven PC/switch data
     .word 0x00269EC3 ; proven PC/switch data
@@ -193,7 +193,7 @@ loc_0805DA68:
     b loc_0805DBAE
 loc_0805DA98:
     b loc_0805DB5E
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0000AA12 ; proven PC/switch data
     add r0, r6, #0
     bl EXT_080128D4
@@ -236,7 +236,7 @@ loc_0805DA98:
     mov r1, #0x10
     orr r0, r1
     b loc_0805DB06
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0000AA12 ; proven PC/switch data
 loc_0805DB00:
     ldrb r1, [r6, #0xa]

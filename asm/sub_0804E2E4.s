@@ -40,7 +40,7 @@ loc_0804E2F0:
     strb r0, [r5, #0xd]
     strb r6, [r5, #0xe]
     b loc_0804E526
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0000FFFF
     .word 0x0202E188
     .word 0x000343FD
@@ -92,7 +92,7 @@ loc_0804E356:
     lsl r4, r4, #7
     add r0, r0, r4
     b loc_0804E3C2
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x02001000
     .word 0x0002D03C
     .word 0x0000310A
@@ -132,7 +132,7 @@ loc_0804E3C2:
     mov r1, #0x10
     orr r0, r1
     b loc_0804E406
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0xFFFFB000
 loc_0804E400:
     ldrb r1, [r5, #0xa]
@@ -189,7 +189,7 @@ loc_0804E438:
     cmp r0, #0
     beq loc_0804E482
     b loc_0804E4F0
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x02001000
     .word 0x0002D03E
     .word 0x0002D03D
@@ -228,7 +228,7 @@ loc_0804E49C:
     add r0, r0, r1
     mov r1, #3
     b loc_0804E4DC
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x00003104
     .word 0x0833B6F4
     .word 0x02001000

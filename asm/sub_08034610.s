@@ -133,7 +133,7 @@ loc_08034714:
     add r1, r5, #0
     bl EXT_0801EA38
     b loc_0803474A
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x00000179
     .word 0x08335CD0
     .word 0x0000017F

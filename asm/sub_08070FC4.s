@@ -38,7 +38,7 @@ sub_08070FC4:
     ldr r0, [r0]
     ldr r0, [r0, #0xc]
     b loc_080710D0
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0202EBB0
     .word 0x0833D990
 loc_08071018:

@@ -132,7 +132,7 @@ loc_0801DF04:
     ldr r2, [r2, #4]
     bl EXT_080D6B54
     b loc_0801DF5A
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0202EC30
     .word 0x08333682
     .word 0x08333482

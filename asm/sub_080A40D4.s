@@ -44,7 +44,7 @@ loc_080A40FC:
     add r0, r0, r1
     ldr r0, [r0]
     mov pc, r0
-    .dh 0x0000 ; TODO movs r0, r0
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x080A412C ; proven PC/switch data
     .word 0x080A4140 ; proven PC/switch data
     .word 0x080A414E ; proven PC/switch data
@@ -69,7 +69,7 @@ loc_080A40FC:
     cmp r0, #0xd
     bne loc_080A4194
     b loc_080A418E
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x00004C01 ; proven PC/switch data
     ldr r1, [pc, #0x50]
     add r0, r4, #0

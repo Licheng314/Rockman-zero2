@@ -37,7 +37,7 @@ loc_0809BDAC:
     cmp r0, #0
     beq loc_0809BDC4
     b loc_0809C050
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x08343064
 loc_0809BDBC:
     cmp r0, #2
@@ -229,7 +229,7 @@ loc_0809BEE4:
     cmp r0, #0
     beq loc_0809BF4A
     b loc_0809BF70
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x00002801
     .word 0x083438A0
 loc_0809BF44:

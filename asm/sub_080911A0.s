@@ -125,7 +125,7 @@ loc_0809129C:
     add r0, r7, #0
     add r1, r4, #0
     b loc_08091322
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0xFFFFE800
     .word 0x08342494
     .word 0x0202E188

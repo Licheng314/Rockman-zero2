@@ -27,7 +27,7 @@ loc_0807E7B2:
     cmp r0, #0
     bge loc_0807E7E0
     b loc_0807E7DE
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x00005C04
 loc_0807E7D4:
     ldr r0, [r4, #0x5c]

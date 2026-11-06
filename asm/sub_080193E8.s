@@ -32,7 +32,7 @@ sub_080193E8:
     mov r0, #1
     bl EXT_08014D0C
     b loc_08019460
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0202EC30
     .word 0x00000C01
     .word 0x083263F0
@@ -125,7 +125,7 @@ loc_080194CC:
     mov r0, #2
     strb r0, [r1]
     b loc_0801957E
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x00184FFF
     .word 0x0202EC30
     .word 0x00186FFF
@@ -148,7 +148,7 @@ loc_080194FC:
     bl EXT_0801B454
     mov r0, #3
     b loc_0801957C
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x00194FFF
     .word 0x030032E0
     .word 0x0202EC40

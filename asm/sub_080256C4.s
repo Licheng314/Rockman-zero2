@@ -257,7 +257,7 @@ loc_0802585C:
     strb r0, [r1]
     strb r7, [r2]
     b loc_08025926
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x00000195
     .word 0x00000175
 loc_080258D4:

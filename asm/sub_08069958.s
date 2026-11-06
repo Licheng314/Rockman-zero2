@@ -71,7 +71,7 @@ sub_08069958:
     mov r0, #4
     strb r0, [r1]
     b loc_08069A14
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0833E1A8
     .word 0x0806A175
     .word 0x0833E22C

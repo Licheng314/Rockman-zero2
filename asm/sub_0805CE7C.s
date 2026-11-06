@@ -130,7 +130,7 @@ loc_0805CF6A:
     add r0, r7, #0
     bl EXT_08012CD0
     b loc_0805CFDA
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x00005036
     .word 0x0202EC30
     .word 0x0000FFFE

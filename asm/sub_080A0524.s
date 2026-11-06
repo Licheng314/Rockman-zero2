@@ -26,7 +26,7 @@ loc_080A0534:
     cmp r1, #0
     bge loc_080A0578
     b loc_080A0570
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0xFFFFFC00
     .word 0xFFFFF800
 loc_080A0560:

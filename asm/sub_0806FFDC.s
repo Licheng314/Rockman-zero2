@@ -116,7 +116,7 @@ loc_08070090:
     strb r0, [r4, #0x12]
     strb r6, [r4, #0xe]
     b loc_080701C6
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0xFFFFEA00 ; proven PC/switch data
     .word 0x00269EC3 ; proven PC/switch data
     add r0, r4, #0
@@ -181,7 +181,7 @@ loc_0807014C:
     add r0, r4, #0
     bl EXT_080127E4
     b loc_080701C6
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x080EF798 ; proven PC/switch data
     add r0, r4, #0
     bl EXT_080128D4
@@ -217,7 +217,7 @@ loc_0807019E:
     ldrb r0, [r4, #0xe]
     sub r0, #1
     b loc_080701C4
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0xFFFFEA00 ; proven PC/switch data
     add r0, r4, #0
     bl EXT_080128D4

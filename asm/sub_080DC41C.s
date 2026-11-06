@@ -38,7 +38,7 @@ loc_080DC448:
     cmp r0, r3
     bne loc_080DC448
     b loc_080DC4A8
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0834BE20
     .word 0x02036C34
     .word 0x0834BE0C

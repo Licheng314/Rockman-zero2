@@ -61,7 +61,7 @@ loc_08062102:
     mov r0, #0x20
     str r0, [r3, #0x68]
     b loc_080621C2
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0202E130
     .word 0xFFFFF000
     .word 0xFFFFD000
@@ -142,7 +142,7 @@ loc_080621C2:
     cmp r1, #0
     beq loc_080621EC
     b loc_080621F2
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x000003FF
 loc_080621E8:
     cmp r1, #0

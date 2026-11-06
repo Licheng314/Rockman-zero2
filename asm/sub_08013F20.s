@@ -17,7 +17,7 @@ sub_08013F20:
 loc_08013F3A:
     mov r0, #1
     b loc_08013F4E
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x00040FFF
     .word 0x0005EFFF
     .word 0x00051FFF

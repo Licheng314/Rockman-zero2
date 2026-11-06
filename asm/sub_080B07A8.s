@@ -88,7 +88,7 @@ loc_080B0818:
     cmp r1, r3
     blt loc_080B0818
     b loc_080B0918
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0202F8F8
     .word 0x08390F40
     .word 0x02000F94
@@ -152,7 +152,7 @@ loc_080B089C:
     cmp r1, r3
     blt loc_080B089C
     b loc_080B0918
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x083468CC
 loc_080B08DC:
     lsr r0, r1, #0x19

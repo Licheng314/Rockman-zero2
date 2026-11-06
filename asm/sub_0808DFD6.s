@@ -154,7 +154,7 @@ loc_0808E0D0:
     ldr r0, [r0]
     ldr r0, [r0, #0xc]
     b loc_0808E148
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0xFFFFF000 ; proven PC/switch data
     .word 0x0202EBB0 ; proven PC/switch data
     .word 0x0833D990 ; proven PC/switch data

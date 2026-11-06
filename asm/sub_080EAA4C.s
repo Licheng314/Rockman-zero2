@@ -13,7 +13,7 @@ sub_080EAA4C:
     mov r1, #0xa
     bl EXT_080EA9F0
     b loc_080EAA74
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0202EBB0
 loc_080EAA6C:
     add r0, r5, #0

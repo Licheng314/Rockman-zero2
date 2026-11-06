@@ -27,7 +27,7 @@ sub_080D0AFC:
     add r0, r4, #0
     bl EXT_080CF5F8
     b loc_080D0FEC
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0834863C ; proven PC/switch data
 loc_080D0B38:
     add r0, r4, #0
@@ -368,7 +368,7 @@ loc_080D0E6E:
     mov r0, #0x20
     strb r0, [r4, #0x12]
     b loc_080D0ED2
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x080EF450 ; proven PC/switch data
     add r0, r4, #0
     add r0, #0xbb
@@ -494,7 +494,7 @@ loc_080D0F5E:
     lsl r0, r0, #0x18
     lsr r2, r0, #0x18
     b loc_080D0F8A
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0834863C ; proven PC/switch data
 loc_080D0F84:
     mov r0, r8

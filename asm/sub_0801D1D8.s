@@ -28,56 +28,33 @@ loc_0801D1FA:
     mov pc, r0
     lsr r0, r2, #0x14
     lsl r0, r0, #8
-    ldr r6, [pc, #0x84]
-    .dh 0x0000 ; TODO movs r0, r0
+    .word 0x00004E21 ; proven PC/switch data
     bhs #0x801d230
     lsr r1, r0, #0x20
-    bhs #0x801d2e4
-    lsr r1, r0, #0x20
-    bhs #0x801d134
-    lsr r1, r0, #0x20
-    bhs #0x801d16c
-    lsr r1, r0, #0x20
-    bhs #0x801d1c4
-    lsr r1, r0, #0x20
-    blo #0x801d278
-    lsr r1, r0, #0x20
-    blo #0x801d2b0
-    lsr r1, r0, #0x20
-    blo #0x801d308
-    lsr r1, r0, #0x20
-    blo #0x801d16c
-    lsr r1, r0, #0x20
-    blo #0x801d1a4
-    lsr r1, r0, #0x20
-    blo #0x801d1fc
-    lsr r1, r0, #0x20
-    bmi loc_0801D260
-    lsr r1, r0, #0x20
-    bmi loc_0801D298
-    lsr r1, r0, #0x20
-    bmi loc_0801D2F0
-    lsr r1, r0, #0x20
-    bmi EXT_0801D154
-    lsr r1, r0, #0x20
-    bmi EXT_0801D18C
-    lsr r1, r0, #0x20
-    bmi loc_0801D1E4
-    lsr r1, r0, #0x20
+    .word 0x0801D268 ; proven PC/switch data
+    .word 0x0801D28E ; proven PC/switch data
+    .word 0x0801D2A8 ; proven PC/switch data
+    .word 0x0801D2D2 ; proven PC/switch data
+    .word 0x0801D32A ; proven PC/switch data
+    .word 0x0801D344 ; proven PC/switch data
+    .word 0x0801D36E ; proven PC/switch data
+    .word 0x0801D39E ; proven PC/switch data
+    .word 0x0801D3B8 ; proven PC/switch data
+    .word 0x0801D3E2 ; proven PC/switch data
+    .word 0x0801D412 ; proven PC/switch data
+    .word 0x0801D42C ; proven PC/switch data
+    .word 0x0801D456 ; proven PC/switch data
+    .word 0x0801D486 ; proven PC/switch data
+    .word 0x0801D4A0 ; proven PC/switch data
+    .word 0x0801D4CA ; proven PC/switch data
 loc_0801D250:
-    bmi loc_0801D250
-    lsr r1, r0, #0x20
-    bpl loc_0801D284
-    lsr r1, r0, #0x20
-    bpl loc_0801D2E0
-    lsr r1, r0, #0x20
-    .dh 0xD55A ; TODO bpl #0x801d314
-    lsr r1, r0, #0x20
+    .word 0x0801D4FE ; proven PC/switch data
+    .word 0x0801D516 ; proven PC/switch data
+    .word 0x0801D542 ; proven PC/switch data
+    .word 0x0801D55A ; proven PC/switch data
 loc_0801D260:
-    bpl EXT_0801D170
-    lsr r1, r0, #0x20
-    bpl EXT_0801D1C4
-    lsr r1, r0, #0x20
+    .word 0x0801D586 ; proven PC/switch data
+    .word 0x0801D5AE ; proven PC/switch data
     ldr r0, [pc, #0x36c]
     mov r1, #7
     ldrsb r1, [r0, r1]

@@ -24,7 +24,7 @@ sub_080D2D70:
     mov r0, #0x8f
     lsl r0, r0, #2
     b loc_080D2DEA
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0202EBB0
     .word 0x0202EBF0
 loc_080D2DA8:
@@ -35,7 +35,7 @@ loc_080D2DA8:
     strb r0, [r4, #0x12]
     ldr r0, [pc, #4]
     b loc_080D2DEA
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0000023A
 loc_080D2DBC:
     ldr r0, [pc, #0]

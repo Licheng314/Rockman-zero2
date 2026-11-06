@@ -85,7 +85,7 @@ loc_080880DE:
     strb r0, [r4, #0xd]
     strb r1, [r4, #0xe]
     b loc_08088140
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0xFFFFFF00
 loc_08088124:
     cmp r2, #0

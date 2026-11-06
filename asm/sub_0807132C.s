@@ -43,7 +43,7 @@ loc_08071370:
     bl EXT_080713C4
     ldr r1, [pc, #4]
     b loc_08071398
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x00001901
 loc_08071388:
     cmp r1, #6

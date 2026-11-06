@@ -171,7 +171,7 @@ loc_0804D44A:
     lsr r0, r0, #1
     strb r0, [r7, #0x13]
     b loc_0804D45E
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0202EC30
 loc_0804D458:
     add r0, r7, #0

@@ -23,7 +23,7 @@ sub_08034BFC:
 loc_08034C22:
     mov r0, #0
     b loc_08034C2E
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x000002B6
 loc_08034C2C:
     mov r0, #1

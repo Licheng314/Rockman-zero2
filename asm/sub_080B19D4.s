@@ -74,7 +74,7 @@ loc_080B1A38:
     ldr r0, [r0, #8]
     str r0, [r5, #0x14]
     b loc_080B1A88
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x08346A18
     .word 0x08345998
 loc_080B1A78:

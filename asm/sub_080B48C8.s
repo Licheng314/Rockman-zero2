@@ -62,7 +62,7 @@ sub_080B48C8:
     str r2, [r1, #0x28]
     add r0, r1, #0
     b loc_080B4952
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0202F084
     .word 0x08345998
 loc_080B4950:

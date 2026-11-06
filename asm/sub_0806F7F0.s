@@ -176,7 +176,7 @@ loc_0806F912:
     ldr r3, [pc, #4]
     add r1, r1, r3
     b loc_0806F970
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0xFFFFEC00
     .word 0xFFFFF800
 loc_0806F95C:
@@ -331,7 +331,7 @@ loc_0806FA66:
     add r3, r0, r3
     str r3, [sp, #0x1c]
     b loc_0806FA9A
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0xFFFFFF00
 loc_0806FA8C:
     add r0, r4, #0

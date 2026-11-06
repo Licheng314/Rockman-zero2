@@ -123,7 +123,7 @@ loc_080D2468:
     ldr r0, [r0, #0x10]
     str r0, [r5, #0x14]
     b loc_080D24CC
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0xFFFFE800
     .word 0xFFFFEC00
     .word 0x08349C60

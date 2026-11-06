@@ -40,7 +40,7 @@ loc_08007982:
     ldr r0, [r1, #0x18]
     orr r0, r5
     b loc_080079A4
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x030032E0
     .word 0x00000201
 loc_080079A0:

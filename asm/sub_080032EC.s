@@ -23,7 +23,7 @@ sub_080032EC:
 loc_08003312:
     strb r4, [r1]
     b loc_0800332A
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x08100A24
     .word 0x02000019
 loc_08003320:

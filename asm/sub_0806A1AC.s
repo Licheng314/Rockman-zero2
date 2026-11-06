@@ -45,7 +45,7 @@ sub_0806A1AC:
     str r1, [r3, #0x58]
     strb r2, [r3, #0x10]
     b loc_0806A278
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0202F078
     .word 0x0833D990
 loc_0806A210:

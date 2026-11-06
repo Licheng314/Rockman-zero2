@@ -151,7 +151,7 @@ loc_080C5A0C:
     ldr r0, [pc, #4]
     str r0, [r4, #0x60]
     b loc_080C5AE2
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0xFFFFF400 ; proven PC/switch data
     add r0, r4, #0
     bl EXT_080128D4

@@ -29,7 +29,7 @@ sub_08040DD4:
     ble loc_08040E14
     mov r0, #1
     b loc_08040E16
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0000A201
 loc_08040E14:
     mov r0, #3

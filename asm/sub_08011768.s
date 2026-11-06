@@ -32,7 +32,7 @@ sub_08011768:
     add r0, r0, r2
     ldrh r0, [r0]
     b loc_080117BE
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0xFFF97000
     .word 0x0000EFFF
     .word 0x0003BFFF

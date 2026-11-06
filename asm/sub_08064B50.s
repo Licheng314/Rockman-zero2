@@ -22,7 +22,7 @@ sub_08064B50:
     mov r0, #0x80
     lsl r0, r0, #1
     b loc_08064B8A
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0000AD09
     .word 0x0833D7A8
 loc_08064B88:
@@ -85,7 +85,7 @@ loc_08064BE6:
     cmp r1, r0
     ble loc_08064C14
     b loc_08064C10
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0xFFFFFF00
     .word 0x000003FF
 loc_08064C04:

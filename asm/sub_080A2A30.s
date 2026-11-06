@@ -29,7 +29,7 @@ loc_080A2A5C:
     and r0, r1
     mov r2, #0
     b loc_080A2B6E
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0202E130
     .word 0x0202EC30
 loc_080A2A70:
@@ -189,7 +189,7 @@ loc_080A2B6E:
     ldr r0, [r0, #0xc]
     str r0, [r5, #0x14]
     b loc_080A2BE6
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x08343064
 loc_080A2BA4:
     add r0, r5, #0
@@ -209,7 +209,7 @@ loc_080A2BA4:
     ldr r0, [r0]
     add r1, r1, r0
     b loc_080A2BD6
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0202E130
 loc_080A2BCC:
     add r0, r5, #0

@@ -58,7 +58,7 @@ loc_080E971C:
     add r0, r3, #0
     strh r0, [r4]
     b loc_080E9814
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0202EBB0 ; proven PC/switch data
     .word 0x0000206B ; proven PC/switch data
     .word 0x0000208A ; proven PC/switch data

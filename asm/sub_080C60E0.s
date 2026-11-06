@@ -49,7 +49,7 @@ loc_080C60FC:
     bl EXT_080127E4
     mov r0, #0x9c
     b loc_080C6198
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x00006702 ; proven PC/switch data
     add r0, r4, #0
     bl EXT_080128D4
@@ -67,7 +67,7 @@ loc_080C60FC:
     mov r0, #0x20
     strb r0, [r4, #0x12]
     b loc_080C619C
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x00006703 ; proven PC/switch data
     add r0, r4, #0
     bl EXT_080128D4

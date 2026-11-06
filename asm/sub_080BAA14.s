@@ -66,7 +66,7 @@ sub_080BAA14:
     str r6, [r5, #0x60]
     str r6, [r5, #0x68]
     b loc_080BAACA
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x08345998
     .word 0x0834715C
 loc_080BAAA4:

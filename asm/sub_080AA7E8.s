@@ -21,7 +21,7 @@ loc_080AA7FA:
     ldr r0, [r0, #0xc]
     str r0, [r4, #0x14]
     b loc_080AA8A6
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x08343064
 loc_080AA814:
     add r0, r4, #0

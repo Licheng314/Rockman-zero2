@@ -204,7 +204,7 @@ loc_080AAFA6:
     ldr r0, [r0]
     ldr r0, [r0, #8]
     b loc_080AB098
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x080EF450
     .word 0xFFFFFF00
     .word 0x08343064

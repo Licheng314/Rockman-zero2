@@ -63,7 +63,7 @@ loc_08050986:
     add r0, r5, #0
     bl EXT_080128D4
     b loc_08050AA8
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0000A417 ; proven PC/switch data
     ldr r0, [pc, #0xcc]
     mov r10, r0

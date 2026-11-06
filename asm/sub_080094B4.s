@@ -59,7 +59,7 @@ loc_0800951A:
     beq loc_0800953C
     add r4, #1
     b loc_08009548
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x000004FF
     .word 0x020011B8
     .word 0x08312B8C
@@ -86,7 +86,7 @@ loc_08009556:
 loc_0800955A:
     ldr r0, [pc, #8]
     b loc_0800957C
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x000004FF
     .word 0x7FFFFFFF
 loc_08009568:

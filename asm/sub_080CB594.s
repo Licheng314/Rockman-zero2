@@ -35,7 +35,7 @@ loc_080CB5AE:
     cmp r0, r1
     bge loc_080CB618
     b loc_080CB5FA
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0xFFFFFD00
     .word 0xFFFF8800
 loc_080CB5E0:

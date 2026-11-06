@@ -13,7 +13,7 @@ loc_08095220:
     add r0, r0, r1
     ldr r0, [r0]
     mov pc, r0
-    .dh 0x0000 ; TODO movs r0, r0
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x08095230 ; proven PC/switch data
     .word 0x08095258 ; proven PC/switch data
     .word 0x08095272 ; proven PC/switch data

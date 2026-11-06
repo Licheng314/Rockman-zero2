@@ -14,7 +14,7 @@ sub_08036118:
     cmp r0, #0
     bne loc_08036146
     b loc_08036158
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0202EC30
 loc_08036138:
     ldr r0, [pc, #0x18]
@@ -31,7 +31,7 @@ loc_08036146:
     mov r0, #0
     strb r0, [r1]
     b loc_08036198
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0202EC30
 loc_08036158:
     add r0, r4, #0

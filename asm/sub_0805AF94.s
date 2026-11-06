@@ -22,7 +22,7 @@ loc_0805AFA2:
     lsl r1, r1, #5
     add r0, r0, r1
     b loc_0805AFCA
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0000A913
 loc_0805AFC4:
     ldr r0, [r5, #0x54]
@@ -74,7 +74,7 @@ loc_0805AFCA:
     mov r3, #6
     bl EXT_080A3DB4
     b loc_0805B092
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0xFFFFE800
     .word 0x0000062C
     .word 0x08432D00

@@ -196,7 +196,7 @@ loc_0800E0AA:
     bne loc_0800E116
     strb r5, [r1]
     b loc_0800E116
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x02001000
     .word 0x0002D020
     .word 0x000007D4

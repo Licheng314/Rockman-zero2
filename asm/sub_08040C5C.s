@@ -49,7 +49,7 @@ loc_08040C9C:
     ldrb r0, [r4, #0xf]
     add r0, #1
     b loc_08040CD8
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0xFFFFFAAB
 loc_08040CC8:
     add r0, r4, #0
@@ -85,7 +85,7 @@ loc_08040CDA:
     beq loc_08040D0C
     ldr r1, [pc, #4]
     b loc_08040D10
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0xFFFFDC00
 loc_08040D0C:
     mov r1, #0x90

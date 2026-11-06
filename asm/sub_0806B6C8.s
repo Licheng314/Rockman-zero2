@@ -28,7 +28,7 @@ loc_0806B6F0:
     ldrb r0, [r4, #0xe]
     add r0, #1
     b loc_0806B742
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x00000808
 loc_0806B704:
     cmp r0, #2
@@ -53,7 +53,7 @@ loc_0806B710:
     beq loc_0806B734
     orr r3, r2
     b loc_0806B736
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0833E4EC
 loc_0806B734:
     add r3, r2, #0

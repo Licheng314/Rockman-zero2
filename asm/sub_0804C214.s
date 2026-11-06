@@ -181,7 +181,7 @@ loc_0804C35C:
     ble loc_0804C3A0
     str r0, [r4, #0x54]
     b loc_0804C3A4
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0xFFFFE000
 loc_0804C38C:
     add r0, r4, #0

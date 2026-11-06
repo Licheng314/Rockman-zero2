@@ -130,7 +130,7 @@ loc_0802275E:
 loc_080227A6:
     mov r0, r9
     b loc_080227B6
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0xFFFFF000
     .word 0x00000FFF
 loc_080227B4:

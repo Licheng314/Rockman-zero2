@@ -2,7 +2,7 @@
 .thumb
 sub_080EF1E4:
     mov pc, lr
-    .dh 0x0000 ; TODO movs r0, r0
+    .dh 0x0000 ; alignment after unconditional transfer
     mov r3, #1
     cmp r1, #0
     beq loc_080EF2AC

@@ -42,7 +42,7 @@ loc_080DEF98:
     beq loc_080DEFC0
     mov r0, #1
     b loc_080DEFC2
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0202F658
     .word 0x0834F364
     .word 0x0834F314

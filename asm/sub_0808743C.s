@@ -55,7 +55,7 @@ loc_0808747A:
     sub r0, r3, #1
     str r0, [r4, #0x5c]
     b loc_080874BA
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x080EF450
 loc_080874A8:
     ldr r1, [pc, #0x14]

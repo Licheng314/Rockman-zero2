@@ -55,7 +55,7 @@ loc_08078D78:
     mov r0, #0
     strb r0, [r4, #0xe]
     b loc_08078DDE
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0833FE90
 loc_08078DB0:
     ldr r0, [r4, #0x54]

@@ -59,7 +59,7 @@ sub_0803C4D4:
     beq loc_0803C554
     strb r4, [r5, #0x13]
     b loc_0803C556
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x08336060
 loc_0803C554:
     strb r0, [r5, #0x13]

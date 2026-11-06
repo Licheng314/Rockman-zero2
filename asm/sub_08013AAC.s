@@ -16,7 +16,7 @@ loc_08013AC0:
     bgt loc_08013AD0
     mov r0, #0
     b loc_08013B42
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x000E0FFF
 loc_08013AD0:
     ldr r0, [pc, #0x1c]
@@ -34,7 +34,7 @@ loc_08013AD0:
     bgt loc_08013AFC
     mov r0, #2
     b loc_08013B42
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0xFFEF1FFF
     .word 0x0000EFFE
     .word 0x0003BFFF
@@ -58,7 +58,7 @@ loc_08013B0C:
 loc_08013B1A:
     mov r0, #1
     b loc_08013B42
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x000FEFFF
     .word 0x0003BFFF
     .word 0x0013AFFF
@@ -69,7 +69,7 @@ loc_08013B30:
     ble loc_08013B40
     mov r0, #6
     b loc_08013B42
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0018DFFF
 loc_08013B40:
     mov r0, #3

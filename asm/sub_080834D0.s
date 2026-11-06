@@ -146,7 +146,7 @@ loc_080835D0:
     mov r0, #0x80
     strb r0, [r1]
     b loc_08083606
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0xFFFFF400
 loc_08083600:
     add r0, r4, #0

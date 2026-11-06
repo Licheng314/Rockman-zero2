@@ -95,7 +95,7 @@ loc_0805DCD0:
     cmp r1, r0
     ble loc_0805DD70
     b loc_0805DD40
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0000AA02 ; proven PC/switch data
     .word 0xFFFFE000 ; proven PC/switch data
     .word 0xFFFFFC00 ; proven PC/switch data
@@ -103,7 +103,7 @@ loc_0805DCD0:
     add r0, r4, #0
     bl EXT_080127E4
     b loc_0805DD40
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0000AA01 ; proven PC/switch data
     add r0, r4, #0
     bl EXT_080128D4

@@ -16,13 +16,12 @@
   "exact_new_extents_verified": 4300,
   "rom_sha1": "c4d93a58f0f82c526dec8a3fdbda170336303689",
   "next_work": [
-    "Classify old pool words and alignment bytes embedded in Thumb manifests using positive data and boundary evidence",
-    "Trace or repair remaining invalid and unclassified legacy raw halfwords",
+    "Audit the remaining 406 bytes of legacy raw-source markers, prioritizing the 168- and 92-byte clusters; prove code and data before rewriting",
     "Audit final full-ROM build and source classification"
   ],
   "overall_goal_achieved": false,
-  "old_formal_new_decoded_instruction_bytes": 45670,
-  "old_formal_new_decoded_instruction_count": 21462,
+  "old_formal_new_decoded_instruction_bytes": 46410,
+  "old_formal_new_decoded_instruction_count": 21814,
   "global_formal_extents_verified": 14920,
   "new_verified_pc_word_bytes": 960,
   "new_verified_indirect_code_bytes": 498,
@@ -78,7 +77,9 @@
     "stage0-animation-tables-20261106.json",
     "stage0-leaf-routines-20261106.json",
     "stage0-terminal-gaps-20261106.json",
-    "stage0-reencode-thumb-20261106.json"
+    "stage0-reencode-thumb-20261106.json",
+    "stage0-inline-data-20261106.json",
+    "stage0-existing-dispatch-tail-20261106.json"
   ],
   "residual_audit": {
     "total_lines": 5178,
@@ -138,5 +139,24 @@
     "instruction_count": 1816,
     "byte_count": 3632,
     "source_file_count": 707
+  },
+  "legacy_inline_data_classified": {
+    "alignment_bytes": 5206,
+    "referenced_word_half_bytes": 242
+  },
+  "legacy_dispatch_repair": {
+    "newly_recognized_switches": 5,
+    "entries_restored": 47,
+    "instruction_bytes": 740,
+    "instruction_count": 352,
+    "complete_word_locations_reconciled": 272
+  },
+  "legacy_unclassified_raw_source": {
+    "lines": 183,
+    "bytes": 406,
+    "todo_bytes": 206,
+    "zero_gap_bytes": 32,
+    "nonzero_gap_bytes": 168,
+    "scope": "Legacy Thumb manifest .dh gap/TODO/svc/preserved raw markers, excluding already classified data and integrated C"
   }
 }

@@ -82,7 +82,7 @@ loc_0804372A:
     cmp r0, #0
     beq loc_0804374E
     b loc_080437D4
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0000A314
     .word 0x08345998
     .word 0xFFFFE400
@@ -127,7 +127,7 @@ loc_08043774:
     add r0, r0, r3
     str r0, [r1, #0x58]
     b loc_080437E8
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0xFFFFF200
 loc_0804379C:
     add r2, r5, #0

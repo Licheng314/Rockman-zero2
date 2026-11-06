@@ -30,7 +30,7 @@ sub_0800F458:
     ldr r0, [pc, #0x10]
     str r0, [r3, #0x4c]
     b loc_0800F4AC
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x02000F94
     .word 0x0000FFFC
     .word 0x0831348C

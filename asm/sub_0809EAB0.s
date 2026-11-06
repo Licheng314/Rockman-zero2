@@ -105,7 +105,7 @@ loc_0809EB4A:
     ldr r0, [r0]
     add r1, r1, r0
     b loc_0809EB92
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x08343DD8
 loc_0809EB84:
     ldr r1, [pc, #0x24]
@@ -128,7 +128,7 @@ loc_0809EB92:
     beq loc_0809EBB8
     ldr r0, [pc, #0xc]
     b loc_0809EBBC
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x08343DD8
     .word 0xFFFFE800
     .word 0xFFFFFE00

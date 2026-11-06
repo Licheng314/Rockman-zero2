@@ -50,7 +50,7 @@ loc_08097D14:
     mov r1, #0
     mov r0, #2
     b loc_08097D32
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x00001FFF
 loc_08097D20:
     ldr r1, [r4, #0x60]

@@ -25,7 +25,7 @@ sub_080EAEC4:
     mov r0, #3
     bl EXT_080032EC
     b loc_080EAF6A
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x02000D10
 loc_080EAEFC:
     ldr r0, [r7, #0x10]

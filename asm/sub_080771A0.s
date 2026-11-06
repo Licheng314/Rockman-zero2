@@ -9,7 +9,7 @@ sub_080771A0:
     beq loc_080771B8
     mov r0, #0
     b loc_080771BA
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x800F0000
 loc_080771B8:
     mov r0, #1

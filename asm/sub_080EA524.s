@@ -37,7 +37,7 @@ loc_080EA54A:
     add r1, r5, #0
     bl EXT_080EEF68
     b loc_080EA5A6
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0001FFFF
     .word 0x0202EBB0
     .word 0x0836D114

@@ -77,7 +77,7 @@ loc_080538D6:
     beq loc_08053914
     mov r0, #0x14
     b loc_08053922
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0000A614
 loc_08053914:
     add r0, r6, #0

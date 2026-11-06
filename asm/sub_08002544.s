@@ -71,7 +71,7 @@ loc_0800259C:
     and r2, r7
     bl EXT_080EEF6C
     b loc_08002622
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x02000D60
     .word 0x040000D4
     .word 0x001FFFFF

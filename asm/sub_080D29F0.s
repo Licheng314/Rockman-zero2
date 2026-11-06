@@ -85,7 +85,7 @@ loc_080D2A8C:
     strb r0, [r4, #0xd]
     strb r1, [r4, #0xe]
     b loc_080D2B24
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0202E188
     .word 0x000343FD
     .word 0x00269EC3
@@ -139,7 +139,7 @@ loc_080D2AD8:
     beq loc_080D2B14
     mov r0, #0
     b loc_080D2B16
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0202E188
     .word 0x000343FD
     .word 0x00269EC3

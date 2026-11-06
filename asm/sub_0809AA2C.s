@@ -22,7 +22,7 @@ loc_0809AA48:
     add r0, r0, r1
     ldr r0, [r0]
     mov pc, r0
-    .dh 0x0000 ; TODO movs r0, r0
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0809AA58 ; proven PC/switch data
     .word 0x0809AAD4 ; proven PC/switch data
     .word 0x0809AB62 ; proven PC/switch data
@@ -110,7 +110,7 @@ loc_0809AA48:
     add r0, r5, #0
     bl EXT_080127E4
     b loc_0809AB62
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x00000D06 ; proven PC/switch data
     mov r1, #0
     mov r0, #3

@@ -41,7 +41,7 @@ loc_08019FB8:
 loc_08019FCA:
     strb r5, [r4]
     b loc_0801A06C
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x083263F0
 loc_08019FD4:
     cmp r2, #1
@@ -64,7 +64,7 @@ loc_08019FD4:
     mov r0, #2
     strb r0, [r4]
     b loc_0801A06C
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x000D2FFF
     .word 0x0202EC30
     .word 0x083263F0

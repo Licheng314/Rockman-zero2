@@ -51,7 +51,7 @@ loc_080523A8:
     bhi loc_080523BC
     mov r0, #1
     b loc_080523BE
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x000001FF
 loc_080523BC:
     lsr r0, r1, #9
@@ -114,7 +114,7 @@ loc_08052406:
     strb r0, [r4, #0xe]
     strb r2, [r4, #0xf]
     b EXT_080524DE
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0xFFFFFE00
 loc_08052438:
     add r0, r4, #0

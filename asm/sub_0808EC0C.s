@@ -63,7 +63,7 @@ loc_0808EC2A:
     mov r0, #0
     strb r0, [r4, #0xe]
     b loc_0808EC9A
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x080EF450
 loc_0808EC8C:
     lsl r0, r0, #0x18

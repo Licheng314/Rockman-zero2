@@ -15,7 +15,8 @@ from thumb_v4 import valid_thumb1
 
 BASE = 0x08000000
 EVIDENCE = ROOT / 'docs/semantic-data'
-DECODE_REPORTS = ('stage0-existing-decode.json', 'stage0-existing-decode-followup.json')
+DECODE_REPORTS = ('stage0-existing-decode.json', 'stage0-existing-decode-followup.json',
+                  'stage0-existing-dispatch-tail-20261106.json')
 
 
 def main():
@@ -31,7 +32,7 @@ def main():
         for source in report['sources']:
             edges[source['file']][source['before_sha1']].add(source['after_sha1'])
     for repair_report in ('stage0-split-bl-repairs.json', 'stage0-split-literals-20261106.json',
-                          'stage0-reencode-thumb-20261106.json'):
+                          'stage0-reencode-thumb-20261106.json', 'stage0-inline-data-20261106.json'):
         repairs = json.loads((EVIDENCE / repair_report).read_bytes())['repairs']
         for repair in repairs:
             if 'after_sha1' in repair:

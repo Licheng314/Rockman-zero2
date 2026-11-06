@@ -30,7 +30,7 @@ loc_080B8134:
     mov r0, #0x10
     orr r0, r1
     b loc_080B814E
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x00005C0C
 loc_080B8148:
     ldrb r1, [r7, #0xa]

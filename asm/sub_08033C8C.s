@@ -25,7 +25,7 @@ sub_08033C8C:
     add r0, r4, r3
     strb r1, [r0]
     b loc_08033D48
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x083345B4
     .word 0x000002B7
 loc_08033CC8:
@@ -70,7 +70,7 @@ loc_08033D0E:
     add r0, r4, r3
     ldrb r3, [r0]
     b loc_08033D2C
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x000002B7
     .word 0x00000175
     .word 0x000002B9

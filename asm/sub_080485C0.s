@@ -60,7 +60,7 @@ loc_080485FC:
     ldr r0, [r0]
     sub r1, r1, r0
     b loc_08048660
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0000A50B
     .word 0x0833ADB4
     .word 0x0833AEF4

@@ -31,23 +31,16 @@ loc_0805D074:
     add r0, r0, r1
     ldr r0, [r0]
     mov pc, r0
-    .dh 0x0000 ; TODO movs r0, r0
-    add r1, sp, #0x58
-    .dh 0x0000 ; TODO movs r0, r0
+    .dh 0x0000 ; alignment after unconditional transfer
+    .word 0x0000A916 ; proven PC/switch data
     beq EXT_0805CF98
     lsr r5, r0, #0x20
-    beq EXT_0805CFCC
-    lsr r5, r0, #0x20
-    bne EXT_0805D0E0
-    lsr r5, r0, #0x20
-    bhs #0x805d024
-    lsr r5, r0, #0x20
-    bhs #0x805d054
-    lsr r5, r0, #0x20
-    bhs #0x805d084
-    lsr r5, r0, #0x20
-    blo #0x805d108
-    lsr r5, r0, #0x20
+    .word 0x0805D0A0 ; proven PC/switch data
+    .word 0x0805D128 ; proven PC/switch data
+    .word 0x0805D2C8 ; proven PC/switch data
+    .word 0x0805D2DE ; proven PC/switch data
+    .word 0x0805D2F4 ; proven PC/switch data
+    .word 0x0805D334 ; proven PC/switch data
     add r0, r6, #0
     add r0, #0x73
     ldrb r0, [r0]

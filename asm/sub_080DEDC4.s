@@ -52,7 +52,7 @@ loc_080DEE1C:
     bgt loc_080DEE3C
     str r7, [r2]
     b loc_080DEE46
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x02000F90
     .word 0x124C124B
     .word 0x126C126B
@@ -94,7 +94,7 @@ loc_080DEE70:
     bgt loc_080DEE84
     str r7, [r2]
     b loc_080DEE8E
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x12A712A6
     .word 0x12271226
 loc_080DEE84:
@@ -131,7 +131,7 @@ loc_080DEEB4:
     bgt loc_080DEEC8
     str r7, [r2]
     b loc_080DEED2
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x12A912A8
     .word 0x12291228
 loc_080DEEC8:

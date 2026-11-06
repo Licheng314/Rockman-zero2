@@ -166,7 +166,7 @@ loc_0801C6EC:
     str r0, [r4, #0xc]
     mov r0, #1
     b loc_0801C712
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0834C47C ; proven PC/switch data
     .word 0x0834C9E4 ; proven PC/switch data
 loc_0801C700:

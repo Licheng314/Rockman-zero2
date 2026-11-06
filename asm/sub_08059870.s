@@ -41,7 +41,7 @@ loc_080598B2:
     cmp r1, #1
     beq loc_08059942
     b loc_0805998E
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0833A138
 loc_080598C4:
     ldrb r0, [r4, #0xb]

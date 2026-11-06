@@ -21,7 +21,7 @@ sub_080EB6D4:
     mov r0, #3
     bl EXT_080032EC
     b loc_080EB82A
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x02000D10
 loc_080EB704:
     ldr r1, [pc, #0xa4]
@@ -106,7 +106,7 @@ loc_080EB79E:
     mov r0, #2
     bl EXT_080032EC
     b loc_080EB82A
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x000075B8
     .word 0x00000DD9
     .word 0x00000DDA

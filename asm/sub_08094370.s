@@ -19,7 +19,7 @@ sub_08094370:
     cmp r2, #0
     ble loc_080943AE
     b loc_080943A8
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0xFFFFF000
 loc_0809439C:
     ldr r0, [r4, #0x54]
@@ -47,7 +47,7 @@ loc_080943AE:
     cmp r2, #0
     ble loc_080943EA
     b loc_080943E4
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0xFFFFF800
 loc_080943D4:
     ldr r1, [r4, #0x58]

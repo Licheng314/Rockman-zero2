@@ -268,7 +268,7 @@ loc_0802846A:
     add r0, r6, #0
     bl EXT_080285E8
     b loc_080285D8
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x00000175
     .word 0x00000177
     .word 0x00000179
@@ -377,7 +377,7 @@ loc_0802858E:
     mov r1, #0x83
     bl EXT_0801E9FC
     b loc_080285C0
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0000017F
 loc_080285B8:
     add r0, r6, #0

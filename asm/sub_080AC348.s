@@ -48,7 +48,7 @@ sub_080AC348:
     mov r0, #1
     strb r0, [r5, #0xd]
     b loc_080AC3D0
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x08345968
 loc_080AC3B0:
     ldr r0, [r5, #0x60]
@@ -186,7 +186,7 @@ loc_080AC470:
     and r0, r1
     strb r0, [r5, #0xa]
     b loc_080AC4E2
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x08343064
 loc_080AC4CC:
     ldr r0, [r5, #0x60]

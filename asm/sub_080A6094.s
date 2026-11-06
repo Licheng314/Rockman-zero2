@@ -117,7 +117,7 @@ loc_080A6152:
     mov r0, #0x80
     lsl r0, r0, #4
     b loc_080A617E
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x00005C08
 loc_080A617C:
     ldr r0, [pc, #0x14]
@@ -132,7 +132,7 @@ loc_080A618A:
     add r0, #1
     strb r0, [r4, #0xd]
     b loc_080A61E6
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0xFFFFF800
 loc_080A6198:
     add r0, r4, #0

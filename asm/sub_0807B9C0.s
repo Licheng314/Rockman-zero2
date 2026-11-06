@@ -67,7 +67,7 @@ loc_0807BA10:
     cmp r0, #0x48
     beq loc_0807BA56
     b loc_0807BA86
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x00005014
     .word 0x080EF450
 loc_0807BA50:
@@ -87,7 +87,7 @@ loc_0807BA56:
     mov r0, #0x91
     bl EXT_080032EC
     b loc_0807BA86
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0xFFFFFC00
     .word 0xFFFFE700
 loc_0807BA7C:

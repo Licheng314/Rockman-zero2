@@ -25,7 +25,7 @@ sub_0805DFF4:
     str r0, [r5, #0x5c]
     str r2, [r5, #0x64]
     b loc_0805E044
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0000AA10
     .word 0x0833CEDC
     .word 0xFFFFFE00
@@ -73,7 +73,7 @@ loc_0805E07A:
     cmp r1, #0
     beq loc_0805E09A
     b EXT_0805E14A
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0xFFFFFF00
 loc_0805E090:
     cmp r1, #2

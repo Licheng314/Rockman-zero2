@@ -56,7 +56,7 @@ loc_0807436E:
     str r5, [r4, #0x2c]
     str r6, [r4, #0x24]
     b loc_0807441C
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0833F454
 loc_080743A4:
     add r0, r5, #0

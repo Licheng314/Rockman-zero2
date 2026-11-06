@@ -55,7 +55,7 @@ loc_08058A3A:
     add r0, r0, r4
     mov r8, r0
     b loc_08058B92
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0833C828
     .word 0x0833CB70
 loc_08058A60:

@@ -55,7 +55,7 @@ loc_080B20EC:
     mov r0, #0xef
     bl EXT_080032EC
     b loc_080B214E
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x02000FE0
     .word 0x00003FFF
 loc_080B2108:

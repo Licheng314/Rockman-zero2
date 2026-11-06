@@ -28,7 +28,7 @@ loc_080E0290:
     cmp r0, #0
     beq loc_080E02B2
     b loc_080E0324
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x000005E1
 loc_080E02AC:
     cmp r0, #2
@@ -66,7 +66,7 @@ loc_080E02D6:
     add r0, #1
     strb r0, [r5, #7]
     b loc_080E0324
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x000005D4
     .word 0x000005E2
 loc_080E02F8:

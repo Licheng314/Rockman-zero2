@@ -24,7 +24,7 @@ loc_0801CCEE:
     orr r0, r1
     strb r0, [r2, #1]
     b loc_0801CD26
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x030032E0
 loc_0801CD00:
     ldr r1, [pc, #4]
@@ -38,7 +38,7 @@ loc_0801CD0C:
     mov r0, #0x80
     orr r0, r1
     b loc_0801CD24
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x030032E0
 loc_0801CD1C:
     ldr r2, [pc, #0xc]

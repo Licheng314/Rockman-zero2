@@ -24,8 +24,7 @@ block_0806FDD4:
     add r1, r1, r2
     b loc_0806FE20
     .word 0xFFFFEC00
-    .dh 0xF800 ; gap
-    .dh 0xFFFF ; gap
+    .word 0xFFFFF800 ; proven PC/switch data
 loc_0806FE0C:
     cmp r0, #0
     ble loc_0806FE26
@@ -88,7 +87,7 @@ loc_0806FE42:
     ldr r2, [pc, #4]
     add r1, r1, r2
     b loc_0806FE9C
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0xFFFFEC00
 loc_0806FE88:
     cmp r0, #0

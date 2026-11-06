@@ -22,7 +22,7 @@ sub_080D49E4:
     cmp r1, #0
     bne loc_080D4A1C
     b loc_080D4A58
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0202E130
 loc_080D4A14:
     mov r0, #1

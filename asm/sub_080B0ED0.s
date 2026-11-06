@@ -42,7 +42,7 @@ sub_080B0ED0:
     mov r0, #0x10
     orr r1, r0
     b loc_080B0F34
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x08345998
     .word 0x00000609
 loc_080B0F30:

@@ -40,7 +40,7 @@ loc_08096C34:
     add r0, r0, r1
     ldr r0, [r0]
     mov pc, r0
-    .dh 0x0000 ; TODO movs r0, r0
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x08096C44 ; proven PC/switch data
     .word 0x08096C80 ; proven PC/switch data
     .word 0x08096C92 ; proven PC/switch data

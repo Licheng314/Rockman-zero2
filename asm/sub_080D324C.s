@@ -34,7 +34,7 @@ loc_080D3284:
     strb r0, [r3, #0x16]
     ldr r0, [pc, #4]
     b loc_080D32B2
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x00000253
 loc_080D3298:
     mov r0, #0x95

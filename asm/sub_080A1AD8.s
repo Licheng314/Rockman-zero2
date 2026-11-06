@@ -44,7 +44,7 @@ loc_080A1AF6:
     str r5, [r4, #0x2c]
     str r6, [r4, #0x24]
     b loc_080A1B42
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x083445E0
 loc_080A1B34:
     ldrb r0, [r5, #0x12]

@@ -84,7 +84,7 @@ loc_080B190E:
     sub r1, r1, r0
     str r1, [r7, #0x60]
     b loc_080B19AA
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x00000A05
     .word 0x0202E188
     .word 0x000343FD

@@ -30,7 +30,7 @@ sub_080D8CEC:
     add r0, r4, #0
     bl EXT_080D8C5C
     b loc_080D8D38
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0xFFFFF400
 loc_080D8D30:
     ldr r0, [r5]

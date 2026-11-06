@@ -73,7 +73,7 @@ loc_080394DC:
     and r0, r1
     strb r0, [r4, #0xa]
     b loc_08039564
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0202E188
     .word 0x000343FD
     .word 0x00269EC3
@@ -118,7 +118,7 @@ loc_08039544:
     add r0, r4, #0
     bl EXT_080396AC
     b loc_080395C4
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x08336060
 loc_08039564:
     ldr r0, [pc, #0x3c]

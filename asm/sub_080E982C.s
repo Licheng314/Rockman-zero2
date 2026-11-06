@@ -26,7 +26,7 @@ sub_080E982C:
     orr r0, r1
     strh r0, [r6]
     b loc_080E98BE
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0202EBF0
     .word 0x0202EBB0
 loc_080E9868:

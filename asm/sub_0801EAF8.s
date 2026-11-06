@@ -27,7 +27,7 @@ sub_0801EAF8:
     ldr r0, [pc, #8]
     ldrh r7, [r0, #6]
     b loc_0801EB3C
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x00000195
     .word 0x0202EC30
 loc_0801EB38:

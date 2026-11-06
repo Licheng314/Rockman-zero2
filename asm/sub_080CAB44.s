@@ -17,7 +17,7 @@ sub_080CAB44:
     add r0, r4, #0
     bl EXT_080127E4
     b loc_080CAB76
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x083490EC
 loc_080CAB6C:
     ldr r0, [pc, #0x74]
@@ -78,7 +78,7 @@ loc_080CABA8:
     beq loc_080CAC00
     ldr r0, [pc, #0x1c]
     b loc_080CAC1E
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x083490EC
     .word 0x02001000
     .word 0x0002C00C

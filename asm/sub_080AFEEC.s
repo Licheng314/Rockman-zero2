@@ -102,7 +102,7 @@ loc_080AFFC0:
     cmp r4, #0
     beq loc_080AFFDA
     b loc_080B0100
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x08345DAC ; proven PC/switch data
 loc_080AFFD0:
     cmp r4, #2
@@ -137,7 +137,7 @@ loc_080AFFFC:
     bhs #0x80b0014
     mov r4, #0xff
     b loc_080B003E
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x01000050 ; proven PC/switch data
     mov r2, r8
     ldrb r0, [r2, #0x12]
@@ -195,7 +195,7 @@ loc_080B006C:
     cmp r5, #0x19
     ble loc_080B006C
     b loc_080B00E2
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x01000050 ; proven PC/switch data
 loc_080B0088:
     mov r0, #0xa0

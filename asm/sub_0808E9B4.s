@@ -186,7 +186,7 @@ loc_0808EA1C:
     ldr r0, [r0, #0x10]
     str r0, [r7, #0x14]
     b loc_0808EB78
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0xFFFFEE00
     .word 0x0202E188
     .word 0x000343FD

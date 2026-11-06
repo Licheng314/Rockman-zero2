@@ -59,7 +59,7 @@ loc_0804CD3C:
     sub r0, #0x25
     add r7, r1, #0
     b loc_0804CE3A
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x02000FE0
 loc_0804CD58:
     mov r4, r8

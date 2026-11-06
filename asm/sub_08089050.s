@@ -59,7 +59,7 @@ loc_08089090:
     cmp r2, r0
     bgt loc_080890EE
     b loc_080890E6
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0000043F
     .word 0xFFFFF800
     .word 0x000004FF

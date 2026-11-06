@@ -33,7 +33,7 @@ sub_080021F0:
     strh r0, [r4, #2]
     mov r0, #0
     b loc_08002240
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x02000D40
     .word 0x00000ABA
 loc_0800223C:

@@ -23,7 +23,7 @@ loc_080CD000:
     beq loc_080CD018
     mov r0, #1
     b loc_080CD024
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0xFFFFCF01
 loc_080CD018:
     add r0, r6, #1

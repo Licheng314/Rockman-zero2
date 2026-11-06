@@ -113,7 +113,7 @@ loc_080070EC:
     ldr r0, [r2]
     sub r0, r0, r5
     b loc_08007142
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x030032E0
 loc_0800713C:
     mov r2, r12

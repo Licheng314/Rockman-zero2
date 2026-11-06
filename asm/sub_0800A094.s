@@ -52,7 +52,7 @@ loc_0800A0C4:
     bls loc_0800A0FC
     sub r5, r3, r2
     b loc_0800A0A4
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x02001000
 loc_0800A0FC:
     mov r1, #0x18

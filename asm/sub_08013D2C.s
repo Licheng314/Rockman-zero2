@@ -8,7 +8,7 @@ sub_08013D2C:
     ble loc_08013D40
     mov r0, #1
     b loc_08013D52
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x001E5000
 loc_08013D40:
     ldr r0, [pc, #8]
@@ -16,7 +16,7 @@ loc_08013D40:
     ble loc_08013D50
     mov r0, #0
     b loc_08013D52
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0002CFFF
 loc_08013D50:
     mov r0, #2

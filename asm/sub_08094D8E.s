@@ -35,7 +35,7 @@ loc_08094DCA:
     add r0, r4, #0
     bl EXT_080128D4
     b loc_08094E44
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x08342B10 ; proven PC/switch data
     .word 0x00009801 ; proven PC/switch data
     ldr r1, [pc, #0x30]
@@ -61,7 +61,7 @@ loc_08094E00:
     mov r1, #0
     bl EXT_08094370
     b loc_08094E44
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x00009802 ; proven PC/switch data
     ldr r1, [pc, #0x34]
     add r0, r4, #0

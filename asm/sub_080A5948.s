@@ -42,7 +42,7 @@ loc_080A598A:
     cmp r0, #0
     beq loc_080A59AE
     b loc_080A5B40
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0202E130
 loc_080A59A0:
     cmp r0, #2
@@ -182,7 +182,7 @@ loc_080A5A9A:
     cmp r0, #5
     bne loc_080A5B40
     b loc_080A5B46
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0xFFFF0000
     .word 0x0202E130
     .word 0xFFFFF000

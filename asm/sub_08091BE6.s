@@ -84,8 +84,7 @@ loc_08091C82:
     strb r1, [r4, #0xe]
     b loc_08091CB0
     .word 0x0202E130
-    .dh 0xDC00 ; gap
-    .dh 0xFFFF ; gap
+    .word 0xFFFFDC00 ; proven PC/switch data
     .word 0x080EF450
     .word 0x0202ED18
     .word 0x00004FFF

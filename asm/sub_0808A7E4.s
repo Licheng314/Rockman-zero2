@@ -47,7 +47,7 @@ loc_0808A82E:
     cmp r4, r5
     bne loc_0808A858
     b loc_0808A870
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0202E188
     .word 0x000343FD
     .word 0x00269EC3
@@ -65,7 +65,7 @@ loc_0808A858:
     add r0, r3, #0
     bl EXT_080127E4
     b loc_0808A880
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x00007406
 loc_0808A870:
     mov r0, #0

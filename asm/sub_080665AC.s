@@ -123,7 +123,7 @@ loc_08066682:
     bne loc_080666AC
     mov r0, #1
     b loc_080666AE
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0833DC04
     .word 0x0833DBD4
 loc_080666AC:

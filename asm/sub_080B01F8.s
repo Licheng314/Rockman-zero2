@@ -399,7 +399,7 @@ loc_080B04BA:
     cmp r3, #0xc
     ble loc_080B04BA
     b loc_080B06D8
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x08346518 ; proven PC/switch data
     .word 0x0202F8F8 ; proven PC/switch data
     .word 0x08346691 ; proven PC/switch data

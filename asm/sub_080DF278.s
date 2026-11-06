@@ -30,7 +30,7 @@ sub_080DF278:
     mov r0, #1
     lsl r2, r2, #0x10
     b loc_080DF2C8
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x080EF450
     .word 0x0202F650
 loc_080DF2BC:
@@ -107,7 +107,7 @@ loc_080DF336:
     strh r1, [r0, #0xc]
     lsl r0, r3, #0x10
     b loc_080DF374
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x02000FE0
     .word 0xFFFFFF00
     .word 0x000002C6

@@ -14,7 +14,7 @@ sub_080389D0:
     cmp r0, #0
     beq loc_080389FA
     b loc_08038A6C
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0202EBB0 ; proven PC/switch data
     mov r0, #0x20
     bl EXT_0801E6AC
@@ -63,7 +63,7 @@ loc_08038A36:
     mov r0, #0x21
     bl EXT_0801E6AC
     b loc_08038A6C
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x00000206 ; proven PC/switch data
     .word 0x083359A4 ; proven PC/switch data
     .word 0x083359A6 ; proven PC/switch data

@@ -27,7 +27,7 @@ sub_08071C34:
     mov r1, #0x10
     orr r0, r1
     b loc_08071C7A
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x00001A03
 loc_08071C74:
     ldrb r1, [r6, #0xa]
@@ -99,7 +99,7 @@ loc_08071C7A:
     mov r1, #0xa8
     lsl r1, r1, #6
     b loc_08071D14
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0833EF48
     .word 0x0833F008
     .word 0x00000801

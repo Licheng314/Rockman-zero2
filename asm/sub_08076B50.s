@@ -32,7 +32,7 @@ sub_08076B50:
     add r0, r1, r2
     str r0, [r4, #0x60]
     b loc_08076B9E
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x00001405
     .word 0xFFFFFE00
 loc_08076B9C:

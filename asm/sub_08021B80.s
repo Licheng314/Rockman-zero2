@@ -20,7 +20,7 @@ sub_08021B80:
     bne loc_08021BAC
     mov r0, #0xff
     b loc_08021C32
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x02001000
 loc_08021BAC:
     mov r4, #0xff

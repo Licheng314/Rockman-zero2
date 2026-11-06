@@ -55,7 +55,7 @@ loc_08009968:
     bls loc_080099A0
     add r0, r4, #0
     b loc_080099B0
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x02001000
 loc_080099A0:
     add r6, #0x18

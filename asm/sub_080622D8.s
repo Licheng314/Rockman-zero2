@@ -36,7 +36,7 @@ sub_080622D8:
     cmp r1, r0
     ble loc_08062338
     b loc_08062336
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0xFFFFDC00
 loc_08062324:
     add r0, r3, #0

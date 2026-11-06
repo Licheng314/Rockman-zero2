@@ -52,7 +52,7 @@ loc_080E9B12:
     orr r0, r1
     strh r0, [r6]
     b loc_080E9B70
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x00000236
     .word 0x0000270F
     .word 0x000003FF

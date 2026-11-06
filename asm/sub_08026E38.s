@@ -25,7 +25,7 @@ loc_08026E5A:
     ldr r0, [pc, #4]
     ldrh r0, [r0, #6]
     b loc_08026E70
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0202EC30
 loc_08026E6C:
     ldr r0, [pc, #0x10]

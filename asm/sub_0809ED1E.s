@@ -14,8 +14,7 @@ sub_0809ED1E:
     add r0, r1, #0
     sub r0, #0x10
     b loc_0809ED4C
-    .dh 0xE130 ; gap
-    .dh 0x0202 ; gap
+    .word 0x0202E130 ; proven PC/switch data
     .word 0xFFFFFC80
 loc_0809ED40:
     ldr r1, [r5, #0x5c]

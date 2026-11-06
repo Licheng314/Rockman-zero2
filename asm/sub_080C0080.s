@@ -54,7 +54,7 @@ loc_080C00AC:
     add r1, #0xbd
     mov r0, #1
     b loc_080C00F6
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x00001D13
 loc_080C00F0:
     add r1, r4, #0

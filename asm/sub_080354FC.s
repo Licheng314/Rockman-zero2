@@ -16,7 +16,7 @@ sub_080354FC:
     beq loc_08035520
     mov r0, #0x3c
     b loc_08035530
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0202EBB0
 loc_08035520:
     cmp r2, #3

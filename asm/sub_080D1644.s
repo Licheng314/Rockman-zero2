@@ -27,7 +27,7 @@ sub_080D1644:
     add r0, r5, #0
     bl EXT_080D1764
     b loc_080D174A
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x02001000
     .word 0x0834863C
 loc_080D1684:
@@ -73,7 +73,7 @@ loc_080D16BA:
     cmp r0, r1
     bgt loc_080D16BA
     b loc_080D1738
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0002D020
     .word 0xFFFFF000
     .word 0x0202ED18

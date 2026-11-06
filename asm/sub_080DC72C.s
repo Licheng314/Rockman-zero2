@@ -40,7 +40,7 @@ sub_080DC72C:
     mov r1, #4
     bl EXT_08012CA4
     b loc_080DC794
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x00000233
 loc_080DC78C:
     add r0, r7, #0

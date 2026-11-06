@@ -12,7 +12,7 @@ sub_080E93F4:
     mov r0, #1
     bic r0, r1
     b loc_080E9412
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0202EBB0
 loc_080E9410:
     mov r0, #0

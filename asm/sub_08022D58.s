@@ -93,7 +93,7 @@ loc_08022DCE:
     ldr r6, [sp, #8]
     ldr r7, [sp, #0xc]
     b loc_08022E2C
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x00FFFF00
 loc_08022E10:
     ldr r0, [r5, #0x20]
@@ -158,7 +158,7 @@ loc_08022E46:
 loc_08022E86:
     mov r0, #1
     b loc_08022E9A
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0202E188
     .word 0x000343FD
     .word 0x00269EC3

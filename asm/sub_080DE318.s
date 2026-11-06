@@ -66,7 +66,7 @@ loc_080DE350:
     bl EXT_080EEF68
     ldr r2, [pc, #0x18]
     b loc_080DE430
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0202F0A0
     .word 0x080EF82C
     .word 0x02000F94

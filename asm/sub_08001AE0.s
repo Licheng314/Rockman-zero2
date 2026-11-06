@@ -40,7 +40,7 @@ sub_08001AE0:
     lsl r0, r0, #0x10
     asr r0, r0, #0x10
     b loc_08001B3A
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x00000FFF
     .word 0x08312364
 loc_08001B38:

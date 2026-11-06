@@ -73,7 +73,7 @@ loc_0803FDCC:
     bhi loc_0803FE34
     mov r0, #1
     b loc_0803FE92
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0202E188
     .word 0x000343FD
     .word 0x00269EC3

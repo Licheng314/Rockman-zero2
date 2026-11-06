@@ -56,7 +56,7 @@ loc_080BF2BC:
     str r1, [r3, #0x28]
     str r3, [r1, #0x2c]
     b loc_080BF2D6
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0202F084
     .word 0x08345998
     .word 0x0202E188

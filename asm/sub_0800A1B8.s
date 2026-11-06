@@ -66,7 +66,7 @@ loc_0800A1EE:
     sub r0, r4, r3
     sub r6, r0, #1
     b loc_0800A1CC
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x02001000
 loc_0800A23C:
     mov r0, #0x18

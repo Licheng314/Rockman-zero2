@@ -15,7 +15,7 @@ sub_08048960:
     add r0, #0xd0
     strb r5, [r0]
     b loc_080489A4
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0000A501
 loc_08048984:
     ldr r2, [pc, #0x4c]
@@ -58,7 +58,7 @@ loc_080489A4:
     and r0, r1
     strb r0, [r4, #0xa]
     b loc_080489FE
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0202E188
     .word 0x000343FD
     .word 0x00269EC3

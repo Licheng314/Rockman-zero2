@@ -230,7 +230,7 @@ loc_08060A3E:
     ldr r1, [pc, #8]
     add r0, r0, r1
     b loc_08060AB4
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0833D3C4
     .word 0xFFFFC900
 loc_08060AAC:

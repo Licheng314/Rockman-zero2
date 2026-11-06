@@ -100,7 +100,7 @@ loc_080E1760:
     add r0, #1
     strb r0, [r6, #2]
     b loc_080E17FE
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x03002AC0 ; proven PC/switch data
     .word 0x00000402 ; proven PC/switch data
     .word 0x02000D10 ; proven PC/switch data
@@ -188,7 +188,7 @@ loc_080E1818:
     mov r1, #3
     bl EXT_080DE510
     b loc_080E1884
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x00002054 ; proven PC/switch data
     .word 0x00005431 ; proven PC/switch data
     .word 0x02000CA0 ; proven PC/switch data

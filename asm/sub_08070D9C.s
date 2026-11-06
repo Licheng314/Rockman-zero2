@@ -109,7 +109,7 @@ sub_08070D9C:
     mov r2, #0
     bl EXT_080713C4
     b loc_08070EBE
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0833D990
     .word 0x0833ED04
     .word 0x08071891

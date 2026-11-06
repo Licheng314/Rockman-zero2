@@ -27,7 +27,7 @@ loc_08049C00:
     strb r0, [r4, #0xd]
     strb r1, [r4, #0xe]
     b loc_08049C6E
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0000A814
 loc_08049C24:
     add r0, r4, #0

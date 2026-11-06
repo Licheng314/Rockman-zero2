@@ -28,7 +28,7 @@ sub_080D38B0:
     strb r0, [r2, #0x19]
     ldr r0, [pc, #0xc]
     b loc_080D3926
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0202EBB0
     .word 0x0202EBF0
     .word 0x0000027B

@@ -8,7 +8,7 @@ sub_080C892C:
     bne loc_080C8940
     ldr r0, [pc, #4]
     b loc_080C8942
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0202E030
 loc_080C8940:
     ldr r0, [pc, #0x14]
@@ -23,7 +23,7 @@ loc_080C8942:
     cmp r0, #1
     beq loc_080C89BC
     b loc_080C89C2
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0202E038
 loc_080C895C:
     ldr r0, [pc, #0x68]

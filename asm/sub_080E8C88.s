@@ -10,7 +10,7 @@ sub_080E8C88:
     add r4, #2
     add r0, r0, r4
     b loc_080E8CA8
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0000020A
 loc_080E8CA0:
     sub r1, #1

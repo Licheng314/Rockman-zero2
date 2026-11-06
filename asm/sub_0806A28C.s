@@ -69,7 +69,7 @@ sub_0806A28C:
     add r0, #0xc0
     strb r7, [r0]
     b loc_0806A35C
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0833D990
     .word 0x0833E2B0
     .word 0x0806B195

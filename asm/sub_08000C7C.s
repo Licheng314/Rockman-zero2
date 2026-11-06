@@ -36,7 +36,7 @@ sub_08000C7C:
     beq loc_08000CD8
     lsl r2, r2, #2
     b loc_08000CDA
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x040000B8
     .word 0x03001590
     .word 0x040000B0

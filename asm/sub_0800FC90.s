@@ -52,7 +52,7 @@ loc_0800FCD2:
     sub r0, r0, r1
     str r0, [r2]
     b loc_0800FD18
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x02001000
     .word 0x0002D01C
     .word 0x0002D02C

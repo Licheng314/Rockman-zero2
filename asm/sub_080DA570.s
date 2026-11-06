@@ -20,7 +20,7 @@ loc_080DA58A:
     add r0, r2, #0
     bl EXT_080DA5D0
     b loc_080DA5C4
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0834B9BC ; proven PC/switch data
     ldr r0, [pc, #0xc]
     ldrb r1, [r0, #4]

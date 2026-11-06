@@ -69,7 +69,7 @@ loc_0805A938:
     strb r0, [r4, #0xd]
     strb r3, [r4, #0xe]
     b loc_0805AA74
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0202E188
     .word 0x000343FD
     .word 0x00269EC3
@@ -142,7 +142,7 @@ loc_0805A9B0:
     bhi loc_0805A9EC
     mov r0, #0x1a
     b loc_0805AA60
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0202E130
     .word 0x0202E188
     .word 0x000343FD

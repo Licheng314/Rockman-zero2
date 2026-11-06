@@ -280,7 +280,7 @@ loc_08090C4E:
     ldr r0, [r0, #0xc]
     str r0, [r4, #0x14]
     b loc_08090F72
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0202ED18 ; proven PC/switch data
     .word 0x0001DFFF ; proven PC/switch data
     .word 0x0833D990 ; proven PC/switch data
@@ -397,7 +397,7 @@ loc_08090D1C:
     str r1, [r0]
     add r0, #4
     b loc_08090EE6
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x000077FF ; proven PC/switch data
     .word 0x0833D990 ; proven PC/switch data
 loc_08090D64:

@@ -34,7 +34,7 @@ loc_080838DE:
     mov r0, #0xe0
     lsl r0, r0, #2
     b loc_08083920
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x08341148
 loc_08083910:
     ldr r0, [r4, #0x58]

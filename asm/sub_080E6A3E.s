@@ -127,7 +127,7 @@ loc_080E6B04:
     ldrb r0, [r4]
     bl EXT_080148A4
     b loc_080E6B88
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0202EC30 ; proven PC/switch data
     .word 0x00007254 ; proven PC/switch data
     .word 0x0835E49C ; proven PC/switch data

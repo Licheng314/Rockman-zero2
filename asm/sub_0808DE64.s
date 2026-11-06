@@ -58,7 +58,7 @@ loc_0808DEA2:
     strb r0, [r1]
     mov r0, #0x18
     b loc_0808DF0A
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0xFFFFF000 ; proven PC/switch data
     .word 0x00007604 ; proven PC/switch data
 loc_0808DEEC:
@@ -72,7 +72,7 @@ loc_0808DEEC:
     beq loc_0808DF08
     mov r0, #1
     b loc_0808DF0A
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x00007602 ; proven PC/switch data
 loc_0808DF08:
     mov r0, #0x10

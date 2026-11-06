@@ -79,7 +79,7 @@ loc_080A5FCA:
     add r0, #1
     strb r0, [r5, #0xe]
     b loc_080A608A
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x080EF450
 loc_080A5FD8:
     ldr r1, [pc, #0x74]
@@ -139,7 +139,7 @@ loc_080A5FFA:
     mov r0, #1
     orr r0, r1
     b loc_080A6062
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x00005C14
     .word 0x08344F8C
     .word 0x080EF450

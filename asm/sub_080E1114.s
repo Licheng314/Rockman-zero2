@@ -99,7 +99,7 @@ loc_080E11CE:
     cmp r0, r1
     bne loc_080E12A2
     b loc_080E1252
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x03002AC0
     .word 0x00000402
     .word 0x00000401
@@ -146,7 +146,7 @@ loc_080E1252:
     add r0, #1
     strb r0, [r6, #2]
     b loc_080E12A2
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0834C47C
     .word 0x0000040C
     .word 0x0834C9E4

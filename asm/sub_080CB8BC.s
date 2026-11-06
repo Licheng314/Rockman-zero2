@@ -42,7 +42,7 @@ sub_080CB8BC:
     strb r0, [r4, #0xd]
     strb r2, [r4, #0xe]
     b loc_080CB93C
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0202EBB0
 loc_080CB914:
     strb r6, [r4, #0xd]

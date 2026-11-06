@@ -17,7 +17,7 @@ sub_08009F5C:
 loc_08009F76:
     mvn r0, r1
     b loc_08009F8A
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x000007FF
     .word 0x00000BFF
     .word 0xFFFFF800

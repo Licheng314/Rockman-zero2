@@ -51,7 +51,7 @@ loc_0808A226:
     mov r6, r12
     strb r0, [r6, #0xa]
     b loc_0808A274
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0202E188
     .word 0x000343FD
     .word 0x00269EC3
@@ -85,7 +85,7 @@ loc_0808A274:
     mov r0, r12
     bl EXT_080127E4
     b loc_0808A2C4
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x00007401
 loc_0808A2A8:
     mov r0, #0xcc

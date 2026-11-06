@@ -42,7 +42,7 @@ sub_0802F150:
     add r0, r4, #0
     bl EXT_0802F1F0
     b loc_0802F1E2
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x00000181
     .word 0x00000177
 loc_0802F1B0:

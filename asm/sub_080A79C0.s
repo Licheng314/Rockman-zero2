@@ -43,7 +43,7 @@ loc_080A7A02:
     cmp r5, #0
     beq loc_080A7A22
     b loc_080A7AE6
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x08343064
 loc_080A7A18:
     cmp r5, #2
@@ -87,7 +87,7 @@ loc_080A7A44:
     add r0, #1
     strb r0, [r4, #0xe]
     b loc_080A7AE6
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x00006911
 loc_080A7A70:
     ldrb r1, [r4, #0xa]

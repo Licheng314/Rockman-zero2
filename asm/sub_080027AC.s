@@ -33,7 +33,7 @@ loc_080027D2:
     mov r0, #1
     neg r0, r0
     b loc_0800281E
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x02000D60
 loc_080027F0:
     lsl r1, r2, #1

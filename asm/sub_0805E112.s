@@ -16,7 +16,7 @@ block_0805E11C:
     add r0, #1
     strb r0, [r5, #0xf]
     b loc_0805E14A
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0000AA11 ; proven PC/switch data
     mov r0, #0
     strb r1, [r5, #0xd]

@@ -45,7 +45,7 @@ loc_080CD0B0:
     beq loc_080CD0CC
     add r0, r7, #0
     b loc_080CD0CE
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0xFFFFCF00
     .word 0xFFFFE800
 loc_080CD0CC:

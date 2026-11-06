@@ -55,7 +55,7 @@ sub_0802177C:
 loc_080217E6:
     add r2, r1, #0
     b loc_080217F2
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x02001000
 loc_080217F0:
     add r2, r5, #0

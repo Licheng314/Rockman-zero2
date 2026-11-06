@@ -19,15 +19,11 @@ sub_0808E782:
     add r0, r2, #0
     sub r0, #0x60
     b loc_0808E7BC
-    .dh 0x0000 ; gap
-    .dh 0xFF00 ; gap
-    .dh 0xFFFF ; gap
-    .dh 0x03FF ; gap
-    .dh 0x0000 ; gap
-    .dh 0x1FE0 ; gap
-    .dh 0x0834 ; gap
-    .dh 0x2018 ; gap
-    .dh 0x0834 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
+    .word 0xFFFFFF00 ; proven PC/switch data
+    .word 0x000003FF ; proven PC/switch data
+    .word 0x08341FE0 ; proven PC/switch data
+    .word 0x08342018 ; proven PC/switch data
 loc_0808E7B8:
     add r0, r2, #0
     add r0, #0x60

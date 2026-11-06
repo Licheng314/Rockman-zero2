@@ -34,7 +34,7 @@ loc_08046BA8:
     strb r0, [r4, #0xd]
     strb r1, [r4, #0xe]
     b loc_08046C3E
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0833ABB4
     .word 0x0833AB9C
 loc_08046BDC:
@@ -68,7 +68,7 @@ loc_08046BEA:
     strb r0, [r4, #0xd]
     strb r2, [r4, #0xe]
     b loc_08046C3E
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x000006FF
     .word 0xFFFF9400
 loc_08046C20:

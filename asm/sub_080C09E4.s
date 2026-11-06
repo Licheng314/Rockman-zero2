@@ -51,7 +51,7 @@ sub_080C09E4:
     mov r0, #0xf2
     bl EXT_080032EC
     b loc_080C0A68
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x00001D02
     .word 0x08348840
     .word 0x00002401

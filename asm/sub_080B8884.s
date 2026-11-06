@@ -24,7 +24,7 @@ sub_080B8884:
     ldr r1, [r4, #0x5c]
     sub r0, r0, r1
     b loc_080B88BE
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0202F068
 loc_080B88B8:
     ldr r0, [r4, #0x54]

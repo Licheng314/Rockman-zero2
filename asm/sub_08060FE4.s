@@ -65,7 +65,7 @@ loc_0806104C:
     mov r1, sp
     bl EXT_080AC60C
     b loc_0806107C
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0202E188
     .word 0x000343FD
     .word 0x00269EC3

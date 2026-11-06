@@ -33,7 +33,7 @@ sub_0801F418:
     bne loc_0801F46C
     mov r0, #0
     b loc_0801F472
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x08333AFC
     .word 0xFFFFF000
     .word 0x00000FFF

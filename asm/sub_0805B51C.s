@@ -23,7 +23,7 @@ sub_0805B51C:
     lsl r1, r1, #4
     add r0, r0, r1
     b loc_0805B55A
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0000A907
 loc_0805B550:
     ldr r0, [pc, #0xe8]

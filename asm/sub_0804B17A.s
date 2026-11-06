@@ -21,10 +21,10 @@ sub_0804B17A:
     mov r0, #3
     and r1, r0
     b loc_0804B1B4
-    .dh 0x0000 ; gap
-    .word 0x0202E188
-    .word 0x000343FD
-    .word 0x00269EC3
+    .dh 0x0000 ; alignment after unconditional transfer
+    .word 0x0202E188 ; proven PC/switch data
+    .word 0x000343FD ; proven PC/switch data
+    .word 0x00269EC3 ; proven PC/switch data
 loc_0804B1B0:
     lsl r0, r2, #0x18
     lsr r1, r0, #0x19
@@ -36,28 +36,22 @@ loc_0804B1B4:
     add r0, r0, r1
     ldr r0, [r0]
     mov pc, r0
-    .dh 0x0000 ; TODO movs r0, r0
-    .dh 0xB1C8 ; TODO cbz r0, #0x804b1fa
-    lsr r4, r0, #0x20
-    .dh 0xB1DC ; TODO cbz r4, #0x804b202
-    lsr r4, r0, #0x20
-    .dh 0xB1E0 ; TODO cbz r0, #0x804b208
-    lsr r4, r0, #0x20
-    .dh 0xB1E4 ; TODO cbz r4, #0x804b20c
-    lsr r4, r0, #0x20
-    .dh 0xB1E8 ; TODO cbz r0, #0x804b212
-    lsr r4, r0, #0x20
-    .dh 0xB1EC ; TODO cbz r4, #0x804b216
-    lsr r4, r0, #0x20
+    .dh 0x0000 ; alignment after unconditional transfer
+    .word 0x0804B1C8 ; proven PC/switch data
+    .word 0x0804B1DC ; proven PC/switch data
+    .word 0x0804B1E0 ; proven PC/switch data
+    .word 0x0804B1E4 ; proven PC/switch data
+    .word 0x0804B1E8 ; proven PC/switch data
+    .word 0x0804B1EC ; proven PC/switch data
     mov r0, #7
     b loc_0804B1EE
-    .dh 0x200B ; gap
-    .dh 0xE004 ; gap
-    .dh 0x200D ; gap
-    .dh 0xE002 ; gap
-    .dh 0x2012 ; gap
-    .dh 0xE000 ; gap
-    .dh 0x201A ; gap
+    mov r0, #0xb
+    b loc_0804B1EE
+    mov r0, #0xd
+    b loc_0804B1EE
+    mov r0, #0x12
+    b loc_0804B1EE
+    mov r0, #0x1a
 loc_0804B1EE:
     strb r0, [r4, #0xd]
 loc_0804B1F0:

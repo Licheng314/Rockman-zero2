@@ -99,15 +99,11 @@ loc_0807D6C8:
     ldrb r0, [r2, #7]
     sub r0, #2
     b loc_0807D79E
-    .dh 0x0000 ; gap
-    .dh 0x0107 ; gap
-    .dh 0x0000 ; gap
-    .dh 0xEBB0 ; gap
-    .dh 0x0202 ; gap
-    .dh 0x0730 ; gap
-    .dh 0x0834 ; gap
-    .dh 0x5802 ; gap
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
+    .word 0x00000107 ; proven PC/switch data
+    .word 0x0202EBB0 ; proven PC/switch data
+    .word 0x08340730 ; proven PC/switch data
+    .word 0x00005802 ; proven PC/switch data
     .word 0x0202E188
     .word 0x000343FD
     .word 0x00269EC3

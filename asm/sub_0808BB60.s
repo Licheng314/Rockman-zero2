@@ -33,7 +33,7 @@ loc_0808BB9A:
     lsl r0, r0, #0x18
     lsr r0, r0, #0x18
     b loc_0808BBCC
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0xFFFFF800
 loc_0808BBAC:
     cmp r5, r6

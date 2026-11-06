@@ -33,7 +33,7 @@ loc_08041518:
     cmp r3, #0
     beq loc_0804153E
     b loc_080415C2
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0202EBB0
 loc_08041534:
     cmp r3, #2

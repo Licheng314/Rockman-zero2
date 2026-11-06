@@ -38,7 +38,7 @@ sub_08046590:
     str r0, [r4, #0x5c]
     sub r0, #0x41
     b loc_080465F0
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0000FFFF
     .word 0x0000A505
 loc_080465E8:
@@ -149,7 +149,7 @@ loc_080466A2:
     beq loc_080466C4
     ldr r0, [pc, #4]
     b loc_080466C8
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0xFFFFF200
 loc_080466C4:
     mov r0, #0xe0

@@ -58,7 +58,7 @@ loc_080CF352:
     str r6, [r4, #0x2c]
     str r5, [r4, #0x24]
     b loc_080CF3F6
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0202EBB0 ; proven PC/switch data
     .word 0x08349A40 ; proven PC/switch data
     .word 0x00008201 ; proven PC/switch data
@@ -126,7 +126,7 @@ loc_080CF424:
     mov r0, #0x14
     strb r0, [r6, #0x12]
     b loc_080CF4F0
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x00008202 ; proven PC/switch data
     add r0, r6, #0
     bl EXT_080128D4

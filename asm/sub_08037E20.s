@@ -23,7 +23,7 @@ sub_08037E20:
     lsl r0, r0, #0x18
     lsr r1, r0, #0x18
     b loc_08037E5C
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x00000195
 loc_08037E54:
     ldrb r0, [r2, #0xa]

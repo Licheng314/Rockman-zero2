@@ -52,7 +52,7 @@ loc_080CBB16:
     str r0, [r2, #4]
     mov r0, #0x40
     b loc_080CBBCC
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x00006702
     .word 0xFFFFC800
 loc_080CBB68:
@@ -110,7 +110,7 @@ loc_080CBBCC:
     add r0, #1
     strb r0, [r5, #0xe]
     b loc_080CBC22
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0xFFFFFF00
     .word 0x0202ED18
     .word 0x083491AC

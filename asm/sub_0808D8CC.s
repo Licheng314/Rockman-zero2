@@ -123,7 +123,7 @@ loc_0808D958:
 loc_0808D9B6:
     str r3, [r6, #0x2c]
     b loc_0808D9DA
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0833D990
     .word 0x0202ED18
     .word 0xFFFF6800

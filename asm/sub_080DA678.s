@@ -35,7 +35,7 @@ loc_080DA6A4:
     cmp r1, #0
     bne loc_080DA6A4
     b loc_080DA6CC
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0834B8B4
 loc_080DA6C0:
     ldr r0, [r2, #0x28]

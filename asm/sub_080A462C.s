@@ -56,7 +56,7 @@ sub_080A462C:
     orr r0, r1
     strb r0, [r2]
     b loc_080A46BA
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x08344BF8
 loc_080A46A8:
     add r2, r7, #0

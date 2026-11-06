@@ -45,7 +45,7 @@ loc_080768AA:
     mov r1, #0x10
     orr r0, r1
     b loc_080768C2
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0833FA64
 loc_080768BC:
     ldrb r1, [r4, #0xa]

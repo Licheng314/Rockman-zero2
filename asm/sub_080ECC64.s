@@ -52,7 +52,7 @@ loc_080ECCC8:
     mov r2, #0xc3
     lsl r2, r2, #1
     b loc_080ECD00
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0000023E
     .word 0x00000233
 loc_080ECCD8:

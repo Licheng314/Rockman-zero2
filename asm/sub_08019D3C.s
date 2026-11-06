@@ -28,7 +28,7 @@ sub_08019D3C:
     bl EXT_08014D0C
     strb r4, [r6]
     b loc_08019F50
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0202EC30
     .word 0x083263F0
 loc_08019D80:
@@ -42,7 +42,7 @@ loc_08019D80:
     bl EXT_0801B454
     strb r4, [r6]
     b loc_08019F50
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x083263F0
 loc_08019D9C:
     cmp r0, #2
@@ -58,7 +58,7 @@ loc_08019DA2:
     mov r0, #4
     strb r0, [r6]
     b loc_08019F50
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x083263F0
 loc_08019DBC:
     cmp r2, #1
@@ -81,7 +81,7 @@ loc_08019DBC:
     mov r0, #2
     strb r0, [r6]
     b loc_08019F50
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x000D2FFF
     .word 0x0202EC30
     .word 0x083263F0

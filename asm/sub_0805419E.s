@@ -17,9 +17,8 @@ sub_0805419E:
     mov r1, #0x10
     orr r0, r1
     b loc_080541CA
-    .dh 0x0000 ; gap
-    .dh 0xE130 ; gap
-    .dh 0x0202 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
+    .word 0x0202E130 ; proven PC/switch data
 loc_080541C4:
     ldrb r1, [r4, #0xa]
     mov r0, #0xef

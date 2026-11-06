@@ -92,7 +92,7 @@ loc_08067CAC:
     add r1, #0xc2
     mov r0, #0xff
     b loc_08067CF6
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x080EF754
     .word 0xFFFFFD00
     .word 0x0202E130

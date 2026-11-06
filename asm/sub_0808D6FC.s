@@ -33,7 +33,7 @@ loc_0808D736:
     cmp r1, r5
     bge loc_0808D774
     b loc_0808D772
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0xFFFFF000
     .word 0xFFFFE800
 loc_0808D748:
@@ -65,7 +65,7 @@ loc_0808D774:
     str r0, [r6, #0x58]
     mov r0, #1
     b loc_0808D786
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0xFFFFF000
 loc_0808D784:
     mov r0, #0

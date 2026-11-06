@@ -24,7 +24,7 @@ sub_080420D8:
     mov r0, #0xa0
     lsl r0, r0, #3
     b loc_08042120
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x00000E03
     .word 0xFFFFE000
 loc_08042110:
@@ -107,7 +107,7 @@ loc_08042190:
     add r0, r4, #0
     bl EXT_080128D4
     b loc_080421C2
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x00000E02
 loc_080421B4:
     add r0, r4, #0

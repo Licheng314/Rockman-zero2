@@ -51,7 +51,7 @@ loc_08073E42:
     mov r0, #0x9c
     lsl r0, r0, #7
     b loc_08073EE0
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x080EF450
 loc_08073E60:
     ldrb r1, [r3, #0xa]
@@ -79,7 +79,7 @@ loc_08073E76:
     mov r0, #0x9c
     lsl r0, r0, #7
     b loc_08073EE0
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0xFFFFDF00
     .word 0x080EF450
 loc_08073E98:

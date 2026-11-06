@@ -43,7 +43,7 @@ loc_0805A5A4:
     mov r1, #0x10
     orr r0, r1
     b loc_0805A5D2
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0000A914 ; proven PC/switch data
     .word 0x0202E130 ; proven PC/switch data
 loc_0805A5CC:
@@ -59,7 +59,7 @@ loc_0805A5D2:
     beq loc_0805A5E8
     ldr r0, [pc, #4]
     b loc_0805A5EC
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0xFFFFFF00 ; proven PC/switch data
 loc_0805A5E8:
     mov r0, #0x80
@@ -208,7 +208,7 @@ loc_0805A6CE:
     mov r1, #0x10
     orr r0, r1
     b loc_0805A73A
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0000A917 ; proven PC/switch data
 loc_0805A734:
     ldrb r1, [r6, #0xa]

@@ -20,7 +20,7 @@ sub_080956B0:
     ldr r0, [r0, #0xc]
     str r0, [r4, #0x14]
     b loc_08095752
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0833D990
 loc_080956DC:
     add r0, r4, #0
@@ -43,7 +43,7 @@ loc_080956DC:
     add r0, r4, #0
     bl EXT_0809575C
     b loc_08095752
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0833D990
 loc_0809570C:
     ldrb r0, [r4, #0x10]

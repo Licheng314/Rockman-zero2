@@ -203,14 +203,11 @@ loc_080E30D4:
     str r0, [sp, #0xc]
     ldr r3, [pc, #8]
     b loc_080E315C
-    .dh 0x0000 ; gap
-    .dh 0x01F8 ; gap
-    .dh 0x0200 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
+    .word 0x020001F8 ; proven PC/switch data
     .word 0x000003E7
-    .dh 0xC47C ; gap
-    .dh 0x0834 ; gap
-    .dh 0xC9E4 ; gap
-    .dh 0x0834 ; gap
+    .word 0x0834C47C ; proven PC/switch data
+    .word 0x0834C9E4 ; proven PC/switch data
     .word 0x0000270F
     .word 0x00002710
 loc_080E315C:
@@ -357,7 +354,7 @@ loc_080E3236:
     add r0, r4, #0
     mov r1, #0x10
     b loc_080E32D6
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x00002710
     .word 0x000003E7
     .word 0x080FF92C
@@ -382,7 +379,7 @@ loc_080E32D6:
     mov r2, #0x11
     bl EXT_080DE6C8
     b EXT_080E3300
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x080FF93C
 loc_080E32E4:
     ldrb r0, [r6, #2]

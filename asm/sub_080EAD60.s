@@ -31,7 +31,7 @@ sub_080EAD60:
     strb r0, [r5, #1]
     strh r1, [r5, #2]
     b loc_080EADE2
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x02000D10
 loc_080EADA4:
     mov r0, #4

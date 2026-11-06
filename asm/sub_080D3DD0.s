@@ -26,7 +26,7 @@ sub_080D3DD0:
     beq loc_080D3E10
     ldr r1, [pc, #0xc]
     b loc_080D3E12
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0202EBB0
     .word 0x0202EBF0
     .word 0x0000028B

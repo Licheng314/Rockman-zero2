@@ -70,7 +70,7 @@ loc_0806072A:
     strb r0, [r4, #0xd]
     strb r1, [r4, #0xe]
     b loc_0806077A
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0000AB01
     .word 0x0833D384
     .word 0x0833D13C

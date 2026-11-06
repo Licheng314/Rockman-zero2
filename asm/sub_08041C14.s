@@ -255,7 +255,7 @@ loc_08041E22:
     add r0, #1
     strb r0, [r5, #0xf]
     b loc_08041E5A
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0833A580 ; proven PC/switch data
     .word 0x00000E03 ; proven PC/switch data
     ldr r0, [r5, #0x5c]

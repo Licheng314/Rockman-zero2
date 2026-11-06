@@ -96,7 +96,7 @@ loc_080833E8:
     ldr r1, [r6, #0x5c]
     add r0, r4, #0
     b loc_08083402
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x083410E8 ; proven PC/switch data
     .word 0x080EF450 ; proven PC/switch data
     ldr r1, [r6, #0x60]
@@ -191,7 +191,7 @@ loc_08083488:
     bne loc_080834BC
     strb r2, [r6, #0xd]
     b loc_080834C6
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0xFFFFF400 ; proven PC/switch data
 loc_080834BC:
     mov r0, #5

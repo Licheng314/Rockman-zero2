@@ -48,7 +48,7 @@ loc_0803576A:
     lsl r0, r3, #1
     add r0, r0, r1
     b loc_080357A0
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0202E140 ; proven PC/switch data
     .word 0x0202EBF0 ; proven PC/switch data
     .word 0x0000FFFE ; proven PC/switch data

@@ -141,7 +141,7 @@ loc_0807F3C4:
     bgt loc_0807F400
     mov r1, #0
     b loc_0807F406
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0xFFFFB000
     .word 0x0202ED18
     .word 0xFFFFC000

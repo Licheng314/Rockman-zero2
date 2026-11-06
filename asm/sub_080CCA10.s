@@ -140,7 +140,7 @@ loc_080CCB14:
     mov r0, #0x80
     str r0, [r5, #0x64]
     b loc_080CCCC0
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0xFFFFF800
     .word 0x000017FF
 loc_080CCB28:
@@ -201,7 +201,7 @@ loc_080CCB7A:
     ldr r2, [pc, #4]
     add r0, r0, r2
     b loc_080CCBB8
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0xFFFFE801
 loc_080CCBA4:
     cmp r0, #0

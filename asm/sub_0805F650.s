@@ -84,7 +84,7 @@ loc_0805F6B4:
     mov r0, #0xf0
     bl EXT_080032EC
     b loc_0805F8DA
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x00000C1C ; proven PC/switch data
     .word 0x08432D00 ; proven PC/switch data
     .word 0x0202E590 ; proven PC/switch data
@@ -245,7 +245,7 @@ loc_0805F802:
     mov r0, #0x8c
     bl EXT_08002EA0
     b loc_0805F8DA
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x08432D00 ; proven PC/switch data
     .word 0x0202E590 ; proven PC/switch data
     .word 0x08432D0C ; proven PC/switch data

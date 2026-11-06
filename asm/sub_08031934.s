@@ -62,7 +62,7 @@ loc_08031982:
     lsl r1, r1, #3
     sub r1, r1, r0
     b loc_080319BE
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x00000195
     .word 0x00000175
 loc_080319BC:

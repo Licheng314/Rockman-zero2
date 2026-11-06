@@ -96,6 +96,17 @@ class Stage0Tests(unittest.TestCase):
         self.assertEqual(rows[0]['targets'],[0x30,0x32])
         del instructions[0]
         self.assertEqual(bounded_switches(instructions,rom),[])
+    def test_switch_guard_tracks_index_before_shift_into_other_register(self):
+        rom=extract_func.data
+        start,end=0x1CB12,0x1CB22
+        md=Cs(CS_ARCH_ARM,CS_MODE_THUMB)
+        instructions={i.address-BASE:dict(size=i.size,mnemonic=i.mnemonic,operands=i.op_str,source='fixture')
+                      for i in md.disasm(rom[start:end],BASE+start)}
+        rows=bounded_switches(instructions,rom)
+        self.assertEqual([(row['table'], row['count']) for row in rows],[(0x1CB28,10)])
+        instructions[start]['operands']='r0, #9'
+        self.assertEqual(bounded_switches(instructions,rom),[])
+
     def test_switch_accepts_error_call_guard(self):
         # cmp; bls <dispatch>; bl <out-of-line halt>: the real 0x080E6C9C shape.
         rom=bytearray(0x40)

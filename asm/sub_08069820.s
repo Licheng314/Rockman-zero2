@@ -50,7 +50,7 @@ loc_08069858:
     add r0, r3, #1
     strb r0, [r4, #0xf]
     b loc_080698A6
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x00000509
 loc_08069890:
     ldrb r0, [r4, #0x12]

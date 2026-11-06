@@ -202,7 +202,7 @@ loc_080014AC:
     strh r0, [r1, #0x36]
     strh r2, [r1, #0x38]
     b loc_080014E8
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x02000CA0
 loc_080014C4:
     ldrh r0, [r5, #0x38]
@@ -295,7 +295,7 @@ loc_080014E8:
     ldr r0, [pc, #8]
     strh r0, [r1]
     b loc_080015B6
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0400012A
     .word 0x00000FFF
     .word 0x03001590

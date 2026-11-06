@@ -24,7 +24,7 @@ sub_08000AF0:
     mov r0, #0
     str r0, [r2]
     b loc_08000B48
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x03001710
 loc_08000B24:
     ldr r0, [r4, #0x18]

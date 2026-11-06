@@ -118,7 +118,7 @@ loc_080900C0:
     ldr r0, [r7]
     ldr r1, [pc, #4]
     b loc_080900D6
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0xFFFF0000
 loc_080900D0:
     ldr r0, [r7]

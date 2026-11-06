@@ -51,7 +51,7 @@ loc_080D88AC:
     mov r0, #0xfe
     and r0, r1
     b loc_080D88E6
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0xFFFFF400
     .word 0x00FFFF00
 loc_080D88C8:

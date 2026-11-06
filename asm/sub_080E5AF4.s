@@ -101,7 +101,7 @@ loc_080E5B98:
     bne loc_080E5BDA
     str r0, [r4]
     b loc_080E5BDA
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0202EC30
     .word 0x0202E180
     .word 0x000075B8

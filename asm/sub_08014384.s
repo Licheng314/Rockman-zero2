@@ -16,7 +16,7 @@ sub_08014384:
     bls loc_080143A8
     mov r0, #1
     b loc_0801442E
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0202EBF0
 loc_080143A8:
     cmp r1, #0
@@ -119,7 +119,7 @@ loc_08014446:
     blt loc_08014470
     mov r4, #1
     b loc_08014488
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0202EBF0
 loc_08014470:
     cmp r5, r0

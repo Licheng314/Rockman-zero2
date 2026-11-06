@@ -42,7 +42,7 @@ loc_08084E42:
     beq loc_08084E54
     mov r0, #0xf
     b loc_08084E56
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x00007203
     .word 0x0202E130
 loc_08084E54:

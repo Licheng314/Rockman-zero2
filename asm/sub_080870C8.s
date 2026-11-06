@@ -12,7 +12,7 @@ sub_080870C8:
     add r0, r0, r1
     ldr r0, [r0]
     mov pc, r0
-    .dh 0x0000 ; TODO movs r0, r0
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x080870E4 ; proven PC/switch data
     .word 0x080870F8 ; proven PC/switch data
     .word 0x08087102 ; proven PC/switch data
@@ -66,7 +66,7 @@ sub_080870C8:
     ldrb r0, [r4, #0xe]
     add r0, #1
     b loc_0808718E
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0834158E ; proven PC/switch data
     .word 0x08341594 ; proven PC/switch data
     ldr r1, [pc, #0x30]

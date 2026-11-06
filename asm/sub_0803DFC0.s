@@ -34,7 +34,7 @@ sub_0803DFC0:
     str r0, [r4, #0x14]
     strb r5, [r4, #0xd]
     b loc_0803E04E
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x08336060
 loc_0803E00C:
     ldrb r0, [r4, #0xc]
@@ -74,7 +74,7 @@ loc_0803E04E:
     add r0, r4, #0
     bl EXT_0803E09C
     b loc_0803E090
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x08336060
 loc_0803E05C:
     ldr r0, [r4, #0x54]

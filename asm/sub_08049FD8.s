@@ -80,7 +80,7 @@ loc_0804A064:
     ldr r1, [r4, #0x5c]
     sub r0, r0, r1
     b loc_0804A08A
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0833AFE4
     .word 0x0000FF7F
     .word 0xFFFFFF00

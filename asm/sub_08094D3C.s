@@ -13,21 +13,15 @@ loc_08094D48:
     add r0, r0, r1
     ldr r0, [r0]
     mov pc, r0
-    .dh 0x0000 ; TODO movs r0, r0
+    .dh 0x0000 ; alignment after unconditional transfer
     ldr r5, [pc, #0x160]
     lsr r1, r1, #0x20
-    ldr r5, [pc, #0x1c0]
-    lsr r1, r1, #0x20
-    ldr r5, [pc, #0x230]
-    lsr r1, r1, #0x20
-    ldr r5, [pc, #0x370]
-    lsr r1, r1, #0x20
-    ldr r5, [pc, #0x3a8]
-    lsr r1, r1, #0x20
-    ldr r6, [pc, #0x50]
-    lsr r1, r1, #0x20
-    ldr r6, [pc, #0x88]
-    lsr r1, r1, #0x20
+    .word 0x08094D70 ; proven PC/switch data
+    .word 0x08094D8C ; proven PC/switch data
+    .word 0x08094DDC ; proven PC/switch data
+    .word 0x08094DEA ; proven PC/switch data
+    .word 0x08094E14 ; proven PC/switch data
+    .word 0x08094E22 ; proven PC/switch data
     add r0, r4, #0
     add r0, #0x74
     ldr r1, [pc, #0x5c]

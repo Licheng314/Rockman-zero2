@@ -95,7 +95,7 @@ loc_08056DE6:
     cmp r0, #3
     bne loc_08056E7C
     b loc_08056E4A
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x08343064 ; proven PC/switch data
     .word 0x0202EC30 ; proven PC/switch data
     .word 0x0000FFFE ; proven PC/switch data
@@ -127,7 +127,7 @@ loc_08056E4A:
     add r0, #1
     strb r0, [r5, #0xe]
     b loc_08056E7C
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0000A611 ; proven PC/switch data
     .word 0xFFFFF000 ; proven PC/switch data
     ldr r4, [r5, #0x28]

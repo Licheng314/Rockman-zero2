@@ -17,7 +17,7 @@ sub_08066ECC:
     beq loc_08066EF4
     mov r0, #0x80
     b loc_08066EF8
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x00000909
 loc_08066EF4:
     mov r0, #0x80

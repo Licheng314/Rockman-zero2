@@ -52,7 +52,7 @@ loc_080DA0E2:
     and r1, r0
     mov r0, #4
     b loc_080DA146
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0834B954
     .word 0x00000212
 loc_080DA138:

@@ -48,7 +48,7 @@ loc_08047740:
     beq loc_08047760
     ldr r0, [pc, #8]
     b loc_08047764
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0000A502
     .word 0xFFFFFE00
 loc_08047760:

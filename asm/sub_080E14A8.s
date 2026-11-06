@@ -154,7 +154,7 @@ loc_080E15EA:
     add r0, #1
     strb r0, [r5, #2]
     b loc_080E1654
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x02000CA0
 loc_080E15F8:
     ldrh r2, [r5, #4]

@@ -71,7 +71,7 @@ loc_080E3352:
     strh r0, [r6, #8]
     mov r0, #0x10
     b loc_080E35D0
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x02000F90 ; proven PC/switch data
     .word 0x0000F0FF ; proven PC/switch data
     .word 0x02000CA0 ; proven PC/switch data
@@ -157,7 +157,7 @@ loc_080E3450:
     b loc_080E36A6
 loc_080E3480:
     b loc_080E35D2
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x02000CA0 ; proven PC/switch data
     mov r5, #8
     ldrsh r0, [r6, r5]
@@ -179,7 +179,7 @@ loc_080E34A0:
     cmp r1, r0
     bne loc_080E34D6
     b loc_080E35D2
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x02000CA0 ; proven PC/switch data
     .word 0x948F76A3 ; proven PC/switch data
 loc_080E34B8:
@@ -205,7 +205,7 @@ loc_080E34D6:
     add r0, r6, #0
     bl EXT_080E0E64
     b loc_080E384C
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x02000CA0 ; proven PC/switch data
     .word 0x948F76A3 ; proven PC/switch data
     ldr r4, [pc, #0x9c]
@@ -284,7 +284,7 @@ loc_080E3572:
     bl EXT_0800120C
     strh r4, [r6, #4]
     b loc_080E35D2
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x02000F90 ; proven PC/switch data
     .word 0x0000FFF8 ; proven PC/switch data
     .word 0x0000F0FF ; proven PC/switch data
@@ -313,7 +313,7 @@ loc_080E35D2:
     add r0, #1
     strb r0, [r6, #2]
     b loc_080E36A6
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x02000D10 ; proven PC/switch data
     ldrh r2, [r6, #4]
     sub r2, #1
@@ -425,7 +425,7 @@ loc_080E36A6:
     ldrh r7, [r0, #0xc]
     ldrh r5, [r6, #6]
     b loc_080E36F2
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x03002AC0 ; proven PC/switch data
     .word 0x00000402 ; proven PC/switch data
     .word 0x00000401 ; proven PC/switch data
@@ -558,7 +558,7 @@ loc_080E37C4:
     add r0, r4, #0
     mov r1, #0x10
     b loc_080E3822
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0202EBF0 ; proven PC/switch data
     .word 0x0834C47C ; proven PC/switch data
     .word 0x0834C9E4 ; proven PC/switch data
@@ -582,7 +582,7 @@ loc_080E3822:
     mov r2, #0x11
     bl EXT_080DE6C8
     b loc_080E384C
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x080FF93C ; proven PC/switch data
 loc_080E3830:
     ldrb r0, [r6, #2]

@@ -147,7 +147,7 @@ loc_080DEBE6:
     mov r2, r12
     str r7, [r2]
     b loc_080DEC1A
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x120E120D
     .word 0x124E124D
     .word 0x122E122D

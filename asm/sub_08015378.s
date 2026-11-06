@@ -79,7 +79,7 @@ loc_080153F6:
     beq loc_08015418
     ldr r5, [sp]
     b loc_0801541E
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0xFFFFF000
     .word 0xFFFFE800
 loc_08015418:

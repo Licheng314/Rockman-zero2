@@ -68,7 +68,7 @@ loc_080CD87C:
     mov r3, #0
     bl EXT_080B0ACC
     b loc_080CD9E0
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x083497A4
     .word 0x08349718
 loc_080CD8B4:
@@ -166,7 +166,7 @@ loc_080CD952:
     add r1, r1, r2
     bl EXT_08006E08
     b loc_080CD990
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x083495F8
     .word 0x08349658
 loc_080CD978:

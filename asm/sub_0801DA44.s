@@ -35,7 +35,7 @@ loc_0801DA5E:
     orr r0, r1
     strb r0, [r2]
     b loc_0801DAA4
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0202EBB0
     .word 0x08333370
     .word 0x0202EC30

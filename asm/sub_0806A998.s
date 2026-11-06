@@ -73,7 +73,7 @@ loc_0806AA30:
     strb r4, [r6, #0xd]
     strb r4, [r6, #0xe]
     b loc_0806ACA6
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0833E2B0 ; proven PC/switch data
     .word 0x0202E130 ; proven PC/switch data
 loc_0806AA40:
@@ -120,7 +120,7 @@ loc_0806AA8C:
     mov r0, #0x10
     orr r0, r7
     b loc_0806AAA4
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x00000A04 ; proven PC/switch data
 loc_0806AAA0:
     mov r0, #0xef
@@ -210,7 +210,7 @@ loc_0806AB18:
     mov r0, #0
     strh r0, [r4]
     b loc_0806AC40
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0833E364 ; proven PC/switch data
     add r0, r6, #0
     bl EXT_080128D4

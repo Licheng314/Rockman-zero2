@@ -53,7 +53,7 @@ sub_0800873C:
     add r3, r7, #0
     bl EXT_08004C7C
     b loc_080087EA
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x02001020
     .word 0x80000001
     .word 0x0002BFFC

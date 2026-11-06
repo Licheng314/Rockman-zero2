@@ -70,7 +70,7 @@ loc_080E7A9A:
     mov r0, #2
     neg r0, r0
     b loc_080E7B02
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x02000D10
     .word 0x0834C47C
     .word 0x0834C9E4

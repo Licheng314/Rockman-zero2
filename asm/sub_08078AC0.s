@@ -39,7 +39,7 @@ loc_08078AD2:
     ldr r0, [r0, #0xc]
     str r0, [r5, #0x14]
     b loc_08078C38
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0833D990 ; proven PC/switch data
 loc_08078B10:
     add r0, r5, #0

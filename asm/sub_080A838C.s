@@ -135,7 +135,7 @@ loc_080A844E:
     cmp r0, r1
     blt loc_080A84B2
     b loc_080A84C0
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0202ED18
     .word 0x000077FF
 loc_080A84A4:
@@ -149,7 +149,7 @@ loc_080A84A4:
 loc_080A84B2:
     str r1, [r5, #0x54]
     b loc_080A84C2
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0202ED18
     .word 0xFFFF8800
 loc_080A84C0:

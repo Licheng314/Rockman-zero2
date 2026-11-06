@@ -13,7 +13,7 @@ loc_080CC11C:
     add r0, r0, r1
     ldr r0, [r0]
     mov pc, r0
-    .dh 0x0000 ; TODO movs r0, r0
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x080CC12C ; proven PC/switch data
     .word 0x080CC14C ; proven PC/switch data
     .word 0x080CC15E ; proven PC/switch data
@@ -79,7 +79,7 @@ loc_080CC188:
     cmp r0, #0x80
     bne loc_080CC1F0
     b loc_080CC1EA
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0xFFFFE800 ; proven PC/switch data
     .word 0x0000691E ; proven PC/switch data
     ldr r0, [r4, #0x68]
@@ -138,7 +138,7 @@ loc_080CC1F0:
     add r0, r4, #0
     bl EXT_080128D4
     b loc_080CC2B4
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0xFFFFD000 ; proven PC/switch data
     .word 0x080EF450 ; proven PC/switch data
     ldr r0, [r4, #0x68]

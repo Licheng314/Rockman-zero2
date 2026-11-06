@@ -82,7 +82,7 @@ loc_080935B8:
     ble loc_080935C8
     ldr r1, [pc, #4]
     b loc_080935CC
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0xFFFFFF00
 loc_080935C8:
     mov r1, #0x80
@@ -97,7 +97,7 @@ loc_080935CC:
     cmp r1, r0
     ble loc_080935EC
     b loc_08093604
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x000003FF
 loc_080935E4:
     sub r1, r5, r0

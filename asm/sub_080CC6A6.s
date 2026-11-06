@@ -12,7 +12,7 @@ sub_080CC6A6:
     add r1, r1, r2
     bl EXT_08006E08
     b loc_080CC6E8
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0834924C ; proven PC/switch data
     .word 0x00006916 ; proven PC/switch data
     .word 0x083493F0 ; proven PC/switch data

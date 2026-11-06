@@ -20,7 +20,7 @@ sub_0804B854:
     beq loc_0804B88C
     ldr r0, [pc, #0xc]
     b loc_0804B890
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0000A10C
     .word 0x0833B2B0
     .word 0xFFFFFF00
@@ -82,7 +82,7 @@ loc_0804B8C6:
     beq loc_0804B908
     mov r0, #3
     b loc_0804B90A
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0xFFFFFD00
     .word 0x0000FFFF
 loc_0804B908:

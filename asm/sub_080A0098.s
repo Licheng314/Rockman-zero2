@@ -152,7 +152,7 @@ loc_080A018C:
     asr r0, r0, #1
     str r0, [r5, #0x60]
     b loc_080A0242
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x08344300
     .word 0x0202E188
     .word 0x000343FD

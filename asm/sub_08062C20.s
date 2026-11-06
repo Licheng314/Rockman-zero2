@@ -13,27 +13,18 @@ loc_08062C2C:
     add r0, r0, r1
     ldr r0, [r0]
     mov pc, r0
-    .dh 0x0000 ; TODO movs r0, r0
+    .dh 0x0000 ; alignment after unconditional transfer
     cmp r4, #0x3c
     lsr r6, r0, #0x20
-    cmp r4, #0x60
-    lsr r6, r0, #0x20
-    cmp r4, #0xa0
-    lsr r6, r0, #0x20
-    cmp r4, #0xdc
-    lsr r6, r0, #0x20
-    cmp r5, #0x40
-    lsr r6, r0, #0x20
-    cmp r5, #0x82
-    lsr r6, r0, #0x20
-    cmp r5, #0xf2
-    lsr r6, r0, #0x20
-    cmp r6, #0x20
-    lsr r6, r0, #0x20
-    cmp r6, #0xa6
-    lsr r6, r0, #0x20
-    cmp r6, #0xb0
-    lsr r6, r0, #0x20
+    .word 0x08062C60 ; proven PC/switch data
+    .word 0x08062CA0 ; proven PC/switch data
+    .word 0x08062CDC ; proven PC/switch data
+    .word 0x08062D40 ; proven PC/switch data
+    .word 0x08062D82 ; proven PC/switch data
+    .word 0x08062DF2 ; proven PC/switch data
+    .word 0x08062E20 ; proven PC/switch data
+    .word 0x08062EA6 ; proven PC/switch data
+    .word 0x08062EB0 ; proven PC/switch data
     mov r2, #0
     add r0, r3, #0
     add r0, #0xbc

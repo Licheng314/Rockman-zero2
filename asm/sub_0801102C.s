@@ -66,7 +66,7 @@ sub_0801102C:
     mov r1, r8
     strb r1, [r7, #0xe]
     b loc_080110F0
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x02001000
     .word 0x0002D030
     .word 0x02000F94

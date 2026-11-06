@@ -143,7 +143,7 @@ loc_080B9654:
     ldr r0, [r0, #0xc]
     str r0, [r4, #0x14]
     b loc_080B96A0
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x08347064 ; proven PC/switch data
     .word 0x0834706A ; proven PC/switch data
     .word 0x08345998 ; proven PC/switch data

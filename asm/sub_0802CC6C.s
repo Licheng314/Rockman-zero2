@@ -24,7 +24,7 @@ sub_0802CC6C:
     add r0, r4, r2
     strb r1, [r0]
     b loc_0802CCAE
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x00000179
     .word 0x0000017D
 loc_0802CCA4:

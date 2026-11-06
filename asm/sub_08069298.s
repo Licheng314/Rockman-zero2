@@ -28,7 +28,7 @@ loc_080692B8:
     strb r0, [r2, #0xd]
     strb r1, [r2, #0xe]
     b loc_08069302
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0xFFFFF900
 loc_080692D0:
     ldrb r0, [r2, #0x10]
@@ -46,7 +46,7 @@ loc_080692D0:
     mov r0, #0
     strb r0, [r3]
     b loc_08069302
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0xFFFF1000
 loc_080692F4:
     cmp r0, #1

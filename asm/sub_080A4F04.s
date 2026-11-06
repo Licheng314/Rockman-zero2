@@ -156,7 +156,7 @@ loc_080A5020:
     add r0, r0, r1
     str r0, [r7, #0x54]
     b loc_080A50AE
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0xFFFFFA00
 loc_080A5044:
     ldr r0, [r7, #0x54]
@@ -164,7 +164,7 @@ loc_080A5044:
     add r0, r0, r2
     str r0, [r7, #0x54]
     b loc_080A50AE
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0xFFFFD700
 loc_080A5054:
     ldrb r1, [r7, #0xa]
@@ -190,7 +190,7 @@ loc_080A506C:
     ldr r2, [pc, #8]
     add r0, r0, r2
     b loc_080A50AC
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0xFFFFE500
     .word 0xFFFFE000
 loc_080A5088:

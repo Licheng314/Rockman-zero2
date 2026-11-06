@@ -54,7 +54,7 @@ loc_0800B594:
     mov r1, sp
     bl EXT_080066D4
     b loc_0800B5F8
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0xFFFFFD80
     .word 0x02001000
     .word 0x0002D028

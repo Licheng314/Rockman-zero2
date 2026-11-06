@@ -54,7 +54,7 @@ loc_080CED5C:
     strb r0, [r6, #0xb]
     ldr r0, [pc, #8]
     b loc_080CEDAA
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x083499B8
     .word 0x083499E8
 loc_080CEDA0:

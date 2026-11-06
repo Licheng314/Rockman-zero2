@@ -16,7 +16,7 @@ sub_08044DE8:
     ldr r1, [r0, #0x54]
     ldr r0, [pc, #8]
     b loc_08044E1E
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0202E130 ; proven PC/switch data
     .word 0xFFFFC000 ; proven PC/switch data
     ldr r0, [pc, #0x18]

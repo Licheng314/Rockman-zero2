@@ -72,7 +72,7 @@ sub_0809A120:
     neg r0, r0
     and r0, r1
     b loc_0809A1E6
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0834346C
 loc_0809A1BC:
     ldr r0, [r6, #0x54]

@@ -18,7 +18,7 @@ sub_0800B478:
     mov r0, #0x48
     neg r0, r0
     b loc_0800B4EE
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x02001000
     .word 0x0002D020
     .word 0x080EF6A0

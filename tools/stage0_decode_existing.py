@@ -90,7 +90,7 @@ def trace_unknown(rom, known, entries, owner_at, protected, words, legacy_words=
     return new,proof,deferred
 
 
-def prepare():
+def prepare(reconcile_words=False):
     inv=json.loads((ROOT/'build/stage0/inventory.json').read_text(encoding='utf-8'))
     assert_inventory_current(inv)
     segments=sorted(json.loads((ROOT/'tools/segments.json').read_text(encoding='utf-8')),key=lambda s:s['start'])
@@ -121,10 +121,12 @@ def prepare():
                     positive=sorted((a,size,n) for a,size,n in manifest['items'] if size)
                     assert positive[0][0]==owner['start'] and positive[-1][0]+positive[-1][1]==owner['end']
                     assert all(a+size==b for (a,size,n),(b,bs,bn) in zip(positive,positive[1:]))
-                    labels=defaultdict(list)
+                    labels=defaultdict(list);aliases={}
                     for p,size,n in manifest['items']:
                         if size==0 and lines[n].strip().endswith(':'):labels[p].append(lines[n])
-                    layouts[name]=dict(owner=owner,source=source,source_sha1=hashlib.sha1((ROOT/name).read_bytes()).hexdigest(),lines=lines,manifest=manifest,positive=positive,labels=labels)
+                        elif size==0 and (alias:=re.fullmatch(r'\.definelabel (\w+), 0x([0-9A-Fa-f]+)',lines[n].strip())):
+                            if int(alias[2],16)==BASE+p:aliases[alias[1]]=p
+                    layouts[name]=dict(owner=owner,source=source,source_sha1=hashlib.sha1((ROOT/name).read_bytes()).hexdigest(),lines=lines,manifest=manifest,positive=positive,labels=labels,aliases=aliases)
                     for p,size,n in positive:
                         if lines[n].strip().startswith('.word'):
                             for b in range(p,p+size):legacy_words[b]=p
@@ -175,6 +177,22 @@ def prepare():
     words={p:r for p,r in words.items() if r}
     grouped=defaultdict(dict)
     for a,i in new.items():grouped[provenance[a]['source']][a]=i
+    repaired_words={}
+    if reconcile_words:
+        for p,reasons in words.items():
+            owner=owner_at(p)
+            if owner is None or p+4>owner['end']:
+                continue
+            file=owner['file']
+            layout=layouts[file]
+            overlapping=[(a,n,line) for a,n,line in layout['positive'] if a<p+4 and p<a+n]
+            if len(overlapping)==1 and overlapping[0][:2]==(p,4) and layout['lines'][overlapping[0][2]].strip().startswith('.word'):
+                continue
+            table_word=any(r['kind']=='bounded-switch' for r in reasons)
+            has_proven_half=any('part of referenced word' in layout['lines'][line] for _,_,line in overlapping)
+            if table_word or has_proven_half:
+                grouped.setdefault(file,{})
+                repaired_words[p]=reasons
     plans=[]
     for source,decoded in sorted(grouped.items()):
         layout=layouts[source];owner=layout['owner'];own_known={a:r for a,r in known.items() if r['source']==source}
@@ -182,8 +200,8 @@ def prepare():
         for a,i in decoded.items():
             for t,kind in edges(a,i.mnemonic,i.op_str,i.size):
                 if kind!='fallthrough' and t in insmap and t!=owner['start']:jt.add(t)
-        plans.append(dict(source=source,layout=layout,decoded=decoded,insmap=insmap,jt=jt,raw=set(),words={p:r for p,r in words.items() if owner['start']<=p and p+4<=owner['end']}))
-    evidence=dict(input_segments_sha1=inv['segments_sha1'],requested_entries=inv['formal_switch_targets_missing_decoded_source'],
+        plans.append(dict(source=source,layout=layout,decoded=decoded,insmap=insmap,jt=jt,raw=set(),words={p:r for p,r in words.items() if owner['start']<=p and p+4<=owner['end'] and (decoded or p in repaired_words)}))
+    evidence=dict(input_segments_sha1=inv['segments_sha1'],reconciled_word_addresses=sorted(repaired_words),requested_entries=inv['formal_switch_targets_missing_decoded_source'],
                   decoded_requested_entries=[a for a in inv['formal_switch_targets_missing_decoded_source'] if a in new],
                   new_instruction_bytes=sum(i.size for i in new.values()),new_instruction_count=len(new),
                   deferred=deferred,unhandled_source_formats=unhandled,bounded_switches=list(switches.values()),legacy_word_reclassifications=list(overrides.values()),
@@ -194,7 +212,7 @@ def prepare():
 
 def render(plan):
     layout=plan['layout'];owner=layout['owner'];original=layout['lines'];positive=layout['positive'];positions=[x[0] for x in positive]
-    records=[];aliases={};pos=owner['start'];rom=extract.data
+    records=[];aliases=dict(layout['aliases']);pos=owner['start'];rom=extract.data
     while pos<owner['end']:
         labels=list(layout['labels'].get(pos,[]))
         if pos==owner['start']:labels=[x for x in labels if x.strip()!=owner['name']+':']
@@ -224,9 +242,11 @@ def render(plan):
 
 def main():
     parser=argparse.ArgumentParser(description=__doc__);parser.add_argument('--apply',action='store_true')
-    parser.add_argument('--evidence-name',default='stage0-existing-decode.json');args=parser.parse_args()
+    parser.add_argument('--evidence-name',default='stage0-existing-decode.json')
+    parser.add_argument('--reconcile-words',action='store_true')
+    args=parser.parse_args()
     with writer_lock():
-        plans,evidence=prepare()
+        plans,evidence=prepare(args.reconcile_words)
         print(json.dumps(dict(affected_sources=len(plans),new_instruction_bytes=evidence['new_instruction_bytes'],new_instruction_count=evidence['new_instruction_count'],requested_recovered=len(evidence['decoded_requested_entries']),requested_total=len(evidence['requested_entries']),deferred=len(evidence['deferred']))),flush=True)
         if not args.apply:return
         assert Path(args.evidence_name).name==args.evidence_name and args.evidence_name.endswith('.json')

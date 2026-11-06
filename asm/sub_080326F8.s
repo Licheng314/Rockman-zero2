@@ -36,7 +36,7 @@ loc_08032732:
     ldr r0, [pc, #8]
     ldrh r0, [r0, #6]
     b loc_0803274C
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x00000175
     .word 0x0202EC30
 loc_08032748:
@@ -74,7 +74,7 @@ loc_0803277A:
     ldr r0, [pc, #4]
     ldrh r0, [r0, #6]
     b loc_08032790
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0202EC30
 loc_0803278C:
     ldr r0, [pc, #0x14]
@@ -89,7 +89,7 @@ loc_08032790:
     add r0, r0, r3
     lsl r0, r0, #7
     b loc_080327AA
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0202EC30
 loc_080327A8:
     lsl r0, r3, #9

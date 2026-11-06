@@ -32,7 +32,7 @@ loc_080E8860:
     lsl r0, r0, #0x18
     asr r0, r0, #0x18
     b loc_080E896C
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x02000D10
 loc_080E888C:
     str r4, [sp]
@@ -95,7 +95,7 @@ loc_080E88EA:
     add r0, r7, #3
     mov r8, r0
     b loc_080E8940
-    .dh 0x0000 ; gap
+    .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0835E584
 loc_080E8904:
     ldr r0, [pc, #0x14]
