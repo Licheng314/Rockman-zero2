@@ -1,4 +1,4 @@
-"""Replace reached Thumb-1 halfword fallbacks with byte-checked mnemonics."""
+"""Replace reached Thumb-1 instruction fallbacks with byte-checked mnemonics."""
 import argparse
 from collections import Counter, defaultdict
 from dataclasses import dataclass
@@ -14,12 +14,13 @@ from project_guard import ROOT, build_checked, transaction_paths, writer_lock
 from stage0_inventory import assert_inventory_current
 from thumb_v4 import valid_thumb1
 
-RAW = re.compile(r'^\s*\.dh 0x([\da-fA-F]{4})\s*; (?:TODO |svc )')
+RAW = re.compile(r'^\s*\.dh (0x[\da-fA-F]{4}(?:, 0x[\da-fA-F]{4})?)\s*; (?:TODO |svc )')
+DIRECT_BRANCHES = extract_func.COND_BR | {'b', 'bl'}
 SUPPORTED = {
     'muls', 'mvns', 'ldm', 'stm', 'adds', 'add', 'subs', 'sub', 'lsls', 'lsrs',
     'asrs', 'rors', 'orrs', 'ands', 'eors', 'bics', 'adcs', 'sbcs', 'negs',
     'rsbs', 'cmp', 'tst', 'cmn', 'mov', 'str', 'strh', 'strb',
-    'ldr', 'ldrh', 'ldrb', 'ldrsh', 'ldrsb', 'push', 'pop', 'svc',
+    'ldr', 'ldrh', 'ldrb', 'ldrsh', 'ldrsb', 'push', 'pop', 'svc', 'movs', 'bx',
 }
 
 
@@ -27,20 +28,26 @@ SUPPORTED = {
 class Edit:
     offset: int
     line: int
-    opcode: int
+    opcode: bytes
     mnemonic: str
     assembly: str
 
 
-def preflight(encodings):
+def preflight(edits):
     """Check syntax and exact opcodes before touching the formal source tree."""
     folder = ROOT / 'build/stage0'
     driver = folder / 'reencode-thumb.asm'
     output = folder / 'reencode-thumb.bin'
-    pending = sorted(encodings)
+    pending = sorted(edits, key=lambda edit: edit.offset)
     while pending:
         prefix = ['.gba', f'.create "{output.as_posix()}", 0x08000000', '.thumb']
-        lines = prefix + [assembly for _, assembly in pending] + ['.close']
+        lines = list(prefix)
+        assembly_lines = {}
+        for edit in pending:
+            lines.append(f'.org 0x{extract_func.BASE + edit.offset:08X}')
+            lines.append(edit.assembly)
+            assembly_lines[len(lines)] = edit
+        lines.append('.close')
         driver.write_text('\n'.join(lines) + '\n', encoding='utf-8')
         result = subprocess.run(
             [str(ROOT / 'tools/bin/armips.exe'), str(driver)],
@@ -48,17 +55,17 @@ def preflight(encodings):
         )
         if result.returncode == 0:
             assembled = output.read_bytes()
-            assert len(assembled) == 2 * len(pending)
-            return {key for index, key in enumerate(pending)
-                    if assembled[2 * index:2 * index + 2] == struct.pack('<H', key[0])}
+            return {edit for edit in pending
+                    if assembled[edit.offset:edit.offset + len(edit.opcode)] == edit.opcode}
         rejected = {
-            int(line) - len(prefix) - 1 for line in re.findall(
+            int(line) for line in re.findall(
                 r'reencode-thumb\.asm\((\d+)\) error:', result.stdout + result.stderr
             )
         }
-        if not rejected or not rejected <= set(range(len(pending))):
+        if not rejected or not rejected <= assembly_lines.keys():
             raise RuntimeError((result.stdout + result.stderr)[-2000:])
-        pending = [key for index, key in enumerate(pending) if index not in rejected]
+        rejected_edits = {assembly_lines[line] for line in rejected}
+        pending = [edit for edit in pending if edit not in rejected_edits]
     return set()
 
 
@@ -76,23 +83,30 @@ def candidates(inventory, rom):
 
     by_file = defaultdict(list)
     for offset, row in instructions.items():
-        if row['size'] == 2 and row['mnemonic'] in SUPPORTED:
+        if row['mnemonic'] in SUPPORTED or row['mnemonic'] in DIRECT_BRANCHES:
             by_file[row['source']].append((offset, row))
     for file, rows in by_file.items():
         lines = (ROOT / file).read_text(encoding='utf-8').splitlines()
         for offset, row in rows:
             line = row['line'] - 1
             match = RAW.match(lines[line])
-            if not match or offset in protected or offset + 1 in protected:
+            size = row['size']
+            if not match or any(address in protected for address in range(offset, offset + size)):
                 continue
-            opcode = int(match[1], 16)
-            assert struct.pack('<H', opcode) == rom[offset:offset + 2], (file, offset)
-            if not valid_thumb1(rom, offset, 2):
+            opcode = b''.join(int(word, 16).to_bytes(2, 'little') for word in match[1].split(', '))
+            assert opcode == rom[offset:offset + size], (file, offset)
+            if opcode == b'\0\0' or not valid_thumb1(rom, offset, size):
                 continue
-            instruction = SimpleNamespace(mnemonic=row['mnemonic'], op_str=row['operands'])
-            assembly = extract_func.fmt(instruction, offset, '', {}, set())
+            mnemonic, operands = row['mnemonic'], row['operands']
+            if mnemonic in DIRECT_BRANCHES:
+                if not re.fullmatch(r'#0x[0-9a-f]+', operands):
+                    continue
+                assembly = f'{mnemonic} {operands[1:]}'
+            else:
+                instruction = SimpleNamespace(mnemonic=mnemonic, op_str=operands)
+                assembly = extract_func.fmt(instruction, offset, '', {}, set())
             if not assembly.startswith('.'):
-                yield file, Edit(offset, line, opcode, row['mnemonic'], assembly)
+                yield file, Edit(offset, line, opcode, mnemonic, assembly)
 
 
 def main():
@@ -109,14 +123,14 @@ def main():
         rom = (ROOT / 'baserom.gba').read_bytes()
         assert hashlib.sha1(rom).hexdigest() == extract_func.EXPECT
         proposed = list(candidates(inventory, rom))
-        verified = preflight({(edit.opcode, edit.assembly) for _, edit in proposed})
+        verified = preflight(edit for _, edit in proposed)
         changes = defaultdict(list)
         for file, edit in proposed:
-            if (edit.opcode, edit.assembly) in verified:
+            if edit in verified:
                 changes[file].append(edit)
         edits = [edit for group in changes.values() for edit in group]
         counts = Counter(edit.mnemonic for edit in edits)
-        summary = dict(candidates=len(proposed), converted=len(edits), bytes=2 * len(edits),
+        summary = dict(candidates=len(proposed), converted=len(edits), bytes=sum(len(edit.opcode) for edit in edits),
                        files=len(changes), by_mnemonic=dict(counts))
         print(json.dumps(summary), flush=True)
         if not args.apply or not edits:

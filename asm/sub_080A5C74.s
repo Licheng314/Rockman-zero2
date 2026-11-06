@@ -9,23 +9,23 @@ sub_080A5C74:
     lsr r4, r2, #0x18
     ldr r0, [pc, #0x38]
     ldr r0, [r0]
-    .dh 0xF760, 0xFF7E ; TODO bl #0x8006b84
+    bl 0x8006b84
     add r3, r0, #0
     cmp r3, #0
-    .dh 0xD013 ; TODO beq #0x80a5cb6
+    beq 0x80a5cb6
     add r1, r3, #0
     add r1, #0x25
-    .dh 0x2200 ; TODO movs r2, #0
-    .dh 0x2008 ; TODO movs r0, #8
+    mov r2, #0
+    mov r0, #8
     strb r0, [r1]
     ldr r0, [pc, #0x24]
-    .dh 0x212A ; TODO movs r1, #0x2a
+    mov r1, #0x2a
     strb r1, [r3, #9]
     add r0, #0xa8
     ldr r0, [r0]
     ldr r0, [r0]
     str r0, [r3, #0x14]
-    .dh 0x2000 ; TODO movs r0, #0
+    mov r0, #0
     strh r2, [r3, #0x20]
     add r1, r3, #0
     add r1, #0x22
@@ -36,4 +36,4 @@ sub_080A5C74:
 loc_080A5CB6:
     pop {r4, r5, r6}
     pop {r0}
-    .dh 0x4700 ; TODO bx r0
+    bx r0

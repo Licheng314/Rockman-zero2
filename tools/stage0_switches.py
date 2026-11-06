@@ -14,8 +14,22 @@ def bounded_switches(instructions, rom):
     for a, row in instructions.items():
         if row['mnemonic']!='mov' or not row['operands'].startswith('pc, '):
             continue
-        seq=[instructions.get(a-k) for k in [8,6,4,2]]
-        if any(x is None or x['size']!=2 for x in seq):
+        # Some cases set up arguments after loading the jump target. Accept
+        # only the compiler's straight-line low-register argument setup, and
+        # stop before any instruction that could overwrite the target.
+        deref_pc = a - 2
+        jump_register = row['operands'][4:]
+        for _ in range(4):
+            setup = instructions.get(deref_pc)
+            if not setup or setup['size'] != 2 or setup['source'] != row['source']:
+                break
+            operands = re.fullmatch(r'(r[0-7]), (?:r[0-7], )?#(?:0x[0-9a-f]+|[0-9]+)', setup['operands'])
+            if setup['mnemonic'] not in ('add', 'adds') or not operands or operands[1] == jump_register:
+                break
+            deref_pc -= 2
+        shiftpc = deref_pc - 6
+        seq = [instructions.get(p) for p in range(shiftpc, deref_pc + 2, 2)]
+        if any(x is None or x['size'] != 2 or x['source'] != row['source'] for x in seq):
             continue
         shift, load, add, deref=seq
         sm=re.fullmatch(r'(r\d+), (r\d+), #2',shift['operands']) if shift['mnemonic'] in ('lsl','lsls') else None
@@ -32,7 +46,7 @@ def bounded_switches(instructions, rom):
         dm=re.fullmatch(r'(r\d+), \['+dest+r'\]',deref['operands']) if deref['mnemonic']=='ldr' else None
         if not dm or row['operands']!='pc, '+dm[1]:
             continue
-        shiftpc=a-8;compare=None;comparepc=None
+        compare=None;comparepc=None
         if all(k in instructions for k in (shiftpc-4,shiftpc-2)) and instructions[shiftpc-2]['mnemonic']=='bhi':
             comparepc=shiftpc-4;compare=instructions[comparepc]
             # The out-of-range branch must leave the dispatch sequence.
@@ -54,10 +68,11 @@ def bounded_switches(instructions, rom):
         count=int(cm[1],0)+1
         if not 1<=count<=256:
             continue
-        hw=int.from_bytes(rom[a-6:a-4],'little')
+        loadpc = shiftpc + 2
+        hw=int.from_bytes(rom[loadpc:loadpc+2],'little')
         if hw & 0xF800 != 0x4800:
             continue
-        pool=((a-6+4)&~3)+(hw&255)*4
+        pool=((loadpc+4)&~3)+(hw&255)*4
         if pool+4>len(rom):
             continue
         table=int.from_bytes(rom[pool:pool+4],'little')-BASE

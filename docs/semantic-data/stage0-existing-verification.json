@@ -3,13 +3,14 @@
   "reports": [
     "stage0-existing-decode.json",
     "stage0-existing-decode-followup.json",
-    "stage0-existing-dispatch-tail-20261106.json"
+    "stage0-existing-dispatch-tail-20261106.json",
+    "stage0-switch-setup-20261106.json"
   ],
-  "decoded_instructions_verified": 21814,
-  "decoded_bytes_verified": 46410,
+  "decoded_instructions_verified": 21895,
+  "decoded_bytes_verified": 46574,
   "original_requested_entries_verified": 846,
-  "current_source_files_verified": 242,
-  "source_hash_chains_verified": 274,
-  "inventory_source_fingerprint": "e23f14cb80b5b45a7769f48c04283363aa7bf271a8bf531b95dd8c8b864f6c24",
+  "current_source_files_verified": 243,
+  "source_hash_chains_verified": 275,
+  "inventory_source_fingerprint": "6ab624b3663ce632aca08af14f2fbd43c1b4484e02116766e93469bbea3726f5",
   "original_rom_sha1": "c4d93a58f0f82c526dec8a3fdbda170336303689"
 }

@@ -107,6 +107,20 @@ class Stage0Tests(unittest.TestCase):
         instructions[start]['operands']='r0, #9'
         self.assertEqual(bounded_switches(instructions,rom),[])
 
+    def test_switch_preserves_loaded_target_across_argument_setup(self):
+        rom = extract_func.data
+        start, end = 0xA146A, 0xA1482
+        md = Cs(CS_ARCH_ARM, CS_MODE_THUMB)
+        instructions = {
+            i.address - BASE: dict(size=i.size, mnemonic=i.mnemonic, operands=i.op_str, source='fixture')
+            for i in md.disasm(rom[start:end], BASE + start)
+        }
+        rows = bounded_switches(instructions, rom)
+        self.assertEqual(len(rows), 1)
+        self.assertEqual((rows[0]['literal'], rows[0]['table'], rows[0]['count']), (0xA1484, 0xA1488, 6))
+        instructions[0xA147E]['operands'] = 'r0, #0x52'
+        self.assertEqual(bounded_switches(instructions, rom), [])
+
     def test_switch_accepts_error_call_guard(self):
         # cmp; bls <dispatch>; bl <out-of-line halt>: the real 0x080E6C9C shape.
         rom=bytearray(0x40)

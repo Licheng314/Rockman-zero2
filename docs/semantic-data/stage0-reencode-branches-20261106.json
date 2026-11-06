@@ -1,0 +1,134 @@
+{
+  "candidates": 58,
+  "converted": 58,
+  "bytes": 138,
+  "files": 8,
+  "by_mnemonic": {
+    "b": 4,
+    "bne": 2,
+    "bhi": 1,
+    "bl": 11,
+    "beq": 3,
+    "movs": 32,
+    "bx": 3,
+    "bge": 2
+  },
+  "rom_sha1": "c4d93a58f0f82c526dec8a3fdbda170336303689",
+  "input_source_fingerprint": "42680c1604396b0834f1a9feac0ed3c1e4b3743eefd4a9cf9ab5f12df62b545c",
+  "repairs": [
+    {
+      "file": "asm/block_0801AD08.s",
+      "before_sha1": "711c270e5a829bb9a645cf64e747f19073f9968f",
+      "after_sha1": "9d115c44c060f904a4eef6e0ca89de2eb9480cf8",
+      "offsets": [
+        110068,
+        110288
+      ]
+    },
+    {
+      "file": "asm/sub_08047C64.s",
+      "before_sha1": "972ce576af4e3310b2a07e66082629a9737864a4",
+      "after_sha1": "2f9596b9de1d34e1da7d0d53004e81f1d5c14164",
+      "offsets": [
+        294050
+      ]
+    },
+    {
+      "file": "asm/sub_080683CC.s",
+      "before_sha1": "d8d6c923b7c7c01414e9e0c9122dd592b976a09d",
+      "after_sha1": "e33f8d0f788cfebfbb0b51ec772f1cf1d67b2fd6",
+      "offsets": [
+        427162
+      ]
+    },
+    {
+      "file": "asm/sub_0807FAC0.s",
+      "before_sha1": "b682f11dc368454de8a18f980449e3060383c960",
+      "after_sha1": "5041130adb93e9233b0d77bd58af6343425d7dff",
+      "offsets": [
+        522952
+      ]
+    },
+    {
+      "file": "asm/sub_080858E4.s",
+      "before_sha1": "dab6bdf5c8f4b5241e4d94ba9782dabad63af393",
+      "after_sha1": "bfd0ffe0c873df78bf914afe5afde6db574beab2",
+      "offsets": [
+        547158
+      ]
+    },
+    {
+      "file": "asm/sub_080874C4.s",
+      "before_sha1": "71b618d75d174f629eba1a32a9efa9859a1e6386",
+      "after_sha1": "58dfd423c7ae192f0448251957c66b199fd9f8ae",
+      "offsets": [
+        554196,
+        554204,
+        554210,
+        554212,
+        554218,
+        554230,
+        554242,
+        554262
+      ]
+    },
+    {
+      "file": "asm/sub_08099118.s",
+      "before_sha1": "55306df03853ed80d0eb5138319476b1ff6463a0",
+      "after_sha1": "473f62461d3d54f6afd2afdaf42352a5a3eca29d",
+      "offsets": [
+        626974,
+        626980,
+        626982,
+        626986,
+        626996,
+        627002,
+        627010,
+        627016,
+        627020,
+        627024,
+        627034,
+        627044,
+        627052,
+        627058,
+        627070,
+        627088,
+        627090,
+        627118,
+        627126,
+        627140,
+        627154,
+        627166,
+        627174,
+        627200,
+        627202,
+        627204,
+        627212,
+        627214,
+        627216,
+        627224,
+        627226,
+        627228,
+        627236,
+        627238,
+        627240,
+        627262,
+        627270
+      ]
+    },
+    {
+      "file": "asm/sub_080A5C74.s",
+      "before_sha1": "3206fe11da4b0a5bad1da033e5b6b992a958f60a",
+      "after_sha1": "684b89c174c736bc4eb9db1bd18da1ddb84316eb",
+      "offsets": [
+        679044,
+        679052,
+        679058,
+        679060,
+        679066,
+        679078,
+        679098
+      ]
+    }
+  ]
+}

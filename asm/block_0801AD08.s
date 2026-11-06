@@ -119,7 +119,7 @@ loc_0801ADB2:
     orr r1, r0
     strh r1, [r4, #8]
     mov r0, #0xf
-    .dh 0xE091 ; TODO b #0x801af1a
+    b 0x801af1a
     .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0001CFFF
     .word 0x0202EC30
@@ -216,7 +216,7 @@ loc_0801AE94:
     ldr r1, [r1, #0x50]
     bl EXT_0801B454
     mov r0, #0x12
-    .dh 0xE023 ; TODO b #0x801af1a
+    b 0x801af1a
     .dh 0x0000 ; alignment after unconditional transfer
     .word 0x03001590
     .word 0x00000165

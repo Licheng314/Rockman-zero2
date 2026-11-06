@@ -56,7 +56,7 @@ loc_0808592E:
     mov r1, #0
     bl EXT_0801F004
     add r6, r0, #0
-    .dh 0xE005 ; TODO b #0x8085964
+    b 0x8085964
     .word 0xFFFFF600
     .word 0x0202E130
 loc_08085960:

@@ -31,7 +31,7 @@ loc_08047C84:
     lsl r0, r0, #0x18
     lsr r0, r0, #0x18
     cmp r0, #0xff
-    .dh 0xD103 ; TODO bne #0x8047cac
+    bne 0x8047cac
     mov r0, #6
     strb r0, [r4, #0xd]
     mov r0, #0

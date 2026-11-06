@@ -5,7 +5,7 @@ sub_0807FAC0:
     add r4, r0, #0
     ldrb r0, [r4, #0xe]
     cmp r0, #0
-    .dh 0xD10A ; TODO bne #0x807fae0
+    bne 0x807fae0
     ldr r1, [pc, #0x30]
     add r0, r4, #0
     bl EXT_080127E4

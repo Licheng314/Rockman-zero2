@@ -16,12 +16,12 @@
   "exact_new_extents_verified": 4300,
   "rom_sha1": "c4d93a58f0f82c526dec8a3fdbda170336303689",
   "next_work": [
-    "Audit the remaining 406 bytes of legacy raw-source markers, prioritizing the 168- and 92-byte clusters; prove code and data before rewriting",
+    "Repair legacy boundaries that placed proven PC-relative literal words under Thumb function labels, then re-audit residual alignment and instructions",
     "Audit final full-ROM build and source classification"
   ],
   "overall_goal_achieved": false,
-  "old_formal_new_decoded_instruction_bytes": 46410,
-  "old_formal_new_decoded_instruction_count": 21814,
+  "old_formal_new_decoded_instruction_bytes": 46574,
+  "old_formal_new_decoded_instruction_count": 21895,
   "global_formal_extents_verified": 14920,
   "new_verified_pc_word_bytes": 960,
   "new_verified_indirect_code_bytes": 498,
@@ -79,7 +79,9 @@
     "stage0-terminal-gaps-20261106.json",
     "stage0-reencode-thumb-20261106.json",
     "stage0-inline-data-20261106.json",
-    "stage0-existing-dispatch-tail-20261106.json"
+    "stage0-existing-dispatch-tail-20261106.json",
+    "stage0-switch-setup-20261106.json",
+    "stage0-reencode-branches-20261106.json"
   ],
   "residual_audit": {
     "total_lines": 5178,
@@ -152,11 +154,33 @@
     "complete_word_locations_reconciled": 272
   },
   "legacy_unclassified_raw_source": {
-    "lines": 183,
-    "bytes": 406,
-    "todo_bytes": 206,
+    "lines": 41,
+    "bytes": 100,
+    "todo_bytes": 68,
     "zero_gap_bytes": 32,
-    "nonzero_gap_bytes": 168,
+    "nonzero_gap_bytes": 0,
     "scope": "Legacy Thumb manifest .dh gap/TODO/svc/preserved raw markers, excluding already classified data and integrated C"
+  },
+  "legacy_dispatch_argument_setup": {
+    "switches": 1,
+    "case_slots": 6,
+    "missing_entries_restored": 4,
+    "instruction_count": 81,
+    "instruction_bytes": 164
+  },
+  "legacy_exact_address_reencoding": {
+    "converted": 58,
+    "bytes": 138,
+    "files": 8,
+    "by_mnemonic": {
+      "b": 4,
+      "bne": 2,
+      "bhi": 1,
+      "bl": 11,
+      "beq": 3,
+      "movs": 32,
+      "bx": 3,
+      "bge": 2
+    }
   }
 }

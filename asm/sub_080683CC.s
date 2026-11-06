@@ -103,7 +103,7 @@ loc_0806846E:
     ldrh r1, [r2, #0xc]
     ldr r0, [pc, #0x18]
     cmp r1, r0
-    .dh 0xD801 ; TODO bhi #0x80684a0
+    bhi 0x80684a0
     add r0, r1, #1
     strh r0, [r2, #0xc]
     add r1, r5, #0
