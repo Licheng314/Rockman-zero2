@@ -1,9 +1,6 @@
-; sub_080C2E0A @ 0x080C2E0A-080C2E58  (自动生成, 经往返验证)
+; block_080C2E10: prefix moved to its PC-relative literal pool.
 .thumb
-sub_080C2E0A:
-    lsl r2, r0, #8
-    strh r4, [r7, #0x30]
-    lsr r4, r6, #0x20
+block_080C2E10:
     push {r4, lr}
     add r4, r0, #0
     ldrb r0, [r4, #0xd]

@@ -1,8 +1,6 @@
-; sub_080CD672 @ 0x080CD672-080CD7BC  (自动生成, 经往返验证)
+; block_080CD678: prefix moved to its PC-relative literal pool.
 .thumb
-sub_080CD672:
-    .dh 0xFFFF, 0x863C ; TODO vqshlu.s32 d24, d28, #0x1f
-    lsr r4, r6, #0x20
+block_080CD678:
     push {r4, r5, r6, lr}
     add r4, r0, #0
     mov r5, #0

@@ -1,7 +1,6 @@
-; sub_080162FA @ 0x080162FA-08016428  (自动生成, 经往返验证)
+; block_080162FC: prefix moved to its PC-relative literal pool.
 .thumb
-sub_080162FA:
-    lsl r0, r0, #0xc
+block_080162FC:
     mov r1, #0xbe
     lsl r1, r1, #1
     add r5, r6, r1

@@ -1,0 +1,140 @@
+{
+ "blocks": [
+  {
+   "label": "Bounded animation table halfwords",
+   "start": 980802,
+   "end": 980820,
+   "element": "",
+   "proof": {
+    "table": 980800,
+    "source": "asm/sub_08067E2C.s",
+    "description": "Two halfwords per animation record, index times four, second field read at +2, terminal zero record.",
+    "whole_table_halfwords": [
+     1537,
+     4,
+     1540,
+     16,
+     1543,
+     32,
+     1541,
+     16,
+     0,
+     0
+    ]
+   }
+  },
+  {
+   "label": "Bounded animation table halfwords",
+   "start": 980822,
+   "end": 980836,
+   "element": "",
+   "proof": {
+    "table": 980820,
+    "source": "asm/sub_08067C30.s",
+    "description": "Animation record table published to object +0x60; same packed (animation,timer) records and terminal zero pair.",
+    "whole_table_halfwords": [
+     1537,
+     1,
+     1538,
+     4,
+     1536,
+     4,
+     0,
+     0
+    ]
+   }
+  },
+  {
+   "label": "Bounded animation table halfwords",
+   "start": 980838,
+   "end": 980852,
+   "element": "",
+   "proof": {
+    "table": 980836,
+    "source": "asm/sub_08067C30.s",
+    "description": "Indexed animation/timer halfword pairs, second field at +2 and zero timer terminates.",
+    "whole_table_halfwords": [
+     1536,
+     4,
+     1539,
+     4,
+     1537,
+     16,
+     0,
+     0
+    ]
+   }
+  },
+  {
+   "label": "Bounded animation table halfwords",
+   "start": 980878,
+   "end": 980882,
+   "element": "",
+   "proof": {
+    "table": 980876,
+    "source": "asm/sub_0806F7F0.s",
+    "description": "Index capped at 2 before shift by one and LDRH.",
+    "whole_table_halfwords": [
+     6144,
+     6151,
+     6152
+    ]
+   }
+  },
+  {
+   "label": "Bounded animation table halfwords",
+   "start": 980884,
+   "end": 980888,
+   "element": "",
+   "proof": {
+    "table": 980882,
+    "source": "asm/sub_0806FB8C.s",
+    "description": "Index capped at 2 before shift by one and LDRH.",
+    "whole_table_halfwords": [
+     6152,
+     6151,
+     6144
+    ]
+   }
+  },
+  {
+   "label": "Bounded animation table halfwords",
+   "start": 980888,
+   "end": 980896,
+   "element": "",
+   "proof": {
+    "table": 980888,
+    "source": "asm/sub_0806FFDC.s",
+    "description": "CMP #2 and CMP #3 branches bound the shared LDRH path at 0807014C to four entries.",
+    "whole_table_halfwords": [
+     6144,
+     6151,
+     6152,
+     6151
+    ]
+   }
+  },
+  {
+   "label": "Bounded animation table halfwords",
+   "start": 980898,
+   "end": 980908,
+   "element": "",
+   "proof": {
+    "table": 980896,
+    "source": "asm/sub_08072A10.s",
+    "description": "CMP #5 then reset before shift by one and LDRH. Other readers at 08072DEA and 08073082.",
+    "whole_table_halfwords": [
+     6923,
+     6918,
+     6919,
+     6920,
+     6921,
+     6922
+    ]
+   }
+  }
+ ],
+ "original_formal_bytes": 982668,
+ "added_data_bytes": 72,
+ "scope": "Typed data blocks with per-block read/copy proof; no unproven range included."
+}

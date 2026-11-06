@@ -1,9 +1,6 @@
-; sub_0805E112 @ 0x0805E112-0805E150  (自动生成, 经往返验证)
+; block_0805E11C: prefix moved to its PC-relative literal pool.
 .thumb
-sub_0805E112:
-    lsl r2, r0, #8
-    .word 0x000343FD ; proven PC/switch data
-    .word 0x00269EC3 ; proven PC/switch data
+block_0805E11C:
     ldr r1, [pc, #0x20]
     add r0, r5, #0
     bl EXT_080127E4

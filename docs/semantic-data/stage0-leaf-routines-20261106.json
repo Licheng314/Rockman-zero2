@@ -1,0 +1,354 @@
+{
+  "rom_sha1": "c4d93a58f0f82c526dec8a3fdbda170336303689",
+  "ranges": [
+    {
+      "name": "stage0_thumb_code_08000AE4",
+      "start": 2788,
+      "end": 2796,
+      "kind": "thumb-code",
+      "file": "asm/stage0_thumb_code_08000AE4.s",
+      "proof": {
+        "description": "Writes halfword 1 to the interrupt master enable register 0x04000208 through its own literal and returns.",
+        "exit": 2794
+      }
+    },
+    {
+      "name": "stage0_thumb_code_08002924",
+      "start": 10532,
+      "end": 10542,
+      "kind": "thumb-code",
+      "file": "asm/stage0_thumb_code_08002924.s",
+      "proof": {
+        "description": "Loads the literal 0x02000D60, clears the word at offset 0x30, and returns.",
+        "exit": 10540
+      }
+    },
+    {
+      "name": "stage0_thumb_code_080033B8",
+      "start": 13240,
+      "end": 13268,
+      "kind": "thumb-code",
+      "file": "asm/stage0_thumb_code_080033B8.s",
+      "proof": {
+        "description": "Coherent six-halfword initializer on r0 with related limits; no internal pool; returns before the next setter.",
+        "exit": 13266
+      }
+    },
+    {
+      "name": "stage0_thumb_code_080033D4",
+      "start": 13268,
+      "end": 13274,
+      "kind": "thumb-code",
+      "file": "asm/stage0_thumb_code_080033D4.s",
+      "proof": {
+        "description": "Setter for the last two halfwords (+8 and +10) of the preceding initializer, using incoming r1/r2.",
+        "exit": 13272
+      }
+    },
+    {
+      "name": "stage0_thumb_code_08003434",
+      "start": 13364,
+      "end": 13370,
+      "kind": "thumb-code",
+      "file": "asm/stage0_thumb_code_08003434.s",
+      "proof": {
+        "description": "Zero setter for the same +4 pointer field assigned by preceding function 08003430.",
+        "exit": 13368
+      }
+    },
+    {
+      "name": "stage0_thumb_code_0800343C",
+      "start": 13372,
+      "end": 13378,
+      "kind": "thumb-code",
+      "file": "asm/stage0_thumb_code_0800343C.s",
+      "proof": {
+        "description": "Zero setter for head pointer +0, consumed by the following two insertion variants.",
+        "exit": 13376
+      }
+    },
+    {
+      "name": "stage0_thumb_code_08003444",
+      "start": 13380,
+      "end": 13388,
+      "kind": "thumb-code",
+      "file": "asm/stage0_thumb_code_08003444.s",
+      "proof": {
+        "description": "Singly-linked insertion: old head -> incoming node, then incoming node -> head.",
+        "exit": 13386
+      }
+    },
+    {
+      "name": "stage0_thumb_code_0800344C",
+      "start": 13388,
+      "end": 13396,
+      "kind": "thumb-code",
+      "file": "asm/stage0_thumb_code_0800344C.s",
+      "proof": {
+        "description": "Singly-linked insertion with separate storage for old head, same LDR/STR/STR/BX skeleton.",
+        "exit": 13394
+      }
+    },
+    {
+      "name": "stage0_thumb_code_08004A4C",
+      "start": 19020,
+      "end": 19030,
+      "kind": "thumb-code",
+      "file": "asm/stage0_thumb_code_08004A4C.s",
+      "proof": {
+        "description": "Scaled indexed word setter before 08004A58, with index scaled by four and a terminal return.",
+        "exit": 19028
+      }
+    },
+    {
+      "name": "stage0_thumb_code_08004A68",
+      "start": 19048,
+      "end": 19070,
+      "kind": "thumb-code",
+      "file": "asm/stage0_thumb_code_08004A68.s",
+      "proof": {
+        "description": "Indexed variant of immediately preceding 08004A58: same +0x200 pointer load and head insertion stores, adding scaled signed index.",
+        "exit": 19068
+      }
+    },
+    {
+      "name": "stage0_thumb_code_08006C68",
+      "start": 27752,
+      "end": 27768,
+      "kind": "thumb-code",
+      "file": "asm/stage0_thumb_code_08006C68.s",
+      "proof": {
+        "description": "Clears object fields +4,+16,+20,+12,+8,+0 in one leaf, adjacent to linked-list helpers.",
+        "exit": 27766
+      }
+    },
+    {
+      "name": "stage0_thumb_code_080087FC",
+      "start": 34812,
+      "end": 34830,
+      "kind": "thumb-code",
+      "file": "asm/stage0_thumb_code_080087FC.s",
+      "proof": {
+        "description": "Uses same 0x88 layer-record stride and 02001020 base as 0800873C, clears its first two callback slots.",
+        "exit": 34828
+      }
+    },
+    {
+      "name": "stage0_thumb_code_080DEF18",
+      "start": 913176,
+      "end": 913188,
+      "kind": "thumb-code",
+      "file": "asm/stage0_thumb_code_080DEF18.s",
+      "proof": {
+        "description": "Same PC-load/LDRH/mask/STRH/return shape as 08010584, accesses display shadow 02000FE0 using its own mask.",
+        "exit": 913186
+      }
+    },
+    {
+      "name": "stage0_thumb_code_080E92F4",
+      "start": 955124,
+      "end": 955128,
+      "kind": "thumb-code",
+      "file": "asm/stage0_thumb_code_080E92F4.s",
+      "proof": {
+        "description": "Repeated accessor pair: setter STR r1,[r0,#8]; BX LR immediately precedes matching getter LDR r0,[r0,#8]; BX LR.",
+        "exit": 955126
+      }
+    },
+    {
+      "name": "stage0_thumb_code_080EA0F4",
+      "start": 958708,
+      "end": 958712,
+      "kind": "thumb-code",
+      "file": "asm/stage0_thumb_code_080EA0F4.s",
+      "proof": {
+        "description": "Repeated accessor pair: setter STR r1,[r0,#8]; BX LR immediately precedes matching getter LDR r0,[r0,#8]; BX LR.",
+        "exit": 958710
+      }
+    },
+    {
+      "name": "stage0_thumb_code_080EA520",
+      "start": 959776,
+      "end": 959780,
+      "kind": "thumb-code",
+      "file": "asm/stage0_thumb_code_080EA520.s",
+      "proof": {
+        "description": "Repeated accessor pair: setter STR r1,[r0,#8]; BX LR immediately precedes matching getter LDR r0,[r0,#8]; BX LR.",
+        "exit": 959778
+      }
+    },
+    {
+      "name": "stage0_thumb_code_080EAFE8",
+      "start": 962536,
+      "end": 962540,
+      "kind": "thumb-code",
+      "file": "asm/stage0_thumb_code_080EAFE8.s",
+      "proof": {
+        "description": "Repeated accessor pair: setter STR r1,[r0,#8]; BX LR immediately precedes matching getter LDR r0,[r0,#8]; BX LR.",
+        "exit": 962538
+      }
+    },
+    {
+      "name": "stage0_literal_pool_08000AEC",
+      "start": 2796,
+      "end": 2800,
+      "kind": "literal-pool",
+      "file": "asm/stage0_literal_pool_08000AEC.s",
+      "proof": {
+        "pc_load_readers": [
+          2788
+        ]
+      }
+    },
+    {
+      "name": "stage0_literal_pool_08002930",
+      "start": 10544,
+      "end": 10548,
+      "kind": "literal-pool",
+      "file": "asm/stage0_literal_pool_08002930.s",
+      "proof": {
+        "pc_load_readers": [
+          10532
+        ]
+      }
+    },
+    {
+      "name": "stage0_literal_pool_08008810",
+      "start": 34832,
+      "end": 34836,
+      "kind": "literal-pool",
+      "file": "asm/stage0_literal_pool_08008810.s",
+      "proof": {
+        "pc_load_readers": [
+          34818
+        ]
+      }
+    },
+    {
+      "name": "stage0_literal_pool_080DEF24",
+      "start": 913188,
+      "end": 913192,
+      "kind": "literal-pool",
+      "file": "asm/stage0_literal_pool_080DEF24.s",
+      "proof": {
+        "pc_load_readers": [
+          913176
+        ]
+      }
+    },
+    {
+      "name": "stage0_literal_pool_080DEF28",
+      "start": 913192,
+      "end": 913196,
+      "kind": "literal-pool",
+      "file": "asm/stage0_literal_pool_080DEF28.s",
+      "proof": {
+        "pc_load_readers": [
+          913180
+        ]
+      }
+    },
+    {
+      "name": "stage0_alignment_data_0800292E",
+      "start": 10542,
+      "end": 10544,
+      "kind": "alignment-data",
+      "file": "asm/stage0_alignment_data_0800292E.s",
+      "proof": {
+        "prior_bx": 10540
+      }
+    },
+    {
+      "name": "stage0_alignment_data_080033DA",
+      "start": 13274,
+      "end": 13276,
+      "kind": "alignment-data",
+      "file": "asm/stage0_alignment_data_080033DA.s",
+      "proof": {
+        "prior_bx": 13272
+      }
+    },
+    {
+      "name": "stage0_alignment_data_0800343A",
+      "start": 13370,
+      "end": 13372,
+      "kind": "alignment-data",
+      "file": "asm/stage0_alignment_data_0800343A.s",
+      "proof": {
+        "prior_bx": 13368
+      }
+    },
+    {
+      "name": "stage0_alignment_data_08003442",
+      "start": 13378,
+      "end": 13380,
+      "kind": "alignment-data",
+      "file": "asm/stage0_alignment_data_08003442.s",
+      "proof": {
+        "prior_bx": 13376
+      }
+    },
+    {
+      "name": "stage0_alignment_data_08004A4A",
+      "start": 19018,
+      "end": 19020,
+      "kind": "alignment-data",
+      "file": "asm/stage0_alignment_data_08004A4A.s",
+      "proof": {
+        "prior_bx": 19016
+      }
+    },
+    {
+      "name": "stage0_alignment_data_08004A56",
+      "start": 19030,
+      "end": 19032,
+      "kind": "alignment-data",
+      "file": "asm/stage0_alignment_data_08004A56.s",
+      "proof": {
+        "prior_bx": 19028
+      }
+    },
+    {
+      "name": "stage0_alignment_data_08004A7E",
+      "start": 19070,
+      "end": 19072,
+      "kind": "alignment-data",
+      "file": "asm/stage0_alignment_data_08004A7E.s",
+      "proof": {
+        "prior_bx": 19068
+      }
+    },
+    {
+      "name": "stage0_alignment_data_08006C66",
+      "start": 27750,
+      "end": 27752,
+      "kind": "alignment-data",
+      "file": "asm/stage0_alignment_data_08006C66.s",
+      "proof": {
+        "prior_bx": 27748
+      }
+    },
+    {
+      "name": "stage0_alignment_data_0800880E",
+      "start": 34830,
+      "end": 34832,
+      "kind": "alignment-data",
+      "file": "asm/stage0_alignment_data_0800880E.s",
+      "proof": {
+        "prior_bx": 34828
+      }
+    },
+    {
+      "name": "stage0_arm_code_080ECE80",
+      "start": 970368,
+      "end": 970380,
+      "kind": "arm-code",
+      "file": "asm/stage0_arm_code_080ECE80.s",
+      "proof": {
+        "thumb_adr": 970364,
+        "thumb_bx": 970366,
+        "arm_entry": 970368
+      }
+    }
+  ]
+}

@@ -1,14 +1,14 @@
 {
   "updated_at": "2026-11-06",
   "objective": "Complete stage0 assembly extraction and classification without disguising unknown data as code",
-  "status": "in-progress",
+  "status": "address-coverage-complete-legacy-source-audit-open",
   "baseline_formal_bytes": 912454,
-  "formal_segments": 14816,
-  "formal_bytes": 982570,
+  "formal_segments": 14920,
+  "formal_bytes": 983040,
   "capacity_bytes": 983040,
-  "formal_coverage_percent": 99.95218912760416,
-  "uncovered_bytes": 470,
-  "gap_count": 75,
+  "formal_coverage_percent": 100.0,
+  "uncovered_bytes": 0,
+  "gap_count": 0,
   "c_integrated_count_unchanged": 35,
   "new_bulk_thumb_instruction_bytes": 6308,
   "new_bulk_arm_instruction_bytes": 520,
@@ -16,13 +16,14 @@
   "exact_new_extents_verified": 4300,
   "rom_sha1": "c4d93a58f0f82c526dec8a3fdbda170336303689",
   "next_work": [
-    "Classify the remaining small gaps using local instruction and data provenance",
-    "Audit legacy raw halfwords and verify remaining classifications"
+    "Re-encode proven legacy instruction fallbacks and validate against exact ROM bytes",
+    "Classify residual zero and nonzero gap rows in existing Thumb manifests",
+    "Audit final full-ROM build and source classification"
   ],
   "overall_goal_achieved": false,
   "old_formal_new_decoded_instruction_bytes": 45670,
   "old_formal_new_decoded_instruction_count": 21462,
-  "global_formal_extents_verified": 14816,
+  "global_formal_extents_verified": 14920,
   "new_verified_pc_word_bytes": 960,
   "new_verified_indirect_code_bytes": 498,
   "new_verified_indirect_literal_bytes": 100,
@@ -72,7 +73,11 @@
     "stage0-lifecycle-proof-20261106.json",
     "stage0-map-dispatch-20261106.json",
     "stage0-lifecycle-20261106.json",
-    "stage0-sound-slot35-20261106.json"
+    "stage0-sound-slot35-20261106.json",
+    "stage0-split-literals-20261106.json",
+    "stage0-animation-tables-20261106.json",
+    "stage0-leaf-routines-20261106.json",
+    "stage0-terminal-gaps-20261106.json"
   ],
   "residual_audit": {
     "total_lines": 5178,
@@ -121,5 +126,11 @@
     "uncovered_fallthrough_targets": 1,
     "uncovered_pc_word_bytes": 0,
     "formal_switch_entries_without_decoded_source": 0
+  },
+  "residual_manifest_raw_halfword_bytes": {
+    "instruction_fallback": 4172,
+    "bios_instruction": 34,
+    "zero_gap": 5064,
+    "nonzero_gap": 1166
   }
 }

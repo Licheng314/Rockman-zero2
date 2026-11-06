@@ -1,0 +1,628 @@
+{
+  "rom_sha1": "c4d93a58f0f82c526dec8a3fdbda170336303689",
+  "repairs": [
+    {
+      "file": "asm/sub_0800AB22.s",
+      "before_sha1": "0ab1f283fa57a836bc08b969651737386faaac8b",
+      "old_start": 43810,
+      "retired_prefix_end": 43816,
+      "after_sha1": "bd89f73a3ad2ea1c2af085f72f4c8cc4ba5b8ad6",
+      "new_name": "block_0800AB28",
+      "new_start": 43816
+    },
+    {
+      "file": "asm/sub_080162FA.s",
+      "before_sha1": "89d8b258e8c8d22a53e64c977343db8a9979b33b",
+      "old_start": 90874,
+      "retired_prefix_end": 90876,
+      "after_sha1": "9518741a86b0eb85c19e75d30f967381f8ce8f94",
+      "new_name": "block_080162FC",
+      "new_start": 90876
+    },
+    {
+      "file": "asm/sub_08057E5A.s",
+      "before_sha1": "d527fdda02fc8beee12ec91e4205001630da8c7e",
+      "old_start": 360026,
+      "retired_prefix_end": 360036,
+      "retired": true
+    },
+    {
+      "file": "asm/sub_0805E112.s",
+      "before_sha1": "1b79f44e6ec431729daf70c1131b8ad352c3d2e6",
+      "old_start": 385298,
+      "retired_prefix_end": 385308,
+      "after_sha1": "6caf60df67495c3e6a83fdf6979196038272032f",
+      "new_name": "block_0805E11C",
+      "new_start": 385308
+    },
+    {
+      "file": "asm/sub_080C2E0A.s",
+      "before_sha1": "9024456ca402532429d141c808371f773e93f414",
+      "old_start": 798218,
+      "retired_prefix_end": 798224,
+      "after_sha1": "66bb60a77afe091cd4e35bc8b841349a0a89f98d",
+      "new_name": "block_080C2E10",
+      "new_start": 798224
+    },
+    {
+      "file": "asm/sub_080CD672.s",
+      "before_sha1": "52defbfa8bd6525848f6ecbd7f7422d982648dc9",
+      "old_start": 841330,
+      "retired_prefix_end": 841336,
+      "after_sha1": "63ed1a7fdff0be8685b294f3644662f0e1ca958c",
+      "new_name": "block_080CD678",
+      "new_start": 841336
+    }
+  ],
+  "ranges": [
+    {
+      "name": "stage0_pool_0800AB20",
+      "start": 43808,
+      "end": 43816,
+      "file": "asm/stage0_pool_0800AB20.s",
+      "kind": "literal-pool",
+      "proof": {
+        "pc_load_readers": {
+          "43808": [
+            43784
+          ],
+          "43812": [
+            43794
+          ]
+        }
+      }
+    },
+    {
+      "name": "stage0_pool_080162F8",
+      "start": 90872,
+      "end": 90876,
+      "file": "asm/stage0_pool_080162F8.s",
+      "kind": "literal-pool",
+      "proof": {
+        "pc_load_readers": {
+          "90872": [
+            90852
+          ]
+        }
+      }
+    },
+    {
+      "name": "stage0_pool_08057E58",
+      "start": 360024,
+      "end": 360036,
+      "file": "asm/stage0_pool_08057E58.s",
+      "kind": "literal-pool",
+      "proof": {
+        "pc_load_readers": {
+          "360024": [
+            359834
+          ],
+          "360028": [
+            359860
+          ],
+          "360032": [
+            359866
+          ]
+        }
+      }
+    },
+    {
+      "name": "stage0_pool_0805E110",
+      "start": 385296,
+      "end": 385308,
+      "file": "asm/stage0_pool_0805E110.s",
+      "kind": "literal-pool",
+      "proof": {
+        "pc_load_readers": {
+          "385296": [
+            385196
+          ],
+          "385300": [
+            385200
+          ],
+          "385304": [
+            385204,
+            385226,
+            385252
+          ]
+        }
+      }
+    },
+    {
+      "name": "stage0_pool_080C2E08",
+      "start": 798216,
+      "end": 798224,
+      "file": "asm/stage0_pool_080C2E08.s",
+      "kind": "literal-pool",
+      "proof": {
+        "pc_load_readers": {
+          "798216": [
+            798144
+          ],
+          "798220": [
+            798168
+          ]
+        }
+      }
+    },
+    {
+      "name": "stage0_pool_080CD670",
+      "start": 841328,
+      "end": 841336,
+      "file": "asm/stage0_pool_080CD670.s",
+      "kind": "literal-pool",
+      "proof": {
+        "pc_load_readers": {
+          "841328": [
+            841274
+          ],
+          "841332": [
+            841298
+          ]
+        }
+      }
+    },
+    {
+      "name": "stage0_alignment_data_0800AB1E",
+      "start": 43806,
+      "end": 43808,
+      "file": "asm/stage0_alignment_data_0800AB1E.s",
+      "kind": "alignment-data",
+      "proof": {
+        "prior_transfer": 43804,
+        "next_word_boundary": 43808
+      }
+    },
+    {
+      "name": "stage0_alignment_data_0805E10E",
+      "start": 385294,
+      "end": 385296,
+      "file": "asm/stage0_alignment_data_0805E10E.s",
+      "kind": "alignment-data",
+      "proof": {
+        "prior_transfer": 385292,
+        "next_word_boundary": 385296
+      }
+    },
+    {
+      "name": "stage0_alignment_data_0800A62A",
+      "start": 42538,
+      "end": 42540,
+      "file": "asm/stage0_alignment_data_0800A62A.s",
+      "kind": "alignment-data",
+      "proof": {
+        "prior_transfer": 42536,
+        "next_word_boundary": 42540
+      }
+    },
+    {
+      "name": "stage0_alignment_data_0800A62E",
+      "start": 42542,
+      "end": 42544,
+      "file": "asm/stage0_alignment_data_0800A62E.s",
+      "kind": "alignment-data",
+      "proof": {
+        "prior_transfer": 42540,
+        "next_word_boundary": 42544
+      }
+    },
+    {
+      "name": "stage0_alignment_data_0800A7EA",
+      "start": 42986,
+      "end": 42988,
+      "file": "asm/stage0_alignment_data_0800A7EA.s",
+      "kind": "alignment-data",
+      "proof": {
+        "prior_transfer": 42984,
+        "next_word_boundary": 42988
+      }
+    },
+    {
+      "name": "stage0_alignment_data_0800BDFA",
+      "start": 48634,
+      "end": 48636,
+      "file": "asm/stage0_alignment_data_0800BDFA.s",
+      "kind": "alignment-data",
+      "proof": {
+        "prior_transfer": 48632,
+        "next_word_boundary": 48636
+      }
+    },
+    {
+      "name": "stage0_alignment_data_0800C50A",
+      "start": 50442,
+      "end": 50444,
+      "file": "asm/stage0_alignment_data_0800C50A.s",
+      "kind": "alignment-data",
+      "proof": {
+        "prior_transfer": 50440,
+        "next_word_boundary": 50444
+      }
+    },
+    {
+      "name": "stage0_alignment_data_0800D122",
+      "start": 53538,
+      "end": 53540,
+      "file": "asm/stage0_alignment_data_0800D122.s",
+      "kind": "alignment-data",
+      "proof": {
+        "prior_transfer": 53536,
+        "next_word_boundary": 53540
+      }
+    },
+    {
+      "name": "stage0_alignment_data_0800EA1A",
+      "start": 59930,
+      "end": 59932,
+      "file": "asm/stage0_alignment_data_0800EA1A.s",
+      "kind": "alignment-data",
+      "proof": {
+        "prior_transfer": 59928,
+        "next_word_boundary": 59932
+      }
+    },
+    {
+      "name": "stage0_alignment_data_0800F322",
+      "start": 62242,
+      "end": 62244,
+      "file": "asm/stage0_alignment_data_0800F322.s",
+      "kind": "alignment-data",
+      "proof": {
+        "prior_transfer": 62240,
+        "next_word_boundary": 62244
+      }
+    },
+    {
+      "name": "stage0_alignment_data_0800F456",
+      "start": 62550,
+      "end": 62552,
+      "file": "asm/stage0_alignment_data_0800F456.s",
+      "kind": "alignment-data",
+      "proof": {
+        "prior_transfer": 62548,
+        "next_word_boundary": 62552
+      }
+    },
+    {
+      "name": "stage0_alignment_data_0800F5D6",
+      "start": 62934,
+      "end": 62936,
+      "file": "asm/stage0_alignment_data_0800F5D6.s",
+      "kind": "alignment-data",
+      "proof": {
+        "prior_transfer": 62932,
+        "next_word_boundary": 62936
+      }
+    },
+    {
+      "name": "stage0_alignment_data_0800F616",
+      "start": 62998,
+      "end": 63000,
+      "file": "asm/stage0_alignment_data_0800F616.s",
+      "kind": "alignment-data",
+      "proof": {
+        "prior_transfer": 62996,
+        "next_word_boundary": 63000
+      }
+    },
+    {
+      "name": "stage0_alignment_data_0800F62A",
+      "start": 63018,
+      "end": 63020,
+      "file": "asm/stage0_alignment_data_0800F62A.s",
+      "kind": "alignment-data",
+      "proof": {
+        "prior_transfer": 63016,
+        "next_word_boundary": 63020
+      }
+    },
+    {
+      "name": "stage0_alignment_data_0800F6EE",
+      "start": 63214,
+      "end": 63216,
+      "file": "asm/stage0_alignment_data_0800F6EE.s",
+      "kind": "alignment-data",
+      "proof": {
+        "prior_transfer": 63212,
+        "next_word_boundary": 63216
+      }
+    },
+    {
+      "name": "stage0_alignment_data_0800FD3A",
+      "start": 64826,
+      "end": 64828,
+      "file": "asm/stage0_alignment_data_0800FD3A.s",
+      "kind": "alignment-data",
+      "proof": {
+        "prior_transfer": 64824,
+        "next_word_boundary": 64828
+      }
+    },
+    {
+      "name": "stage0_alignment_data_080101F2",
+      "start": 66034,
+      "end": 66036,
+      "file": "asm/stage0_alignment_data_080101F2.s",
+      "kind": "alignment-data",
+      "proof": {
+        "prior_transfer": 66032,
+        "next_word_boundary": 66036
+      }
+    },
+    {
+      "name": "stage0_alignment_data_080101F6",
+      "start": 66038,
+      "end": 66040,
+      "file": "asm/stage0_alignment_data_080101F6.s",
+      "kind": "alignment-data",
+      "proof": {
+        "prior_transfer": 66036,
+        "next_word_boundary": 66040
+      }
+    },
+    {
+      "name": "stage0_alignment_data_0801072E",
+      "start": 67374,
+      "end": 67376,
+      "file": "asm/stage0_alignment_data_0801072E.s",
+      "kind": "alignment-data",
+      "proof": {
+        "prior_transfer": 67372,
+        "next_word_boundary": 67376
+      }
+    },
+    {
+      "name": "stage0_alignment_data_0801095A",
+      "start": 67930,
+      "end": 67932,
+      "file": "asm/stage0_alignment_data_0801095A.s",
+      "kind": "alignment-data",
+      "proof": {
+        "prior_transfer": 67928,
+        "next_word_boundary": 67932
+      }
+    },
+    {
+      "name": "stage0_alignment_data_0801095E",
+      "start": 67934,
+      "end": 67936,
+      "file": "asm/stage0_alignment_data_0801095E.s",
+      "kind": "alignment-data",
+      "proof": {
+        "prior_transfer": 67932,
+        "next_word_boundary": 67936
+      }
+    },
+    {
+      "name": "stage0_alignment_data_0801183A",
+      "start": 71738,
+      "end": 71740,
+      "file": "asm/stage0_alignment_data_0801183A.s",
+      "kind": "alignment-data",
+      "proof": {
+        "prior_transfer": 71736,
+        "next_word_boundary": 71740
+      }
+    },
+    {
+      "name": "stage0_alignment_data_080118BA",
+      "start": 71866,
+      "end": 71868,
+      "file": "asm/stage0_alignment_data_080118BA.s",
+      "kind": "alignment-data",
+      "proof": {
+        "prior_transfer": 71864,
+        "next_word_boundary": 71868
+      }
+    },
+    {
+      "name": "stage0_alignment_data_08011F7E",
+      "start": 73598,
+      "end": 73600,
+      "file": "asm/stage0_alignment_data_08011F7E.s",
+      "kind": "alignment-data",
+      "proof": {
+        "prior_transfer": 73596,
+        "next_word_boundary": 73600
+      }
+    },
+    {
+      "name": "stage0_alignment_data_08038E56",
+      "start": 233046,
+      "end": 233048,
+      "file": "asm/stage0_alignment_data_08038E56.s",
+      "kind": "alignment-data",
+      "proof": {
+        "prior_transfer": 233044,
+        "next_word_boundary": 233048
+      }
+    },
+    {
+      "name": "stage0_alignment_data_0803C8CE",
+      "start": 248014,
+      "end": 248016,
+      "file": "asm/stage0_alignment_data_0803C8CE.s",
+      "kind": "alignment-data",
+      "proof": {
+        "prior_transfer": 248012,
+        "next_word_boundary": 248016
+      }
+    },
+    {
+      "name": "stage0_alignment_data_0803D05A",
+      "start": 249946,
+      "end": 249948,
+      "file": "asm/stage0_alignment_data_0803D05A.s",
+      "kind": "alignment-data",
+      "proof": {
+        "prior_transfer": 249944,
+        "next_word_boundary": 249948
+      }
+    },
+    {
+      "name": "stage0_alignment_data_080AC52E",
+      "start": 705838,
+      "end": 705840,
+      "file": "asm/stage0_alignment_data_080AC52E.s",
+      "kind": "alignment-data",
+      "proof": {
+        "prior_transfer": 705836,
+        "next_word_boundary": 705840
+      }
+    },
+    {
+      "name": "stage0_alignment_data_080D471E",
+      "start": 870174,
+      "end": 870176,
+      "file": "asm/stage0_alignment_data_080D471E.s",
+      "kind": "alignment-data",
+      "proof": {
+        "prior_transfer": 870172,
+        "next_word_boundary": 870176
+      }
+    },
+    {
+      "name": "stage0_alignment_data_080ED322",
+      "start": 971554,
+      "end": 971556,
+      "file": "asm/stage0_alignment_data_080ED322.s",
+      "kind": "alignment-data",
+      "proof": {
+        "prior_transfer": 971552,
+        "next_word_boundary": 971556
+      }
+    },
+    {
+      "name": "stage0_alignment_data_080ED366",
+      "start": 971622,
+      "end": 971624,
+      "file": "asm/stage0_alignment_data_080ED366.s",
+      "kind": "alignment-data",
+      "proof": {
+        "prior_transfer": 971620,
+        "next_word_boundary": 971624
+      }
+    },
+    {
+      "name": "stage0_alignment_data_080ED372",
+      "start": 971634,
+      "end": 971636,
+      "file": "asm/stage0_alignment_data_080ED372.s",
+      "kind": "alignment-data",
+      "proof": {
+        "prior_transfer": 971632,
+        "next_word_boundary": 971636
+      }
+    },
+    {
+      "name": "stage0_alignment_data_080ED39A",
+      "start": 971674,
+      "end": 971676,
+      "file": "asm/stage0_alignment_data_080ED39A.s",
+      "kind": "alignment-data",
+      "proof": {
+        "prior_transfer": 971672,
+        "next_word_boundary": 971676
+      }
+    },
+    {
+      "name": "stage0_alignment_data_080ED3CA",
+      "start": 971722,
+      "end": 971724,
+      "file": "asm/stage0_alignment_data_080ED3CA.s",
+      "kind": "alignment-data",
+      "proof": {
+        "prior_transfer": 971720,
+        "next_word_boundary": 971724
+      }
+    },
+    {
+      "name": "stage0_alignment_data_080ED3DE",
+      "start": 971742,
+      "end": 971744,
+      "file": "asm/stage0_alignment_data_080ED3DE.s",
+      "kind": "alignment-data",
+      "proof": {
+        "prior_transfer": 971740,
+        "next_word_boundary": 971744
+      }
+    },
+    {
+      "name": "stage0_alignment_data_080ED41A",
+      "start": 971802,
+      "end": 971804,
+      "file": "asm/stage0_alignment_data_080ED41A.s",
+      "kind": "alignment-data",
+      "proof": {
+        "prior_transfer": 971800,
+        "next_word_boundary": 971804
+      }
+    },
+    {
+      "name": "stage0_alignment_data_080ED426",
+      "start": 971814,
+      "end": 971816,
+      "file": "asm/stage0_alignment_data_080ED426.s",
+      "kind": "alignment-data",
+      "proof": {
+        "prior_transfer": 971812,
+        "next_word_boundary": 971816
+      }
+    },
+    {
+      "name": "stage0_alignment_data_080EF116",
+      "start": 979222,
+      "end": 979224,
+      "file": "asm/stage0_alignment_data_080EF116.s",
+      "kind": "alignment-data",
+      "proof": {
+        "prior_transfer": 979220,
+        "next_word_boundary": 979224
+      }
+    },
+    {
+      "name": "stage0_alignment_data_080EF11A",
+      "start": 979226,
+      "end": 979228,
+      "file": "asm/stage0_alignment_data_080EF11A.s",
+      "kind": "alignment-data",
+      "proof": {
+        "prior_transfer": 979224,
+        "next_word_boundary": 979228
+      }
+    },
+    {
+      "name": "stage0_alignment_data_080EF11E",
+      "start": 979230,
+      "end": 979232,
+      "file": "asm/stage0_alignment_data_080EF11E.s",
+      "kind": "alignment-data",
+      "proof": {
+        "prior_transfer": 979228,
+        "next_word_boundary": 979232
+      }
+    },
+    {
+      "name": "stage0_alignment_data_080EF122",
+      "start": 979234,
+      "end": 979236,
+      "file": "asm/stage0_alignment_data_080EF122.s",
+      "kind": "alignment-data",
+      "proof": {
+        "prior_transfer": 979232,
+        "next_word_boundary": 979236
+      }
+    },
+    {
+      "name": "stage0_alignment_data_080EF126",
+      "start": 979238,
+      "end": 979240,
+      "file": "asm/stage0_alignment_data_080EF126.s",
+      "kind": "alignment-data",
+      "proof": {
+        "prior_transfer": 979236,
+        "next_word_boundary": 979240
+      }
+    }
+  ]
+}

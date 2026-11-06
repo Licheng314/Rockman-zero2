@@ -1,0 +1,198 @@
+{
+  "rom_sha1": "c4d93a58f0f82c526dec8a3fdbda170336303689",
+  "ranges": [
+    {
+      "name": "stage0_thumb_code_0800F528",
+      "start": 62760,
+      "end": 62764,
+      "kind": "thumb-code",
+      "file": "asm/stage0_thumb_code_0800F528.s",
+      "proof": {
+        "description": "Four-byte return-zero leaf, same MOVS/BX sequence as the two consecutive stubs at 0801485C.",
+        "exit": 62762
+      }
+    },
+    {
+      "name": "stage0_thumb_code_0801485C",
+      "start": 84060,
+      "end": 84064,
+      "kind": "thumb-code",
+      "file": "asm/stage0_thumb_code_0801485C.s",
+      "proof": {
+        "description": "First of two identical return-zero leaf stubs preceding the local dispatcher.",
+        "exit": 84062
+      }
+    },
+    {
+      "name": "stage0_thumb_code_08014860",
+      "start": 84064,
+      "end": 84068,
+      "kind": "thumb-code",
+      "file": "asm/stage0_thumb_code_08014860.s",
+      "proof": {
+        "description": "Second of two identical return-zero leaf stubs before the shared-state reset leaf.",
+        "exit": 84066
+      }
+    },
+    {
+      "name": "stage0_thumb_code_08014864",
+      "start": 84068,
+      "end": 84080,
+      "kind": "thumb-code",
+      "file": "asm/stage0_thumb_code_08014864.s",
+      "proof": {
+        "description": "PC-loads the same 0202EC24 RAM field used by adjacent dispatcher and clears it and the halfword immediately before it.",
+        "exit": 84078
+      }
+    },
+    {
+      "name": "stage0_thumb_code_080151E8",
+      "start": 86504,
+      "end": 86506,
+      "kind": "thumb-code",
+      "file": "asm/stage0_thumb_code_080151E8.s",
+      "proof": {
+        "description": "Aligned single BX LR return stub between the previous function return and the next aligned function.",
+        "exit": 86504
+      }
+    },
+    {
+      "name": "stage0_thumb_code_080154C8",
+      "start": 87240,
+      "end": 87242,
+      "kind": "thumb-code",
+      "file": "asm/stage0_thumb_code_080154C8.s",
+      "proof": {
+        "description": "Aligned single BX LR return stub after prior return and alignment, followed by alignment before the next function.",
+        "exit": 87240
+      }
+    },
+    {
+      "name": "stage0_thumb_code_0803128C",
+      "start": 201356,
+      "end": 201360,
+      "kind": "thumb-code",
+      "file": "asm/stage0_thumb_code_0803128C.s",
+      "proof": {
+        "description": "Paired byte getters for object fields +8 and +9 before the following bitset mutator for this object.",
+        "exit": 201358
+      }
+    },
+    {
+      "name": "stage0_thumb_code_08031290",
+      "start": 201360,
+      "end": 201364,
+      "kind": "thumb-code",
+      "file": "asm/stage0_thumb_code_08031290.s",
+      "proof": {
+        "description": "Second byte getter, identical LDRB/BX pattern with adjacent field offset.",
+        "exit": 201362
+      }
+    },
+    {
+      "name": "stage0_thumb_code_08037C48",
+      "start": 228424,
+      "end": 228442,
+      "kind": "thumb-code",
+      "file": "asm/stage0_thumb_code_08037C48.s",
+      "proof": {
+        "description": "Same object substructure offset +0x210 as both adjacent functions; reads its +1 bitset and returns the bit test.",
+        "exit": 228440
+      }
+    },
+    {
+      "name": "stage0_thumb_code_080EDA78",
+      "start": 973432,
+      "end": 973434,
+      "kind": "thumb-code",
+      "file": "asm/stage0_thumb_code_080EDA78.s",
+      "proof": {
+        "description": "Aligned BX LR return stub after the preceding literal pool, matching the two other single-return stubs.",
+        "exit": 973432
+      }
+    },
+    {
+      "name": "stage0_thumb_code_080EDE8C",
+      "start": 974476,
+      "end": 974480,
+      "kind": "thumb-code",
+      "file": "asm/stage0_thumb_code_080EDE8C.s",
+      "proof": {
+        "description": "Complete GBA Thumb BIOS-call wrapper: SWI 0x2A followed by BX LR, same ABI skeleton as adjacent BIOS wrappers.",
+        "exit": 974478
+      }
+    },
+    {
+      "name": "stage0_literal_pool_08014870",
+      "start": 84080,
+      "end": 84084,
+      "kind": "literal-pool",
+      "file": "asm/stage0_literal_pool_08014870.s",
+      "proof": {
+        "pc_load_readers": [
+          84068
+        ]
+      }
+    },
+    {
+      "name": "stage0_alignment_data_080151EA",
+      "start": 86506,
+      "end": 86508,
+      "kind": "alignment-data",
+      "file": "asm/stage0_alignment_data_080151EA.s",
+      "proof": {
+        "prior_bx": 86504
+      }
+    },
+    {
+      "name": "stage0_alignment_data_080154C6",
+      "start": 87238,
+      "end": 87240,
+      "kind": "alignment-data",
+      "file": "asm/stage0_alignment_data_080154C6.s",
+      "proof": {
+        "prior_bx": 87236
+      }
+    },
+    {
+      "name": "stage0_alignment_data_080154CA",
+      "start": 87242,
+      "end": 87244,
+      "kind": "alignment-data",
+      "file": "asm/stage0_alignment_data_080154CA.s",
+      "proof": {
+        "prior_bx": 87240
+      }
+    },
+    {
+      "name": "stage0_alignment_data_0803128A",
+      "start": 201354,
+      "end": 201356,
+      "kind": "alignment-data",
+      "file": "asm/stage0_alignment_data_0803128A.s",
+      "proof": {
+        "prior_bx": 201352
+      }
+    },
+    {
+      "name": "stage0_alignment_data_08037C5A",
+      "start": 228442,
+      "end": 228444,
+      "kind": "alignment-data",
+      "file": "asm/stage0_alignment_data_08037C5A.s",
+      "proof": {
+        "prior_bx": 228440
+      }
+    },
+    {
+      "name": "stage0_alignment_data_080EDA7A",
+      "start": 973434,
+      "end": 973436,
+      "kind": "alignment-data",
+      "file": "asm/stage0_alignment_data_080EDA7A.s",
+      "proof": {
+        "prior_bx": 973432
+      }
+    }
+  ]
+}

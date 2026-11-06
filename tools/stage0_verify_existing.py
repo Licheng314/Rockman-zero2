@@ -6,7 +6,6 @@ current bytes. This checks the receipts, not stage-0 completion.
 from collections import defaultdict
 import hashlib
 import json
-from pathlib import Path
 
 from capstone import Cs, CS_ARCH_ARM, CS_MODE_THUMB
 
@@ -31,11 +30,14 @@ def main():
     for report in reports:
         for source in report['sources']:
             edges[source['file']][source['before_sha1']].add(source['after_sha1'])
-    split = json.loads((EVIDENCE/'stage0-split-bl-repairs.json').read_text(encoding='utf-8'))
-    for repair in split['repairs']:
-        edges[repair['file']][repair['before_sha1']].add(repair['after_sha1'])
+    for repair_report in ('stage0-split-bl-repairs.json', 'stage0-split-literals-20261106.json'):
+        repairs = json.loads((EVIDENCE / repair_report).read_bytes())['repairs']
+        for repair in repairs:
+            if 'after_sha1' in repair:
+                edges[repair['file']][repair['before_sha1']].add(repair['after_sha1'])
 
     checked, paths = 0, set()
+    source_cache = {}
     for name, report in zip(DECODE_REPORTS, reports):
         instructions = report['instructions']
         assert len(instructions) == report['new_instruction_count']
@@ -53,11 +55,14 @@ def main():
             assert row and (row['size'], row['mnemonic'], row['operands']) == (size, record['mnemonic'], record['operands']), (name, offset, row)
             assert row['source'] == record['provenance']['source'], (name, offset, row['source'])
             source_path = ROOT/row['source']
-            lines = source_path.read_text(encoding='utf-8').splitlines()
+            if source_path not in source_cache:
+                source_lines = source_path.read_text(encoding='utf-8').splitlines()
+                manifest = json.loads(source_path.with_suffix('.manifest').read_bytes())
+                source_cache[source_path] = source_lines, {tuple(item) for item in manifest['items']}
+            lines, manifest_items = source_cache[source_path]
             line = lines[row['line']-1].strip()
             assert not line.startswith(('.dh', '.word', '.byte')), (name, offset, line)
-            manifest = json.loads(source_path.with_suffix('.manifest').read_text(encoding='utf-8'))
-            assert [offset, size, row['line']-1] in manifest['items'], (name, offset)
+            assert (offset, size, row['line']-1) in manifest_items, (name, offset)
             paths.add(row['source'])
             checked += 1
         for source in report['sources']:

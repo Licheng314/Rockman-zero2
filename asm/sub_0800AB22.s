@@ -1,9 +1,6 @@
-; sub_0800AB22 @ 0x0800AB22-0800ABBE  (自动生成, 经往返验证)
+; block_0800AB28: prefix moved to its PC-relative literal pool.
 .thumb
-sub_0800AB22:
-    lsl r0, r0, #8
-    lsr r0, r2, #0x1f
-    lsl r0, r0, #8
+block_0800AB28:
     mov r3, #0
     ldrsh r1, [r5, r3]
     ldr r0, [pc, #0x10]
