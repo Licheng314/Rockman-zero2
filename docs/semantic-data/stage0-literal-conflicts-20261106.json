@@ -1,0 +1,167 @@
+{
+  "rom_sha1": "c4d93a58f0f82c526dec8a3fdbda170336303689",
+  "formal_segments": 14927,
+  "retired_function_boundaries": {
+    "886004": 886008,
+    "886336": 886340,
+    "886848": 886852,
+    "887812": 887816,
+    "888532": 888536
+  },
+  "shifted_code_boundaries": {},
+  "evidence": {
+    "886004": {
+      "kind": "pc-literal",
+      "value": 137671948,
+      "readers": [
+        885926
+      ]
+    },
+    "886336": {
+      "kind": "pc-literal",
+      "value": 137672012,
+      "readers": [
+        886260
+      ]
+    },
+    "886848": {
+      "kind": "pc-literal",
+      "value": 137672028,
+      "readers": [
+        886830
+      ]
+    },
+    "887812": {
+      "kind": "pc-literal",
+      "value": 137672104,
+      "readers": [
+        887794
+      ]
+    },
+    "888532": {
+      "kind": "pc-literal",
+      "value": 137672136,
+      "readers": [
+        888474
+      ]
+    },
+    "119300": {
+      "kind": "pc-literal",
+      "value": 33557776,
+      "readers": [
+        119264
+      ]
+    },
+    "119308": {
+      "kind": "pc-literal",
+      "value": 134337040,
+      "readers": [
+        119292
+      ]
+    },
+    "381060": {
+      "kind": "pc-literal",
+      "value": 134598792,
+      "readers": [
+        381046
+      ]
+    },
+    "404536": {
+      "kind": "pc-literal",
+      "value": 134622268,
+      "readers": [
+        404526
+      ]
+    },
+    "609620": {
+      "kind": "pc-literal",
+      "value": 134827352,
+      "readers": [
+        609610
+      ]
+    },
+    "809952": {
+      "kind": "pc-literal",
+      "value": 135027684,
+      "readers": [
+        809942
+      ]
+    },
+    "825244": {
+      "kind": "pc-literal",
+      "value": 135042976,
+      "readers": [
+        825234
+      ]
+    },
+    "945328": {
+      "kind": "pc-literal",
+      "value": 135163060,
+      "readers": [
+        945318
+      ]
+    }
+  },
+  "repairs": [
+    {
+      "file": "asm/sub_0801D1D8.s",
+      "before_sha1": "cbe337b3795502fab739a8f0dc65e76ebadbc6d5",
+      "after_sha1": "46193bd01f10a32d0669d3d8ef3ff6048e772544"
+    },
+    {
+      "file": "asm/sub_0805D040.s",
+      "before_sha1": "f36411e6eb047d1c35d446e89bdb4f6122331bc8",
+      "after_sha1": "cbd9f645374f797549c6d36015514a61ae76071c"
+    },
+    {
+      "file": "asm/sub_08062C20.s",
+      "before_sha1": "14ab593c3f76919edf1689beeb8ee391b9cee821",
+      "after_sha1": "41b7810f5d5a264feeef79b865248139a0d4c661"
+    },
+    {
+      "file": "asm/sub_08094D3C.s",
+      "before_sha1": "bc5b463475f3eddf53f3c896e7872c942fbe5e1d",
+      "after_sha1": "69772916a237ef1c936baeb5ad675ce378cd2692"
+    },
+    {
+      "file": "asm/sub_080C5BC8.s",
+      "before_sha1": "4c14c9ed104a72c4c25c4635b6b3580f86304053",
+      "after_sha1": "e50bf7e2f9a3d480a6b87ce05797bbf24650f999"
+    },
+    {
+      "file": "asm/sub_080C9784.s",
+      "before_sha1": "bda097057d4dc4d2df411799dfba3d9b451b542b",
+      "after_sha1": "d9aa5c2f4d1b03b4255b506fce5f8bbde7698812"
+    },
+    {
+      "file": "asm/sub_080D84F4.s",
+      "before_sha1": "b3bbe81efd2301825895337c2b538834c1493bca",
+      "after_sha1": "3df17cd3962903787959c5e0dc098fc87b3d8c9f"
+    },
+    {
+      "file": "asm/sub_080D8640.s",
+      "before_sha1": "cd22128ba5c867ec6a77a760d762060efe8d07c4",
+      "after_sha1": "78083251f3266339b32e6af196b7b829f99e3277"
+    },
+    {
+      "file": "asm/sub_080D8840.s",
+      "before_sha1": "37d8dff02f82a7e26617af879ed06beb7357dfea",
+      "after_sha1": "f603be8c9134919dfff02d0f369ba5fdb1ff2620"
+    },
+    {
+      "file": "asm/sub_080D8C04.s",
+      "before_sha1": "5cd35b65e107ab6cc800b079fa46665d78c7158e",
+      "after_sha1": "be67a748f8e76755af9ac728dee724c4829bf4fb"
+    },
+    {
+      "file": "asm/sub_080D8ED4.s",
+      "before_sha1": "ccf26d8a887b151bde33276f264c7b7ad5abca4b",
+      "after_sha1": "70abbb364bf0d61e5bbbdbb82f6a1d46c65b5c0a"
+    },
+    {
+      "file": "asm/sub_080E6C8C.s",
+      "before_sha1": "ae4afc4d155894312438ebb6d6aaef66fd392f61",
+      "after_sha1": "e9df4c2cc81e91449d2455010a687daccbb47ed9"
+    }
+  ]
+}

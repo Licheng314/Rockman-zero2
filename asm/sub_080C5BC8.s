@@ -14,8 +14,7 @@ loc_080C5BD4:
     ldr r0, [r0]
     mov pc, r0
     .dh 0x0000 ; alignment after unconditional transfer
-    ldrh r4, [r4, r7]
-    lsr r4, r1, #0x20
+    .word 0x080C5BE4 ; proven PC literal
     .word 0x080C5BFC ; proven PC/switch data
     .word 0x080C5C10 ; proven PC/switch data
     .word 0x080C5CA4 ; proven PC/switch data

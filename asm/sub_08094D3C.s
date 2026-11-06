@@ -14,8 +14,7 @@ loc_08094D48:
     ldr r0, [r0]
     mov pc, r0
     .dh 0x0000 ; alignment after unconditional transfer
-    ldr r5, [pc, #0x160]
-    lsr r1, r1, #0x20
+    .word 0x08094D58 ; proven PC literal
     .word 0x08094D70 ; proven PC/switch data
     .word 0x08094D8C ; proven PC/switch data
     .word 0x08094DDC ; proven PC/switch data

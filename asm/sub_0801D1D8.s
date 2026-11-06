@@ -26,11 +26,9 @@ loc_0801D1FA:
     add r0, r0, r1
     ldr r0, [r0]
     mov pc, r0
-    lsr r0, r2, #0x14
-    lsl r0, r0, #8
+    .word 0x02000D10 ; proven PC literal
     .word 0x00004E21 ; proven PC/switch data
-    bhs #0x801d230
-    lsr r1, r0, #0x20
+    .word 0x0801D210 ; proven PC literal
     .word 0x0801D268 ; proven PC/switch data
     .word 0x0801D28E ; proven PC/switch data
     .word 0x0801D2A8 ; proven PC/switch data

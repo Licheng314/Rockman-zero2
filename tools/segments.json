@@ -85298,10 +85298,11 @@
   "kind": "literal-pool"
  },
  {
-  "name": "sub_080D84F4",
+  "name": "stage0_pool_080D84F4",
   "start": 886004,
   "end": 886008,
-  "file": "asm/sub_080D84F4.s"
+  "file": "asm/sub_080D84F4.s",
+  "kind": "literal-pool"
  },
  {
   "name": "stage0_pool_080D84F8",
@@ -85371,10 +85372,11 @@
   "kind": "literal-pool"
  },
  {
-  "name": "sub_080D8640",
+  "name": "stage0_pool_080D8640",
   "start": 886336,
   "end": 886340,
-  "file": "asm/sub_080D8640.s"
+  "file": "asm/sub_080D8640.s",
+  "kind": "literal-pool"
  },
  {
   "name": "sub_080D8644",
@@ -85422,10 +85424,11 @@
   "file": "asm/sub_080D882C.s"
  },
  {
-  "name": "sub_080D8840",
+  "name": "stage0_pool_080D8840",
   "start": 886848,
   "end": 886852,
-  "file": "asm/sub_080D8840.s"
+  "file": "asm/sub_080D8840.s",
+  "kind": "literal-pool"
  },
  {
   "name": "sub_080D8844",
@@ -85532,10 +85535,11 @@
   "file": "asm/sub_080D8BF0.s"
  },
  {
-  "name": "sub_080D8C04",
+  "name": "stage0_pool_080D8C04",
   "start": 887812,
   "end": 887816,
-  "file": "asm/sub_080D8C04.s"
+  "file": "asm/sub_080D8C04.s",
+  "kind": "literal-pool"
  },
  {
   "name": "sub_080D8C08",
@@ -85636,10 +85640,11 @@
   "kind": "literal-pool"
  },
  {
-  "name": "sub_080D8ED4",
+  "name": "stage0_pool_080D8ED4",
   "start": 888532,
   "end": 888536,
-  "file": "asm/sub_080D8ED4.s"
+  "file": "asm/sub_080D8ED4.s",
+  "kind": "literal-pool"
  },
  {
   "name": "sub_080D8ED8",

@@ -1,5 +1,4 @@
-; sub_080D8C04 @ 0x080D8C04-080D8C08  (自动生成, 经往返验证)
-.thumb
-sub_080D8C04:
-    push {r3, r5, r7, lr}
-    lsr r4, r6, #0x20
+; Typed data: PC-relative literal pool.
+; Data is emitted at the formal address.
+stage0_pool_080D8C04:
+    .word 0x0834B5A8 ; proven PC literal

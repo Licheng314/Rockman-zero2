@@ -14,8 +14,7 @@ loc_08062C2C:
     ldr r0, [r0]
     mov pc, r0
     .dh 0x0000 ; alignment after unconditional transfer
-    cmp r4, #0x3c
-    lsr r6, r0, #0x20
+    .word 0x08062C3C ; proven PC literal
     .word 0x08062C60 ; proven PC/switch data
     .word 0x08062CA0 ; proven PC/switch data
     .word 0x08062CDC ; proven PC/switch data

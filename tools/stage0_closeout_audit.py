@@ -1,4 +1,5 @@
 """Account for the fixed stage-0 range and expose known code/data conflicts."""
+import argparse
 from collections import Counter, defaultdict
 from hashlib import sha1
 import json
@@ -6,11 +7,13 @@ import re
 import struct
 
 from project_guard import EXPECT, ROOT
+from stage0_decode_existing import edges
 from stage0_inventory import END, assert_inventory_current
 from thumb_v4 import valid_thumb1
 
 
-TYPED_SEGMENTS = {'literal-pool', 'alignment-data', 'typed-data', 'arm-code', 'cartridge-header'}
+DATA_SEGMENTS = {'literal-pool', 'switch-table', 'alignment-data', 'typed-data', 'cartridge-header'}
+TYPED_SEGMENTS = DATA_SEGMENTS | {'arm-code'}
 RAW_MARKER = re.compile(r'^\.dh\b.*;\s*(?:gap\b|TODO\b|svc\b|preserved raw fragment)')
 
 
@@ -31,6 +34,7 @@ def literal_references(inventory, rom):
 
 def classify(segments, rom, references):
     totals = Counter()
+    data = bytearray(END)
     conflicts = {}
     unresolved = []
     for segment in segments:
@@ -40,7 +44,10 @@ def classify(segments, rom, references):
         if 'C 匹配产物' in text:
             kind = 'integrated-c'
         if kind in TYPED_SEGMENTS or kind == 'integrated-c':
-            totals[kind] += segment['end'] - segment['start']
+            start, end = segment['start'], segment['end']
+            totals[kind] += end - start
+            if kind in DATA_SEGMENTS:
+                data[start:end] = b'\1' * (end - start)
             continue
 
         manifest = json.loads(source.with_suffix('.manifest').read_bytes())
@@ -73,11 +80,26 @@ def classify(segments, rom, references):
                     conflict['instruction_rows'].append(dict(offset=offset, size=size, file=segment['file'],
                                                                line=line+1, text=assembly))
             totals[category] += size
+            if category in ('inline-word', 'inline-alignment'):
+                data[offset:cursor] = b'\1' * size
         assert cursor == segment['end'], (source, cursor, segment['end'])
-    return dict(sorted(totals.items())), list(conflicts.values()), unresolved
+    return dict(sorted(totals.items())), list(conflicts.values()), unresolved, data
+
+
+def direct_transfers_into_data(inventory, data):
+    conflicts = []
+    for key, row in inventory['instructions'].items():
+        address = int(key)
+        for target, kind in edges(address, row['mnemonic'], row['operands'], row['size']):
+            if kind in ('branch', 'call') and 0 <= target < END and data[target]:
+                conflicts.append(dict(reader=address, target=target, kind=kind, file=row['source']))
+    return conflicts
 
 
 def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--require-clean', action='store_true', help='Fail if any audited conflict is still open.')
+    args = parser.parse_args()
     segments = sorted(json.loads((ROOT/'tools/segments.json').read_bytes()), key=lambda segment: segment['start'])
     assert segments[0]['start'] == 0 and segments[-1]['end'] == END
     assert all(a['start'] < a['end'] == b['start'] for a, b in zip(segments, segments[1:]))
@@ -86,16 +108,22 @@ def main():
     assert_inventory_current(inventory)
     rom = (ROOT/'baserom.gba').read_bytes()
     assert sha1(rom).hexdigest() == EXPECT
-    totals, conflicts, unresolved = classify(segments, rom, literal_references(inventory, rom))
+    totals, conflicts, unresolved, data = classify(segments, rom, literal_references(inventory, rom))
     assert sum(totals.values()) == END
+    transfers = direct_transfers_into_data(inventory, data)
+    missing_switch_entries = inventory['formal_switch_targets_missing_decoded_source']
     result = dict(capacity_bytes=END, formal_segments=len(segments), bytes_by_source_representation=totals,
-                  input_source_fingerprint=inventory['source_fingerprint'],
+                  input_source_fingerprint=inventory['source_fingerprint'], baserom_sha1=EXPECT,
                   known_data_word_conflicts=conflicts, unclassified_raw_rows=unresolved,
-                  scope='Source representation census and positive PC-load/switch conflicts. Does not prove every instruction is runtime reachable.')
+                  direct_transfers_into_data=transfers, missing_switch_entries=missing_switch_entries,
+                  scope='Fixed-range source classification, proven literal and switch references, and direct control transfers. Runtime reachability is outside this audit.')
     destination = ROOT/'docs/semantic-data/stage0-closeout-audit.json'
     destination.write_bytes((json.dumps(result, indent=2)+'\n').encode())
     print(json.dumps(dict(bytes_by_source_representation=totals, literal_conflicts=len(conflicts),
-                          unclassified_raw_rows=len(unresolved)), indent=2))
+                          unclassified_raw_rows=len(unresolved), direct_transfers_into_data=len(transfers),
+                          missing_switch_entries=len(missing_switch_entries)), indent=2))
+    if args.require_clean and (conflicts or unresolved or transfers or missing_switch_entries):
+        raise SystemExit('Stage-0 source classification audit found unresolved conflicts.')
 
 
 if __name__ == '__main__':

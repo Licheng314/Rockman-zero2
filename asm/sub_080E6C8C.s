@@ -19,8 +19,7 @@ loc_080E6CA4:
     ldr r0, [r0]
     mov pc, r0
     .dh 0x0000 ; alignment after unconditional transfer
-    ldr r4, [r6, #0x48]
-    lsr r6, r1, #0x20
+    .word 0x080E6CB4 ; proven PC literal
     .word 0x080E6DCC ; proven PC/switch data
     .word 0x080E6DD8 ; proven PC/switch data
     .word 0x080E6E14 ; proven PC/switch data

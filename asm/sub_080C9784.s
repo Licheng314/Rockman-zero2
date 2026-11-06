@@ -14,8 +14,7 @@ loc_080C9790:
     ldr r0, [r0]
     mov pc, r0
     .dh 0x0000 ; alignment after unconditional transfer
-    str r7, [sp, #0x280]
-    lsr r4, r1, #0x20
+    .word 0x080C97A0 ; proven PC literal
     .word 0x080C9800 ; proven PC/switch data
     .word 0x080C9896 ; proven PC/switch data
     .word 0x080C98F8 ; proven PC/switch data

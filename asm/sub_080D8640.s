@@ -1,5 +1,4 @@
-; sub_080D8640 @ 0x080D8640-080D8644  (自动生成, 经往返验证)
-.thumb
-sub_080D8640:
-    push {r2, r3, r6, lr}
-    lsr r4, r6, #0x20
+; Typed data: PC-relative literal pool.
+; Data is emitted at the formal address.
+stage0_pool_080D8640:
+    .word 0x0834B54C ; proven PC literal

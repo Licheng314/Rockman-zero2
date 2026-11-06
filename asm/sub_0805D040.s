@@ -33,8 +33,7 @@ loc_0805D074:
     mov pc, r0
     .dh 0x0000 ; alignment after unconditional transfer
     .word 0x0000A916 ; proven PC/switch data
-    beq EXT_0805CF98
-    lsr r5, r0, #0x20
+    .word 0x0805D088 ; proven PC literal
     .word 0x0805D0A0 ; proven PC/switch data
     .word 0x0805D128 ; proven PC/switch data
     .word 0x0805D2C8 ; proven PC/switch data

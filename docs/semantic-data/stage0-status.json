@@ -1,7 +1,7 @@
 {
   "updated_at": "2026-11-06",
   "objective": "Complete stage0 assembly extraction and classification without disguising unknown data as code",
-  "status": "address-coverage-complete-positive-literal-conflicts-open",
+  "status": "complete",
   "baseline_formal_bytes": 912454,
   "formal_segments": 14927,
   "formal_bytes": 983040,
@@ -15,11 +15,8 @@
   "new_bulk_typed_word_bytes": 36844,
   "exact_new_extents_verified": 4300,
   "rom_sha1": "c4d93a58f0f82c526dec8a3fdbda170336303689",
-  "next_work": [
-    "Resolve the thirteen evidenced literal words still printed as instruction rows, including former segment starts",
-    "Re-run the fixed-range source census and exact full-ROM verification"
-  ],
-  "overall_goal_achieved": false,
+  "next_work": [],
+  "overall_goal_achieved": true,
   "old_formal_new_decoded_instruction_bytes": 46574,
   "old_formal_new_decoded_instruction_count": 21895,
   "global_formal_extents_verified": 14927,
@@ -84,7 +81,8 @@
     "stage0-reencode-branches-20261106.json",
     "stage0-legacy-pools-20261106.json",
     "stage0-final-padding-20261106.json",
-    "stage0-closeout-audit.json"
+    "stage0-closeout-audit.json",
+    "stage0-literal-conflicts-20261106.json"
   ],
   "residual_audit": {
     "total_lines": 5178,
@@ -192,8 +190,29 @@
     "final_alignment_bytes": 22
   },
   "remaining_literal_conflicts": {
-    "words": 13,
-    "bytes": 52,
+    "words": 0,
+    "bytes": 0,
     "audit": "stage0-closeout-audit.json"
+  },
+  "completion_audit": {
+    "source_report": "stage0-closeout-audit.json",
+    "input_source_fingerprint": "c54c6f92380256ff71a8c70c60292f94b43cdd90452569bd59f4553b19f20b62",
+    "bytes_by_source_representation": {
+      "alignment-data": 6458,
+      "arm-code": 1032,
+      "cartridge-header": 188,
+      "inline-alignment": 5244,
+      "inline-word": 49736,
+      "integrated-c": 1278,
+      "literal-pool": 39712,
+      "thumb-source": 876628,
+      "typed-data": 2764
+    },
+    "verified_bounded_switches": 171,
+    "verified_full_rom_bytes": 8388608,
+    "verified_full_rom_sha1": "c4d93a58f0f82c526dec8a3fdbda170336303689",
+    "actual_output_extents_verified": 14927,
+    "known_direct_transfers_into_data": 0,
+    "unclassified_raw_rows": 0
   }
 }
