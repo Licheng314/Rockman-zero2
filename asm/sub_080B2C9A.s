@@ -1,7 +1,7 @@
 ; sub_080B2C9A @ 0x080B2C9A-080B2DFA  (自动生成, 经往返验证)
 .thumb
 sub_080B2C9A:
-    .dh 0x4348 ; TODO muls r0, r1, r0
+    mul r0, r1
     ldr r1, [pc, #0x20]
     add r0, r0, r1
     lsl r0, r0, #1
@@ -31,7 +31,7 @@ loc_080B2CD0:
     ldr r2, [pc, #0x28]
     ldr r1, [r2]
     ldr r0, [pc, #0x28]
-    .dh 0x4348 ; TODO muls r0, r1, r0
+    mul r0, r1
     ldr r1, [pc, #0x28]
     add r0, r0, r1
     lsl r0, r0, #1
@@ -73,7 +73,7 @@ loc_080B2D12:
     ldr r2, [pc, #0x24]
     ldr r1, [r2]
     ldr r0, [pc, #0x24]
-    .dh 0x4348 ; TODO muls r0, r1, r0
+    mul r0, r1
     ldr r1, [pc, #0x24]
     add r0, r0, r1
     lsl r0, r0, #1
@@ -132,7 +132,7 @@ loc_080B2DA2:
     str r0, [r5, #0x60]
     ldr r0, [r7]
     ldr r4, [pc, #0x58]
-    .dh 0x4360 ; TODO muls r0, r4, r0
+    mul r0, r4
     ldr r1, [pc, #0x58]
     add r0, r0, r1
     lsl r0, r0, #1
@@ -145,7 +145,7 @@ loc_080B2DA2:
     neg r0, r0
     str r0, [r5, #0x64]
     add r0, r2, #0
-    .dh 0x4360 ; TODO muls r0, r4, r0
+    mul r0, r4
     add r0, r0, r1
     lsl r0, r0, #1
     lsr r1, r0, #1

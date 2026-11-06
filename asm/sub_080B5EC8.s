@@ -153,7 +153,7 @@ loc_080B5FDA:
     lsl r0, r0, #2
     add r2, r0, r1
     ldr r0, [r2]
-    .dh 0x4368 ; TODO muls r0, r5, r0
+    mul r0, r5
     cmp r0, #0
     bge loc_080B6002
     add r0, #0xff
@@ -179,7 +179,7 @@ loc_080B6002:
     sub r0, r0, r1
     lsl r6, r0, #1
     ldr r0, [r2]
-    .dh 0x4370 ; TODO muls r0, r6, r0
+    mul r0, r6
     cmp r0, #0
     bge loc_080B6034
     add r0, #0xff
@@ -197,7 +197,7 @@ loc_080B6048:
     sub r0, r6, r1
     lsl r6, r0, #1
     ldr r0, [r2]
-    .dh 0x4370 ; TODO muls r0, r6, r0
+    mul r0, r6
     cmp r0, #0
     bge loc_080B605A
     add r0, #0xff

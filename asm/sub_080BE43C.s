@@ -66,7 +66,7 @@ loc_080BE4BC:
     ldr r2, [pc, #0x74]
     ldr r1, [r2]
     ldr r0, [pc, #0x74]
-    .dh 0x4348 ; TODO muls r0, r1, r0
+    mul r0, r1
     ldr r1, [pc, #0x74]
     add r0, r0, r1
     lsl r0, r0, #1
@@ -82,7 +82,7 @@ loc_080BE4BC:
 loc_080BE4DC:
     ldr r0, [r6]
     ldr r4, [pc, #0x58]
-    .dh 0x4360 ; TODO muls r0, r4, r0
+    mul r0, r4
     ldr r3, [pc, #0x58]
     add r0, r0, r3
     lsl r0, r0, #1
@@ -98,7 +98,7 @@ loc_080BE4DC:
     mov r0, #3
     strb r0, [r5, #0x13]
     add r0, r2, #0
-    .dh 0x4360 ; TODO muls r0, r4, r0
+    mul r0, r4
     add r0, r0, r3
     lsl r0, r0, #1
     lsr r1, r0, #1

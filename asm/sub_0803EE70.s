@@ -21,7 +21,7 @@ sub_0803EE70:
     beq loc_0803EEAE
     sub r1, #0x1d
     ldr r2, [r4, #0x5c]
-    .dh 0x43D2 ; TODO mvns r2, r2
+    mvn r2, r2
     lsr r2, r2, #0x1f
     mov r0, #4
     mov r3, #0

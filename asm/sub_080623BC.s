@@ -24,7 +24,7 @@ sub_080623BC:
     ldrb r0, [r3, #0x10]
     mov r6, #0xbc
     add r1, r0, #0
-    .dh 0x4371 ; TODO muls r1, r6, r1
+    mul r1, r6
     mov r5, #0x5e
     sub r1, r5, r1
     lsl r1, r1, #8
@@ -46,7 +46,7 @@ sub_080623BC:
     str r0, [r2]
 loc_08062412:
     ldrb r0, [r3, #0x10]
-    .dh 0x4370 ; TODO muls r0, r6, r0
+    mul r0, r6
     sub r0, r5, r0
     lsl r0, r0, #8
     ldr r1, [r4]
@@ -64,7 +64,7 @@ loc_08062426:
     ldrb r0, [r3, #0x10]
     mov r6, #0xbc
     add r1, r0, #0
-    .dh 0x4371 ; TODO muls r1, r6, r1
+    mul r1, r6
     mov r5, #0x5e
     sub r1, r5, r1
     lsl r1, r1, #8
@@ -85,7 +85,7 @@ loc_08062426:
     str r0, [r2]
 loc_0806245C:
     ldrb r0, [r3, #0x10]
-    .dh 0x4370 ; TODO muls r0, r6, r0
+    mul r0, r6
     sub r0, r5, r0
     lsl r0, r0, #8
     ldr r1, [r4]

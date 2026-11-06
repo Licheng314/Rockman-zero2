@@ -22,7 +22,7 @@ sub_080215DC:
     mov r3, #1
 loc_08021602:
     add r0, r7, #0
-    .dh 0x4358 ; TODO muls r0, r3, r0
+    mul r0, r3
     add r5, r5, r0
     neg r3, r3
     ldr r7, [pc, #0x30]
@@ -62,7 +62,7 @@ loc_08021648:
     lsl r1, r1, #5
 loc_08021652:
     add r0, r1, #0
-    .dh 0x4358 ; TODO muls r0, r3, r0
+    mul r0, r3
     add r5, r5, r0
     add r4, r4, r7
     cmp r4, r7

@@ -82,7 +82,7 @@ loc_0805A118:
 loc_0805A130:
     mov r0, #0xfa
 loc_0805A132:
-    .dh 0x4348 ; TODO muls r0, r1, r0
+    mul r0, r1
     cmp r0, #0
     bge loc_0805A13A
     add r0, #0xff

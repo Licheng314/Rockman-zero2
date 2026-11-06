@@ -49,7 +49,7 @@ loc_080A2E9C:
     mov r1, #7
     bl EXT_080EF150
     ldrb r1, [r5, #0x11]
-    .dh 0x4348 ; TODO muls r0, r1, r0
+    mul r0, r1
     add r4, r4, r0
     str r4, [r5, #0x54]
     add r1, r5, #0
@@ -60,7 +60,7 @@ loc_080A2E9C:
     mov r1, #7
     bl EXT_080EF150
     ldrb r1, [r5, #0x11]
-    .dh 0x4348 ; TODO muls r0, r1, r0
+    mul r0, r1
     add r4, r4, r0
     str r4, [r5, #0x58]
     b loc_080A2F90
@@ -154,7 +154,7 @@ loc_080A2F74:
     ldrb r2, [r1]
     ldrb r1, [r3]
     add r1, #1
-    .dh 0x434A ; TODO muls r2, r1, r2
+    mul r2, r1
     lsl r1, r2, #1
     add r1, r1, r2
     lsl r1, r1, #3

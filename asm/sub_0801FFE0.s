@@ -36,7 +36,7 @@ loc_08020010:
 loc_0802001C:
     ldr r1, [sp, #0x58]
     add r0, r7, #0
-    .dh 0x4348 ; TODO muls r0, r1, r0
+    mul r0, r1
     ldr r1, [sp, #0x30]
     add r1, r1, r0
     mov r8, r1
@@ -91,7 +91,7 @@ loc_08020074:
     cmp r4, #0
     ble loc_08020182
     add r0, r4, #0
-    .dh 0x4368 ; TODO muls r0, r5, r0
+    mul r0, r5
     add r8, r0
     mov r0, r8
     mov r1, r9

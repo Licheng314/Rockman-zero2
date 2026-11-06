@@ -238,7 +238,7 @@ loc_080377C2:
     beq loc_080377F2
     mov r0, #1
 loc_080377F2:
-    .dh 0x4360 ; TODO muls r0, r4, r0
+    mul r0, r4
     cmp r0, #0
     blt loc_080377FC
     ldrh r2, [r5, #0x10]

@@ -52,9 +52,9 @@ loc_080A15C0:
     sub r1, r1, r0
     str r1, [r6, #0x60]
     add r0, r2, #0
-    .dh 0x4350 ; TODO muls r0, r2, r0
+    mul r0, r2
     add r2, r1, #0
-    .dh 0x434A ; TODO muls r2, r1, r2
+    mul r2, r1
     add r1, r2, #0
     add r0, r0, r1
     bl EXT_080EEF7C

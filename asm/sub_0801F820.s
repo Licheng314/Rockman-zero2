@@ -140,7 +140,7 @@ loc_0801F8FE:
 loc_0801F92E:
     cmp r1, #0
     beq loc_0801F938
-    .dh 0x4348 ; TODO muls r0, r1, r0
+    mul r0, r1
     cmp r0, #0
     ble loc_0801F944
 loc_0801F938:

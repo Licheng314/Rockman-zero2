@@ -127,7 +127,7 @@ loc_080A1890:
     add r2, #0xb8
     ldr r1, [r2]
     ldr r0, [r5, #0x5c]
-    .dh 0x4341 ; TODO muls r1, r0, r1
+    mul r1, r0
     cmp r1, #0
     bge loc_080A18A0
     add r1, #0xff
@@ -138,7 +138,7 @@ loc_080A18A0:
     str r0, [r5, #0x54]
     ldr r1, [r2]
     ldr r0, [r5, #0x60]
-    .dh 0x4348 ; TODO muls r0, r1, r0
+    mul r0, r1
     cmp r0, #0
     bge loc_080A18B4
     add r0, #0xff

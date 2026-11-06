@@ -113,7 +113,7 @@ loc_08032122:
     mov r3, #0
     ldrsb r3, [r0, r3]
     add r0, r1, #0
-    .dh 0x4358 ; TODO muls r0, r3, r0
+    mul r0, r3
     cmp r0, #0
     ble loc_080321CC
     mov r0, #0x81
@@ -129,7 +129,7 @@ loc_08032122:
     ldr r1, [pc, #0x58]
     add r0, r5, r1
     ldrh r0, [r0]
-    .dh 0x4344 ; TODO muls r4, r0, r4
+    mul r4, r0
     add r0, r4, #0
     asr r4, r0, #0xe
     mov r0, #0x80
@@ -142,7 +142,7 @@ loc_08032122:
     add r0, r0, r1
     mov r1, #0
     ldrsh r0, [r0, r1]
-    .dh 0x4360 ; TODO muls r0, r4, r0
+    mul r0, r4
     asr r4, r0, #8
     cmp r4, #0
     bge loc_080321CC

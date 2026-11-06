@@ -41,7 +41,7 @@ loc_080CB030:
     ldr r1, [pc, #0x124]
     mov r8, r1
     mov r1, r8
-    .dh 0x4341 ; TODO muls r1, r0, r1
+    mul r1, r0
     add r0, r1, #0
     ldr r6, [pc, #0x120]
     add r0, r0, r6
@@ -67,7 +67,7 @@ loc_080CB030:
     str r0, [sp]
     ldr r0, [r4]
     mov r1, r8
-    .dh 0x4341 ; TODO muls r1, r0, r1
+    mul r1, r0
     add r0, r1, #0
     add r0, r0, r6
     lsl r0, r0, #1
@@ -88,7 +88,7 @@ loc_080CB030:
     str r0, [sp]
     ldr r0, [r4]
     mov r1, r8
-    .dh 0x4341 ; TODO muls r1, r0, r1
+    mul r1, r0
     add r0, r1, #0
     add r0, r0, r6
     lsl r0, r0, #1
@@ -112,7 +112,7 @@ loc_080CB030:
     str r0, [sp]
     ldr r0, [r4]
     mov r1, r8
-    .dh 0x4341 ; TODO muls r1, r0, r1
+    mul r1, r0
     add r0, r1, #0
     add r0, r0, r6
     lsl r0, r0, #1
@@ -136,7 +136,7 @@ loc_080CB030:
     str r0, [sp]
     ldr r0, [r4]
     mov r1, r8
-    .dh 0x4341 ; TODO muls r1, r0, r1
+    mul r1, r0
     add r0, r1, #0
     add r0, r0, r6
     lsl r0, r0, #1

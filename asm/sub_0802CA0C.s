@@ -177,7 +177,7 @@ loc_0802CB52:
     ldrb r0, [r1]
     cmp r0, #0x63
     bhi loc_0802CB6A
-    .dh 0x4368 ; TODO muls r0, r5, r0
+    mul r0, r5
     mov r1, #0x64
     bl EXT_080EF150
     sub r5, r5, r0
@@ -185,7 +185,7 @@ loc_0802CB52:
 loc_0802CB6A:
     mov r5, #0
 loc_0802CB6C:
-    .dh 0x4375 ; TODO muls r5, r6, r5
+    mul r5, r6
     ldr r1, [r4, #0x5c]
     lsl r3, r6, #5
     add r6, r4, #0

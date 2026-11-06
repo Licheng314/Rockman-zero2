@@ -173,7 +173,7 @@ loc_080ED5F2:
     sub r2, r0, r1
 loc_080ED5F6:
     ldrb r0, [r5, #0x17]
-    .dh 0x4350 ; TODO muls r0, r2, r0
+    mul r0, r2
     asr r2, r0, #6
     ldrb r0, [r5, #0x16]
     eor r0, r2

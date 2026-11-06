@@ -17,7 +17,7 @@ sub_080ACAB0:
     mov r8, r0
     ldr r0, [r0]
     ldr r3, [pc, #0x78]
-    .dh 0x4358 ; TODO muls r0, r3, r0
+    mul r0, r3
     ldr r2, [pc, #0x78]
     add r0, r0, r2
     lsl r0, r0, #1
@@ -29,7 +29,7 @@ sub_080ACAB0:
     sub r0, r6, r0
     str r0, [r4, #0x5c]
     add r0, r5, #0
-    .dh 0x4358 ; TODO muls r0, r3, r0
+    mul r0, r3
     add r0, r0, r2
     lsl r0, r0, #1
     lsr r5, r0, #1
@@ -42,14 +42,14 @@ sub_080ACAB0:
     ldr r0, [r4, #0x54]
     str r0, [r4, #0x74]
     add r0, r5, #0
-    .dh 0x4358 ; TODO muls r0, r3, r0
+    mul r0, r3
     add r0, r0, r2
     lsl r0, r0, #1
     lsr r1, r0, #1
     lsr r0, r0, #0x11
     strb r0, [r4, #0x12]
     add r0, r1, #0
-    .dh 0x4358 ; TODO muls r0, r3, r0
+    mul r0, r3
     add r0, r0, r2
     lsl r0, r0, #1
     lsr r1, r0, #1

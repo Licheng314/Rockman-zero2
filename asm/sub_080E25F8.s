@@ -112,7 +112,7 @@ loc_080E26EA:
     bl EXT_0800170C
     ldr r0, [pc, #0x64]
     add r1, r7, #0
-    .dh 0xC101 ; TODO stm r1!, {r0}
+    stmia r1!, {r0}
     ldr r4, [pc, #0x60]
     add r0, r5, r4
     mov r2, #0x10

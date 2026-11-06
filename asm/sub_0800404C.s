@@ -45,7 +45,7 @@ loc_08004070:
 loc_080040A0:
     mov r0, r10
     sub r0, #0xe
-    .dh 0x4368 ; TODO muls r0, r5, r0
+    mul r0, r5
     mov r1, #9
     bl EXT_080EF150
     add r0, #0xe
@@ -53,7 +53,7 @@ loc_080040A0:
     lsr r7, r0, #0x18
     mov r0, r8
     sub r0, #5
-    .dh 0x4368 ; TODO muls r0, r5, r0
+    mul r0, r5
     mov r1, #9
     bl EXT_080EF150
     add r0, #5
@@ -61,7 +61,7 @@ loc_080040A0:
     lsr r4, r0, #0x18
     mov r0, r9
     sub r0, #0xa
-    .dh 0x4368 ; TODO muls r0, r5, r0
+    mul r0, r5
     mov r1, #9
     bl EXT_080EF150
     add r0, #0xa
@@ -95,7 +95,7 @@ loc_08004102:
     sub r0, r1, r2
     add r4, r5, #0
     sub r4, #0xa
-    .dh 0x4360 ; TODO muls r0, r4, r0
+    mul r0, r4
     mov r1, #5
     bl EXT_080EF150
     add r0, r10
@@ -104,7 +104,7 @@ loc_08004102:
     mov r3, #0x1f
     mov r1, r8
     sub r0, r3, r1
-    .dh 0x4360 ; TODO muls r0, r4, r0
+    mul r0, r4
     mov r1, #5
     bl EXT_080EF150
     add r0, r8

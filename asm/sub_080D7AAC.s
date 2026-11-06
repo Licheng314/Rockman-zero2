@@ -134,10 +134,10 @@ loc_080D7B3C:
     asr r0, r0, #8
     str r0, [sp, #0x20]
     add r2, r1, #0
-    .dh 0x434A ; TODO muls r2, r1, r2
+    mul r2, r1
     add r1, r2, #0
     add r3, r0, #0
-    .dh 0x4343 ; TODO muls r3, r0, r3
+    mul r3, r0
     add r0, r3, #0
     add r1, r1, r0
     add r0, r1, #0
@@ -172,7 +172,7 @@ loc_080D7C02:
     ldr r2, [pc, #0x70]
     ldr r1, [r2]
     ldr r0, [pc, #0x70]
-    .dh 0x4348 ; TODO muls r0, r1, r0
+    mul r0, r1
     ldr r1, [pc, #0x70]
     add r0, r0, r1
     lsl r0, r0, #1

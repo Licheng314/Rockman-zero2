@@ -7,7 +7,7 @@ sub_08006A9C:
     lsl r4, r3, #4
     sub r4, r4, r3
     mov r3, #0x96
-    .dh 0x4359 ; TODO muls r1, r3, r1
+    mul r1, r3
     add r1, r1, r2
     add r4, r4, r1
     ldr r1, [r0, #8]

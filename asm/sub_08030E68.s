@@ -17,19 +17,19 @@ sub_08030E68:
     add r1, r4, r0
     add r0, r2, #0
     add r0, #0x1c
-    .dh 0xC8C8 ; TODO ldm r0!, {r3, r6, r7}
-    .dh 0xC1C8 ; TODO stm r1!, {r3, r6, r7}
-    .dh 0xC848 ; TODO ldm r0!, {r3, r6}
-    .dh 0xC148 ; TODO stm r1!, {r3, r6}
+    ldmia r0!, {r3, r6, r7}
+    stmia r1!, {r3, r6, r7}
+    ldmia r0!, {r3, r6}
+    stmia r1!, {r3, r6}
     mov r7, #0x84
     lsl r7, r7, #2
     add r1, r4, r7
     add r0, r2, #0
     add r0, #0x30
-    .dh 0xC8C8 ; TODO ldm r0!, {r3, r6, r7}
-    .dh 0xC1C8 ; TODO stm r1!, {r3, r6, r7}
-    .dh 0xC8C8 ; TODO ldm r0!, {r3, r6, r7}
-    .dh 0xC1C8 ; TODO stm r1!, {r3, r6, r7}
+    ldmia r0!, {r3, r6, r7}
+    stmia r1!, {r3, r6, r7}
+    ldmia r0!, {r3, r6, r7}
+    stmia r1!, {r3, r6, r7}
     mov r1, #0x8a
     lsl r1, r1, #2
     add r0, r4, r1

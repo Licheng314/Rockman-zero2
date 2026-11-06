@@ -19,7 +19,7 @@ loc_080AF2B6:
     ldr r5, [pc, #0x60]
     ldr r0, [r5]
     ldr r3, [pc, #0x60]
-    .dh 0x4358 ; TODO muls r0, r3, r0
+    mul r0, r3
     ldr r2, [pc, #0x60]
     add r0, r0, r2
     lsl r0, r0, #1
@@ -30,7 +30,7 @@ loc_080AF2B6:
     add r0, r0, r1
     str r0, [r6, #0x5c]
     add r0, r4, #0
-    .dh 0x4358 ; TODO muls r0, r3, r0
+    mul r0, r3
     add r0, r0, r2
     lsl r0, r0, #1
     lsr r4, r0, #1
@@ -39,7 +39,7 @@ loc_080AF2B6:
     sub r1, r1, r0
     str r1, [r6, #0x60]
     add r0, r4, #0
-    .dh 0x4358 ; TODO muls r0, r3, r0
+    mul r0, r3
     add r0, r0, r2
     lsl r0, r0, #1
     lsr r1, r0, #1

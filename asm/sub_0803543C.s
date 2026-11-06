@@ -5,7 +5,7 @@ sub_0803543C:
     add r2, r0, #0
     ldr r1, [r2, #0x60]
     ldr r0, [r2, #0x68]
-    .dh 0x4348 ; TODO muls r0, r1, r0
+    mul r0, r1
     cmp r0, #0
     blt loc_08035468
     add r1, #0x3f

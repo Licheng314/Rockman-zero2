@@ -22,9 +22,9 @@ sub_080D71D0:
     cmp r0, r1
     bhi loc_080D720E
     add r0, r2, #0
-    .dh 0x4350 ; TODO muls r0, r2, r0
+    mul r0, r2
     add r1, r3, #0
-    .dh 0x4359 ; TODO muls r1, r3, r1
+    mul r1, r3
     add r0, r0, r1
     mov r1, #0xc8
     lsl r1, r1, #7

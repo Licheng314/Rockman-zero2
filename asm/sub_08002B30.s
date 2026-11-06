@@ -8,13 +8,13 @@ loc_08002B34:
     ldr r1, [r0]
     ldr r5, [r3]
     and r5, r1
-    .dh 0x4355 ; TODO muls r5, r2, r5
+    mul r5, r2
     lsr r5, r5, #5
     ldr r6, [r3]
     and r6, r5
     ldr r5, [r3, #4]
     and r5, r1
-    .dh 0x4355 ; TODO muls r5, r2, r5
+    mul r5, r2
     lsr r5, r5, #5
     ldr r7, [r3, #4]
     and r7, r5
@@ -22,7 +22,7 @@ loc_08002B34:
     ldr r5, [r3, #8]
     and r5, r1
     lsr r5, r5, #5
-    .dh 0x4355 ; TODO muls r5, r2, r5
+    mul r5, r2
     ldr r7, [r3, #8]
     and r7, r5
     orr r6, r7

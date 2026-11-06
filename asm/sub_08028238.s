@@ -21,7 +21,7 @@ sub_08028238:
     mov r1, #1
 loc_0802825C:
     add r0, r2, #0
-    .dh 0x4348 ; TODO muls r0, r1, r0
+    mul r0, r1
     mov r1, #0x80
     cmp r0, #0
     ble loc_08028272

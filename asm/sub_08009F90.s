@@ -15,5 +15,5 @@ sub_08009F90:
     cmp r1, r0
     bge EXT_08009FBC
 loc_08009FAA:
-    .dh 0x43C8 ; TODO mvns r0, r1
+    mvn r0, r1
     b EXT_08009FBE

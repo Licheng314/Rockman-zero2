@@ -570,7 +570,7 @@ loc_080D0A9E:
     mov r1, #0
     ldrsh r0, [r0, r1]
     ldr r3, [r4, #0x5c]
-    .dh 0x4358 ; TODO muls r0, r3, r0
+    mul r0, r3
     cmp r0, #0
     bge loc_080D0AB4
     add r0, #0xff
@@ -588,7 +588,7 @@ loc_080D0AB4:
     add r0, r12
     mov r1, #0
     ldrsh r0, [r0, r1]
-    .dh 0x4358 ; TODO muls r0, r3, r0
+    mul r0, r3
     cmp r0, #0
     bge loc_080D0AD6
     add r0, #0xff

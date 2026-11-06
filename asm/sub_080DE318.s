@@ -92,9 +92,9 @@ loc_080DE3B0:
     add r3, r7, r0
     mov r2, #0
 loc_080DE3D2:
-    .dh 0xC901 ; TODO ldm r1!, {r0}
+    ldmia r1!, {r0}
     lsl r0, r0, #2
-    .dh 0xC301 ; TODO stm r3!, {r0}
+    stmia r3!, {r0}
     add r0, r2, #1
     lsl r0, r0, #0x10
     lsr r2, r0, #0x10
@@ -105,9 +105,9 @@ loc_080DE3D2:
     add r1, r1, r0
     mov r2, #0
 loc_080DE3EA:
-    .dh 0xC901 ; TODO ldm r1!, {r0}
+    ldmia r1!, {r0}
     lsl r0, r0, #2
-    .dh 0xC301 ; TODO stm r3!, {r0}
+    stmia r3!, {r0}
     add r0, r2, #1
     lsl r0, r0, #0x10
     lsr r2, r0, #0x10

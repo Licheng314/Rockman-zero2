@@ -50,7 +50,7 @@ loc_080873F6:
     mov r6, #0
     ldrsh r1, [r0, r6]
     ldr r0, [r4, #0x5c]
-    .dh 0x4341 ; TODO muls r1, r0, r1
+    mul r1, r0
     ldr r0, [r2]
     add r0, r0, r1
     str r0, [r4, #0x54]

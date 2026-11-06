@@ -6,9 +6,9 @@ sub_080ED754:
     ldrsb r2, [r4, r0]
     mov r3, #0x80
     add r3, r3, r2
-    .dh 0x434B ; TODO muls r3, r1, r3
+    mul r3, r1
     ldrb r0, [r5, #0x10]
-    .dh 0x4358 ; TODO muls r0, r3, r0
+    mul r0, r3
     asr r0, r0, #0xe
     cmp r0, #0xff
     bls loc_080ED76C
@@ -17,9 +17,9 @@ loc_080ED76C:
     strb r0, [r4, #2]
     mov r3, #0x7f
     sub r3, r3, r2
-    .dh 0x434B ; TODO muls r3, r1, r3
+    mul r3, r1
     ldrb r0, [r5, #0x11]
-    .dh 0x4358 ; TODO muls r0, r3, r0
+    mul r0, r3
     asr r0, r0, #0xe
     cmp r0, #0xff
     bls loc_080ED780

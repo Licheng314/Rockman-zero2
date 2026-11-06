@@ -64,7 +64,7 @@ loc_0808EA1C:
     ldr r2, [pc, #0x10c]
     mov r9, r2
     mov r1, r9
-    .dh 0x4341 ; TODO muls r1, r0, r1
+    mul r1, r0
     ldr r6, [pc, #0x108]
     add r1, r1, r6
     lsl r1, r1, #1
@@ -89,7 +89,7 @@ loc_0808EA1C:
     str r0, [sp]
     ldr r0, [r4]
     mov r2, r9
-    .dh 0x4342 ; TODO muls r2, r0, r2
+    mul r2, r0
     add r0, r2, #0
     add r0, r0, r6
     lsl r0, r0, #1
@@ -113,7 +113,7 @@ loc_0808EA1C:
     str r0, [sp]
     ldr r0, [r4]
     mov r1, r9
-    .dh 0x4341 ; TODO muls r1, r0, r1
+    mul r1, r0
     add r0, r1, #0
     add r0, r0, r6
     lsl r0, r0, #1
@@ -135,7 +135,7 @@ loc_0808EA1C:
     str r0, [sp]
     ldr r0, [r4]
     mov r1, r9
-    .dh 0x4341 ; TODO muls r1, r0, r1
+    mul r1, r0
     add r0, r1, #0
     add r0, r0, r6
     lsl r0, r0, #1
@@ -157,7 +157,7 @@ loc_0808EA1C:
     str r0, [sp]
     ldr r0, [r4]
     mov r1, r9
-    .dh 0x4341 ; TODO muls r1, r0, r1
+    mul r1, r0
     add r0, r1, #0
     add r0, r0, r6
     lsl r0, r0, #1

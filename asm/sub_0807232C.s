@@ -20,7 +20,7 @@ sub_0807232C:
     ldr r1, [r2]
     ldr r0, [pc, #0x3c]
     add r3, r1, #0
-    .dh 0x4343 ; TODO muls r3, r0, r3
+    mul r3, r0
     ldr r0, [pc, #0x38]
     add r3, r3, r0
     lsl r3, r3, #1

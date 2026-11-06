@@ -36,7 +36,7 @@ loc_0807E382:
     ldr r5, [pc, #0x60]
     ldr r0, [r5]
     ldr r2, [pc, #0x60]
-    .dh 0x4350 ; TODO muls r0, r2, r0
+    mul r0, r2
     ldr r3, [pc, #0x60]
     add r0, r0, r3
     lsl r0, r0, #1
@@ -55,7 +55,7 @@ loc_0807E382:
     ldr r0, [r6, #0x58]
     sub r0, r0, r1
     str r0, [sp, #4]
-    .dh 0x4362 ; TODO muls r2, r4, r2
+    mul r2, r4
     add r2, r2, r3
     lsl r2, r2, #1
     lsr r0, r2, #1

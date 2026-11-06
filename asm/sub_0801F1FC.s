@@ -48,10 +48,10 @@ loc_0801F24A:
     asr r1, r1, #0x1f
     mov r0, #4
     and r1, r0
-    .dh 0x4469 ; TODO add r1, sp, r1
+    add r1, sp
     ldrh r0, [r4]
     mov r2, r8
-    .dh 0x4342 ; TODO muls r2, r0, r2
+    mul r2, r0
     ldr r0, [r1]
     sub r0, r0, r2
     str r0, [r1]
@@ -67,10 +67,10 @@ loc_0801F26A:
     bne loc_0801F276
     mov r2, #4
 loc_0801F276:
-    .dh 0x446A ; TODO add r2, sp, r2
+    add r2, sp
     ldrh r0, [r4, #2]
     mov r1, r8
-    .dh 0x4341 ; TODO muls r1, r0, r1
+    mul r1, r0
     ldr r0, [r2]
     add r0, r0, r1
     str r0, [r5]
@@ -98,7 +98,7 @@ loc_0801F2A6:
     orr r0, r1
     strb r0, [r6]
     mov r0, r8
-    .dh 0x4358 ; TODO muls r0, r3, r0
+    mul r0, r3
     cmp r0, #0
     ble loc_0801F2BE
     mov r2, r12

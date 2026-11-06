@@ -68,7 +68,7 @@ loc_080B438A:
     str r0, [r4, #0x5c]
     lsl r0, r6, #0x18
     asr r0, r0, #0x18
-    .dh 0x4350 ; TODO muls r0, r2, r0
+    mul r0, r2
     neg r0, r0
     str r0, [r4, #0x60]
     mov r0, #1

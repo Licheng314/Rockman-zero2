@@ -242,7 +242,7 @@ loc_080788CC:
     bne loc_080788CC
 loc_080788E2:
     ldr r0, [r6, #0x5c]
-    .dh 0x43C0 ; TODO mvns r0, r0
+    mvn r0, r0
     lsr r2, r0, #0x1f
     cmp r2, #0
     beq loc_08078904

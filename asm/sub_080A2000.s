@@ -71,11 +71,11 @@ loc_080A2074:
 loc_080A2086:
     asr r1, r0, #2
     ldrb r0, [r4, #0x11]
-    .dh 0x4358 ; TODO muls r0, r3, r0
+    mul r0, r3
     add r0, r6, r0
     str r0, [r4, #0x54]
     ldrb r0, [r4, #0x11]
-    .dh 0x4341 ; TODO muls r1, r0, r1
+    mul r1, r0
     ldr r0, [r2]
     add r0, r0, r1
     str r0, [r4, #0x58]

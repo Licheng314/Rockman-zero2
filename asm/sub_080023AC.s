@@ -35,7 +35,7 @@ loc_080023D4:
     ldrb r1, [r5, #1]
     add r0, r0, r1
     ldr r1, [pc, #0x3c]
-    .dh 0x4348 ; TODO muls r0, r1, r0
+    mul r0, r1
     mov r2, #0xe0
     lsl r2, r2, #0x14
     add r0, r0, r2

@@ -70,7 +70,7 @@ loc_0805F4FC:
     mov r8, r0
     ldr r0, [r0]
     ldr r5, [pc, #0x94]
-    .dh 0x4368 ; TODO muls r0, r5, r0
+    mul r0, r5
     ldr r4, [pc, #0x94]
     add r0, r0, r4
     lsl r0, r0, #1
@@ -87,7 +87,7 @@ loc_0805F4FC:
     add r0, r0, r1
     str r0, [sp]
     add r0, r6, #0
-    .dh 0x4368 ; TODO muls r0, r5, r0
+    mul r0, r5
     add r0, r0, r4
     lsl r0, r0, #1
     lsr r2, r0, #1
@@ -101,7 +101,7 @@ loc_0805F4FC:
     add r0, r0, r1
     str r0, [sp, #4]
     add r3, r2, #0
-    .dh 0x436B ; TODO muls r3, r5, r3
+    mul r3, r5
     add r3, r3, r4
     lsl r3, r3, #1
     lsr r0, r3, #1

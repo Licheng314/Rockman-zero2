@@ -49,7 +49,7 @@ sub_08021E18:
     ldr r4, [r3]
     sub r4, r7, r4
     add r0, r4, #0
-    .dh 0x4370 ; TODO muls r0, r6, r0
+    mul r0, r6
     bl EXT_080EF150
     sub r4, r4, r0
     sub r4, r7, r4
@@ -58,7 +58,7 @@ sub_08021E18:
     ldr r5, [r1]
     sub r2, r0, r5
     add r0, r2, #0
-    .dh 0x4370 ; TODO muls r0, r6, r0
+    mul r0, r6
     mov r1, r8
     bl EXT_080EF150
     add r2, r0, r5

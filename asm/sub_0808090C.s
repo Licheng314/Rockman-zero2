@@ -85,7 +85,7 @@ loc_0808099C:
 loc_080809A6:
     lsl r0, r5, #0x18
     asr r0, r0, #0x18
-    .dh 0x4348 ; TODO muls r0, r1, r0
+    mul r0, r1
     add r0, r2, r0
     mov r1, r12
     str r0, [r1, #0x54]
@@ -128,7 +128,7 @@ loc_080809E6:
 loc_080809F0:
     lsl r0, r5, #0x18
     asr r0, r0, #0x18
-    .dh 0x4348 ; TODO muls r0, r1, r0
+    mul r0, r1
     add r0, r2, r0
     mov r1, r12
     str r0, [r1, #0x58]

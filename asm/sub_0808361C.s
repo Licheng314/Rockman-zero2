@@ -103,7 +103,7 @@ loc_080836E2:
     lsl r0, r5, #1
     sub r0, #1
     ldr r1, [r4, #0x5c]
-    .dh 0x4341 ; TODO muls r1, r0, r1
+    mul r1, r0
     ldr r0, [r4, #0x54]
     add r0, r0, r1
     str r0, [r4, #0x54]

@@ -118,7 +118,7 @@ loc_0801F75C:
 loc_0801F78E:
     cmp r1, #0
     beq loc_0801F798
-    .dh 0x4348 ; TODO muls r0, r1, r0
+    mul r0, r1
     cmp r0, #0
     ble loc_0801F7A4
 loc_0801F798:

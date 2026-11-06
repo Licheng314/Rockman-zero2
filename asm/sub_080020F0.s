@@ -16,10 +16,10 @@ loc_08002102:
     ldr r1, [pc, #0x4c]
     ldr r5, [pc, #0x50]
     add r7, r0, #0
-    .dh 0x434F ; TODO muls r7, r1, r7
+    mul r7, r1
     add r0, #6
     add r6, r0, #0
-    .dh 0x434E ; TODO muls r6, r1, r6
+    mul r6, r1
 loc_08002112:
     mov r1, #0xe0
     lsl r1, r1, #0x14

@@ -18,12 +18,12 @@ sub_0809750C:
     ldr r2, [pc, #0x8c]
     ldr r0, [r2]
     ldr r5, [pc, #0x8c]
-    .dh 0x4368 ; TODO muls r0, r5, r0
+    mul r0, r5
     ldr r4, [pc, #0x8c]
     add r0, r0, r4
     lsl r0, r0, #1
     lsr r0, r0, #1
-    .dh 0x4368 ; TODO muls r0, r5, r0
+    mul r0, r5
     add r0, r0, r4
     lsl r0, r0, #1
     lsr r0, r0, #1
@@ -36,11 +36,11 @@ sub_0809750C:
     bl EXT_080AC60C
     ldr r2, [sp]
     ldr r0, [r2]
-    .dh 0x4368 ; TODO muls r0, r5, r0
+    mul r0, r5
     add r0, r0, r4
     lsl r0, r0, #1
     lsr r0, r0, #1
-    .dh 0x4368 ; TODO muls r0, r5, r0
+    mul r0, r5
     add r0, r0, r4
     lsl r0, r0, #1
     lsr r0, r0, #1

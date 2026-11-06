@@ -20,7 +20,7 @@ sub_080BD5EC:
     mov r2, #0
     ldrsh r1, [r0, r2]
     mov r0, #0xdc
-    .dh 0x4348 ; TODO muls r0, r1, r0
+    mul r0, r1
     b loc_080BD63E
     .dh 0x0000 ; gap
     .word 0x080EF450
@@ -38,7 +38,7 @@ loc_080BD61C:
     mov r2, #0
     ldrsh r1, [r0, r2]
     mov r0, #0xdc
-    .dh 0x4341 ; TODO muls r1, r0, r1
+    mul r1, r0
     mov r0, #0xdc
     lsl r0, r0, #9
     sub r0, r0, r1

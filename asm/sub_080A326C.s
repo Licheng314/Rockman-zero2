@@ -51,7 +51,7 @@ loc_080A32C4:
     ldr r3, [r5, #0x64]
     sub r1, r7, r3
     ldrb r0, [r4, #0x12]
-    .dh 0x4341 ; TODO muls r1, r0, r1
+    mul r1, r0
     add r2, r0, #0
     cmp r1, #0
     bge loc_080A32D4
@@ -63,7 +63,7 @@ loc_080A32D4:
     ldr r1, [r5, #0x68]
     mov r3, r12
     sub r0, r3, r1
-    .dh 0x4350 ; TODO muls r0, r2, r0
+    mul r0, r2
     cmp r0, #0
     bge loc_080A32E8
     add r0, #0xf
@@ -152,7 +152,7 @@ loc_080A3388:
     ldr r3, [r5, #0x64]
     sub r1, r7, r3
     ldrb r0, [r4, #0x12]
-    .dh 0x4341 ; TODO muls r1, r0, r1
+    mul r1, r0
     add r2, r0, #0
     cmp r1, #0
     bge loc_080A33A0
@@ -164,7 +164,7 @@ loc_080A33A0:
     ldr r1, [r5, #0x68]
     mov r3, r12
     sub r0, r3, r1
-    .dh 0x4350 ; TODO muls r0, r2, r0
+    mul r0, r2
     cmp r0, #0
     bge loc_080A33B4
     add r0, #0xf

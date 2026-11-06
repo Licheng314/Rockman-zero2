@@ -75,7 +75,7 @@ loc_080EE51E:
     asr r0, r1
     sub r0, r0, r6
     mov r7, r12
-    .dh 0x4347 ; TODO muls r7, r0, r7
+    mul r7, r0
     add r0, r7, #0
     asr r0, r0, #8
     add r0, r6, r0

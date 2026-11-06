@@ -6,7 +6,7 @@ sub_08009E08:
     ldr r0, [pc, #8]
     cmp r2, r0
     ble loc_08009E1C
-    .dh 0x43C8 ; TODO mvns r0, r1
+    mvn r0, r1
     b loc_08009E32
     .dh 0x0000 ; gap
     .word 0x000003FF

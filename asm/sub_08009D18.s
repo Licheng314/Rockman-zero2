@@ -12,7 +12,7 @@ sub_08009D18:
     mov r0, #0
     b loc_08009D2E
 loc_08009D2C:
-    .dh 0x43D0 ; TODO mvns r0, r2
+    mvn r0, r2
 loc_08009D2E:
     pop {r1}
     bx r1

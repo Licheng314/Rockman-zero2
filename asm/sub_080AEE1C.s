@@ -134,22 +134,22 @@ loc_080AEF18:
     ldr r2, [r4, #0x78]
 loc_080AEF1A:
     add r0, r7, #0
-    .dh 0x4358 ; TODO muls r0, r3, r0
+    mul r0, r3
     asr r0, r0, #8
     ldr r1, [r6, #0x54]
     add r1, r1, r0
     mov r0, r12
-    .dh 0x4350 ; TODO muls r0, r2, r0
+    mul r0, r2
     asr r0, r0, #8
     add r1, r1, r0
     str r1, [r4, #0x54]
     mov r0, r12
-    .dh 0x4358 ; TODO muls r0, r3, r0
+    mul r0, r3
     asr r0, r0, #8
     ldr r1, [r6, #0x58]
     sub r1, r1, r0
     add r0, r7, #0
-    .dh 0x4350 ; TODO muls r0, r2, r0
+    mul r0, r2
     asr r0, r0, #8
     add r1, r1, r0
     str r1, [r4, #0x58]

@@ -12,7 +12,7 @@ sub_080EEA74:
     strh r1, [r2, #0x1e]
     ldrh r4, [r2, #0x1c]
     add r0, r1, #0
-    .dh 0x4360 ; TODO muls r0, r4, r0
+    mul r0, r4
     asr r0, r0, #8
     strh r0, [r2, #0x20]
 loc_080EEA90:

@@ -9,7 +9,7 @@ sub_0808A1F8:
     ldr r3, [pc, #0x58]
     ldr r0, [r3]
     ldr r5, [pc, #0x58]
-    .dh 0x4368 ; TODO muls r0, r5, r0
+    mul r0, r5
     ldr r4, [pc, #0x58]
     add r0, r0, r4
     lsl r0, r0, #1
@@ -25,7 +25,7 @@ sub_0808A1F8:
     cmp r0, #5
     bne loc_0808A2A8
 loc_0808A226:
-    .dh 0x436A ; TODO muls r2, r5, r2
+    mul r2, r5
     add r2, r2, r4
     lsl r2, r2, #1
     lsr r0, r2, #1

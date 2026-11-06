@@ -143,7 +143,7 @@ loc_08052438:
     ldr r2, [pc, #0x38]
     ldr r1, [r2]
     ldr r0, [pc, #0x38]
-    .dh 0x4348 ; TODO muls r0, r1, r0
+    mul r0, r1
     ldr r1, [pc, #0x38]
     add r0, r0, r1
     lsl r0, r0, #1

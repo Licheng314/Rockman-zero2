@@ -76,11 +76,11 @@ loc_08093392:
     add r6, r0, r1
     asr r0, r7, #8
     add r2, r0, #0
-    .dh 0x4342 ; TODO muls r2, r0, r2
+    mul r2, r0
     add r0, r2, #0
     asr r1, r6, #8
     add r2, r1, #0
-    .dh 0x434A ; TODO muls r2, r1, r2
+    mul r2, r1
     add r1, r2, #0
     add r0, r0, r1
     bl EXT_080EEF7C

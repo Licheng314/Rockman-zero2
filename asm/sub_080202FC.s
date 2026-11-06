@@ -34,7 +34,7 @@ loc_0802032A:
     lsl r7, r7, #5
 loc_08020336:
     mov r0, r10
-    .dh 0x4378 ; TODO muls r0, r7, r0
+    mul r0, r7
     ldr r1, [sp, #0x10]
     add r6, r1, r0
     str r6, [sp, #0x10]
@@ -86,7 +86,7 @@ loc_08020388:
     bl EXT_0802290C
     cmp r0, #0
     ble loc_080203FC
-    .dh 0x4360 ; TODO muls r0, r4, r0
+    mul r0, r4
     add r6, r6, r0
     add r0, r6, #0
     mov r1, r8

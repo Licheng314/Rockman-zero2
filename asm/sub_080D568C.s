@@ -30,7 +30,7 @@ loc_080D56B2:
     add r1, r0, r3
 loc_080D56BE:
     ldr r0, [r1, #4]
-    .dh 0xC101 ; TODO stm r1!, {r0}
+    stmia r1!, {r0}
     add r2, #1
     cmp r2, #1
     bls loc_080D56BE

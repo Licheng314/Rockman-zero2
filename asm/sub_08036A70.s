@@ -15,7 +15,7 @@ loc_08036A84:
     mov r2, #0
     ldrsh r0, [r4, r2]
     add r2, r1, #0
-    .dh 0x4342 ; TODO muls r2, r0, r2
+    mul r2, r0
     mov r0, #2
     ldrsh r1, [r4, r0]
     ldr r0, [r3, #0x54]

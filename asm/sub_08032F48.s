@@ -26,7 +26,7 @@ sub_08032F48:
     add r0, r9
     mov r2, #0
     ldrsh r0, [r0, r2]
-    .dh 0x4378 ; TODO muls r0, r7, r0
+    mul r0, r7
     asr r5, r0, #8
     str r5, [r4]
     mov r0, r8
@@ -36,7 +36,7 @@ sub_08032F48:
     add r0, r9
     mov r2, #0
     ldrsh r0, [r0, r2]
-    .dh 0x4378 ; TODO muls r0, r7, r0
+    mul r0, r7
     asr r6, r0, #8
     str r6, [r4, #4]
     mov r3, r12
@@ -55,10 +55,10 @@ sub_08032F48:
     add r0, r9
     mov r2, #0
     ldrsh r0, [r0, r2]
-    .dh 0x4378 ; TODO muls r0, r7, r0
+    mul r0, r7
     asr r0, r0, #8
     sub r0, r0, r5
-    .dh 0x4358 ; TODO muls r0, r3, r0
+    mul r0, r3
     add r2, r0, #0
     cmp r0, #0
     bge loc_08032FC4
@@ -73,10 +73,10 @@ loc_08032FC4:
     add r0, r9
     mov r1, #0
     ldrsh r0, [r0, r1]
-    .dh 0x4378 ; TODO muls r0, r7, r0
+    mul r0, r7
     asr r0, r0, #8
     sub r0, r0, r6
-    .dh 0x4358 ; TODO muls r0, r3, r0
+    mul r0, r3
     add r1, r0, #0
     cmp r0, #0
     bge loc_08032FE6

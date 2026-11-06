@@ -195,7 +195,7 @@ loc_08034338:
     ldrb r4, [r3]
     add r0, r1, r0
     ldrb r6, [r0]
-    .dh 0x436C ; TODO muls r4, r5, r4
+    mul r4, r5
     add r0, r4, #0
     add r1, r6, #0
     bl EXT_080EF150

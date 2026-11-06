@@ -381,7 +381,7 @@ loc_080C854C:
     ldrb r0, [r5, #0x13]
     lsl r3, r0, #0x18
     lsr r0, r3, #0x19
-    .dh 0x4341 ; TODO muls r1, r0, r1
+    mul r1, r0
     ldr r0, [r5, #0x54]
     add r0, r0, r1
     add r0, r2, r0
@@ -402,7 +402,7 @@ loc_080C857E:
     mov r4, #0
     ldrsh r1, [r0, r4]
     lsr r0, r3, #0x1a
-    .dh 0x4341 ; TODO muls r1, r0, r1
+    mul r1, r0
     ldr r0, [r5, #0x58]
     sub r0, r0, r1
     add r0, r2, r0

@@ -15,22 +15,22 @@ sub_080EF3F0:
     bne loc_080EF430
     add r1, r5, #0
 loc_080EF40A:
-    .dh 0xCB01 ; TODO ldm r3!, {r0}
-    .dh 0xC101 ; TODO stm r1!, {r0}
-    .dh 0xCB01 ; TODO ldm r3!, {r0}
-    .dh 0xC101 ; TODO stm r1!, {r0}
-    .dh 0xCB01 ; TODO ldm r3!, {r0}
-    .dh 0xC101 ; TODO stm r1!, {r0}
-    .dh 0xCB01 ; TODO ldm r3!, {r0}
-    .dh 0xC101 ; TODO stm r1!, {r0}
+    ldmia r3!, {r0}
+    stmia r1!, {r0}
+    ldmia r3!, {r0}
+    stmia r1!, {r0}
+    ldmia r3!, {r0}
+    stmia r1!, {r0}
+    ldmia r3!, {r0}
+    stmia r1!, {r0}
     sub r2, #0x10
     cmp r2, #0xf
     bhi loc_080EF40A
     cmp r2, #3
     bls loc_080EF42E
 loc_080EF424:
-    .dh 0xCB01 ; TODO ldm r3!, {r0}
-    .dh 0xC101 ; TODO stm r1!, {r0}
+    ldmia r3!, {r0}
+    stmia r1!, {r0}
     sub r2, #4
     cmp r2, #3
     bhi loc_080EF424

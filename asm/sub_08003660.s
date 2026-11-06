@@ -68,7 +68,7 @@ loc_080036AA:
     mov r7, #0xe
     ldrsh r0, [r3, r7]
     add r3, r4, #0
-    .dh 0x4343 ; TODO muls r3, r0, r3
+    mul r3, r0
     lsl r1, r1, #0x10
     asr r1, r1, #0x10
     mov r0, r12
@@ -76,7 +76,7 @@ loc_080036AA:
     ldrsh r0, [r0, r7]
     add r7, r0, #0
     add r0, r7, #0
-    .dh 0x4348 ; TODO muls r0, r1, r0
+    mul r0, r1
     add r3, r3, r0
     asr r3, r3, #8
     sub r2, r2, r1
@@ -97,13 +97,13 @@ loc_080036AA:
     mov r7, #6
     ldrsh r0, [r2, r7]
     add r2, r4, #0
-    .dh 0x4342 ; TODO muls r2, r0, r2
+    mul r2, r0
     mov r0, r12
     mov r7, #0x16
     ldrsh r0, [r0, r7]
     add r7, r0, #0
     add r0, r7, #0
-    .dh 0x4348 ; TODO muls r0, r1, r0
+    mul r0, r1
     add r2, r2, r0
     asr r2, r2, #8
     ldr r1, [sp, #4]

@@ -177,7 +177,7 @@ loc_0801FB76:
     mov r2, #1
 loc_0801FB84:
     add r0, r3, #0
-    .dh 0x4350 ; TODO muls r0, r2, r0
+    mul r0, r2
     add r5, r7, #0
     cmp r0, #0
     bgt loc_0801FB96
@@ -266,7 +266,7 @@ loc_0801FC1E:
     mov r0, #1
 loc_0801FC2A:
     ldr r1, [sp, #0x30]
-    .dh 0x4348 ; TODO muls r0, r1, r0
+    mul r0, r1
     cmp r0, #0
     ble loc_0801FC44
     mov r5, #0x40

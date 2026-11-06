@@ -31,7 +31,7 @@ loc_080AA11A:
     add r0, r0, r3
     mov r1, #0
     ldrsh r0, [r0, r1]
-    .dh 0x4350 ; TODO muls r0, r2, r0
+    mul r0, r2
     cmp r0, #0
     bge loc_080AA142
     add r0, #0xff
@@ -45,7 +45,7 @@ loc_080AA142:
     add r0, r0, r3
     mov r1, #0
     ldrsh r0, [r0, r1]
-    .dh 0x4350 ; TODO muls r0, r2, r0
+    mul r0, r2
     cmp r0, #0
     bge loc_080AA15C
     add r0, #0xff

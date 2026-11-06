@@ -84,7 +84,7 @@ loc_080D8B0A:
     ldr r1, [pc, #0xa0]
     mov r10, r1
     mov r2, r10
-    .dh 0x4342 ; TODO muls r2, r0, r2
+    mul r2, r0
     add r0, r2, #0
     ldr r1, [pc, #0x9c]
     add r0, r0, r1
@@ -112,7 +112,7 @@ loc_080D8B0A:
     beq loc_080D8BA4
     ldr r0, [r7]
     mov r2, r10
-    .dh 0x4342 ; TODO muls r2, r0, r2
+    mul r2, r0
     add r0, r2, #0
     ldr r1, [pc, #0x60]
     add r0, r0, r1

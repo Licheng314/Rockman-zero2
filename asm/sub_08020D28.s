@@ -84,7 +84,7 @@ loc_08020DC0:
     ldr r0, [r1]
     sub r4, r0, r4
     add r1, r4, #0
-    .dh 0x4361 ; TODO muls r1, r4, r1
+    mul r1, r4
     add r4, r1, #0
     lsl r1, r5, #1
     add r1, r1, r5
@@ -93,7 +93,7 @@ loc_08020DC0:
     ldr r1, [r1]
     sub r1, r0, r1
     add r0, r1, #0
-    .dh 0x4348 ; TODO muls r0, r1, r0
+    mul r0, r1
     add r1, r0, #0
     cmp r4, r1
     bge loc_08020DF6

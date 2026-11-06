@@ -262,7 +262,7 @@ loc_08007C84:
     sub r4, r4, r6
     str r4, [sp, #4]
     ldrh r2, [r1, #0x14]
-    .dh 0x4350 ; TODO muls r0, r2, r0
+    mul r0, r2
     mov r3, r10
     ldrh r1, [r3, #0x14]
     add r1, r1, r2
@@ -272,7 +272,7 @@ loc_08007C84:
     mov r0, r9
     ldrh r2, [r0, #0x16]
     add r0, r2, #0
-    .dh 0x4360 ; TODO muls r0, r4, r0
+    mul r0, r4
     mov r3, r10
     ldrh r1, [r3, #0x16]
     add r1, r1, r2
@@ -282,11 +282,11 @@ loc_08007C84:
     str r6, [r5, #4]
     ldr r0, [sp]
     add r4, r0, #0
-    .dh 0x4344 ; TODO muls r4, r0, r4
+    mul r4, r0
     add r0, r4, #0
     ldr r1, [sp, #4]
     add r2, r1, #0
-    .dh 0x434A ; TODO muls r2, r1, r2
+    mul r2, r1
     add r1, r2, #0
     add r0, r0, r1
     bl EXT_080EEF7C

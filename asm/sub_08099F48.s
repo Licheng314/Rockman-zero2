@@ -36,7 +36,7 @@ loc_08099F7E:
     beq loc_08099FA0
     ldrb r1, [r4, #0x12]
     lsl r1, r1, #5
-    .dh 0x43C9 ; TODO mvns r1, r1
+    mvn r1, r1
     lsl r1, r1, #0x18
     lsr r1, r1, #0x18
     add r0, r4, #0

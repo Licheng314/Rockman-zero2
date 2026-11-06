@@ -32,7 +32,7 @@ sub_08005928:
     lsl r0, r0, #0x10
     asr r0, r0, #0x10
     ldrb r1, [r5]
-    .dh 0x4348 ; TODO muls r0, r1, r0
+    mul r0, r1
     add r4, r4, r0
     str r4, [sp, #8]
     mov r0, r9

@@ -22,7 +22,7 @@ loc_0807F692:
     ldr r2, [pc, #0x90]
     ldr r1, [r2]
     ldr r0, [pc, #0x90]
-    .dh 0x4341 ; TODO muls r1, r0, r1
+    mul r1, r0
     ldr r0, [pc, #0x90]
     add r1, r1, r0
     lsl r1, r1, #1
@@ -38,7 +38,7 @@ loc_0807F692:
     ldrb r0, [r4, #0x11]
     lsl r0, r0, #1
     sub r0, #1
-    .dh 0x4341 ; TODO muls r1, r0, r1
+    mul r1, r0
     ldr r0, [r5, #0x54]
     add r0, r0, r1
     str r0, [sp]

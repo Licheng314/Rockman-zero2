@@ -110,7 +110,7 @@ loc_080C64CE:
     mov r6, #0
     ldrsh r1, [r0, r6]
     lsr r0, r5, #0x19
-    .dh 0x4341 ; TODO muls r1, r0, r1
+    mul r1, r0
     ldr r0, [r4, #0x54]
     add r0, r0, r1
     str r0, [r4, #0x64]
@@ -122,7 +122,7 @@ loc_080C64CE:
     mov r2, #0
     ldrsh r1, [r0, r2]
     lsr r0, r5, #0x1a
-    .dh 0x4341 ; TODO muls r1, r0, r1
+    mul r1, r0
     ldr r0, [r4, #0x58]
     sub r0, r0, r1
     str r0, [r4, #0x68]

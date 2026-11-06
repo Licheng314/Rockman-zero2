@@ -17,7 +17,7 @@ loc_08027F7C:
     mov r0, #0
     ldrsb r0, [r5, r0]
     neg r4, r3
-    .dh 0x4360 ; TODO muls r0, r4, r0
+    mul r0, r4
     cmp r0, #0
     blt loc_08027FA0
     mov r1, #4

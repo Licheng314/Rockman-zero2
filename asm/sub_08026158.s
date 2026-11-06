@@ -76,7 +76,7 @@ loc_080261E6:
     add r0, r1, #0
     sub r0, #0xc0
 loc_080261EA:
-    .dh 0x4350 ; TODO muls r0, r2, r0
+    mul r0, r2
     mov r1, #0x64
     bl EXT_080EF150
     sub r4, r4, r0
@@ -262,7 +262,7 @@ loc_08026342:
     mov r2, #1
 loc_08026354:
     add r1, r4, #0
-    .dh 0x4351 ; TODO muls r1, r2, r1
+    mul r1, r2
     ldr r0, [r7, #0x54]
     add r0, r0, r1
     str r0, [r7, #0x54]

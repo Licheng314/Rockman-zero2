@@ -448,11 +448,11 @@ loc_0809C6E4:
     add r3, r0, r1
     ldrb r1, [r7, #0x12]
     ldr r0, [r7, #0x5c]
-    .dh 0x4348 ; TODO muls r0, r1, r0
+    mul r0, r1
     sub r0, r2, r0
     str r0, [r7, #0x54]
     ldr r0, [r7, #0x60]
-    .dh 0x4348 ; TODO muls r0, r1, r0
+    mul r0, r1
     sub r0, r3, r0
     str r0, [r7, #0x58]
     add r0, r1, #0

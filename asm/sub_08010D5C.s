@@ -171,7 +171,7 @@ loc_08010EA4:
     sub r0, #0x40
     mov r2, r10
     asr r1, r2, #0x10
-    .dh 0x4348 ; TODO muls r0, r1, r0
+    mul r0, r1
     mov r1, #0xff
     and r0, r1
     lsl r0, r0, #1

@@ -11,7 +11,7 @@ sub_0800215C:
     bhi loc_0800219C
     ldr r6, [pc, #0x28]
     add r1, r7, #0
-    .dh 0x4371 ; TODO muls r1, r6, r1
+    mul r1, r6
     mov r5, #0xe0
     lsl r5, r5, #0x14
     add r1, r1, r5
@@ -21,7 +21,7 @@ sub_0800215C:
     add r4, r0, #0
     add r0, r7, #6
     add r1, r0, #0
-    .dh 0x4371 ; TODO muls r1, r6, r1
+    mul r1, r6
     add r1, r1, r5
     mov r0, sp
     mov r2, #4

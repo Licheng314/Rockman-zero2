@@ -12,7 +12,7 @@ sub_080792A0:
     sub r5, r5, r4
     ldr r1, [r6, #0x5c]
     add r2, r1, #0
-    .dh 0x436A ; TODO muls r2, r5, r2
+    mul r2, r5
     ldr r0, [r6, #0x54]
     add r0, r0, r2
     str r0, [r6, #0x54]

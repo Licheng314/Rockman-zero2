@@ -61,7 +61,7 @@ loc_0803CDC6:
     add r0, r0, r4
     mov r3, #0
     ldrsh r0, [r0, r3]
-    .dh 0x4342 ; TODO muls r2, r0, r2
+    mul r2, r0
     asr r2, r2, #8
     mov r0, #0xc0
     lsl r0, r0, #3
@@ -74,7 +74,7 @@ loc_0803CDC6:
     mov r3, #0
     ldrsh r0, [r0, r3]
     add r3, r2, #0
-    .dh 0x4343 ; TODO muls r3, r0, r3
+    mul r3, r0
     asr r3, r3, #8
     str r3, [r6, #0x5c]
     and r1, r5
@@ -82,7 +82,7 @@ loc_0803CDC6:
     add r1, r1, r4
     mov r4, #0
     ldrsh r0, [r1, r4]
-    .dh 0x4350 ; TODO muls r0, r2, r0
+    mul r0, r2
     asr r0, r0, #8
     str r0, [r6, #0x60]
     add r7, r7, r3

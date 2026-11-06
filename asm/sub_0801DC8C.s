@@ -43,14 +43,14 @@ loc_0801DCCE:
     bl EXT_080EF150
     add r6, r0, #0
     add r0, r6, #0
-    .dh 0x4368 ; TODO muls r0, r5, r0
+    mul r0, r5
     cmp r0, r4
     bne loc_0801DCEA
     mov r0, #0xfb
     bl EXT_080032EC
 loc_0801DCEA:
     mov r0, r10
-    .dh 0x4370 ; TODO muls r0, r6, r0
+    mul r0, r6
     add r2, r0, #0
     cmp r0, #0
     bge loc_0801DCF6

@@ -22,7 +22,7 @@ sub_080B5ACC:
     ldr r6, [pc, #0x50]
     ldr r0, [r6]
     ldr r5, [pc, #0x50]
-    .dh 0x4368 ; TODO muls r0, r5, r0
+    mul r0, r5
     ldr r2, [pc, #0x50]
     add r0, r0, r2
     lsl r0, r0, #1
@@ -36,7 +36,7 @@ sub_080B5ACC:
     add r1, r1, r0
     str r1, [sp]
     add r0, r4, #0
-    .dh 0x4368 ; TODO muls r0, r5, r0
+    mul r0, r5
     add r0, r0, r2
     lsl r0, r0, #1
     lsr r1, r0, #1

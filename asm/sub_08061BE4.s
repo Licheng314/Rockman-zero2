@@ -46,7 +46,7 @@ loc_08061C16:
 loc_08061C34:
     ldr r0, [r2]
     mov r1, r8
-    .dh 0x4341 ; TODO muls r1, r0, r1
+    mul r1, r0
     add r0, r1, #0
     add r0, r12
     lsl r0, r0, #1

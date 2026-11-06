@@ -13,7 +13,7 @@ sub_080BEAE0:
     ldr r3, [pc, #0x20]
     ldr r2, [r3]
     ldr r1, [pc, #0x20]
-    .dh 0x4351 ; TODO muls r1, r2, r1
+    mul r1, r2
     ldr r2, [pc, #0x20]
     add r1, r1, r2
     lsl r1, r1, #1

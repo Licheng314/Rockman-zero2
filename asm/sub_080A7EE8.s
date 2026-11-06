@@ -196,7 +196,7 @@ loc_080A805A:
     ldr r0, [r4, #0x54]
     sub r5, r1, r0
     add r0, r5, #0
-    .dh 0x4368 ; TODO muls r0, r5, r0
+    mul r0, r5
     bl EXT_080EEF7C
     lsl r0, r0, #0x10
     lsr r1, r0, #0x10
@@ -205,7 +205,7 @@ loc_080A805A:
     ble loc_080A8088
     lsl r0, r5, #8
     bl EXT_080EF150
-    .dh 0x4370 ; TODO muls r0, r6, r0
+    mul r0, r6
     cmp r0, #0
     bge loc_080A8080
     add r0, #0xff

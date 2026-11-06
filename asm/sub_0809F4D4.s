@@ -44,11 +44,11 @@ loc_0809F504:
     mov r1, #0xc
     bl EXT_080EF150
     ldrb r1, [r7, #0x11]
-    .dh 0x4371 ; TODO muls r1, r6, r1
+    mul r1, r6
     add r4, r4, r1
     str r4, [r7, #0x54]
     ldrb r1, [r7, #0x11]
-    .dh 0x4341 ; TODO muls r1, r0, r1
+    mul r1, r0
     ldr r0, [r5]
     add r0, r0, r1
     str r0, [r7, #0x58]

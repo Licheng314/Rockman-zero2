@@ -104,7 +104,7 @@ loc_0800AC56:
     lsl r0, r0, #6
     str r0, [sp, #0x10]
     add r0, r5, #0
-    .dh 0x4360 ; TODO muls r0, r4, r0
+    mul r0, r4
     lsl r0, r0, #1
     mov r1, #3
     bl EXT_080EF1E8

@@ -66,7 +66,7 @@ loc_0800C790:
     and r0, r7
     orr r1, r0
     ldr r0, [sp]
-    .dh 0xC002 ; TODO stm r0!, {r1}
+    stmia r0!, {r1}
     str r0, [sp]
     add r3, #1
     mov r1, r10
@@ -100,7 +100,7 @@ loc_0800C7CC:
     ldr r7, [pc, #0x160]
     and r0, r7
     orr r1, r0
-    .dh 0xC402 ; TODO stm r4!, {r1}
+    stmia r4!, {r1}
     add r3, #1
     mov r0, r12
     sub r2, r0, r2
@@ -133,7 +133,7 @@ loc_0800C80A:
     ldr r7, [pc, #0x120]
     and r0, r7
     orr r1, r0
-    .dh 0xC402 ; TODO stm r4!, {r1}
+    stmia r4!, {r1}
     add r3, #1
     mov r0, r12
     sub r2, r0, r2
@@ -166,7 +166,7 @@ loc_0800C848:
     ldr r7, [pc, #0xe4]
     and r0, r7
     orr r1, r0
-    .dh 0xC402 ; TODO stm r4!, {r1}
+    stmia r4!, {r1}
     add r3, #1
     mov r0, r12
     sub r2, r0, r2
@@ -199,7 +199,7 @@ loc_0800C886:
     ldr r7, [pc, #0xa4]
     and r0, r7
     orr r1, r0
-    .dh 0xC402 ; TODO stm r4!, {r1}
+    stmia r4!, {r1}
     add r3, #1
     mov r0, r12
     sub r2, r0, r2
@@ -232,7 +232,7 @@ loc_0800C8C4:
     ldr r7, [pc, #0x68]
     and r0, r7
     orr r1, r0
-    .dh 0xC402 ; TODO stm r4!, {r1}
+    stmia r4!, {r1}
     add r3, #1
     mov r0, r12
     sub r2, r0, r2
@@ -264,7 +264,7 @@ loc_0800C906:
     mov r7, r9
     and r0, r7
     orr r1, r0
-    .dh 0xC602 ; TODO stm r6!, {r1}
+    stmia r6!, {r1}
     add r3, #1
     mov r0, r8
     sub r2, r0, r2

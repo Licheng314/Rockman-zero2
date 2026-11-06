@@ -58,10 +58,10 @@ loc_080E9BDC:
     add r2, r0, #0
 loc_080E9C04:
     ldr r0, [pc, #0x38]
-    .dh 0x4378 ; TODO muls r0, r7, r0
+    mul r0, r7
     mov r1, #0x64
     mov r3, r8
-    .dh 0x434B ; TODO muls r3, r1, r3
+    mul r3, r1
     add r1, r3, #0
     add r0, r0, r1
     add r5, r0, r2

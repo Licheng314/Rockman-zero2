@@ -8,7 +8,7 @@ sub_080BB260:
     mov r1, #1
     and r2, r1
     ldr r4, [r0, #0x5c]
-    .dh 0x43E4 ; TODO mvns r4, r4
+    mvn r4, r4
     lsr r4, r4, #0x1f
     ldr r1, [r0, #0x54]
     str r1, [sp]
@@ -39,7 +39,7 @@ sub_080BB260:
     ldr r6, [pc, #0x50]
     ldr r0, [r6]
     ldr r5, [pc, #0x50]
-    .dh 0x4368 ; TODO muls r0, r5, r0
+    mul r0, r5
     ldr r2, [pc, #0x50]
     add r0, r0, r2
     lsl r0, r0, #1
@@ -53,7 +53,7 @@ sub_080BB260:
     add r1, r1, r0
     str r1, [sp]
     add r0, r4, #0
-    .dh 0x4368 ; TODO muls r0, r5, r0
+    mul r0, r5
     add r0, r0, r2
     lsl r0, r0, #1
     lsr r1, r0, #1

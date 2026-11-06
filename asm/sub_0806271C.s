@@ -50,7 +50,7 @@ loc_08062756:
     ldr r5, [pc, #0x7c]
     ldr r0, [r5]
     ldr r4, [pc, #0x7c]
-    .dh 0x4360 ; TODO muls r0, r4, r0
+    mul r0, r4
     ldr r3, [pc, #0x7c]
     add r0, r0, r3
     lsl r0, r0, #1
@@ -63,7 +63,7 @@ loc_08062756:
     ldr r0, [pc, #0x6c]
     add r2, r2, r0
     add r0, r1, #0
-    .dh 0x4360 ; TODO muls r0, r4, r0
+    mul r0, r4
     add r0, r0, r3
     lsl r0, r0, #1
     lsr r1, r0, #1

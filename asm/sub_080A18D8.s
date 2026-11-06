@@ -33,7 +33,7 @@ loc_080A18F6:
     ldr r4, [r6, #0x64]
     sub r0, r0, r4
     ldrb r1, [r6, #0x12]
-    .dh 0x4348 ; TODO muls r0, r1, r0
+    mul r0, r1
     mov r1, #5
     bl EXT_080EF150
     add r4, r4, r0
@@ -42,7 +42,7 @@ loc_080A18F6:
     ldr r4, [r6, #0x68]
     sub r0, r0, r4
     ldrb r1, [r6, #0x12]
-    .dh 0x4348 ; TODO muls r0, r1, r0
+    mul r0, r1
     mov r1, #5
     bl EXT_080EF150
     add r4, r4, r0

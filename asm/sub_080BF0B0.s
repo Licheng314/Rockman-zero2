@@ -17,7 +17,7 @@ sub_080BF0B0:
     ldr r1, [pc, #0x10c]
     mov r12, r1
     mov r1, r12
-    .dh 0x4341 ; TODO muls r1, r0, r1
+    mul r1, r0
     add r0, r1, #0
     ldr r7, [pc, #0x104]
     add r0, r0, r7
@@ -40,7 +40,7 @@ sub_080BF0B0:
     lsl r0, r0, #3
     add r5, r5, r0
     mov r0, r12
-    .dh 0x4350 ; TODO muls r0, r2, r0
+    mul r0, r2
     add r0, r0, r7
     lsl r0, r0, #1
     lsr r2, r0, #1
@@ -56,7 +56,7 @@ sub_080BF0B0:
     asr r4, r0, #1
     lsl r4, r4, #5
     mov r0, r12
-    .dh 0x4350 ; TODO muls r0, r2, r0
+    mul r0, r2
     add r0, r0, r7
     lsl r0, r0, #1
     lsr r1, r0, #1
@@ -76,7 +76,7 @@ sub_080BF0B0:
     mov r1, #0
     ldrsh r0, [r0, r1]
     add r1, r5, #0
-    .dh 0x4341 ; TODO muls r1, r0, r1
+    mul r1, r0
     asr r1, r1, #8
     ldr r0, [r6, #0x54]
     add r0, r0, r1
@@ -89,7 +89,7 @@ sub_080BF0B0:
     mov r1, #0
     ldrsh r0, [r0, r1]
     add r1, r5, #0
-    .dh 0x4341 ; TODO muls r1, r0, r1
+    mul r1, r0
     asr r1, r1, #8
     ldr r0, [r6, #0x58]
     add r0, r0, r1

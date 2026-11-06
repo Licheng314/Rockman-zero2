@@ -40,11 +40,11 @@ loc_080206CC:
     mov r1, r9
     add r4, r1, r0
     mov r0, r8
-    .dh 0x4360 ; TODO muls r0, r4, r0
+    mul r0, r4
     add r6, r6, r0
     mov r1, r8
     mov r0, r9
-    .dh 0x4348 ; TODO muls r0, r1, r0
+    mul r0, r1
     mov r9, r0
     mov r3, #0x80
     lsl r3, r3, #5

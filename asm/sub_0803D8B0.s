@@ -97,7 +97,7 @@ loc_0803D95C:
     beq loc_0803D966
     mov r0, #1
 loc_0803D966:
-    .dh 0x4360 ; TODO muls r0, r4, r0
+    mul r0, r4
     add r0, r6, r0
     str r0, [r3, #0x54]
 loc_0803D96C:

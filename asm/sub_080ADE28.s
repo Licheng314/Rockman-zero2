@@ -18,7 +18,7 @@ sub_080ADE28:
     ldr r6, [pc, #0x68]
     ldr r0, [r6]
     ldr r3, [pc, #0x68]
-    .dh 0x4358 ; TODO muls r0, r3, r0
+    mul r0, r3
     ldr r2, [pc, #0x68]
     add r0, r0, r2
     lsl r0, r0, #1
@@ -29,7 +29,7 @@ sub_080ADE28:
     add r0, #0x3c
     strb r0, [r4, #0x12]
     add r0, r5, #0
-    .dh 0x4358 ; TODO muls r0, r3, r0
+    mul r0, r3
     add r0, r0, r2
     lsl r0, r0, #1
     lsr r5, r0, #1
@@ -42,7 +42,7 @@ sub_080ADE28:
     add r1, r1, r0
     str r1, [r4, #0x54]
     add r0, r5, #0
-    .dh 0x4358 ; TODO muls r0, r3, r0
+    mul r0, r3
     add r0, r0, r2
     lsl r0, r0, #1
     lsr r1, r0, #1

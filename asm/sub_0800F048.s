@@ -26,20 +26,20 @@ loc_0800F064:
     mov r0, #0x1f
     and r0, r2
     ldrh r3, [r7, #0x10]
-    .dh 0x4358 ; TODO muls r0, r3, r0
+    mul r0, r3
     asr r4, r0, #6
     lsl r1, r2, #0x10
     lsr r0, r1, #0x15
     mov r2, r12
     and r0, r2
-    .dh 0x4358 ; TODO muls r0, r3, r0
+    mul r0, r3
     asr r0, r0, #6
     lsl r2, r0, #5
     orr r2, r4
     lsr r0, r1, #0x1a
     mov r1, r12
     and r0, r1
-    .dh 0x4358 ; TODO muls r0, r3, r0
+    mul r0, r3
     asr r0, r0, #6
     lsl r0, r0, #0xa
     orr r2, r0
@@ -65,20 +65,20 @@ loc_0800F0AE:
     mov r0, #0x1f
     and r0, r2
     ldrh r3, [r7, #0x12]
-    .dh 0x4358 ; TODO muls r0, r3, r0
+    mul r0, r3
     asr r4, r0, #6
     lsl r1, r2, #0x10
     lsr r0, r1, #0x15
     mov r2, r12
     and r0, r2
-    .dh 0x4358 ; TODO muls r0, r3, r0
+    mul r0, r3
     asr r0, r0, #6
     lsl r2, r0, #5
     orr r2, r4
     lsr r0, r1, #0x1a
     mov r1, r12
     and r0, r1
-    .dh 0x4358 ; TODO muls r0, r3, r0
+    mul r0, r3
     asr r0, r0, #6
     lsl r0, r0, #0xa
     orr r2, r0

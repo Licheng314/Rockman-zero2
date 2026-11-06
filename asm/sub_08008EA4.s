@@ -19,7 +19,7 @@ loc_08008EC0:
     mov r0, r8
     ldrh r1, [r0]
     asr r0, r4, #0xc
-    .dh 0x4348 ; TODO muls r0, r1, r0
+    mul r0, r1
     asr r1, r6, #0xc
     add r0, r0, r1
     add r0, #2

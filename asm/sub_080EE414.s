@@ -11,7 +11,7 @@ sub_080EE414:
     ldrb r3, [r2, #0x13]
     ldrb r1, [r2, #0x12]
     add r0, r3, #0
-    .dh 0x4348 ; TODO muls r0, r1, r0
+    mul r0, r1
     lsr r3, r0, #5
     ldrb r4, [r2, #0x18]
     cmp r4, #1
@@ -19,7 +19,7 @@ sub_080EE414:
     mov r0, #0x16
     ldrsb r0, [r2, r0]
     add r0, #0x80
-    .dh 0x4358 ; TODO muls r0, r3, r0
+    mul r0, r3
     lsr r3, r0, #7
 loc_080EE43C:
     mov r0, #0x14
@@ -47,12 +47,12 @@ loc_080EE45E:
 loc_080EE464:
     add r0, r1, #0
     add r0, #0x80
-    .dh 0x4358 ; TODO muls r0, r3, r0
+    mul r0, r3
     lsr r0, r0, #8
     strb r0, [r2, #0x10]
     mov r0, #0x7f
     sub r0, r0, r1
-    .dh 0x4358 ; TODO muls r0, r3, r0
+    mul r0, r3
     lsr r0, r0, #8
     strb r0, [r2, #0x11]
 loc_080EE478:
@@ -65,7 +65,7 @@ loc_080EE478:
     mov r0, #0xe
     ldrsb r0, [r2, r0]
     ldrb r1, [r2, #0xf]
-    .dh 0x4348 ; TODO muls r0, r1, r0
+    mul r0, r1
     mov r1, #0xc
     ldrsb r1, [r2, r1]
     add r1, r1, r0

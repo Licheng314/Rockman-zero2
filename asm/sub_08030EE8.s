@@ -15,10 +15,10 @@ sub_08030EE8:
     lsl r0, r0, #1
     add r1, r5, r0
     add r0, r4, #4
-    .dh 0xC81C ; TODO ldm r0!, {r2, r3, r4}
-    .dh 0xC11C ; TODO stm r1!, {r2, r3, r4}
-    .dh 0xC81C ; TODO ldm r0!, {r2, r3, r4}
-    .dh 0xC11C ; TODO stm r1!, {r2, r3, r4}
+    ldmia r0!, {r2, r3, r4}
+    stmia r1!, {r2, r3, r4}
+    ldmia r0!, {r2, r3, r4}
+    stmia r1!, {r2, r3, r4}
     b loc_08030F16
 loc_08030F10:
     add r0, r5, #0

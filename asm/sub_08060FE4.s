@@ -10,7 +10,7 @@ sub_08060FE4:
     ldr r0, [r5]
     ldr r4, [pc, #0x74]
     add r2, r0, #0
-    .dh 0x4362 ; TODO muls r2, r4, r2
+    mul r2, r4
     ldr r3, [pc, #0x70]
     add r2, r2, r3
     lsl r2, r2, #1
@@ -19,7 +19,7 @@ sub_08060FE4:
     mov r0, #0x3f
     and r2, r0
     add r0, r1, #0
-    .dh 0x4360 ; TODO muls r0, r4, r0
+    mul r0, r4
     add r0, r0, r3
     lsl r0, r0, #1
     lsr r1, r0, #1
@@ -37,7 +37,7 @@ sub_08060FE4:
     mov r1, #0
     ldrsh r0, [r0, r1]
     lsl r2, r2, #8
-    .dh 0x4350 ; TODO muls r0, r2, r0
+    mul r0, r2
     cmp r0, #0
     bge loc_08061034
     add r0, #0xff
@@ -50,7 +50,7 @@ loc_08061034:
     add r0, r0, r4
     mov r1, #0
     ldrsh r0, [r0, r1]
-    .dh 0x4350 ; TODO muls r0, r2, r0
+    mul r0, r2
     cmp r0, #0
     bge loc_0806104C
     add r0, #0xff

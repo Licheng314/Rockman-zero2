@@ -8,7 +8,7 @@ sub_080BB78C:
     add r0, r0, r1
     str r0, [r5, #0x54]
     mov r0, #0xfa
-    .dh 0x4348 ; TODO muls r0, r1, r0
+    mul r0, r1
     cmp r0, #0
     bge loc_080BB7A2
     add r0, #0xff

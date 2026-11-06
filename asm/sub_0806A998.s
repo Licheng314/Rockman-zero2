@@ -47,14 +47,14 @@ loc_0806A9AA:
     ldr r1, [sp, #4]
     sub r7, r1, r0
     add r0, r5, #0
-    .dh 0x4368 ; TODO muls r0, r5, r0
+    mul r0, r5
     cmp r0, #0
     bge loc_0806AA0E
     add r0, #0xff
 loc_0806AA0E:
     asr r1, r0, #8
     add r0, r7, #0
-    .dh 0x4378 ; TODO muls r0, r7, r0
+    mul r0, r7
     cmp r0, #0
     bge loc_0806AA1A
     add r0, #0xff

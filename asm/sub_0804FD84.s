@@ -66,7 +66,7 @@ loc_0804FDDA:
     lsl r1, r1, #1
     mov r0, #1
     and r0, r4
-    .dh 0x4348 ; TODO muls r0, r1, r0
+    mul r0, r1
     sub r3, r3, r0
     str r3, [sp]
     ldr r0, [pc, #0x48]

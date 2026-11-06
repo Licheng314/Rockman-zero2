@@ -112,7 +112,7 @@ loc_08010A3C:
     ldr r4, [pc, #0x6c]
     ldr r0, [r4]
     ldr r5, [pc, #0x6c]
-    .dh 0x4368 ; TODO muls r0, r5, r0
+    mul r0, r5
     ldr r1, [pc, #0x6c]
     add r0, r0, r1
     lsl r0, r0, #1
@@ -126,7 +126,7 @@ loc_08010A3C:
     mov r0, #0x35
     bl EXT_080032EC
     ldr r0, [r4]
-    .dh 0x4368 ; TODO muls r0, r5, r0
+    mul r0, r5
     ldr r2, [pc, #0x4c]
     add r0, r0, r2
     lsl r0, r0, #1
@@ -136,7 +136,7 @@ loc_08010A3C:
     and r0, r1
     add r0, #0xc
     add r1, r2, #0
-    .dh 0x4369 ; TODO muls r1, r5, r1
+    mul r1, r5
     ldr r3, [pc, #0x38]
     add r1, r1, r3
     lsl r1, r1, #1

@@ -122,7 +122,7 @@ loc_08082B7A:
     ldr r2, [pc, #0x7c]
     ldr r0, [r2]
     ldr r7, [pc, #0x7c]
-    .dh 0x4378 ; TODO muls r0, r7, r0
+    mul r0, r7
     ldr r3, [pc, #0x7c]
     add r0, r0, r3
     lsl r0, r0, #1
@@ -141,7 +141,7 @@ loc_08082B7A:
     mov r7, r9
     ldr r0, [r7]
     mov r1, r8
-    .dh 0x4341 ; TODO muls r1, r0, r1
+    mul r1, r0
     add r1, r1, r3
     lsl r1, r1, #1
     lsr r2, r1, #1
@@ -153,7 +153,7 @@ loc_08082B7A:
     ldr r0, [r4, #0x54]
     add r0, r0, r1
     mov r1, r8
-    .dh 0x4351 ; TODO muls r1, r2, r1
+    mul r1, r2
     add r2, r1, #0
     add r2, r2, r3
     lsl r2, r2, #1
@@ -212,7 +212,7 @@ loc_08082C32:
     ldr r2, [pc, #0x80]
     ldr r0, [r2]
     ldr r7, [pc, #0x80]
-    .dh 0x4378 ; TODO muls r0, r7, r0
+    mul r0, r7
     ldr r3, [pc, #0x80]
     add r0, r0, r3
     lsl r0, r0, #1
@@ -231,7 +231,7 @@ loc_08082C32:
     mov r7, r9
     ldr r0, [r7]
     mov r1, r8
-    .dh 0x4341 ; TODO muls r1, r0, r1
+    mul r1, r0
     add r1, r1, r3
     lsl r1, r1, #1
     lsr r2, r1, #1
@@ -243,7 +243,7 @@ loc_08082C32:
     ldr r0, [r4, #0x54]
     add r0, r0, r1
     mov r1, r8
-    .dh 0x4351 ; TODO muls r1, r2, r1
+    mul r1, r2
     add r2, r1, #0
     add r2, r2, r3
     lsl r2, r2, #1
@@ -297,7 +297,7 @@ loc_08082CD4:
     ldr r2, [pc, #0x2c]
     ldr r1, [r2]
     ldr r0, [pc, #0x2c]
-    .dh 0x4348 ; TODO muls r0, r1, r0
+    mul r0, r1
     ldr r7, [pc, #0x2c]
     add r0, r0, r7
     lsl r0, r0, #1

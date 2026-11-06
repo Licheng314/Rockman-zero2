@@ -65,7 +65,7 @@ loc_08021862:
     cmp r0, r2
     beq loc_080218B8
     sub r0, r0, r2
-    .dh 0x4360 ; TODO muls r0, r4, r0
+    mul r0, r4
     add r2, r6, #0
     cmp r0, #0
     bge loc_080218C2

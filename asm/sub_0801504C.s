@@ -74,10 +74,10 @@ loc_080150B0:
     lsl r1, r1, #3
     sub r2, r1, r4
     add r1, r0, #0
-    .dh 0x4351 ; TODO muls r1, r2, r1
+    mul r1, r2
     ldr r5, [r3, #0x30]
     asr r0, r5, #2
-    .dh 0x4360 ; TODO muls r0, r4, r0
+    mul r0, r4
     add r0, r1, r0
     cmp r0, #0
     bge loc_080150E0
@@ -87,10 +87,10 @@ loc_080150E0:
     str r6, [r3, #0x38]
     ldr r0, [r3, #0x3c]
     asr r0, r0, #2
-    .dh 0x4342 ; TODO muls r2, r0, r2
+    mul r2, r0
     ldr r1, [r3, #0x34]
     asr r0, r1, #2
-    .dh 0x4360 ; TODO muls r0, r4, r0
+    mul r0, r4
     add r0, r2, r0
     cmp r0, #0
     bge loc_080150F8
@@ -136,10 +136,10 @@ loc_08015130:
     sub r2, r7, r4
     ldr r0, [r3, #0x38]
     add r1, r0, #0
-    .dh 0x4351 ; TODO muls r1, r2, r1
+    mul r1, r2
     ldr r5, [r3, #0x30]
     add r0, r5, #0
-    .dh 0x4360 ; TODO muls r0, r4, r0
+    mul r0, r4
     add r0, r1, r0
     cmp r0, #0
     bge loc_08015152
@@ -148,10 +148,10 @@ loc_08015152:
     asr r6, r0, #8
     str r6, [r3, #0x38]
     ldr r0, [r3, #0x3c]
-    .dh 0x4342 ; TODO muls r2, r0, r2
+    mul r2, r0
     ldr r1, [r3, #0x34]
     add r0, r1, #0
-    .dh 0x4360 ; TODO muls r0, r4, r0
+    mul r0, r4
     add r0, r2, r0
     cmp r0, #0
     bge loc_08015168

@@ -14,7 +14,7 @@ sub_080BEE58:
     ldr r3, [pc, #0x60]
     ldr r0, [r3]
     ldr r7, [pc, #0x60]
-    .dh 0x4378 ; TODO muls r0, r7, r0
+    mul r0, r7
     ldr r5, [pc, #0x60]
     add r0, r0, r5
     lsl r0, r0, #1
@@ -38,7 +38,7 @@ sub_080BEE58:
     bhs #0x80beea0
     add r6, r0, #0
     add r0, r2, #0
-    .dh 0x4378 ; TODO muls r0, r7, r0
+    mul r0, r7
     add r0, r0, r5
     lsl r0, r0, #1
     lsr r1, r0, #1

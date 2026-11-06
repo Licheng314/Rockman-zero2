@@ -22,7 +22,7 @@ loc_08038F06:
     bgt loc_08038F12
     mov r0, #1
 loc_08038F12:
-    .dh 0x4360 ; TODO muls r0, r4, r0
+    mul r0, r4
     add r3, r3, r0
     and r3, r5
 loc_08038F18:

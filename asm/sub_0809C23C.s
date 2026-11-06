@@ -124,7 +124,7 @@ loc_0809C314:
     add r0, r2, #0
     add r0, #0xb8
     ldrh r0, [r0]
-    .dh 0x4341 ; TODO muls r1, r0, r1
+    mul r1, r0
     cmp r1, #0
     bge loc_0809C332
     add r1, #0xff
@@ -132,7 +132,7 @@ loc_0809C332:
     asr r1, r1, #8
     mov r0, #0
     ldrsb r0, [r4, r0]
-    .dh 0x4341 ; TODO muls r1, r0, r1
+    mul r1, r0
     ldr r0, [r5]
     sub r0, r0, r1
     str r0, [r2, #0x54]
@@ -143,7 +143,7 @@ loc_0809C332:
     add r0, r2, #0
     add r0, #0xba
     ldrh r0, [r0]
-    .dh 0x4348 ; TODO muls r0, r1, r0
+    mul r0, r1
     cmp r0, #0
     bge loc_0809C356
     add r0, #0xff

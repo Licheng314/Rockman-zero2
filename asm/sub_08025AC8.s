@@ -121,7 +121,7 @@ loc_08025B48:
     bl EXT_080329BC
     add r6, r0, #0
     ldr r0, [r7, #0x68]
-    .dh 0x4370 ; TODO muls r0, r6, r0
+    mul r0, r6
     cmp r0, #0
     bge loc_08025BCE
     mov r0, #0x4f

@@ -176,7 +176,7 @@ loc_0801FDA6:
     sub r2, #2
 loc_0801FDB2:
     add r0, r3, #0
-    .dh 0x4350 ; TODO muls r0, r2, r0
+    mul r0, r2
     add r5, r6, #0
     cmp r0, #0
     bgt loc_0801FDC2
@@ -232,7 +232,7 @@ loc_0801FE0C:
     mov r0, #1
 loc_0801FE18:
     ldr r2, [sp, #0x30]
-    .dh 0x4350 ; TODO muls r0, r2, r0
+    mul r0, r2
     cmp r0, #0
     bge loc_0801FE32
     mov r5, #0x40

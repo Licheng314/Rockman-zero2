@@ -68,7 +68,7 @@ loc_08062A48:
     ldr r1, [pc, #0x64]
     ldr r0, [r1]
     ldr r2, [pc, #0x64]
-    .dh 0x4350 ; TODO muls r0, r2, r0
+    mul r0, r2
     ldr r1, [pc, #0x64]
     mov r10, r1
     add r0, r10
@@ -90,7 +90,7 @@ loc_08062A48:
     str r4, [r7, #0x58]
     ldr r1, [pc, #0x38]
     mov r0, r9
-    .dh 0x4348 ; TODO muls r0, r1, r0
+    mul r0, r1
     add r0, r10
     lsl r0, r0, #1
     lsr r1, r0, #1

@@ -155,7 +155,7 @@ loc_080B7BB2:
     add r0, r5, r6
     ldrb r2, [r7, #0x12]
     ldr r0, [r0]
-    .dh 0x4350 ; TODO muls r0, r2, r0
+    mul r0, r2
     cmp r0, #0
     bge loc_080B7BDE
     add r0, #0x3f
@@ -169,7 +169,7 @@ loc_080B7BDE:
     add r0, r0, r1
     mov r3, #0x40
     sub r1, r3, r2
-    .dh 0x4348 ; TODO muls r0, r1, r0
+    mul r0, r1
     cmp r0, #0
     bge loc_080B7BF8
     add r0, #0x3f
@@ -181,7 +181,7 @@ loc_080B7BF8:
     add r0, r5, r0
     ldrb r1, [r7, #0x12]
     ldr r0, [r0]
-    .dh 0x4348 ; TODO muls r0, r1, r0
+    mul r0, r1
     cmp r0, #0
     bge loc_080B7C0E
     add r0, #0x3f

@@ -57,7 +57,7 @@ loc_08060BCC:
     ldr r5, [pc, #0x94]
     ldr r0, [r5]
     ldr r3, [pc, #0x94]
-    .dh 0x4358 ; TODO muls r0, r3, r0
+    mul r0, r3
     ldr r2, [pc, #0x94]
     add r0, r0, r2
     lsl r0, r0, #1
@@ -72,7 +72,7 @@ loc_08060BCC:
     add r0, r0, r1
     str r0, [sp]
     add r0, r4, #0
-    .dh 0x4358 ; TODO muls r0, r3, r0
+    mul r0, r3
     add r0, r0, r2
     lsl r0, r0, #1
     lsr r4, r0, #1
@@ -85,7 +85,7 @@ loc_08060BCC:
     ldr r0, [r6, #0x58]
     add r0, r0, r1
     str r0, [sp, #4]
-    .dh 0x4363 ; TODO muls r3, r4, r3
+    mul r3, r4
     add r3, r3, r2
     lsl r3, r3, #1
     lsr r0, r3, #1

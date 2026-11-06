@@ -44,7 +44,7 @@ sub_080BC384:
     ldr r4, [pc, #0x5c]
     ldr r0, [r4]
     ldr r3, [pc, #0x5c]
-    .dh 0x4358 ; TODO muls r0, r3, r0
+    mul r0, r3
     ldr r2, [pc, #0x5c]
     add r0, r0, r2
     lsl r0, r0, #1
@@ -53,7 +53,7 @@ sub_080BC384:
     lsr r6, r0, #0x17
     str r6, [r5, #0x5c]
     add r0, r1, #0
-    .dh 0x4358 ; TODO muls r0, r3, r0
+    mul r0, r3
     add r0, r0, r2
     lsl r0, r0, #1
     lsr r1, r0, #1

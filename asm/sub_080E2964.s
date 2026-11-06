@@ -490,7 +490,7 @@ loc_080E2D88:
     str r0, [sp, #4]
     mov r2, #0x64
     add r0, r5, #0
-    .dh 0x4350 ; TODO muls r0, r2, r0
+    mul r0, r2
     mov r1, #0x3c
     bl EXT_080EF2B8
     add r5, r0, #0
@@ -555,7 +555,7 @@ loc_080E2DDE:
     bl EXT_080DE510
     mov r5, #0x64
     add r0, r7, #0
-    .dh 0x4368 ; TODO muls r0, r5, r0
+    mul r0, r5
     mov r1, #0x3c
     bl EXT_080EF2B8
     add r7, r0, #0
@@ -616,7 +616,7 @@ loc_080E2E74:
     bl EXT_080DE510
     mov r1, #0x64
     mov r0, r9
-    .dh 0x4348 ; TODO muls r0, r1, r0
+    mul r0, r1
     mov r1, #0x3c
     bl EXT_080EF2B8
     mov r9, r0
@@ -677,5 +677,5 @@ loc_080E2F02:
     ldr r3, [sp]
     mov r5, #0x64
     add r0, r3, #0
-    .dh 0x4368 ; TODO muls r0, r5, r0
+    mul r0, r5
     mov r1, #0x3c

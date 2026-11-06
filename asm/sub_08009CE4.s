@@ -11,7 +11,7 @@ sub_08009CE4:
     mov r0, #0
     b loc_08009CF8
 loc_08009CF6:
-    .dh 0x43C8 ; TODO mvns r0, r1
+    mvn r0, r1
 loc_08009CF8:
     pop {r1}
     bx r1

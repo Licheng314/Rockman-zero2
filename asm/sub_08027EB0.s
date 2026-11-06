@@ -12,7 +12,7 @@ sub_08027EB0:
     add r0, r4, r2
     mov r2, #0
     ldrsh r0, [r0, r2]
-    .dh 0x4341 ; TODO muls r1, r0, r1
+    mul r1, r0
     mov r5, #2
     cmp r1, #0
     bgt loc_08027ED0

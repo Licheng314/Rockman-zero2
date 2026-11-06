@@ -70,7 +70,7 @@ loc_0805CEDE:
     mov r12, r0
     ldr r0, [r0]
     ldr r3, [pc, #0x8c]
-    .dh 0x4358 ; TODO muls r0, r3, r0
+    mul r0, r3
     ldr r2, [pc, #0x8c]
     add r0, r0, r2
     lsl r0, r0, #1
@@ -85,7 +85,7 @@ loc_0805CEDE:
     add r0, r0, r1
     str r0, [sp]
     add r0, r5, #0
-    .dh 0x4358 ; TODO muls r0, r3, r0
+    mul r0, r3
     add r0, r0, r2
     lsl r0, r0, #1
     lsr r5, r0, #1
@@ -97,7 +97,7 @@ loc_0805CEDE:
     ldr r0, [r7, #0x58]
     add r0, r0, r1
     str r0, [sp, #4]
-    .dh 0x436B ; TODO muls r3, r5, r3
+    mul r3, r5
     add r3, r3, r2
     lsl r3, r3, #1
     lsr r0, r3, #1

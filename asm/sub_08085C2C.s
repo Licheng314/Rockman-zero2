@@ -67,7 +67,7 @@ loc_08085C92:
     ldr r3, [pc, #0xc0]
     ldr r0, [r3]
     ldr r6, [pc, #0xc0]
-    .dh 0x4370 ; TODO muls r0, r6, r0
+    mul r0, r6
     ldr r4, [pc, #0xc0]
     add r0, r0, r4
     lsl r0, r0, #1
@@ -81,7 +81,7 @@ loc_08085C92:
     add r1, r1, r0
     str r1, [sp]
     add r0, r2, #0
-    .dh 0x4370 ; TODO muls r0, r6, r0
+    mul r0, r6
     add r0, r0, r4
     lsl r0, r0, #1
     lsr r1, r0, #1
@@ -99,7 +99,7 @@ loc_08085C92:
     bl EXT_080AC60C
     ldr r3, [sp, #0x10]
     ldr r0, [r3]
-    .dh 0x4370 ; TODO muls r0, r6, r0
+    mul r0, r6
     add r0, r0, r4
     lsl r0, r0, #1
     lsr r2, r0, #1
@@ -111,7 +111,7 @@ loc_08085C92:
     add r1, r1, r0
     str r1, [sp]
     add r0, r2, #0
-    .dh 0x4370 ; TODO muls r0, r6, r0
+    mul r0, r6
     add r0, r0, r4
     lsl r0, r0, #1
     lsr r1, r0, #1

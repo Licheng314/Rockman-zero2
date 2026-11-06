@@ -369,7 +369,7 @@ loc_080D0190:
     mov r5, #0
     ldrsh r1, [r0, r5]
     ldr r0, [r4, #0x5c]
-    .dh 0x4348 ; TODO muls r0, r1, r0
+    mul r0, r1
     cmp r0, #0
     bge loc_080D01AA
     add r0, #0xff
@@ -387,7 +387,7 @@ loc_080D01AA:
     mov r2, #0
     ldrsh r1, [r0, r2]
     ldr r0, [r4, #0x60]
-    .dh 0x4341 ; TODO muls r1, r0, r1
+    mul r1, r0
     cmp r1, #0
     bge loc_080D01CC
     add r1, #0xff
@@ -404,7 +404,7 @@ loc_080D01D8:
     mov r5, #0
     ldrsh r1, [r0, r5]
     ldr r0, [r4, #0x60]
-    .dh 0x4348 ; TODO muls r0, r1, r0
+    mul r0, r1
     cmp r0, #0
     bge loc_080D01EC
     add r0, #0xff

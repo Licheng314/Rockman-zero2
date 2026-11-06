@@ -25,7 +25,7 @@ loc_080211E4:
     ble loc_080211EA
     sub r3, #1
 loc_080211EA:
-    .dh 0x4363 ; TODO muls r3, r4, r3
+    mul r3, r4
     mov r1, r9
     ldr r0, [r1]
     add r3, r3, r0
@@ -44,7 +44,7 @@ loc_080211EA:
     cmp r2, #0
     beq loc_08021224
     add r0, r4, #0
-    .dh 0x4350 ; TODO muls r0, r2, r0
+    mul r0, r2
     cmp r0, #0
     ble loc_080212C8
 loc_08021216:

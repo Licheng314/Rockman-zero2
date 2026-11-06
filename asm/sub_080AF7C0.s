@@ -7,7 +7,7 @@ sub_080AF7C0:
     ldr r1, [r2]
     ldr r0, [pc, #0x6c]
     add r4, r1, #0
-    .dh 0x4344 ; TODO muls r4, r0, r4
+    mul r4, r0
     ldr r0, [pc, #0x6c]
     add r4, r4, r0
     lsl r4, r4, #1

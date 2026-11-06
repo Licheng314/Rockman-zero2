@@ -39,7 +39,7 @@ loc_080D6528:
     mov r2, #0
     ldrsh r5, [r0, r2]
     add r0, r7, #0
-    .dh 0x4368 ; TODO muls r0, r5, r0
+    mul r0, r5
     asr r0, r0, #8
     ldr r2, [r6]
     add r2, r2, r0
@@ -50,17 +50,17 @@ loc_080D6528:
     mov r0, #0
     ldrsh r1, [r1, r0]
     add r0, r4, #0
-    .dh 0x4348 ; TODO muls r0, r1, r0
+    mul r0, r1
     asr r0, r0, #8
     sub r2, r2, r0
     str r2, [r6]
     add r0, r7, #0
-    .dh 0x4348 ; TODO muls r0, r1, r0
+    mul r0, r1
     asr r0, r0, #8
     ldr r1, [r6, #4]
     add r1, r1, r0
     add r0, r4, #0
-    .dh 0x4368 ; TODO muls r0, r5, r0
+    mul r0, r5
     asr r0, r0, #8
     add r1, r1, r0
     str r1, [r6, #4]

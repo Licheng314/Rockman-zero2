@@ -38,7 +38,7 @@ loc_0806E0B2:
     add r0, r4, #0
     add r0, #0xb5
     ldrb r0, [r0]
-    .dh 0x4468 ; TODO add r0, sp, r0
+    add r0, sp
     ldrb r0, [r0]
     mov r1, #0
     strb r0, [r4, #0xd]

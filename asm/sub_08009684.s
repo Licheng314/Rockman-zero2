@@ -32,7 +32,7 @@ loc_080096A8:
 loc_080096BC:
     mov r2, r9
     ldrh r0, [r2]
-    .dh 0x4378 ; TODO muls r0, r7, r0
+    mul r0, r7
     add r0, r0, r1
     add r0, #2
     lsl r0, r0, #1

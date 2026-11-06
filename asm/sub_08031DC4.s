@@ -232,7 +232,7 @@ loc_08031F7C:
     cmp r0, #0x63
     bhi loc_08031F92
     ldr r4, [r5, #0x10]
-    .dh 0x4360 ; TODO muls r0, r4, r0
+    mul r0, r4
     mov r1, #0x64
     bl EXT_080EF150
     sub r4, r4, r0

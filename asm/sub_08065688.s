@@ -76,7 +76,7 @@ loc_080656F2:
     ldr r0, [r0]
     ldr r3, [pc, #0x94]
     add r1, r0, #0
-    .dh 0x4359 ; TODO muls r1, r3, r1
+    mul r1, r3
     ldr r4, [pc, #0x90]
     add r1, r1, r4
     lsl r1, r1, #1
@@ -91,7 +91,7 @@ loc_080656F2:
     add r0, r0, r1
     str r0, [sp]
     add r0, r6, #0
-    .dh 0x4358 ; TODO muls r0, r3, r0
+    mul r0, r3
     add r0, r0, r4
     lsl r0, r0, #1
     lsr r1, r0, #1
@@ -102,7 +102,7 @@ loc_080656F2:
     ldr r0, [r7, #0x58]
     add r0, r0, r2
     str r0, [sp, #4]
-    .dh 0x434B ; TODO muls r3, r1, r3
+    mul r3, r1
     add r3, r3, r4
     lsl r3, r3, #1
     lsr r0, r3, #1

@@ -31,7 +31,7 @@ sub_0800632C:
     mov r1, #0xa
     bl EXT_080EF150
     ldrb r1, [r5]
-    .dh 0x4348 ; TODO muls r0, r1, r0
+    mul r0, r1
     add r4, r4, r0
     mov r10, r4
     mov r3, r10

@@ -68,7 +68,7 @@ loc_08025724:
 loc_08025746:
     mov r2, #0
 loc_08025748:
-    .dh 0x4372 ; TODO muls r2, r6, r2
+    mul r2, r6
     ldr r1, [r5, #0x5c]
     lsl r3, r6, #5
     add r4, r5, #0

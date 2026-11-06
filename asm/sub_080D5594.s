@@ -29,9 +29,9 @@ sub_080D5594:
     cmp r0, r3
     bhi loc_080D55EC
     add r0, r2, #0
-    .dh 0x4350 ; TODO muls r0, r2, r0
+    mul r0, r2
     add r2, r1, #0
-    .dh 0x434A ; TODO muls r2, r1, r2
+    mul r2, r1
     add r1, r2, #0
     add r0, r0, r1
     mov r1, #0xe1

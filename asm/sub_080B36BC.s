@@ -6,19 +6,19 @@ sub_080B36BC:
     bl EXT_080128D4
     ldrb r1, [r4, #0x12]
     ldr r0, [r4, #0x5c]
-    .dh 0x4341 ; TODO muls r1, r0, r1
+    mul r1, r0
     ldr r0, [r4, #0x74]
     add r0, r0, r1
     str r0, [r4, #0x74]
     ldrb r1, [r4, #0x12]
     ldr r0, [r4, #0x64]
-    .dh 0x4341 ; TODO muls r1, r0, r1
+    mul r1, r0
     ldr r0, [r4, #0x7c]
     add r0, r0, r1
     str r0, [r4, #0x7c]
     ldrb r1, [r4, #0x12]
     ldr r0, [r4, #0x60]
-    .dh 0x4341 ; TODO muls r1, r0, r1
+    mul r1, r0
     ldr r0, [r4, #0x78]
     add r0, r0, r1
     str r0, [r4, #0x78]
@@ -26,7 +26,7 @@ sub_080B36BC:
     add r2, #0x80
     ldrb r1, [r4, #0x12]
     ldr r0, [r4, #0x68]
-    .dh 0x4341 ; TODO muls r1, r0, r1
+    mul r1, r0
     ldr r0, [r2]
     add r0, r0, r1
     str r0, [r2]

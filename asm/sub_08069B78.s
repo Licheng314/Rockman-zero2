@@ -72,7 +72,7 @@ loc_08069BF2:
     ldrsh r1, [r0, r7]
     lsl r0, r2, #0x18
     asr r0, r0, #0x18
-    .dh 0x4348 ; TODO muls r0, r1, r0
+    mul r0, r1
     str r0, [r4, #0x64]
     add r1, r4, #0
     add r1, #0xb4

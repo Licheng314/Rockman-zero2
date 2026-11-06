@@ -30,7 +30,7 @@ sub_08032968:
     mov r1, #1
 loc_080329A0:
     ldr r0, [r6, #0x10]
-    .dh 0x4341 ; TODO muls r1, r0, r1
+    mul r1, r0
     ldr r0, [r5, #0x54]
     add r0, r0, r1
     str r0, [r5, #0x54]

@@ -33,7 +33,7 @@ loc_080093EC:
 loc_080093FE:
     mov r2, r10
     ldrh r0, [r2]
-    .dh 0x4348 ; TODO muls r0, r1, r0
+    mul r0, r1
     add r0, r8
     add r0, #2
     lsl r0, r0, #1

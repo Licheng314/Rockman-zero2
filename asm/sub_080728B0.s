@@ -62,7 +62,7 @@ loc_0807290E:
     add r5, #0xb9
     mov r0, #0
     ldrsb r0, [r5, r0]
-    .dh 0x4341 ; TODO muls r1, r0, r1
+    mul r1, r0
     ldr r0, [r4, #0x54]
     add r7, r0, r1
     ldr r6, [r4, #0x58]
@@ -149,7 +149,7 @@ loc_080729DC:
     mov r1, #0
     ldrsb r1, [r5, r1]
     ldr r0, [r4, #0x5c]
-    .dh 0x4341 ; TODO muls r1, r0, r1
+    mul r1, r0
     ldr r0, [r4, #0x54]
     add r0, r0, r1
     str r0, [r4, #0x54]

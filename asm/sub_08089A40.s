@@ -59,7 +59,7 @@ loc_08089AAC:
 loc_08089AAE:
     ldr r1, [r4, #0x5c]
     mov r0, #0xe6
-    .dh 0x4348 ; TODO muls r0, r1, r0
+    mul r0, r1
     cmp r0, #0
     bge loc_08089ABA
     add r0, #0xff

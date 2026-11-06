@@ -10,7 +10,7 @@ loc_08002BC8:
     ldr r5, [r2, #0xc]
     ldr r0, [r3]
     and r0, r1
-    .dh 0x4360 ; TODO muls r0, r4, r0
+    mul r0, r4
     lsr r0, r0, #5
     add r0, r0, r5
     ldr r6, [r3]
@@ -19,7 +19,7 @@ loc_08002BC8:
     ldr r5, [r2, #0x10]
     ldr r0, [r3, #4]
     and r0, r1
-    .dh 0x4360 ; TODO muls r0, r4, r0
+    mul r0, r4
     lsr r0, r0, #5
     add r0, r0, r5
     ldr r7, [r3, #4]
@@ -30,7 +30,7 @@ loc_08002BC8:
     ldr r0, [r3, #8]
     and r0, r1
     lsr r0, r0, #5
-    .dh 0x4360 ; TODO muls r0, r4, r0
+    mul r0, r4
     ldr r7, [r3, #8]
     add r0, r0, r5
     and r7, r0

@@ -171,7 +171,7 @@ loc_0806D554:
     add r0, r4, #0
     add r0, #0xbc
     ldrh r0, [r0]
-    .dh 0x4348 ; TODO muls r0, r1, r0
+    mul r0, r1
     cmp r0, #0
     bge loc_0806D598
     add r0, #0xff

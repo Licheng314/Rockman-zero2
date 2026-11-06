@@ -20,7 +20,7 @@ sub_080ADAC0:
     ldr r7, [pc, #0xa0]
     ldr r0, [r7]
     ldr r5, [pc, #0xa0]
-    .dh 0x4368 ; TODO muls r0, r5, r0
+    mul r0, r5
     ldr r3, [pc, #0xa0]
     add r0, r0, r3
     lsl r0, r0, #1
@@ -31,7 +31,7 @@ sub_080ADAC0:
     add r0, #0x3c
     strb r0, [r4, #0x12]
     add r0, r2, #0
-    .dh 0x4368 ; TODO muls r0, r5, r0
+    mul r0, r5
     add r0, r0, r3
     lsl r0, r0, #1
     lsr r2, r0, #1
@@ -45,7 +45,7 @@ sub_080ADAC0:
     add r6, r1, r0
     str r6, [r4, #0x54]
     add r0, r2, #0
-    .dh 0x4368 ; TODO muls r0, r5, r0
+    mul r0, r5
     add r0, r0, r3
     lsl r0, r0, #1
     lsr r2, r0, #1
@@ -55,7 +55,7 @@ sub_080ADAC0:
     add r0, #0xc0
     str r0, [r4, #0x60]
     add r0, r2, #0
-    .dh 0x4368 ; TODO muls r0, r5, r0
+    mul r0, r5
     add r0, r0, r3
     lsl r0, r0, #1
     lsr r1, r0, #1
@@ -67,7 +67,7 @@ sub_080ADAC0:
     cmp r0, #0
     beq loc_080ADB66
     add r0, r1, #0
-    .dh 0x4368 ; TODO muls r0, r5, r0
+    mul r0, r5
     add r0, r0, r3
     lsl r0, r0, #1
     lsr r1, r0, #1

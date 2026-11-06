@@ -90,7 +90,7 @@ loc_08095A70:
     add r1, #0xbd
     ldrb r1, [r1]
     lsl r1, r1, #2
-    .dh 0x4469 ; TODO add r1, sp, r1
+    add r1, sp
     ldr r2, [r4, #0x54]
     ldr r1, [r1]
     add r5, r2, r1

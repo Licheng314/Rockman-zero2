@@ -31,7 +31,8 @@ md = Cs(CS_ARCH_ARM, CS_MODE_THUMB)
 COND_BR = {"beq","bne","bcs","bcc","bhs","blo","bmi","bpl","bvs","bvc","bhi","bls","bge","blt","bgt","ble"}
 UAL_MAP = {"lsls":"lsl","lsrs":"lsr","asrs":"asr","adds":"add","subs":"sub","movs":"mov",
            "ands":"and","orrs":"orr","eors":"eor","bics":"bic","muls":"mul","negs":"neg",
-           "ldm":"ldmia","stm":"stmia","rors":"ror"}
+           "ldm":"ldmia","stm":"stmia","rors":"ror","mvns":"mvn",
+           "adcs":"adc","sbcs":"sbc"}
 REG_ALIAS = {"ip": "r12", "sl": "r10", "sb": "r9", "fp": "r11"}
 
 
@@ -120,7 +121,7 @@ def fmt(ins, start, name, instrs, exts):
         exts.add(t)
         return f"{m2} {pre}EXT_{t:08X}"
     if m == "svc":
-        return f".dh 0xDF{int(ops.replace('#',''),16) & 0xFF:02X} ; svc {ops}"
+        return f"swi {ops}"
     return f"{m2} {ops}"
 
 

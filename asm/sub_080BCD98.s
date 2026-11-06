@@ -23,7 +23,7 @@ sub_080BCD98:
     ldr r1, [pc, #0xb4]
     mov r9, r1
     mov r1, r9
-    .dh 0x4341 ; TODO muls r1, r0, r1
+    mul r1, r0
     add r0, r1, #0
     ldr r1, [pc, #0xb0]
     mov r8, r1
@@ -73,7 +73,7 @@ sub_080BCD98:
     add r2, r2, r0
     ldr r0, [r5]
     mov r1, r9
-    .dh 0x4341 ; TODO muls r1, r0, r1
+    mul r1, r0
     add r0, r1, #0
     add r0, r8
     lsl r0, r0, #1

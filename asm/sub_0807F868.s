@@ -105,7 +105,7 @@ loc_0807F910:
     add r0, r0, r1
     mov r1, #0
     ldrsh r0, [r0, r1]
-    .dh 0x4350 ; TODO muls r0, r2, r0
+    mul r0, r2
     cmp r0, #0
     bge loc_0807F944
     add r0, #0xff

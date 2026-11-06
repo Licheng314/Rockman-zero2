@@ -60,7 +60,7 @@ loc_08028A90:
     and r0, r4
     cmp r0, #0
     beq loc_08028AC2
-    .dh 0x43C9 ; TODO mvns r1, r1
+    mvn r1, r1
     lsr r1, r1, #0x1f
     ldrb r0, [r5, #0xa]
     lsr r0, r0, #4

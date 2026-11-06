@@ -157,7 +157,7 @@ loc_080283D6:
     b loc_080285D2
 loc_080283EE:
     mov r0, r10
-    .dh 0x4378 ; TODO muls r0, r7, r0
+    mul r0, r7
     cmp r0, #0
     ble loc_080283F8
     b loc_080285C0
@@ -388,7 +388,7 @@ loc_080285C0:
     cmp r4, #0
     beq loc_080285D2
     mov r0, r10
-    .dh 0x4378 ; TODO muls r0, r7, r0
+    mul r0, r7
     cmp r0, #0
     bgt loc_080285D2
     mov r7, #0

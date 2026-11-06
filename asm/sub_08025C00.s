@@ -146,7 +146,7 @@ loc_08025D18:
     mov r2, r10
     ldr r0, [r2, #0x10]
     add r7, r1, #0
-    .dh 0x4347 ; TODO muls r7, r0, r7
+    mul r7, r0
     mov r1, r8
     ldr r0, [r1, #0x54]
     add r0, r0, r7
@@ -174,7 +174,7 @@ loc_08025D38:
 loc_08025D4E:
     mov r1, r10
     ldr r0, [r1, #0x10]
-    .dh 0x4347 ; TODO muls r7, r0, r7
+    mul r7, r0
     mov r2, r8
     ldr r0, [r2, #0x54]
     add r0, r0, r7
@@ -252,7 +252,7 @@ loc_08025DF0:
     mov r2, r8
     ldr r0, [r2, #0x60]
     ldr r1, [r2, #0x68]
-    .dh 0x4348 ; TODO muls r0, r1, r0
+    mul r0, r1
     cmp r0, #0
     blt loc_08025E1C
     mov r0, r8

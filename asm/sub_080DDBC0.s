@@ -14,7 +14,7 @@ sub_080DDBC0:
     ldr r0, [r0]
     lsl r4, r4, #9
     add r1, r2, #0
-    .dh 0x4361 ; TODO muls r1, r4, r1
+    mul r1, r4
     add r0, r0, r1
     str r0, [r5, #0x54]
     ldrb r0, [r3, #6]

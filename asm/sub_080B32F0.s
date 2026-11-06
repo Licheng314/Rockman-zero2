@@ -41,7 +41,7 @@ sub_080B32F0:
     ldr r1, [pc, #0x4c]
     mov r8, r1
     mov r2, r8
-    .dh 0x4342 ; TODO muls r2, r0, r2
+    mul r2, r0
     add r0, r2, #0
     ldr r6, [pc, #0x48]
     add r0, r0, r6
@@ -56,7 +56,7 @@ sub_080B32F0:
     lsr r0, r0, #0x18
     mov r9, r0
     mov r0, r8
-    .dh 0x4368 ; TODO muls r0, r5, r0
+    mul r0, r5
     add r0, r0, r6
     lsl r0, r0, #1
     lsr r1, r0, #1
@@ -82,7 +82,7 @@ loc_080B3398:
     ldr r1, [pc, #0xf4]
     mov r8, r1
     mov r2, r8
-    .dh 0x4342 ; TODO muls r2, r0, r2
+    mul r2, r0
     add r0, r2, #0
     ldr r6, [pc, #0xf0]
     add r0, r0, r6
@@ -96,7 +96,7 @@ loc_080B3398:
     lsr r0, r0, #0x18
     mov r9, r0
     mov r0, r8
-    .dh 0x4368 ; TODO muls r0, r5, r0
+    mul r0, r5
     add r0, r0, r6
     lsl r0, r0, #1
     lsr r1, r0, #1

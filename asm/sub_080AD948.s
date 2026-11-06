@@ -78,7 +78,7 @@ loc_080AD9D8:
     ldr r2, [pc, #0x18]
     ldr r1, [r2]
     ldr r0, [pc, #0x18]
-    .dh 0x4348 ; TODO muls r0, r1, r0
+    mul r0, r1
     ldr r1, [pc, #0x18]
     add r0, r0, r1
     lsl r0, r0, #1
@@ -95,7 +95,7 @@ loc_080ADA04:
     ldr r2, [pc, #0x5c]
     ldr r1, [r2]
     ldr r0, [pc, #0x5c]
-    .dh 0x4348 ; TODO muls r0, r1, r0
+    mul r0, r1
     ldr r1, [pc, #0x5c]
     add r0, r0, r1
     lsl r0, r0, #1
@@ -114,7 +114,7 @@ loc_080ADA1E:
     ldrb r2, [r0]
     ldr r1, [r3]
     ldr r0, [pc, #0x3c]
-    .dh 0x4348 ; TODO muls r0, r1, r0
+    mul r0, r1
     ldr r1, [pc, #0x3c]
     add r0, r0, r1
     lsl r0, r0, #1

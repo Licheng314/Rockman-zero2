@@ -50,7 +50,7 @@ loc_08057478:
     ldr r1, [pc, #0x38]
     ldr r0, [r1]
     ldr r6, [pc, #0x38]
-    .dh 0x4370 ; TODO muls r0, r6, r0
+    mul r0, r6
     ldr r7, [pc, #0x38]
     add r0, r0, r7
     lsl r0, r0, #1
@@ -82,7 +82,7 @@ loc_08057478:
     .word 0x00269EC3 ; proven PC/switch data
 loc_080574C0:
     add r0, r3, #0
-    .dh 0x4370 ; TODO muls r0, r6, r0
+    mul r0, r6
     add r0, r0, r7
     lsl r0, r0, #1
     lsr r1, r0, #1
@@ -280,7 +280,7 @@ loc_08057658:
 loc_08057664:
     ldr r1, [r5]
     ldr r0, [pc, #0x34]
-    .dh 0x4348 ; TODO muls r0, r1, r0
+    mul r0, r1
     ldr r1, [pc, #0x34]
     add r0, r0, r1
     lsl r0, r0, #1
@@ -313,7 +313,7 @@ loc_08057698:
 loc_080576A4:
     ldr r1, [r5]
     ldr r0, [pc, #0x2c]
-    .dh 0x4348 ; TODO muls r0, r1, r0
+    mul r0, r1
     ldr r1, [pc, #0x2c]
     add r0, r0, r1
     lsl r0, r0, #1
@@ -360,7 +360,7 @@ loc_080576FC:
 loc_08057702:
     ldr r1, [r5]
     ldr r0, [pc, #0x18]
-    .dh 0x4348 ; TODO muls r0, r1, r0
+    mul r0, r1
     ldr r1, [pc, #0x18]
     add r0, r0, r1
     lsl r0, r0, #1
@@ -378,7 +378,7 @@ loc_08057702:
 loc_08057728:
     ldr r1, [r5]
     ldr r0, [pc, #0x18]
-    .dh 0x4348 ; TODO muls r0, r1, r0
+    mul r0, r1
     ldr r1, [pc, #0x18]
     add r0, r0, r1
     lsl r0, r0, #1
@@ -395,7 +395,7 @@ loc_08057728:
 loc_0805774C:
     ldr r1, [r5]
     ldr r0, [pc, #0x1c]
-    .dh 0x4348 ; TODO muls r0, r1, r0
+    mul r0, r1
     ldr r1, [pc, #0x1c]
     add r0, r0, r1
     lsl r0, r0, #1
@@ -415,7 +415,7 @@ loc_08057764:
 loc_08057774:
     ldr r1, [r5]
     ldr r0, [pc, #0x6c]
-    .dh 0x4348 ; TODO muls r0, r1, r0
+    mul r0, r1
     ldr r1, [pc, #0x6c]
     add r0, r0, r1
     lsl r0, r0, #1
@@ -450,7 +450,7 @@ loc_0805779E:
     beq loc_080577EC
     ldr r1, [r5]
     ldr r0, [pc, #0x28]
-    .dh 0x4348 ; TODO muls r0, r1, r0
+    mul r0, r1
     ldr r1, [pc, #0x28]
     add r0, r0, r1
     lsl r0, r0, #1

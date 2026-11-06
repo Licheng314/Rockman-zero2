@@ -48,7 +48,7 @@ loc_080A00E0:
     ldr r2, [pc, #0x34]
     ldr r1, [r2]
     ldr r0, [pc, #0x34]
-    .dh 0x4348 ; TODO muls r0, r1, r0
+    mul r0, r1
     ldr r1, [pc, #0x34]
     add r0, r0, r1
     lsl r0, r0, #1
@@ -88,7 +88,7 @@ loc_080A0130:
     ldr r2, [pc, #0x88]
     ldr r1, [r2]
     ldr r0, [pc, #0x88]
-    .dh 0x4341 ; TODO muls r1, r0, r1
+    mul r1, r0
     ldr r0, [pc, #0x88]
     add r1, r1, r0
     lsl r1, r1, #1

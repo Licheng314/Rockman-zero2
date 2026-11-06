@@ -39,7 +39,7 @@ loc_080BDFE0:
     mov r1, #0
     ldrsh r0, [r0, r1]
     add r1, r0, #0
-    .dh 0x4351 ; TODO muls r1, r2, r1
+    mul r1, r2
     ldr r0, [r4, #0x74]
     add r0, r0, r1
     str r0, [r4, #0x54]

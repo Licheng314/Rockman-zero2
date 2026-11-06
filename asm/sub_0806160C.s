@@ -86,7 +86,7 @@ loc_080616AA:
     beq loc_080616DC
     ldr r0, [r6]
     mov r1, r8
-    .dh 0x4341 ; TODO muls r1, r0, r1
+    mul r1, r0
     add r0, r1, #0
     ldr r1, [pc, #0x20]
     add r0, r0, r1
@@ -106,7 +106,7 @@ loc_080616AA:
 loc_080616DC:
     ldr r0, [r6]
     mov r1, r8
-    .dh 0x4341 ; TODO muls r1, r0, r1
+    mul r1, r0
     add r0, r1, #0
     ldr r1, [pc, #0x3c]
     add r0, r0, r1

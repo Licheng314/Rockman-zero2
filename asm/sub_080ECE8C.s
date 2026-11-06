@@ -49,7 +49,7 @@ loc_080ECECE:
     ldrb r1, [r0, #0xb]
     sub r1, r1, r7
     mov r2, r8
-    .dh 0x434A ; TODO muls r2, r1, r2
+    mul r2, r1
     add r5, r5, r2
 loc_080ECEEE:
     str r5, [sp, #8]

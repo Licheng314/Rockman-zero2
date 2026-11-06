@@ -130,7 +130,7 @@ loc_08022D22:
     add r1, r2, #0
 loc_08022D2C:
     mov r0, #0x64
-    .dh 0x4341 ; TODO muls r1, r0, r1
+    mul r1, r0
     add r0, r1, #0
     ldr r1, [sp]
     bl EXT_080EF150

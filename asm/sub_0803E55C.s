@@ -116,7 +116,7 @@ loc_0803E628:
     add r1, r3, r2
     mov r7, #0
     ldrsh r1, [r1, r7]
-    .dh 0x434C ; TODO muls r4, r1, r4
+    mul r4, r1
     sub r4, r4, r0
     ldr r0, [r5, #0x54]
     add r0, r0, r4

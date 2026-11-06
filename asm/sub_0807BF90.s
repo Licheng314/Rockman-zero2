@@ -38,7 +38,7 @@ loc_0807BFC4:
     ldr r1, [pc, #0x80]
     mov r8, r1
     mov r1, r8
-    .dh 0x4341 ; TODO muls r1, r0, r1
+    mul r1, r0
     add r0, r1, #0
     ldr r6, [pc, #0x78]
     add r0, r0, r6
@@ -55,7 +55,7 @@ loc_0807BFC4:
     add r0, r0, r1
     str r0, [sp]
     mov r0, r8
-    .dh 0x4368 ; TODO muls r0, r5, r0
+    mul r0, r5
     add r0, r0, r6
     lsl r0, r0, #1
     lsr r1, r0, #1

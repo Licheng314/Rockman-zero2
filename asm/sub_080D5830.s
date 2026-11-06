@@ -14,7 +14,7 @@ sub_080D5830:
     add r5, r0, r3
     mov r0, #0xb
     add r3, r1, #0
-    .dh 0x4343 ; TODO muls r3, r0, r3
+    mul r3, r0
     mov r7, #7
     mov r6, #1
 loc_080D5850:

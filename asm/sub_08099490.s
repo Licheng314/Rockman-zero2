@@ -80,12 +80,12 @@ loc_08099520:
     lsr r2, r0, #0x18
 loc_0809952C:
     mov r1, r8
-    .dh 0x4351 ; TODO muls r1, r2, r1
+    mul r1, r2
     ldr r0, [r7, #0x54]
     add r0, r0, r1
     str r0, [r6, #0x54]
     add r1, r3, #0
-    .dh 0x4351 ; TODO muls r1, r2, r1
+    mul r1, r2
     ldr r0, [r7, #0x58]
     add r0, r0, r1
     str r0, [r6, #0x58]

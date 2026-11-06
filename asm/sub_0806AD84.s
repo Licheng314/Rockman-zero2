@@ -42,7 +42,7 @@ sub_0806AD84:
     ldr r3, [pc, #0xc4]
     ldr r0, [r3]
     ldr r6, [pc, #0xc4]
-    .dh 0x4370 ; TODO muls r0, r6, r0
+    mul r0, r6
     ldr r4, [pc, #0xc4]
     add r0, r0, r4
     lsl r0, r0, #1
@@ -56,7 +56,7 @@ sub_0806AD84:
     add r1, r1, r0
     str r1, [sp]
     add r0, r2, #0
-    .dh 0x4370 ; TODO muls r0, r6, r0
+    mul r0, r6
     add r0, r0, r4
     lsl r0, r0, #1
     lsr r1, r0, #1
@@ -74,7 +74,7 @@ sub_0806AD84:
     bl EXT_080AC60C
     ldr r3, [sp, #8]
     ldr r0, [r3]
-    .dh 0x4370 ; TODO muls r0, r6, r0
+    mul r0, r6
     add r0, r0, r4
     lsl r0, r0, #1
     lsr r2, r0, #1
@@ -86,7 +86,7 @@ sub_0806AD84:
     add r1, r1, r0
     str r1, [sp]
     add r0, r2, #0
-    .dh 0x4370 ; TODO muls r0, r6, r0
+    mul r0, r6
     add r0, r0, r4
     lsl r0, r0, #1
     lsr r1, r0, #1

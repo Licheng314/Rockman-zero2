@@ -60,7 +60,7 @@ loc_0807B4D0:
     ldr r1, [r2]
     ldr r0, [pc, #0x90]
     add r3, r1, #0
-    .dh 0x4343 ; TODO muls r3, r0, r3
+    mul r3, r0
     ldr r0, [pc, #0x8c]
     add r3, r3, r0
     lsl r3, r3, #1
@@ -101,7 +101,7 @@ loc_0807B518:
     ldr r2, [r4]
     ldr r0, [pc, #0x3c]
     add r3, r2, #0
-    .dh 0x4343 ; TODO muls r3, r0, r3
+    mul r3, r0
     ldr r0, [pc, #0x3c]
     add r3, r3, r0
     lsl r3, r3, #1

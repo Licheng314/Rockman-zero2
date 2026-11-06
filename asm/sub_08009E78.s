@@ -9,7 +9,7 @@ sub_08009E78:
     ldr r0, [pc, #0xc]
     cmp r2, r0
     ble loc_08009E94
-    .dh 0x43C8 ; TODO mvns r0, r1
+    mvn r0, r1
     b loc_08009EB2
     .word 0x000007FF
     .word 0x00000BFF

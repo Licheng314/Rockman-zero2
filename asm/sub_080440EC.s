@@ -47,11 +47,11 @@ loc_08044140:
     strb r2, [r5, #0x12]
     ldrb r1, [r5, #0x12]
     ldr r0, [r5, #0x5c]
-    .dh 0x4348 ; TODO muls r0, r1, r0
+    mul r0, r1
     sub r0, r6, r0
     str r0, [r5, #0x54]
     ldr r0, [r5, #0x60]
-    .dh 0x4348 ; TODO muls r0, r1, r0
+    mul r0, r1
     sub r0, r7, r0
     str r0, [r5, #0x58]
     add r0, r5, #0
@@ -86,7 +86,7 @@ loc_08044192:
     ldr r1, [r5, #0x5c]
     bl EXT_080EF150
     ldr r1, [r5, #0x60]
-    .dh 0x4348 ; TODO muls r0, r1, r0
+    mul r0, r1
     cmp r0, #0
     bge loc_080441A8
     add r0, #0xff

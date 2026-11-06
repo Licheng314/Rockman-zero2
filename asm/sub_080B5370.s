@@ -22,7 +22,7 @@ sub_080B5370:
     ldr r2, [pc, #0x24]
     ldr r1, [r2]
     ldr r0, [pc, #0x24]
-    .dh 0x4348 ; TODO muls r0, r1, r0
+    mul r0, r1
     ldr r1, [pc, #0x24]
     add r0, r0, r1
     lsl r0, r0, #1
@@ -62,7 +62,7 @@ loc_080B53D2:
     ldr r2, [pc, #0x24]
     ldr r1, [r2]
     ldr r0, [pc, #0x24]
-    .dh 0x4348 ; TODO muls r0, r1, r0
+    mul r0, r1
     ldr r1, [pc, #0x24]
     add r0, r0, r1
     lsl r0, r0, #1
@@ -102,7 +102,7 @@ loc_080B5426:
     mov r1, r9
     ldr r0, [r1]
     ldr r6, [pc, #0x5c]
-    .dh 0x4370 ; TODO muls r0, r6, r0
+    mul r0, r6
     ldr r5, [pc, #0x5c]
     add r0, r0, r5
     lsl r0, r0, #1
@@ -116,7 +116,7 @@ loc_080B5426:
     lsl r1, r1, #8
     str r1, [r7, #0x64]
     add r0, r4, #0
-    .dh 0x4370 ; TODO muls r0, r6, r0
+    mul r0, r6
     add r0, r0, r5
     lsl r0, r0, #1
     lsr r1, r0, #1

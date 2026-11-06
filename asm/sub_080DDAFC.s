@@ -14,7 +14,7 @@ sub_080DDAFC:
     add r4, r4, r1
     ldr r1, [r4]
     lsl r5, r5, #9
-    .dh 0x436A ; TODO muls r2, r5, r2
+    mul r2, r5
     add r1, r1, r2
     str r1, [r6, #0x54]
     ldrb r0, [r0, #9]

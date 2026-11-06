@@ -5,7 +5,7 @@ sub_08025EEC:
     add r4, r0, #0
     ldr r0, [r4, #0x60]
     ldr r1, [r4, #0x68]
-    .dh 0x4348 ; TODO muls r0, r1, r0
+    mul r0, r1
     cmp r0, #0
     bge loc_08025EFE
     mov r0, #0

@@ -38,7 +38,7 @@ loc_080BE698:
     ldr r1, [r3]
     ldr r0, [pc, #0x40]
     add r2, r1, #0
-    .dh 0x4342 ; TODO muls r2, r0, r2
+    mul r2, r0
     ldr r0, [pc, #0x40]
     add r2, r2, r0
     lsl r2, r2, #1

@@ -24,7 +24,7 @@ sub_0808E742:
 loc_0808E76A:
     ldr r0, [r4, #0x5c]
     mov r1, #0xfa
-    .dh 0x4348 ; TODO muls r0, r1, r0
+    mul r0, r1
     cmp r0, #0
     bge loc_0808E776
     add r0, #0xff
@@ -32,6 +32,6 @@ loc_0808E776:
     asr r2, r0, #8
     str r2, [r4, #0x5c]
     ldr r0, [r4, #0x60]
-    .dh 0x4348 ; TODO muls r0, r1, r0
+    mul r0, r1
     cmp r0, #0
     bge EXT_0808E784

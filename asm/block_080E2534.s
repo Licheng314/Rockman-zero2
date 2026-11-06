@@ -13,7 +13,7 @@ block_080E2534:
     mov r4, #6
     ldrsh r2, [r7, r4]
     lsl r0, r2, #2
-    .dh 0x4468 ; TODO add r0, sp, r0
+    add r0, sp
     add r0, #0x14
     ldr r0, [r0]
     asr r1, r0
@@ -23,7 +23,7 @@ block_080E2534:
     beq loc_080E25A0
     ldr r1, [pc, #0x24]
     lsl r0, r2, #1
-    .dh 0x4468 ; TODO add r0, sp, r0
+    add r0, sp
     ldrh r0, [r0]
     lsl r0, r0, #1
     add r0, r0, r1

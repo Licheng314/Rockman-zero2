@@ -7,7 +7,7 @@ sub_080ED2A8:
 loc_080ED2AE:
     ldr r3, [r2]
     bl EXT_080ED2C2
-    .dh 0xC008 ; TODO stm r0!, {r3}
+    stmia r0!, {r3}
     add r2, #4
     sub r1, #1
     bgt loc_080ED2AE

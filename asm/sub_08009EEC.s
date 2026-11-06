@@ -11,4 +11,4 @@ sub_08009EEC:
     lsl r0, r0, #1
     cmp r1, r0
     bge EXT_08009F0C
-    .dh 0x43C8 ; TODO mvns r0, r1
+    mvn r0, r1

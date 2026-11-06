@@ -24,7 +24,7 @@ loc_08022086:
     ldrh r1, [r5]
     add r1, r1, r3
     add r0, r1, #0
-    .dh 0x4360 ; TODO muls r0, r4, r0
+    mul r0, r4
     add r2, r2, r0
     ldrh r0, [r5, #2]
     add r1, r1, r0
@@ -34,7 +34,7 @@ loc_08022086:
     asr r0, r0, #1
     mov r1, r12
     str r0, [r1]
-    .dh 0x4360 ; TODO muls r0, r4, r0
+    mul r0, r4
     sub r2, r2, r0
     mov r0, r8
     str r2, [r0]

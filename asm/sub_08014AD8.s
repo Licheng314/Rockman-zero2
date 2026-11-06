@@ -28,7 +28,7 @@ sub_08014AD8:
     cmp r0, #0
     bne loc_08014BA2
     mov r0, #0x64
-    .dh 0x4350 ; TODO muls r0, r2, r0
+    mul r0, r2
     mov r1, #0x3c
     bl EXT_080EF150
     add r6, r0, #0

@@ -42,9 +42,9 @@ loc_0802B0B6:
     sub r6, r6, r0
     sub r7, r7, r5
     add r4, r6, #0
-    .dh 0x4374 ; TODO muls r4, r6, r4
+    mul r4, r6
     add r0, r7, #0
-    .dh 0x4378 ; TODO muls r0, r7, r0
+    mul r0, r7
     add r4, r4, r0
     add r0, r4, #0
     bl EXT_080EEF7C
@@ -69,12 +69,12 @@ loc_0802B120:
 loc_0802B122:
     mov r10, r0
     mov r0, r9
-    .dh 0x4370 ; TODO muls r0, r6, r0
+    mul r0, r6
     add r1, r4, #0
     bl EXT_080EF150
     add r6, r0, #0
     mov r0, r9
-    .dh 0x4378 ; TODO muls r0, r7, r0
+    mul r0, r7
     add r7, r0, #0
     add r1, r4, #0
     bl EXT_080EF150

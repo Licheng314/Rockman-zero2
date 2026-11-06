@@ -30,7 +30,7 @@ loc_080ACDCE:
     ldrsh r1, [r0, r2]
     ldr r0, [r4, #0x5c]
     asr r0, r0, #8
-    .dh 0x4341 ; TODO muls r1, r0, r1
+    mul r1, r0
     ldr r0, [r4, #0x74]
     add r0, r0, r1
     str r0, [r4, #0x54]

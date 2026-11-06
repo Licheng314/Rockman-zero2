@@ -10,8 +10,8 @@ sub_08000A00:
     sub r2, #0x38
     mov r1, #0xd
 loc_08000A10:
-    .dh 0xCB01 ; TODO ldm r3!, {r0}
-    .dh 0xC201 ; TODO stm r2!, {r0}
+    ldmia r3!, {r0}
+    stmia r2!, {r0}
     sub r1, #1
     cmp r1, #0
     bge loc_08000A10

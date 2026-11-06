@@ -17,7 +17,7 @@ sub_08006A30:
     bl EXT_080EF2B8
     ldr r2, [r5, #0xc]
     ldrb r1, [r2]
-    .dh 0x4348 ; TODO muls r0, r1, r0
+    mul r0, r1
     add r0, r0, r4
     add r0, r0, r2
     ldrb r0, [r0, #4]
@@ -33,7 +33,7 @@ sub_08006A30:
     sub r1, r1, r0
     mov r0, #0x96
     mov r2, r8
-    .dh 0x4342 ; TODO muls r2, r0, r2
+    mul r2, r0
     add r0, r2, #0
     add r0, r0, r4
     add r1, r1, r0

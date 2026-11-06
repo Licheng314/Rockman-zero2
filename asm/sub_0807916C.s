@@ -57,7 +57,7 @@ loc_080791B4:
     mov r1, #7
     bl EXT_080EF150
     ldrb r1, [r4, #0x11]
-    .dh 0x4348 ; TODO muls r0, r1, r0
+    mul r0, r1
     add r0, r0, r5
     str r0, [r4, #0x54]
     ldrb r0, [r4, #0xd]
@@ -88,7 +88,7 @@ loc_080791FC:
     ldrb r0, [r4, #0x11]
     lsl r1, r0, #1
     add r2, r0, #0
-    .dh 0x4342 ; TODO muls r2, r0, r2
+    mul r2, r0
     add r0, r2, #0
     asr r0, r0, #2
     add r0, r1, r0

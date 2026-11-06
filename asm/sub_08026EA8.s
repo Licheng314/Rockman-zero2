@@ -36,7 +36,7 @@ sub_08026EA8:
     mov r1, #1
 loc_08026EEA:
     ldr r0, [r2, #0x10]
-    .dh 0x4348 ; TODO muls r0, r1, r0
+    mul r0, r1
     ldr r1, [sp, #0x1c]
     add r0, r1, r0
     str r0, [sp, #0x1c]
@@ -143,13 +143,13 @@ loc_08026F80:
     lsl r0, r0, #5
     add r4, r4, r0
     add r1, r4, #0
-    .dh 0x4361 ; TODO muls r1, r4, r1
+    mul r1, r4
     add r4, r1, #0
     add r0, r7, #0
-    .dh 0x4378 ; TODO muls r0, r7, r0
+    mul r0, r7
     sub r4, r4, r0
     add r0, r6, #0
-    .dh 0x4370 ; TODO muls r0, r6, r0
+    mul r0, r6
     cmp r0, r4
     ble loc_08026FF6
     add r0, r4, #0

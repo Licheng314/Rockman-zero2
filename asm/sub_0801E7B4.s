@@ -100,7 +100,7 @@ loc_0801E86A:
     cmp r1, #0
     beq loc_0801E884
     add r0, r6, #0
-    .dh 0x4348 ; TODO muls r0, r1, r0
+    mul r0, r1
     cmp r0, #0
     bge loc_0801E884
     add r6, r1, #0
@@ -110,7 +110,7 @@ loc_0801E884:
     cmp r3, #0
     beq loc_0801E890
     add r0, r6, #0
-    .dh 0x4358 ; TODO muls r0, r3, r0
+    mul r0, r3
     cmp r0, #0
     bgt loc_0801E8A0
 loc_0801E890:
@@ -119,14 +119,14 @@ loc_0801E890:
     cmp r3, #0
     beq loc_0801E8B2
     add r0, r1, #0
-    .dh 0x4358 ; TODO muls r0, r3, r0
+    mul r0, r3
     cmp r0, #0
     ble loc_0801E8B2
 loc_0801E8A0:
     cmp r3, #0
     beq loc_0801E8AE
     add r0, r6, #0
-    .dh 0x4358 ; TODO muls r0, r3, r0
+    mul r0, r3
     cmp r0, #0
     bge loc_0801E8AE
     neg r6, r6
@@ -137,11 +137,11 @@ loc_0801E8B2:
     cmp r1, #0
     beq loc_0801E8DC
     add r2, r6, #0
-    .dh 0x434A ; TODO muls r2, r1, r2
+    mul r2, r1
     cmp r2, #0
     bgt loc_0801E8C6
     add r0, r1, #0
-    .dh 0x4358 ; TODO muls r0, r3, r0
+    mul r0, r3
     cmp r0, #0
     ble loc_0801E8DC
 loc_0801E8C6:
@@ -150,9 +150,9 @@ loc_0801E8C6:
     bge loc_0801E8DE
 loc_0801E8CC:
     add r1, r6, #0
-    .dh 0x4371 ; TODO muls r1, r6, r1
+    mul r1, r6
     add r0, r3, #0
-    .dh 0x4358 ; TODO muls r0, r3, r0
+    mul r0, r3
     cmp r1, r0
     ble loc_0801E8DE
     add r6, r3, #0

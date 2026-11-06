@@ -309,7 +309,7 @@ loc_0807C5F8:
     ldr r2, [pc, #0xa0]
     ldr r1, [r2]
     ldr r0, [pc, #0xa0]
-    .dh 0x4348 ; TODO muls r0, r1, r0
+    mul r0, r1
     ldr r3, [pc, #0xa0]
     add r0, r0, r3
     lsl r0, r0, #1

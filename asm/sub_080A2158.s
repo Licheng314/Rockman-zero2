@@ -148,7 +148,7 @@ loc_080A2266:
     mov r2, #0
     ldrsh r1, [r0, r2]
     mov r0, #0x34
-    .dh 0x4348 ; TODO muls r0, r1, r0
+    mul r0, r1
     cmp r0, #0
     bge loc_080A2294
     add r0, #0x3f

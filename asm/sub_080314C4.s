@@ -148,7 +148,7 @@ loc_080315C0:
     mov r12, r1
 loc_080315D8:
     lsl r0, r6, #2
-    .dh 0x4468 ; TODO add r0, sp, r0
+    add r0, sp
     ldr r2, [r0]
     add r4, r6, #1
     cmp r2, #0

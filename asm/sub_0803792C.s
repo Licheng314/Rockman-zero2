@@ -33,7 +33,7 @@ sub_0803792C:
     bne loc_0803796A
     mov r1, #1
 loc_0803796A:
-    .dh 0x434A ; TODO muls r2, r1, r2
+    mul r2, r1
     mov r1, r12
     ldr r0, [r1, #0x58]
     add r2, r2, r0

@@ -20,7 +20,7 @@ loc_08002650:
     mov r0, #0xff
     lsl r0, r0, #3
     and r0, r2
-    .dh 0x4348 ; TODO muls r0, r1, r0
+    mul r0, r1
     add r6, r6, r0
     ldrb r2, [r4, #0xa]
     mov r0, #1

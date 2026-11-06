@@ -127,7 +127,7 @@ loc_08067D14:
     add r4, #0xc2
     mov r0, #0
     ldrsb r0, [r4, r0]
-    .dh 0x4348 ; TODO muls r0, r1, r0
+    mul r0, r1
     str r0, [r5, #0x5c]
     add r2, r5, #0
     add r2, #0xbc
@@ -139,7 +139,7 @@ loc_08067D14:
     lsr r0, r0, #0x16
     mov r1, #0
     ldrsb r1, [r4, r1]
-    .dh 0x4341 ; TODO muls r1, r0, r1
+    mul r1, r0
     add r0, r5, #0
     add r0, #0x24
     strb r1, [r0]

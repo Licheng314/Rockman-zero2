@@ -33,7 +33,7 @@ sub_080378D8:
     beq loc_08037916
     mov r1, #1
 loc_08037916:
-    .dh 0x434A ; TODO muls r2, r1, r2
+    mul r2, r1
     mov r1, r12
     ldr r0, [r1, #0x54]
     add r2, r2, r0

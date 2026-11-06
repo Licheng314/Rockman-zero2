@@ -25,7 +25,7 @@ sub_080C19B0:
     add r0, r0, r6
     ldr r0, [r0]
     add r1, r5, #0
-    .dh 0x4341 ; TODO muls r1, r0, r1
+    mul r1, r0
     cmp r1, #0
     bge loc_080C19E8
     add r1, #0xff
@@ -44,7 +44,7 @@ loc_080C19E8:
     add r0, r0, r1
     ldr r0, [r0]
     add r1, r5, #0
-    .dh 0x4341 ; TODO muls r1, r0, r1
+    mul r1, r0
     cmp r1, #0
     bge loc_080C1A0C
     add r1, #0xff

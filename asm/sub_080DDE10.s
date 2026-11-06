@@ -10,7 +10,7 @@ sub_080DDE10:
     ldr r0, [pc, #0x44]
     ldr r0, [r0, #0x10]
     lsl r4, r4, #9
-    .dh 0x4361 ; TODO muls r1, r4, r1
+    mul r1, r4
     add r0, r0, r1
     str r0, [r5, #0x54]
     ldrb r0, [r3, #6]

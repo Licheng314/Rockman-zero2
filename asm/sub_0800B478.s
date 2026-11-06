@@ -28,7 +28,7 @@ loc_0800B4A8:
     add r0, r4, #0
     sub r0, #0x60
     add r1, r0, #0
-    .dh 0x4341 ; TODO muls r1, r0, r1
+    mul r1, r0
     lsl r0, r1, #3
     add r0, r0, r1
     lsl r0, r0, #3

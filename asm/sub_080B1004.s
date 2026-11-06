@@ -112,7 +112,7 @@ loc_080B1078:
     cmp r0, #0
     bne loc_080B10F4
     ldrb r0, [r4]
-    .dh 0x43C0 ; TODO mvns r0, r0
+    mvn r0, r0
     add r1, r5, #0
     add r1, #0x24
     strb r0, [r1]
@@ -154,7 +154,7 @@ loc_080B1112:
     .word 0x08345998
 loc_080B1134:
     ldrb r0, [r4]
-    .dh 0x43C0 ; TODO mvns r0, r0
+    mvn r0, r0
     add r1, r5, #0
     add r1, #0x24
     strb r0, [r1]

@@ -46,7 +46,7 @@ loc_080EE60C:
     ldrb r2, [r1, #6]
     ldrb r3, [r1, #0xa]
     add r0, r2, #0
-    .dh 0x4358 ; TODO muls r0, r3, r0
+    mul r0, r3
     add r0, #0xf
     asr r0, r0, #4
     strb r0, [r1, #0x19]

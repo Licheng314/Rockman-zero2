@@ -12,24 +12,24 @@ sub_08008814:
     ldr r0, [r7, #0x34]
     ldr r1, [r7, #0x44]
     add r3, r0, #0
-    .dh 0x434B ; TODO muls r3, r1, r3
+    mul r3, r1
     asr r3, r3, #8
     ldr r0, [r7, #0x4c]
     add r3, r3, r0
     ldr r0, [r7, #0x38]
     ldr r4, [r7, #0x48]
     add r2, r0, #0
-    .dh 0x4362 ; TODO muls r2, r4, r2
+    mul r2, r4
     asr r2, r2, #8
     ldr r0, [r7, #0x50]
     add r2, r2, r0
     ldr r0, [r7, #0x3c]
-    .dh 0x4348 ; TODO muls r0, r1, r0
+    mul r0, r1
     asr r0, r0, #8
     ldr r1, [r7, #0x54]
     add r5, r0, r1
     ldr r0, [r7, #0x40]
-    .dh 0x4360 ; TODO muls r0, r4, r0
+    mul r0, r4
     asr r0, r0, #8
     ldr r1, [r7, #0x58]
     add r6, r0, r1

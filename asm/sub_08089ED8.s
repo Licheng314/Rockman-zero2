@@ -95,14 +95,14 @@ loc_08089F76:
     mov r1, #0
     ldrsh r0, [r0, r1]
     mov r1, #0xd
-    .dh 0x4348 ; TODO muls r0, r1, r0
+    mul r0, r1
     str r0, [r4, #0x5c]
     lsl r0, r3, #1
     add r0, r0, r2
     mov r2, #0
     ldrsh r0, [r0, r2]
     neg r0, r0
-    .dh 0x4348 ; TODO muls r0, r1, r0
+    mul r0, r1
     str r0, [r4, #0x60]
     cmp r5, #0
     beq loc_08089FC4

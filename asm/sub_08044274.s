@@ -108,15 +108,15 @@ loc_0804434A:
     lsr r1, r1, #0x18
     ldrb r2, [r6, #0x12]
     ldr r0, [r6, #0x5c]
-    .dh 0x4350 ; TODO muls r0, r2, r0
+    mul r0, r2
     sub r0, r7, r0
     str r0, [r6, #0x54]
     ldr r0, [r6, #0x60]
     add r2, r0, #0
-    .dh 0x434A ; TODO muls r2, r1, r2
+    mul r2, r1
     add r2, r8
     add r0, r1, #0
-    .dh 0x4348 ; TODO muls r0, r1, r0
+    mul r0, r1
     lsl r0, r0, #5
     add r2, r2, r0
     str r2, [r6, #0x58]

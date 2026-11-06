@@ -108,7 +108,7 @@ loc_08068F6A:
     add r1, r1, r0
     ldrb r2, [r4, #0x10]
     add r0, r2, #1
-    .dh 0x4348 ; TODO muls r0, r1, r0
+    mul r0, r1
     sub r0, #0x40
     lsl r0, r0, #0x18
     lsr r3, r0, #0x18
@@ -117,7 +117,7 @@ loc_08068F6A:
     add r2, r2, r0
     ldrh r1, [r2]
     ldrh r0, [r5]
-    .dh 0x4341 ; TODO muls r1, r0, r1
+    mul r1, r0
     cmp r1, #0
     bge loc_08068F9C
     add r1, #0xff

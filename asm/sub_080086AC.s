@@ -31,7 +31,7 @@ sub_080086AC:
     lsl r3, r2, #4
     sub r3, r3, r2
     add r2, r3, #0
-    .dh 0x434A ; TODO muls r2, r1, r2
+    mul r2, r1
     lsl r1, r2, #2
     add r1, r1, r2
     lsl r1, r1, #1

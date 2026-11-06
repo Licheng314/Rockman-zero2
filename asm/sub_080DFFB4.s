@@ -18,9 +18,9 @@ sub_080DFFB4:
     ldr r0, [pc, #0x30]
     sub r6, r0, r1
     add r0, r4, #0
-    .dh 0x4360 ; TODO muls r0, r4, r0
+    mul r0, r4
     add r1, r6, #0
-    .dh 0x4371 ; TODO muls r1, r6, r1
+    mul r1, r6
     add r0, r0, r1
     bl EXT_080EEF7C
     lsl r0, r0, #0x10
@@ -51,14 +51,14 @@ loc_080E000C:
     mov r12, r0
     ldr r1, [r0]
     add r0, r4, #0
-    .dh 0x4348 ; TODO muls r0, r1, r0
+    mul r0, r1
     cmp r0, #0
     bge loc_080E0026
     add r0, #0xff
 loc_080E0026:
     asr r4, r0, #8
     add r0, r6, #0
-    .dh 0x4348 ; TODO muls r0, r1, r0
+    mul r0, r1
     cmp r0, #0
     bge loc_080E0032
     add r0, #0xff

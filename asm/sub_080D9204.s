@@ -50,13 +50,13 @@ sub_080D9204:
     add r1, #0xc4
     strb r0, [r1]
     add r0, r6, #0
-    .dh 0x4370 ; TODO muls r0, r6, r0
+    mul r0, r6
     add r6, r0, #0
     add r1, r5, #0
-    .dh 0x4369 ; TODO muls r1, r5, r1
+    mul r1, r5
     add r5, r1, #0
     add r0, r6, #0
-    .dh 0x4368 ; TODO muls r0, r5, r0
+    mul r0, r5
     bl EXT_080EEF7C
     lsl r0, r0, #0x10
     lsr r0, r0, #0x18

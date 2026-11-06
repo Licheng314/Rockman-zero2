@@ -19,7 +19,7 @@ loc_08039482:
     add r1, r4, #0
     add r1, #0x54
     ldr r2, [r4, #0x5c]
-    .dh 0x43D2 ; TODO mvns r2, r2
+    mvn r2, r2
     lsr r2, r2, #0x1f
     mov r0, #4
     mov r3, #0
@@ -42,7 +42,7 @@ loc_080394B6:
     ldr r2, [pc, #0x40]
     ldr r1, [r2]
     ldr r0, [pc, #0x40]
-    .dh 0x4348 ; TODO muls r0, r1, r0
+    mul r0, r1
     ldr r1, [pc, #0x40]
     add r0, r0, r1
     lsl r0, r0, #1

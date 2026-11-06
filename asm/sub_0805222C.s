@@ -54,7 +54,7 @@ loc_08052272:
     ldr r2, [pc, #0xa4]
     ldr r0, [r2]
     ldr r6, [pc, #0xa4]
-    .dh 0x4370 ; TODO muls r0, r6, r0
+    mul r0, r6
     ldr r3, [pc, #0xa4]
     add r0, r0, r3
     lsl r0, r0, #1
@@ -78,7 +78,7 @@ loc_080522C6:
     mov r1, r9
     ldr r0, [r1]
     mov r2, r8
-    .dh 0x4342 ; TODO muls r2, r0, r2
+    mul r2, r0
     add r0, r2, #0
     add r0, r0, r7
     lsl r0, r0, #1
@@ -91,7 +91,7 @@ loc_080522C6:
     add r1, r1, r0
     str r1, [sp]
     mov r0, r8
-    .dh 0x4350 ; TODO muls r0, r2, r0
+    mul r0, r2
     add r0, r0, r7
     lsl r0, r0, #1
     lsr r1, r0, #1

@@ -5,12 +5,12 @@ sub_08034BB8:
     sub sp, #0x10
     mov r3, sp
     ldr r2, [pc, #0x20]
-    .dh 0xCA70 ; TODO ldm r2!, {r4, r5, r6}
-    .dh 0xC370 ; TODO stm r3!, {r4, r5, r6}
+    ldmia r2!, {r4, r5, r6}
+    stmia r3!, {r4, r5, r6}
     ldr r2, [r2]
     str r2, [r3]
     lsl r1, r1, #2
-    .dh 0x4469 ; TODO add r1, sp, r1
+    add r1, sp
     ldr r1, [r1]
     bl EXT_080EF118
     lsl r0, r0, #0x18

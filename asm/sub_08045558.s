@@ -102,7 +102,7 @@ loc_08045618:
     mov r7, r9
     ldr r1, [r7]
     ldr r0, [pc, #0x24]
-    .dh 0x4348 ; TODO muls r0, r1, r0
+    mul r0, r1
     ldr r1, [pc, #0x24]
     add r0, r0, r1
     lsl r0, r0, #1

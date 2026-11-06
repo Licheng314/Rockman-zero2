@@ -13,7 +13,7 @@ sub_080293B0:
     cmp r0, #0x63
     bhi loc_080293D4
     ldr r4, [r5, #0x5c]
-    .dh 0x4360 ; TODO muls r0, r4, r0
+    mul r0, r4
     mov r1, #0x64
     bl EXT_080EF150
     sub r6, r4, r0

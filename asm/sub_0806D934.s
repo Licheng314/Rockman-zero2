@@ -24,7 +24,7 @@ sub_0806D934:
     ldr r2, [pc, #0x20]
     ldr r1, [r2]
     ldr r0, [pc, #0x20]
-    .dh 0x4348 ; TODO muls r0, r1, r0
+    mul r0, r1
     ldr r1, [pc, #0x20]
     add r0, r0, r1
     lsl r0, r0, #1
@@ -45,7 +45,7 @@ loc_0806D994:
     ldr r2, [pc, #0x94]
     ldr r1, [r2]
     ldr r0, [pc, #0x94]
-    .dh 0x4348 ; TODO muls r0, r1, r0
+    mul r0, r1
     ldr r1, [pc, #0x94]
     add r0, r0, r1
     lsl r0, r0, #1

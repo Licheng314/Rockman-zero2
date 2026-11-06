@@ -59,7 +59,7 @@ loc_080BBF88:
     ldr r6, [pc, #0x5c]
     ldr r0, [r6]
     ldr r5, [pc, #0x5c]
-    .dh 0x4368 ; TODO muls r0, r5, r0
+    mul r0, r5
     ldr r3, [pc, #0x5c]
     add r0, r0, r3
     lsl r0, r0, #1
@@ -72,7 +72,7 @@ loc_080BBF88:
     add r1, r1, r0
     str r1, [r7, #0x5c]
     add r0, r2, #0
-    .dh 0x4368 ; TODO muls r0, r5, r0
+    mul r0, r5
     add r0, r0, r3
     lsl r0, r0, #1
     lsr r1, r0, #1

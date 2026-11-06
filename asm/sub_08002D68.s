@@ -89,7 +89,7 @@ loc_08002DAA:
     ldrb r0, [r0]
     lsl r3, r3, #0x10
     asr r3, r3, #0x10
-    .dh 0x4358 ; TODO muls r0, r3, r0
+    mul r0, r3
     lsl r0, r0, #1
     add r0, #4
     add r0, r2, r0
@@ -122,7 +122,7 @@ loc_08002E4C:
     ldrb r0, [r0]
     lsl r3, r3, #0x10
     asr r3, r3, #0x10
-    .dh 0x4358 ; TODO muls r0, r3, r0
+    mul r0, r3
     lsl r0, r0, #1
     add r0, #4
     add r0, r2, r0

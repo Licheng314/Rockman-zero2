@@ -68,7 +68,7 @@ loc_0800A8DE:
     ldr r1, [pc, #0x88]
     and r0, r1
     orr r2, r0
-    .dh 0xC704 ; TODO stm r7!, {r2}
+    stmia r7!, {r2}
     add r3, #1
     cmp r3, #0x68
     ble loc_0800A8DE
@@ -89,7 +89,7 @@ loc_0800A928:
     add r1, r4, r3
     mov r3, #0xa
 loc_0800A932:
-    .dh 0xC104 ; TODO stm r1!, {r2}
+    stmia r1!, {r2}
     sub r3, #1
     cmp r3, #0
     bge loc_0800A932
@@ -103,7 +103,7 @@ loc_0800A932:
     add r3, r0, #0
     sub r3, #0x74
 loc_0800A94C:
-    .dh 0xC202 ; TODO stm r2!, {r1}
+    stmia r2!, {r1}
     add r1, r1, r5
     sub r3, #1
     cmp r3, #0
@@ -122,7 +122,7 @@ loc_0800A966:
     ldr r0, [r4, #0x34]
     asr r0, r0, #2
     orr r0, r2
-    .dh 0xC101 ; TODO stm r1!, {r0}
+    stmia r1!, {r0}
     add r3, #1
     cmp r3, #0x9f
     ble loc_0800A966

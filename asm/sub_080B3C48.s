@@ -36,7 +36,7 @@ sub_080B3C48:
     ldr r4, [pc, #0x24]
     ldr r1, [r4]
     ldr r0, [pc, #0x24]
-    .dh 0x4348 ; TODO muls r0, r1, r0
+    mul r0, r1
     ldr r1, [pc, #0x24]
     add r0, r0, r1
     lsl r0, r0, #1
@@ -57,7 +57,7 @@ loc_080B3CC0:
     ldr r4, [pc, #0x58]
     ldr r1, [r4]
     ldr r0, [pc, #0x58]
-    .dh 0x4348 ; TODO muls r0, r1, r0
+    mul r0, r1
     ldr r1, [pc, #0x58]
     add r0, r0, r1
     lsl r0, r0, #1
@@ -72,7 +72,7 @@ loc_080B3CDE:
     str r0, [r5, #0x5c]
     ldr r1, [r4]
     ldr r0, [pc, #0x3c]
-    .dh 0x4348 ; TODO muls r0, r1, r0
+    mul r0, r1
     ldr r1, [pc, #0x3c]
     add r0, r0, r1
     lsl r0, r0, #1

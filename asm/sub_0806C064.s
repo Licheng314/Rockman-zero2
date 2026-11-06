@@ -186,7 +186,7 @@ loc_0806C1BC:
     mov r9, r2
     ldr r0, [r2]
     ldr r6, [pc, #0x84]
-    .dh 0x4370 ; TODO muls r0, r6, r0
+    mul r0, r6
     ldr r3, [pc, #0x84]
     add r0, r0, r3
     lsl r0, r0, #1
@@ -199,7 +199,7 @@ loc_0806C1BC:
     ldr r2, [sp, #4]
     add r2, r8
     add r0, r4, #0
-    .dh 0x4370 ; TODO muls r0, r6, r0
+    mul r0, r6
     add r0, r0, r3
     lsl r0, r0, #1
     lsr r1, r0, #1

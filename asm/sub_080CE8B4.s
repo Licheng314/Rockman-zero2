@@ -20,7 +20,7 @@ sub_080CE8B4:
     strb r0, [r5, #0xa]
     ldrb r0, [r5, #0x11]
     lsl r0, r0, #1
-    .dh 0x4468 ; TODO add r0, sp, r0
+    add r0, sp
     ldrh r1, [r0]
     add r0, r5, #0
     bl EXT_080127E4

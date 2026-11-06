@@ -19,7 +19,7 @@ sub_0803F6FC:
     add r1, r4, #0
     add r1, #0x54
     ldr r2, [r4, #0x5c]
-    .dh 0x43D2 ; TODO mvns r2, r2
+    mvn r2, r2
     lsr r2, r2, #0x1f
     mov r0, #4
     mov r3, #0

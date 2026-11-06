@@ -93,7 +93,7 @@ loc_0805E09A:
     ldr r6, [pc, #0x60]
     ldr r0, [r6]
     ldr r4, [pc, #0x60]
-    .dh 0x4360 ; TODO muls r0, r4, r0
+    mul r0, r4
     ldr r1, [pc, #0x60]
     add r0, r0, r1
     lsl r0, r0, #1
@@ -104,7 +104,7 @@ loc_0805E09A:
     cmp r0, #0
     beq loc_0805E0FE
     add r0, r1, #0
-    .dh 0x4360 ; TODO muls r0, r4, r0
+    mul r0, r4
     ldr r1, [pc, #0x4c]
     add r0, r0, r1
     lsl r0, r0, #1
@@ -117,7 +117,7 @@ loc_0805E09A:
     lsl r1, r1, #8
     ldr r0, [r5, #0x54]
     add r0, r0, r1
-    .dh 0x4362 ; TODO muls r2, r4, r2
+    mul r2, r4
     ldr r1, [pc, #0x30]
     add r2, r2, r1
     lsl r2, r2, #1

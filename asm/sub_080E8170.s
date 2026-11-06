@@ -66,7 +66,7 @@ loc_080E81DE:
     ldr r1, [pc, #0x58]
     add r2, r2, r1
     lsl r4, r6, #2
-    .dh 0x446C ; TODO add r4, sp, r4
+    add r4, sp
     mov r1, #0
     ldrsb r1, [r4, r1]
     ldr r2, [r2]

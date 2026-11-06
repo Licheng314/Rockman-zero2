@@ -22,7 +22,7 @@ sub_08004AA4:
     ldr r6, [r0]
     mov r0, #0
 loc_08004ACE:
-    .dh 0xCE10 ; TODO ldm r6!, {r4}
+    ldmia r6!, {r4}
     add r5, r0, #1
     cmp r4, #0
     beq loc_08004AE6

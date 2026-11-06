@@ -24,7 +24,7 @@ sub_0808D814:
 loc_0808D840:
     ldr r1, [r4, #0x60]
     mov r0, #0xc8
-    .dh 0x4348 ; TODO muls r0, r1, r0
+    mul r0, r1
     cmp r0, #0
     bge loc_0808D84C
     add r0, #0xff

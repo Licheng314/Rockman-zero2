@@ -29,7 +29,7 @@ sub_08006E18:
     strb r1, [r0]
     lsl r2, r2, #0x10
     asr r2, r2, #0x10
-    .dh 0x43D2 ; TODO mvns r2, r2
+    mvn r2, r2
     lsr r2, r2, #0x1f
     lsl r3, r3, #0x10
     cmp r3, #0

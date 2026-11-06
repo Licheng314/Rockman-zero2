@@ -115,7 +115,7 @@ loc_08032D5C:
     beq loc_08032DA4
     mov r0, #1
 loc_08032DA4:
-    .dh 0x4341 ; TODO muls r1, r0, r1
+    mul r1, r0
     ldr r0, [r5, #0x54]
     add r0, r0, r1
     str r0, [r5, #0x54]

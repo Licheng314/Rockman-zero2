@@ -33,7 +33,7 @@ loc_08020A92:
 loc_08020AB2:
     ldrh r0, [r5]
     mov r1, r8
-    .dh 0x4341 ; TODO muls r1, r0, r1
+    mul r1, r0
     mov r10, r1
     mov r0, #0xff
     mov r9, r0

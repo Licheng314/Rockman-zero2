@@ -93,7 +93,7 @@ loc_0807DB16:
     .word 0x0833D990
 loc_0807DB68:
     ldrb r0, [r4, #0x11]
-    .dh 0x4468 ; TODO add r0, sp, r0
+    add r0, sp
     ldrb r0, [r0]
     ldrb r1, [r4, #0x13]
     add r0, r0, r1

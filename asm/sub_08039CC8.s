@@ -21,7 +21,7 @@ sub_08039CC8:
     add r0, r8
     ldr r0, [r0]
     sub r0, r0, r7
-    .dh 0x4368 ; TODO muls r0, r5, r0
+    mul r0, r5
     add r1, r6, #0
     bl EXT_080EF150
     add r0, r7, r0
@@ -35,7 +35,7 @@ sub_08039CC8:
     add r0, r8
     ldr r0, [r0]
     sub r0, r0, r7
-    .dh 0x4368 ; TODO muls r0, r5, r0
+    mul r0, r5
     add r1, r6, #0
     bl EXT_080EF150
     add r0, r7, r0

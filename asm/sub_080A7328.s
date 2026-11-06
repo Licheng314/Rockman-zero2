@@ -152,7 +152,7 @@ loc_080A7446:
     ldrb r3, [r4]
     mov r0, #0xc8
     add r1, r3, #0
-    .dh 0x4341 ; TODO muls r1, r0, r1
+    mul r1, r0
     mov r0, #0xe4
     sub r0, r0, r1
     cmp r2, r0

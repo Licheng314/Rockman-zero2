@@ -88,7 +88,7 @@ loc_08043B76:
     asr r2, r2, #0x18
     mov r0, #0x1a
     add r1, r2, #0
-    .dh 0x4341 ; TODO muls r1, r0, r1
+    mul r1, r0
     lsl r1, r1, #8
     ldr r0, [r5, #0x54]
     sub r0, r0, r1

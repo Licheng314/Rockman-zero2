@@ -43,13 +43,13 @@ sub_080D90F0:
     cmp r0, r5
     bhi loc_080D91BA
     add r0, r3, #0
-    .dh 0x4358 ; TODO muls r0, r3, r0
+    mul r0, r3
     add r3, r0, #0
     add r7, r1, #0
-    .dh 0x434F ; TODO muls r7, r1, r7
+    mul r7, r1
     add r1, r7, #0
     add r0, r2, #0
-    .dh 0x4350 ; TODO muls r0, r2, r0
+    mul r0, r2
     add r2, r0, #0
     add r0, r3, r1
     cmp r0, r2

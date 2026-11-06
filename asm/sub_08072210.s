@@ -15,7 +15,7 @@ sub_08072210:
     ldr r2, [pc, #0x64]
     ldr r1, [r2]
     ldr r0, [pc, #0x64]
-    .dh 0x4348 ; TODO muls r0, r1, r0
+    mul r0, r1
     ldr r1, [pc, #0x64]
     add r0, r0, r1
     lsl r0, r0, #1
@@ -38,7 +38,7 @@ loc_08072250:
     ldr r1, [r0]
     ldr r0, [pc, #0x38]
     add r2, r1, #0
-    .dh 0x4342 ; TODO muls r2, r0, r2
+    mul r2, r0
     ldr r1, [pc, #0x38]
     add r2, r2, r1
     lsl r2, r2, #1

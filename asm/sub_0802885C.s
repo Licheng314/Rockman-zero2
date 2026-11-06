@@ -42,7 +42,7 @@ loc_08028894:
 loc_080288AA:
     cmp r6, #0
     beq loc_080288D0
-    .dh 0x43F1 ; TODO mvns r1, r6
+    mvn r1, r6
     lsr r1, r1, #0x1f
     ldrb r0, [r5, #0xa]
     lsr r0, r0, #4

@@ -47,7 +47,7 @@ loc_0801559E:
     add r0, r0, r2
     mov r2, #0
     ldrsh r0, [r0, r2]
-    .dh 0x4368 ; TODO muls r0, r5, r0
+    mul r0, r5
     cmp r0, #0
     bge loc_080155CE
     add r0, #0xff
@@ -58,7 +58,7 @@ loc_080155CE:
     mov r3, r12
     ldr r0, [r3]
     ldr r4, [pc, #0x44]
-    .dh 0x4360 ; TODO muls r0, r4, r0
+    mul r0, r4
     ldr r3, [pc, #0x44]
     add r0, r0, r3
     lsl r0, r0, #1
@@ -70,13 +70,13 @@ loc_080155CE:
     and r0, r1
     sub r0, #0x7f
     ldr r1, [r6]
-    .dh 0x4348 ; TODO muls r0, r1, r0
+    mul r0, r1
     asr r0, r0, #7
     str r0, [r6]
     str r2, [r6, #4]
     sub r2, #3
     ldr r0, [r7]
-    .dh 0x4360 ; TODO muls r0, r4, r0
+    mul r0, r4
     add r0, r0, r3
     lsl r0, r0, #1
     lsr r1, r0, #1

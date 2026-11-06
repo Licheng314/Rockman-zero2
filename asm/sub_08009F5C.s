@@ -15,7 +15,7 @@ sub_08009F5C:
     cmp r1, r0
     bge loc_08009F88
 loc_08009F76:
-    .dh 0x43C8 ; TODO mvns r0, r1
+    mvn r0, r1
     b loc_08009F8A
     .dh 0x0000 ; gap
     .word 0x000007FF

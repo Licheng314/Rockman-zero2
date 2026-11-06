@@ -37,9 +37,9 @@ sub_080D7114:
     cmp r0, r1
     bhi loc_080D7174
     add r0, r4, #0
-    .dh 0x4360 ; TODO muls r0, r4, r0
+    mul r0, r4
     add r1, r2, #0
-    .dh 0x4351 ; TODO muls r1, r2, r1
+    mul r1, r2
     add r0, r0, r1
     mov r1, #0xc8
     lsl r1, r1, #7

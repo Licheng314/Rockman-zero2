@@ -52,12 +52,12 @@ loc_080D8412:
     lsl r5, r5, #6
     sub r4, r5, r4
     add r0, r6, #0
-    .dh 0x4360 ; TODO muls r0, r4, r0
+    mul r0, r4
     add r1, r5, #0
     bl EXT_080EF150
     add r6, r0, #0
     mov r0, r8
-    .dh 0x4360 ; TODO muls r0, r4, r0
+    mul r0, r4
     add r1, r5, #0
     bl EXT_080EF150
     add r9, r6

@@ -40,7 +40,7 @@ loc_08002022:
     ldr r0, [pc, #0x4c]
 loc_08002028:
     ldrh r0, [r0]
-    .dh 0x43C0 ; TODO mvns r0, r0
+    mvn r0, r0
     strh r0, [r4]
     ldrh r1, [r4]
     ldrh r0, [r4, #2]

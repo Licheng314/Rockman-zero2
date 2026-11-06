@@ -31,7 +31,7 @@ sub_0800860C:
     ldrb r3, [r2, #2]
     lsl r2, r3, #4
     sub r2, r2, r3
-    .dh 0x4351 ; TODO muls r1, r2, r1
+    mul r1, r2
     add r1, r1, r0
     lsl r1, r1, #1
     add r7, r1, r7

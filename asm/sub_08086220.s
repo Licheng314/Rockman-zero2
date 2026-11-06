@@ -23,7 +23,7 @@ sub_08086220:
     ldr r4, [pc, #0x9c]
     ldr r0, [r4]
     ldr r1, [pc, #0x9c]
-    .dh 0x4348 ; TODO muls r0, r1, r0
+    mul r0, r1
     ldr r7, [pc, #0x9c]
     add r0, r0, r7
     lsl r0, r0, #1
@@ -48,7 +48,7 @@ loc_0808627A:
     mov r1, r10
     ldr r0, [r1]
     ldr r2, [pc, #0x6c]
-    .dh 0x4350 ; TODO muls r0, r2, r0
+    mul r0, r2
     ldr r1, [pc, #0x6c]
     add r0, r0, r1
     lsl r0, r0, #1
@@ -64,7 +64,7 @@ loc_0808627A:
     add r4, r4, r0
     ldr r2, [pc, #0x4c]
     add r0, r5, #0
-    .dh 0x4350 ; TODO muls r0, r2, r0
+    mul r0, r2
     ldr r1, [pc, #0x48]
     add r0, r0, r1
     lsl r0, r0, #1

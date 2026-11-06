@@ -221,7 +221,7 @@ loc_08044BF2:
     ldr r2, [pc, #0x70]
     ldr r1, [r2]
     ldr r0, [pc, #0x70]
-    .dh 0x4348 ; TODO muls r0, r1, r0
+    mul r0, r1
     ldr r7, [pc, #0x70]
     add r0, r0, r7
     lsl r0, r0, #1

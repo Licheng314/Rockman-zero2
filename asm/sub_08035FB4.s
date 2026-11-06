@@ -27,14 +27,14 @@ sub_08035FB4:
     add r0, r0, r3
     mov r5, #0
     ldrsh r0, [r0, r5]
-    .dh 0x4360 ; TODO muls r0, r4, r0
+    mul r0, r4
     asr r7, r0, #8
     and r1, r2
     lsl r1, r1, #1
     add r1, r1, r3
     mov r2, #0
     ldrsh r0, [r1, r2]
-    .dh 0x4360 ; TODO muls r0, r4, r0
+    mul r0, r4
     asr r6, r0, #8
     mov r5, #0xb1
     lsl r5, r5, #2
@@ -79,12 +79,12 @@ loc_0803604A:
     cmp r8, r9
     beq loc_08036066
     mov r0, r8
-    .dh 0x4378 ; TODO muls r0, r7, r0
+    mul r0, r7
     mov r1, r9
     bl EXT_080EF150
     add r7, r0, #0
     mov r0, r8
-    .dh 0x4370 ; TODO muls r0, r6, r0
+    mul r0, r6
     mov r1, r9
     bl EXT_080EF150
     add r6, r0, #0

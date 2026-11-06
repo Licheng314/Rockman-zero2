@@ -124,7 +124,7 @@ loc_08056F64:
     sub r0, #1
     ldr r1, [r5, #0x5c]
     add r2, r1, #0
-    .dh 0x4342 ; TODO muls r2, r0, r2
+    mul r2, r0
     ldr r0, [r5, #0x54]
     add r0, r0, r2
     str r0, [r5, #0x54]

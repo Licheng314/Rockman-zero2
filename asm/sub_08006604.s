@@ -21,7 +21,7 @@ sub_08006604:
     add r1, r3, r1
     ldrh r2, [r3]
     add r0, r2, #0
-    .dh 0x4370 ; TODO muls r0, r6, r0
+    mul r0, r6
     lsl r0, r0, #1
     add r4, r1, r0
     mov r1, #0

@@ -11,7 +11,7 @@ sub_08009F34:
     lsl r0, r0, #2
     cmp r1, r0
     bge loc_08009F54
-    .dh 0x43C8 ; TODO mvns r0, r1
+    mvn r0, r1
     b loc_08009F56
     .word 0x00000BFF
     .word 0xFFFFF400

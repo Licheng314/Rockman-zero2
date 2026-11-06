@@ -29,9 +29,9 @@ sub_0803D120:
     cmp r0, r2
     bhi loc_0803D172
     add r0, r6, #0
-    .dh 0x4370 ; TODO muls r0, r6, r0
+    mul r0, r6
     add r2, r1, #0
-    .dh 0x434A ; TODO muls r2, r1, r2
+    mul r2, r1
     add r1, r2, #0
     add r0, r0, r1
     mov r1, #0x80

@@ -44,10 +44,10 @@ loc_080207EE:
     mov r1, r9
     add r4, r1, r0
     add r0, r4, #0
-    .dh 0x4378 ; TODO muls r0, r7, r0
+    mul r0, r7
     add r6, r6, r0
     mov r0, r9
-    .dh 0x4378 ; TODO muls r0, r7, r0
+    mul r0, r7
     mov r9, r0
     mov r3, #0x80
     lsl r3, r3, #5

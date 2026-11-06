@@ -93,7 +93,7 @@ loc_080B1784:
     .dh 0x0000 ; gap
     .word 0x080EF450
 loc_080B1808:
-    .dh 0x43F8 ; TODO mvns r0, r7
+    mvn r0, r7
     add r1, r6, #0
     add r1, #0x24
     strb r0, [r1]

@@ -26,7 +26,7 @@ loc_0808EDEC:
     mov r6, #0
     ldrsh r1, [r0, r6]
     mov r0, #0x16
-    .dh 0x4341 ; TODO muls r1, r0, r1
+    mul r1, r0
     ldr r0, [r2]
     add r0, r0, r1
     str r0, [r4, #0x54]

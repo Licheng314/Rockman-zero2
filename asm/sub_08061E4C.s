@@ -31,7 +31,7 @@ sub_08061E4C:
     ldr r1, [pc, #0x94]
     mov r9, r1
     mov r2, r9
-    .dh 0x4342 ; TODO muls r2, r0, r2
+    mul r2, r0
     add r0, r2, #0
     ldr r1, [pc, #0x90]
     mov r8, r1
@@ -50,7 +50,7 @@ sub_08061E4C:
     add r4, r4, r2
     str r4, [sp, #4]
     mov r0, r9
-    .dh 0x4370 ; TODO muls r0, r6, r0
+    mul r0, r6
     add r0, r8
     lsl r0, r0, #1
     lsr r1, r0, #1

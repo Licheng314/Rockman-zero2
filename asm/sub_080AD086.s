@@ -63,7 +63,7 @@ loc_080AD0F6:
     ldr r1, [pc, #0x5c]
     mov r12, r1
     mov r3, r12
-    .dh 0x4343 ; TODO muls r3, r0, r3
+    mul r3, r0
     add r0, r3, #0
     ldr r1, [pc, #0x58]
     add r0, r0, r1
@@ -79,7 +79,7 @@ loc_080AD0F6:
     add r0, r6, r0
     str r0, [r7, #0x54]
     mov r0, r12
-    .dh 0x4358 ; TODO muls r0, r3, r0
+    mul r0, r3
     add r0, r0, r1
     lsl r0, r0, #1
     lsr r1, r0, #1
@@ -129,7 +129,7 @@ loc_080AD16A:
     ldr r2, [pc, #0x20]
     ldr r1, [r2]
     ldr r0, [pc, #0x20]
-    .dh 0x4348 ; TODO muls r0, r1, r0
+    mul r0, r1
     ldr r1, [pc, #0x20]
     add r0, r0, r1
     lsl r0, r0, #1

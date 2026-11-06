@@ -7,7 +7,7 @@ sub_08022F98:
     str r1, [sp]
     ldrb r1, [r0, #9]
     lsl r1, r1, #2
-    .dh 0x4469 ; TODO add r1, sp, r1
+    add r1, sp
     ldr r1, [r1]
     bl EXT_080EF118
     add sp, #4

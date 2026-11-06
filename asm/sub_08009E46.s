@@ -2,7 +2,7 @@
 .thumb
 sub_08009E46:
     ble loc_08009E54
-    .dh 0x43C8 ; TODO mvns r0, r1
+    mvn r0, r1
     b loc_08009E72
     .dh 0x03FF ; gap
     .dh 0x0000 ; gap

@@ -38,7 +38,7 @@ loc_080204D2:
 loc_080204DE:
     ldr r2, [sp, #0x10]
     add r0, r1, #0
-    .dh 0x4350 ; TODO muls r0, r2, r0
+    mul r0, r2
     add r8, r0
     mov r0, r9
     mov r1, r8

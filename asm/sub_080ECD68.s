@@ -55,20 +55,20 @@ loc_080ECDAE:
     add r0, r3, r1
     ldrb r7, [r0]
     sub r0, r2, r6
-    .dh 0x4378 ; TODO muls r0, r7, r0
+    mul r0, r7
     mov r1, #0x30
     str r2, [sp, #4]
     bl EXT_080EF2B8
     add r6, r6, r0
     ldr r2, [sp, #4]
     sub r0, r2, r5
-    .dh 0x4378 ; TODO muls r0, r7, r0
+    mul r0, r7
     mov r1, #0x30
     bl EXT_080EF2B8
     add r5, r5, r0
     ldr r2, [sp, #4]
     sub r0, r2, r4
-    .dh 0x4378 ; TODO muls r0, r7, r0
+    mul r0, r7
     mov r1, #0x30
     bl EXT_080EF2B8
     add r4, r4, r0

@@ -11,7 +11,7 @@ sub_080B1550:
     cmp r0, #0
     beq loc_080B156A
     ldrb r0, [r6, #0x10]
-    .dh 0x43C7 ; TODO mvns r7, r0
+    mvn r7, r0
     mov r0, #1
     b loc_080B156E
 loc_080B156A:
@@ -34,7 +34,7 @@ loc_080B156E:
     ldr r1, [pc, #0xac]
     mov r8, r1
     mov r2, r8
-    .dh 0x4342 ; TODO muls r2, r0, r2
+    mul r2, r0
     add r0, r2, #0
     ldr r1, [pc, #0xa4]
     mov r9, r1
@@ -50,7 +50,7 @@ loc_080B156E:
     lsl r1, r1, #2
     add r4, #0x1c
     add r1, r1, r4
-    .dh 0x43FB ; TODO mvns r3, r7
+    mvn r3, r7
     lsl r3, r3, #0x18
     lsr r3, r3, #0x18
     mov r0, sp
@@ -68,7 +68,7 @@ loc_080B156E:
     add r1, r1, r0
     ldr r0, [r5]
     mov r2, r8
-    .dh 0x4342 ; TODO muls r2, r0, r2
+    mul r2, r0
     add r0, r2, #0
     add r0, r9
     lsl r0, r0, #1
@@ -79,7 +79,7 @@ loc_080B156E:
     add r1, r1, r0
     str r1, [sp]
     mov r0, r8
-    .dh 0x4350 ; TODO muls r0, r2, r0
+    mul r0, r2
     add r0, r9
     lsl r0, r0, #1
     lsr r1, r0, #1

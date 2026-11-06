@@ -68,7 +68,7 @@ loc_0802117A:
     sub r3, r1, r0
     mov r1, #0
     add r0, r4, #0
-    .dh 0x4358 ; TODO muls r0, r3, r0
+    mul r0, r3
     cmp r0, #0
     bgt loc_0802119C
     mov r1, #1

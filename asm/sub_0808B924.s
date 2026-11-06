@@ -9,7 +9,7 @@ sub_0808B924:
     ldr r2, [pc, #0x3c]
     ldr r1, [r2]
     ldr r0, [pc, #0x3c]
-    .dh 0x4341 ; TODO muls r1, r0, r1
+    mul r1, r0
     ldr r0, [pc, #0x3c]
     add r1, r1, r0
     lsl r1, r1, #1

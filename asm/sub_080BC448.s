@@ -47,7 +47,7 @@ sub_080BC448:
     ldr r0, [r1]
     ldr r6, [pc, #0x6c]
     add r1, r0, #0
-    .dh 0x4371 ; TODO muls r1, r6, r1
+    mul r1, r6
     ldr r3, [pc, #0x6c]
     add r1, r1, r3
     lsl r1, r1, #1
@@ -63,7 +63,7 @@ sub_080BC448:
     add r0, r0, r1
     str r0, [r4, #0x54]
     mov r0, r8
-    .dh 0x4370 ; TODO muls r0, r6, r0
+    mul r0, r6
     add r0, r0, r3
     lsl r0, r0, #1
     lsr r1, r0, #1

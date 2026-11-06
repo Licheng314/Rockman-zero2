@@ -16,8 +16,8 @@
   "exact_new_extents_verified": 4300,
   "rom_sha1": "c4d93a58f0f82c526dec8a3fdbda170336303689",
   "next_work": [
-    "Re-encode proven legacy instruction fallbacks and validate against exact ROM bytes",
-    "Classify residual zero and nonzero gap rows in existing Thumb manifests",
+    "Classify old pool words and alignment bytes embedded in Thumb manifests using positive data and boundary evidence",
+    "Trace or repair remaining invalid and unclassified legacy raw halfwords",
     "Audit final full-ROM build and source classification"
   ],
   "overall_goal_achieved": false,
@@ -77,7 +77,8 @@
     "stage0-split-literals-20261106.json",
     "stage0-animation-tables-20261106.json",
     "stage0-leaf-routines-20261106.json",
-    "stage0-terminal-gaps-20261106.json"
+    "stage0-terminal-gaps-20261106.json",
+    "stage0-reencode-thumb-20261106.json"
   ],
   "residual_audit": {
     "total_lines": 5178,
@@ -128,9 +129,14 @@
     "formal_switch_entries_without_decoded_source": 0
   },
   "residual_manifest_raw_halfword_bytes": {
-    "instruction_fallback": 4172,
-    "bios_instruction": 34,
+    "instruction_fallback": 554,
+    "bios_instruction": 20,
     "zero_gap": 5064,
     "nonzero_gap": 1166
+  },
+  "legacy_thumb_reencoding": {
+    "instruction_count": 1816,
+    "byte_count": 3632,
+    "source_file_count": 707
   }
 }

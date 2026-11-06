@@ -59,7 +59,7 @@ loc_080BE592:
     ldr r5, [pc, #0x50]
     ldr r0, [r5]
     ldr r4, [pc, #0x50]
-    .dh 0x4360 ; TODO muls r0, r4, r0
+    mul r0, r4
     ldr r3, [pc, #0x50]
     add r0, r0, r3
     lsl r0, r0, #1
@@ -71,7 +71,7 @@ loc_080BE592:
     sub r1, r1, r0
     str r1, [r7, #0x5c]
     add r0, r2, #0
-    .dh 0x4360 ; TODO muls r0, r4, r0
+    mul r0, r4
     add r0, r0, r3
     lsl r0, r0, #1
     lsr r1, r0, #1

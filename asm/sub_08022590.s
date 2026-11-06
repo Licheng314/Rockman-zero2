@@ -61,7 +61,7 @@ loc_080225EA:
     ble loc_08022600
     sub r0, #1
 loc_08022600:
-    .dh 0x4341 ; TODO muls r1, r0, r1
+    mul r1, r0
     add r4, r4, r1
     mov r0, #0xed
     lsl r0, r0, #1

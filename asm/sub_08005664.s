@@ -49,7 +49,7 @@ loc_080056A2:
     mov r1, #0xa0
     bl EXT_080EF150
     ldrb r1, [r6]
-    .dh 0x4348 ; TODO muls r0, r1, r0
+    mul r0, r1
     add r4, r4, r0
     str r4, [sp, #0xc]
     ldr r0, [sp, #0x10]

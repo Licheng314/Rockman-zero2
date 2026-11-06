@@ -140,10 +140,10 @@ loc_080A7022:
     mov r8, r1
     mov r2, r9
     mov r0, r9
-    .dh 0x4350 ; TODO muls r0, r2, r0
+    mul r0, r2
     add r2, r1, #0
     mov r1, r8
-    .dh 0x4351 ; TODO muls r1, r2, r1
+    mul r1, r2
     add r0, r0, r1
     bl EXT_080EEF7C
     lsl r0, r0, #0x10
@@ -162,7 +162,7 @@ loc_080A7022:
     bl EXT_080EF150
     mov r8, r0
     mov r1, r9
-    .dh 0x4379 ; TODO muls r1, r7, r1
+    mul r1, r7
     cmp r1, #0
     bge loc_080A707C
     add r1, #0xff
@@ -173,7 +173,7 @@ loc_080A707C:
     sub r0, r0, r1
     str r0, [r5, #0x54]
     mov r1, r8
-    .dh 0x4379 ; TODO muls r1, r7, r1
+    mul r1, r7
     cmp r1, #0
     bge loc_080A7090
     add r1, #0xff

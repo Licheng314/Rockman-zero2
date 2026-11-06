@@ -54,7 +54,7 @@ loc_080BE8DA:
     ldr r0, [r1]
     ldr r5, [pc, #0x58]
     add r1, r0, #0
-    .dh 0x4369 ; TODO muls r1, r5, r1
+    mul r1, r5
     ldr r2, [pc, #0x54]
     add r1, r1, r2
     lsl r1, r1, #1
@@ -65,10 +65,10 @@ loc_080BE8DA:
     lsl r0, r6, #1
     mov r6, r8
     sub r0, r6, r0
-    .dh 0x4348 ; TODO muls r0, r1, r0
+    mul r0, r1
     str r0, [r7, #0x5c]
     add r0, r3, #0
-    .dh 0x4368 ; TODO muls r0, r5, r0
+    mul r0, r5
     add r0, r0, r2
     lsl r0, r0, #1
     lsr r1, r0, #1

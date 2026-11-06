@@ -36,7 +36,7 @@ sub_080706F8:
     mov r8, r0
     ldr r0, [r0]
     ldr r3, [pc, #0x98]
-    .dh 0x4358 ; TODO muls r0, r3, r0
+    mul r0, r3
     ldr r4, [pc, #0x98]
     add r0, r0, r4
     lsl r0, r0, #1
@@ -50,7 +50,7 @@ sub_080706F8:
     add r1, r1, r0
     str r1, [sp]
     add r0, r2, #0
-    .dh 0x4358 ; TODO muls r0, r3, r0
+    mul r0, r3
     add r0, r0, r4
     lsl r0, r0, #1
     lsr r1, r0, #1
@@ -70,7 +70,7 @@ sub_080706F8:
     mov r1, r8
     ldr r0, [r1]
     ldr r3, [sp, #8]
-    .dh 0x4358 ; TODO muls r0, r3, r0
+    mul r0, r3
     add r0, r0, r4
     lsl r0, r0, #1
     lsr r2, r0, #1
@@ -82,7 +82,7 @@ sub_080706F8:
     add r1, r1, r0
     str r1, [sp]
     add r0, r2, #0
-    .dh 0x4358 ; TODO muls r0, r3, r0
+    mul r0, r3
     add r0, r0, r4
     lsl r0, r0, #1
     lsr r1, r0, #1

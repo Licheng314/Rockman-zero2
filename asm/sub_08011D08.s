@@ -41,13 +41,13 @@ loc_08011D34:
     str r0, [r1]
     mov r4, #0x2c
     mov r0, r10
-    .dh 0x4360 ; TODO muls r0, r4, r0
+    mul r0, r4
     mov r1, #0x64
     bl EXT_080EF150
     lsl r0, r0, #0x10
     lsr r5, r0, #0x10
     mov r0, r9
-    .dh 0x4360 ; TODO muls r0, r4, r0
+    mul r0, r4
     mov r1, #0x64
     bl EXT_080EF150
     lsl r0, r0, #0x10
@@ -72,7 +72,7 @@ loc_08011D8A:
     and r0, r7
     ldr r7, [sp]
     orr r0, r7
-    .dh 0xC301 ; TODO stm r3!, {r0}
+    stmia r3!, {r0}
     sub r2, #1
     cmp r2, #0
     bne loc_08011D8A
@@ -99,7 +99,7 @@ loc_08011DBC:
     and r0, r7
     ldr r7, [sp]
     orr r0, r7
-    .dh 0xC301 ; TODO stm r3!, {r0}
+    stmia r3!, {r0}
     sub r2, #1
     cmp r2, #0
     bne loc_08011DBC
@@ -126,7 +126,7 @@ loc_08011DEE:
     and r0, r7
     ldr r7, [sp]
     orr r0, r7
-    .dh 0xC301 ; TODO stm r3!, {r0}
+    stmia r3!, {r0}
     sub r2, #1
     cmp r2, #0
     bne loc_08011DEE
@@ -151,7 +151,7 @@ loc_08011E1E:
     mov r7, r12
     and r0, r7
     orr r0, r4
-    .dh 0xC101 ; TODO stm r1!, {r0}
+    stmia r1!, {r0}
     sub r2, #1
     cmp r2, #0
     bne loc_08011E1E
@@ -173,7 +173,7 @@ loc_08011E34:
     add r3, r0, r5
     ldr r5, [pc, #0x54]
 loc_08011E52:
-    .dh 0xC302 ; TODO stm r3!, {r1}
+    stmia r3!, {r1}
     add r1, r1, r5
     add r2, #1
     cmp r2, #0x9f
@@ -196,7 +196,7 @@ loc_08011E64:
     lsl r0, r2, #2
     add r0, r8
 loc_08011E7C:
-    .dh 0xC002 ; TODO stm r0!, {r1}
+    stmia r0!, {r1}
     add r2, #1
     cmp r2, #0x9f
     ble loc_08011E7C

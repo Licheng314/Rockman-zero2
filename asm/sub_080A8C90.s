@@ -36,9 +36,9 @@ loc_080A8CB6:
     sub r0, r0, r1
     asr r7, r0, #8
     add r0, r4, #0
-    .dh 0x4360 ; TODO muls r0, r4, r0
+    mul r0, r4
     add r1, r7, #0
-    .dh 0x4379 ; TODO muls r1, r7, r1
+    mul r1, r7
     add r0, r0, r1
     bl EXT_080EEF7C
     lsl r0, r0, #0x10

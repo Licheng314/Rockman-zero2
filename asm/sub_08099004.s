@@ -30,7 +30,7 @@ sub_08099004:
     lsl r1, r1, #5
     mov r3, r12
     ldr r2, [r3, #0x5c]
-    .dh 0x434A ; TODO muls r2, r1, r2
+    mul r2, r1
     add r4, r0, #0
     cmp r2, #0
     bge loc_08099048
@@ -47,7 +47,7 @@ loc_0809904C:
     lsl r0, r0, #5
     mov r3, r12
     ldr r1, [r3, #0x5c]
-    .dh 0x4348 ; TODO muls r0, r1, r0
+    mul r0, r1
     add r4, r2, #0
     cmp r0, #0
     bge loc_08099066
@@ -64,7 +64,7 @@ loc_08099068:
     ldr r3, [pc, #0x5c]
     ldr r1, [r3]
     ldr r0, [pc, #0x5c]
-    .dh 0x4348 ; TODO muls r0, r1, r0
+    mul r0, r1
     ldr r1, [pc, #0x5c]
     add r0, r0, r1
     lsl r0, r0, #1

@@ -93,7 +93,7 @@ loc_0803CBB4:
     mov r3, #0
     ldrsh r0, [r0, r3]
     add r3, r0, #0
-    .dh 0x4373 ; TODO muls r3, r6, r3
+    mul r3, r6
     ldr r0, [r5, #0x54]
     add r0, r0, r3
     str r0, [r5, #0x54]

@@ -27,7 +27,7 @@ sub_080B6B90:
     ldr r6, [pc, #0x90]
     ldr r0, [r6]
     ldr r5, [pc, #0x90]
-    .dh 0x4368 ; TODO muls r0, r5, r0
+    mul r0, r5
     ldr r3, [pc, #0x90]
     add r0, r0, r3
     lsl r0, r0, #1
@@ -39,7 +39,7 @@ sub_080B6B90:
     sub r1, r1, r0
     str r1, [r4, #0x5c]
     add r0, r2, #0
-    .dh 0x4368 ; TODO muls r0, r5, r0
+    mul r0, r5
     add r0, r0, r3
     lsl r0, r0, #1
     lsr r1, r0, #1

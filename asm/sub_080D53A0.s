@@ -32,9 +32,9 @@ sub_080D53A0:
     cmp r0, r1
     bhi loc_080D53F0
     add r0, r3, #0
-    .dh 0x4358 ; TODO muls r0, r3, r0
+    mul r0, r3
     add r1, r2, #0
-    .dh 0x4351 ; TODO muls r1, r2, r1
+    mul r1, r2
     add r0, r0, r1
     mov r1, #0xc8
     lsl r1, r1, #0x13

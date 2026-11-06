@@ -33,7 +33,7 @@ sub_0803F630:
     mov r1, #0xf
     bl EXT_08012CA4
     ldr r0, [r6, #0x5c]
-    .dh 0x43C0 ; TODO mvns r0, r0
+    mvn r0, r0
     lsr r2, r0, #0x1f
     cmp r2, #0
     beq loc_0803F688

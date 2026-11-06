@@ -58,7 +58,7 @@ loc_0808D28A:
     add r0, r0, r1
     str r0, [r4, #0x54]
     mov r0, #0xe6
-    .dh 0x4348 ; TODO muls r0, r1, r0
+    mul r0, r1
     cmp r0, #0
     bge loc_0808D29C
     add r0, #0xff

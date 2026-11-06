@@ -151,7 +151,7 @@ loc_080255D6:
 loc_080255E0:
     mov r2, #0
 loc_080255E2:
-    .dh 0x4372 ; TODO muls r2, r6, r2
+    mul r2, r6
     ldr r1, [r5, #0x5c]
     lsl r3, r6, #5
     add r0, r5, #0

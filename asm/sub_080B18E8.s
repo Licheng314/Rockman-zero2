@@ -56,7 +56,7 @@ loc_080B190E:
     ldr r0, [r6]
     ldr r4, [pc, #0x44]
     add r1, r0, #0
-    .dh 0x4361 ; TODO muls r1, r4, r1
+    mul r1, r4
     ldr r2, [pc, #0x40]
     add r1, r1, r2
     lsl r1, r1, #1
@@ -70,10 +70,10 @@ loc_080B190E:
     ldrb r0, [r7, #0x11]
     lsl r0, r0, #1
     sub r0, #1
-    .dh 0x4348 ; TODO muls r0, r1, r0
+    mul r0, r1
     str r0, [r7, #0x5c]
     add r0, r5, #0
-    .dh 0x4360 ; TODO muls r0, r4, r0
+    mul r0, r4
     add r0, r0, r2
     lsl r0, r0, #1
     lsr r1, r0, #1

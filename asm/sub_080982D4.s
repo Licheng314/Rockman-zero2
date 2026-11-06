@@ -27,7 +27,7 @@ loc_08098302:
     lsl r0, r3, #0x10
     asr r0, r0, #0x10
     add r2, r0, #0
-    .dh 0x437A ; TODO muls r2, r7, r2
+    mul r2, r7
     add r2, r2, r5
     ldrb r1, [r6]
     add r1, r1, r3

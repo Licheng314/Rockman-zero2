@@ -22,7 +22,7 @@ sub_080B8410:
     ldr r4, [pc, #0x4c]
     ldr r3, [r4]
     ldr r1, [pc, #0x4c]
-    .dh 0x4359 ; TODO muls r1, r3, r1
+    mul r1, r3
     ldr r3, [pc, #0x4c]
     add r1, r1, r3
     lsl r1, r1, #1

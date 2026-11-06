@@ -124,7 +124,7 @@ loc_08073000:
     mov r1, #0
     ldrsb r1, [r5, r1]
     ldr r0, [r4, #0x5c]
-    .dh 0x4348 ; TODO muls r0, r1, r0
+    mul r0, r1
     ldr r1, [r4, #0x54]
     add r1, r1, r0
     str r1, [r4, #0x54]

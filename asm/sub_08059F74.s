@@ -123,7 +123,7 @@ loc_0805A05C:
     b loc_0805A078
 loc_0805A060:
     mov r0, #0xe8
-    .dh 0x4350 ; TODO muls r0, r2, r0
+    mul r0, r2
     cmp r0, #0
     bge loc_0805A06A
     add r0, #0xff

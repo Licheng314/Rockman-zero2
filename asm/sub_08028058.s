@@ -50,7 +50,7 @@ loc_0802809C:
     asr r0, r0, #0x18
     cmp r0, #0
     beq loc_080280E6
-    .dh 0x43C0 ; TODO mvns r0, r0
+    mvn r0, r0
     lsr r0, r0, #0x1f
     ldrb r1, [r4, #0xa]
     lsr r1, r1, #4

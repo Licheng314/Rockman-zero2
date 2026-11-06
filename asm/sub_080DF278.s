@@ -17,7 +17,7 @@ sub_080DF278:
     mov r2, #0
     ldrsh r1, [r0, r2]
     mov r0, #0xb0
-    .dh 0x4348 ; TODO muls r0, r1, r0
+    mul r0, r1
     asr r0, r0, #8
     add r0, #0x37
     lsl r0, r0, #0xd

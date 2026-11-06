@@ -57,7 +57,7 @@ loc_08021F2C:
     ble loc_08021F48
     sub r3, #1
 loc_08021F48:
-    .dh 0x4353 ; TODO muls r3, r2, r3
+    mul r3, r2
     add r3, r3, r5
     mov r1, r10
     ldr r0, [r1]
@@ -66,7 +66,7 @@ loc_08021F48:
     beq loc_08021F60
     cmp r0, #0
     beq loc_08021F6C
-    .dh 0x4350 ; TODO muls r0, r2, r0
+    mul r0, r2
     cmp r0, #0
     ble loc_08021F96
 loc_08021F60:
@@ -82,7 +82,7 @@ loc_08021F6C:
     ldr r1, [r0, #4]
     sub r3, r1, r3
     add r2, r3, #0
-    .dh 0x435A ; TODO muls r2, r3, r2
+    mul r2, r3
     add r3, r2, #0
     lsl r0, r4, #1
     add r0, r0, r4
@@ -92,7 +92,7 @@ loc_08021F6C:
     add r2, r0, #1
     sub r2, r1, r2
     add r0, r2, #0
-    .dh 0x4350 ; TODO muls r0, r2, r0
+    mul r0, r2
     add r2, r0, #0
     cmp r3, r2
     bge loc_08021F96

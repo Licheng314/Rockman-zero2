@@ -23,7 +23,7 @@ loc_080DA418:
 loc_080DA41A:
     ldr r1, [r0, #0x10]
     lsl r0, r5, #9
-    .dh 0x4350 ; TODO muls r0, r2, r0
+    mul r0, r2
     add r1, r1, r0
     str r1, [r4, #0x54]
     ldrb r0, [r3, #1]

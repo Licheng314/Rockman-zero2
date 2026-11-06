@@ -15,12 +15,12 @@ sub_080E1DF8:
     add r4, sp, #0x14
     add r1, r4, #0
     ldr r0, [pc, #0x34]
-    .dh 0xC82C ; TODO ldm r0!, {r2, r3, r5}
-    .dh 0xC12C ; TODO stm r1!, {r2, r3, r5}
-    .dh 0xC82C ; TODO ldm r0!, {r2, r3, r5}
-    .dh 0xC12C ; TODO stm r1!, {r2, r3, r5}
-    .dh 0xC82C ; TODO ldm r0!, {r2, r3, r5}
-    .dh 0xC12C ; TODO stm r1!, {r2, r3, r5}
+    ldmia r0!, {r2, r3, r5}
+    stmia r1!, {r2, r3, r5}
+    ldmia r0!, {r2, r3, r5}
+    stmia r1!, {r2, r3, r5}
+    ldmia r0!, {r2, r3, r5}
+    stmia r1!, {r2, r3, r5}
     ldr r0, [r0]
     str r0, [r1]
     add r0, r7, #0

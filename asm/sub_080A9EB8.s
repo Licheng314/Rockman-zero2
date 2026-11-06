@@ -39,7 +39,7 @@ loc_080A9EE4:
     mov r6, #0
     ldrsh r2, [r0, r6]
     mov r0, #0x16
-    .dh 0x4342 ; TODO muls r2, r0, r2
+    mul r2, r0
     ldr r0, [r5, #0x54]
     add r0, r0, r2
     ldr r2, [pc, #0x2c]

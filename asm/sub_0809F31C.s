@@ -72,7 +72,7 @@ loc_0809F376:
     add r1, r4, #0
     add r1, #0xc0
     ldr r0, [r1]
-    .dh 0x4342 ; TODO muls r2, r0, r2
+    mul r2, r0
     add r5, r3, #0
     add r6, r1, #0
     cmp r2, #0
@@ -89,7 +89,7 @@ loc_0809F3B4:
     mov r2, #0
     ldrsh r1, [r0, r2]
     ldr r0, [r6]
-    .dh 0x4341 ; TODO muls r1, r0, r1
+    mul r1, r0
     cmp r1, #0
     bge loc_0809F3D0
     add r1, #0xff

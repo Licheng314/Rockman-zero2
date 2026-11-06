@@ -19,7 +19,7 @@ sub_080069C0:
     bl EXT_080EF150
     ldr r2, [r6, #0xc]
     ldrb r1, [r2]
-    .dh 0x4348 ; TODO muls r0, r1, r0
+    mul r0, r1
     add r0, r0, r5
     add r0, r0, r2
     ldrb r5, [r0, #4]
@@ -35,7 +35,7 @@ sub_080069C0:
     lsl r1, r0, #4
     sub r1, r1, r0
     mov r0, #0x96
-    .dh 0x4368 ; TODO muls r0, r5, r0
+    mul r0, r5
     add r0, r0, r4
     add r1, r1, r0
     ldr r0, [r6, #8]

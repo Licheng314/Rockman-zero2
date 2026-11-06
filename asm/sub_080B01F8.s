@@ -108,7 +108,7 @@ loc_080B02C0:
     mov r7, r10
     asr r4, r7, #0x10
     add r0, r6, #0
-    .dh 0x4360 ; TODO muls r0, r4, r0
+    mul r0, r4
     add r0, r2, r0
     ldr r1, [sp, #0x24]
     add r0, r0, r1

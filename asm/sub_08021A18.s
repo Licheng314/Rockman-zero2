@@ -37,7 +37,7 @@ loc_08021A42:
     mov r1, #1
 loc_08021A5A:
     add r0, r5, #0
-    .dh 0x4348 ; TODO muls r0, r1, r0
+    mul r0, r1
     cmp r0, #0
     bge loc_08021A7C
     add r0, r6, r5

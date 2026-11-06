@@ -51,7 +51,7 @@ sub_080AC238:
     mov r3, #0
     ldrsh r0, [r0, r3]
     mov r3, r8
-    .dh 0x4343 ; TODO muls r3, r0, r3
+    mul r3, r0
     add r0, r3, #0
     cmp r0, #0
     bge loc_080AC2A8
@@ -67,7 +67,7 @@ loc_080AC2A8:
     mov r1, #0
     ldrsh r0, [r0, r1]
     mov r3, r8
-    .dh 0x4343 ; TODO muls r3, r0, r3
+    mul r3, r0
     add r0, r3, #0
     cmp r0, #0
     bge loc_080AC2C6

@@ -82,7 +82,7 @@ loc_080885F2:
     ldr r0, [r5]
     ldr r2, [pc, #0x104]
     add r1, r0, #0
-    .dh 0x4351 ; TODO muls r1, r2, r1
+    mul r1, r2
     ldr r0, [pc, #0x100]
     mov r9, r0
     add r1, r9
@@ -112,7 +112,7 @@ loc_080885F2:
     ldr r0, [r5]
     ldr r2, [pc, #0xc4]
     add r1, r0, #0
-    .dh 0x4351 ; TODO muls r1, r2, r1
+    mul r1, r2
     add r1, r9
     lsl r1, r1, #1
     lsr r0, r1, #1
@@ -133,7 +133,7 @@ loc_080885F2:
     str r0, [sp]
     ldr r0, [r5]
     ldr r1, [pc, #0x98]
-    .dh 0x4348 ; TODO muls r0, r1, r0
+    mul r0, r1
     add r0, r9
     lsl r0, r0, #1
     lsr r1, r0, #1
@@ -157,7 +157,7 @@ loc_080885F2:
     ldr r0, [r5]
     ldr r2, [pc, #0x68]
     add r1, r0, #0
-    .dh 0x4351 ; TODO muls r1, r2, r1
+    mul r1, r2
     add r1, r9
     lsl r1, r1, #1
     lsr r0, r1, #1
@@ -181,7 +181,7 @@ loc_080885F2:
     str r0, [sp]
     ldr r0, [r5]
     ldr r1, [pc, #0x34]
-    .dh 0x4348 ; TODO muls r0, r1, r0
+    mul r0, r1
     add r0, r9
     lsl r0, r0, #1
     lsr r1, r0, #1
@@ -217,7 +217,7 @@ loc_0808871C:
     ldr r0, [r6]
     ldr r2, [pc, #0x11c]
     add r1, r0, #0
-    .dh 0x4351 ; TODO muls r1, r2, r1
+    mul r1, r2
     ldr r0, [pc, #0x11c]
     mov r9, r0
     add r1, r9
@@ -248,7 +248,7 @@ loc_0808871C:
     ldr r0, [r6]
     ldr r2, [pc, #0xdc]
     add r1, r0, #0
-    .dh 0x4351 ; TODO muls r1, r2, r1
+    mul r1, r2
     add r1, r9
     lsl r1, r1, #1
     lsr r0, r1, #1
@@ -273,7 +273,7 @@ loc_0808871C:
     str r0, [sp]
     ldr r0, [r6]
     ldr r1, [pc, #0xa8]
-    .dh 0x4348 ; TODO muls r0, r1, r0
+    mul r0, r1
     add r0, r9
     lsl r0, r0, #1
     lsr r1, r0, #1
@@ -297,7 +297,7 @@ loc_0808871C:
     ldr r0, [r6]
     ldr r2, [pc, #0x78]
     add r1, r0, #0
-    .dh 0x4351 ; TODO muls r1, r2, r1
+    mul r1, r2
     add r1, r9
     lsl r1, r1, #1
     lsr r0, r1, #1
@@ -321,7 +321,7 @@ loc_0808871C:
     str r0, [sp]
     ldr r0, [r6]
     ldr r1, [pc, #0x44]
-    .dh 0x4348 ; TODO muls r0, r1, r0
+    mul r0, r1
     add r0, r9
     lsl r0, r0, #1
     lsr r1, r0, #1

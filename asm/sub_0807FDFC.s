@@ -20,7 +20,7 @@ loc_0807FE1C:
     ldr r2, [pc, #0x38]
     ldr r1, [r2]
     ldr r0, [pc, #0x38]
-    .dh 0x4341 ; TODO muls r1, r0, r1
+    mul r1, r0
     ldr r0, [pc, #0x38]
     add r1, r1, r0
     lsl r1, r1, #1
@@ -33,7 +33,7 @@ loc_0807FE1C:
     lsl r2, r2, #1
     mov r0, #1
     sub r0, r0, r2
-    .dh 0x4348 ; TODO muls r0, r1, r0
+    mul r0, r1
     str r0, [r4, #0x5c]
     ldr r0, [pc, #0x20]
     str r0, [r4, #0x60]
@@ -53,7 +53,7 @@ loc_0807FE68:
     ldr r2, [pc, #0xc0]
     ldr r1, [r2]
     ldr r0, [pc, #0xc0]
-    .dh 0x4341 ; TODO muls r1, r0, r1
+    mul r1, r0
     ldr r0, [pc, #0xc0]
     add r1, r1, r0
     lsl r1, r1, #1
@@ -66,7 +66,7 @@ loc_0807FE68:
     lsl r2, r2, #1
     mov r0, #1
     sub r0, r0, r2
-    .dh 0x4348 ; TODO muls r0, r1, r0
+    mul r0, r1
     str r0, [r4, #0x5c]
     ldr r0, [pc, #0xa8]
     str r0, [r4, #0x60]

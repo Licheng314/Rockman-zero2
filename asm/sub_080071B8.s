@@ -45,7 +45,7 @@ loc_08007208:
     add r0, #0x37
     ldrb r0, [r0]
     add r5, r0, #0
-    .dh 0x434D ; TODO muls r5, r1, r5
+    mul r5, r1
     asr r2, r5, #2
     ldrb r0, [r3, #2]
     cmp r0, #1

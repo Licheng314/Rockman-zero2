@@ -77,7 +77,7 @@ loc_0806F86E:
     add r5, #0xb7
     mov r1, #0
     ldrsb r1, [r5, r1]
-    .dh 0x4348 ; TODO muls r0, r1, r0
+    mul r0, r1
     str r0, [r6, #0x5c]
     ldrb r0, [r6, #0x12]
     ldrb r1, [r4]

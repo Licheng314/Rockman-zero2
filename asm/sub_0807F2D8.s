@@ -15,7 +15,7 @@ sub_0807F2D8:
     ldr r2, [pc, #0x78]
     ldr r1, [r2]
     ldr r0, [pc, #0x78]
-    .dh 0x4341 ; TODO muls r1, r0, r1
+    mul r1, r0
     ldr r0, [pc, #0x78]
     add r1, r1, r0
     lsl r1, r1, #1
@@ -28,7 +28,7 @@ sub_0807F2D8:
     ldrb r0, [r4, #0x11]
     lsl r0, r0, #1
     sub r0, #1
-    .dh 0x4348 ; TODO muls r0, r1, r0
+    mul r0, r1
     add r0, #0xc0
     lsl r0, r0, #0x18
     lsr r0, r0, #0x18

@@ -21,7 +21,7 @@ sub_0806AF9C:
     ldr r2, [pc, #0x1c]
     ldr r1, [r2]
     ldr r0, [pc, #0x1c]
-    .dh 0x4348 ; TODO muls r0, r1, r0
+    mul r0, r1
     ldr r1, [pc, #0x1c]
     add r0, r0, r1
     lsl r0, r0, #1
@@ -39,7 +39,7 @@ loc_0806AFEC:
     ldr r2, [pc, #0xd4]
     ldr r1, [r2]
     ldr r0, [pc, #0xd4]
-    .dh 0x4348 ; TODO muls r0, r1, r0
+    mul r0, r1
     ldr r1, [pc, #0xd4]
     add r0, r0, r1
     lsl r0, r0, #1
@@ -47,12 +47,12 @@ loc_0806AFEC:
     str r1, [r2]
     lsl r0, r0, #6
     lsr r0, r0, #0x17
-    .dh 0x43C0 ; TODO mvns r0, r0
+    mvn r0, r0
 loc_0806B004:
     str r0, [r6, #0x5c]
     ldr r1, [r2]
     ldr r0, [pc, #0xbc]
-    .dh 0x4341 ; TODO muls r1, r0, r1
+    mul r1, r0
     ldr r0, [pc, #0xbc]
     add r1, r1, r0
     lsl r1, r1, #1

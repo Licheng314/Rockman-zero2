@@ -316,7 +316,7 @@ loc_080EE882:
     ldrb r2, [r4, #0xc]
     ldrb r1, [r4, #0xa]
     add r0, r2, #0
-    .dh 0x4348 ; TODO muls r0, r1, r0
+    mul r0, r1
     add r0, #0xff
     asr r0, r0, #8
     mov r1, #0

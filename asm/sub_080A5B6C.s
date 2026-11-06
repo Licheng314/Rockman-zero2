@@ -36,7 +36,7 @@ loc_080A5B94:
     mov r6, #0
     ldrsh r1, [r0, r6]
     ldrb r0, [r5, #0x13]
-    .dh 0x4341 ; TODO muls r1, r0, r1
+    mul r1, r0
     ldr r0, [r5, #0x54]
     add r0, r0, r1
     str r0, [r4, #0x54]
@@ -67,7 +67,7 @@ loc_080A5BD8:
     mov r6, #0
     ldrsh r1, [r0, r6]
     ldrb r0, [r5, #0x13]
-    .dh 0x4341 ; TODO muls r1, r0, r1
+    mul r1, r0
     ldr r0, [r5, #0x54]
     add r0, r0, r1
     str r0, [r4, #0x54]
@@ -80,7 +80,7 @@ loc_080A5BD8:
     mov r2, #0
     ldrsh r1, [r0, r2]
     ldrb r0, [r5, #0x13]
-    .dh 0x4341 ; TODO muls r1, r0, r1
+    mul r1, r0
 loc_080A5C0E:
     ldr r0, [r5, #0x58]
     add r0, r0, r1

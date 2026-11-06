@@ -87,7 +87,7 @@ loc_0800682C:
     mov r0, r10
     ldrh r3, [r0]
     add r0, r3, #0
-    .dh 0x4370 ; TODO muls r0, r6, r0
+    mul r0, r6
     lsl r0, r0, #1
     add r4, r1, r0
     mov r0, #0xf
@@ -145,7 +145,7 @@ loc_0800689C:
     mov r7, r10
     ldrh r0, [r7]
     ldr r2, [sp, #0xc]
-    .dh 0x4350 ; TODO muls r0, r2, r0
+    mul r0, r2
     lsl r0, r0, #1
     add r4, r1, r0
     mov r0, #0xf

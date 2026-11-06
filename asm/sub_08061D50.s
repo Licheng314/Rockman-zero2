@@ -57,7 +57,7 @@ sub_08061D50:
     str r1, [r3]
     ldrb r2, [r7, #0x10]
     mov r0, #0xbc
-    .dh 0x4350 ; TODO muls r0, r2, r0
+    mul r0, r2
     lsl r0, r0, #8
     add r1, r1, r0
     str r1, [r3]

@@ -108,7 +108,7 @@ loc_0804F6D8:
 loc_0804F6E0:
     ldr r1, [r7]
     ldr r0, [pc, #0x2c]
-    .dh 0x4348 ; TODO muls r0, r1, r0
+    mul r0, r1
     ldr r1, [pc, #0x2c]
     add r0, r0, r1
     lsl r0, r0, #1

@@ -10,7 +10,7 @@ sub_08009FC4:
     cmp r1, r0
     bge loc_08009FDC
 loc_08009FD4:
-    .dh 0x43C8 ; TODO mvns r0, r1
+    mvn r0, r1
     b loc_08009FDE
     .word 0x000003FF
 loc_08009FDC:

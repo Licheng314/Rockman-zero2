@@ -55,7 +55,7 @@ loc_080BB716:
     str r0, [r5, #0x58]
     ldr r1, [r6, #0x5c]
     mov r0, #0x64
-    .dh 0x4348 ; TODO muls r0, r1, r0
+    mul r0, r1
     cmp r0, #0
     bge loc_080BB746
     add r0, #0xff
