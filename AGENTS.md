@@ -2,7 +2,7 @@
 
 Read docs/HANDOVER.md and docs/CONTINUE.md before changing this project.
 
-Use this checkout as the sole working repository, connected to Licheng314/Rockman-zero2. Legacy Git metadata and migration evidence live only in ignored build/migration-20261101; do not recreate or resume the retired rmz2 checkout.
+This checkout holds original-ROM research on main, connected to Licheng314/Rockman-zero2. The mod/air-actions branch uses a separate checkout and keeps modification sources under mod/. Keep research and modification development in their respective checkouts. Legacy Git metadata and migration evidence live only in ignored build/migration-20261101; do not recreate or resume the retired rmz2 checkout.
 
 - Preserve all existing research and uncommitted changes.
 - Use continue.ps1 Status / Verify / Start / Stop for normal operation.

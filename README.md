@@ -12,15 +12,18 @@
 
 首次公开为当前整理后的工程快照。2026-11-01已将本机工作与发布目录合并为一个工作目录，直接连接本仓库；旧Git历史封存在本机被忽略的build/migration-20261101内，不上传历史重复稿及本机运行记录。本仓库不附带游戏ROM、存档、构建结果或工具链二进制。
 
-## Start here / 避免重复工作
+## 开发入口
 
-- [当前交接](docs/HANDOVER.md)：已验证结果与工程规则。
-- [有限语义路线](docs/SEMANTIC-ROADMAP.md)：主人公基础→四武器与能力→局部贴图；每阶段有范围上限和验收条件。
-- [游戏信息与改版目标](docs/GAME-CONTEXT.md)：用户需求、玩法参考和待核对项。
-- [分区进度及每部分完成边界](docs/PROGRESS-MAP.md)。
-- [已有研究目录](docs/semantic-modules.md)：先查已做工作再开新调查。
-- [审计与取舍](docs/ZCODE-AUDIT.md)：撤回的推断和可复用证据。
-- [当前工作包](docs/AI_WORK.md)、[操作入口](docs/CONTINUE.md)。
+- [开发目标与验收路线](docs/SEMANTIC-ROADMAP.md)定义各阶段范围和验收标准。
+- [阶段 2 验收](docs/STAGE2-WEAPON-RESEARCH.md)记录武器、属性、恢复与存档的原版对照。
+- [工程交接](docs/HANDOVER.md)记录当前状态、操作入口和既有证据索引。
+- [原版研究复跑入口](research/README.md)提供阶段 1、2 的模拟器检查脚本。
+
+## 原版研究与改版
+
+`main` 保存原版重建源码、研究文档和验证工具。主人公空中冲刺、锁链枪滞留和身体接触伤害调整位于独立的 [mod/air-actions 分支](https://github.com/Licheng314/Rockman-zero2/tree/mod/air-actions)。改版说明、构建入口和 IPS 补丁在该分支的 `mod/` 目录，下载见 [Releases](https://github.com/Licheng314/Rockman-zero2/releases)。
+
+全游戏语义和全部 C 还原仍有大量工作。欢迎先查报告及证据，再提交明确的函数或字段补证。
 
 ## Rebuild / 构建
 

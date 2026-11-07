@@ -2,7 +2,9 @@
 
 2026-11-01，按项目所有者要求，将原rmz2的必要内容迁入已连接GitHub的目录，结束工作副本与发布副本分离的做法。
 
-唯一工作目录：`D:\NewStudio\Decompilation\public-release-clean-20261101`。
+原版研究工作目录：`D:\NewStudio\Decompilation\public-release-clean-20261101`，使用 `main` 分支。
+
+改版使用同一 GitHub 仓库的 `mod/air-actions` 分支，本机独立目录为 `D:\NewStudio\Decompilation\Rockman-zero2-mod`。改版源码、工具和补丁集中放在该分支的 `mod/` 目录。旧 `build/air-actions` 保留为本机历史实验，当前改版入口以独立目录为准。
 
 GitHub：[Licheng314/Rockman-zero2](https://github.com/Licheng314/Rockman-zero2)，分支main。日常修改、构建、提交与推送都在当前目录完成，不再从旧目录另做发布快照。
 

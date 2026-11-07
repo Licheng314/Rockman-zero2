@@ -10,6 +10,7 @@
 重组: tools/bin/armips.exe build.asm  → build/rmz2.gba 应与基线 SHA1 一致
 """
 import glob
+from bisect import bisect_right
 import hashlib
 import json
 import os
@@ -52,8 +53,15 @@ for s in segs:
     bounds.add(s["start"])
     bounds.add(s["end"])
 # A fixed ROM chunk boundary inside a source segment must not split its include.
-bounds = sorted(b for b in bounds if 0 <= b <= len(data)
-                and not any(s["start"] < b < s["end"] for s in segs))
+starts = [segment['start'] for segment in segs]
+valid_bounds = []
+for boundary in sorted(bounds):
+    index = bisect_right(starts, boundary) - 1
+    inside_segment = (index >= 0 and
+                      segs[index]['start'] < boundary < segs[index]['end'])
+    if 0 <= boundary <= len(data) and not inside_segment:
+        valid_bounds.append(boundary)
+bounds = valid_bounds
 
 lines = ["; 自动生成 by tools/split.py — 勿手改", ".gba",
          '.create "build/rmz2.gba", 0x08000000',

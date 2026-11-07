@@ -2,7 +2,7 @@
 
 > 2026-11-01现役状态见[HANDOVER](HANDOVER.md)和[成果收拢](ZCODE-AUDIT.md)。旧移交及自动队列快照仅为历史，不据此盲目启动。
 
-唯一工作目录：`D:\NewStudio\Decompilation\public-release-clean-20261101`，直接连接GitHub的Rockman-zero2。先读 `docs/HANDOVER.md` 的最新快照。旧rmz2目录已迁移，不要在旧路径启动任务。
+原版研究目录：`D:\NewStudio\Decompilation\public-release-clean-20261101`，使用 GitHub Rockman-zero2 的 `main` 分支。改版使用 `mod/air-actions` 分支及独立本机目录，见 WORKSPACE.md。先读 `docs/HANDOVER.md` 的最新快照。旧 rmz2 目录已退役。
 
 ## 常用操作（PowerShell，在项目目录执行）
 

@@ -1,38 +1,23 @@
 # 洛克人Zero2反编译工程：当前交接入口
 
-更新：阶段0已纳入静态表入口、ARM 声音代码和有界字体数据。先读[AGENTS](../AGENTS.md)，操作见[CONTINUE](CONTINUE.md)，ZCode成果取舍见[成果收拢](ZCODE-AUDIT.md)。历史ZCode逐轮报告不再充当现役状态快照。
+当前从[开发目标与验收路线](SEMANTIC-ROADMAP.md)接手。阶段 1 和阶段 2 已通过范围内验收。工作区与操作见[CONTINUE](CONTINUE.md)，规则见[AGENTS](../AGENTS.md)。
 
 ## 当前可核验状态
 
 - 正式地址覆盖 **983040字节 / 主代码区983040字节 = 100%**。没有重叠；包含已标注数据段，不是纯指令、C或语义完成率。现役段数以 `tools/segments.json` 为准。
 - 阶段 0 已通过。地址空洞、待查原始标记及已知的常量与指令冲突均为 0。详见[阶段0记录](ASSEMBLY-CLOSEOUT.md)。
 - C已集成 **35个**（不变）。
-- 完整重建已在 2026-11-06 实际通过：8MiB ROM，SHA1 c4d93a58f0f82c526dec8a3fdbda170336303689，逐段实际输出终点断言通过。
+- 完整重建已在 2026-11-07 实际通过：8MiB ROM，SHA1 c4d93a58f0f82c526dec8a3fdbda170336303689，逐段实际输出终点断言通过。
 - 自动队列最后状态：expanded / candidates_exhausted，2026-10-29 22:08:56 +08:00结束；其后所有写入均走 project_guard 单写入锁事务。不盲目重跑耗尽队列，不安装定时AI任务。
 - 语义目录沿用21个研究单元的组织方式；这不是全项目模块总数，没有可信语义完成百分比。
+- 阶段 1 移动线已用原版实测输入映射、平地走路、普通起跳及地面冲刺，记录关键字段、动作入口、空中输入对照和两个地形边界的冲刺退出时序。见[阶段 1 移动结果](STAGE1-CODEX-MOVEMENT-RESULT.md)。
+- 阶段 1 生命线已用原版复测实际扣血、生命镜像同步、受击保护计数和一条自然回血。参数对照确认普通起跳初速度、受击保护初值均可修改并恢复。见[生命线报告](STAGE1-ZCODE-HEALTH-RESULT.md)及[阶段 1 验收](STAGE1-ACCEPTANCE.md)。
+- 阶段 2 验收包含四武器八个攻击样本、属性菜单与同目标抗性对照、一项枪 EX、Grandie、储量槽及八个选中存档字节。攻击、能力使能和恢复参数三个改动样本已复跑。按原版画面复核，武器编号 2 是锁链枪，编号 3 是回旋盾。蓄力锁链枪使用动作重入测试，属性伤害差异使用受控抗性。见[阶段 2 武器研究与验收](STAGE2-WEAPON-RESEARCH.md)。
 
-## 本次保留、修复与舍弃（2026-11-03 夜间）
+## 研究证据与历史
 
-- 新增 17520 字节正式覆盖：实体状态机守卫（`cmp; bls; bl halt`）补解、392+199+12 个分派表目标、52 个两级生命周期链目标、19+ 若干回调指针入口、674+6452+552 字节逐块证明数据、3149 处对齐填充、12 个段内补解目标。全部证据 JSON 见 `docs/semantic-data/stage0-*-20261103*.json`。
-- 新工具：`stage0_ledger.py`（全空洞账本，对账983040）、`stage0_dispatch_tables.py`（0x080333B0 家族 + 五个 bx 蹦床）、`stage0_two_level.py`（两级表链）、`stage0_integrate_data.py`（逐块证明数据/对齐集成）。
-- 未把任何无引用字节包装成代码：0x080ECF10 的 CpuSet 填充值链、0x080EF12A 无调用者蹦床家族、0x080EFA2C 混合区、0x080ED07E ARM 区等全部保持待确认。
-- 残余原始半字审计：代码段内 5178 行 / 约 10356 字节保留为 `.dh`；`stage0_decode_existing.py` 在当前可达控制流下 0 可证明补解。
-- 历史保留项不变：提取边界修复、五个C集成、严格extent门禁、14份重写稿与29份降级候选的处理。
-
-## 阶段 0 历史检查点
-
-2026-11-03 夜间：从 961736 字节推进到 979256 字节（85 空洞 / 3784 字节未覆盖），全部批次走事务 + 逐段终点断言 + 完整 ROM SHA1 门禁。独立验收发现漏扫的静态表入口；详细批次表、关键证据发现与下一步假设见[阶段0现状与下一步](ASSEMBLY-CLOSEOUT.md)。
-
-## 现役研究与接续
-
-- [有限语义路线](SEMANTIC-ROADMAP.md)：主人公基础→四武器与能力→局部贴图，按样本验收，不追求全游戏语义穷尽。
-- [游戏背景与改版需求](GAME-CONTEXT.md)：玩家提供的信息、外部玩法参考及待核对项。
-- [分区进度与完成上限](PROGRESS-MAP.md)：逐地址块总量、剩余量，以及每个研究入口的验收边界；不以覆盖率代替语义完成率。
-- [语义目录](semantic-modules.md)：已有研究入口与验证层级。
-- [类型作用域](semantic-entity-type-scope.md)：对象身份必须含池句柄、类型表和类型字节。
-- [图像链审计](semantic-render-pipeline-audit.md)：实际传输行为与未闭合像素还原。
-- [AI工作清单](AI_WORK.md)：只保留当前工作包，不重复追已完成函数。
-- [逐文件取舍](semantic-data/zcode-audit-decisions.json)：旧结论退役与候选边界。
+- [已有语义研究索引](semantic-modules.md)汇集可复用的报告。游戏背景见[需求记录](GAME-CONTEXT.md)，按地址分区的资料见[分区进度](PROGRESS-MAP.md)。
+- 阶段 0 的过程和验收证据见[汇编收尾](ASSEMBLY-CLOSEOUT.md)。夜间批次和候选取舍见[Z Code 审计](ZCODE-AUDIT.md)及[逐文件记录](semantic-data/zcode-audit-decisions.json)。
 
 ## 不可破坏的工程约定
 
@@ -40,8 +25,10 @@
 
 本次证据/原文备份：build/audit-20261101，既有Git历史完整保留。较早经过与编译器活档可查Git中的历史HANDOVER及[研究记录](research-notes.md)，不再把历史快照复制到当前首页。
 
-## 唯一工作目录与GitHub
+## 原版研究目录与GitHub
 
 2026-11-01已将工作资料迁到 `D:\NewStudio\Decompilation\public-release-clean-20261101`，此目录直接连接[GitHub仓库](https://github.com/Licheng314/Rockman-zero2)的main。日常研究、构建和发布都使用这里，不再维护独立发布副本。
 
 源码、ROM、存档、工具链、资源和续跑记录均已迁入；本机私有资料仍被Git忽略。旧Git历史与迁移前差异封存在build/migration-20261101，不会覆盖当前公开main。逐项校验和恢复说明见[工作目录说明](WORKSPACE.md)。旧目录退役，不在旧路径启动任务。
+
+`main` 用于原版研究。独立改版在 `mod/air-actions` 分支和本机 `D:\NewStudio\Decompilation\Rockman-zero2-mod` 目录维护，源码与补丁集中在 `mod/`。阶段 1、2 的公开运行检查见[复跑入口](../research/README.md)。
