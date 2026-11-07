@@ -1,7 +1,7 @@
 ; US ROM. Added code in the original 0xFF padding at 0836C000.
 ; Zero tail +2FC: pre-dash movement speed. +300: dash frames, chain frames, dash used, active action.
 .gba
-.open "baserom.gba", "build/mod/rmz2-air-actions-v0.1.1.pending.gba", 0x08000000
+.open "baserom.gba", "build/mod/rmz2-air-actions-v0.1.2.pending.gba", 0x08000000
 .thumb
 .definelabel ChainHoverFrames, 30
 
@@ -19,6 +19,14 @@
 ; New-game configuration retains the original weapon ownership and slots.
 .org 0x08030FFE
     bl InitAbilities
+; Acquisition and weapon replacement also use these native initializers.
+.org 0x0803141E
+    b 0x08031426
+.org 0x0803143E
+    b 0x08031446
+; Normalize existing saved growth before updating the restored loadout.
+.org 0x08030EDC
+    bl RestoreWeaponGrowth
 
 .org 0x0836C000
 AirMovement:
@@ -286,6 +294,25 @@ InitAbilities:
     strh r0, [r4, #0x20]
     add r4, #0x30
     strh r0, [r4, #6]
+    pop {r4}
+    pop {r0}
+    bx r0
+
+RestoreWeaponGrowth:
+    push {r4, lr}
+    mov r4, r0
+    mov r1, #0x84
+    lsl r1, r1, #2
+    add r0, r0, r1
+    mov r1, #1
+    bl 0x08031418
+    mov r1, #0x84
+    lsl r1, r1, #2
+    add r0, r4, r1
+    mov r1, #1
+    bl 0x08031438
+    mov r0, r4
+    bl 0x08037CC8
     pop {r4}
     pop {r0}
     bx r0

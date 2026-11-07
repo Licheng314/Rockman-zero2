@@ -20,6 +20,7 @@ expected = {
     0x080234F8: "cbf00efe", 0x08026034: "0cf0e6fc",
     0x0802E1A6: "0bf019fe", 0x0802E6D4: "0ef0cafe",
     0x08030FFE: "00f077fb",
+    0x0803141E: "02d1", 0x0803143E: "02d1", 0x08030EDC: "06f0f4fe",
 }
 patched = bytearray(original)
 with TemporaryDirectory(dir=here) as temp:
@@ -250,3 +251,55 @@ for _ in range(45):
     run()
 assert read_bus(target + 0xA4, 2) == bytes(2)
 print("Zero's Buster still kills the original intro target")
+
+# Exercise the actual weapon-acquisition and snapshot-restore routines. The
+# trampoline is inserted only in emulator memory, never in the exported ROM.
+reset()
+callback = int.from_bytes(player()[0x14:0x18], 'little')
+with TemporaryDirectory(dir=here) as folder:
+    harness_dir = Path(folder)
+    harness_bin = harness_dir / 'growth.bin'
+    entries = []
+    for offset, body in (
+        (0, 'mov r1,#2\nbl 0x08037BB0'),
+        (0x40, 'mov r1,#3\nbl 0x08037BB0'),
+        (0x80, 'ldr r1,=0x0203F800\nbl 0x080311CC'),
+        (0xC0, 'mov r1,#0\nldr r2,=0x0203F800\nbl 0x08030E68'),
+    ):
+        entries.append(f'''
+.org 0x{0x0836C800 + offset:08X}
+    push {{r4,lr}}
+    ldr r3,=0x{callback:08X}
+    str r3,[r0,#0x14]
+    {body}
+    pop {{r4,pc}}
+.pool
+''')
+    harness_asm = harness_dir / 'growth.asm'
+    harness_asm.write_text(f'.gba\n.create "{harness_bin.as_posix()}",0x0836C800\n.thumb\n' +
+                           ''.join(entries) + '\n.close\n', encoding='utf-8')
+    subprocess.run([str(here.parents[1] / 'tools/bin/armips.exe'), str(harness_asm)], check=True)
+    harness = harness_bin.read_bytes()
+assert patched[0x36C800:0x36C800 + len(harness)] == b'\xff' * len(harness)
+instrumented = bytearray(patched)
+instrumented[0x36C800:0x36C800 + len(harness)] = harness
+load_rom(instrumented)
+reset()
+
+def call_growth(offset):
+    write(0x02037CF0 + 0x14, (0x0836C801 + offset).to_bytes(4, 'little'))
+    run()
+    assert int.from_bytes(player()[0x14:0x18], 'little') == callback
+
+for entry, weapon, level, experience in ((0, 2, 0x224, 0x21E), (0x40, 3, 0x225, 0x220)):
+    call_growth(entry)
+    z = player()
+    assert z[0x210] & (1 << weapon)
+    assert z[level] == 2 and z[experience:experience + 2] == b'\xff\xff', (weapon, z[level], z[experience:experience+2].hex())
+call_growth(0x80)
+write(0x0203F800 + 0x44, bytes(2))
+write(0x0203F800 + 0x3E, bytes(4))
+call_growth(0xC0)
+z = player()
+assert z[0x224:0x226] == b'\x02\x02' and z[0x21E:0x222] == b'\xff' * 4
+print("Native acquisition and old-snapshot restore keep Rod and Shield at maximum growth")
