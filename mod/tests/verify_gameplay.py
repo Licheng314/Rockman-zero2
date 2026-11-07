@@ -18,6 +18,7 @@ header = re.sub(r"(?m)^\.open .*\n", "", header)
 expected = {
     0x08007E8A: "fff7e5f9",
     0x080234F8: "cbf00efe", 0x08026034: "0cf0e6fc",
+    0x08025BB8: "0cf000ff", 0x08025B4A: "0cf00dff", 0x08025F98: "0cf0e6fc",
     0x0802E1A6: "0bf019fe", 0x0802E6D4: "0ef0cafe",
     0x08030FFE: "00f077fb",
     0x0803141E: "02d1", 0x0803143E: "02d1", 0x08030EDC: "06f0f4fe",
@@ -99,7 +100,7 @@ def reset():
 def motion():
     z = player()
     return (*struct.unpack_from("<4i", z, 0x54), struct.unpack_from("<i", z, 0x68)[0],
-            z[0x301], z[0x303])
+            z[0x301], z[0x303] & 3)
 
 def object_type():
     pointer = struct.unpack_from("<I", player(), 0x2C)[0]
@@ -157,7 +158,7 @@ for step in range(1, 19):
     run(7, 10)
     z = player()
     assert motion()[:2] == (x + 1536 * step, y)
-    assert motion()[3:5] == (0, 0) and z[0x303] == 1 and z[0x17F] == 3
+    assert motion()[3:5] == (0, 0) and (z[0x303] & 3) == 1 and z[0x17F] == 3
     assert 0x03000000 <= struct.unpack_from("<I", z, 0xCC)[0] < 0x03008000
 run(7, 10)
 assert motion()[3] > 0 and motion()[-1] == 0
@@ -303,3 +304,83 @@ call_growth(0xC0)
 z = player()
 assert z[0x224:0x226] == b'\x02\x02' and z[0x21E:0x222] == b'\xff' * 4
 print("Native acquisition and old-snapshot restore keep Rod and Shield at maximum growth")
+
+load_rom(patched)
+for direction in (6, 7):
+    for vertical in (4, 5):
+        reset()
+        run(8, n=5)
+        before = motion()
+        for step in range(18 if vertical == 4 else 5):
+            run(direction, vertical, 10)
+            current = motion()
+            dx, dy = current[0] - before[0], current[1] - before[1]
+            assert dx == (1086 if direction == 7 else -1086), (direction, vertical, step, dx)
+            assert dy == (1086 if vertical == 5 else -1086), (direction, vertical, step, dy)
+            assert current[4] == 0 and current[-1] == 1
+            assert abs((dx * dx + dy * dy) ** 0.5 - 1536) < 1
+            if vertical == 4:
+                assert (player()[0x302] >> 1) & 31 == 0
+            before = current
+        if vertical == 4:
+            run()
+            assert motion()[3] > 0 and motion()[4] > 0 and motion()[-1] == 0
+print("Four diagonal directions retain base total speed; upward dash ends with normal gravity")
+
+reset()
+run(8, n=5)
+run(7, 4, 10)
+start = motion()
+run(6, 5, 10)
+assert motion()[0] - start[0] == 1086 and motion()[1] - start[1] == -1086
+print("Direction stays latched during an active dash")
+
+def reward_count():
+    return int.from_bytes(player()[0x2FE:0x300], 'little')
+
+for direction in (6, 7):
+    for delay in (0, 17, 18):
+        reset()
+        run(8, n=5)
+        run(direction, 5, 10, n=6)
+        assert player()[0xD] == 0 and reward_count() == 0
+        run(direction, n=delay)
+        run(direction, 8)
+        expected = 0 if delay == 18 else 1
+        assert reward_count() == expected
+        if expected:
+            assert abs(motion()[2]) == 1086 + 1536 // 5 and motion()[3] < 0
+            run(direction)
+            run(direction, 8)
+            assert reward_count() == 1
+print("Reward deadline includes update 24, excludes update 25; each dash awards once")
+
+reset()
+run(8, n=5)
+for count, direction in enumerate((7, 6, 7, 6, 7), 1):
+    for step in range(20):
+        run(direction, 5, 10)
+        if player()[0xD] == 0:
+            break
+    assert player()[0xD] == 0
+    run(direction, 8)
+    expected = 1086 + count * 1536 // 5
+    assert reward_count() == count and abs(motion()[2]) == expected
+    run(direction, 8, n=4)
+    assert abs(motion()[2]) == expected
+print("Five consecutive landing jumps stack exactly one initial-dash-speed bonus, with no compounded multiplier")
+
+reset()
+run(8, n=5)
+run(7, 5, 10, 8, n=6)
+assert player()[0xD] == 0
+run(7, 8, n=4)
+assert reward_count() == 0
+reset()
+run(8, n=5)
+run(7, 10, n=18)
+assert player()[0x302] & 62 == 0 and reward_count() == 0
+run(7, n=60)
+run(7, 8)
+assert reward_count() == 0
+print("Holding jump through landing and horizontal dash do not generate a reward")

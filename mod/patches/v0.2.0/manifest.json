@@ -1,0 +1,10 @@
+{
+  "version": "0.2.0",
+  "status": "experimental",
+  "base_size": 8388608,
+  "base_sha1": "c4d93a58f0f82c526dec8a3fdbda170336303689",
+  "target_sha1": "3967ee24c48326baad59f90f076ea155c12a3b11",
+  "patch_file": "rmz2-air-actions-v0.2.0.ips",
+  "patch_sha256": "839deadb49605aebf5a723038a8b3eacd8ba054a98092b2524f2466fae88121a",
+  "checks": "mod/tests/verify_gameplay.py"
+}

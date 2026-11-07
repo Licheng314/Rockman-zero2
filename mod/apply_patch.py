@@ -40,7 +40,7 @@ def main():
     args = parser.parse_args()
     if args.output.exists():
         parser.error('Output already exists. Choose a new output filename.')
-    bundle = HERE / 'patches/v0.1.2'
+    bundle = HERE / 'patches/v0.2.0'
     manifest = json.loads((bundle / 'manifest.json').read_text(encoding='utf-8'))
     original = args.original.read_bytes()
     patch = (bundle / manifest['patch_file']).read_bytes()
