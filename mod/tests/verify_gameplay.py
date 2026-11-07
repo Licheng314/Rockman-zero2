@@ -19,7 +19,7 @@ expected = {
     0x08007E8A: "fff7e5f9",
     0x080234F8: "cbf00efe", 0x08026034: "0cf0e6fc",
     0x0802E1A6: "0bf019fe", 0x0802E6D4: "0ef0cafe",
-    0x080316FA: "0320", 0x08031704: "e0706070",
+    0x08030FFE: "00f077fb",
 }
 patched = bytearray(original)
 with TemporaryDirectory(dir=here) as temp:
@@ -42,7 +42,7 @@ with TemporaryDirectory(dir=here) as temp:
 assert not expected
 if probe.f != (here.parents[1] / "baserom.gba"):
     assert probe.f.read_bytes() == patched
-for address in (0x0802E8B6, 0x0802EA32):
+for address in (0x0802E8B6, 0x0802EA32, 0x080316FA, 0x08031704):
     offset = address - 0x08000000
     assert patched[offset:offset + 4] == original[offset:offset + 4]
 
@@ -68,12 +68,22 @@ def start_new_game():
 
 load_rom(patched)
 start_new_game()
-assert player()[0x210:0x214] == bytes.fromhex("07010002")
+def check_new_game():
+    z = player()
+    assert z[0x210:0x214] == bytes.fromhex("03010001"), z[0x210:0x214].hex()
+    assert z[0x222:0x226] == bytes([2, 4, 2, 2]), z[0x222:0x226].hex()
+    assert z[0x21A:0x222] == b'\xff' * 8
+    assert int.from_bytes(z[0x216:0x218], 'little') == 0x03FF
+    assert z[0x218:0x21A] == bytes(2)
+    assert int.from_bytes(z[0x200:0x202], 'little') == 0x03FF
+    assert z[0x1FC] == 0 and z[0x1FD] == 16
+
+check_new_game()
 control = bytearray(patched)
 control[0x7E8A:0x7E8E] = original[0x7E8A:0x7E8E]
 load_rom(control)
 start_new_game()
-assert player()[0x210:0x214] == bytes.fromhex("07010002"), player()[0x210:0x214].hex()
+check_new_game()
 assert player()[0xD:0xF] == bytes(2) and player()[0x10] == 0, player()[0xD:0x11]
 size = d.retro_serialize_size()
 state = C.create_string_buffer(size)
@@ -114,6 +124,8 @@ def hover(kind, inputs):
     print(f"Chain Rod object {kind}: 30 stationary updates, then gravity resumes")
 
 reset()
+write(0x02037CF0 + 0x210, b'\x07')
+write(0x02037CF0 + 0x213, b'\x02')
 run(8, n=5)
 hover(2, [(8, 11, 0)] + [(8,)] * 15)
 reset()
@@ -125,7 +137,7 @@ write(0x02037CF0 + 0x213, b"\x03")
 run(8, n=5)
 run(8, 11, 0)
 assert object_type() == 9 and motion()[5] == 0 and motion()[3] != 0
-print("Cold new game equips Chain Rod; grounded Rod and aerial Shield never start hover")
+print("Default new-game equipment, max weapon growth, all EX and forms; aerial Shield never starts hover")
 
 reset()
 write(0x02037CF0 + 0x224, b"\x01")
@@ -149,6 +161,40 @@ for step in range(1, 19):
 run(7, 10)
 assert motion()[3] > 0 and motion()[-1] == 0
 print("Air dash regression: native dash pose and trail, 18 updates")
+
+reset()
+run(7, n=110)
+run(8, n=5)
+run(7, 10, n=7)
+run(7, n=2)
+assert player()[0xD] == 2
+assert motion()[4] > 0 and player()[0x303] == 0
+wall = C.create_string_buffer(size)
+assert d.retro_serialize(wall, size)
+native_movement = bytearray(patched)
+for offset in (0x234F8, 0x26034):
+    native_movement[offset:offset + 4] = original[offset:offset + 4]
+for buttons in ((8,), (7, 8), (6, 8)):
+    load_rom(patched)
+    assert d.retro_unserialize(wall, size)
+    initial_y = motion()[1]
+    frames = []
+    for step in range(100):
+        run(*buttons)
+        frames.append(motion())
+        assert motion()[4] > 0, (buttons, step, motion())
+    assert frames[0][3] < 0
+    assert min(frame[1] for frame in frames) > initial_y - 0x6000
+    assert any(frame[3] >= 0 for frame in frames[15:]), buttons
+    load_rom(native_movement)
+    assert d.retro_unserialize(wall, size)
+    reference = []
+    for step in range(100):
+        run(*buttons)
+        reference.append(motion())
+    assert frames == reference, buttons
+load_rom(patched)
+print("Wall-jump regression: three input variants match native movement for 100 updates")
 
 def select_main_weapon(available):
     reset()

@@ -1,9 +1,8 @@
 ; US ROM. Added code in the original 0xFF padding at 0836C000.
 ; Zero tail +2FC: pre-dash movement speed. +300: dash frames, chain frames, dash used, active action.
 .gba
-.open "baserom.gba", "build/mod/rmz2-chain-rod-no-contact.pending.gba", 0x08000000
+.open "baserom.gba", "build/mod/rmz2-air-actions-v0.1.1.pending.gba", 0x08000000
 .thumb
-.definelabel ChainRodId, 2
 .definelabel ChainHoverFrames, 30
 
 .org 0x08007E8A
@@ -17,11 +16,9 @@
 .org 0x0802E6D4
     bl AirChainCharged
 
-; New-player loadout. Keep Buster/Saber unlocked, add Chain Rod and equip it in the second slot.
-.org 0x080316FA
-    mov r0, #0x03 | (1 << ChainRodId)
-.org 0x08031704
-    bl EquipInitialChain
+; New-game configuration retains the original weapon ownership and slots.
+.org 0x08030FFE
+    bl InitAbilities
 
 .org 0x0836C000
 AirMovement:
@@ -153,6 +150,7 @@ AirCheckStep:
     strb r0, [r5]
     b AirDone
 AirEnded:
+    bl AirRestoreGravity
     bl AirRestoreDashSpeed
     ldrb r0, [r4, #0xd]
     mov r1, #0
@@ -164,11 +162,13 @@ AirEnded:
     strb r1, [r5, #2]
     b AirDone
 AirReset:
+    bl AirRestoreGravity
     bl AirRestoreDashSpeed
     mov r0, #0
     str r0, [r5]
     b AirNative
 AirInterrupt:
+    bl AirRestoreGravity
     bl AirRestoreDashSpeed
     mov r0, #0
     strb r0, [r5]
@@ -182,11 +182,10 @@ AirUnfreeze:
     ldrb r0, [r5, #3]
     cmp r0, #0
     beq AirNative
+    bl AirRestoreGravity
     bl AirRestoreDashSpeed
     mov r0, #0
     strb r0, [r5, #3]
-    mov r0, #0x40
-    str r0, [r4, #0x68]
     ldr r0, =0x17F
     ldrb r0, [r4, r0]
     cmp r0, #3
@@ -263,11 +262,33 @@ AirRestoreDashClear:
 AirRestoreDashDone:
     bx lr
 
-EquipInitialChain:
-    strb r0, [r4, #1]
-    mov r0, #ChainRodId
-    strb r0, [r4, #3]
+; Native gravity recalculates the magnitude but uses the stored sign.
+; Restore it on every action exit, including wall contact and interruption.
+AirRestoreGravity:
+    ldrb r0, [r5, #3]
+    cmp r0, #0
+    beq AirRestoreGravityDone
+    ldr r0, [r4, #0x68]
+    cmp r0, #0
+    bne AirRestoreGravityDone
+    mov r0, #0x40
+    str r0, [r4, #0x68]
+AirRestoreGravityDone:
     bx lr
+
+InitAbilities:
+    push {r4, lr}
+    mov r4, r0
+    ; Original weapon initialization's full-growth mode uses its native caps.
+    mov r1, #1
+    bl 0x080316F0
+    ldr r0, =0x03FF
+    strh r0, [r4, #0x20]
+    add r4, #0x30
+    strh r0, [r4, #6]
+    pop {r4}
+    pop {r0}
+    bx r0
 
 AirChainNormal:
     push {r4, lr}
