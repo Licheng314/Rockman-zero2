@@ -1,9 +1,9 @@
 ; US ROM. Added code in the original 0xFF padding at 0836C000.
-; Zero tail +2FC: saved speed u16, +2FE: reward count u16.
-; +300/+301: dash/hover timers. +302: used bit0, window bits1..5,
-; landed bit6, carry bit7. +303: active bits0..1, up/down/right bits2..4.
+; Zero tail +2FC: saved speed u16, +2FE: reserved.
+; +300/+301: dash/hover timers. +302: dash used.
+; +303: active bits0..1, up/down/right bits2..4.
 .gba
-.open "baserom.gba", "build/mod/rmz2-air-actions-v0.2.0.pending.gba", 0x08000000
+.open "baserom.gba", "build/mod/rmz2-air-actions-v0.2.1.pending.gba", 0x08000000
 .thumb
 .definelabel ChainHoverFrames, 30
 
@@ -50,7 +50,6 @@ AirZero:
     mov r5, #3
     lsl r5, r5, #8
     add r5, r5, r4
-    bl AirTryReward
     ldrb r0, [r4, #0xd]
     cmp r0, #0
     bne AirCheckAirMode
@@ -136,17 +135,8 @@ AirLatchHorizontal:
     add r0, #16
 AirLatchDone:
     strb r0, [r5, #3]
-    ldrb r1, [r5, #2]
-    mov r2, #0x81
-    and r1, r2
-    mov r2, #8
-    tst r0, r2
-    beq AirWindowReady
-    add r1, #48
-AirWindowReady:
     mov r0, #1
-    orr r1, r0
-    strb r1, [r5, #2]
+    strb r0, [r5, #2]
     mov r0, #8
     bl 0x0801E6AC
     mov r1, #18
@@ -285,8 +275,6 @@ AirInterrupt:
     strb r0, [r5, #1]
     strb r0, [r5, #2]
     strb r0, [r5, #3]
-    sub r1, r5, #2
-    strh r0, [r1]
     b AirNative
 AirRelease:
     mov r0, #0
@@ -325,18 +313,6 @@ AirDone:
     mov r0, #0
     str r0, [r4, #0x68]
 AirActionGravityReady:
-    bl AirMarkLanding
-    ldrb r0, [r5, #2]
-    mov r1, #62
-    tst r0, r1
-    beq AirTimerDone
-    sub r0, #2
-    tst r0, r1
-    bne AirTimerStore
-    mov r1, #64
-    bic r0, r1
-AirTimerStore:
-    strb r0, [r5, #2]
 AirTimerDone:
     add sp, #8
     pop {r4-r7}
@@ -448,31 +424,18 @@ AirRestoreGravityDone:
     bx lr
 .pool
 
-; r4 is Zero, r5 is Zero+300. Return the current dash's horizontal
-; component plus count*1536/5. Keeping the count avoids cumulative rounding.
+; r5 is Zero+300. Fixed horizontal component, with no carried bonus.
 AirDashMagnitude:
-    push {r4, lr}
-    ldrb r4, [r5, #3]
-    sub r0, r5, #2
-    ldrh r0, [r0]
-    mov r1, #6
-    lsl r1, r1, #8
-    mul r0, r1
-    mov r1, #5
-    bl 0x080EF150
+    ldrb r0, [r5, #3]
     mov r1, #12
-    tst r4, r1
+    tst r0, r1
     beq AirMagnitudeHorizontal
-    ldr r1, =1086
-    b AirMagnitudeDone
+    ldr r0, =1086
+    bx lr
 AirMagnitudeHorizontal:
-    mov r1, #6
-    lsl r1, r1, #8
-AirMagnitudeDone:
-    add r0, r0, r1
-    pop {r4}
-    pop {r1}
-    bx r1
+    mov r0, #6
+    lsl r0, r0, #8
+    bx lr
 
 ; Override only the speed consumed by the native air movement function.
 ; Native horizontal collision still runs immediately after this call.
@@ -504,12 +467,7 @@ AirHorizontal:
     beq AirHorizontalHover
     cmp r1, #1
     beq AirHorizontalDash
-    ldrb r1, [r5, #2]
-    mov r2, #128
-    tst r1, r2
-    beq AirHorizontalRun
-    bl AirDashMagnitude
-    b AirHorizontalSetSpeed
+    b AirHorizontalRun
 AirHorizontalHover:
     mov r0, #0
     b AirHorizontalSetSpeed
@@ -547,52 +505,6 @@ AirHorizontalDone:
     pop {r1}
     bx r1
 
-AirMarkLanding:
-    ldrb r0, [r4, #0xd]
-    cmp r0, #0
-    bne AirLandingDone
-    ldrb r0, [r5, #2]
-    mov r1, #62
-    tst r0, r1
-    beq AirLandingDone
-    mov r1, #64
-    orr r0, r1
-    strb r0, [r5, #2]
-AirLandingDone:
-    bx lr
-
-AirTryReward:
-    ldrb r0, [r4, #0xd]
-    cmp r0, #1
-    bne AirRewardDone
-    ldrb r0, [r5, #2]
-    mov r1, #64
-    tst r0, r1
-    beq AirRewardDone
-    mov r1, #62
-    tst r0, r1
-    beq AirRewardDone
-    ldr r1, =0x196
-    ldrb r1, [r4, r1]
-    mov r2, #32
-    tst r1, r2
-    beq AirRewardDone
-    mov r1, #0xE4
-    ldrh r1, [r4, r1]
-    mov r2, #15
-    tst r1, r2
-    beq AirRewardDone
-    sub r1, r5, #2
-    ldrh r2, [r1]
-    add r2, #1
-    strh r2, [r1]
-    mov r1, #1
-    and r0, r1
-    mov r1, #128
-    orr r0, r1
-    strb r0, [r5, #2]
-AirRewardDone:
-    bx lr
 .pool
 
 InitAbilities:

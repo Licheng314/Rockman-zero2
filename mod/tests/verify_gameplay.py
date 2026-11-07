@@ -335,52 +335,26 @@ run(6, 5, 10)
 assert motion()[0] - start[0] == 1086 and motion()[1] - start[1] == -1086
 print("Direction stays latched during an active dash")
 
-def reward_count():
-    return int.from_bytes(player()[0x2FE:0x300], 'little')
-
-for direction in (6, 7):
-    for delay in (0, 17, 18):
-        reset()
-        run(8, n=5)
-        run(direction, 5, 10, n=6)
-        assert player()[0xD] == 0 and reward_count() == 0
+# Repeat the old reward-producing sequence. Every jump must now use the
+# native air speed, and every new diagonal dash must keep its fixed component.
+for delay in (0, 17, 18):
+    reset()
+    run(8, n=5)
+    for direction in (7, 6, 7, 6, 7):
+        before = motion()
+        for step in range(20):
+            run(direction, 5, 10)
+            current = motion()
+            if player()[0xD] == 0:
+                break
+            assert abs(current[0] - before[0]) == 1086
+            before = current
+        assert player()[0xD] == 0
         run(direction, n=delay)
         run(direction, 8)
-        expected = 0 if delay == 18 else 1
-        assert reward_count() == expected
-        if expected:
-            assert abs(motion()[2]) == 1086 + 1536 // 5 and motion()[3] < 0
-            run(direction)
-            run(direction, 8)
-            assert reward_count() == 1
-print("Reward deadline includes update 24, excludes update 25; each dash awards once")
-
-reset()
-run(8, n=5)
-for count, direction in enumerate((7, 6, 7, 6, 7), 1):
-    for step in range(20):
-        run(direction, 5, 10)
-        if player()[0xD] == 0:
-            break
-    assert player()[0xD] == 0
-    run(direction, 8)
-    expected = 1086 + count * 1536 // 5
-    assert reward_count() == count and abs(motion()[2]) == expected
-    run(direction, 8, n=4)
-    assert abs(motion()[2]) == expected
-print("Five consecutive landing jumps stack exactly one initial-dash-speed bonus, with no compounded multiplier")
-
-reset()
-run(8, n=5)
-run(7, 5, 10, 8, n=6)
-assert player()[0xD] == 0
-run(7, 8, n=4)
-assert reward_count() == 0
-reset()
-run(8, n=5)
-run(7, 10, n=18)
-assert player()[0x302] & 62 == 0 and reward_count() == 0
-run(7, n=60)
-run(7, 8)
-assert reward_count() == 0
-print("Holding jump through landing and horizontal dash do not generate a reward")
+        assert abs(motion()[2]) == 512 and motion()[3] < 0
+        run(direction, 8, n=4)
+        assert abs(motion()[2]) == 512
+        assert player()[0x2FE:0x300] == bytes(2)
+        assert player()[0x302] & ~1 == 0
+print("Repeated diagonal landing jumps keep native air speed, with no reward window or accumulated bonus")
