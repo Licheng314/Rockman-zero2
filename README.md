@@ -1,6 +1,6 @@
 # Rockman Zero 2 reverse-engineering research
 
-《洛克人Zero 2 / Mega Man Zero 2》美版GBA逆向研究与改版基础工程。当前优先支持主人公能力、属性及贴图修改，不以全游戏语义解读为近期目标。
+《洛克人Zero 2 / Mega Man Zero 2》美版GBA逆向研究与改版基础工程。当前优先研究评分规则、主人公操作与连击，以及有限攻击模组的接入条件，贴图研究暂后排；不以全游戏语义解读为近期目标。
 
 ## Current status / 当前状态
 
@@ -15,6 +15,7 @@
 ## 开发入口
 
 - [开发目标与验收路线](docs/SEMANTIC-ROADMAP.md)定义各阶段范围和验收标准。
+- [ZCode 现役任务书](docs/ZCODE-HANDOFF.md)划定评分与战斗衔接研究的目标、产物和停止条件。
 - [阶段 2 验收](docs/STAGE2-WEAPON-RESEARCH.md)记录武器、属性、恢复与存档的原版对照。
 - [工程交接](docs/HANDOVER.md)记录当前状态、操作入口和既有证据索引。
 - [原版研究复跑入口](research/README.md)提供阶段 1、2 的模拟器检查脚本。
