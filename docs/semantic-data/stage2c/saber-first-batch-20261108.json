@@ -1,0 +1,481 @@
+{
+  "date": "2026-11-08",
+  "status": "stage2c first batch; not full stage acceptance",
+  "rom_sha1": "c4d93a58f0f82c526dec8a3fdbda170336303689",
+  "core_sha256": "02747c2a77ea4ed9738c967d101a207a81973233588f68d39f5ab923a1a9599c",
+  "libretro_api": 1,
+  "python": "3.13.0",
+  "raw_trace_sha256": "bbf1d176e720dbae58d43cd2db24c8993e20b39dc89bc42dc832415e09a81f03",
+  "static": {
+    "rom_sha1": "c4d93a58f0f82c526dec8a3fdbda170336303689",
+    "kind": "static evidence, not behavioral validation",
+    "new_functions": [
+      {
+        "start": 134455944,
+        "end": 134456126,
+        "rom_sha256": "942891e83d53daea3564d903a3b8c77e740c9125d9488248feb3e73def80225e",
+        "asm_sha256": "d865e4184aec67be320ed0602f54ab56044ccc735d214c9f322db21bfa4bb5d4",
+        "literal_loads": [
+          {
+            "instruction": 134455948,
+            "literal": 134456128,
+            "value": 137584736
+          },
+          {
+            "instruction": 134456000,
+            "literal": 134456132,
+            "value": 137590204
+          },
+          {
+            "instruction": 134456044,
+            "literal": 134456136,
+            "value": 137583102
+          },
+          {
+            "instruction": 134456066,
+            "literal": 134456140,
+            "value": 137586068
+          },
+          {
+            "instruction": 134456080,
+            "literal": 134456144,
+            "value": 134457629
+          }
+        ]
+      },
+      {
+        "start": 134456328,
+        "end": 134456588,
+        "rom_sha256": "43a6695c279d9ee40f0f6be1fe0d6cbe49605cfe3782cb05bc52d4d61a82a024",
+        "asm_sha256": "8efb832b44916086dc1f577ff38c791191ae5692ac9b1cb4d720e96af3d4950d",
+        "literal_loads": [
+          {
+            "instruction": 134456418,
+            "literal": 134456468,
+            "value": 137590228
+          }
+        ]
+      },
+      {
+        "start": 134457244,
+        "end": 134457308,
+        "rom_sha256": "835a6a4c833a8e453d66c3acb8320ea93a19c28a43e4bb99c104c04c21c2b01d",
+        "asm_sha256": "6c27b15cb2185123928fbad2a465d10e45aff18cd1a600570c8be2c092fa95d1",
+        "literal_loads": [
+          {
+            "instruction": 134457248,
+            "literal": 134457308,
+            "value": 137584736
+          }
+        ]
+      },
+      {
+        "start": 134457748,
+        "end": 134457790,
+        "rom_sha256": "b136d7c66b9c03ff5240bb0b232da71b8c565d786aef8ccaa9026e212e73f9c7",
+        "asm_sha256": "2b62ac7d46f28fc6d040efd1dfd9526407dbb3995b52903899000bf1a5585844",
+        "literal_loads": [
+          {
+            "instruction": 134457758,
+            "literal": 134457780,
+            "value": 694
+          }
+        ]
+      },
+      {
+        "start": 134457856,
+        "end": 134457948,
+        "rom_sha256": "686df054f3ae5f644dec12fcf6c4c42f5354cc58b566e6f49f43856a7439dba4",
+        "asm_sha256": "7b4936541256448c95e6082dcc5d3508ab9a76a5a0ec91aea35a1f07dcc0af8a",
+        "literal_loads": [
+          {
+            "instruction": 134457862,
+            "literal": 134457948,
+            "value": 137590148
+          },
+          {
+            "instruction": 134457876,
+            "literal": 134457952,
+            "value": 137583270
+          }
+        ]
+      }
+    ],
+    "saber_type": 3,
+    "type_table": 137584736,
+    "lifecycle_table": {
+      "address": 137586020,
+      "callbacks": [
+        134455945,
+        134456329,
+        134457245,
+        134451337,
+        134245417
+      ]
+    }
+  },
+  "runtime": {
+    "ordinary_attack": {
+      "fixture": "original stage1 ordinary-mode intro state; owned sword assigned primary slot",
+      "address": 33793688,
+      "events": [
+        {
+          "tick": 4,
+          "active_in_pool": true,
+          "state": 1,
+          "callback": 134456329,
+          "flags": 15,
+          "owner": 33783024,
+          "owner_link": 33793688,
+          "owner_phase": 0,
+          "owner_gate": 1,
+          "free_count": 22,
+          "descriptor": 137586068,
+          "damage_override": 8,
+          "status_8c_94": "000000000000000000",
+          "shape_indices": [
+            0,
+            1
+          ]
+        },
+        {
+          "tick": 5,
+          "active_in_pool": true,
+          "state": 1,
+          "callback": 134456329,
+          "flags": 15,
+          "owner": 33783024,
+          "owner_link": 33793688,
+          "owner_phase": 0,
+          "owner_gate": 1,
+          "free_count": 22,
+          "descriptor": 137586164,
+          "damage_override": 8,
+          "status_8c_94": "000000000000000000",
+          "shape_indices": [
+            0,
+            2
+          ]
+        },
+        {
+          "tick": 7,
+          "active_in_pool": true,
+          "state": 1,
+          "callback": 134456329,
+          "flags": 15,
+          "owner": 33783024,
+          "owner_link": 33793688,
+          "owner_phase": 0,
+          "owner_gate": 1,
+          "free_count": 22,
+          "descriptor": 137586212,
+          "damage_override": 8,
+          "status_8c_94": "000000000000000000",
+          "shape_indices": [
+            0,
+            3
+          ]
+        },
+        {
+          "tick": 9,
+          "active_in_pool": true,
+          "state": 1,
+          "callback": 134456329,
+          "flags": 15,
+          "owner": 33783024,
+          "owner_link": 33793688,
+          "owner_phase": 0,
+          "owner_gate": 1,
+          "free_count": 22,
+          "descriptor": 137586212,
+          "damage_override": 8,
+          "status_8c_94": "000000000000000000",
+          "shape_indices": [
+            0,
+            4
+          ]
+        },
+        {
+          "tick": 11,
+          "active_in_pool": true,
+          "state": 1,
+          "callback": 134456329,
+          "flags": 15,
+          "owner": 33783024,
+          "owner_link": 33793688,
+          "owner_phase": 0,
+          "owner_gate": 1,
+          "free_count": 22,
+          "descriptor": 137586212,
+          "damage_override": 8,
+          "status_8c_94": "000000000000000000",
+          "shape_indices": [
+            0,
+            5
+          ]
+        },
+        {
+          "tick": 15,
+          "active_in_pool": true,
+          "state": 1,
+          "callback": 134456329,
+          "flags": 15,
+          "owner": 33783024,
+          "owner_link": 33793688,
+          "owner_phase": 0,
+          "owner_gate": 1,
+          "free_count": 22,
+          "descriptor": 0,
+          "damage_override": 8,
+          "status_8c_94": "000000000000000000",
+          "shape_indices": [
+            0,
+            6
+          ]
+        },
+        {
+          "tick": 17,
+          "active_in_pool": true,
+          "state": 1,
+          "callback": 134456329,
+          "flags": 15,
+          "owner": 33783024,
+          "owner_link": 33793688,
+          "owner_phase": 0,
+          "owner_gate": 1,
+          "free_count": 22,
+          "descriptor": 0,
+          "damage_override": 8,
+          "status_8c_94": "000000000000000000",
+          "shape_indices": [
+            0,
+            7
+          ]
+        },
+        {
+          "tick": 19,
+          "active_in_pool": true,
+          "state": 4,
+          "callback": 134245417,
+          "flags": 10,
+          "owner": 33783024,
+          "owner_link": 0,
+          "owner_phase": 0,
+          "owner_gate": 1,
+          "free_count": 22,
+          "descriptor": 0,
+          "damage_override": 8,
+          "status_8c_94": "000000000000000000",
+          "shape_indices": [
+            0,
+            7
+          ]
+        },
+        {
+          "tick": 20,
+          "active_in_pool": false,
+          "state": 4,
+          "callback": 134245417,
+          "flags": 10,
+          "owner": 33783024,
+          "owner_link": 0,
+          "owner_phase": 0,
+          "owner_gate": 1,
+          "free_count": 23,
+          "descriptor": 0,
+          "damage_override": 8,
+          "status_8c_94": "000000000000000000",
+          "shape_indices": [
+            0,
+            7
+          ]
+        }
+      ],
+      "exit_tick": 19,
+      "freed_tick": 20
+    },
+    "replacement_link": {
+      "replacement": 33813504,
+      "retired": {
+        "tick": 5,
+        "active_in_pool": true,
+        "state": 4,
+        "callback": 134245417,
+        "flags": 10,
+        "owner": 33783024,
+        "owner_link": 33813504,
+        "owner_phase": 0,
+        "owner_gate": 1,
+        "free_count": 22,
+        "descriptor": 137586068,
+        "damage_override": 8,
+        "status_8c_94": "000000000000000000",
+        "shape_indices": [
+          0,
+          1
+        ]
+      },
+      "freed": {
+        "tick": 6,
+        "active_in_pool": false,
+        "state": 4,
+        "callback": 134245417,
+        "flags": 10,
+        "owner": 33783024,
+        "owner_link": 33813504,
+        "owner_phase": 0,
+        "owner_gate": 1,
+        "free_count": 23,
+        "descriptor": 137586068,
+        "damage_override": 8,
+        "status_8c_94": "000000000000000000",
+        "shape_indices": [
+          0,
+          1
+        ]
+      }
+    },
+    "clone_valid": {
+      "fixture": "owner structure cloned to 0x0203F400; weapon owner redirected in RAM",
+      "phase": 0,
+      "gate": 1,
+      "expected_exit": false,
+      "observed": {
+        "tick": 5,
+        "active_in_pool": true,
+        "state": 1,
+        "callback": 134456329,
+        "flags": 15,
+        "owner": 33813504,
+        "owner_link": 33793688,
+        "owner_phase": 0,
+        "owner_gate": 1,
+        "free_count": 22,
+        "descriptor": 137586164,
+        "damage_override": 8,
+        "status_8c_94": "000000000000000000",
+        "shape_indices": [
+          0,
+          2
+        ]
+      }
+    },
+    "clone_gate_zero": {
+      "fixture": "owner structure cloned to 0x0203F400; weapon owner redirected in RAM",
+      "phase": 0,
+      "gate": 0,
+      "expected_exit": true,
+      "observed": {
+        "tick": 5,
+        "active_in_pool": true,
+        "state": 4,
+        "callback": 134245417,
+        "flags": 10,
+        "owner": 33813504,
+        "owner_link": 33793688,
+        "owner_phase": 0,
+        "owner_gate": 1,
+        "free_count": 22,
+        "descriptor": 137586068,
+        "damage_override": 8,
+        "status_8c_94": "000000000000000000",
+        "shape_indices": [
+          0,
+          1
+        ]
+      }
+    },
+    "clone_phase_five": {
+      "fixture": "owner structure cloned to 0x0203F400; weapon owner redirected in RAM",
+      "phase": 5,
+      "gate": 1,
+      "expected_exit": true,
+      "observed": {
+        "tick": 5,
+        "active_in_pool": true,
+        "state": 4,
+        "callback": 134245417,
+        "flags": 10,
+        "owner": 33813504,
+        "owner_link": 33793688,
+        "owner_phase": 0,
+        "owner_gate": 1,
+        "free_count": 22,
+        "descriptor": 137586068,
+        "damage_override": 8,
+        "status_8c_94": "000000000000000000",
+        "shape_indices": [
+          0,
+          1
+        ]
+      }
+    },
+    "allocation_null": {
+      "before": {
+        "tick": 0,
+        "owner_link": 0,
+        "owner_phase": 0,
+        "owner_gate": 0,
+        "free_count": 23,
+        "objects": [
+          {
+            "address": 33793924,
+            "kind": 0,
+            "table": 137584804,
+            "state": 1,
+            "callback": 134451469,
+            "owner": 33783024,
+            "descriptor": 0,
+            "damage": 0,
+            "flags": 8,
+            "x": 0,
+            "y": 0,
+            "shape_indices": [
+              0,
+              2
+            ]
+          }
+        ],
+        "tracked_raw": null
+      },
+      "after": {
+        "tick": 6,
+        "owner_link": 0,
+        "owner_phase": 0,
+        "owner_gate": 1,
+        "free_count": 23,
+        "objects": [
+          {
+            "address": 33793924,
+            "kind": 0,
+            "table": 137584804,
+            "state": 1,
+            "callback": 134451469,
+            "owner": 33783024,
+            "descriptor": 0,
+            "damage": 0,
+            "flags": 8,
+            "x": 0,
+            "y": 0,
+            "shape_indices": [
+              0,
+              0
+            ]
+          }
+        ],
+        "tracked_raw": null
+      },
+      "fixture": "free-list head forced null; capacity not naturally exhausted"
+    }
+  },
+  "z3_reference": {
+    "repository": "https://github.com/mmzret/rmz3",
+    "commit": "2a28700e0a74edd9578737c3b3435ced9d074045",
+    "file": "src/weapon/saber.c",
+    "kind": "static source comparison only"
+  },
+  "scripts": {
+    "research/stage2c/probe-saber-lifecycle.py": "6864e607bd5deffc875aab1d35ad578fc6d5e664fba85283fbeaa8409e909d8e",
+    "research/stage2c/inspect-saber-contract.py": "33002b8bc5eb7d845bd458240996b4d315f828a62dfafa246e2bdf77f21412d3"
+  }
+}

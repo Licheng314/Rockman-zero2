@@ -9,3 +9,9 @@
 - `stage2/` 覆盖武器样本、枪弹参数、属性菜单、受控抗性、电子精灵、储量槽和选中存档字段。
 
 蓄力锁链样本使用动作重入与预置蓄力计数，元素差异使用受控目标抗性，存档往返使用内存调用夹具。通过检查只证明对应阶段报告列出的样本。核心版本可能影响状态格式和运行结果，报告问题时请附工具版本和检查输出。
+
+## 阶段 2C 首批：普通剑实体生命周期
+
+`stage2c/inspect-saber-contract.py` 仅提取静态 ROM/表与指纹；`stage2c/probe-saber-lifecycle.py` 在原版 ROM 中验证基本关联、退场、克隆所有者门控及空分配夹具。独立执行 `python -X utf8 -B research/stage2c/probe-saber-lifecycle.py`，结果写 `build/stage2c`。工具环境同上，脚本不改磁盘 ROM 或存档。
+
+这是 2C 首批有限检查，不是完整阶段通过；运行中的 RAM 夹具、Z3 静态对照及未测范围见[报告](../docs/STAGE2C-ATTACK-CONTRACT.md)。本批尚未加入 `run_checks.py` 的阶段选择，以免将前置样本误称为整体验收。
