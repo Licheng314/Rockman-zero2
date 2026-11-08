@@ -31,7 +31,7 @@ def wram(addr, data):
     else:
         ctypes.memmove(ram + addr - 0x02000000, bytes(data), len(data))
 
-size0 = (root / "build/stage2a/scratch/state0.bin").read_bytes()
+size0 = (root / "build/stage2a/state0.bin").read_bytes()
 size = d.retro_serialize_size()
 d.retro_serialize.argtypes = d.retro_unserialize.argtypes = [C.c_void_p, C.c_size_t]
 d.retro_serialize.restype = d.retro_unserialize.restype = C.c_bool
@@ -46,7 +46,8 @@ def read_ram(address, length):
 
 def enemies():
     res = {}
-    for h in (0x0202F070, 0x0202F078, 0x0202F07C, 0x0202F084, 0x0202F088):
+    # Target identity is scoped to the enemy pool/type table, not type byte alone.
+    for h in (0x0202F078,):
         header = struct.unpack_from('<I', read(h, 4))[0]
         if not 0x02000000 <= header < 0x02040000: continue
         end = header + 0x14
@@ -58,6 +59,8 @@ def enemies():
             data = read_ram(cur, 0xB0)
             if data[9] == 1 and struct.unpack_from('<h', data, 0xA4)[0] > 0:
                 res[cur] = dict(hp=struct.unpack_from('<h', data, 0xA4)[0],
+                                pool_handle=h, type_table=0x0833D990, kind=data[9],
+                                callback=struct.unpack_from('<I', data, 0x14)[0],
                                 x=struct.unpack_from('<i', data, 0x54)[0],
                                 y=struct.unpack_from('<i', data, 0x58)[0],
                                 status=struct.unpack_from('<I', data, 0x8C)[0])
@@ -104,6 +107,8 @@ base = mk()
 def hp_of():
     e2 = enemies().get(a); return e2['hp'] if e2 else None
 
+TRACE_LOG = {}
+
 def trace(name, script, total, state=None):
     load_state(base_idle if state is None else state)
     frames = []
@@ -112,7 +117,10 @@ def trace(name, script, total, state=None):
         z = player()
         frames.append(dict(t=t, pose=z[0x17F], atk=list(z[0x176:0x17A]),
                            buf=z[0x2BB], chg=struct.unpack_from('<I', z, 0x188)[0],
-                           hp=hp_of(), y=struct.unpack_from('<i', z, 0x58)[0]))
+                           charge_bytes=list(z[0x188:0x18C]), phase=list(z[0xD:0x11]), zero_hp=int.from_bytes(z[0xA4:0xA6], 'little'),
+                           hp=hp_of(), y=struct.unpack_from('<i', z, 0x58)[0],
+                           motion=list(struct.unpack_from('<4i', z, 0x54)), ay=struct.unpack_from('<i', z, 0x68)[0]))
+    TRACE_LOG[name] = frames
     return frames
 
 def hp_changes(frames):
@@ -122,30 +130,33 @@ def hp_changes(frames):
     return ch
 
 results = dict(rom_sha1=ROM_SHA1, target=hex(a),
+    target_identity=enemies().get(a),
     note="武器/EX使能/成长/目标HP均为标注 RAM 夹具；三连斩、蓄力、EX 招式与命中均为原版代码执行")
 
-# B1-1: 中途按键被忽略（无输入缓冲接续）
+# B1-1: 中途输入会触发后续段；不能只数 pose42 而漏掉 pose43/46。
 fr = trace("midslash_press_ignored", lambda t: (0,) if t in (0, 8, 16) else (), 60)
 starts = [fr2["t"] for i, fr2 in enumerate(fr[1:], 1) if fr2["pose"] == 42 and fr[i-1]["pose"] != 42]
-assert len(starts) == 0, starts
-results["B1_midslash_press"] = dict(starts=starts)
+assert fr[10]['pose'] == 43 and fr[18]['pose'] == 46
+results["B1_midslash_press"] = dict(second_at=10, third_at=18, pose42_restarts=starts)
 
-# B1-2: 斩击结束后每按接一段，最多三段
+# B1-2: 迟按的 pose42 是重新首斩；这项断言不证明三段上限。
 fr = trace("combo_cap3", lambda t: (0,) if t in (0, 19, 40, 61) else (), 85)
 starts = [fr2["t"] for i, fr2 in enumerate(fr[1:], 1) if fr2["pose"] == 42 and fr[i-1]["pose"] != 42]
 assert starts == [19, 40], starts
-results["B1_combo_cap"] = dict(starts=starts)
+results["B1_late_press_restart"] = dict(starts=starts, proves_combo_cap=False)
 
-# B1-3: 走路重置连段状态
+# B1-3: 只证明行走后可再起首斩；对照此前并非完整连段。
 fr = trace("walk_resets", lambda t: (0,) if t in (0, 19, 40) else ((7,) if 60 < t < 80 else ((0,) if t == 95 else ())), 110)
 starts = [fr2["t"] for i, fr2 in enumerate(fr[1:], 1) if fr2["pose"] == 42 and fr[i-1]["pose"] != 42]
 assert starts == [19, 40, 95], starts
-results["B1_walk_reset"] = dict(starts=starts)
+results["B1_walk_observation"] = dict(starts=starts, proves_reset_rule=False)
 
 # B2-1: 三连斩→升龙（实际扣血）
 fr = trace("chain_3slash_rising", lambda t: (0,) if t in (0, 19, 40) else ((4, 0) if t == 62 else ((4,) if 61 <= t < 75 else ())), 90, state=base)
 ch = hp_changes(fr)
 assert any(c[2] == 48 for c in ch if c[0] > 0), ch   # 升龙（pose 48）命中
+assert [ch[i-1][1] - ch[i][1] for i in range(1, len(ch))] == [8, 9, 10, 14], ch
+assert [change[2] for change in ch[1:]] == [42, 43, 46, 48], ch
 results["B2_chain1"] = dict(changes=ch)
 
 # B2-2: 蓄力斩命中 10（pose 52），之后普通斩重开连段
@@ -160,7 +171,8 @@ fr_hold = trace("rising_hold", lambda t: (4, 0) if 20 <= t < 60 else ((4,) if 15
 apex_tap = min(f["y"] for f in fr_tap)
 apex_hold = min(f["y"] for f in fr_hold)
 assert apex_tap == apex_hold == 103743, (apex_tap, apex_hold)
-results["B3_rising"] = dict(apex=apex_tap, identical_hold=True)
+assert [f['motion'] for f in fr_tap] == [f['motion'] for f in fr_hold]
+results["B3_rising"] = dict(apex=apex_tap, identical_hold=True, compared_updates=60, exit_observed=False)
 
 # B4: 命中门控——首斩命中后 13 帧的重斩可再命中（pose 43）
 fr = trace("rehit_15", lambda t: (0,) if t in (0, 15) else (), 40, state=base)
@@ -169,4 +181,5 @@ assert len(ch) == 3 and ch[2][0] == 15, ch
 results["B4_rehit13"] = dict(changes=ch)
 
 (OUT / "combat-fixtures-result.json").write_text(json.dumps(results, indent=1))
-print("ALL 2B FIXTURES PASSED")
+(OUT / "combat-fixtures-traces.json").write_text(json.dumps(TRACE_LOG))
+print("COVERED 2B FIXTURES PASSED; third full chain and Boss validation remain incomplete")

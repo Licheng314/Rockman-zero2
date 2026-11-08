@@ -11,7 +11,7 @@
    结算计算/显示/等级/存档累计全部为原版代码执行；这不是自然通关验证。
 4. 结算画面真实运行后记录 EBF0/0x02036BB4 字段并与静态公式模型断言比对。
 5. 精灵惩罚对照组：预置存档区精灵使用队列 +0x283（结算场景自己经 080D61B8 聚合）。
-6. 装甲/形态对照组：翻转玩家区候选形态/装备字节后重跑结算。
+6. 当前套装对照组：只改变 +0x1FC，分别对照 0/8/9；另测套装9和精灵点数6。
 """
 import json, struct, sys, ctypes
 from hashlib import sha1
@@ -28,8 +28,6 @@ OUT.mkdir(parents=True, exist_ok=True)
 assert sha1(f.read_bytes()).hexdigest() == ROM_SHA1
 
 ram = P.ram
-rom_base = P.maps[0x08000000][0]
-rom_bytes = (root / "baserom.gba").read_bytes()
 
 def wram(addr, data):
     if 0x03000000 <= addr < 0x03008000:
@@ -101,23 +99,20 @@ good_arena = last_good
 (OUT / "good_arena.bin").write_bytes(good_arena)
 print("good_arena saved at", good_x, flush=True)
 
-# ---- 3. 结算夹具入口 ----
-PATCH = 0x080E4390     # 每帧任务/计时更新器入口（计时冻结实验已验证可注入）
-TARGET = 0x080141FC    # 结算评分计算（此脚本用真实结算链，不用 141FC 直调）
-addr = PATCH - 0x08000000
-orig = C.string_at(rom_base + addr, 12)
-assert orig == rom_bytes[addr:addr + 12], "ROM 起始字节与文件不符"
-stub = struct.pack('<4H', 0xB500, 0x4801, 0x4700, 0x46C0) + struct.pack('<I', TARGET | 1)
-
-def run_settlement(assists_queue=0):
+# ---- 3. 结算夹具入口（没有 ROM 注入或执行跳板） ----
+def run_settlement(assists_queue=0, current_form=None, queue_state=None):
     """RAM 夹具：phase13 + bit5 触发真实 script10 结算链；可选预置精灵使用队列。"""
     load_state(good_arena)
     wram(0x0202EDAC, bytes([13]))
     ec = struct.unpack_from('<H', read(0x0202EC38, 2), 0)[0]
     wram(0x0202EC38, struct.pack('<H', ec | 0x20))
+    if current_form is not None:
+        wram(0x02037CF0 + 0x1FC, bytes([current_form]))
     if assists_queue:
         wram(0x02037CF0 + 0x283, bytes([assists_queue]))
         wram(0x02037CF0 + 0x284, bytes([0]))
+    if queue_state is not None:
+        wram(0x02037CF0 + 0x283, bytes(queue_state))
     for t in range(900):
         refresh()
         run()
@@ -131,6 +126,7 @@ def run_settlement(assists_queue=0):
         t_item=ebf0[0x17], k_item=ebf0[0x18], d_item=ebf0[0x19], death_item=ebf0[0x1A],
         elf_item=ebf0[0x1B], total=ebf0[5], rank=bb4[1],
         acc_total=struct.unpack_from('<H', bb4, 0xA)[0], clear_count=bb4[0x10], category=bb4[4],
+        acc_total_signed=struct.unpack_from('<h', bb4, 0xA)[0], current_form=player()[0x1FC],
     )
 
 def expected(inputs):
@@ -144,7 +140,7 @@ def expected(inputs):
     d_item = 15 if dmg == 0 else (0 if dmg > 75 else 15 - (dmg - 1) // 5)
     de = inputs["deaths"]
     de_item = 15 if de == 0 else (0 if de > 4 else 15 - 3 * de)
-    elf_item = (15 - inputs["assists"]) & 0xFF
+    elf_item = max(-100, 15 - inputs["assists"]) & 0xFF
     total = (inputs["bonus"] + t_item + k_item + d_item + de_item + elf_item) & 0xFF
     return dict(t_item=t_item, k_item=k_item, d_item=d_item, death_item=de_item,
                 elf_item=elf_item, total=total)
@@ -172,22 +168,14 @@ for n in (3, 6, 16):
     screenshot(OUT / f"settle_elf_{n}.png")
     print(f"elf {n} OK", rec, flush=True)
 
-# 装甲/形态对照组：翻转候选装备/形态字节
-load_state(good_arena)
-wram(0x0202EDAC, bytes([13]))
-ec = struct.unpack_from('<H', read(0x0202EC38, 2), 0)[0]
-wram(0x0202EC38, struct.pack('<H', ec | 0x20))
-for off, val in ((0x210, 0xFF), (0x211, 0xFF), (0x212, 3), (0x213, 3), (0x214, 0xFF), (0x215, 0xFF), (0x1FD, 0xFF), (0x1FE, 0xFF), (0x1FF, 0xFF)):
-    wram(0x02037CF0 + off, bytes([val]))
-for t in range(900):
-    refresh(); run()
-ebf0 = read(0x0202EBF0, 0x30); bb4 = read(0x02036BB4, 0x50)
-formflip = dict(assists=struct.unpack_from('<I', ebf0, 0x10)[0], elf_item=ebf0[0x1B], total=ebf0[5],
-                rank=bb4[1], category=bb4[4])
-results["form_flip"] = formflip
-assert formflip["total"] == base["total"] and formflip["rank"] == base["rank"], formflip
-print("form flip OK", formflip, flush=True)
-screenshot(OUT / "settle_form_flip.png")
+# 当前套装字段为 +1FC，不能用武器槽或 HP 区翻转代替。
+for form, penalty in ((0, 0), (8, 0), (9, 0), (9, 6)):
+    rec = run_settlement(penalty, current_form=form)
+    assert rec['current_form'] == form
+    assert rec['assists'] == penalty and rec['total'] == (68 - penalty)
+    results[f'current_form_{form}_queue_{penalty}'] = rec
+    screenshot(OUT / f'settle_form_{form}_queue_{penalty}.png')
+    print('current form OK', form, penalty, rec['total'], flush=True)
 
 (OUT / "score-fixtures-result.json").write_text(json.dumps(results, indent=1))
 print("ALL 2A FIXTURES PASSED")

@@ -1,0 +1,1376 @@
+{
+  "audited_commit": "96a83023",
+  "rom_sha1": "c4d93a58f0f82c526dec8a3fdbda170336303689",
+  "scope": "independent RAM-fixture rerun; does not complete A4 or Boss validation",
+  "original_clean_reproduction_failure": "2A writes build/stage2a/state0.bin; delivered 2B reads build/stage2a/scratch/state0.bin",
+  "score_baseline": {
+    "queue283": "000000",
+    "bonus": 20,
+    "time_frames": 3676,
+    "kills": 5,
+    "damage": 58,
+    "assists": 0,
+    "deaths": 2,
+    "t_item": 20,
+    "k_item": 0,
+    "d_item": 4,
+    "death_item": 9,
+    "elf_item": 15,
+    "total": 68,
+    "rank": 3,
+    "acc_total": 68,
+    "clear_count": 1,
+    "category": 1,
+    "acc_total_signed": 68,
+    "current_form": 0
+  },
+  "score_penalty_boundaries": {
+    "68": {
+      "queue283": "440000",
+      "bonus": 20,
+      "time_frames": 3676,
+      "kills": 5,
+      "damage": 58,
+      "assists": 68,
+      "deaths": 2,
+      "t_item": 20,
+      "k_item": 0,
+      "d_item": 4,
+      "death_item": 9,
+      "elf_item": 203,
+      "total": 0,
+      "rank": 0,
+      "acc_total": 0,
+      "clear_count": 1,
+      "category": 1,
+      "acc_total_signed": 0,
+      "current_form": 0
+    },
+    "69": {
+      "queue283": "450000",
+      "bonus": 20,
+      "time_frames": 3676,
+      "kills": 5,
+      "damage": 58,
+      "assists": 69,
+      "deaths": 2,
+      "t_item": 20,
+      "k_item": 0,
+      "d_item": 4,
+      "death_item": 9,
+      "elf_item": 202,
+      "total": 255,
+      "rank": 0,
+      "acc_total": 65535,
+      "clear_count": 1,
+      "category": 1,
+      "acc_total_signed": -1,
+      "current_form": 0
+    },
+    "115": {
+      "queue283": "730000",
+      "bonus": 20,
+      "time_frames": 3676,
+      "kills": 5,
+      "damage": 58,
+      "assists": 115,
+      "deaths": 2,
+      "t_item": 20,
+      "k_item": 0,
+      "d_item": 4,
+      "death_item": 9,
+      "elf_item": 156,
+      "total": 209,
+      "rank": 0,
+      "acc_total": 65489,
+      "clear_count": 1,
+      "category": 1,
+      "acc_total_signed": -47,
+      "current_form": 0
+    },
+    "116": {
+      "queue283": "740000",
+      "bonus": 20,
+      "time_frames": 3676,
+      "kills": 5,
+      "damage": 58,
+      "assists": 116,
+      "deaths": 2,
+      "t_item": 20,
+      "k_item": 0,
+      "d_item": 4,
+      "death_item": 9,
+      "elf_item": 156,
+      "total": 209,
+      "rank": 0,
+      "acc_total": 65489,
+      "clear_count": 1,
+      "category": 1,
+      "acc_total_signed": -47,
+      "current_form": 0
+    }
+  },
+  "penalty_queue_roll": {
+    "queue283": "050000",
+    "bonus": 20,
+    "time_frames": 3676,
+    "kills": 5,
+    "damage": 58,
+    "assists": 9,
+    "deaths": 2,
+    "t_item": 20,
+    "k_item": 0,
+    "d_item": 4,
+    "death_item": 9,
+    "elf_item": 6,
+    "total": 59,
+    "rank": 2,
+    "acc_total": 59,
+    "clear_count": 1,
+    "category": 1,
+    "acc_total_signed": 59,
+    "current_form": 0
+  },
+  "current_forms": {
+    "current_form_0_queue_0": {
+      "queue283": "000000",
+      "bonus": 20,
+      "time_frames": 3676,
+      "kills": 5,
+      "damage": 58,
+      "assists": 0,
+      "deaths": 2,
+      "t_item": 20,
+      "k_item": 0,
+      "d_item": 4,
+      "death_item": 9,
+      "elf_item": 15,
+      "total": 68,
+      "rank": 3,
+      "acc_total": 68,
+      "clear_count": 1,
+      "category": 1,
+      "acc_total_signed": 68,
+      "current_form": 0
+    },
+    "current_form_8_queue_0": {
+      "queue283": "000000",
+      "bonus": 20,
+      "time_frames": 3676,
+      "kills": 5,
+      "damage": 58,
+      "assists": 0,
+      "deaths": 2,
+      "t_item": 20,
+      "k_item": 0,
+      "d_item": 4,
+      "death_item": 9,
+      "elf_item": 15,
+      "total": 68,
+      "rank": 3,
+      "acc_total": 68,
+      "clear_count": 1,
+      "category": 1,
+      "acc_total_signed": 68,
+      "current_form": 8
+    },
+    "current_form_9_queue_0": {
+      "queue283": "000000",
+      "bonus": 20,
+      "time_frames": 3676,
+      "kills": 5,
+      "damage": 58,
+      "assists": 0,
+      "deaths": 2,
+      "t_item": 20,
+      "k_item": 0,
+      "d_item": 4,
+      "death_item": 9,
+      "elf_item": 15,
+      "total": 68,
+      "rank": 3,
+      "acc_total": 68,
+      "clear_count": 1,
+      "category": 1,
+      "acc_total_signed": 68,
+      "current_form": 9
+    },
+    "current_form_9_queue_6": {
+      "queue283": "060000",
+      "bonus": 20,
+      "time_frames": 3676,
+      "kills": 5,
+      "damage": 58,
+      "assists": 6,
+      "deaths": 2,
+      "t_item": 20,
+      "k_item": 0,
+      "d_item": 4,
+      "death_item": 9,
+      "elf_item": 9,
+      "total": 62,
+      "rank": 2,
+      "acc_total": 62,
+      "clear_count": 1,
+      "category": 1,
+      "acc_total_signed": 62,
+      "current_form": 9
+    }
+  },
+  "combat_original_assertions": {
+    "rom_sha1": "c4d93a58f0f82c526dec8a3fdbda170336303689",
+    "target": "0x30057c0",
+    "target_identity": {
+      "hp": 200,
+      "pool_handle": 33747064,
+      "type_table": 137615760,
+      "kind": 1,
+      "callback": 134638133,
+      "x": 403456,
+      "y": 114687,
+      "status": 4
+    },
+    "note": "\u6b66\u5668/EX\u4f7f\u80fd/\u6210\u957f/\u76ee\u6807HP\u5747\u4e3a\u6807\u6ce8 RAM \u5939\u5177\uff1b\u4e09\u8fde\u65a9\u3001\u84c4\u529b\u3001EX \u62db\u5f0f\u4e0e\u547d\u4e2d\u5747\u4e3a\u539f\u7248\u4ee3\u7801\u6267\u884c",
+    "B1_midslash_press": {
+      "second_at": 10,
+      "third_at": 18,
+      "pose42_restarts": []
+    },
+    "B1_late_press_restart": {
+      "starts": [
+        19,
+        40
+      ],
+      "proves_combo_cap": false
+    },
+    "B1_walk_observation": {
+      "starts": [
+        19,
+        40,
+        95
+      ],
+      "proves_reset_rule": false
+    },
+    "B2_chain1": {
+      "changes": [
+        [
+          0,
+          200,
+          42
+        ],
+        [
+          2,
+          192,
+          42
+        ],
+        [
+          19,
+          183,
+          43
+        ],
+        [
+          40,
+          173,
+          46
+        ],
+        [
+          85,
+          159,
+          48
+        ]
+      ]
+    },
+    "B2_chain2": {
+      "changes": [
+        [
+          0,
+          200,
+          1
+        ],
+        [
+          7,
+          192,
+          42
+        ],
+        [
+          195,
+          182,
+          52
+        ],
+        [
+          247,
+          174,
+          42
+        ],
+        [
+          265,
+          165,
+          43
+        ]
+      ]
+    },
+    "B3_rising": {
+      "apex": 103743,
+      "identical_hold": true,
+      "compared_updates": 60,
+      "exit_observed": false
+    },
+    "B4_rehit13": {
+      "changes": [
+        [
+          0,
+          200,
+          42
+        ],
+        [
+          2,
+          192,
+          42
+        ],
+        [
+          15,
+          183,
+          43
+        ]
+      ]
+    }
+  },
+  "midslash_events": [
+    {
+      "t": 0,
+      "pose": 42,
+      "attack": [
+        3,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "t": 10,
+      "pose": 43,
+      "attack": [
+        3,
+        1,
+        1,
+        2
+      ]
+    },
+    {
+      "t": 18,
+      "pose": 46,
+      "attack": [
+        3,
+        1,
+        1,
+        2
+      ]
+    },
+    {
+      "t": 52,
+      "pose": 1,
+      "attack": [
+        1,
+        0,
+        0,
+        0
+      ]
+    }
+  ],
+  "window_scan": {
+    "1": [
+      {
+        "t": 0,
+        "pose": 42,
+        "attack": [
+          3,
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "t": 18,
+        "pose": 1,
+        "attack": [
+          1,
+          0,
+          0,
+          0
+        ]
+      }
+    ],
+    "2": [
+      {
+        "t": 0,
+        "pose": 42,
+        "attack": [
+          3,
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "t": 18,
+        "pose": 1,
+        "attack": [
+          1,
+          0,
+          0,
+          0
+        ]
+      }
+    ],
+    "3": [
+      {
+        "t": 0,
+        "pose": 42,
+        "attack": [
+          3,
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "t": 10,
+        "pose": 43,
+        "attack": [
+          3,
+          1,
+          1,
+          2
+        ]
+      },
+      {
+        "t": 34,
+        "pose": 1,
+        "attack": [
+          1,
+          0,
+          0,
+          0
+        ]
+      }
+    ],
+    "4": [
+      {
+        "t": 0,
+        "pose": 42,
+        "attack": [
+          3,
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "t": 10,
+        "pose": 43,
+        "attack": [
+          3,
+          1,
+          1,
+          2
+        ]
+      },
+      {
+        "t": 34,
+        "pose": 1,
+        "attack": [
+          1,
+          0,
+          0,
+          0
+        ]
+      }
+    ],
+    "5": [
+      {
+        "t": 0,
+        "pose": 42,
+        "attack": [
+          3,
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "t": 10,
+        "pose": 43,
+        "attack": [
+          3,
+          1,
+          1,
+          2
+        ]
+      },
+      {
+        "t": 34,
+        "pose": 1,
+        "attack": [
+          1,
+          0,
+          0,
+          0
+        ]
+      }
+    ],
+    "6": [
+      {
+        "t": 0,
+        "pose": 42,
+        "attack": [
+          3,
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "t": 10,
+        "pose": 43,
+        "attack": [
+          3,
+          1,
+          1,
+          2
+        ]
+      },
+      {
+        "t": 34,
+        "pose": 1,
+        "attack": [
+          1,
+          0,
+          0,
+          0
+        ]
+      }
+    ],
+    "7": [
+      {
+        "t": 0,
+        "pose": 42,
+        "attack": [
+          3,
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "t": 10,
+        "pose": 43,
+        "attack": [
+          3,
+          1,
+          1,
+          2
+        ]
+      },
+      {
+        "t": 34,
+        "pose": 1,
+        "attack": [
+          1,
+          0,
+          0,
+          0
+        ]
+      }
+    ],
+    "8": [
+      {
+        "t": 0,
+        "pose": 42,
+        "attack": [
+          3,
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "t": 10,
+        "pose": 43,
+        "attack": [
+          3,
+          1,
+          1,
+          2
+        ]
+      },
+      {
+        "t": 34,
+        "pose": 1,
+        "attack": [
+          1,
+          0,
+          0,
+          0
+        ]
+      }
+    ],
+    "9": [
+      {
+        "t": 0,
+        "pose": 42,
+        "attack": [
+          3,
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "t": 10,
+        "pose": 43,
+        "attack": [
+          3,
+          1,
+          1,
+          2
+        ]
+      },
+      {
+        "t": 34,
+        "pose": 1,
+        "attack": [
+          1,
+          0,
+          0,
+          0
+        ]
+      }
+    ],
+    "10": [
+      {
+        "t": 0,
+        "pose": 42,
+        "attack": [
+          3,
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "t": 10,
+        "pose": 43,
+        "attack": [
+          3,
+          1,
+          1,
+          2
+        ]
+      },
+      {
+        "t": 34,
+        "pose": 1,
+        "attack": [
+          1,
+          0,
+          0,
+          0
+        ]
+      }
+    ],
+    "11": [
+      {
+        "t": 0,
+        "pose": 42,
+        "attack": [
+          3,
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "t": 11,
+        "pose": 43,
+        "attack": [
+          3,
+          1,
+          1,
+          2
+        ]
+      },
+      {
+        "t": 35,
+        "pose": 1,
+        "attack": [
+          1,
+          0,
+          0,
+          0
+        ]
+      }
+    ],
+    "12": [
+      {
+        "t": 0,
+        "pose": 42,
+        "attack": [
+          3,
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "t": 12,
+        "pose": 43,
+        "attack": [
+          3,
+          1,
+          1,
+          2
+        ]
+      },
+      {
+        "t": 36,
+        "pose": 1,
+        "attack": [
+          1,
+          0,
+          0,
+          0
+        ]
+      }
+    ],
+    "13": [
+      {
+        "t": 0,
+        "pose": 42,
+        "attack": [
+          3,
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "t": 13,
+        "pose": 43,
+        "attack": [
+          3,
+          1,
+          1,
+          2
+        ]
+      },
+      {
+        "t": 37,
+        "pose": 1,
+        "attack": [
+          1,
+          0,
+          0,
+          0
+        ]
+      }
+    ],
+    "14": [
+      {
+        "t": 0,
+        "pose": 42,
+        "attack": [
+          3,
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "t": 14,
+        "pose": 43,
+        "attack": [
+          3,
+          1,
+          1,
+          2
+        ]
+      },
+      {
+        "t": 38,
+        "pose": 1,
+        "attack": [
+          1,
+          0,
+          0,
+          0
+        ]
+      }
+    ],
+    "15": [
+      {
+        "t": 0,
+        "pose": 42,
+        "attack": [
+          3,
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "t": 15,
+        "pose": 43,
+        "attack": [
+          3,
+          1,
+          1,
+          2
+        ]
+      },
+      {
+        "t": 39,
+        "pose": 1,
+        "attack": [
+          1,
+          0,
+          0,
+          0
+        ]
+      }
+    ],
+    "16": [
+      {
+        "t": 0,
+        "pose": 42,
+        "attack": [
+          3,
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "t": 16,
+        "pose": 43,
+        "attack": [
+          3,
+          1,
+          1,
+          2
+        ]
+      },
+      {
+        "t": 40,
+        "pose": 1,
+        "attack": [
+          1,
+          0,
+          0,
+          0
+        ]
+      }
+    ],
+    "17": [
+      {
+        "t": 0,
+        "pose": 42,
+        "attack": [
+          3,
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "t": 17,
+        "pose": 43,
+        "attack": [
+          3,
+          1,
+          1,
+          2
+        ]
+      },
+      {
+        "t": 41,
+        "pose": 1,
+        "attack": [
+          1,
+          0,
+          0,
+          0
+        ]
+      }
+    ],
+    "18": [
+      {
+        "t": 0,
+        "pose": 42,
+        "attack": [
+          3,
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "t": 18,
+        "pose": 43,
+        "attack": [
+          3,
+          1,
+          1,
+          2
+        ]
+      },
+      {
+        "t": 42,
+        "pose": 1,
+        "attack": [
+          1,
+          0,
+          0,
+          0
+        ]
+      }
+    ],
+    "19": [
+      {
+        "t": 0,
+        "pose": 42,
+        "attack": [
+          3,
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "t": 18,
+        "pose": 1,
+        "attack": [
+          1,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "t": 19,
+        "pose": 42,
+        "attack": [
+          3,
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "t": 37,
+        "pose": 1,
+        "attack": [
+          1,
+          0,
+          0,
+          0
+        ]
+      }
+    ],
+    "20": [
+      {
+        "t": 0,
+        "pose": 42,
+        "attack": [
+          3,
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "t": 18,
+        "pose": 1,
+        "attack": [
+          1,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "t": 20,
+        "pose": 42,
+        "attack": [
+          3,
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "t": 38,
+        "pose": 1,
+        "attack": [
+          1,
+          0,
+          0,
+          0
+        ]
+      }
+    ],
+    "21": [
+      {
+        "t": 0,
+        "pose": 42,
+        "attack": [
+          3,
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "t": 18,
+        "pose": 1,
+        "attack": [
+          1,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "t": 21,
+        "pose": 42,
+        "attack": [
+          3,
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "t": 39,
+        "pose": 1,
+        "attack": [
+          1,
+          0,
+          0,
+          0
+        ]
+      }
+    ],
+    "22": [
+      {
+        "t": 0,
+        "pose": 42,
+        "attack": [
+          3,
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "t": 18,
+        "pose": 1,
+        "attack": [
+          1,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "t": 22,
+        "pose": 42,
+        "attack": [
+          3,
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "t": 40,
+        "pose": 1,
+        "attack": [
+          1,
+          0,
+          0,
+          0
+        ]
+      }
+    ]
+  },
+  "chain1_events": [
+    {
+      "t": 0,
+      "pose": 42,
+      "attack": [
+        3,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "t": 19,
+      "pose": 43,
+      "attack": [
+        3,
+        1,
+        1,
+        2
+      ]
+    },
+    {
+      "t": 40,
+      "pose": 46,
+      "attack": [
+        3,
+        1,
+        1,
+        2
+      ]
+    },
+    {
+      "t": 82,
+      "pose": 46,
+      "attack": [
+        3,
+        1,
+        2,
+        0
+      ]
+    },
+    {
+      "t": 83,
+      "pose": 48,
+      "attack": [
+        3,
+        1,
+        2,
+        1
+      ]
+    }
+  ],
+  "chain1_hp_changes": [
+    [
+      0,
+      200,
+      42
+    ],
+    [
+      2,
+      192,
+      42
+    ],
+    [
+      19,
+      183,
+      43
+    ],
+    [
+      40,
+      173,
+      46
+    ],
+    [
+      85,
+      159,
+      48
+    ]
+  ],
+  "rising": {
+    "compared_updates": 110,
+    "identical_y_trajectory": true,
+    "tap_events": [
+      {
+        "t": 0,
+        "pose": 1,
+        "attack": [
+          1,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "t": 20,
+        "pose": 48,
+        "attack": [
+          3,
+          1,
+          2,
+          1
+        ]
+      },
+      {
+        "t": 28,
+        "pose": 49,
+        "attack": [
+          3,
+          1,
+          2,
+          3
+        ]
+      },
+      {
+        "t": 49,
+        "pose": 50,
+        "attack": [
+          3,
+          1,
+          2,
+          5
+        ]
+      },
+      {
+        "t": 53,
+        "pose": 6,
+        "attack": [
+          1,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "t": 60,
+        "pose": 126,
+        "attack": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "t": 76,
+        "pose": 126,
+        "attack": [
+          1,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "t": 77,
+        "pose": 1,
+        "attack": [
+          1,
+          0,
+          0,
+          0
+        ]
+      }
+    ],
+    "hold_events": [
+      {
+        "t": 0,
+        "pose": 1,
+        "attack": [
+          1,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "t": 20,
+        "pose": 48,
+        "attack": [
+          3,
+          1,
+          2,
+          1
+        ]
+      },
+      {
+        "t": 28,
+        "pose": 49,
+        "attack": [
+          3,
+          1,
+          2,
+          3
+        ]
+      },
+      {
+        "t": 49,
+        "pose": 50,
+        "attack": [
+          3,
+          1,
+          2,
+          5
+        ]
+      },
+      {
+        "t": 53,
+        "pose": 6,
+        "attack": [
+          1,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "t": 60,
+        "pose": 126,
+        "attack": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "t": 76,
+        "pose": 126,
+        "attack": [
+          1,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "t": 77,
+        "pose": 1,
+        "attack": [
+          1,
+          0,
+          0,
+          0
+        ]
+      }
+    ],
+    "final_pose": 1
+  },
+  "scripts": {
+    "research/stage2a/run-score-fixtures.py": "4cfc210240ccae2f0e44ada1bb5eb321620fb9af7e6a93b5309d2859b68c893f",
+    "research/stage2b/run-combat-fixtures.py": "e1ba1ec1c3e26dbe1b0252ad5423092032bdfd6ad7a67ae12c14c7015eb40653",
+    "research/verify-stage2ab-acceptance.py": "bc9385bdccbf4a0525cd8221b7c1bd04c0164a4415df8469dc85e3a246cba679"
+  },
+  "disk_rom_and_existing_save_unchanged": true,
+  "original_script_sha256": {
+    "research/stage2a/run-score-fixtures.py": "7244cca5ae27b2ac5febe77992802fee7cbac1771736e180bfd690e17c280eef",
+    "research/stage2b/run-combat-fixtures.py": "f59af88afe1a3b261dc6ccab9780a49544dfb5054a711ab9dbb332baeb7979cd"
+  },
+  "raw_audit_sha256": "b3f120cfdb85abd7ea3adb8f0868e24a30d7e59b9ce702e3844e191e20d24407",
+  "acceptance": {
+    "overall": "partial; neither complete stage accepted",
+    "A1": "partial",
+    "A2": "selected settlement fixtures only",
+    "A3": "fixture display accepted",
+    "A4": "partial",
+    "B1": "incorrect original inference; partial after correction",
+    "B2": "chain1 accepted; full three-chain item incomplete",
+    "B3": "selected sample accepted",
+    "B4": "partial, Boss and rejection controls missing"
+  }
+}

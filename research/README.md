@@ -7,8 +7,8 @@
 - `emulator/` 提供 Libretro 内存访问。脚本只操作模拟器内存，不加载或写入磁盘存档。
 - `stage1/` 覆盖普通难度序章的移动、冲刺边界、跳跃参数、生命和受击计数。
 - `stage2/` 覆盖武器样本、枪弹参数、属性菜单、受控抗性、电子精灵、储量槽和选中存档字段。
-- `stage2a/` 覆盖任务 1 结算评分：真实结算画面运行（phase13+bit5 为标注 RAM 夹具）、分项公式断言、精灵使用队列惩罚与装甲/形态对照。执行 `python -X utf8 -B research/stage2a/run-score-fixtures.py`，结果写 `build/stage2a`；见[阶段 2A 报告](../docs/STAGE2A-SCORE-RESEARCH.md)。
-- `stage2b/` 覆盖剑三连斩窗口/上限、蓄力斩、EX 升龙/下戳使能与命中扣血：执行 `python -X utf8 -B research/stage2b/run-combat-fixtures.py`（需先跑 stage2a 生成中间存档），结果写 `build/stage2b`；见[阶段 2B 报告](../docs/STAGE2B-COMBAT-RESEARCH.md)。
+- `stage2a/` 覆盖任务 1 结算评分：真实结算画面运行（phase13+bit5 为标注 RAM 夹具）、分项公式断言、精灵点数与当前套装字段对照（不外推全部使用流程）。执行 `python -X utf8 -B research/stage2a/run-score-fixtures.py`，结果写 `build/stage2a`；见[阶段 2A 报告](../docs/STAGE2A-SCORE-RESEARCH.md)。
+- `stage2b/` 覆盖有限接段观察、蓄力斩样本和三连斩→升龙扣血；不证明完整窗口/上限或空中招式不存在：执行 `python -X utf8 -B research/stage2b/run-combat-fixtures.py`（需先跑 stage2a 生成中间存档），结果写 `build/stage2b`；见[阶段 2B 报告](../docs/STAGE2B-COMBAT-RESEARCH.md)。
 
 蓄力锁链样本使用动作重入与预置蓄力计数，元素差异使用受控目标抗性，存档往返使用内存调用夹具。通过检查只证明对应阶段报告列出的样本。核心版本可能影响状态格式和运行结果，报告问题时请附工具版本和检查输出。
 
@@ -19,3 +19,5 @@
 这是 2C 首批有限检查，不是完整阶段通过；运行中的 RAM 夹具、Z3 静态对照及未测范围见[报告](../docs/STAGE2C-ATTACK-CONTRACT.md)。本批尚未加入 `run_checks.py` 的阶段选择，以免将前置样本误称为整体验收。
 
 第二批另提供 `stage2c/inspect-buster-contract.py`（静态证据）和 `stage2c/probe-buster-lifecycle.py`（12 组原版枪弹登记、退场、失败及资源槽条件）。执行 `python -X utf8 -B research/stage2c/probe-buster-lifecycle.py`，原始结果同样写 `build/stage2c`；只有模拟器 RAM 预置，没有 ROM 修改。阶段 2C 仍未整体验收。
+
+ZCode 2A/2B独立验收复跑：`python -X utf8 -B research/verify-stage2ab-acceptance.py`，包含结算边界、输入反例及110次轨迹对照。阶段仍部分接受，见[验收](../docs/STAGE2AB-ACCEPTANCE.md)。

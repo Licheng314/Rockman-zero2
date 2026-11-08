@@ -2,7 +2,11 @@
 
 2026-11-08。此文件是唯一现役 ZCode 任务书，取代旧夜间提取、阶段 1 分工和 2026-10-30 交接。总范围见[语义路线](SEMANTIC-ROADMAP.md)，当前研究事实见[HANDOVER](HANDOVER.md)。历史额度和截止时间不沿用；本轮按有限目标停止，额度充足不构成扩大范围的理由。
 
-## 可直接交给 ZCode 的提示词
+## 当前执行状态
+
+2A/2B已交付并完成[独立验收](STAGE2AB-ACCEPTANCE.md)，两包均为部分接受。以下保留原合同供对照，不能再次从头执行或自行扩预算。先按验收修正既有结论与复跑缺口；新增函数/场景需另划有限包，不沿用“交付完成”自行转2C。
+
+## 原任务合同（用于对照验收）
 
 你接手 Rockman Zero 2 美版原版的语义研究，在 `D:\NewStudio\Decompilation\public-release-clean-20261101` 的 `main` 工作。先读 `AGENTS.md`、`docs/HANDOVER.md`、`docs/CONTINUE.md`、`docs/SEMANTIC-ROADMAP.md` 和本文件。先核对分支、Git 状态、原 ROM SHA1 与写入锁，保留已有成果。不在 `Rockman-zero2-mod` 工作，不切换改版分支，不制作或发布新 ROM。
 
