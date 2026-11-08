@@ -116,7 +116,8 @@ def trace(name, script, total, state=None):
         run(*script(t))
         z = player()
         frames.append(dict(t=t, pose=z[0x17F], atk=list(z[0x176:0x17A]),
-                           buf=z[0x2BB], chg=struct.unpack_from('<I', z, 0x188)[0],
+                           buf=z[0x2BB], latch=z[0x2B8], chain=z[0x2B7], archive=z[0x2BF],
+                           chg=struct.unpack_from('<I', z, 0x188)[0],
                            charge_bytes=list(z[0x188:0x18C]), phase=list(z[0xD:0x11]), zero_hp=int.from_bytes(z[0xA4:0xA6], 'little'),
                            hp=hp_of(), y=struct.unpack_from('<i', z, 0x58)[0],
                            motion=list(struct.unpack_from('<4i', z, 0x54)), ay=struct.unpack_from('<i', z, 0x68)[0]))
@@ -191,27 +192,30 @@ assert not any(f['pose'] in (43, 46) for f in fr), [f['pose'] for f in fr]   # �
 fr = trace("R1_press16_no_followup", lambda t: (0,) if t in (0, 16) else (), 45)
 assert fr[16]['pose'] == 43 and not any(f['pose'] == 46 for f in fr)   # 取消后续输入 -> 不报完整连段
 results["R1_buffer"] = dict(
-    field="+0x2BB(请求码,写入时+0x2B8=1,消费时清0并存档到+0x2BF/+0x2B7链计数)",
-    write="新按帧(08035A40/08035984 解析码)", consume="窗口门(08035B60)通过后提交(08035ADC),延迟0-2帧",
-    clear="消费即清;受击打断/回待机清链计数(+0x179/+0x2B7)", three_press="t8写2->t10 pose43; t16写3->t18 pose46")
+    field="+0x2BB:所选普通接段请求;EX启动后可保留5,不能统一称消费必清",
+    write="08035A40调用08035984取得码并锁存", consume="08029F90调用窗口门与08035ADC分类提交;普通段初始化08029E30清请求、存2BF、加2B7并清2B8",
+    scope="普通接段观测延迟0-2次更新;升龙保留与延迟另见独立复核", three_press="t8写2->t10 pose43; t16写3->t18 pose46")
 
 # ---- R2（修补包）：蓄力释放->命中->首斩->第二斩->第三斩 一次连续运行 ----
-# 时序完全复用已验收 charge_then_combo（5..195 持按=首帧自动斩+蓄力,195 释放,245/265 按），
-# 第三按扫描 266..280（单次批量）均未接第三段：hit2(265,pose43,-9) 命中后命中停顿推迟接受窗口，
-# 目标反击 t=273（玩家 pose 129）打断并清空连段状态；291 帧重按从首斩重启（chain=1）。
-fr = trace("R2_charged_then_combo", lambda t: (0,) if 5 <= t < 195 else ((0,) if t in (245, 265) else ()), 300, state=base)
+# 复用 charge_then_combo，在269明确补第三次新按；扫描留在独立验收脚本。
+# 272扣血/273受击只验证观察时序，不能据此单独归因窗口或受击来源；受击时chain仍2。
+fr = trace("R2_charged_then_combo", lambda t: (0,) if 5 <= t < 195 else ((0,) if t in (245, 265, 269) else ()), 300, state=base)
 ch = hp_changes(fr)
 assert ch[2][2] == 52 and ch[2][1] == 182, ch                      # 蓄力斩 -10 (pose 52)
 assert ch[3][2] == 42 and ch[3][1] == 174, ch                      # 首斩 -8
 assert ch[4][2] == 43 and ch[4][1] == 165, ch                      # 第二斩 -9
-assert not any(c[2] == 46 for c in ch), ch                         # 第三斩未发生（有界失败）
+assert not any(f['pose'] == 46 for f in fr), ch                    # 确实按第三次后，未生成第三斩
+assert fr[269]['buf'] == 0 and fr[269]['latch'] == 0               # 本次新按未见请求锁存，非“已缓存但未消费”
+assert fr[272]['zero_hp'] < fr[271]['zero_hp'] and fr[273]['pose'] == 129
+assert fr[273]['chain'] == 2                                     # 受击时没有立即清零
 fr = trace("R2_react_recover_repress", lambda t: (0,) if 5 <= t < 195 else ((0,) if t in (245, 265, 291) else ()), 320, state=base)
 ch2 = hp_changes(fr)
 assert ch2[-1][2] == 42 and ch2[-1][1] == 157, ch2                 # 打断后重按=首斩重启（chain=1）
+assert fr[291]['pose'] == 42 and fr[291]['chain'] == 1
 results["R2_charged_chain"] = dict(
     continuous_run="蓄力命中-10(pose52,t195) -> 首斩-8(t247,pose42,chain1) -> 第二斩-9(t265,pose43,chain2)",
-    third_slash="失败:press3 266-280 扫描均未接 pose46;首个失效环节=第三斩请求未被接受且目标反击 t273(玩家pose129)打断清状态",
-    charge_note="P+0x188 计数在蓄力姿势丢失(94-167)期间继续累计;按住时长!=计数",
+    third_slash="269第三次新按未见请求锁存或pose46;272玩家扣血,273进入受击,chain仍2;扫描与边界见独立验收脚本",
+    charge_note="所选连续样本P+188在t94=68,t166=140,t194=168;姿势和计数可分离;持按时长不等于计数",
     verdict="有界受阻:三段中前两段成立,第三段在本对抗场景未复现;非输入系统普遍拒绝(无目标时 mid-hit2 可接)")
 
 (OUT / "combat-fixtures-result.json").write_text(json.dumps(results, indent=1))
