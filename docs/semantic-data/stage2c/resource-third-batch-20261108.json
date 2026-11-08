@@ -1,0 +1,1364 @@
+{
+  "rom_sha1": "c4d93a58f0f82c526dec8a3fdbda170336303689",
+  "core_sha256": "02747c2a77ea4ed9738c967d101a207a81973233588f68d39f5ab923a1a9599c",
+  "script_sha256": "4057f5e759ca574e5c06208c8178837b0cfc392e80a501a3c464bf9e7fd2381f",
+  "kind": "original-ROM execution with explicitly labeled RAM fixtures; updates are retro_run calls",
+  "pool_handle": 33747056,
+  "type_table": 137584736,
+  "new_functions": [
+    {
+      "start": 134446572,
+      "end": 134446602,
+      "rom_sha256": "4eb263ec835a69a3b534aa56087a01a234407e3b012def7fd8c9731b8af3048a",
+      "asm_sha256": "7dd106a426239eadb63d839f1498d63678692ad76c1fde1ad659e1ef5c52f33a"
+    },
+    {
+      "start": 134446604,
+      "end": 134446620,
+      "rom_sha256": "5ea89a49787ea8f83b160d105c10cf91cd0df300ff1caa1c0aa0dbe1c8e8da86",
+      "asm_sha256": "3b74c50fefb949e0d9f54b0183cf7fa72b3f5025e3e76209a141a6992958ff7e"
+    },
+    {
+      "start": 134451368,
+      "end": 134451380,
+      "rom_sha256": "6777ef3fcb4b8c5c8cf05ad1cf08f78e850be9077a5f1c6064098073fa4d94f7",
+      "asm_sha256": "de030786d09a2001072cac15b238edca9f3341812721f546c7ccb99f81baa656"
+    },
+    {
+      "start": 134451232,
+      "end": 134451310,
+      "rom_sha256": "6c5119a1cb6c8ca825442fd5dfdd16ae13b6957bc59aff9539c638d69acf26c1",
+      "asm_sha256": "31e0758c75ac3379fa57534117a0cb0fabdc8a709e5ce5d843d6743f8740115d"
+    }
+  ],
+  "scenarios": {
+    "control": {
+      "fixture": "none; idle original stage1 baseline",
+      "frames": [
+        {
+          "update": 0,
+          "current": [
+            0,
+            65535,
+            65535,
+            65535
+          ],
+          "requested": [
+            0,
+            65535,
+            65535,
+            65535
+          ],
+          "shadow": {
+            "1": "0000a0b488c5d26adefbdc829f93ffd38883f2bff5fb8883f243f5fbbfffffff",
+            "6": "0000b91845104510451045104510451045104510451045104510451045104510"
+          },
+          "hardware": {
+            "1": "0000a0b488c5d26adefbdc829f93ffd38883f2bff5fb8883f243f5fbbfffffff",
+            "6": "0000b91845104510451045104510451045104510451045104510451045104510"
+          },
+          "vram_sha256": "c64aef61eed8cfb05f1c72fd5486e6737bb053192e26ce3cdabeb01950321d13",
+          "objects": [
+            {
+              "address": 33793924,
+              "kind": 0,
+              "lifecycle_table": 137584804,
+              "state": 1,
+              "callback": 134451469,
+              "owner": 33783024,
+              "tile_base": 0,
+              "palette_bank": 1
+            }
+          ],
+          "obj_palette_sha256": "4abb59e145da832ddfe956de07c3f1820bc95dacd58f638a3b7ed43de82f21d7"
+        },
+        {
+          "update": 1,
+          "current": [
+            0,
+            65535,
+            65535,
+            65535
+          ],
+          "requested": [
+            0,
+            65535,
+            65535,
+            65535
+          ],
+          "shadow": {
+            "1": "0000a0b488c5d26adefbdc829f93ffd38883f2bff5fb8883f243f5fbbfffffff",
+            "6": "0000b91845104510451045104510451045104510451045104510451045104510"
+          },
+          "hardware": {
+            "1": "0000a0b488c5d26adefbdc829f93ffd38883f2bff5fb8883f243f5fbbfffffff",
+            "6": "0000b91845104510451045104510451045104510451045104510451045104510"
+          },
+          "vram_sha256": "89e8b6ca87b465ec52c83c828b2a523567f46d8786592d7fa68f17eff45d393f",
+          "objects": [
+            {
+              "address": 33793924,
+              "kind": 0,
+              "lifecycle_table": 137584804,
+              "state": 1,
+              "callback": 134451469,
+              "owner": 33783024,
+              "tile_base": 0,
+              "palette_bank": 1
+            }
+          ],
+          "obj_palette_sha256": "4abb59e145da832ddfe956de07c3f1820bc95dacd58f638a3b7ed43de82f21d7"
+        },
+        {
+          "update": 2,
+          "current": [
+            0,
+            65535,
+            65535,
+            65535
+          ],
+          "requested": [
+            0,
+            65535,
+            65535,
+            65535
+          ],
+          "shadow": {
+            "1": "0000a0b488c5d26adefbdc829f93ffd38883f2bff5fb8883f243f5fbbfffffff",
+            "6": "0000b91845104510451045104510451045104510451045104510451045104510"
+          },
+          "hardware": {
+            "1": "0000a0b488c5d26adefbdc829f93ffd38883f2bff5fb8883f243f5fbbfffffff",
+            "6": "0000b91845104510451045104510451045104510451045104510451045104510"
+          },
+          "vram_sha256": "89e8b6ca87b465ec52c83c828b2a523567f46d8786592d7fa68f17eff45d393f",
+          "objects": [
+            {
+              "address": 33793924,
+              "kind": 0,
+              "lifecycle_table": 137584804,
+              "state": 1,
+              "callback": 134451469,
+              "owner": 33783024,
+              "tile_base": 0,
+              "palette_bank": 1
+            }
+          ],
+          "obj_palette_sha256": "4abb59e145da832ddfe956de07c3f1820bc95dacd58f638a3b7ed43de82f21d7"
+        },
+        {
+          "update": 3,
+          "current": [
+            0,
+            65535,
+            65535,
+            65535
+          ],
+          "requested": [
+            0,
+            65535,
+            65535,
+            65535
+          ],
+          "shadow": {
+            "1": "0000a0b488c5d26adefbdc829f93ffd38883f2bff5fb8883f243f5fbbfffffff",
+            "6": "0000b91845104510451045104510451045104510451045104510451045104510"
+          },
+          "hardware": {
+            "1": "0000a0b488c5d26adefbdc829f93ffd38883f2bff5fb8883f243f5fbbfffffff",
+            "6": "0000b91845104510451045104510451045104510451045104510451045104510"
+          },
+          "vram_sha256": "c916dae5610efca1af1128e46149fb30e4cadc335fdb6794426d23780213faac",
+          "objects": [
+            {
+              "address": 33793924,
+              "kind": 0,
+              "lifecycle_table": 137584804,
+              "state": 1,
+              "callback": 134451469,
+              "owner": 33783024,
+              "tile_base": 0,
+              "palette_bank": 1
+            }
+          ],
+          "obj_palette_sha256": "4abb59e145da832ddfe956de07c3f1820bc95dacd58f638a3b7ed43de82f21d7"
+        },
+        {
+          "update": 4,
+          "current": [
+            0,
+            65535,
+            65535,
+            65535
+          ],
+          "requested": [
+            0,
+            65535,
+            65535,
+            65535
+          ],
+          "shadow": {
+            "1": "0000a0b488c5d26adefbdc829f93ffd38883f2bff5fb8883f243f5fbbfffffff",
+            "6": "0000b91845104510451045104510451045104510451045104510451045104510"
+          },
+          "hardware": {
+            "1": "0000a0b488c5d26adefbdc829f93ffd38883f2bff5fb8883f243f5fbbfffffff",
+            "6": "0000b91845104510451045104510451045104510451045104510451045104510"
+          },
+          "vram_sha256": "c5e9bf31d31757f2e6c241932fd2f75c0b702d5f0110966b22822b25ae01397f",
+          "objects": [
+            {
+              "address": 33793924,
+              "kind": 0,
+              "lifecycle_table": 137584804,
+              "state": 1,
+              "callback": 134451469,
+              "owner": 33783024,
+              "tile_base": 0,
+              "palette_bank": 1
+            }
+          ],
+          "obj_palette_sha256": "4abb59e145da832ddfe956de07c3f1820bc95dacd58f638a3b7ed43de82f21d7"
+        }
+      ]
+    },
+    "replace_restore": {
+      "fixture": "requested[0]=1 for two updates, then 0 for two updates",
+      "frames": [
+        {
+          "update": 0,
+          "current": [
+            0,
+            65535,
+            65535,
+            65535
+          ],
+          "requested": [
+            0,
+            65535,
+            65535,
+            65535
+          ],
+          "shadow": {
+            "1": "0000a0b488c5d26adefbdc829f93ffd38883f2bff5fb8883f243f5fbbfffffff",
+            "6": "0000b91845104510451045104510451045104510451045104510451045104510"
+          },
+          "hardware": {
+            "1": "0000a0b488c5d26adefbdc829f93ffd38883f2bff5fb8883f243f5fbbfffffff",
+            "6": "0000b91845104510451045104510451045104510451045104510451045104510"
+          },
+          "vram_sha256": "c64aef61eed8cfb05f1c72fd5486e6737bb053192e26ce3cdabeb01950321d13",
+          "objects": [
+            {
+              "address": 33793924,
+              "kind": 0,
+              "lifecycle_table": 137584804,
+              "state": 1,
+              "callback": 134451469,
+              "owner": 33783024,
+              "tile_base": 0,
+              "palette_bank": 1
+            }
+          ],
+          "obj_palette_sha256": "4abb59e145da832ddfe956de07c3f1820bc95dacd58f638a3b7ed43de82f21d7"
+        },
+        {
+          "update": 1,
+          "current": [
+            1,
+            65535,
+            65535,
+            65535
+          ],
+          "requested": [
+            1,
+            65535,
+            65535,
+            65535
+          ],
+          "shadow": {
+            "1": "0000a0b488c5d26adefbdc829f93ffd38883f2bff5fbf2dbffd3ffefffdbffff",
+            "6": "0000b91845104510451045104510451045104510451045104510451045104510"
+          },
+          "hardware": {
+            "1": "0000a0b488c5d26adefbdc829f93ffd38883f2bff5fb8883f243f5fbbfffffff",
+            "6": "0000b91845104510451045104510451045104510451045104510451045104510"
+          },
+          "vram_sha256": "89e8b6ca87b465ec52c83c828b2a523567f46d8786592d7fa68f17eff45d393f",
+          "objects": [
+            {
+              "address": 33793924,
+              "kind": 0,
+              "lifecycle_table": 137584804,
+              "state": 1,
+              "callback": 134451469,
+              "owner": 33783024,
+              "tile_base": 0,
+              "palette_bank": 1
+            }
+          ],
+          "obj_palette_sha256": "4abb59e145da832ddfe956de07c3f1820bc95dacd58f638a3b7ed43de82f21d7"
+        },
+        {
+          "update": 2,
+          "current": [
+            1,
+            65535,
+            65535,
+            65535
+          ],
+          "requested": [
+            1,
+            65535,
+            65535,
+            65535
+          ],
+          "shadow": {
+            "1": "0000a0b488c5d26adefbdc829f93ffd38883f2bff5fbf2dbffd3ffefffdbffff",
+            "6": "0000b91845104510451045104510451045104510451045104510451045104510"
+          },
+          "hardware": {
+            "1": "0000a0b488c5d26adefbdc829f93ffd38883f2bff5fbf2dbffd3ffefffdbffff",
+            "6": "0000b91845104510451045104510451045104510451045104510451045104510"
+          },
+          "vram_sha256": "89e8b6ca87b465ec52c83c828b2a523567f46d8786592d7fa68f17eff45d393f",
+          "objects": [
+            {
+              "address": 33793924,
+              "kind": 0,
+              "lifecycle_table": 137584804,
+              "state": 1,
+              "callback": 134451469,
+              "owner": 33783024,
+              "tile_base": 0,
+              "palette_bank": 1
+            }
+          ],
+          "obj_palette_sha256": "7bcbe855bafbf2a2e92977a4d272f93f646b90701de65c763c1dd27cc3e12dcf"
+        },
+        {
+          "update": 3,
+          "current": [
+            0,
+            65535,
+            65535,
+            65535
+          ],
+          "requested": [
+            0,
+            65535,
+            65535,
+            65535
+          ],
+          "shadow": {
+            "1": "0000a0b488c5d26adefbdc829f93ffd38883f2bff5fb8883f243f5fbbfffffff",
+            "6": "0000b91845104510451045104510451045104510451045104510451045104510"
+          },
+          "hardware": {
+            "1": "0000a0b488c5d26adefbdc829f93ffd38883f2bff5fbf2dbffd3ffefffdbffff",
+            "6": "0000b91845104510451045104510451045104510451045104510451045104510"
+          },
+          "vram_sha256": "c916dae5610efca1af1128e46149fb30e4cadc335fdb6794426d23780213faac",
+          "objects": [
+            {
+              "address": 33793924,
+              "kind": 0,
+              "lifecycle_table": 137584804,
+              "state": 1,
+              "callback": 134451469,
+              "owner": 33783024,
+              "tile_base": 0,
+              "palette_bank": 1
+            }
+          ],
+          "obj_palette_sha256": "7bcbe855bafbf2a2e92977a4d272f93f646b90701de65c763c1dd27cc3e12dcf"
+        },
+        {
+          "update": 4,
+          "current": [
+            0,
+            65535,
+            65535,
+            65535
+          ],
+          "requested": [
+            0,
+            65535,
+            65535,
+            65535
+          ],
+          "shadow": {
+            "1": "0000a0b488c5d26adefbdc829f93ffd38883f2bff5fb8883f243f5fbbfffffff",
+            "6": "0000b91845104510451045104510451045104510451045104510451045104510"
+          },
+          "hardware": {
+            "1": "0000a0b488c5d26adefbdc829f93ffd38883f2bff5fb8883f243f5fbbfffffff",
+            "6": "0000b91845104510451045104510451045104510451045104510451045104510"
+          },
+          "vram_sha256": "c5e9bf31d31757f2e6c241932fd2f75c0b702d5f0110966b22822b25ae01397f",
+          "objects": [
+            {
+              "address": 33793924,
+              "kind": 0,
+              "lifecycle_table": 137584804,
+              "state": 1,
+              "callback": 134451469,
+              "owner": 33783024,
+              "tile_base": 0,
+              "palette_bank": 1
+            }
+          ],
+          "obj_palette_sha256": "4abb59e145da832ddfe956de07c3f1820bc95dacd58f638a3b7ed43de82f21d7"
+        }
+      ]
+    },
+    "aliased_01": {
+      "fixture": "current[0,1]=FFFF; requested[0,1]=0,1; both dirty",
+      "frames": [
+        {
+          "update": 0,
+          "current": [
+            65535,
+            65535,
+            65535,
+            65535
+          ],
+          "requested": [
+            0,
+            1,
+            65535,
+            65535
+          ],
+          "shadow": {
+            "1": "0000a0b488c5d26adefbdc829f93ffd38883f2bff5fb8883f243f5fbbfffffff",
+            "6": "0000b91845104510451045104510451045104510451045104510451045104510"
+          },
+          "hardware": {
+            "1": "0000a0b488c5d26adefbdc829f93ffd38883f2bff5fb8883f243f5fbbfffffff",
+            "6": "0000b91845104510451045104510451045104510451045104510451045104510"
+          },
+          "vram_sha256": "c64aef61eed8cfb05f1c72fd5486e6737bb053192e26ce3cdabeb01950321d13",
+          "objects": [
+            {
+              "address": 33793924,
+              "kind": 0,
+              "lifecycle_table": 137584804,
+              "state": 1,
+              "callback": 134451469,
+              "owner": 33783024,
+              "tile_base": 0,
+              "palette_bank": 1
+            }
+          ],
+          "obj_palette_sha256": "4abb59e145da832ddfe956de07c3f1820bc95dacd58f638a3b7ed43de82f21d7"
+        },
+        {
+          "update": 1,
+          "current": [
+            0,
+            1,
+            65535,
+            65535
+          ],
+          "requested": [
+            0,
+            1,
+            65535,
+            65535
+          ],
+          "shadow": {
+            "1": "0000a0b488c5d26adefbdc829f93ffd38883f2bff5fbf2dbffd3ffefffdbffff",
+            "6": "0000b91845104510451045104510451045104510451045104510451045104510"
+          },
+          "hardware": {
+            "1": "0000a0b488c5d26adefbdc829f93ffd38883f2bff5fb8883f243f5fbbfffffff",
+            "6": "0000b91845104510451045104510451045104510451045104510451045104510"
+          },
+          "vram_sha256": "89e8b6ca87b465ec52c83c828b2a523567f46d8786592d7fa68f17eff45d393f",
+          "objects": [
+            {
+              "address": 33793924,
+              "kind": 0,
+              "lifecycle_table": 137584804,
+              "state": 1,
+              "callback": 134451469,
+              "owner": 33783024,
+              "tile_base": 0,
+              "palette_bank": 1
+            }
+          ],
+          "obj_palette_sha256": "4abb59e145da832ddfe956de07c3f1820bc95dacd58f638a3b7ed43de82f21d7"
+        },
+        {
+          "update": 2,
+          "current": [
+            0,
+            1,
+            65535,
+            65535
+          ],
+          "requested": [
+            0,
+            1,
+            65535,
+            65535
+          ],
+          "shadow": {
+            "1": "0000a0b488c5d26adefbdc829f93ffd38883f2bff5fbf2dbffd3ffefffdbffff",
+            "6": "0000b91845104510451045104510451045104510451045104510451045104510"
+          },
+          "hardware": {
+            "1": "0000a0b488c5d26adefbdc829f93ffd38883f2bff5fbf2dbffd3ffefffdbffff",
+            "6": "0000b91845104510451045104510451045104510451045104510451045104510"
+          },
+          "vram_sha256": "89e8b6ca87b465ec52c83c828b2a523567f46d8786592d7fa68f17eff45d393f",
+          "objects": [
+            {
+              "address": 33793924,
+              "kind": 0,
+              "lifecycle_table": 137584804,
+              "state": 1,
+              "callback": 134451469,
+              "owner": 33783024,
+              "tile_base": 0,
+              "palette_bank": 1
+            }
+          ],
+          "obj_palette_sha256": "7bcbe855bafbf2a2e92977a4d272f93f646b90701de65c763c1dd27cc3e12dcf"
+        }
+      ]
+    },
+    "aliased_23": {
+      "fixture": "current[2,3]=FFFF; requested[2,3]=0,1; both dirty",
+      "frames": [
+        {
+          "update": 0,
+          "current": [
+            0,
+            65535,
+            65535,
+            65535
+          ],
+          "requested": [
+            0,
+            65535,
+            0,
+            1
+          ],
+          "shadow": {
+            "1": "0000a0b488c5d26adefbdc829f93ffd38883f2bff5fb8883f243f5fbbfffffff",
+            "6": "0000b91845104510451045104510451045104510451045104510451045104510"
+          },
+          "hardware": {
+            "1": "0000a0b488c5d26adefbdc829f93ffd38883f2bff5fb8883f243f5fbbfffffff",
+            "6": "0000b91845104510451045104510451045104510451045104510451045104510"
+          },
+          "vram_sha256": "c64aef61eed8cfb05f1c72fd5486e6737bb053192e26ce3cdabeb01950321d13",
+          "objects": [
+            {
+              "address": 33793924,
+              "kind": 0,
+              "lifecycle_table": 137584804,
+              "state": 1,
+              "callback": 134451469,
+              "owner": 33783024,
+              "tile_base": 0,
+              "palette_bank": 1
+            }
+          ],
+          "obj_palette_sha256": "4abb59e145da832ddfe956de07c3f1820bc95dacd58f638a3b7ed43de82f21d7"
+        },
+        {
+          "update": 1,
+          "current": [
+            0,
+            65535,
+            0,
+            1
+          ],
+          "requested": [
+            0,
+            65535,
+            0,
+            1
+          ],
+          "shadow": {
+            "1": "0000a0b488c5d26adefbdc829f93ffd38883f2bff5fb8883f243f5fbbfffffff",
+            "6": "0000a0b488c5d26adefbdc829f93ffd38883f2bff5fbf2dbffd3ffefffdbffff"
+          },
+          "hardware": {
+            "1": "0000a0b488c5d26adefbdc829f93ffd38883f2bff5fb8883f243f5fbbfffffff",
+            "6": "0000b91845104510451045104510451045104510451045104510451045104510"
+          },
+          "vram_sha256": "89e8b6ca87b465ec52c83c828b2a523567f46d8786592d7fa68f17eff45d393f",
+          "objects": [
+            {
+              "address": 33793924,
+              "kind": 0,
+              "lifecycle_table": 137584804,
+              "state": 1,
+              "callback": 134451469,
+              "owner": 33783024,
+              "tile_base": 0,
+              "palette_bank": 1
+            }
+          ],
+          "obj_palette_sha256": "4abb59e145da832ddfe956de07c3f1820bc95dacd58f638a3b7ed43de82f21d7"
+        },
+        {
+          "update": 2,
+          "current": [
+            0,
+            65535,
+            0,
+            1
+          ],
+          "requested": [
+            0,
+            65535,
+            0,
+            1
+          ],
+          "shadow": {
+            "1": "0000a0b488c5d26adefbdc829f93ffd38883f2bff5fb8883f243f5fbbfffffff",
+            "6": "0000a0b488c5d26adefbdc829f93ffd38883f2bff5fbf2dbffd3ffefffdbffff"
+          },
+          "hardware": {
+            "1": "0000a0b488c5d26adefbdc829f93ffd38883f2bff5fb8883f243f5fbbfffffff",
+            "6": "0000a0b488c5d26adefbdc829f93ffd38883f2bff5fbf2dbffd3ffefffdbffff"
+          },
+          "vram_sha256": "89e8b6ca87b465ec52c83c828b2a523567f46d8786592d7fa68f17eff45d393f",
+          "objects": [
+            {
+              "address": 33793924,
+              "kind": 0,
+              "lifecycle_table": 137584804,
+              "state": 1,
+              "callback": 134451469,
+              "owner": 33783024,
+              "tile_base": 0,
+              "palette_bank": 1
+            }
+          ],
+          "obj_palette_sha256": "0635b3ab3b791bdfe8890c1d5b2cba4a5db61518b7b70ad7b1ddb8b5ce715374"
+        }
+      ]
+    },
+    "lower_dirty_wins": {
+      "fixture": "slot0 current=FFFF/requested=0; slot1 current=requested=1; shadow bank1 preset palette1",
+      "frames": [
+        {
+          "update": 0,
+          "current": [
+            65535,
+            1,
+            65535,
+            65535
+          ],
+          "requested": [
+            0,
+            1,
+            65535,
+            65535
+          ],
+          "shadow": {
+            "1": "0000a0b488c5d26adefbdc829f93ffd38883f2bff5fbf2dbffd3ffefffdbffff",
+            "6": "0000b91845104510451045104510451045104510451045104510451045104510"
+          },
+          "hardware": {
+            "1": "0000a0b488c5d26adefbdc829f93ffd38883f2bff5fb8883f243f5fbbfffffff",
+            "6": "0000b91845104510451045104510451045104510451045104510451045104510"
+          },
+          "vram_sha256": "c64aef61eed8cfb05f1c72fd5486e6737bb053192e26ce3cdabeb01950321d13",
+          "objects": [
+            {
+              "address": 33793924,
+              "kind": 0,
+              "lifecycle_table": 137584804,
+              "state": 1,
+              "callback": 134451469,
+              "owner": 33783024,
+              "tile_base": 0,
+              "palette_bank": 1
+            }
+          ],
+          "obj_palette_sha256": "4abb59e145da832ddfe956de07c3f1820bc95dacd58f638a3b7ed43de82f21d7"
+        },
+        {
+          "update": 1,
+          "current": [
+            0,
+            1,
+            65535,
+            65535
+          ],
+          "requested": [
+            0,
+            1,
+            65535,
+            65535
+          ],
+          "shadow": {
+            "1": "0000a0b488c5d26adefbdc829f93ffd38883f2bff5fb8883f243f5fbbfffffff",
+            "6": "0000b91845104510451045104510451045104510451045104510451045104510"
+          },
+          "hardware": {
+            "1": "0000a0b488c5d26adefbdc829f93ffd38883f2bff5fbf2dbffd3ffefffdbffff",
+            "6": "0000b91845104510451045104510451045104510451045104510451045104510"
+          },
+          "vram_sha256": "89e8b6ca87b465ec52c83c828b2a523567f46d8786592d7fa68f17eff45d393f",
+          "objects": [
+            {
+              "address": 33793924,
+              "kind": 0,
+              "lifecycle_table": 137584804,
+              "state": 1,
+              "callback": 134451469,
+              "owner": 33783024,
+              "tile_base": 0,
+              "palette_bank": 1
+            }
+          ],
+          "obj_palette_sha256": "7bcbe855bafbf2a2e92977a4d272f93f646b90701de65c763c1dd27cc3e12dcf"
+        },
+        {
+          "update": 2,
+          "current": [
+            0,
+            1,
+            65535,
+            65535
+          ],
+          "requested": [
+            0,
+            1,
+            65535,
+            65535
+          ],
+          "shadow": {
+            "1": "0000a0b488c5d26adefbdc829f93ffd38883f2bff5fb8883f243f5fbbfffffff",
+            "6": "0000b91845104510451045104510451045104510451045104510451045104510"
+          },
+          "hardware": {
+            "1": "0000a0b488c5d26adefbdc829f93ffd38883f2bff5fb8883f243f5fbbfffffff",
+            "6": "0000b91845104510451045104510451045104510451045104510451045104510"
+          },
+          "vram_sha256": "89e8b6ca87b465ec52c83c828b2a523567f46d8786592d7fa68f17eff45d393f",
+          "objects": [
+            {
+              "address": 33793924,
+              "kind": 0,
+              "lifecycle_table": 137584804,
+              "state": 1,
+              "callback": 134451469,
+              "owner": 33783024,
+              "tile_base": 0,
+              "palette_bank": 1
+            }
+          ],
+          "obj_palette_sha256": "4abb59e145da832ddfe956de07c3f1820bc95dacd58f638a3b7ed43de82f21d7"
+        }
+      ]
+    },
+    "equal_cache_skips_reload": {
+      "fixture": "current[0]=requested[0]=0 unchanged; shadow bank1 overwritten with palette1",
+      "frames": [
+        {
+          "update": 0,
+          "current": [
+            0,
+            65535,
+            65535,
+            65535
+          ],
+          "requested": [
+            0,
+            65535,
+            65535,
+            65535
+          ],
+          "shadow": {
+            "1": "0000a0b488c5d26adefbdc829f93ffd38883f2bff5fbf2dbffd3ffefffdbffff",
+            "6": "0000b91845104510451045104510451045104510451045104510451045104510"
+          },
+          "hardware": {
+            "1": "0000a0b488c5d26adefbdc829f93ffd38883f2bff5fb8883f243f5fbbfffffff",
+            "6": "0000b91845104510451045104510451045104510451045104510451045104510"
+          },
+          "vram_sha256": "c64aef61eed8cfb05f1c72fd5486e6737bb053192e26ce3cdabeb01950321d13",
+          "objects": [
+            {
+              "address": 33793924,
+              "kind": 0,
+              "lifecycle_table": 137584804,
+              "state": 1,
+              "callback": 134451469,
+              "owner": 33783024,
+              "tile_base": 0,
+              "palette_bank": 1
+            }
+          ],
+          "obj_palette_sha256": "4abb59e145da832ddfe956de07c3f1820bc95dacd58f638a3b7ed43de82f21d7"
+        },
+        {
+          "update": 1,
+          "current": [
+            0,
+            65535,
+            65535,
+            65535
+          ],
+          "requested": [
+            0,
+            65535,
+            65535,
+            65535
+          ],
+          "shadow": {
+            "1": "0000a0b488c5d26adefbdc829f93ffd38883f2bff5fbf2dbffd3ffefffdbffff",
+            "6": "0000b91845104510451045104510451045104510451045104510451045104510"
+          },
+          "hardware": {
+            "1": "0000a0b488c5d26adefbdc829f93ffd38883f2bff5fbf2dbffd3ffefffdbffff",
+            "6": "0000b91845104510451045104510451045104510451045104510451045104510"
+          },
+          "vram_sha256": "89e8b6ca87b465ec52c83c828b2a523567f46d8786592d7fa68f17eff45d393f",
+          "objects": [
+            {
+              "address": 33793924,
+              "kind": 0,
+              "lifecycle_table": 137584804,
+              "state": 1,
+              "callback": 134451469,
+              "owner": 33783024,
+              "tile_base": 0,
+              "palette_bank": 1
+            }
+          ],
+          "obj_palette_sha256": "7bcbe855bafbf2a2e92977a4d272f93f646b90701de65c763c1dd27cc3e12dcf"
+        },
+        {
+          "update": 2,
+          "current": [
+            0,
+            65535,
+            65535,
+            65535
+          ],
+          "requested": [
+            0,
+            65535,
+            65535,
+            65535
+          ],
+          "shadow": {
+            "1": "0000a0b488c5d26adefbdc829f93ffd38883f2bff5fbf2dbffd3ffefffdbffff",
+            "6": "0000b91845104510451045104510451045104510451045104510451045104510"
+          },
+          "hardware": {
+            "1": "0000a0b488c5d26adefbdc829f93ffd38883f2bff5fbf2dbffd3ffefffdbffff",
+            "6": "0000b91845104510451045104510451045104510451045104510451045104510"
+          },
+          "vram_sha256": "89e8b6ca87b465ec52c83c828b2a523567f46d8786592d7fa68f17eff45d393f",
+          "objects": [
+            {
+              "address": 33793924,
+              "kind": 0,
+              "lifecycle_table": 137584804,
+              "state": 1,
+              "callback": 134451469,
+              "owner": 33783024,
+              "tile_base": 0,
+              "palette_bank": 1
+            }
+          ],
+          "obj_palette_sha256": "7bcbe855bafbf2a2e92977a4d272f93f646b90701de65c763c1dd27cc3e12dcf"
+        }
+      ]
+    },
+    "primary_sword": {
+      "fixture": "already owned weapon assigned to primary slot; no cache/form/EX/level edits",
+      "frames": [
+        {
+          "update": 0,
+          "current": [
+            0,
+            65535,
+            65535,
+            65535
+          ],
+          "requested": [
+            0,
+            65535,
+            65535,
+            65535
+          ],
+          "shadow": {
+            "1": "0000a0b488c5d26adefbdc829f93ffd38883f2bff5fb8883f243f5fbbfffffff",
+            "6": "0000b91845104510451045104510451045104510451045104510451045104510"
+          },
+          "hardware": {
+            "1": "0000a0b488c5d26adefbdc829f93ffd38883f2bff5fb8883f243f5fbbfffffff",
+            "6": "0000b91845104510451045104510451045104510451045104510451045104510"
+          },
+          "vram_sha256": "c64aef61eed8cfb05f1c72fd5486e6737bb053192e26ce3cdabeb01950321d13",
+          "objects": [
+            {
+              "address": 33793924,
+              "kind": 0,
+              "lifecycle_table": 137584804,
+              "state": 1,
+              "callback": 134451469,
+              "owner": 33783024,
+              "tile_base": 0,
+              "palette_bank": 1
+            }
+          ],
+          "obj_palette_sha256": "4abb59e145da832ddfe956de07c3f1820bc95dacd58f638a3b7ed43de82f21d7"
+        },
+        {
+          "update": 1,
+          "current": [
+            0,
+            65535,
+            65535,
+            65535
+          ],
+          "requested": [
+            0,
+            65535,
+            65535,
+            65535
+          ],
+          "shadow": {
+            "1": "0000a0b488c5d26adefbdc829f93ffd38883f2bff5fb8883f243f5fbbfffffff",
+            "6": "0000b91845104510451045104510451045104510451045104510451045104510"
+          },
+          "hardware": {
+            "1": "0000a0b488c5d26adefbdc829f93ffd38883f2bff5fb8883f243f5fbbfffffff",
+            "6": "0000b91845104510451045104510451045104510451045104510451045104510"
+          },
+          "vram_sha256": "89e8b6ca87b465ec52c83c828b2a523567f46d8786592d7fa68f17eff45d393f",
+          "objects": [
+            {
+              "address": 33793924,
+              "kind": 0,
+              "lifecycle_table": 137584804,
+              "state": 1,
+              "callback": 134451469,
+              "owner": 33783024,
+              "tile_base": 0,
+              "palette_bank": 1
+            }
+          ],
+          "obj_palette_sha256": "4abb59e145da832ddfe956de07c3f1820bc95dacd58f638a3b7ed43de82f21d7"
+        },
+        {
+          "update": 2,
+          "current": [
+            0,
+            65535,
+            65535,
+            65535
+          ],
+          "requested": [
+            0,
+            65535,
+            65535,
+            65535
+          ],
+          "shadow": {
+            "1": "0000a0b488c5d26adefbdc829f93ffd38883f2bff5fb8883f243f5fbbfffffff",
+            "6": "0000b91845104510451045104510451045104510451045104510451045104510"
+          },
+          "hardware": {
+            "1": "0000a0b488c5d26adefbdc829f93ffd38883f2bff5fb8883f243f5fbbfffffff",
+            "6": "0000b91845104510451045104510451045104510451045104510451045104510"
+          },
+          "vram_sha256": "a0aea3a4dd32b776ff0a84f0d6c6393289e64139b05e13d45456590ac549228a",
+          "objects": [
+            {
+              "address": 33793924,
+              "kind": 0,
+              "lifecycle_table": 137584804,
+              "state": 1,
+              "callback": 134451469,
+              "owner": 33783024,
+              "tile_base": 0,
+              "palette_bank": 1
+            }
+          ],
+          "obj_palette_sha256": "4abb59e145da832ddfe956de07c3f1820bc95dacd58f638a3b7ed43de82f21d7"
+        },
+        {
+          "update": 3,
+          "current": [
+            0,
+            65535,
+            65535,
+            65535
+          ],
+          "requested": [
+            0,
+            65535,
+            65535,
+            65535
+          ],
+          "shadow": {
+            "1": "0000a0b488c5d26adefbdc829f93ffd38883f2bff5fb8883f243f5fbbfffffff",
+            "6": "0000b91845104510451045104510451045104510451045104510451045104510"
+          },
+          "hardware": {
+            "1": "0000a0b488c5d26adefbdc829f93ffd38883f2bff5fb8883f243f5fbbfffffff",
+            "6": "0000b91845104510451045104510451045104510451045104510451045104510"
+          },
+          "vram_sha256": "a8b54370452597d4b8e3070ce8ba78e32deb50652b33533eee14ff7544a19088",
+          "objects": [
+            {
+              "address": 33793924,
+              "kind": 0,
+              "lifecycle_table": 137584804,
+              "state": 1,
+              "callback": 134451469,
+              "owner": 33783024,
+              "tile_base": 0,
+              "palette_bank": 1
+            },
+            {
+              "address": 33793688,
+              "kind": 3,
+              "lifecycle_table": 137586020,
+              "state": 1,
+              "callback": 134456329,
+              "owner": 33783024,
+              "tile_base": 192,
+              "palette_bank": 1
+            }
+          ],
+          "obj_palette_sha256": "4abb59e145da832ddfe956de07c3f1820bc95dacd58f638a3b7ed43de82f21d7"
+        },
+        {
+          "update": 4,
+          "current": [
+            0,
+            65535,
+            65535,
+            65535
+          ],
+          "requested": [
+            0,
+            65535,
+            65535,
+            65535
+          ],
+          "shadow": {
+            "1": "0000a0b488c5d26adefbdc829f93ffd38883f2bff5fb8883f243f5fbbfffffff",
+            "6": "0000b91845104510451045104510451045104510451045104510451045104510"
+          },
+          "hardware": {
+            "1": "0000a0b488c5d26adefbdc829f93ffd38883f2bff5fb8883f243f5fbbfffffff",
+            "6": "0000b91845104510451045104510451045104510451045104510451045104510"
+          },
+          "vram_sha256": "88b1f1a653f509964466770102e725843ad1e5cdcf9ea44492c4428f375c5a6b",
+          "objects": [
+            {
+              "address": 33793924,
+              "kind": 0,
+              "lifecycle_table": 137584804,
+              "state": 1,
+              "callback": 134451469,
+              "owner": 33783024,
+              "tile_base": 0,
+              "palette_bank": 1
+            },
+            {
+              "address": 33793688,
+              "kind": 3,
+              "lifecycle_table": 137586020,
+              "state": 1,
+              "callback": 134456329,
+              "owner": 33783024,
+              "tile_base": 192,
+              "palette_bank": 1
+            }
+          ],
+          "obj_palette_sha256": "4abb59e145da832ddfe956de07c3f1820bc95dacd58f638a3b7ed43de82f21d7"
+        }
+      ]
+    },
+    "primary_buster": {
+      "fixture": "already owned weapon assigned to primary slot; no cache/form/EX/level edits",
+      "frames": [
+        {
+          "update": 0,
+          "current": [
+            0,
+            65535,
+            65535,
+            65535
+          ],
+          "requested": [
+            0,
+            65535,
+            65535,
+            65535
+          ],
+          "shadow": {
+            "1": "0000a0b488c5d26adefbdc829f93ffd38883f2bff5fb8883f243f5fbbfffffff",
+            "6": "0000b91845104510451045104510451045104510451045104510451045104510"
+          },
+          "hardware": {
+            "1": "0000a0b488c5d26adefbdc829f93ffd38883f2bff5fb8883f243f5fbbfffffff",
+            "6": "0000b91845104510451045104510451045104510451045104510451045104510"
+          },
+          "vram_sha256": "c64aef61eed8cfb05f1c72fd5486e6737bb053192e26ce3cdabeb01950321d13",
+          "objects": [
+            {
+              "address": 33793924,
+              "kind": 0,
+              "lifecycle_table": 137584804,
+              "state": 1,
+              "callback": 134451469,
+              "owner": 33783024,
+              "tile_base": 0,
+              "palette_bank": 1
+            }
+          ],
+          "obj_palette_sha256": "4abb59e145da832ddfe956de07c3f1820bc95dacd58f638a3b7ed43de82f21d7"
+        },
+        {
+          "update": 1,
+          "current": [
+            0,
+            65535,
+            65535,
+            65535
+          ],
+          "requested": [
+            0,
+            65535,
+            65535,
+            65535
+          ],
+          "shadow": {
+            "1": "0000a0b488c5d26adefbdc829f93ffd38883f2bff5fb8883f243f5fbbfffffff",
+            "6": "0000b91845104510451045104510451045104510451045104510451045104510"
+          },
+          "hardware": {
+            "1": "0000a0b488c5d26adefbdc829f93ffd38883f2bff5fb8883f243f5fbbfffffff",
+            "6": "0000b91845104510451045104510451045104510451045104510451045104510"
+          },
+          "vram_sha256": "89e8b6ca87b465ec52c83c828b2a523567f46d8786592d7fa68f17eff45d393f",
+          "objects": [
+            {
+              "address": 33793688,
+              "kind": 1,
+              "lifecycle_table": 137584840,
+              "state": 1,
+              "callback": 134452337,
+              "owner": 33783024,
+              "tile_base": 0,
+              "palette_bank": 1
+            },
+            {
+              "address": 33793924,
+              "kind": 0,
+              "lifecycle_table": 137584804,
+              "state": 1,
+              "callback": 134451469,
+              "owner": 33783024,
+              "tile_base": 0,
+              "palette_bank": 1
+            }
+          ],
+          "obj_palette_sha256": "4abb59e145da832ddfe956de07c3f1820bc95dacd58f638a3b7ed43de82f21d7"
+        },
+        {
+          "update": 2,
+          "current": [
+            0,
+            65535,
+            65535,
+            65535
+          ],
+          "requested": [
+            0,
+            65535,
+            65535,
+            65535
+          ],
+          "shadow": {
+            "1": "0000a0b488c5d26adefbdc829f93ffd38883f2bff5fb8883f243f5fbbfffffff",
+            "6": "0000b91845104510451045104510451045104510451045104510451045104510"
+          },
+          "hardware": {
+            "1": "0000a0b488c5d26adefbdc829f93ffd38883f2bff5fb8883f243f5fbbfffffff",
+            "6": "0000b91845104510451045104510451045104510451045104510451045104510"
+          },
+          "vram_sha256": "3e85d1a7c98334b0d6604cbc038c12baa1293cac2b4f14dbced95a642a0faafa",
+          "objects": [
+            {
+              "address": 33793688,
+              "kind": 1,
+              "lifecycle_table": 137584840,
+              "state": 1,
+              "callback": 134452337,
+              "owner": 33783024,
+              "tile_base": 0,
+              "palette_bank": 1
+            },
+            {
+              "address": 33793924,
+              "kind": 0,
+              "lifecycle_table": 137584804,
+              "state": 1,
+              "callback": 134451469,
+              "owner": 33783024,
+              "tile_base": 0,
+              "palette_bank": 1
+            }
+          ],
+          "obj_palette_sha256": "4abb59e145da832ddfe956de07c3f1820bc95dacd58f638a3b7ed43de82f21d7"
+        },
+        {
+          "update": 3,
+          "current": [
+            0,
+            65535,
+            65535,
+            65535
+          ],
+          "requested": [
+            0,
+            65535,
+            65535,
+            65535
+          ],
+          "shadow": {
+            "1": "0000a0b488c5d26adefbdc829f93ffd38883f2bff5fb8883f243f5fbbfffffff",
+            "6": "0000b91845104510451045104510451045104510451045104510451045104510"
+          },
+          "hardware": {
+            "1": "0000a0b488c5d26adefbdc829f93ffd38883f2bff5fb8883f243f5fbbfffffff",
+            "6": "0000b91845104510451045104510451045104510451045104510451045104510"
+          },
+          "vram_sha256": "292bf59dc239383ca8411e6fe3379015c43def51b6a1aa525236e598b45d4191",
+          "objects": [
+            {
+              "address": 33793688,
+              "kind": 1,
+              "lifecycle_table": 137584840,
+              "state": 1,
+              "callback": 134452337,
+              "owner": 33783024,
+              "tile_base": 0,
+              "palette_bank": 1
+            },
+            {
+              "address": 33793924,
+              "kind": 0,
+              "lifecycle_table": 137584804,
+              "state": 1,
+              "callback": 134451469,
+              "owner": 33783024,
+              "tile_base": 0,
+              "palette_bank": 1
+            }
+          ],
+          "obj_palette_sha256": "4abb59e145da832ddfe956de07c3f1820bc95dacd58f638a3b7ed43de82f21d7"
+        },
+        {
+          "update": 4,
+          "current": [
+            0,
+            65535,
+            65535,
+            65535
+          ],
+          "requested": [
+            0,
+            65535,
+            65535,
+            65535
+          ],
+          "shadow": {
+            "1": "0000a0b488c5d26adefbdc829f93ffd38883f2bff5fb8883f243f5fbbfffffff",
+            "6": "0000b91845104510451045104510451045104510451045104510451045104510"
+          },
+          "hardware": {
+            "1": "0000a0b488c5d26adefbdc829f93ffd38883f2bff5fb8883f243f5fbbfffffff",
+            "6": "0000b91845104510451045104510451045104510451045104510451045104510"
+          },
+          "vram_sha256": "d8e4722140315348d8be068c2f66f1c11af7a9a9d65de13194e192301c8bd4e9",
+          "objects": [
+            {
+              "address": 33793688,
+              "kind": 1,
+              "lifecycle_table": 137584840,
+              "state": 1,
+              "callback": 134452337,
+              "owner": 33783024,
+              "tile_base": 0,
+              "palette_bank": 1
+            },
+            {
+              "address": 33793924,
+              "kind": 0,
+              "lifecycle_table": 137584804,
+              "state": 1,
+              "callback": 134451469,
+              "owner": 33783024,
+              "tile_base": 0,
+              "palette_bank": 1
+            }
+          ],
+          "obj_palette_sha256": "4abb59e145da832ddfe956de07c3f1820bc95dacd58f638a3b7ed43de82f21d7"
+        }
+      ]
+    }
+  },
+  "tables": {
+    "entity_slots_rows_0_1": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "request_slots_rows_0_1": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "tile_bases": [
+      0,
+      192,
+      512,
+      704
+    ],
+    "palette_banks": [
+      1,
+      1,
+      6,
+      6
+    ],
+    "palette_source_0_1": [
+      "0000a0b488c5d26adefbdc829f93ffd38883f2bff5fb8883f243f5fbbfffffff",
+      "0000a0b488c5d26adefbdc829f93ffd38883f2bff5fbf2dbffd3ffefffdbffff"
+    ]
+  },
+  "verification": {
+    "clean_directory_run": "passed; fresh minimal copy; no old build or serialized states copied",
+    "new_deep_functions": 4,
+    "stage2c_cumulative_deep_functions": 14,
+    "stage2c_cap": 15,
+    "not_validated": [
+      "tile uploader",
+      "audio resources",
+      "global VRAM capacity",
+      "all owner rows",
+      "invalid palette indices"
+    ],
+    "scope": "8 conditions under the existing intro baseline; RAM fixtures, not 8 levels"
+  }
+}
