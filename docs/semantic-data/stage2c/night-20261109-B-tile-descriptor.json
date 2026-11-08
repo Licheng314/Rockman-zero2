@@ -1,0 +1,91 @@
+{
+ "batch": "night-20261109-B-tile-descriptor",
+ "job": "B",
+ "rom_sha1": "c4d93a58f0f82c526dec8a3fdbda170336303689",
+ "rom_sha256": "4bb8b71ca8d50b5a8f0c737082d8f86c9ad31bd0abebddfa519b3af1ff3853a5",
+ "core_dll_sha256": "02747c2a77ea4ed9738c967d101a207a81973233588f68d39f5ab923a1a9599c",
+ "script_sha256_after_last_edit": {
+  "probe_night_b_descriptor": "e95c98e77da218b885f89e08892ab89a9726eeaf37a33dc5fd9181f8dd0da685"
+ },
+ "handoff_commit": "d5ca886b",
+ "b_started_epoch": 1794161040,
+ "elapsed_seconds_at_write": 463,
+ "sample": {
+  "motion_id": 88,
+  "resource_key": 4,
+  "descriptor": "0x0852D208",
+  "descriptor_u16": [
+   2572,
+   0,
+   1120,
+   512,
+   224,
+   33
+  ],
+  "descriptor_bytes": "0c0a000060040002e0002100000000",
+  "desc0": "0x0852D1D8",
+  "entry": "0x084CC680+4*0x58, off=0x609F8"
+ },
+ "call_chain": [
+  "0x080128D4（2C 已研究）计算 desc/dest 后 bl 0x080027AC —— 请求排队器：写 0x02000D60 表（[0]=计数, 槽 12B {+8:dest,+0xC:desc指针,+4:状态}，同 desc+dest 去重，>15 槽拒绝）",
+  "0x0800E1BC（新增深入 #3，逐帧处理器）：检查请求字（高字节7/低字节3 或 7/0），选中槽后 bl 0x080027AC 重新入队并 bl 0x08002AEC(描述符, 0) 立即执行",
+  "0x08002AEC（新增深入 #2，描述符→搬运解码器）：`ldrb r0,[r2,#6]; cmp r0,#0; beq 0x08002B18(raw)` —— byte[desc+6]==0 走 RAW 路径；否则经 0x03002AC0 缓冲的另一路径（本样本未走）",
+  "RAW 路径（0x08002B18）：源 = desc + u32[desc+0]（=0x0852D208+0xA0C=0x0852DC14，实测命中）；字数 = u16[desc+4]>>2；bl 0x080EEF74 拷到 IWRAM 0x03002AC0 暂存",
+  "DMA 层（0x080028DC/0x08002994 族，登记依赖未深研）把暂存推到 VRAM：5 段×224B，目标步进 0x400"
+ ],
+ "dynamic_transfer_layout": {
+  "method": "VRAM 0x06012000..0x06013FFF 预填充 0xA3（登记 RAM 夹具），使上传的每个字节可见；rel=control 的 474 字节差异只是平移后的可见子集",
+  "written_total": 1120,
+  "equals_u16_desc_plus4": 1120,
+  "segments": [
+   {
+    "vram": "0x06012100",
+    "len": 224,
+    "rom_src": "0x0852DC14",
+    "src_eq_desc_plus_u16_0": true
+   },
+   {
+    "vram": "0x06012500",
+    "len": 224,
+    "rom_src": "0x0852DCF4"
+   },
+   {
+    "vram": "0x06012900",
+    "len": 224,
+    "rom_src": "0x0852DDD4"
+   },
+   {
+    "vram": "0x06012D00",
+    "len": 224,
+    "rom_src": "0x0852DEB4"
+   },
+   {
+    "vram": "0x06013100",
+    "len": 224,
+    "rom_src": "0x0852DF94"
+   }
+  ],
+  "source_layout": "5 段在 ROM 中连续（0x0852DC14..0x0852E078，共1120字节），源无间隙；u16[desc+8]=224=段长=源步进",
+  "dest_layout": "首段 = 派发目标(0x06012000) + 0x100（8图块，与 u16[desc+6]>>6=8 一致）；目标步进 0x400（32图块），段长 224B（7图块），段间目标间隙 800 字节",
+  "raw_copy_proof": "每段 224 字节逐一在 ROM 唯一命中（无解压）；474=差异数而非上传量（2C 猜想证实）"
+ },
+ "staging_attempt": {
+  "result": "0x03002AC0+64 的帧界快照与 ROM 源不一致（瞬态）",
+  "status": "受阻：非侵入接口无帧内 hook 能力，不改共享核心",
+  "note": "VRAM 最终布局不受影响"
+ },
+ "unresolved": [
+  "VRAM 目标步进 0x400 由哪条指令/字段决定（DMA 层，0x080028DC/0x08002994 未深研）",
+  "u16[desc+0xA]=0x21 的含义",
+  "IWRAM 暂存精确地址/时机"
+ ],
+ "new_deep_functions": [
+  "0x080027AC",
+  "0x08002AEC",
+  "0x0800E1BC"
+ ],
+ "new_deep_count": 3,
+ "cap": 3,
+ "raw_data": "build/nightly-20261109/b-descriptor-raw.json（含完整 VRAM/队列快照）",
+ "command": "python -X utf8 -B research/stage2c/probe-night-b-descriptor.py"
+}
