@@ -1,0 +1,55 @@
+{
+  "commit": "da1bf6ae",
+  "clean_directory": true,
+  "layout_matches_full_8192_byte_window": true,
+  "outside_window_matches_unprefilled_relocated_run": true,
+  "sentinel_absent_in_source": true,
+  "all_five_source_segments_unique": true,
+  "uploaded_sample_bytes": 1120,
+  "visible_relocation_deltas": 474,
+  "segments": [
+    {
+      "rom": "0x852dc14",
+      "vram": "0x6012100",
+      "length": 224,
+      "sha256": "b58464f555894d63b0472e71fb22f92d017e0e77367fd59d59653a0378c9634e"
+    },
+    {
+      "rom": "0x852dcf4",
+      "vram": "0x6012500",
+      "length": 224,
+      "sha256": "074980a5e5716a449a4f0f0feb539d4c406e9578d77200831de3717215fc8e18"
+    },
+    {
+      "rom": "0x852ddd4",
+      "vram": "0x6012900",
+      "length": 224,
+      "sha256": "5c48ecd733a57d17f7aa135c1c07cbc40f89e18e69bb217411c783165d22feea"
+    },
+    {
+      "rom": "0x852deb4",
+      "vram": "0x6012d00",
+      "length": 224,
+      "sha256": "26b288522f3435f971b79a750e9ffba66fedb1a04faccd6d888b8b8c52941028"
+    },
+    {
+      "rom": "0x852df94",
+      "vram": "0x6013100",
+      "length": 224,
+      "sha256": "fd6f8789b8d9ac5fb6ff6315034551e75459f78ef6f9a39eeef5f6a3d67916aa"
+    }
+  ],
+  "rom_sha1": "c4d93a58f0f82c526dec8a3fdbda170336303689",
+  "probe_sha256": "e95c98e77da218b885f89e08892ab89a9726eeaf37a33dc5fd9181f8dd0da685",
+  "verdict": "局部接受：所选完整显存搬运布局通过独立复跑；静态执行链及raw判定因果未通过，预算已3/3，不能新增深研。",
+  "static_defects": [
+    "027AC rejects when count>15, permits count15 insertion -> capacity16, not full15; capacity not dynamically tested",
+    "02AEC writes to 03002AC0 + r1 + byte[desc+7]*32; it is the palette-buffer path, not proof of the selected sword graphics upload chain",
+    "02AEC raw branch at02B18 calls080EEF68, not080EEF74; descriptor byte6==0 belongs to this other interface",
+    "0E1BC is a caller that submits resources, not a proven consumer of the selected sword 02000D60 queue",
+    "selected motion58 is <=8F; earlier128D4 only calls02AEC in the other high-ID branch; no runtime call evidence for claimed chain",
+    "header published hex includes14 bytes but probe reads12; fix from actual read",
+    "staging mismatch does not prove transient staging at the guessed address; wrong-chain inference must be withdrawn",
+    "public probe reports layout but does not assert it or uniqueness; add bounded assertions without more Z2 research"
+  ]
+}
