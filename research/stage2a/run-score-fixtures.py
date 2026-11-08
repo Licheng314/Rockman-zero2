@@ -177,5 +177,73 @@ for form, penalty in ((0, 0), (8, 0), (9, 0), (9, 6)):
     screenshot(OUT / f'settle_form_{form}_queue_{penalty}.png')
     print('current form OK', form, penalty, rec['total'], flush=True)
 
+# ---- A 包（2026-11-09 夜间）：一个正向 EX 奖励门及反例 ----
+# 依据（0x0801DA44/0x0801D6D8 反汇编，2A 已深入研究、本轮复用 0 新增）：
+#   1DA44（结算状态1 最先执行）：表 0x08333370[i](u16 任务ID) == byte[0x0202EC30+i]
+#   且等级字节 [ [0x0202EBF0] +1 ] > 4（A/S）时，置条件位 0x0833337A[i]=66+i
+#   （i=0 -> 0x0202EBB0+12 位2）。1DA44 在 141FC 之前，读的是预置等级字节。
+#   1D6D8（结算状态4）：任务字节匹配 且 条件位已置 且 u16[存档+0x216] 无掩码时
+#   |= 0x08333390[i]（i=0 -> 1），音效，结算实体 0x020306B4+0xC |= 0x10<<i。
+# H3（成立）：任务2 的结果脚本不能由任务字节预置直接启动（任务2处理器不认
+#   phase13 夹具，EC42 位0 恒 0）；必须先以任务1 启动结算脚本，再在状态1 之前
+#   （实测 t=100）把任务字节改 2。翻转时机扫描 0..200（单次批量9组）：
+#   0=无效（1DA44 前？实为启动前被任务1处理器忽略），20..200 全部 bit66=1。
+#   1400 帧观察：t≈400 bit66 置位，t≈900 0x216|=1 且实体位 0x10。
+import struct as _struct
+
+def run_ex_gate(mission_byte_at_launch, mission_flip, rank_byte, pre_set_216=None, frames=1400):
+    """登记的 RAM 预置：等级字节 [0x02036BB4+1]、存档 EX 掩码 +0x216、
+    条件位域 0x0202EBB0+4 清零、（可选）翻转后的任务字节 0x0202EC30 u16 与 EBF0+4。
+    结算链本身（script10 -> cmd32 -> 1CE5C -> 1DA44/141FC/1D6D8）为原版代码。"""
+    load_state(good_arena)
+    wram(0x0202EDAC, bytes([13]))
+    ec = _struct.unpack_from('<H', read(0x0202EC38, 2), 0)[0]
+    wram(0x0202EC38, _struct.pack('<H', ec | 0x20))
+    wram(0x02036BB4 + 1, bytes([rank_byte]))                 # 1DA44 门读取的等级
+    wram(0x02037CF0 + 0x216, _struct.pack('<H', pre_set_216 or 0))
+    wram(0x0202EBB0 + 4, bytes(12))                          # 条件位域清零（含位66）
+    for t in range(frames):
+        refresh()
+        if t == mission_flip and mission_flip >= 0:
+            wram(0x0202EC30, _struct.pack('<H', mission_byte_at_launch))
+            wram(0x0202EBF0 + 4, bytes([mission_byte_at_launch]))
+        run()
+    ebb0 = read(0x0202EBB0, 0x14)
+    return dict(
+        mission_byte=read(0x0202EC30, 1)[0],
+        rank_byte_preset=rank_byte, rank_after=read(0x02036BB4, 1)[0],
+        cond_bit66=(ebb0[12] >> 2) & 1, cond_byte12=ebb0[12],
+        ex_mask16=_struct.unpack_from('<H', read(0x02037CF0 + 0x216, 2), 0)[0],
+        entity_result_bits=_struct.unpack_from('<I', read(0x020306B4, 0x10), 0xC)[0])
+
+# 正例：任务2 门、等级5、EX 位先清零
+pos = run_ex_gate(2, 100, 5)
+assert pos["mission_byte"] == 2 and pos["cond_bit66"] == 1, pos
+assert pos["ex_mask16"] & 1 == 1, pos                        # 1D6D8 解锁
+assert pos["entity_result_bits"] & 0x10 == 0x10, pos         # 结算实体 0x10<<0
+results["A_ex_gate_positive_m2_rank5"] = pos
+print("EX gate positive OK", pos, flush=True)
+screenshot(OUT / "ex_gate_positive.png")
+
+# 反例1：只改门条件（等级 3 <= 4）——1DA44 不置条件位，1D6D8 不解锁
+neg = run_ex_gate(2, 100, 3)
+assert neg["cond_bit66"] == 0 and neg["ex_mask16"] == 0, neg
+assert neg["entity_result_bits"] & 0x10 == 0, neg
+results["A_ex_gate_negative_rank3"] = neg
+print("EX gate rank negative OK", neg, flush=True)
+
+# 反例2：已有奖励（0x216 预置 1）——掩码保持，不重复解锁（实体位不置）
+have = run_ex_gate(2, 100, 5, pre_set_216=1)
+assert have["ex_mask16"] & 1 == 1, have
+assert have["entity_result_bits"] & 0x10 == 0, have
+results["A_ex_gate_already_have"] = have
+print("EX gate already-have OK", have, flush=True)
+
+# 反例3（对照）：任务1（不在奖励表）等级5——两位均不动
+m1 = run_ex_gate(0, -1, 5)   # mission_flip=-1 表示不翻转（保持任务1）
+assert m1["cond_bit66"] == 0 and m1["ex_mask16"] == 0, m1
+results["A_ex_gate_mission1_control"] = m1
+print("EX gate mission1 control OK", m1, flush=True)
+
 (OUT / "score-fixtures-result.json").write_text(json.dumps(results, indent=1))
 print("ALL 2A FIXTURES PASSED")

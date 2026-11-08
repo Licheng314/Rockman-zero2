@@ -1,0 +1,94 @@
+{
+ "batch": "night-20261109-A-ex-gate",
+ "job": "A",
+ "rom_sha1": "c4d93a58f0f82c526dec8a3fdbda170336303689",
+ "core_dll_sha256": "02747c2a77ea4ed9738c967d101a207a81973233588f68d39f5ab923a1a9599c",
+ "script_sha256_after_last_edit": {
+  "stage2a_run_score_fixtures": "c5f7e6137a279b0a84950ec3175196d1d506ed2cb9848b354bc500dcbc0ea50f",
+  "stage2b_run_combat_fixtures": "d038fa94dfe6c2325c1382cf8e8b1197c8861eb9141d3feaf64f5d972e4859b7",
+  "emulator_probe": "e1bf66a23507c9e7006cf0e88226238eb396f5c18523b764f1ea27427b1e6e8c"
+ },
+ "handoff_commit": "a209ea71",
+ "started_epoch": 1794159040,
+ "elapsed_seconds_at_write": 665,
+ "command": "python -X utf8 -B research/stage2a/run-score-fixtures.py",
+ "clean_rerun": {
+  "dir": "build/nightly-20261109/clean-run",
+  "copies": [
+   "research/emulator/probe.py",
+   "research/stage2a/run-score-fixtures.py",
+   "research/stage2b/run-combat-fixtures.py",
+   "tools/bin/mgba_libretro.dll",
+   "baserom.gba"
+  ],
+  "result": "2A ALL PASSED (含 EX 门四场景); 2B COVERED PASSED; clean-run ROM sha1 c4d93a58f0f82c526dec8a3fdbda170336303689"
+ },
+ "gate_static_basis": {
+  "1DA44": "结算状态1最先执行：表 0x08333370[i](u16 任务ID)==byte[0x0202EC30+i] 且等级字节 [[0x0202EBF0]+1]>4 时置条件位 0x0833337A[i]=66+i 至 0x0202EBB0+4 位域（i=0 -> 0x0202EBB0+12 位2）；位域+4 位0 已置时整体跳过",
+  "1D6D8": "结算状态4：任务字节匹配 且 条件位已置 且 u16[存档+0x216] 无掩码 0x08333390[i] 时 |= 掩码（i=0 -> 1）、放音效 0x083333B8[i]、结算实体 0x020306B4+0xC |= 0x10<<i",
+  "note": "1DA44 在 141FC 之前执行，门读取的是结算前预置的等级字节；141FC 之后会重算（mission-2 混跑下重算产生杂散值 rank=0，与门无关，已如实记录）"
+ },
+ "fixtures_ram_registered": {
+  "rank_byte": "[0x02036BB4+1] 预置 5（正/已有）或 3（反例1）",
+  "mission_flip": "t=100 将 u16[0x0202EC30]=2 且 EBF0+4=2（任务1 结算脚本先启动，任务2 处理器不认 phase13 夹具，故不能直接预置）",
+  "ex_mask": "u16[0x02037CF0+0x216] 清零（正/反例1/对照）或预置 1（反例2 已有）",
+  "cond_bits": "0x0202EBB0+4 起 12 字节清零",
+  "note": "全部为标注 RAM 预置；磁盘与内存 ROM 未改；结算链/门判定为原版代码"
+ },
+ "results": {
+  "positive_m2_rank5": {
+   "cond_bit66": 1,
+   "cond_byte12": 4,
+   "ex_mask16": 1,
+   "entity_result_bits": 16
+  },
+  "negative_rank3": {
+   "cond_bit66": 0,
+   "cond_byte12": 0,
+   "ex_mask16": 0,
+   "entity_result_bits": 0
+  },
+  "already_have_216_1": {
+   "cond_bit66": 1,
+   "ex_mask16": 1,
+   "entity_result_bits": 0,
+   "note": "不重复领取"
+  },
+  "mission1_control_rank5": {
+   "cond_bit66": 0,
+   "ex_mask16": 0,
+   "entity_result_bits": 0,
+   "note": "任务1 不在奖励表"
+  }
+ },
+ "hypotheses": [
+  {
+   "id": "H1",
+   "prediction": "用分项输入令 141FC 算出等级>=5 以过门",
+   "result": "否证：1DA44 先于 141FC，读预置等级字节；且任务字节=2 直接预置时任务2处理器不启动结算脚本（EC42 位0 恒 0）"
+  },
+  {
+   "id": "H2",
+   "prediction": "仅预置等级字节 5 即可过门",
+   "result": "部分否证：门逻辑正确但任务2 处理器不启动结算脚本（EC42=0000），须先以任务1 启动"
+  },
+  {
+   "id": "H3",
+   "prediction": "任务1 启动结算后于状态1 前翻转任务字节；翻转时机 0..200 扫描",
+   "result": "成立：翻转 20..200 均置位66（0=无效）；1400 帧观察 t≈400 条件位、t≈900 0x216|=1+实体位 0x10"
+  }
+ ],
+ "incomplete": [
+  "跨关/读档持久性（任务书禁止）",
+  "其余 9 个奖励位",
+  "自然通关下的门（夹具不冒充自然通关）"
+ ],
+ "new_deep_functions": 0,
+ "reused_functions": [
+  "0x0801DA44",
+  "0x0801D6D8",
+  "0x0801CE5C",
+  "0x080141FC",
+  "0x08014384（复核）"
+ ]
+}
