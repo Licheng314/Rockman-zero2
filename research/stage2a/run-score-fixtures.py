@@ -202,19 +202,32 @@ def run_ex_gate(mission_byte_at_launch, mission_flip, rank_byte, pre_set_216=Non
     wram(0x02036BB4 + 1, bytes([rank_byte]))                 # 1DA44 门读取的等级
     wram(0x02037CF0 + 0x216, _struct.pack('<H', pre_set_216 or 0))
     wram(0x0202EBB0 + 4, bytes(12))                          # 条件位域清零（含位66）
+    events = []
+    seen = {"cond": None, "mask": None}
     for t in range(frames):
         refresh()
         if t == mission_flip and mission_flip >= 0:
             wram(0x0202EC30, _struct.pack('<H', mission_byte_at_launch))
             wram(0x0202EBF0 + 4, bytes([mission_byte_at_launch]))
         run()
+        ebb0 = read(0x0202EBB0, 0x14)
+        cond = (ebb0[12] >> 2) & 1
+        mask = _struct.unpack_from('<H', read(0x02037CF0 + 0x216, 2), 0)[0]
+        if seen["cond"] is None or cond != seen["cond"]:
+            events.append({"t": t, "event": "cond_bit66", "value": cond})
+            seen["cond"] = cond
+        if seen["mask"] is None or mask != seen["mask"]:
+            events.append({"t": t, "event": "ex_mask16", "value": mask})
+            seen["mask"] = mask
     ebb0 = read(0x0202EBB0, 0x14)
     return dict(
         mission_byte=read(0x0202EC30, 1)[0],
-        rank_byte_preset=rank_byte, rank_after=read(0x02036BB4, 1)[0],
+        rank_byte_preset=rank_byte,
+        rank_after=read(0x02036BB4 + 1, 1)[0],   # 等级字节在记录指针 +1（验收勘误）
         cond_bit66=(ebb0[12] >> 2) & 1, cond_byte12=ebb0[12],
         ex_mask16=_struct.unpack_from('<H', read(0x02037CF0 + 0x216, 2), 0)[0],
-        entity_result_bits=_struct.unpack_from('<I', read(0x020306B4, 0x10), 0xC)[0])
+        entity_result_bits=_struct.unpack_from('<I', read(0x020306B4, 0x10), 0xC)[0],
+        events=events)
 
 # 正例：任务2 门、等级5、EX 位先清零
 pos = run_ex_gate(2, 100, 5)

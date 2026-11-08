@@ -1,0 +1,123 @@
+{
+ "batch": "night-20261109-A-fix-metadata",
+ "job": "A-repair",
+ "supersedes_note": "修正 night-20261109-A-ex-gate.json 的元数据；不覆盖旧文件",
+ "rom_sha1": "c4d93a58f0f82c526dec8a3fdbda170336303689",
+ "rom_sha1_label": "SHA1（此前 worker-state 误将 SHA256 标为 rom_sha1，已分别计算并标名）",
+ "rom_sha256": "4bb8b71ca8d50b5a8f0c737082d8f86c9ad31bd0abebddfa519b3af1ff3853a5",
+ "core_dll_sha256": "02747c2a77ea4ed9738c967d101a207a81973233588f68d39f5ab923a1a9599c",
+ "script_sha256_after_last_edit": {
+  "stage2a_run_score_fixtures": "869b03b668e2a97031921ac5ce662817038f2c5a36794086e821d88671c4c250",
+  "emulator_probe": "e1bf66a23507c9e7006cf0e88226238eb396f5c18523b764f1ea27427b1e6e8c"
+ },
+ "codex_review_ref": "semantic-data/stage2a/night-20261109-A-codex-review.json",
+ "repairs": [
+  "读取宽度更正：任务表为 u8[0x08333370+i]（ROM 字节 2,3,6,5,4,7,8,10,9,11），比较 u16[0x0202EC30] 的任务字节；条件编号 u16[0x0833337A+2*i]=66..75；奖励掩码 u32[0x08333390+4*i]=1,2,4,16,32,256,64,8,128,512；音效 u16[0x083333B8+2*i]=286..295。不把 i=0 推广到全部表项。",
+  "rank_after 改读记录指针 +1（实测 1，与 Codex 复测一致）；撤回『rank=0 杂散值』说法。",
+  "t≈400/900 近似时序替换为循环内事件表：正例条件位首变 t=356、EX 掩码首变 t=802。",
+  "worker-state 的 rom_sha1 由程序以 SHA1/SHA256 分别计算并正确标名。"
+ ],
+ "gate_results": {
+  "A_ex_gate_positive_m2_rank5": {
+   "mission_byte": 2,
+   "rank_byte_preset": 5,
+   "rank_after": 1,
+   "cond_bit66": 1,
+   "cond_byte12": 4,
+   "ex_mask16": 1,
+   "entity_result_bits": 16,
+   "events": [
+    {
+     "t": 0,
+     "event": "cond_bit66",
+     "value": 0
+    },
+    {
+     "t": 0,
+     "event": "ex_mask16",
+     "value": 0
+    },
+    {
+     "t": 356,
+     "event": "cond_bit66",
+     "value": 1
+    },
+    {
+     "t": 802,
+     "event": "ex_mask16",
+     "value": 1
+    }
+   ]
+  },
+  "A_ex_gate_negative_rank3": {
+   "mission_byte": 2,
+   "rank_byte_preset": 3,
+   "rank_after": 1,
+   "cond_bit66": 0,
+   "cond_byte12": 0,
+   "ex_mask16": 0,
+   "entity_result_bits": 0,
+   "events": [
+    {
+     "t": 0,
+     "event": "cond_bit66",
+     "value": 0
+    },
+    {
+     "t": 0,
+     "event": "ex_mask16",
+     "value": 0
+    }
+   ]
+  },
+  "A_ex_gate_already_have": {
+   "mission_byte": 2,
+   "rank_byte_preset": 5,
+   "rank_after": 1,
+   "cond_bit66": 1,
+   "cond_byte12": 4,
+   "ex_mask16": 1,
+   "entity_result_bits": 0,
+   "events": [
+    {
+     "t": 0,
+     "event": "cond_bit66",
+     "value": 0
+    },
+    {
+     "t": 0,
+     "event": "ex_mask16",
+     "value": 1
+    },
+    {
+     "t": 356,
+     "event": "cond_bit66",
+     "value": 1
+    }
+   ]
+  },
+  "A_ex_gate_mission1_control": {
+   "mission_byte": 1,
+   "rank_byte_preset": 5,
+   "rank_after": 3,
+   "cond_bit66": 0,
+   "cond_byte12": 0,
+   "ex_mask16": 0,
+   "entity_result_bits": 0,
+   "events": [
+    {
+     "t": 0,
+     "event": "cond_bit66",
+     "value": 0
+    },
+    {
+     "t": 0,
+     "event": "ex_mask16",
+     "value": 0
+    }
+   ]
+  }
+ },
+ "new_deep_functions": 0,
+ "elapsed_seconds_at_write": 98
+}
