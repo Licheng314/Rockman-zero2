@@ -1,0 +1,2033 @@
+{
+  "date": "2026-11-08",
+  "status": "stage2c second batch, total 10/15 functions; not full acceptance",
+  "rom_sha1": "c4d93a58f0f82c526dec8a3fdbda170336303689",
+  "core_sha256": "02747c2a77ea4ed9738c967d101a207a81973233588f68d39f5ab923a1a9599c",
+  "libretro_api": 1,
+  "python": "3.13.0",
+  "raw_trace_sha256": "4524933a36b4f4bdc1beb0d2b55e9631f179e329d9b5b512fd1cc3c8df77c504",
+  "static": {
+    "rom_sha1": "c4d93a58f0f82c526dec8a3fdbda170336303689",
+    "kind": "static evidence, not behavioral validation",
+    "new_functions": [
+      {
+        "start": 134451632,
+        "end": 134451772,
+        "rom_sha256": "4d6e0851eb6136eea623f03db47154998e4321027f94758cf22e1230fb8a04a5",
+        "asm_sha256": "079e0b8866414d0902012ed1f329d25d9e574e4edee1bb5da4ebd06e060701b5",
+        "literal_loads": [
+          {
+            "instruction": 134451648,
+            "literal": 134451704,
+            "value": 33747056
+          },
+          {
+            "instruction": 134451674,
+            "literal": 134451708,
+            "value": 137584736
+          },
+          {
+            "instruction": 134451728,
+            "literal": 134451772,
+            "value": 137584596
+          },
+          {
+            "instruction": 134451742,
+            "literal": 134451776,
+            "value": 137584604
+          }
+        ]
+      },
+      {
+        "start": 134452336,
+        "end": 134452682,
+        "rom_sha256": "2c74884755f27c177139f0f7730b4269b5d1ed382a0ec22ddb2d7bf64602d3b1",
+        "asm_sha256": "749210341d408e488091004298119c72588a3b31ba1f8ea7945416827aa08531",
+        "literal_loads": [
+          {
+            "instruction": 134452412,
+            "literal": 134452480,
+            "value": 33743240
+          },
+          {
+            "instruction": 134452416,
+            "literal": 134452484,
+            "value": 214013
+          },
+          {
+            "instruction": 134452420,
+            "literal": 134452488,
+            "value": 2531011
+          },
+          {
+            "instruction": 134452548,
+            "literal": 134452576,
+            "value": 137584736
+          },
+          {
+            "instruction": 134452580,
+            "literal": 134452644,
+            "value": 137585580
+          },
+          {
+            "instruction": 134452612,
+            "literal": 134452648,
+            "value": 137584872
+          },
+          {
+            "instruction": 134452652,
+            "literal": 134452684,
+            "value": 137584736
+          }
+        ]
+      },
+      {
+        "start": 134452908,
+        "end": 134452968,
+        "rom_sha256": "c348ba63de4f05f866ca8ccbe9aa5af6b2e9407b402a71931d0075d2e61e62f8",
+        "asm_sha256": "e5f2bf4f3579eef64e7be74e0461d4622644ff706633b0f3d6df7b65a24bee1d",
+        "literal_loads": [
+          {
+            "instruction": 134452912,
+            "literal": 134452968,
+            "value": 137584736
+          }
+        ]
+      },
+      {
+        "start": 134436984,
+        "end": 134437042,
+        "rom_sha256": "86d485f274462e509a4ff06e6d8ad6bbf3f31bdfe9031a1da93df57240c2d864",
+        "asm_sha256": "d53b6509eeacd64cc34a68551365f71a82bedff7dc23e5a94cd48b327e25e352",
+        "literal_loads": [
+          {
+            "instruction": 134436998,
+            "literal": 134437028,
+            "value": 698
+          }
+        ]
+      },
+      {
+        "start": 134446536,
+        "end": 134446568,
+        "rom_sha256": "4e12dd0eaf5e468e18fb21563a16e70724a22532570bcaab6b74752bcc4ca399",
+        "asm_sha256": "e17d90cb161eb6a19d82c558e92a7a7191751cb2f8e5ebc814eee591f5e6ee56",
+        "literal_loads": [
+          {
+            "instruction": 134446538,
+            "literal": 134446568,
+            "value": 137584128
+          }
+        ]
+      }
+    ],
+    "type_table": 137584736,
+    "lifecycle_tables": {
+      "0": {
+        "address": 137584804,
+        "callbacks": [
+          134451385,
+          134451469,
+          134451597,
+          134451337,
+          134245417
+        ]
+      },
+      "1": {
+        "address": 137584840,
+        "callbacks": [
+          134451837,
+          134452337,
+          134452909,
+          134451337,
+          134245417
+        ]
+      }
+    },
+    "resource_selector": {
+      "table": 137584128,
+      "rows_0_and_1": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "tiles": [
+        0,
+        192,
+        512,
+        704
+      ],
+      "palettes": [
+        1,
+        1,
+        6,
+        6
+      ]
+    }
+  },
+  "runtime": {
+    "primary": {
+      "fixture": "owned gun/sword slots, secondary=False, +2B4 preset=False; right-facing shot",
+      "resource_slot": 0,
+      "address": 33793688,
+      "before": {
+        "tick": 0,
+        "count": 0,
+        "slots": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "controller": 33793924,
+        "selector": 0,
+        "main_copy": 0,
+        "free_count": 23,
+        "pool_capacity": 24,
+        "pool_stride": 236,
+        "objects": [
+          {
+            "address": 33793924,
+            "kind": 0,
+            "state": 1,
+            "substate": 0,
+            "callback": 134451469,
+            "owner": 33783024,
+            "flags": 8,
+            "flags_b": 4,
+            "tile": 0,
+            "palette": 1,
+            "work": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "position": [
+              0,
+              0
+            ],
+            "velocity": [
+              0,
+              0
+            ],
+            "descriptor": 0,
+            "damage": 0
+          }
+        ]
+      },
+      "first": {
+        "tick": 1,
+        "count": 1,
+        "slots": [
+          33793688,
+          0,
+          0,
+          0
+        ],
+        "controller": 33793924,
+        "selector": 0,
+        "main_copy": 0,
+        "free_count": 22,
+        "pool_capacity": 24,
+        "pool_stride": 236,
+        "objects": [
+          {
+            "address": 33793688,
+            "kind": 1,
+            "state": 1,
+            "substate": 1,
+            "callback": 134452337,
+            "owner": 33783024,
+            "flags": 15,
+            "flags_b": 4,
+            "tile": 0,
+            "palette": 1,
+            "work": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "position": [
+              345728,
+              109311
+            ],
+            "velocity": [
+              1216,
+              0
+            ],
+            "descriptor": 137584952,
+            "damage": 2
+          },
+          {
+            "address": 33793924,
+            "kind": 0,
+            "state": 1,
+            "substate": 0,
+            "callback": 134451469,
+            "owner": 33783024,
+            "flags": 8,
+            "flags_b": 4,
+            "tile": 0,
+            "palette": 1,
+            "work": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "position": [
+              0,
+              0
+            ],
+            "velocity": [
+              0,
+              0
+            ],
+            "descriptor": 0,
+            "damage": 0
+          }
+        ],
+        "tracked": {
+          "state": 1,
+          "callback": 134452337,
+          "flags": 15,
+          "status_8c_94": "000000000000000000",
+          "active": true
+        }
+      },
+      "exit": {
+        "tick": 22,
+        "count": 0,
+        "slots": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "controller": 33793924,
+        "selector": 0,
+        "main_copy": 0,
+        "free_count": 22,
+        "pool_capacity": 24,
+        "pool_stride": 236,
+        "objects": [
+          {
+            "address": 33793688,
+            "kind": 1,
+            "state": 4,
+            "substate": 0,
+            "callback": 134245417,
+            "owner": 33783024,
+            "flags": 10,
+            "flags_b": 4,
+            "tile": 0,
+            "palette": 1,
+            "work": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "position": [
+              370048,
+              109311
+            ],
+            "velocity": [
+              1216,
+              0
+            ],
+            "descriptor": 137584952,
+            "damage": 2
+          },
+          {
+            "address": 33793924,
+            "kind": 0,
+            "state": 1,
+            "substate": 0,
+            "callback": 134451469,
+            "owner": 33783024,
+            "flags": 8,
+            "flags_b": 4,
+            "tile": 0,
+            "palette": 1,
+            "work": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "position": [
+              0,
+              0
+            ],
+            "velocity": [
+              0,
+              0
+            ],
+            "descriptor": 0,
+            "damage": 0
+          }
+        ],
+        "tracked": {
+          "state": 4,
+          "callback": 134245417,
+          "flags": 10,
+          "status_8c_94": "000000000000000000",
+          "active": true
+        }
+      },
+      "after_exit": {
+        "tick": 23,
+        "count": 0,
+        "slots": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "controller": 33793924,
+        "selector": 0,
+        "main_copy": 0,
+        "free_count": 23,
+        "pool_capacity": 24,
+        "pool_stride": 236,
+        "objects": [
+          {
+            "address": 33793924,
+            "kind": 0,
+            "state": 1,
+            "substate": 0,
+            "callback": 134451469,
+            "owner": 33783024,
+            "flags": 8,
+            "flags_b": 4,
+            "tile": 0,
+            "palette": 1,
+            "work": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "position": [
+              0,
+              0
+            ],
+            "velocity": [
+              0,
+              0
+            ],
+            "descriptor": 0,
+            "damage": 0
+          }
+        ],
+        "tracked": {
+          "state": 4,
+          "callback": 134245417,
+          "flags": 10,
+          "status_8c_94": "000000000000000000",
+          "active": false
+        }
+      }
+    },
+    "secondary_uncached": {
+      "fixture": "owned gun/sword slots, secondary=True, +2B4 preset=False; right-facing shot",
+      "resource_slot": 0,
+      "address": 33793688,
+      "before": {
+        "tick": 0,
+        "count": 0,
+        "slots": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "controller": 33793924,
+        "selector": 0,
+        "main_copy": 0,
+        "free_count": 23,
+        "pool_capacity": 24,
+        "pool_stride": 236,
+        "objects": [
+          {
+            "address": 33793924,
+            "kind": 0,
+            "state": 1,
+            "substate": 0,
+            "callback": 134451469,
+            "owner": 33783024,
+            "flags": 8,
+            "flags_b": 4,
+            "tile": 0,
+            "palette": 1,
+            "work": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "position": [
+              0,
+              0
+            ],
+            "velocity": [
+              0,
+              0
+            ],
+            "descriptor": 0,
+            "damage": 0
+          }
+        ]
+      },
+      "first": {
+        "tick": 1,
+        "count": 1,
+        "slots": [
+          33793688,
+          0,
+          0,
+          0
+        ],
+        "controller": 33793924,
+        "selector": 0,
+        "main_copy": 0,
+        "free_count": 22,
+        "pool_capacity": 24,
+        "pool_stride": 236,
+        "objects": [
+          {
+            "address": 33793688,
+            "kind": 1,
+            "state": 1,
+            "substate": 1,
+            "callback": 134452337,
+            "owner": 33783024,
+            "flags": 15,
+            "flags_b": 4,
+            "tile": 0,
+            "palette": 1,
+            "work": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "position": [
+              345728,
+              109311
+            ],
+            "velocity": [
+              1216,
+              0
+            ],
+            "descriptor": 137584952,
+            "damage": 2
+          },
+          {
+            "address": 33793924,
+            "kind": 0,
+            "state": 1,
+            "substate": 0,
+            "callback": 134451469,
+            "owner": 33783024,
+            "flags": 8,
+            "flags_b": 4,
+            "tile": 0,
+            "palette": 1,
+            "work": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "position": [
+              0,
+              0
+            ],
+            "velocity": [
+              0,
+              0
+            ],
+            "descriptor": 0,
+            "damage": 0
+          }
+        ],
+        "tracked": {
+          "state": 1,
+          "callback": 134452337,
+          "flags": 15,
+          "status_8c_94": "000000000000000000",
+          "active": true
+        }
+      },
+      "exit": {
+        "tick": 22,
+        "count": 0,
+        "slots": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "controller": 33793924,
+        "selector": 0,
+        "main_copy": 0,
+        "free_count": 22,
+        "pool_capacity": 24,
+        "pool_stride": 236,
+        "objects": [
+          {
+            "address": 33793688,
+            "kind": 1,
+            "state": 4,
+            "substate": 0,
+            "callback": 134245417,
+            "owner": 33783024,
+            "flags": 10,
+            "flags_b": 4,
+            "tile": 0,
+            "palette": 1,
+            "work": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "position": [
+              370048,
+              109311
+            ],
+            "velocity": [
+              1216,
+              0
+            ],
+            "descriptor": 137584952,
+            "damage": 2
+          },
+          {
+            "address": 33793924,
+            "kind": 0,
+            "state": 1,
+            "substate": 0,
+            "callback": 134451469,
+            "owner": 33783024,
+            "flags": 8,
+            "flags_b": 4,
+            "tile": 0,
+            "palette": 1,
+            "work": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "position": [
+              0,
+              0
+            ],
+            "velocity": [
+              0,
+              0
+            ],
+            "descriptor": 0,
+            "damage": 0
+          }
+        ],
+        "tracked": {
+          "state": 4,
+          "callback": 134245417,
+          "flags": 10,
+          "status_8c_94": "000000000000000000",
+          "active": true
+        }
+      },
+      "after_exit": {
+        "tick": 23,
+        "count": 0,
+        "slots": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "controller": 33793924,
+        "selector": 0,
+        "main_copy": 0,
+        "free_count": 23,
+        "pool_capacity": 24,
+        "pool_stride": 236,
+        "objects": [
+          {
+            "address": 33793924,
+            "kind": 0,
+            "state": 1,
+            "substate": 0,
+            "callback": 134451469,
+            "owner": 33783024,
+            "flags": 8,
+            "flags_b": 4,
+            "tile": 0,
+            "palette": 1,
+            "work": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "position": [
+              0,
+              0
+            ],
+            "velocity": [
+              0,
+              0
+            ],
+            "descriptor": 0,
+            "damage": 0
+          }
+        ],
+        "tracked": {
+          "state": 4,
+          "callback": 134245417,
+          "flags": 10,
+          "status_8c_94": "000000000000000000",
+          "active": false
+        }
+      }
+    },
+    "secondary": {
+      "fixture": "owned gun/sword slots, secondary=True, +2B4 preset=True; right-facing shot",
+      "resource_slot": 1,
+      "address": 33793688,
+      "before": {
+        "tick": 0,
+        "count": 0,
+        "slots": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "controller": 33793924,
+        "selector": 0,
+        "main_copy": 1,
+        "free_count": 23,
+        "pool_capacity": 24,
+        "pool_stride": 236,
+        "objects": [
+          {
+            "address": 33793924,
+            "kind": 0,
+            "state": 1,
+            "substate": 0,
+            "callback": 134451469,
+            "owner": 33783024,
+            "flags": 8,
+            "flags_b": 4,
+            "tile": 0,
+            "palette": 1,
+            "work": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "position": [
+              0,
+              0
+            ],
+            "velocity": [
+              0,
+              0
+            ],
+            "descriptor": 0,
+            "damage": 0
+          }
+        ]
+      },
+      "first": {
+        "tick": 1,
+        "count": 1,
+        "slots": [
+          33793688,
+          0,
+          0,
+          0
+        ],
+        "controller": 33793924,
+        "selector": 0,
+        "main_copy": 1,
+        "free_count": 22,
+        "pool_capacity": 24,
+        "pool_stride": 236,
+        "objects": [
+          {
+            "address": 33793688,
+            "kind": 1,
+            "state": 1,
+            "substate": 1,
+            "callback": 134452337,
+            "owner": 33783024,
+            "flags": 15,
+            "flags_b": 4,
+            "tile": 192,
+            "palette": 1,
+            "work": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "position": [
+              345728,
+              109311
+            ],
+            "velocity": [
+              1216,
+              0
+            ],
+            "descriptor": 137584952,
+            "damage": 2
+          },
+          {
+            "address": 33793924,
+            "kind": 0,
+            "state": 1,
+            "substate": 0,
+            "callback": 134451469,
+            "owner": 33783024,
+            "flags": 8,
+            "flags_b": 4,
+            "tile": 0,
+            "palette": 1,
+            "work": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "position": [
+              0,
+              0
+            ],
+            "velocity": [
+              0,
+              0
+            ],
+            "descriptor": 0,
+            "damage": 0
+          }
+        ],
+        "tracked": {
+          "state": 1,
+          "callback": 134452337,
+          "flags": 15,
+          "status_8c_94": "000000000000000000",
+          "active": true
+        }
+      },
+      "exit": {
+        "tick": 22,
+        "count": 0,
+        "slots": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "controller": 33793924,
+        "selector": 0,
+        "main_copy": 1,
+        "free_count": 22,
+        "pool_capacity": 24,
+        "pool_stride": 236,
+        "objects": [
+          {
+            "address": 33793688,
+            "kind": 1,
+            "state": 4,
+            "substate": 0,
+            "callback": 134245417,
+            "owner": 33783024,
+            "flags": 10,
+            "flags_b": 4,
+            "tile": 192,
+            "palette": 1,
+            "work": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "position": [
+              370048,
+              109311
+            ],
+            "velocity": [
+              1216,
+              0
+            ],
+            "descriptor": 137584952,
+            "damage": 2
+          },
+          {
+            "address": 33793924,
+            "kind": 0,
+            "state": 1,
+            "substate": 0,
+            "callback": 134451469,
+            "owner": 33783024,
+            "flags": 8,
+            "flags_b": 4,
+            "tile": 0,
+            "palette": 1,
+            "work": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "position": [
+              0,
+              0
+            ],
+            "velocity": [
+              0,
+              0
+            ],
+            "descriptor": 0,
+            "damage": 0
+          }
+        ],
+        "tracked": {
+          "state": 4,
+          "callback": 134245417,
+          "flags": 10,
+          "status_8c_94": "000000000000000000",
+          "active": true
+        }
+      },
+      "after_exit": {
+        "tick": 23,
+        "count": 0,
+        "slots": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "controller": 33793924,
+        "selector": 0,
+        "main_copy": 1,
+        "free_count": 23,
+        "pool_capacity": 24,
+        "pool_stride": 236,
+        "objects": [
+          {
+            "address": 33793924,
+            "kind": 0,
+            "state": 1,
+            "substate": 0,
+            "callback": 134451469,
+            "owner": 33783024,
+            "flags": 8,
+            "flags_b": 4,
+            "tile": 0,
+            "palette": 1,
+            "work": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "position": [
+              0,
+              0
+            ],
+            "velocity": [
+              0,
+              0
+            ],
+            "descriptor": 0,
+            "damage": 0
+          }
+        ],
+        "tracked": {
+          "state": 4,
+          "callback": 134245417,
+          "flags": 10,
+          "status_8c_94": "000000000000000000",
+          "active": false
+        }
+      }
+    },
+    "blocked_status": {
+      "fixture": "body status +8C forced to 0x1000 on normal bullet",
+      "initial_velocity": 1216,
+      "address": 33793688,
+      "observed": {
+        "tick": 2,
+        "count": 1,
+        "slots": [
+          33793688,
+          0,
+          0,
+          0
+        ],
+        "controller": 33793924,
+        "selector": 0,
+        "main_copy": 0,
+        "free_count": 22,
+        "pool_capacity": 24,
+        "pool_stride": 236,
+        "objects": [
+          {
+            "address": 33793688,
+            "kind": 1,
+            "state": 1,
+            "substate": 1,
+            "callback": 134452337,
+            "owner": 33783024,
+            "flags": 11,
+            "flags_b": 4,
+            "tile": 0,
+            "palette": 1,
+            "work": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "position": [
+              344816,
+              109919
+            ],
+            "velocity": [
+              -912,
+              608
+            ],
+            "descriptor": 137584952,
+            "damage": 2
+          },
+          {
+            "address": 33793924,
+            "kind": 0,
+            "state": 1,
+            "substate": 0,
+            "callback": 134451469,
+            "owner": 33783024,
+            "flags": 8,
+            "flags_b": 4,
+            "tile": 0,
+            "palette": 1,
+            "work": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "position": [
+              0,
+              0
+            ],
+            "velocity": [
+              0,
+              0
+            ],
+            "descriptor": 0,
+            "damage": 0
+          }
+        ],
+        "tracked": {
+          "state": 1,
+          "callback": 134452337,
+          "flags": 11,
+          "status_8c_94": "000000000000000000",
+          "active": true
+        }
+      }
+    },
+    "requested_cleanup": {
+      "fixture": "normal; work[3] forced to 1 in RAM",
+      "address": 33793688,
+      "retired": {
+        "tick": 2,
+        "count": 0,
+        "slots": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "controller": 33793924,
+        "selector": 0,
+        "main_copy": 0,
+        "free_count": 22,
+        "pool_capacity": 24,
+        "pool_stride": 236,
+        "objects": [
+          {
+            "address": 33793688,
+            "kind": 1,
+            "state": 4,
+            "substate": 0,
+            "callback": 134245417,
+            "owner": 33783024,
+            "flags": 10,
+            "flags_b": 4,
+            "tile": 0,
+            "palette": 1,
+            "work": [
+              0,
+              0,
+              0,
+              1
+            ],
+            "position": [
+              345728,
+              109311
+            ],
+            "velocity": [
+              1216,
+              0
+            ],
+            "descriptor": 137584952,
+            "damage": 2
+          },
+          {
+            "address": 33793924,
+            "kind": 0,
+            "state": 1,
+            "substate": 0,
+            "callback": 134451469,
+            "owner": 33783024,
+            "flags": 8,
+            "flags_b": 4,
+            "tile": 0,
+            "palette": 1,
+            "work": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "position": [
+              0,
+              0
+            ],
+            "velocity": [
+              0,
+              0
+            ],
+            "descriptor": 0,
+            "damage": 0
+          }
+        ],
+        "tracked": {
+          "state": 4,
+          "callback": 134245417,
+          "flags": 10,
+          "status_8c_94": "000000000000000000",
+          "active": true
+        }
+      },
+      "freed": {
+        "tick": 3,
+        "count": 0,
+        "slots": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "controller": 33793924,
+        "selector": 0,
+        "main_copy": 0,
+        "free_count": 23,
+        "pool_capacity": 24,
+        "pool_stride": 236,
+        "objects": [
+          {
+            "address": 33793924,
+            "kind": 0,
+            "state": 1,
+            "substate": 0,
+            "callback": 134451469,
+            "owner": 33783024,
+            "flags": 8,
+            "flags_b": 4,
+            "tile": 0,
+            "palette": 1,
+            "work": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "position": [
+              0,
+              0
+            ],
+            "velocity": [
+              0,
+              0
+            ],
+            "descriptor": 0,
+            "damage": 0
+          }
+        ],
+        "tracked": {
+          "state": 4,
+          "callback": 134245417,
+          "flags": 10,
+          "status_8c_94": "000000000000000000",
+          "active": false
+        }
+      }
+    },
+    "replacement_slot": {
+      "fixture": "replacement; work[3] forced to 1 in RAM",
+      "address": 33793688,
+      "retired": {
+        "tick": 2,
+        "count": 1,
+        "slots": [
+          33813504,
+          0,
+          0,
+          0
+        ],
+        "controller": 33793924,
+        "selector": 0,
+        "main_copy": 0,
+        "free_count": 22,
+        "pool_capacity": 24,
+        "pool_stride": 236,
+        "objects": [
+          {
+            "address": 33793688,
+            "kind": 1,
+            "state": 4,
+            "substate": 0,
+            "callback": 134245417,
+            "owner": 33783024,
+            "flags": 10,
+            "flags_b": 4,
+            "tile": 0,
+            "palette": 1,
+            "work": [
+              0,
+              0,
+              0,
+              1
+            ],
+            "position": [
+              345728,
+              109311
+            ],
+            "velocity": [
+              1216,
+              0
+            ],
+            "descriptor": 137584952,
+            "damage": 2
+          },
+          {
+            "address": 33793924,
+            "kind": 0,
+            "state": 1,
+            "substate": 0,
+            "callback": 134451469,
+            "owner": 33783024,
+            "flags": 8,
+            "flags_b": 4,
+            "tile": 0,
+            "palette": 1,
+            "work": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "position": [
+              0,
+              0
+            ],
+            "velocity": [
+              0,
+              0
+            ],
+            "descriptor": 0,
+            "damage": 0
+          }
+        ],
+        "tracked": {
+          "state": 4,
+          "callback": 134245417,
+          "flags": 10,
+          "status_8c_94": "000000000000000000",
+          "active": true
+        }
+      },
+      "freed": {
+        "tick": 3,
+        "count": 1,
+        "slots": [
+          33813504,
+          0,
+          0,
+          0
+        ],
+        "controller": 33793924,
+        "selector": 0,
+        "main_copy": 0,
+        "free_count": 23,
+        "pool_capacity": 24,
+        "pool_stride": 236,
+        "objects": [
+          {
+            "address": 33793924,
+            "kind": 0,
+            "state": 1,
+            "substate": 0,
+            "callback": 134451469,
+            "owner": 33783024,
+            "flags": 8,
+            "flags_b": 4,
+            "tile": 0,
+            "palette": 1,
+            "work": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "position": [
+              0,
+              0
+            ],
+            "velocity": [
+              0,
+              0
+            ],
+            "descriptor": 0,
+            "damage": 0
+          }
+        ],
+        "tracked": {
+          "state": 4,
+          "callback": 134245417,
+          "flags": 10,
+          "status_8c_94": "000000000000000000",
+          "active": false
+        }
+      }
+    },
+    "duplicate_slot": {
+      "fixture": "duplicate; work[3] forced to 1 in RAM",
+      "address": 33793688,
+      "retired": {
+        "tick": 2,
+        "count": 1,
+        "slots": [
+          33793688,
+          0,
+          0,
+          0
+        ],
+        "controller": 33793924,
+        "selector": 0,
+        "main_copy": 0,
+        "free_count": 22,
+        "pool_capacity": 24,
+        "pool_stride": 236,
+        "objects": [
+          {
+            "address": 33793688,
+            "kind": 1,
+            "state": 4,
+            "substate": 0,
+            "callback": 134245417,
+            "owner": 33783024,
+            "flags": 10,
+            "flags_b": 4,
+            "tile": 0,
+            "palette": 1,
+            "work": [
+              0,
+              0,
+              0,
+              1
+            ],
+            "position": [
+              345728,
+              109311
+            ],
+            "velocity": [
+              1216,
+              0
+            ],
+            "descriptor": 137584952,
+            "damage": 2
+          },
+          {
+            "address": 33793924,
+            "kind": 0,
+            "state": 1,
+            "substate": 0,
+            "callback": 134451469,
+            "owner": 33783024,
+            "flags": 8,
+            "flags_b": 4,
+            "tile": 0,
+            "palette": 1,
+            "work": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "position": [
+              0,
+              0
+            ],
+            "velocity": [
+              0,
+              0
+            ],
+            "descriptor": 0,
+            "damage": 0
+          }
+        ],
+        "tracked": {
+          "state": 4,
+          "callback": 134245417,
+          "flags": 10,
+          "status_8c_94": "000000000000000000",
+          "active": true
+        }
+      },
+      "freed": {
+        "tick": 3,
+        "count": 1,
+        "slots": [
+          33793688,
+          0,
+          0,
+          0
+        ],
+        "controller": 33793924,
+        "selector": 0,
+        "main_copy": 0,
+        "free_count": 23,
+        "pool_capacity": 24,
+        "pool_stride": 236,
+        "objects": [
+          {
+            "address": 33793924,
+            "kind": 0,
+            "state": 1,
+            "substate": 0,
+            "callback": 134451469,
+            "owner": 33783024,
+            "flags": 8,
+            "flags_b": 4,
+            "tile": 0,
+            "palette": 1,
+            "work": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "position": [
+              0,
+              0
+            ],
+            "velocity": [
+              0,
+              0
+            ],
+            "descriptor": 0,
+            "damage": 0
+          }
+        ],
+        "tracked": {
+          "state": 4,
+          "callback": 134245417,
+          "flags": 10,
+          "status_8c_94": "000000000000000000",
+          "active": false
+        }
+      }
+    },
+    "counter_underflow": {
+      "fixture": "zero_count; work[3] forced to 1 in RAM",
+      "address": 33793688,
+      "retired": {
+        "tick": 2,
+        "count": 255,
+        "slots": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "controller": 33793924,
+        "selector": 0,
+        "main_copy": 0,
+        "free_count": 22,
+        "pool_capacity": 24,
+        "pool_stride": 236,
+        "objects": [
+          {
+            "address": 33793688,
+            "kind": 1,
+            "state": 4,
+            "substate": 0,
+            "callback": 134245417,
+            "owner": 33783024,
+            "flags": 10,
+            "flags_b": 4,
+            "tile": 0,
+            "palette": 1,
+            "work": [
+              0,
+              0,
+              0,
+              1
+            ],
+            "position": [
+              345728,
+              109311
+            ],
+            "velocity": [
+              1216,
+              0
+            ],
+            "descriptor": 137584952,
+            "damage": 2
+          },
+          {
+            "address": 33793924,
+            "kind": 0,
+            "state": 1,
+            "substate": 0,
+            "callback": 134451469,
+            "owner": 33783024,
+            "flags": 8,
+            "flags_b": 4,
+            "tile": 0,
+            "palette": 1,
+            "work": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "position": [
+              0,
+              0
+            ],
+            "velocity": [
+              0,
+              0
+            ],
+            "descriptor": 0,
+            "damage": 0
+          }
+        ],
+        "tracked": {
+          "state": 4,
+          "callback": 134245417,
+          "flags": 10,
+          "status_8c_94": "000000000000000000",
+          "active": true
+        }
+      },
+      "freed": {
+        "tick": 3,
+        "count": 255,
+        "slots": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "controller": 33793924,
+        "selector": 0,
+        "main_copy": 0,
+        "free_count": 23,
+        "pool_capacity": 24,
+        "pool_stride": 236,
+        "objects": [
+          {
+            "address": 33793924,
+            "kind": 0,
+            "state": 1,
+            "substate": 0,
+            "callback": 134451469,
+            "owner": 33783024,
+            "flags": 8,
+            "flags_b": 4,
+            "tile": 0,
+            "palette": 1,
+            "work": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "position": [
+              0,
+              0
+            ],
+            "velocity": [
+              0,
+              0
+            ],
+            "descriptor": 0,
+            "damage": 0
+          }
+        ],
+        "tracked": {
+          "state": 4,
+          "callback": 134245417,
+          "flags": 10,
+          "status_8c_94": "000000000000000000",
+          "active": false
+        }
+      }
+    },
+    "full_registry": {
+      "fixture": "four placeholder pointers, count kept zero before firing",
+      "created": {
+        "tick": 1,
+        "count": 1,
+        "slots": [
+          33813504,
+          33813760,
+          33814016,
+          33814272
+        ],
+        "controller": 33793924,
+        "selector": 0,
+        "main_copy": 0,
+        "free_count": 22,
+        "pool_capacity": 24,
+        "pool_stride": 236,
+        "objects": [
+          {
+            "address": 33793688,
+            "kind": 1,
+            "state": 1,
+            "substate": 1,
+            "callback": 134452337,
+            "owner": 33783024,
+            "flags": 15,
+            "flags_b": 4,
+            "tile": 0,
+            "palette": 1,
+            "work": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "position": [
+              345728,
+              109311
+            ],
+            "velocity": [
+              1216,
+              0
+            ],
+            "descriptor": 137584952,
+            "damage": 2
+          },
+          {
+            "address": 33793924,
+            "kind": 0,
+            "state": 1,
+            "substate": 0,
+            "callback": 134451469,
+            "owner": 33783024,
+            "flags": 8,
+            "flags_b": 4,
+            "tile": 0,
+            "palette": 1,
+            "work": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "position": [
+              0,
+              0
+            ],
+            "velocity": [
+              0,
+              0
+            ],
+            "descriptor": 0,
+            "damage": 0
+          }
+        ],
+        "tracked": {
+          "state": 1,
+          "callback": 134452337,
+          "flags": 15,
+          "status_8c_94": "000000000000000000",
+          "active": true
+        }
+      },
+      "retired": {
+        "tick": 2,
+        "count": 1,
+        "slots": [
+          33813504,
+          33813760,
+          33814016,
+          33814272
+        ],
+        "controller": 33793924,
+        "selector": 0,
+        "main_copy": 0,
+        "free_count": 22,
+        "pool_capacity": 24,
+        "pool_stride": 236,
+        "objects": [
+          {
+            "address": 33793688,
+            "kind": 1,
+            "state": 4,
+            "substate": 0,
+            "callback": 134245417,
+            "owner": 33783024,
+            "flags": 10,
+            "flags_b": 4,
+            "tile": 0,
+            "palette": 1,
+            "work": [
+              0,
+              0,
+              0,
+              1
+            ],
+            "position": [
+              345728,
+              109311
+            ],
+            "velocity": [
+              1216,
+              0
+            ],
+            "descriptor": 137584952,
+            "damage": 2
+          },
+          {
+            "address": 33793924,
+            "kind": 0,
+            "state": 1,
+            "substate": 0,
+            "callback": 134451469,
+            "owner": 33783024,
+            "flags": 8,
+            "flags_b": 4,
+            "tile": 0,
+            "palette": 1,
+            "work": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "position": [
+              0,
+              0
+            ],
+            "velocity": [
+              0,
+              0
+            ],
+            "descriptor": 0,
+            "damage": 0
+          }
+        ],
+        "tracked": {
+          "state": 4,
+          "callback": 134245417,
+          "flags": 10,
+          "status_8c_94": "000000000000000000",
+          "active": true
+        }
+      },
+      "address": 33793688
+    },
+    "allocation_null": {
+      "fixture": "existing support controller, free-list head forced NULL",
+      "before": {
+        "tick": 0,
+        "count": 0,
+        "slots": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "controller": 33793924,
+        "selector": 0,
+        "main_copy": 0,
+        "free_count": 23,
+        "pool_capacity": 24,
+        "pool_stride": 236,
+        "objects": [
+          {
+            "address": 33793924,
+            "kind": 0,
+            "state": 1,
+            "substate": 0,
+            "callback": 134451469,
+            "owner": 33783024,
+            "flags": 8,
+            "flags_b": 4,
+            "tile": 0,
+            "palette": 1,
+            "work": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "position": [
+              0,
+              0
+            ],
+            "velocity": [
+              0,
+              0
+            ],
+            "descriptor": 0,
+            "damage": 0
+          }
+        ]
+      },
+      "after": {
+        "tick": 1,
+        "count": 0,
+        "slots": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "controller": 33793924,
+        "selector": 0,
+        "main_copy": 0,
+        "free_count": 23,
+        "pool_capacity": 24,
+        "pool_stride": 236,
+        "objects": [
+          {
+            "address": 33793924,
+            "kind": 0,
+            "state": 1,
+            "substate": 0,
+            "callback": 134451469,
+            "owner": 33783024,
+            "flags": 8,
+            "flags_b": 4,
+            "tile": 0,
+            "palette": 1,
+            "work": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "position": [
+              0,
+              0
+            ],
+            "velocity": [
+              0,
+              0
+            ],
+            "descriptor": 0,
+            "damage": 0
+          }
+        ]
+      }
+    },
+    "support_null": {
+      "fixture": "owner support link cleared and free-list head forced NULL",
+      "after": {
+        "tick": 1,
+        "count": 0,
+        "slots": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "controller": 0,
+        "selector": 0,
+        "main_copy": 0,
+        "free_count": 23,
+        "pool_capacity": 24,
+        "pool_stride": 236,
+        "objects": [
+          {
+            "address": 33793924,
+            "kind": 0,
+            "state": 1,
+            "substate": 0,
+            "callback": 134451469,
+            "owner": 33783024,
+            "flags": 8,
+            "flags_b": 4,
+            "tile": 0,
+            "palette": 1,
+            "work": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "position": [
+              0,
+              0
+            ],
+            "velocity": [
+              0,
+              0
+            ],
+            "descriptor": 0,
+            "damage": 0
+          }
+        ]
+      }
+    },
+    "support_recreated": {
+      "fixture": "owner support link cleared with allocation available",
+      "old_support": 33793924,
+      "created": {
+        "tick": 1,
+        "count": 1,
+        "slots": [
+          33793452,
+          0,
+          0,
+          0
+        ],
+        "controller": 33793688,
+        "selector": 0,
+        "main_copy": 0,
+        "free_count": 21,
+        "pool_capacity": 24,
+        "pool_stride": 236,
+        "objects": [
+          {
+            "address": 33793452,
+            "kind": 1,
+            "state": 1,
+            "substate": 1,
+            "callback": 134452337,
+            "owner": 33783024,
+            "flags": 15,
+            "flags_b": 4,
+            "tile": 0,
+            "palette": 1,
+            "work": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "position": [
+              345728,
+              109311
+            ],
+            "velocity": [
+              1216,
+              0
+            ],
+            "descriptor": 137584952,
+            "damage": 2
+          },
+          {
+            "address": 33793924,
+            "kind": 0,
+            "state": 1,
+            "substate": 0,
+            "callback": 134451469,
+            "owner": 33783024,
+            "flags": 8,
+            "flags_b": 4,
+            "tile": 0,
+            "palette": 1,
+            "work": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "position": [
+              0,
+              0
+            ],
+            "velocity": [
+              0,
+              0
+            ],
+            "descriptor": 0,
+            "damage": 0
+          },
+          {
+            "address": 33793688,
+            "kind": 0,
+            "state": 1,
+            "substate": 0,
+            "callback": 134451469,
+            "owner": 33783024,
+            "flags": 8,
+            "flags_b": 4,
+            "tile": 0,
+            "palette": 1,
+            "work": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "position": [
+              319296,
+              108735
+            ],
+            "velocity": [
+              -1216,
+              0
+            ],
+            "descriptor": 137584952,
+            "damage": 2
+          }
+        ]
+      }
+    }
+  },
+  "z3_reference": {
+    "repository": "https://github.com/mmzret/rmz3",
+    "commit": "2a28700e0a74edd9578737c3b3435ced9d074045",
+    "file": "src/weapon/buster.c",
+    "kind": "static source comparison only"
+  },
+  "scripts": {
+    "research/stage2c/probe-buster-lifecycle.py": "6a8865554042c4783cc6f30518abb608d2d77af5d74c4222cca7487e563d61c9",
+    "research/stage2c/inspect-buster-contract.py": "205c37b535b7ef120d83e2d8d9165ba5d6ed02a1d765f2cadf0d889d874d31ed"
+  }
+}
