@@ -49,6 +49,7 @@
 - [实体碰撞相交后的属性准备、状态与回调](semantic-entity-collision-resolution-interface.md)
 - [命中核心：分流、扣减公式与提交状态](semantic-hit-damage.md)
 - [受击消费者、直接扣减入口与伤害评分累计](semantic-hit-consumers.md)
+- [阶段2A：评分规则与能力使用关系](STAGE2A-SCORE-RESEARCH.md)（阶段报告；A1-A3 夹具级验证，A4 部分）
 - [实体持续交互计数：生产、衰减与状态清除](semantic-entity-interaction-counter.md)
 - [实体动作历史与交互计数的输入事件依据](semantic-entity-action-history.md)
 - [输入缓冲到水平移动：历史保持、幅值与方向锁](semantic-entity-buffered-movement.md)

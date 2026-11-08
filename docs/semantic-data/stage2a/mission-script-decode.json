@@ -1,0 +1,20 @@
+{
+  "rom_sha1": "c4d93a58f0f82c526dec8a3fdbda170336303689",
+  "mission1_script_tables": {
+    "per_frame_dispatcher": "0x080149F4 (任务结构 0x0202EC30, VM 0x0202EC40, bit0 of u16[0x0202EC42]=脚本运行)",
+    "task_handler_table": "0x083260CC (normal) / 0x08326118 (0x0202EBB4&0x10 hardmode)",
+    "mission1_handler": "0x08015E78 (hard variant 0x08016438)",
+    "script_ptr_array": "0x083263F4 -> 0x08328644 (17 子脚本)",
+    "settlement_script": "0x08327A74 (script10): cmd32 sub=0 初始化 0x020306B4, sub=1 循环 sub_0801CE5C 至返回1, 之后起飞演出/音乐/SAVE oper=2",
+    "vm": "0x0801B6C4, 命令表 0x08326364 (35 项), 8字节槽 {opcode,sub,u16 arg,u32 operand}",
+    "phase_byte": "0x0202EDAC (=0x0202EC30+0x17C), 0..16",
+    "event_complete_bit": "u16[0x0202EC38] bit5 (0x20), 由事件实体状态机置位 (如 0x08044760), phase3/7/13 消费",
+    "area_goal_entities": "script1/7/8 spawn kind0 目标实体 (1320/4192/7072px), 0x08014DE8 检测 +0x8C&0x200 且 +0xA4==0 -> EC38|=0x10"
+  },
+  "machine_event": {
+    "spawn": "script3 (0x083275E4): kind2/type9 @0x0CF000=847872 subpixel",
+    "mother": "kind9 cb 0x0804D209 @0x0203BB50 (非5池列表), hp16, 实测不可伤害",
+    "pods": "kind23 cb 0x08073A84 x6, hp1, 读母机 +0xBE/+0xBF 毁舱计数; 实测剑/枪/蓄力均未造成伤害(+0x3B 清0后亦然)",
+    "blocker": "舱位全灭 -> 母机事件实体走完 -> bit5 -> script4 解锁相机; 未复现自然破坏路径"
+  }
+}

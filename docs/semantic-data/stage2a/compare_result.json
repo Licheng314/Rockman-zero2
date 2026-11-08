@@ -1,0 +1,82 @@
+{
+ "rom_sha1": "c4d93a58f0f82c526dec8a3fdbda170336303689",
+ "note": "settlement-computation fixture (1-frame ROM patch 0x080E4390->0x080141FC); not a playthrough-clear verification. State restored from state0.sav before each group.",
+ "A_baseline": {
+  "t": 20,
+  "k": 0,
+  "dmg": 9,
+  "death": 9,
+  "assist": 15,
+  "bonus": 20,
+  "total": 73,
+  "rank": 3,
+  "acc": 73,
+  "cat": 1,
+  "persist": 5
+ },
+ "B_assist_3": {
+  "t": 20,
+  "k": 0,
+  "dmg": 9,
+  "death": 9,
+  "assist": 12,
+  "bonus": 20,
+  "total": 70,
+  "rank": 3,
+  "acc": 70,
+  "cat": 1,
+  "persist": 5
+ },
+ "B_assist_6": {
+  "t": 20,
+  "k": 0,
+  "dmg": 9,
+  "death": 9,
+  "assist": 9,
+  "bonus": 20,
+  "total": 67,
+  "rank": 3,
+  "acc": 67,
+  "cat": 1,
+  "persist": 5
+ },
+ "B_assist_16": {
+  "t": 20,
+  "k": 0,
+  "dmg": 9,
+  "death": 9,
+  "assist": 255,
+  "bonus": 20,
+  "total": 57,
+  "rank": 2,
+  "acc": 57,
+  "cat": 1,
+  "persist": 5
+ },
+ "C_formflip_210_215": {
+  "t": 20,
+  "k": 0,
+  "dmg": 9,
+  "death": 9,
+  "assist": 15,
+  "bonus": 20,
+  "total": 73,
+  "rank": 3,
+  "acc": 73,
+  "cat": 1,
+  "persist": 5
+ },
+ "C2_stats_1fd_208": {
+  "t": 20,
+  "k": 0,
+  "dmg": 9,
+  "death": 9,
+  "assist": 15,
+  "bonus": 20,
+  "total": 73,
+  "rank": 3,
+  "acc": 73,
+  "cat": 1,
+  "persist": 5
+ }
+}

@@ -1,0 +1,50 @@
+{
+ "S2": {
+  "t": 20,
+  "k": 0,
+  "dmg": 6,
+  "death": 15,
+  "assist": 15,
+  "total": 76,
+  "rank": 4,
+  "acc": 76,
+  "cat": 1,
+  "persist": 5
+ },
+ "S3": {
+  "t": 19,
+  "k": 5,
+  "dmg": 15,
+  "death": 12,
+  "assist": 15,
+  "total": 86,
+  "rank": 5,
+  "acc": 86,
+  "cat": 1,
+  "persist": 5
+ },
+ "S4": {
+  "t": 0,
+  "k": 0,
+  "dmg": 14,
+  "death": 15,
+  "assist": 13,
+  "total": 62,
+  "rank": 2,
+  "acc": 62,
+  "cat": 2,
+  "persist": 5
+ },
+ "S5": {
+  "t": 20,
+  "k": 15,
+  "dmg": 15,
+  "death": 15,
+  "assist": 15,
+  "total": 100,
+  "rank": 6,
+  "acc": 100,
+  "cat": 0,
+  "persist": 1
+ }
+}
