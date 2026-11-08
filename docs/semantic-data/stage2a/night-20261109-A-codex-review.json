@@ -1,0 +1,50 @@
+{
+  "delivered_commit": "0ef8a58f",
+  "fixtures": {
+    "boundary4": {
+      "mission_byte": 2,
+      "rank_byte_preset": 4,
+      "rank_after": 0,
+      "cond_bit66": 0,
+      "cond_byte12": 0,
+      "ex_mask16": 0,
+      "entity_result_bits": 0,
+      "actual_rank_after": 1,
+      "record_pointer": 33778612
+    },
+    "positive5": {
+      "mission_byte": 2,
+      "rank_byte_preset": 5,
+      "rank_after": 0,
+      "cond_bit66": 1,
+      "cond_byte12": 4,
+      "ex_mask16": 1,
+      "entity_result_bits": 16,
+      "actual_rank_after": 1,
+      "record_pointer": 33778612
+    }
+  },
+  "fingerprints": {
+    "baserom.gba": {
+      "sha1": "c4d93a58f0f82c526dec8a3fdbda170336303689",
+      "sha256": "4bb8b71ca8d50b5a8f0c737082d8f86c9ad31bd0abebddfa519b3af1ff3853a5"
+    },
+    "research/stage2a/run-score-fixtures.py": {
+      "sha1": "c4198ad0b50b1fe20fae22959777d0773f772ce9",
+      "sha256": "c5f7e6137a279b0a84950ec3175196d1d506ed2cb9848b354bc500dcbc0ea50f"
+    },
+    "tools/bin/mgba_libretro.dll": {
+      "sha1": "b8fd67ee86287f2e298fd64d75a37ff55488acc3",
+      "sha256": "02747c2a77ea4ed9738c967d101a207a81973233588f68d39f5ab923a1a9599c"
+    }
+  },
+  "rom_memory_sha1": "c4d93a58f0f82c526dec8a3fdbda170336303689",
+  "verdict": "A的所选混合任务RAM夹具正反例接受；非自然通关。元数据/字段解释须有限修正。",
+  "source_corrections": [
+    "1DA44: u16[0202EC30] == u8[08333370+i]; condition number=u16[0833337A+2*i]",
+    "1D6D8 reward mask=u32[08333390+4*i]; only selected i=0 tested",
+    "rank_after must read record_pointer+1, actual result=1 not0",
+    "worker-state rom_sha1 currently contains SHA256; label/compute both correctly"
+  ],
+  "checks": "delivered full 2A script passed in fresh minimal directory; independent rank4/5 boundary and disk/memory ROM SHA1 passed"
+}
