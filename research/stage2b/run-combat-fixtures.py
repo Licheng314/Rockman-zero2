@@ -180,6 +180,40 @@ ch = hp_changes(fr)
 assert len(ch) == 3 and ch[2][0] == 15, ch
 results["B4_rehit13"] = dict(changes=ch)
 
+# ---- R1（修补包）：输入缓冲 写入→保留→消费/丢弃 字段时序 ----
+# 正例 0/8/16：P+0x2BB 在 t=8 写入 2（+0x2B8=1），t=10 消费（pose 43，清 0）；
+# t=16 写入 3，t=18 消费（pose 46）。负例持按不写缓冲；无后续段。
+fr = trace("R1_three_press", lambda t: (0,) if t in (0, 8, 16) else (), 60)
+assert fr[8]['buf'] == 2 and fr[9]['buf'] == 2 and fr[10]['pose'] == 43 and fr[10]['buf'] == 0,     [(f['t'], f['pose'], f['buf']) for f in fr[7:12]]
+assert fr[16]['buf'] == 3 and fr[18]['pose'] == 46, (fr[16]['pose'], fr[16]['buf'], fr[18]['pose'])
+fr = trace("R1_hold_only", lambda t: (0,) if t < 20 else (), 40)
+assert not any(f['pose'] in (43, 46) for f in fr), [f['pose'] for f in fr]   # 负例：持按无新按 -> 无接段
+fr = trace("R1_press16_no_followup", lambda t: (0,) if t in (0, 16) else (), 45)
+assert fr[16]['pose'] == 43 and not any(f['pose'] == 46 for f in fr)   # 取消后续输入 -> 不报完整连段
+results["R1_buffer"] = dict(
+    field="+0x2BB(请求码,写入时+0x2B8=1,消费时清0并存档到+0x2BF/+0x2B7链计数)",
+    write="新按帧(08035A40/08035984 解析码)", consume="窗口门(08035B60)通过后提交(08035ADC),延迟0-2帧",
+    clear="消费即清;受击打断/回待机清链计数(+0x179/+0x2B7)", three_press="t8写2->t10 pose43; t16写3->t18 pose46")
+
+# ---- R2（修补包）：蓄力释放->命中->首斩->第二斩->第三斩 一次连续运行 ----
+# 时序完全复用已验收 charge_then_combo（5..195 持按=首帧自动斩+蓄力,195 释放,245/265 按），
+# 第三按扫描 266..280（单次批量）均未接第三段：hit2(265,pose43,-9) 命中后命中停顿推迟接受窗口，
+# 目标反击 t=273（玩家 pose 129）打断并清空连段状态；291 帧重按从首斩重启（chain=1）。
+fr = trace("R2_charged_then_combo", lambda t: (0,) if 5 <= t < 195 else ((0,) if t in (245, 265) else ()), 300, state=base)
+ch = hp_changes(fr)
+assert ch[2][2] == 52 and ch[2][1] == 182, ch                      # 蓄力斩 -10 (pose 52)
+assert ch[3][2] == 42 and ch[3][1] == 174, ch                      # 首斩 -8
+assert ch[4][2] == 43 and ch[4][1] == 165, ch                      # 第二斩 -9
+assert not any(c[2] == 46 for c in ch), ch                         # 第三斩未发生（有界失败）
+fr = trace("R2_react_recover_repress", lambda t: (0,) if 5 <= t < 195 else ((0,) if t in (245, 265, 291) else ()), 320, state=base)
+ch2 = hp_changes(fr)
+assert ch2[-1][2] == 42 and ch2[-1][1] == 157, ch2                 # 打断后重按=首斩重启（chain=1）
+results["R2_charged_chain"] = dict(
+    continuous_run="蓄力命中-10(pose52,t195) -> 首斩-8(t247,pose42,chain1) -> 第二斩-9(t265,pose43,chain2)",
+    third_slash="失败:press3 266-280 扫描均未接 pose46;首个失效环节=第三斩请求未被接受且目标反击 t273(玩家pose129)打断清状态",
+    charge_note="P+0x188 计数在蓄力姿势丢失(94-167)期间继续累计;按住时长!=计数",
+    verdict="有界受阻:三段中前两段成立,第三段在本对抗场景未复现;非输入系统普遍拒绝(无目标时 mid-hit2 可接)")
+
 (OUT / "combat-fixtures-result.json").write_text(json.dumps(results, indent=1))
 (OUT / "combat-fixtures-traces.json").write_text(json.dumps(TRACE_LOG))
 print("COVERED 2B FIXTURES PASSED; third full chain and Boss validation remain incomplete")

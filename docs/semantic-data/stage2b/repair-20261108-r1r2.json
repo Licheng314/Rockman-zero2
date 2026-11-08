@@ -1,0 +1,146 @@
+{
+ "batch": "repair-20261108-r1r2",
+ "rom_sha1": "c4d93a58f0f82c526dec8a3fdbda170336303689",
+ "script_fingerprints": {
+  "stage2a": "4cfc210240ccae2f0e44ada1bb5eb321620fb9af7e6a93b5309d2859b68c893f",
+  "stage2b": "ac2be24c765d6efe80af5e92a4824ce35984fdff7fba0fc24b5bbd5d2806c304",
+  "audit_ref": "31ab6f65"
+ },
+ "fixtures_ram": {
+  "weapon": "+0x210|=2,+0x212=1",
+  "ex_bits": "+0x218|=0x90(R1/R2 复用基线)",
+  "saber_tier": "+0x223=3",
+  "target_hp": "0x02030057c0... 实例 +0xA4=200 (R2)/60(早期尝试)",
+  "note": "全部为标注 RAM 夹具;ROM/存档未改"
+ },
+ "R1": {
+  "question": "0/8/16 三连按如何被保留与消费(验收反例: t=10 pose43, t=18 pose46)",
+  "field_table": [
+   {
+    "field": "P+0x2BB",
+    "role": "请求码(下一段)",
+    "write": "新按帧由 08035A40/08035984 解析写入(正例 t8<-2, t16<-3)",
+    "consume": "窗口门 08035B60 通过后由段处理提交(08035ADC),观测延迟 0-2 帧",
+    "clear": "消费即清零;受击打断/回待机清链计数"
+   },
+   {
+    "field": "P+0x2B8",
+    "role": "请求互斥",
+    "write": "写 2BB 时置 1",
+    "clear": "消费时清 0"
+   },
+   {
+    "field": "P+0x2B7",
+    "role": "连段链计数(1/2/3)",
+    "write": "消费时 +1",
+    "clear": "回待机清 0"
+   },
+   {
+    "field": "P+0x2BF",
+    "role": "前一请求存档",
+    "write": "消费时 = 旧 2BB"
+   },
+   {
+    "field": "P+0x179",
+    "role": "段号",
+    "write": "提交时推进"
+   }
+  ],
+  "positives": [
+   "t8 写2 -> t10 pose43; t16 写3 -> t18 pose46 (R1_three_press)",
+   "t16 单独按 -> 同帧 pose43 (R1_press16_no_followup)"
+  ],
+  "negatives": [
+   "持按无新按: 无任何 43/46 (R1_hold_only)",
+   "取消后续输入: 43 后无 46 (R1_press16_no_followup)"
+  ],
+  "rising_request": "链1 场景 t62 上+B -> +0x2BB=5(cls=2), t63 起升龙(无目标 1 帧延迟; 验收样本 t62->t83 为命中停顿+窗口推迟)",
+  "verdict": "通过(本样本级); 静态侧全部为复用函数,0 新增"
+ },
+ "R2": {
+  "question": "蓄力斩后完整三连斩(不截短两段)",
+  "target_identity": {
+   "addr": "0x030057c0",
+   "pool": "0x0202F078",
+   "type": 1,
+   "callback": "0x08066A35",
+   "type_table_entry": "0x0833DC0C",
+   "each_run_recheck": true
+  },
+  "continuous_run_events": [
+   {
+    "t": 7,
+    "event": "蓄力前自动普通斩命中",
+    "dmg": 8,
+    "pose": 42,
+    "note": "不计入蓄力后三段"
+   },
+   {
+    "t": 94,
+    "event": "蓄力姿势丢失(126->1)而 P+0x188 计数继续(68->158)",
+    "note": "按住时长!=计数;计数中断点与姿势分离"
+   },
+   {
+    "t": 195,
+    "event": "释放->蓄力斩命中",
+    "dmg": 10,
+    "pose": 52,
+    "chg_at_release": "约158-168"
+   },
+   {
+    "t": 247,
+    "event": "首斩命中",
+    "dmg": 8,
+    "pose": 42,
+    "chain": 1
+   },
+   {
+    "t": 265,
+    "event": "第二斩命中",
+    "dmg": 9,
+    "pose": 43,
+    "chain": 2
+   },
+   {
+    "t": 273,
+    "event": "目标反击命中玩家",
+    "player_pose": 129
+   },
+   {
+    "t": 291,
+    "event": "打断后重按",
+    "result": "首斩重启(chain=1),-8"
+   }
+  ],
+  "third_slash_failure": {
+   "scan": "press3 266..280 单次批量 15 组 + 269/287/291 单点",
+   "result": "无任何 pose46 或 HP 变化",
+   "first_failure": "第三斩请求未被窗口接受;266-272 的请求未消费,273 起玩家被打断且连段状态清零",
+   "excluded": [
+    "输入系统普遍拒绝(无目标 mid-hit2 可接 t16->18 pose46)",
+    "几何未命中(同位置 hit1/hit2 均命中)",
+    "目标 HP 冻结(未使用)",
+    "目标受击保护关闭(未使用)"
+   ]
+  },
+  "verdict": "有界受阻: 蓄力命中+首斩+第二斩成立,第三段未复现; 完整时序与失败环节已交付"
+ },
+ "clean_rerun": {
+  "dir": "build/stage2b-repair/clean-run",
+  "files": [
+   "research/emulator/probe.py",
+   "research/stage2a/run-score-fixtures.py",
+   "research/stage2b/run-combat-fixtures.py",
+   "tools/bin/mgba_libretro.dll",
+   "baserom.gba"
+  ],
+  "result": "2A ALL PASSED; 2B COVERED PASSED (含 R1/R2 断言)"
+ },
+ "incomplete": [
+  "R2 第三段",
+  "Boss 命中门控",
+  "A4 正向 EX 门"
+ ],
+ "elapsed_min_at_write": 68,
+ "core_dll_sha256": "02747c2a77ea4ed9738c967d101a207a81973233588f68d39f5ab923a1a9599c"
+}
