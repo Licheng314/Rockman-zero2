@@ -22,4 +22,6 @@
 
 第三批 `stage2c/probe-resource-slots.py` 从开机重建同一基线，验证8组有限调色板条件：请求/恢复、两对逻辑槽的共享覆盖、缓存不重载反例及普通剑/枪弹样本。执行 `python -X utf8 -B research/stage2c/probe-resource-slots.py`；原始结果写 `build/stage2c/resource-slots-20261108.json`，不读旧状态、不改ROM、不写用户存档。已在新建最小目录复跑；累计14/15函数，图块/音效加载和总容量仍未完成。
 
+第四批 `stage2c/probe-tile-refresh.py` 对同一普通剑样本验证四条件：空白、只改图块基址、同时失效缓存、禁用刷新门。执行 `python -X utf8 -B research/stage2c/probe-tile-refresh.py`；完整96KiB显存差分与属性/缓存事件写 `build/stage2c/tile-refresh-20261108.json`，无ROM补丁或用户存档写入。已在新建最小目录复跑；累计15/15函数，停止新增深研，仍不代表阶段2C整体验收。
+
 ZCode 2A/2B独立验收复跑：`python -X utf8 -B research/verify-stage2ab-acceptance.py`，包含结算边界、输入反例及110次轨迹对照。阶段仍部分接受，见[验收](../docs/STAGE2AB-ACCEPTANCE.md)。

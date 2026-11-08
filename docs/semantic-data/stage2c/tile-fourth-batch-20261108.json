@@ -1,0 +1,714 @@
+{
+  "rom_sha1": "c4d93a58f0f82c526dec8a3fdbda170336303689",
+  "core_sha256": "02747c2a77ea4ed9738c967d101a207a81973233588f68d39f5ab923a1a9599c",
+  "script_sha256": "9ccbc6aa1795f5512e4bd0f621a5344137d93774517d169fa9cfebc9721fe68b",
+  "new_function": {
+    "start": 134293716,
+    "end": 134294022,
+    "rom_sha256": "ec71dbf1e14915860d8275a621b18271f1b161fbf569b399000032fc1a200c90",
+    "asm_sha256": "0a7de6003cef7c37bc71f4b7a0cca65551d99e6465c299d45eebba59b834da25"
+  },
+  "kind": "full original-ROM execution, temporary RAM fixtures; retro_run update boundaries",
+  "scenarios": {
+    "control": {
+      "fixture": "owned sword primary; no further perturbation",
+      "frames": [
+        {
+          "update": 1,
+          "address": 33793688,
+          "pool_handle": 33747056,
+          "type_table": 137584736,
+          "lifecycle_table": 137586020,
+          "kind": 3,
+          "owner": 33783024,
+          "state": 1,
+          "callback": 134456329,
+          "flags_b": 4,
+          "motion_id": 88,
+          "cached_key": 4,
+          "glyph": 4,
+          "selected_key": 4,
+          "tile_base": 192,
+          "tile_offset": 8,
+          "attribute": 6344,
+          "frame_table": 139154680,
+          "descriptor": 139645448,
+          "header_hex": "0c0a000060040002e0002100",
+          "static_dispatch_destination": 100734976,
+          "vram_sha256": "69cde0ef83532109626fe5fcdfb4c2bb2c4170659b56db770f78caced2948fb6"
+        },
+        {
+          "update": 2,
+          "address": 33793688,
+          "pool_handle": 33747056,
+          "type_table": 137584736,
+          "lifecycle_table": 137586020,
+          "kind": 3,
+          "owner": 33783024,
+          "state": 1,
+          "callback": 134456329,
+          "flags_b": 4,
+          "motion_id": 88,
+          "cached_key": 4,
+          "glyph": 5,
+          "selected_key": 4,
+          "tile_base": 192,
+          "tile_offset": 8,
+          "attribute": 6344,
+          "frame_table": 139154680,
+          "descriptor": 139645448,
+          "header_hex": "0c0a000060040002e0002100",
+          "static_dispatch_destination": 100734976,
+          "vram_sha256": "a75a3cdd450201cb9b768cae63b105d172e887de9f5ced7395ab0f5bbb50db7e"
+        },
+        {
+          "update": 3,
+          "address": 33793688,
+          "pool_handle": 33747056,
+          "type_table": 137584736,
+          "lifecycle_table": 137586020,
+          "kind": 3,
+          "owner": 33783024,
+          "state": 1,
+          "callback": 134456329,
+          "flags_b": 4,
+          "motion_id": 88,
+          "cached_key": 4,
+          "glyph": 5,
+          "selected_key": 4,
+          "tile_base": 192,
+          "tile_offset": 8,
+          "attribute": 6344,
+          "frame_table": 139154680,
+          "descriptor": 139645448,
+          "header_hex": "0c0a000060040002e0002100",
+          "static_dispatch_destination": 100734976,
+          "vram_sha256": "a75a3cdd450201cb9b768cae63b105d172e887de9f5ced7395ab0f5bbb50db7e"
+        },
+        {
+          "update": 4,
+          "address": 33793688,
+          "pool_handle": 33747056,
+          "type_table": 137584736,
+          "lifecycle_table": 137586020,
+          "kind": 3,
+          "owner": 33783024,
+          "state": 1,
+          "callback": 134456329,
+          "flags_b": 4,
+          "motion_id": 88,
+          "cached_key": 4,
+          "glyph": 5,
+          "selected_key": 4,
+          "tile_base": 192,
+          "tile_offset": 8,
+          "attribute": 6344,
+          "frame_table": 139154680,
+          "descriptor": 139645448,
+          "header_hex": "0c0a000060040002e0002100",
+          "static_dispatch_destination": 100734976,
+          "vram_sha256": "a75a3cdd450201cb9b768cae63b105d172e887de9f5ced7395ab0f5bbb50db7e"
+        }
+      ]
+    },
+    "base_only": {
+      "fixture": "tile_base 192->256; cached key unchanged",
+      "frames": [
+        {
+          "update": 1,
+          "address": 33793688,
+          "pool_handle": 33747056,
+          "type_table": 137584736,
+          "lifecycle_table": 137586020,
+          "kind": 3,
+          "owner": 33783024,
+          "state": 1,
+          "callback": 134456329,
+          "flags_b": 4,
+          "motion_id": 88,
+          "cached_key": 4,
+          "glyph": 4,
+          "selected_key": 4,
+          "tile_base": 256,
+          "tile_offset": 8,
+          "attribute": 6344,
+          "frame_table": 139154680,
+          "descriptor": 139645448,
+          "header_hex": "0c0a000060040002e0002100",
+          "static_dispatch_destination": 100737024,
+          "vram_sha256": "69cde0ef83532109626fe5fcdfb4c2bb2c4170659b56db770f78caced2948fb6"
+        },
+        {
+          "update": 2,
+          "address": 33793688,
+          "pool_handle": 33747056,
+          "type_table": 137584736,
+          "lifecycle_table": 137586020,
+          "kind": 3,
+          "owner": 33783024,
+          "state": 1,
+          "callback": 134456329,
+          "flags_b": 4,
+          "motion_id": 88,
+          "cached_key": 4,
+          "glyph": 5,
+          "selected_key": 4,
+          "tile_base": 256,
+          "tile_offset": 8,
+          "attribute": 6344,
+          "frame_table": 139154680,
+          "descriptor": 139645448,
+          "header_hex": "0c0a000060040002e0002100",
+          "static_dispatch_destination": 100737024,
+          "vram_sha256": "a75a3cdd450201cb9b768cae63b105d172e887de9f5ced7395ab0f5bbb50db7e"
+        },
+        {
+          "update": 3,
+          "address": 33793688,
+          "pool_handle": 33747056,
+          "type_table": 137584736,
+          "lifecycle_table": 137586020,
+          "kind": 3,
+          "owner": 33783024,
+          "state": 1,
+          "callback": 134456329,
+          "flags_b": 4,
+          "motion_id": 88,
+          "cached_key": 4,
+          "glyph": 5,
+          "selected_key": 4,
+          "tile_base": 256,
+          "tile_offset": 8,
+          "attribute": 6344,
+          "frame_table": 139154680,
+          "descriptor": 139645448,
+          "header_hex": "0c0a000060040002e0002100",
+          "static_dispatch_destination": 100737024,
+          "vram_sha256": "a75a3cdd450201cb9b768cae63b105d172e887de9f5ced7395ab0f5bbb50db7e"
+        },
+        {
+          "update": 4,
+          "address": 33793688,
+          "pool_handle": 33747056,
+          "type_table": 137584736,
+          "lifecycle_table": 137586020,
+          "kind": 3,
+          "owner": 33783024,
+          "state": 1,
+          "callback": 134456329,
+          "flags_b": 4,
+          "motion_id": 88,
+          "cached_key": 4,
+          "glyph": 5,
+          "selected_key": 4,
+          "tile_base": 256,
+          "tile_offset": 8,
+          "attribute": 6344,
+          "frame_table": 139154680,
+          "descriptor": 139645448,
+          "header_hex": "0c0a000060040002e0002100",
+          "static_dispatch_destination": 100737024,
+          "vram_sha256": "a75a3cdd450201cb9b768cae63b105d172e887de9f5ced7395ab0f5bbb50db7e"
+        }
+      ]
+    },
+    "base_and_invalidate": {
+      "fixture": "tile_base 192->256; cached key FF",
+      "frames": [
+        {
+          "update": 1,
+          "address": 33793688,
+          "pool_handle": 33747056,
+          "type_table": 137584736,
+          "lifecycle_table": 137586020,
+          "kind": 3,
+          "owner": 33783024,
+          "state": 1,
+          "callback": 134456329,
+          "flags_b": 4,
+          "motion_id": 88,
+          "cached_key": 4,
+          "glyph": 4,
+          "selected_key": 4,
+          "tile_base": 256,
+          "tile_offset": 8,
+          "attribute": 6408,
+          "frame_table": 139154680,
+          "descriptor": 139645448,
+          "header_hex": "0c0a000060040002e0002100",
+          "static_dispatch_destination": 100737024,
+          "vram_sha256": "69cde0ef83532109626fe5fcdfb4c2bb2c4170659b56db770f78caced2948fb6"
+        },
+        {
+          "update": 2,
+          "address": 33793688,
+          "pool_handle": 33747056,
+          "type_table": 137584736,
+          "lifecycle_table": 137586020,
+          "kind": 3,
+          "owner": 33783024,
+          "state": 1,
+          "callback": 134456329,
+          "flags_b": 4,
+          "motion_id": 88,
+          "cached_key": 4,
+          "glyph": 5,
+          "selected_key": 4,
+          "tile_base": 256,
+          "tile_offset": 8,
+          "attribute": 6408,
+          "frame_table": 139154680,
+          "descriptor": 139645448,
+          "header_hex": "0c0a000060040002e0002100",
+          "static_dispatch_destination": 100737024,
+          "vram_sha256": "0f5a838e5c49c884cbd093f6ce530edd35fb8ba52af683f5af80726b2b5b19ee"
+        },
+        {
+          "update": 3,
+          "address": 33793688,
+          "pool_handle": 33747056,
+          "type_table": 137584736,
+          "lifecycle_table": 137586020,
+          "kind": 3,
+          "owner": 33783024,
+          "state": 1,
+          "callback": 134456329,
+          "flags_b": 4,
+          "motion_id": 88,
+          "cached_key": 4,
+          "glyph": 5,
+          "selected_key": 4,
+          "tile_base": 256,
+          "tile_offset": 8,
+          "attribute": 6408,
+          "frame_table": 139154680,
+          "descriptor": 139645448,
+          "header_hex": "0c0a000060040002e0002100",
+          "static_dispatch_destination": 100737024,
+          "vram_sha256": "0f5a838e5c49c884cbd093f6ce530edd35fb8ba52af683f5af80726b2b5b19ee"
+        },
+        {
+          "update": 4,
+          "address": 33793688,
+          "pool_handle": 33747056,
+          "type_table": 137584736,
+          "lifecycle_table": 137586020,
+          "kind": 3,
+          "owner": 33783024,
+          "state": 1,
+          "callback": 134456329,
+          "flags_b": 4,
+          "motion_id": 88,
+          "cached_key": 4,
+          "glyph": 5,
+          "selected_key": 4,
+          "tile_base": 256,
+          "tile_offset": 8,
+          "attribute": 6408,
+          "frame_table": 139154680,
+          "descriptor": 139645448,
+          "header_hex": "0c0a000060040002e0002100",
+          "static_dispatch_destination": 100737024,
+          "vram_sha256": "0f5a838e5c49c884cbd093f6ce530edd35fb8ba52af683f5af80726b2b5b19ee"
+        }
+      ]
+    },
+    "refresh_disabled": {
+      "fixture": "tile_base 192->256; cached key FF; flags_b bit2 cleared",
+      "frames": [
+        {
+          "update": 1,
+          "address": 33793688,
+          "pool_handle": 33747056,
+          "type_table": 137584736,
+          "lifecycle_table": 137586020,
+          "kind": 3,
+          "owner": 33783024,
+          "state": 1,
+          "callback": 134456329,
+          "flags_b": 0,
+          "motion_id": 88,
+          "cached_key": 255,
+          "glyph": 4,
+          "selected_key": 4,
+          "tile_base": 256,
+          "tile_offset": 8,
+          "attribute": 6344,
+          "frame_table": 139154680,
+          "descriptor": 139645448,
+          "header_hex": "0c0a000060040002e0002100",
+          "static_dispatch_destination": 100737024,
+          "vram_sha256": "69cde0ef83532109626fe5fcdfb4c2bb2c4170659b56db770f78caced2948fb6"
+        },
+        {
+          "update": 2,
+          "address": 33793688,
+          "pool_handle": 33747056,
+          "type_table": 137584736,
+          "lifecycle_table": 137586020,
+          "kind": 3,
+          "owner": 33783024,
+          "state": 1,
+          "callback": 134456329,
+          "flags_b": 0,
+          "motion_id": 88,
+          "cached_key": 255,
+          "glyph": 5,
+          "selected_key": 4,
+          "tile_base": 256,
+          "tile_offset": 8,
+          "attribute": 6344,
+          "frame_table": 139154680,
+          "descriptor": 139645448,
+          "header_hex": "0c0a000060040002e0002100",
+          "static_dispatch_destination": 100737024,
+          "vram_sha256": "a75a3cdd450201cb9b768cae63b105d172e887de9f5ced7395ab0f5bbb50db7e"
+        },
+        {
+          "update": 3,
+          "address": 33793688,
+          "pool_handle": 33747056,
+          "type_table": 137584736,
+          "lifecycle_table": 137586020,
+          "kind": 3,
+          "owner": 33783024,
+          "state": 1,
+          "callback": 134456329,
+          "flags_b": 0,
+          "motion_id": 88,
+          "cached_key": 255,
+          "glyph": 5,
+          "selected_key": 4,
+          "tile_base": 256,
+          "tile_offset": 8,
+          "attribute": 6344,
+          "frame_table": 139154680,
+          "descriptor": 139645448,
+          "header_hex": "0c0a000060040002e0002100",
+          "static_dispatch_destination": 100737024,
+          "vram_sha256": "a75a3cdd450201cb9b768cae63b105d172e887de9f5ced7395ab0f5bbb50db7e"
+        },
+        {
+          "update": 4,
+          "address": 33793688,
+          "pool_handle": 33747056,
+          "type_table": 137584736,
+          "lifecycle_table": 137586020,
+          "kind": 3,
+          "owner": 33783024,
+          "state": 1,
+          "callback": 134456329,
+          "flags_b": 0,
+          "motion_id": 88,
+          "cached_key": 255,
+          "glyph": 5,
+          "selected_key": 4,
+          "tile_base": 256,
+          "tile_offset": 8,
+          "attribute": 6344,
+          "frame_table": 139154680,
+          "descriptor": 139645448,
+          "header_hex": "0c0a000060040002e0002100",
+          "static_dispatch_destination": 100737024,
+          "vram_sha256": "a75a3cdd450201cb9b768cae63b105d172e887de9f5ced7395ab0f5bbb50db7e"
+        }
+      ]
+    }
+  },
+  "not_proved": [
+    "underlying loader format",
+    "compression",
+    "allocated/free VRAM",
+    "all motion IDs",
+    "alternate palette-loading branch",
+    "new attack implementation"
+  ],
+  "relocation_differences": [
+    {
+      "update": 1,
+      "changed_byte_count": 0,
+      "all_deltas_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "observed_address_min": null,
+      "observed_address_max": null,
+      "delta_samples": []
+    },
+    {
+      "update": 2,
+      "changed_byte_count": 474,
+      "all_deltas_sha256": "83892ea9a7d266a2e04d3b1de47189fc9770b96c1407270851f09e0b496e666b",
+      "observed_address_min": 100737337,
+      "observed_address_max": 100741599,
+      "delta_samples": [
+        {
+          "address": 100737337,
+          "control": 0,
+          "relocated": 136,
+          "translated_control_address": 100735289
+        },
+        {
+          "address": 100737340,
+          "control": 0,
+          "relocated": 144,
+          "translated_control_address": 100735292
+        },
+        {
+          "address": 100737341,
+          "control": 0,
+          "relocated": 9,
+          "translated_control_address": 100735293
+        },
+        {
+          "address": 100737394,
+          "control": 0,
+          "relocated": 9,
+          "translated_control_address": 100735346
+        },
+        {
+          "address": 100737404,
+          "control": 0,
+          "relocated": 144,
+          "translated_control_address": 100735356
+        },
+        {
+          "address": 100737443,
+          "control": 0,
+          "relocated": 128,
+          "translated_control_address": 100735395
+        },
+        {
+          "address": 100741594,
+          "control": 157,
+          "relocated": 0,
+          "translated_control_address": 100739546
+        },
+        {
+          "address": 100741595,
+          "control": 57,
+          "relocated": 0,
+          "translated_control_address": 100739547
+        },
+        {
+          "address": 100741596,
+          "control": 163,
+          "relocated": 0,
+          "translated_control_address": 100739548
+        },
+        {
+          "address": 100741597,
+          "control": 154,
+          "relocated": 0,
+          "translated_control_address": 100739549
+        },
+        {
+          "address": 100741598,
+          "control": 169,
+          "relocated": 0,
+          "translated_control_address": 100739550
+        },
+        {
+          "address": 100741599,
+          "control": 58,
+          "relocated": 0,
+          "translated_control_address": 100739551
+        }
+      ]
+    },
+    {
+      "update": 3,
+      "changed_byte_count": 474,
+      "all_deltas_sha256": "83892ea9a7d266a2e04d3b1de47189fc9770b96c1407270851f09e0b496e666b",
+      "observed_address_min": 100737337,
+      "observed_address_max": 100741599,
+      "delta_samples": [
+        {
+          "address": 100737337,
+          "control": 0,
+          "relocated": 136,
+          "translated_control_address": 100735289
+        },
+        {
+          "address": 100737340,
+          "control": 0,
+          "relocated": 144,
+          "translated_control_address": 100735292
+        },
+        {
+          "address": 100737341,
+          "control": 0,
+          "relocated": 9,
+          "translated_control_address": 100735293
+        },
+        {
+          "address": 100737394,
+          "control": 0,
+          "relocated": 9,
+          "translated_control_address": 100735346
+        },
+        {
+          "address": 100737404,
+          "control": 0,
+          "relocated": 144,
+          "translated_control_address": 100735356
+        },
+        {
+          "address": 100737443,
+          "control": 0,
+          "relocated": 128,
+          "translated_control_address": 100735395
+        },
+        {
+          "address": 100741594,
+          "control": 157,
+          "relocated": 0,
+          "translated_control_address": 100739546
+        },
+        {
+          "address": 100741595,
+          "control": 57,
+          "relocated": 0,
+          "translated_control_address": 100739547
+        },
+        {
+          "address": 100741596,
+          "control": 163,
+          "relocated": 0,
+          "translated_control_address": 100739548
+        },
+        {
+          "address": 100741597,
+          "control": 154,
+          "relocated": 0,
+          "translated_control_address": 100739549
+        },
+        {
+          "address": 100741598,
+          "control": 169,
+          "relocated": 0,
+          "translated_control_address": 100739550
+        },
+        {
+          "address": 100741599,
+          "control": 58,
+          "relocated": 0,
+          "translated_control_address": 100739551
+        }
+      ]
+    },
+    {
+      "update": 4,
+      "changed_byte_count": 474,
+      "all_deltas_sha256": "83892ea9a7d266a2e04d3b1de47189fc9770b96c1407270851f09e0b496e666b",
+      "observed_address_min": 100737337,
+      "observed_address_max": 100741599,
+      "delta_samples": [
+        {
+          "address": 100737337,
+          "control": 0,
+          "relocated": 136,
+          "translated_control_address": 100735289
+        },
+        {
+          "address": 100737340,
+          "control": 0,
+          "relocated": 144,
+          "translated_control_address": 100735292
+        },
+        {
+          "address": 100737341,
+          "control": 0,
+          "relocated": 9,
+          "translated_control_address": 100735293
+        },
+        {
+          "address": 100737394,
+          "control": 0,
+          "relocated": 9,
+          "translated_control_address": 100735346
+        },
+        {
+          "address": 100737404,
+          "control": 0,
+          "relocated": 144,
+          "translated_control_address": 100735356
+        },
+        {
+          "address": 100737443,
+          "control": 0,
+          "relocated": 128,
+          "translated_control_address": 100735395
+        },
+        {
+          "address": 100741594,
+          "control": 157,
+          "relocated": 0,
+          "translated_control_address": 100739546
+        },
+        {
+          "address": 100741595,
+          "control": 57,
+          "relocated": 0,
+          "translated_control_address": 100739547
+        },
+        {
+          "address": 100741596,
+          "control": 163,
+          "relocated": 0,
+          "translated_control_address": 100739548
+        },
+        {
+          "address": 100741597,
+          "control": 154,
+          "relocated": 0,
+          "translated_control_address": 100739549
+        },
+        {
+          "address": 100741598,
+          "control": 169,
+          "relocated": 0,
+          "translated_control_address": 100739550
+        },
+        {
+          "address": 100741599,
+          "control": 58,
+          "relocated": 0,
+          "translated_control_address": 100739551
+        }
+      ]
+    }
+  ],
+  "initial": {
+    "update": 0,
+    "address": 33793688,
+    "pool_handle": 33747056,
+    "type_table": 137584736,
+    "lifecycle_table": 137586020,
+    "kind": 3,
+    "owner": 33783024,
+    "state": 1,
+    "callback": 134456329,
+    "flags_b": 4,
+    "motion_id": 88,
+    "cached_key": 4,
+    "glyph": 4,
+    "selected_key": 4,
+    "tile_base": 192,
+    "tile_offset": 8,
+    "attribute": 6344,
+    "frame_table": 139154680,
+    "descriptor": 139645448,
+    "header_hex": "0c0a000060040002e0002100",
+    "static_dispatch_destination": 100734976,
+    "vram_sha256": "457e3534ec30a3a88c2aa0648a9c19d016396819333888164c53613f56c9c3d4"
+  },
+  "verification": {
+    "new_deep_functions": 1,
+    "stage2c_cumulative": 15,
+    "stage2c_cap": 15,
+    "clean_minimal_copy": "passed; no previous build/state copied; baseline regenerated from boot",
+    "negative_hypotheses": [
+      "flat source-block equality did not explain this sample",
+      "narrow VRAM window missed changes; final check compares full 96KiB"
+    ],
+    "scope": "one original ordinary saber sample, four RAM conditions; not a resource allocator"
+  }
+}
