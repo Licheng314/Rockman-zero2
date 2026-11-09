@@ -48,7 +48,8 @@ entry = 0x084CC680 + 4 * motion
 desc0 = entry + int.from_bytes(rom_bytes(entry, 4), 'little')
 desc = desc0 + 12 * 4            # 0x0852D208
 header = rom_bytes(desc, 12)
-out['descriptor'] = {'address': hex(desc), 'bytes': header.hex(),
+assert len(header) == 12 and header[:4] == bytes([0x0c,0x0a,0x00,0x00])
+out['descriptor'] = {'address': hex(desc), 'bytes': header.hex(), 'published_len': len(header),
                      'u16': [int.from_bytes(header[i:i+2], 'little') for i in range(0, 12, 2)],
                      'desc0': hex(desc0), 'entry': hex(entry), 'entry_off': hex(int.from_bytes(rom_bytes(entry,4),'little'))}
 state = C.create_string_buffer(size)
@@ -92,10 +93,27 @@ if written:
         L = b - a + 1
         data = prefill_final[a:b+1]
         pos = ROM.find(data)
-        out['prefill_written_runs'].append({
-            'vram': hex(0x06000000 + a), 'len': L,
-            'rom_src': hex(0x08000000 + pos) if pos >= 0 else 'NOT-IN-ROM',
-            'data_head': data[:16].hex()})
+        seg = {"vram": hex(0x06000000 + a), "len": L,
+            "rom_src": hex(0x08000000 + pos) if pos >= 0 else "NOT-IN-ROM",
+            "rom_unique": pos >= 0 and ROM.find(data, pos + 1) == -1,
+            "data_sha256": hashlib.sha256(data).hexdigest()}
+        out['prefill_written_runs'].append(seg)
+    runs = out['prefill_written_runs']
+    # bounded layout assertions (all from this run's observed bytes)
+    assert out['prefill_written_count'] == 1120, out['prefill_written_count']
+    assert len(runs) == 5, len(runs)
+    assert all(r['len'] == 224 for r in runs), [r['len'] for r in runs]
+    assert all(r['rom_unique'] for r in runs), [r['rom_src'] for r in runs]
+    assert runs[0]['vram'] == '0x6012100', runs[0]['vram']
+    for i in range(1, 5):
+        assert int(runs[i]['vram'], 16) == int(runs[i-1]['vram'], 16) + 0x400
+    src0 = 0x0852DC14 - 0x08000000
+    block = ROM[src0:src0+1120]
+    assert bytes([0xa3]) not in block or block.count(bytes([0xa3])) == 0  # source has no sentinel
+    # the five sources tile the 1120-byte block contiguously
+    for i, r in enumerate(runs):
+        assert int(r['rom_src'], 16) == 0x08000000 + src0 + 224 * i
+    out['source_block_sha256'] = hashlib.sha256(block).hexdigest()
     out['_vram_prefill_final'] = prefill_final.hex()
 
 images, queue_snaps = {}, {}
@@ -112,6 +130,17 @@ for mode in ('control', 'base_and_invalidate'):
     images[mode] = imgs
     queue_snaps[mode] = q
 out['queue_0x02000D60'] = queue_snaps
+# identity + queue-shape assertions (bounded, per final repair list)
+assert word(ZERO + 0x2C) == address
+assert raw[9] == 3 and int.from_bytes(raw[0x28:0x2C], 'little') == ZERO
+assert int.from_bytes(raw[0x14:0x18], 'little') == 0x0803A409
+first = bytes.fromhex(queue_snaps[mode][0])
+count = int.from_bytes(first[0:4], 'little')
+assert 1 <= count <= 16                       # count>15 拒绝 => 16 槽容量（未动态验证上限）
+slot0 = first[8:20]
+out['queue_slot0'] = {'dest_or_arg1': hex(int.from_bytes(slot0[0:4], 'little')),
+                      'arg0': hex(int.from_bytes(slot0[4:8], 'little'))}
+out['capacity_note'] = '027AC rejects count>15, so 16 slots; capacity not dynamically tested'
 
 # uploaded data = control VRAM at its dest (0x06011800+); search ROM for it
 ctl = images['control'][-1]
@@ -140,8 +169,10 @@ Path(ROOT/'build/nightly-20261109').mkdir(parents=True, exist_ok=True)
 out['_vram_control'] = ctl.hex()
 out['_vram_relocated'] = rel.hex()
 target = ROOT/'build/nightly-20261109/b-descriptor-raw.json'
-target.write_text(json.dumps(out, indent=1))
-print(json.dumps({k: v for k, v in out.items() if not k.startswith('_')}, indent=1))
-d.retro_unload_game()
-d.retro_deinit()
-assert hashlib.sha1((ROOT/'baserom.gba').read_bytes()).hexdigest() == SHA1
+try:
+    target.write_text(json.dumps(out, indent=1))
+    print(json.dumps({k: v for k, v in out.items() if not k.startswith('_')}, indent=1))
+finally:
+    d.retro_unload_game()
+    d.retro_deinit()
+    assert hashlib.sha1((ROOT/'baserom.gba').read_bytes()).hexdigest() == SHA1

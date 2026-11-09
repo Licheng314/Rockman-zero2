@@ -1,0 +1,28 @@
+{
+ "batch": "night-20261109-B-fix-metadata",
+ "job": "B-repair",
+ "supersedes_note": "修正 night-20261109-B-tile-descriptor.json 的静态链说法；不覆盖旧文件",
+ "codex_review": "semantic-data/stage2c/night-20261109-B-codex-review.json",
+ "handoff_commit": "fefafae4",
+ "rom_sha1": "c4d93a58f0f82c526dec8a3fdbda170336303689",
+ "rom_sha256": "4bb8b71ca8d50b5a8f0c737082d8f86c9ad31bd0abebddfa519b3af1ff3853a5",
+ "core_dll_sha256": "02747c2a77ea4ed9738c967d101a207a81973233588f68d39f5ab923a1a9599c",
+ "script_sha256_after_last_edit": {
+  "probe_night_b_descriptor": "aa44ec3d76fe7fd05635c922e86c336ac7d8fb89a753350ecbc41aee8575213d"
+ },
+ "repairs": [
+  "撤回静态执行链：0x08002AEC 为调色板缓冲路径（0x03002AC0+r1+byte[desc+7]*32，raw 分支调 0x080EEF68）；0x0800E1BC 只是提交方调用者；motion 0x58≤0x8F 不走 02AEC 高 ID 分支。二者仍计入 3/3 预算。",
+  "队列容量更正：027AC 在 count>15 拒绝（count=15 可插入）= 16 槽；容量未动态验证。",
+  "发布描述符 hex 由实际 12 字节读取生成（published_len=12）。",
+  "撤回『IWRAM 0x03002AC0 暂存瞬态』解释：staging 不匹配只是未观测到。",
+  "脚本新增有界断言：源 1120 字节无 0xA3、五段 224B 各自唯一命中、写入首段 0x06012100/步进 0x400/共 5 段、目标身份（池 0x0202F070/类型表 0x08336060/类型3/owner Zero/回调 0x0803A409）、try/finally 回收核心并校验磁盘 ROM 散列。"
+ ],
+ "layout_accepted_by_codex": {
+  "window_bytes": 8192,
+  "segments": 5,
+  "chunk_len": 224,
+  "visible_deltas": 474
+ },
+ "new_deep_functions": 0,
+ "worker_state_note": "delivered_partial"
+}
