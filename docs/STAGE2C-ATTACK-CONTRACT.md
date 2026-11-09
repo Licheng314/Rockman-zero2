@@ -250,6 +250,16 @@ dispatch_destination = 0x06010000 + 32*(tile - (u16[descriptor+6] >> 6))
 - **动态布局判定（独立审查）**：5×224 布局经 Codex 新最小目录独立复跑**局部通过**（完整 8192 字节预填充窗口逐字节相符、窗口外与未预填充搬移样本一致、源无 0xA3、五段各自唯一命中）；静态执行链与 raw 判定因果**未通过**，真正图块加载消费者/格式分支未闭合，不称 B 完整链完成。修正文件 [night-20261109-B-fix-metadata](semantic-data/stage2c/night-20261109-B-fix-metadata.json)。
 - **未定**：本剑请求的真实 VRAM 消费者与格式分支指令；目标步进 0x400 由哪条指令/字段决定（DMA 层 0x080028DC/0x08002994 未深研）；u16[desc+0xA]=0x21 含义。原“IWRAM 0x03002AC0 暂存瞬态”解释撤回（staging 不匹配只是未观测到）。不改共享核心。
 
+## 第六批：C 包额度中断及有限收尾（2026-11-09）
+
+**C1/C2 均未闭合，已停止，不自动续跑。** ZCode 在候选排查中耗尽额度，没有提交研究改动；其检查点仍为 started、函数/假设数组为空，不能据此认定没有做过调查。用户随后授权 Codex 接手收尾。本包候选审读记 3/3：`0x08002934`、`0x08002994`、`0x080028DC`；前两项属于调色板相关候选，后者涉及队列基址相对的辅助 DMA 字段，均未证明是本剑记录的实际消费者。旧 2C 15/15 与 B 3/3 不变。
+
+修复搜索方法：ZCode 的部分格式扫描从 ROM 偏移 `0x20000` 开始，会漏掉此次发现的全部精确队列地址引用。新增只读工具 [inspect-queue-references.py](../research/stage2c/inspect-queue-references.py) 在匹配的完整 8MiB ROM 中查找四字节对齐 `0x02000D60` 字面量及可指向它的 Thumb PC 相对加载。实际得到 8 个字面量/8 个加载候选，见[中断收尾证据](semantic-data/stage2c/consumer-20261109-quota-closeout.json)。这是静态定位，不是执行链、可达性或全形式引用穷尽证明。
+
+下一步已缩小为优先核查 `0x08002548` 加载所在函数，区分条目读/处理/清除与初始化/提交；该函数本轮未深入，不能提前命名为消费者。仍未知：实际搬运函数、所选格式分支、0x400 步进来源和 +0xA=0x21 含义。第五批已独立接受的 1120 字节动态布局保持不变。
+
+本次收尾只运行静态定位工具，没有新增模拟器采样或重建 ROM；正式源码、原版 ROM 和既有运行探针未改。可复跑：`python -X utf8 -B research/stage2c/inspect-queue-references.py`。不宣称阶段 2C 通过。
+
 ## Z3 对照：剑结构线索与真实差异
 
 固定参考 [mmzret/rmz3 提交 2a28700 的 saber.c](https://github.com/mmzret/rmz3/blob/2a28700e0a74edd9578737c3b3435ced9d074045/src/weapon/saber.c)。仅静态对照，没有 Z3 ROM 运行。`CreateWeaponSaber`、`Saber_Init`、`Saber_Update` 属 `NON_MATCH`/`MODERN` 解释分支，不能把其 C 代码直接当字节匹配证明。

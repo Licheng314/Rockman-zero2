@@ -1,0 +1,129 @@
+{
+  "scope": "static candidates only; no execution or reachability proof",
+  "queue": "0x02000D60",
+  "rom_size": 8388608,
+  "rom_sha1": "c4d93a58f0f82c526dec8a3fdbda170336303689",
+  "rom_sha256": "4bb8b71ca8d50b5a8f0c737082d8f86c9ad31bd0abebddfa519b3af1ff3853a5",
+  "aligned_literal_scan": [
+    0,
+    8388608
+  ],
+  "queue_literal_refs": [
+    {
+      "literal": "0x08002534",
+      "thumb_pc_loads": [
+        {
+          "address": "0x0800250E",
+          "register": 0,
+          "encoding": "0948"
+        }
+      ]
+    },
+    {
+      "literal": "0x080025D0",
+      "thumb_pc_loads": [
+        {
+          "address": "0x08002548",
+          "register": 3,
+          "encoding": "214b"
+        }
+      ]
+    },
+    {
+      "literal": "0x08002634",
+      "thumb_pc_loads": [
+        {
+          "address": "0x08002626",
+          "register": 1,
+          "encoding": "0349"
+        }
+      ]
+    },
+    {
+      "literal": "0x080027EC",
+      "thumb_pc_loads": [
+        {
+          "address": "0x080027B4",
+          "register": 0,
+          "encoding": "0d48"
+        }
+      ]
+    },
+    {
+      "literal": "0x0800283C",
+      "thumb_pc_loads": [
+        {
+          "address": "0x0800282C",
+          "register": 5,
+          "encoding": "034d"
+        }
+      ]
+    },
+    {
+      "literal": "0x08002898",
+      "thumb_pc_loads": [
+        {
+          "address": "0x08002888",
+          "register": 5,
+          "encoding": "034d"
+        }
+      ]
+    },
+    {
+      "literal": "0x0800291C",
+      "thumb_pc_loads": [
+        {
+          "address": "0x080028E2",
+          "register": 4,
+          "encoding": "0e4c"
+        }
+      ]
+    },
+    {
+      "literal": "0x08002930",
+      "thumb_pc_loads": [
+        {
+          "address": "0x08002924",
+          "register": 0,
+          "encoding": "0248"
+        }
+      ]
+    }
+  ],
+  "recorded_at": "2026-11-09T09:04:23.753354+08:00",
+  "baseline": "53592a95",
+  "status": "interrupted_partial",
+  "C1": "unresolved: candidate references located, consumer not established",
+  "C2": "unresolved: no new format/stride instruction proof",
+  "execution": "none in closeout; prior B runtime acceptance unchanged",
+  "stopping_evidence": "ZCode UI showed quota exhausted and Send, no Stop Generation; worktree had no worker changes",
+  "checkpoint_quality": "worker-state remained started with empty hypothesis/function arrays; not evidence of zero work",
+  "review_functions": [
+    "0x08002934",
+    "0x08002994",
+    "0x080028DC"
+  ],
+  "review_budget": "C candidate review 3/3; no additional function body investigated in closeout",
+  "candidate_observations": {
+    "0x08002934": "palette initialization candidate; no consumer proof",
+    "0x08002994": "uses 0x03002AC0 and palette destination 0x05000000; not a demonstrated saber graphics consumer",
+    "0x080028DC": "uses queue-base-relative auxiliary DMA fields; not a demonstrated record-reading consumer"
+  },
+  "workflow_issues": [
+    "Pattern scans beginning at ROM offset 0x20000 omit every exact queue reference found by this full-ROM scan.",
+    "Candidate inspection was not entered in the worker checkpoint before quota interruption.",
+    "One displayed scan upper bound exceeded the 8 MiB ROM; no successful result retained."
+  ],
+  "next_step": "Unassigned: examine the function containing the 0x08002548 literal load, then distinguish record read/clear from submission. This is a candidate, not a confirmed consumer.",
+  "limitations": [
+    "Exact aligned literals and Thumb literal loads only; no CFG or runtime trace.",
+    "Computed addresses, ARM loads and unaligned pointers are not exhaustively excluded.",
+    "No new ROM build or emulator run; formal code and existing runtime probe unchanged."
+  ],
+  "script_sha256": "18eaa0d224324b4ca72f08c346258d7c0b6a9a1f77ef967e7c376d384ecf1dfb",
+  "reviewed_asm_sha256": {
+    "sub_08002934.s": "7a14075007632ddf6155bdd627af75a9652d9e1fb472863905f8e213744ecaa7",
+    "sub_08002994.s": "3677c7cc79094aefb53ce2a771d828fa8e1f099dfd2813aae11ff814cd6eb429",
+    "sub_080028DC.s": "fff39e1fcebd76ae457d2724d83046ad31e0df98157fecf681507d1eff227553"
+  }
+}
