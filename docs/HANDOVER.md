@@ -12,6 +12,8 @@
 
 2026-11-10 目标纠正：上一条 9/18 帧为误选的 EX Saber Smash，不是用户要求的普通空中斩。正确目标是普通空中攻击后按住下方向，保留向下剑光和攻击判定。现已依据 Z3 air_saber_hold / SABER_AIR→DM098 定位并从给定 ROM 重新提取，见[新记录](semantic-data/normal-air-down-extraction-20261110.json)。旧证据保留但不作为目标成果；正确预览在 build/normal-air-down-review-20261110。FE/FF 控制记录不再当作显示帧，画布自动覆盖资源全部边界；仍待用户审图，无 Z2 回写或运行验证。
 
+2026-11-10 用户授权试装已审阅的普通空中斩三角剑光，独立改版分支已完成 v0.3.0 测试包（提交 [`d14ab76a`](https://github.com/Licheng314/Rockman-zero2/commit/d14ab76a)）。仅替换保持帧及配套短收招，Z3 像素不重画，转换 1D/4字节拼合为 Z2 2D/8字节格式；角色图、起手、动作序列/时长、伤害/判定及调色板未改。5组各70次更新游戏内对照通过，原有玩法回归、IPS往返和包内ROM散列均通过，见[改版验证记录](https://github.com/Licheng314/Rockman-zero2/blob/d14ab76a/mod/patches/v0.3.0/verification.json)。本机 build/mod/Zero2-AirActions-v0.3.0-Triangle-test.zip 在改版目录；无新 Release，未上传完整ROM。专门样本未触发蓄力剑，未作全关卡/Boss承诺；不据此提升旧2C全链完成状态。
+
 ## 既有研究与历史
 
 当前从[开发目标与验收路线](SEMANTIC-ROADMAP.md)接手。阶段 1 和阶段 2 已通过范围内验收。工作区与操作见[CONTINUE](CONTINUE.md)，规则见[AGENTS](../AGENTS.md)。
