@@ -28,3 +28,5 @@ This checkout holds original-ROM research on main, connected to Licheng314/Rockm
 - Current scope is only scoring, triangular down-slash graphics, a playable OZ form, and an emulator-based expanded viewport; follow the current docs/SEMANTIC-ROADMAP.md. Older stage checklists are evidence, not automatic work orders.
 - Codex completes reproducible verification and closeout itself. Do not leave a human acceptance queue. Ask the user only for material product choices or genuinely missing input; unresolved claims remain unverified.
 - OZ and expanded-view work include development and runnable deliverables. Keep ROM modifications in their separate checkout and emulator experiments in a separate source/build; preserve the original research core and ROM.
+
+- Explicit visual-review exception: extract the corresponding Zero 3 down-slash animation for replacement. Show extracted images and any adaptation before/after images to the user, and wait for their approval before integrating those assets into the mod. Technical verification remains Codex-owned.
