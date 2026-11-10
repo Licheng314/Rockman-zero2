@@ -1,0 +1,141 @@
+{
+  "target_sha1": "87b2db86052ebe5dc28b04e1cf63e66f900a0800",
+  "old_mod_sha1": "a3c1c568bcc933e90267c82d35d9ae8a8f56737a",
+  "baseline_sha1": "c4d93a58f0f82c526dec8a3fdbda170336303689",
+  "cases": {
+    "hold-None": {
+      "frames": 70,
+      "gameplay_fields_equal": true,
+      "collision_fields_equal": true,
+      "changed_image_frames": [
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32
+      ],
+      "atlas_observed": true
+    },
+    "hold-6": {
+      "frames": 70,
+      "gameplay_fields_equal": true,
+      "collision_fields_equal": true,
+      "changed_image_frames": [
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32
+      ],
+      "atlas_observed": true
+    },
+    "hold-7": {
+      "frames": 70,
+      "gameplay_fields_equal": true,
+      "collision_fields_equal": true,
+      "changed_image_frames": [
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32
+      ],
+      "atlas_observed": true
+    },
+    "neutral-None": {
+      "frames": 70,
+      "gameplay_fields_equal": true,
+      "collision_fields_equal": true,
+      "changed_image_frames": [
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17
+      ],
+      "atlas_observed": true
+    },
+    "ground-None": {
+      "frames": 70,
+      "gameplay_fields_equal": true,
+      "collision_fields_equal": true,
+      "changed_image_frames": [],
+      "atlas_observed": false
+    }
+  },
+  "scope": "Five input cases; native default secondary Saber; charged Saber not exercised, no full-game or Boss coverage",
+  "rom_unchanged": true,
+  "script_sha256": {
+    "mod\\downslash.py": "387d32fb50939b30059e0408a1bff349cce4a46f2086108fbca424d5735ab80e",
+    "mod\\tests\\verify_triangle.py": "a0fe4c9c42ca83937e440cbe585e0933c8ca59f3a08af769a0e3e92cccc96be1",
+    "mod\\tests\\verify_gameplay.py": "11a201d7e0149bb2dfd0dd720975654e372e421c4590e8f98430277b5eac4e45",
+    "mod\\build.py": "db3336af316a30cf32fabc150df8cc23bd8f5705e41dc53aa8809ff5a750cc32"
+  },
+  "core_sha256": "02747c2a77ea4ed9738c967d101a207a81973233588f68d39f5ab923a1a9599c",
+  "visual_review": "Codex inspected in-game left/right hold and release captures; native secondary-weapon inputs used",
+  "rejected_fixtures": [
+    "RAM-only main-weapon swap left a persistent Buster companion sharing VRAM; excluded.",
+    "Early charge preset did not trigger a charged Saber; not counted as charged coverage."
+  ]
+}

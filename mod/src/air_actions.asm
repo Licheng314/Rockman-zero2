@@ -3,7 +3,7 @@
 ; +300/+301: dash/hover timers. +302: dash used.
 ; +303: active bits0..1, up/down/right bits2..4.
 .gba
-.open "baserom.gba", "build/mod/rmz2-air-actions-v0.2.1.pending.gba", 0x08000000
+.open "baserom.gba", "build/mod/rmz2-air-actions-v0.3.0.pending.gba", 0x08000000
 .thumb
 .definelabel ChainHoverFrames, 30
 

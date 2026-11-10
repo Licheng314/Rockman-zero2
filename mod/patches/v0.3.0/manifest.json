@@ -1,0 +1,47 @@
+{
+  "version": "0.3.0",
+  "status": "experimental",
+  "base_size": 8388608,
+  "base_sha1": "c4d93a58f0f82c526dec8a3fdbda170336303689",
+  "target_sha1": "87b2db86052ebe5dc28b04e1cf63e66f900a0800",
+  "patch_file": "rmz2-air-actions-v0.3.0.ips",
+  "patch_sha256": "1985ea3bf5ceca2893fd5d2fdbcebe1dac0e1307dc6fead4676b455f35826b31",
+  "checks": [
+    "mod/tests/verify_gameplay.py",
+    "mod/tests/verify_triangle.py"
+  ],
+  "source_reference_sha1": "f1835aaceadebe08bd4d6178947418d3e077a667",
+  "resource_transplant": {
+    "source_sha1": "f1835aaceadebe08bd4d6178947418d3e077a667",
+    "source_sheet_sha256": "001b22bb8a506ecc91f35e5b70b0a3b3bce447d64a65a9f97c6972c2138b3d3a",
+    "frame_map": {
+      "4": 4,
+      "7": 5,
+      "8": 6,
+      "5": 7,
+      "6": 8
+    },
+    "atlas_width_tiles": 8,
+    "atlas_rows": 3,
+    "atlas_bytes": 768,
+    "atlas_sha256": "7a98e0e94c9ac483734d284c58d4aa624c47616c23f13b365298a3d0b789823b",
+    "metadata_sha256": "c52286656fc189f6af0eb79505c3f5a28db8b82906897d2484492d9df410eda2",
+    "payload_start": "0x36c900",
+    "payload_end": "0x36cec0",
+    "changed_ranges": [
+      [
+        "0x36c900",
+        "0x36cec0"
+      ],
+      [
+        "0x4ad488",
+        "0x4ad48c"
+      ],
+      [
+        "0x538770",
+        "0x53877c"
+      ]
+    ],
+    "scope": "Ordinary air saber held blade and its short recovery; original swing, player art, sequence timing, collisions and palettes unchanged"
+  }
+}

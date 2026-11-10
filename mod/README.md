@@ -1,6 +1,12 @@
-# Zero 2 · Air Actions 实验改版 v0.2.1
+# Zero 2 · Air Actions 实验改版 v0.3.0
 
 基于《Mega Man Zero 2》美版的主人公动作实验。原版逆向研究位于 [main 分支](https://github.com/Licheng314/Rockman-zero2/tree/main)，本分支保存独立改版源码和 IPS 补丁。
+
+## 本版：普通空中斩的三角剑光
+
+将普通空中挥剑末段（按住下方向时保持）的细剑换成 Z3 三角剑光，并替换配套的短收招碎片。不是 EX 下压技能，不改角色本体或前半段挥斩；动作帧号、时长、伤害和碰撞描述符、调色板保持 Z2 原数据。源图块像素原样保留，只把 Z3 的 1D 图块/4 字节拼合转换为 Z2 的 2D 图块/8 字节记录。
+
+来源为用户提供的美版 Z3 OZ ROM，SHA1 `f1835aaceadebe08bd4d6178947418d3e077a667`，图块 `0x084163E8` 的 768 字节及 `0x083A5C30` 拼合记录。Z3 帧 4/5/6 对应 Z2 的保持帧 4/7/8，Z3 收招帧 7/8 对应 Z2 的 5/6。仅改一个资源指针、资源键 3 的描述符及已检查的填充区 `0x0836C900..0x0836CEC0`，ROM 仍为 8MiB。实现见 `mod/downslash.py`。
 
 ## 修改内容
 
@@ -25,7 +31,7 @@
 python mod/apply_patch.py "你的美版原ROM.gba" "Zero2-AirActions.gba"
 ```
 
-也可以使用支持 IPS 的补丁工具应用 `mod/patches/v0.2.1/rmz2-air-actions-v0.2.1.ips`。上述 Python 工具会自动核对原版、补丁和修改后的校验值。
+也可以使用支持 IPS 的补丁工具应用 `mod/patches/v0.3.0/rmz2-air-actions-v0.3.0.ips`。上述 Python 工具会自动核对原版、补丁和修改后的校验值。
 
 从新游戏开始体验新的初始成长、EX 和套装配置。原版或旧改版的即时存档可能带有旧装备、旧状态或不同版本的代码位置。
 
@@ -33,7 +39,7 @@ python mod/apply_patch.py "你的美版原ROM.gba" "Zero2-AirActions.gba"
 
 ## 从源码构建
 
-在仓库根目录准备 `baserom.gba`，在 `tools/bin/` 准备 Windows x64 的 `armips.exe` 和 `mgba_libretro.dll`，使用 Windows x64 Python。执行 `python -X utf8 mod/build.py`。构建会运行游戏内检查，成功后输出到 `build/mod/rmz2-air-actions-v0.2.1.gba`。
+在仓库根目录准备 `baserom.gba`，在 `tools/bin/` 准备 Windows x64 的 `armips.exe` 和 `mgba_libretro.dll`，使用 Windows x64 Python。执行 `python -X utf8 mod/build.py --reference-rom "你的 Z3 OZ 参考ROM.gba"`。构建原样读取匹配的参考 ROM，不将其拷入仓库；应用已生成 IPS 不需要 Z3 ROM。构建会运行游戏内检查，成功后输出到 `build/mod/rmz2-air-actions-v0.3.0.gba`。
 
 ## 已验证与边界
 
@@ -46,3 +52,9 @@ python mod/apply_patch.py "你的美版原ROM.gba" "Zero2-AirActions.gba"
 检查覆盖四个斜向的实际位移与总速度、方向锁定，以及不同起跳间隔下反复斜下冲刺接跳仍保持原版空中移动速度。仍是有限场景验证，全关卡兼容性待实际游玩反馈。
 
 反馈时请附原 ROM 校验值、补丁版本、模拟器版本、关卡和复现输入。关于其他改版的重合或兼容性，需要对方具体版本和修改范围后才能比较。
+
+### 三角剑光的实际检查
+
+`mod/tests/verify_triangle.py` 比较 v0.2.1 与本版：中立、左朝向、右朝向的按下保持及松开、普通不保持收招、地面挥剑，共 5 组、每组 70 次更新。使用默认装备的副武器剑和正常输入，不用直接改主武器的 RAM 夹具（那会漏掉枪伴随对象的清理并造成显存重叠）。核对角色位置/速度/动作、剑参数/碰撞字段逐帧一致，三角图集实际进入显存，地面画面相同，左右朝向均有新剑光。
+
+既有空中冲刺、墙跳、锁链滞留、接触过滤/敌弹、武器成长、EX/套装配置等回归全部通过。三角剑光的专门检查没有触发蓄力剑，也未覆盖所有 Boss/关卡；蓄力主体图块和碰撞数据未改，若原版某路径回用普通保持资源，也会显示新外观。检查记录随版本补丁保存在 verification.json。

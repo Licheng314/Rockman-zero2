@@ -1,6 +1,7 @@
 """Assemble patch fragments only and test the full image in emulator memory."""
 from hashlib import sha1
 from pathlib import Path
+import os,sys
 import re
 import struct
 import subprocess
@@ -42,6 +43,10 @@ with TemporaryDirectory(dir=here) as temp:
         assert len(fragment) == len(old) and original[offset:offset + len(old)] == old, output.name
         patched[offset:offset + len(fragment)] = fragment
 assert not expected
+sys.path.insert(0, str(here.parent))
+from downslash import transform
+source_rom = Path(os.environ['RMZ3_OZ_ROM'])
+patched = bytearray(transform(bytes(patched), source_rom.read_bytes())[0])
 if probe.f != (here.parents[1] / "baserom.gba"):
     assert probe.f.read_bytes() == patched
 for address in (0x0802E8B6, 0x0802EA32, 0x080316FA, 0x08031704):
