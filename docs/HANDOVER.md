@@ -8,6 +8,8 @@
 
 下劈动画补充要求：直接提取 Zero 3 对应素材用于替换；提取图和任何适配修改前后图先供用户审阅，确认后才写入改版。Codex 继续承担技术验证。所选素材可先按内容核对日美版，不等待全部地区差异或 OZ 完整差分闭合。
 
+2026-11-10 下一批已推进：下劈素材静态提取成功，角色 9 帧/剑光 18 帧；图块、拼合和帧序列在用户给定美版 OZ ROM 中与日版参考精确匹配。见[机器记录](semantic-data/downslash-extraction-20261110.json)及[提取工具](../research/extract-z3-downslash.py)。预览仅用参考 PNG 配色、没有游戏内时序或实际调色板证明；图片在本地 build/downslash-review-20261110 等待用户审阅，未改素材、未适配/回写 Z2。内置 Python/Pillow 可用，文档检查已实跑。ZCode 的 [S1 评分任务书](ZCODE-HANDOFF.md)已准备、未从本聊天投递；它仅可写专属 build 子目录，不与 Codex 同写正式文件。
+
 ## 既有研究与历史
 
 当前从[开发目标与验收路线](SEMANTIC-ROADMAP.md)接手。阶段 1 和阶段 2 已通过范围内验收。工作区与操作见[CONTINUE](CONTINUE.md)，规则见[AGENTS](../AGENTS.md)。

@@ -1,0 +1,324 @@
+{
+  "rom_sha1": "f1835aaceadebe08bd4d6178947418d3e077a667",
+  "rom_sha256": "dddc56efcab68e18d9d34a7f5b2186e2e07bff1dcb3f9a69ef22372cceccaf34",
+  "reference_commit": "2a28700e0a74edd9578737c3b3435ced9d074045",
+  "scope": "extracted static resource preview; no ROM patch or in-game proof",
+  "palette": "reference PNG preview palette, not observed live palette bank",
+  "resources": {
+    "body": {
+      "reference_path": "sprites/dynamic/zero/saber/smash",
+      "sheets": [
+        {
+          "index": 0,
+          "length": 1408,
+          "rom_matches": [
+            "0x083DDBF0",
+            "0x0883A5F8"
+          ],
+          "sha256": "34428619ffd9b6a88feead9657faed1d835af2d6ff6f874836a69349fe37d5da"
+        },
+        {
+          "index": 1,
+          "length": 640,
+          "rom_matches": [
+            "0x083DE170",
+            "0x0883AB78"
+          ],
+          "sha256": "b3477858e52b094d09ac05232e3e8e0cfcee06d471c7f8e7075f8548b0d02fc0"
+        },
+        {
+          "index": 2,
+          "length": 1184,
+          "rom_matches": [
+            "0x083DE3F0",
+            "0x0883ADF8"
+          ],
+          "sha256": "07b5cb17bfb63b11fa521177bcdbd51ea63cafb271f93acb77c1417eea50955a"
+        }
+      ],
+      "metasprite_matches": [
+        "0x083A2A70"
+      ],
+      "metasprite_sha256": "7e6ea7e56bb8ae8d2c9b880dda3489579453904cbdb9cb3d3d1e6b5629e430ae",
+      "frame_count": 9,
+      "sequences": [
+        {
+          "index": 0,
+          "commands": [
+            {
+              "frameIdx": 0,
+              "duration": 2
+            },
+            {
+              "frameIdx": 1,
+              "duration": 4
+            },
+            {
+              "frameIdx": 3,
+              "duration": 1
+            },
+            {
+              "frameIdx": 3,
+              "duration": 1
+            },
+            {
+              "frameIdx": 7,
+              "duration": 2
+            },
+            {
+              "frameIdx": 5,
+              "duration": 2
+            },
+            {
+              "frameIdx": 6,
+              "duration": 2
+            },
+            {
+              "frameIdx": 3,
+              "duration": 2
+            },
+            {
+              "frameIdx": 4,
+              "duration": 2
+            },
+            {
+              "frameIdx": 5,
+              "duration": 254
+            }
+          ],
+          "rom_payload_matches": [
+            "0x083B5CB0"
+          ]
+        },
+        {
+          "index": 1,
+          "commands": [
+            {
+              "frameIdx": 8,
+              "duration": 2
+            },
+            {
+              "frameIdx": 2,
+              "duration": 2
+            },
+            {
+              "frameIdx": 0,
+              "duration": 255
+            }
+          ],
+          "rom_payload_matches": [
+            "0x083B5CC4"
+          ]
+        }
+      ],
+      "preview_order": [
+        0,
+        1,
+        3,
+        3,
+        7,
+        5,
+        6,
+        3,
+        4
+      ],
+      "limitations": [
+        "Static 1D OBJ assembly; no live OAM/PPU capture.",
+        "Character and blade previews separate; no asserted cross-object timing.",
+        "Duplicate matches are listed, not assumed to be active references."
+      ]
+    },
+    "blade": {
+      "reference_path": "sprites/dynamic/weapon/saber_smash",
+      "sheets": [
+        {
+          "index": 0,
+          "length": 1472,
+          "rom_matches": [
+            "0x08419B4C"
+          ],
+          "sha256": "d48c2ea6e950deda56aa01292c5840342e65131ec55c52fa7810c68c01edfab7"
+        },
+        {
+          "index": 1,
+          "length": 1184,
+          "rom_matches": [
+            "0x0841A10C"
+          ],
+          "sha256": "5fb9a360b69a07b0d48d7c191ae9a70e7c784a9490ff4a5d3e24b7260dbeb33c"
+        },
+        {
+          "index": 2,
+          "length": 704,
+          "rom_matches": [
+            "0x0841A5AC"
+          ],
+          "sha256": "8eb543a1a8b0f2065b905ec54e9f49ae239d165496aa63fa39b78cb9b8a9da54"
+        },
+        {
+          "index": 3,
+          "length": 736,
+          "rom_matches": [
+            "0x0841A86C"
+          ],
+          "sha256": "16dbc96b76fa0938331b327baeb2030d7030e3b1108bbac96d22729fce35b35f"
+        },
+        {
+          "index": 4,
+          "length": 1024,
+          "rom_matches": [
+            "0x0841AB4C"
+          ],
+          "sha256": "bb71c3f53b8427e44f2582ce0addfa2d3d321c601972ad0b3cc48125541c0b52"
+        }
+      ],
+      "metasprite_matches": [
+        "0x083A5E9C"
+      ],
+      "metasprite_sha256": "e682048a8110070c152ef0c5bddd4a0970f724810dd0241998468086d55b1dd7",
+      "frame_count": 18,
+      "sequences": [
+        {
+          "index": 0,
+          "commands": [
+            {
+              "frameIdx": 0,
+              "duration": 4
+            },
+            {
+              "frameIdx": 1,
+              "duration": 1
+            },
+            {
+              "frameIdx": 2,
+              "duration": 1
+            },
+            {
+              "frameIdx": 3,
+              "duration": 2
+            },
+            {
+              "frameIdx": 10,
+              "duration": 2
+            },
+            {
+              "frameIdx": 11,
+              "duration": 2
+            },
+            {
+              "frameIdx": 12,
+              "duration": 2
+            },
+            {
+              "frameIdx": 9,
+              "duration": 2
+            },
+            {
+              "frameIdx": 4,
+              "duration": 254
+            }
+          ],
+          "rom_payload_matches": [
+            "0x083B6538"
+          ]
+        },
+        {
+          "index": 1,
+          "commands": [
+            {
+              "frameIdx": 4,
+              "duration": 2
+            },
+            {
+              "frameIdx": 0,
+              "duration": 255
+            }
+          ],
+          "rom_payload_matches": [
+            "0x083B654A"
+          ]
+        },
+        {
+          "index": 2,
+          "commands": [
+            {
+              "frameIdx": 5,
+              "duration": 4
+            },
+            {
+              "frameIdx": 6,
+              "duration": 1
+            },
+            {
+              "frameIdx": 7,
+              "duration": 1
+            },
+            {
+              "frameIdx": 17,
+              "duration": 2
+            },
+            {
+              "frameIdx": 14,
+              "duration": 2
+            },
+            {
+              "frameIdx": 13,
+              "duration": 2
+            },
+            {
+              "frameIdx": 15,
+              "duration": 2
+            },
+            {
+              "frameIdx": 16,
+              "duration": 2
+            },
+            {
+              "frameIdx": 4,
+              "duration": 254
+            }
+          ],
+          "rom_payload_matches": [
+            "0x083B654E"
+          ]
+        },
+        {
+          "index": 3,
+          "commands": [
+            {
+              "frameIdx": 8,
+              "duration": 2
+            },
+            {
+              "frameIdx": 0,
+              "duration": 255
+            }
+          ],
+          "rom_payload_matches": [
+            "0x083B6560"
+          ]
+        }
+      ],
+      "preview_order": [
+        0,
+        1,
+        2,
+        3,
+        10,
+        11,
+        12,
+        9,
+        4
+      ],
+      "limitations": [
+        "Static 1D OBJ assembly; no live OAM/PPU capture.",
+        "Character and blade previews separate; no asserted cross-object timing.",
+        "Duplicate matches are listed, not assumed to be active references."
+      ]
+    }
+  },
+  "script_sha256": "5fa4ad033c88ff6f169a58538e0e4064c1174507d8a3c84a511a8b8d82173013",
+  "visual_review": "pending user review; no adaptation or integration authorized yet",
+  "render_inspection": "Codex inspected body/blade contact sheets; static composition only, not gameplay capture",
+  "runtime": "Bundled Python 3.12.14 and Pillow verified; capstone unavailable; emulator not executed in this batch"
+}

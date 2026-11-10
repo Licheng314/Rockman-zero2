@@ -25,3 +25,7 @@
 第四批 `stage2c/probe-tile-refresh.py` 对同一普通剑样本验证四条件：空白、只改图块基址、同时失效缓存、禁用刷新门。执行 `python -X utf8 -B research/stage2c/probe-tile-refresh.py`；完整96KiB显存差分与属性/缓存事件写 `build/stage2c/tile-refresh-20261108.json`，无ROM补丁或用户存档写入。已在新建最小目录复跑；累计15/15函数，停止新增深研，仍不代表阶段2C整体验收。
 
 ZCode 2A/2B独立验收复跑：`python -X utf8 -B research/verify-stage2ab-acceptance.py`，包含结算边界、输入反例及110次轨迹对照。阶段仍部分接受，见[验收](../docs/STAGE2AB-ACCEPTANCE.md)。
+
+## Z3 下劈静态素材提取（2026-11-10）
+
+`extract-z3-downslash.py --rom "本机的 Mega Man Zero 3 (USA-oz).gba" --reference build/reference/rmz3` 使用 Pillow，从匹配 ROM 提取原始像素/拼合记录并生成本地审阅图。固定参考提交和 ROM SHA1 均由脚本断言；源 PNG 是字节搜索模板，实际图块及拼合从 ROM 读取，帧序列另核对指针表。参考 PNG 调色板仅用于预览，不等于已确认的实时颜色组；不合成未验证的角色/剑光同步动画。默认输出 build/downslash-review-20261110，不提交提取图片/ROM。需用户审阅图像后才能适配并写入改版；当前没有任何回写或补丁功能。
