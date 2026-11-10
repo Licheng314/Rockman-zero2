@@ -14,6 +14,8 @@
 
 2026-11-10 用户授权试装已审阅的普通空中斩三角剑光，独立改版分支已完成 v0.3.0 测试包（提交 [`d14ab76a`](https://github.com/Licheng314/Rockman-zero2/commit/d14ab76a)）。仅替换保持帧及配套短收招，Z3 像素不重画，转换 1D/4字节拼合为 Z2 2D/8字节格式；角色图、起手、动作序列/时长、伤害/判定及调色板未改。5组各70次更新游戏内对照通过，原有玩法回归、IPS往返和包内ROM散列均通过，见[改版验证记录](https://github.com/Licheng314/Rockman-zero2/blob/d14ab76a/mod/patches/v0.3.0/verification.json)。本机 build/mod/Zero2-AirActions-v0.3.0-Triangle-test.zip 在改版目录；无新 Release，未上传完整ROM。专门样本未触发蓄力剑，未作全关卡/Boss承诺；不据此提升旧2C全链完成状态。
 
+2026-11-11 ZCode S1 已由 Codex 自行复核并修正：全部引用指纹匹配，新最小目录原版评分脚本退出0；保留字段/公式整理，纠正 EX 宽度/时机、称号术语及 P1 开关/历史/满分保证等错误，见[2A 当前说明](STAGE2A-SCORE-RESEARCH.md)和[机器记录](semantic-data/stage2a/score-s1-codex-review-20261111.json)。0新增深入函数，无ROM/改版变更；没有等待用户逐项验收，未把P1写成已验证补丁，未自动续派。评分实现仍只待明确产品规则，存储/钩子位置由Codex负责。
+
 ## 既有研究与历史
 
 当前从[开发目标与验收路线](SEMANTIC-ROADMAP.md)接手。阶段 1 和阶段 2 已通过范围内验收。工作区与操作见[CONTINUE](CONTINUE.md)，规则见[AGENTS](../AGENTS.md)。

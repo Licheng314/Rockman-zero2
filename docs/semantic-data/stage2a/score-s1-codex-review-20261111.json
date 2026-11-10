@@ -1,0 +1,132 @@
+{
+  "recorded_at": "2026-11-11T00:47:31.630767+08:00",
+  "started_at": "2026-11-11T00:47:10.398955+08:00",
+  "baseline_commit": "e7fb36a529b563f66197a2b9d41c95eebcb69a72",
+  "delivery_sha256": {
+    "evidence.json": "cff70115c715bcb6287c66574f0517ff88a69d40553197a0dae2b0ccf0133c95",
+    "score-contract.md": "7524254586c3c2c3d0d7cf2f4991e461575bec319cffe11aabf7eb1c8ee46000"
+  },
+  "referenced_hash_checks": {
+    "acceptance-20261108.json": {
+      "expected": "cb12cb9a13e1fb409b376a3d107c73f453bb523f5c7c45d418228ba319ba26a7",
+      "actual": "cb12cb9a13e1fb409b376a3d107c73f453bb523f5c7c45d418228ba319ba26a7",
+      "match": true
+    },
+    "night-20261109-A-codex-review.json": {
+      "expected": "4598273c4292f22bbdf355a7a403f51898ce6b9523ac6a7d823ff9329a2c2227",
+      "actual": "4598273c4292f22bbdf355a7a403f51898ce6b9523ac6a7d823ff9329a2c2227",
+      "match": true
+    },
+    "night-20261109-A-fix-metadata.json": {
+      "expected": "7e5eda78d6d566f5a32eb6950bb1ae0e2174129088f53db60eac1c896f13e663",
+      "actual": "7e5eda78d6d566f5a32eb6950bb1ae0e2174129088f53db60eac1c896f13e663",
+      "match": true
+    },
+    "STAGE2AB-ACCEPTANCE.md": {
+      "expected": "b1e60b46a1e728c0d307c160b95744672427ef4070af6e3330ca4d884fddddff",
+      "actual": "b1e60b46a1e728c0d307c160b95744672427ef4070af6e3330ca4d884fddddff",
+      "match": true
+    },
+    "STAGE2A-SCORE-RESEARCH.md": {
+      "expected": "368d98666e3f6f42954ce88ced2b9398daa84180a00756ac36f2bb28d1690175",
+      "actual": "368d98666e3f6f42954ce88ced2b9398daa84180a00756ac36f2bb28d1690175",
+      "match": true
+    },
+    "run-score-fixtures.py": {
+      "expected": "869b03b668e2a97031921ac5ce662817038f2c5a36794086e821d88671c4c250",
+      "actual": "869b03b668e2a97031921ac5ce662817038f2c5a36794086e821d88671c4c250",
+      "match": true
+    }
+  },
+  "clean_run": {
+    "command": [
+      "C:\\Users\\47830\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+      "-X",
+      "utf8",
+      "-B",
+      "research/stage2a/run-score-fixtures.py"
+    ],
+    "python_version": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+    "elapsed_seconds": 20.079000000001543,
+    "exit_code": 0,
+    "log_file": "20261111T004710382622-rerun.log",
+    "script_sha256": "869b03b668e2a97031921ac5ce662817038f2c5a36794086e821d88671c4c250",
+    "core_sha256": "02747c2a77ea4ed9738c967d101a207a81973233588f68d39f5ab923a1a9599c",
+    "rom_sha256": "4bb8b71ca8d50b5a8f0c737082d8f86c9ad31bd0abebddfa519b3af1ff3853a5"
+  },
+  "direct_call_candidates": {
+    "thumb": [
+      "0x801cef0"
+    ],
+    "arm": [],
+    "aligned_pointer_words": [],
+    "scope": "Raw encoded-reference scan, not proof excluding computed/indirect calls or data coincidences"
+  },
+  "static_anchors": {
+    "return_instruction_address": "0x080D61DA",
+    "return_instruction_bytes": "201c",
+    "add_result_to_existing_assists": "0x0801CEF0 call; +0x10 is incremented, not assigned",
+    "ex_mission": "u16[0x0202EC30], constant address across loop",
+    "ex_mask": "u16 profile+0x216; mask table entries u32"
+  },
+  "status": "accepted_after_document_corrections; no implementation approval or modified-ROM test",
+  "new_deep_functions": 0,
+  "corrections": [
+    {
+      "id": "S1-01",
+      "issue": "EX mission read described as byte[EC30+i], EX ownership described as u32",
+      "correct": "Both consumers read u16[0x0202EC30] at a fixed address; table mission IDs are u8. Ownership at profile+0x216 is loaded/stored as u16; only mask table entries are u32."
+    },
+    {
+      "id": "S1-02",
+      "issue": "P1 return-zero claimed to guarantee ELF=15",
+      "correct": "0x0801CEF0 adds helper return to existing u32[EBF0+0x10]. Returning zero only suppresses this contribution; no universal zero total is proved."
+    },
+    {
+      "id": "S1-03",
+      "issue": "P1 closing switch claimed to restore original history/results",
+      "correct": "Queue writes can be retained, but already accumulated score, grade and awarded EX are not automatically recomputed or revoked. Call wraps queue[283] as u8."
+    },
+    {
+      "id": "S1-04",
+      "issue": "Conditional 2-byte switch and bx lr pseudocode unsafe",
+      "correct": "Only unconditional return-zero can fit the original 0x080D61DA halfword (201c -> 0020). A runtime switch needs checked storage and a real hook/trampoline preserving r4/r5 and the original pop/pop/bx epilogue. No unused RAM bit is established."
+    },
+    {
+      "id": "S1-05",
+      "issue": "Enemy division-zero/branch omitted, byte sum called signed loads",
+      "correct": "q=0 gives 0 without division; n>24 gives 0. Actual six loads are unsigned, sum truncated to u8, then total sign-extended to s8 and accumulated/read as s16."
+    },
+    {
+      "id": "S1-06",
+      "issue": "EX effect described as changing current reward through recalculated grade",
+      "correct": "The qualification bit is set before score recalculation using the incoming grade; later grade changes do not retroactively rerun that gate."
+    },
+    {
+      "id": "S1-07",
+      "issue": "Call count cap and codename grade terminology",
+      "correct": "D6138 increments at old count<=98, hence can reach99; record+2 is codename index, not rank at record+1."
+    },
+    {
+      "id": "S1-08",
+      "issue": "P3 rejected solely for deeper location",
+      "correct": "Both P1 contribution suppression and local ELF score override remain candidates. For score-only exemption, local consumer avoids changing helper semantics, but display/count/history expectations must be set and tested."
+    },
+    {
+      "id": "S1-09",
+      "issue": "Provenance record stale/incomplete",
+      "correct": "worker handoff_commit d1429043 predates the S1 task at53ce4500. Reported system Python3.13 has no independent executable/version capture; reviewer actually ran bundled3.12.14. File hashes matched at review baseline."
+    }
+  ],
+  "boundaries": [
+    "Independent run repeats existing original-ROM fixtures, not proposed P1/P2/P3 patches.",
+    "Original files and delivery evidence preserved; corrected current explanation integrated into existing STAGE2A-SCORE-RESEARCH.md.",
+    "No additional emulator run beyond the one fresh minimal-directory review.",
+    "No universal proof about all elf usage/other score contributors, long history or indirect helper calls."
+  ],
+  "product_choices": [
+    "Exemption applicable forms",
+    "Whether exemption means preserving usage history and which score components are exempt"
+  ],
+  "engineering_responsibility": "Validated switch storage and hook design are Codex tasks, not questions for the user"
+}
