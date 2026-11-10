@@ -67,12 +67,22 @@ def main():
     p=argparse.ArgumentParser(description=__doc__)
     p.add_argument('--rom',type=Path,required=True)
     p.add_argument('--reference',type=Path,default=Path('build/reference/rmz3'))
-    p.add_argument('--output',type=Path,default=Path('build/downslash-review-20261110'))
+    p.add_argument('--action',choices=['normal-air','ex-smash'],default='normal-air')
+    p.add_argument('--output',type=Path,default=Path('build/normal-air-down-review-20261110'))
     a=p.parse_args();rom=a.rom.read_bytes();assert hashlib.sha1(rom).hexdigest()==ROM_SHA
     assert subprocess.check_output(['git','-C',str(a.reference),'rev-parse','HEAD'],text=True).strip()==PIN
     a.output.mkdir(parents=True,exist_ok=True)
-    result=dict(rom_sha1=ROM_SHA,rom_sha256=sha(rom),reference_commit=PIN,scope='extracted static resource preview; no ROM patch or in-game proof',palette='reference PNG preview palette, not observed live palette bank',resources={})
-    for kind in ('zero/saber/smash','weapon/saber_smash'):
+    result=dict(action=a.action,rom_sha1=ROM_SHA,rom_sha256=sha(rom),reference_commit=PIN,scope='extracted static resource preview; no ROM patch or in-game proof',palette='reference PNG preview palette, not observed live palette bank',resources={})
+    if a.action=='normal-air':
+        air=(a.reference/'src/player/zero/attack/air.c').read_text(encoding='utf-8')
+        weapon=(a.reference/'src/weapon/saber.c').read_text(encoding='utf-8')
+        start=air.index('void air_saber_hold(struct Zero* z) {')
+        hold=air[start:air.index('static void air_saber_end',start)]
+        assert 'DPAD_DOWN' in hold and 'MOTION(DM025_ZERO_SABER_AIR, 0x00), 7, 1' in hold
+        assert '[SABER_AIR] = MOTION(DM098_SABER_CHARGE, 0)' in weapon
+        result['target_binding']=dict(body_motion='DM025_ZERO_SABER_AIR sequence 0',weapon_motion='DM098_SABER_CHARGE sequence 0 / SABER_AIR',source_branch='air_saber -> DPAD_DOWN -> air_saber_hold; saberAirSlash maintains weapon collision initialization',air_source_sha256=sha((a.reference/'src/player/zero/attack/air.c').read_bytes()),weapon_source_sha256=sha((a.reference/'src/weapon/saber.c').read_bytes()),evidence_level='pinned source + matching resource bytes, not live gameplay')
+    kinds=('zero/saber/air','weapon/saber_98') if a.action=='normal-air' else ('zero/saber/smash','weapon/saber_smash')
+    for kind in kinds:
         source=a.reference/'sprites/dynamic'/kind
         name='body' if kind.startswith('zero/') else 'blade'
         out=a.output/name;out.mkdir(exist_ok=True)
@@ -101,30 +111,34 @@ def main():
                 if table>=0 and struct.unpack_from('<I',rom,table+4*index)[0]==0x08000000+hit:valid.append(hit)
             assert valid,f'No pointer-backed sequence: {kind}/{index}'
             seq_evidence.append(dict(index=index,commands=seq,rom_payload_matches=[f'0x{0x08000000+h:08X}' for h in valid]))
+        parts=[s for f in metas for s in f['subsprites']]
+        minx=min(s['x'] for s in parts);miny=min(s['y'] for s in parts)
+        maxx=max(s['x']+s['size'][0] for s in parts);maxy=max(s['y']+s['size'][1] for s in parts)
+        origin=(8-minx,8-miny)
+        width=max(96,((maxx-minx+23)//8)*8);height=max(96,((maxy-miny+23)//8)*8)
         rendered=[]
         for i,f in enumerate(metas):
-            canvas=Image.new('RGBA',(96,96))
+            canvas=Image.new('RGBA',(width,height))
             for s in reversed(f['subsprites']):
                 piece=sprite(raw_sheets[f['sheetIdx']],s,palettes[f['sheetIdx']])
-                x,y=48+s['x'],64+s['y']
-                assert 0<=x and 0<=y and x+piece.width<=96 and y+piece.height<=96
+                x,y=origin[0]+s['x'],origin[1]+s['y']
+                assert 0<=x and 0<=y and x+piece.width<=width and y+piece.height<=height
                 canvas.alpha_composite(piece,(x,y))
             assert canvas.getbbox()
             canvas.save(out/f'frame-{i:02d}.png');rendered.append(canvas)
         order=[c['frameIdx'] for c in seqs[0] if c['duration']<254]
-        # Include the held frame as a labelled static pose, never a 254-frame delay.
-        hold=seqs[0][-1]['frameIdx']
-        if hold not in order:order.append(hold)
-        cols=5;scale=3;cellw,cellh=300,324
+        # FE/FF are control records: their first byte is not a displayed frame.
+        # Keep them in evidence but exclude them from the static frame preview.
+        cols=5;scale=3;cellw,cellh=width*scale+12,height*scale+36
         board=Image.new('RGB',(cols*cellw,((len(order)+cols-1)//cols)*cellh),(28,32,40));draw=ImageDraw.Draw(board)
         for j,i in enumerate(order):
             x=(j%cols)*cellw;y=(j//cols)*cellh
-            draw.text((x+10,y+5),f'{name} frame {i}'+(' (hold)' if i==hold else ''),fill='white')
-            for xx in range(0,288,24):
-                for yy in range(0,288,24):draw.rectangle((x+xx,y+28+yy,x+xx+23,y+28+yy+23),fill=(48,53,63) if (xx//24+yy//24)%2 else (60,65,76))
-            big=rendered[i].resize((288,288),Image.Resampling.NEAREST);board.paste(big,(x,y+28),big)
+            draw.text((x+10,y+5),f'{name} frame {i}',fill='white')
+            for xx in range(0,width*scale,24):
+                for yy in range(0,height*scale,24):draw.rectangle((x+xx,y+28+yy,x+xx+23,y+28+yy+23),fill=(48,53,63) if (xx//24+yy//24)%2 else (60,65,76))
+            big=rendered[i].resize((width*scale,height*scale),Image.Resampling.NEAREST);board.paste(big,(x,y+28),big)
         board.save(a.output/f'{name}-sequence-preview.png')
-        result['resources'][name]=dict(reference_path=str(source.relative_to(a.reference)).replace('\\','/'),sheets=evidence,metasprite_matches=[f'0x{0x08000000+h:08X}' for h in meta_hits],metasprite_sha256=sha(encoded),frame_count=len(metas),sequences=seq_evidence,preview_order=order,limitations=['Static 1D OBJ assembly; no live OAM/PPU capture.','Character and blade previews separate; no asserted cross-object timing.','Duplicate matches are listed, not assumed to be active references.'])
+        result['resources'][name]=dict(reference_path=str(source.relative_to(a.reference)).replace('\\','/'),sheets=evidence,metasprite_matches=[f'0x{0x08000000+h:08X}' for h in meta_hits],metasprite_sha256=sha(encoded),frame_count=len(metas),sequences=seq_evidence,preview_order=order,canvas_size=[width,height],origin=origin,limitations=['Static 1D OBJ assembly; no live OAM/PPU capture.','Character and blade previews separate; no asserted cross-object timing.','Duplicate matches are listed, not assumed to be active references.'])
     assert sha(a.rom.read_bytes())==result['rom_sha256']
     result['script_sha256']=sha(Path(__file__).read_bytes())
     (a.output/'extraction-evidence.json').write_text(json.dumps(result,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')

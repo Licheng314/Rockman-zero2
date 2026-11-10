@@ -29,3 +29,5 @@ ZCode 2A/2B独立验收复跑：`python -X utf8 -B research/verify-stage2ab-acce
 ## Z3 下劈静态素材提取（2026-11-10）
 
 `extract-z3-downslash.py --rom "本机的 Mega Man Zero 3 (USA-oz).gba" --reference build/reference/rmz3` 使用 Pillow，从匹配 ROM 提取原始像素/拼合记录并生成本地审阅图。固定参考提交和 ROM SHA1 均由脚本断言；源 PNG 是字节搜索模板，实际图块及拼合从 ROM 读取，帧序列另核对指针表。参考 PNG 调色板仅用于预览，不等于已确认的实时颜色组；不合成未验证的角色/剑光同步动画。默认输出 build/downslash-review-20261110，不提交提取图片/ROM。需用户审阅图像后才能适配并写入改版；当前没有任何回写或补丁功能。
+
+下劈目标已纠正：默认提取普通空中斩按下保持（DM025 / DM098），输出 `build/normal-air-down-review-20261110`。首轮 `smash` 误选为 EX；仅显式 `--action ex-smash` 可复现该历史样本，应另给输出目录。普通序列的 FE/FF 是控制记录，不作为图片帧或 254/255 帧时长；同一资源还含收招/蓄力等序列，导出总帧数不是单次动作帧数。仍是静态源素材预览，不是已适配 Z2 的效果。

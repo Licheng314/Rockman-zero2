@@ -1,0 +1,463 @@
+{
+  "action": "normal-air",
+  "rom_sha1": "f1835aaceadebe08bd4d6178947418d3e077a667",
+  "rom_sha256": "dddc56efcab68e18d9d34a7f5b2186e2e07bff1dcb3f9a69ef22372cceccaf34",
+  "reference_commit": "2a28700e0a74edd9578737c3b3435ced9d074045",
+  "scope": "extracted static resource preview; no ROM patch or in-game proof",
+  "palette": "reference PNG preview palette, not observed live palette bank",
+  "resources": {
+    "body": {
+      "reference_path": "sprites/dynamic/zero/saber/air",
+      "sheets": [
+        {
+          "index": 0,
+          "length": 640,
+          "rom_matches": [
+            "0x083DB0A4",
+            "0x08837B18"
+          ],
+          "sha256": "0dc7dd993547efdf885fa5597ebe4eadadbf02c9fc2e99944027a01d7ed782b0"
+        },
+        {
+          "index": 1,
+          "length": 608,
+          "rom_matches": [
+            "0x083DB324",
+            "0x08837D98"
+          ],
+          "sha256": "1d346541114f3e8d3e980491dc49a92a943fdc3ef334a9a558183b5730e413df"
+        },
+        {
+          "index": 2,
+          "length": 992,
+          "rom_matches": [
+            "0x083DB584",
+            "0x08837FF8"
+          ],
+          "sha256": "33d094dfa71d7a8df3ad40bc994d4f7c16ce3dbe9f49b609e27912cd14ab10c1"
+        },
+        {
+          "index": 3,
+          "length": 1056,
+          "rom_matches": [
+            "0x083DB964",
+            "0x088383D8"
+          ],
+          "sha256": "7771acc6e1e4c8a5cbd030b8f3170cd555c10fe2731ba81de3bd68eaf3d24aa7"
+        },
+        {
+          "index": 4,
+          "length": 608,
+          "rom_matches": [
+            "0x083DBD84",
+            "0x088387F8"
+          ],
+          "sha256": "f42958a8719f78d1635b8eddade5a3717a5b408dfa4ff995f911c2fb14d8325a"
+        }
+      ],
+      "metasprite_matches": [
+        "0x083A28DC"
+      ],
+      "metasprite_sha256": "7e2ce95e02f2f75391e920cdfaede3dee2c0ecd652d0bc3f12d29b4794035f97",
+      "frame_count": 11,
+      "sequences": [
+        {
+          "index": 0,
+          "commands": [
+            {
+              "frameIdx": 0,
+              "duration": 2
+            },
+            {
+              "frameIdx": 1,
+              "duration": 1
+            },
+            {
+              "frameIdx": 2,
+              "duration": 1
+            },
+            {
+              "frameIdx": 3,
+              "duration": 2
+            },
+            {
+              "frameIdx": 3,
+              "duration": 2
+            },
+            {
+              "frameIdx": 4,
+              "duration": 2
+            },
+            {
+              "frameIdx": 6,
+              "duration": 2
+            },
+            {
+              "frameIdx": 7,
+              "duration": 4
+            },
+            {
+              "frameIdx": 9,
+              "duration": 4
+            },
+            {
+              "frameIdx": 8,
+              "duration": 4
+            },
+            {
+              "frameIdx": 6,
+              "duration": 4
+            },
+            {
+              "frameIdx": 7,
+              "duration": 254
+            }
+          ],
+          "rom_payload_matches": [
+            "0x083B5C44"
+          ]
+        },
+        {
+          "index": 1,
+          "commands": [
+            {
+              "frameIdx": 5,
+              "duration": 2
+            },
+            {
+              "frameIdx": 10,
+              "duration": 6
+            },
+            {
+              "frameIdx": 0,
+              "duration": 255
+            }
+          ],
+          "rom_payload_matches": [
+            "0x083B5C5C"
+          ]
+        },
+        {
+          "index": 2,
+          "commands": [
+            {
+              "frameIdx": 0,
+              "duration": 2
+            },
+            {
+              "frameIdx": 0,
+              "duration": 4
+            },
+            {
+              "frameIdx": 1,
+              "duration": 2
+            },
+            {
+              "frameIdx": 2,
+              "duration": 2
+            },
+            {
+              "frameIdx": 3,
+              "duration": 2
+            },
+            {
+              "frameIdx": 3,
+              "duration": 2
+            },
+            {
+              "frameIdx": 4,
+              "duration": 2
+            },
+            {
+              "frameIdx": 6,
+              "duration": 2
+            },
+            {
+              "frameIdx": 0,
+              "duration": 255
+            }
+          ],
+          "rom_payload_matches": [
+            "0x083B5C62"
+          ]
+        }
+      ],
+      "preview_order": [
+        0,
+        1,
+        2,
+        3,
+        3,
+        4,
+        6,
+        7,
+        9,
+        8,
+        6
+      ],
+      "canvas_size": [
+        96,
+        96
+      ],
+      "origin": [
+        32,
+        52
+      ],
+      "limitations": [
+        "Static 1D OBJ assembly; no live OAM/PPU capture.",
+        "Character and blade previews separate; no asserted cross-object timing.",
+        "Duplicate matches are listed, not assumed to be active references."
+      ]
+    },
+    "blade": {
+      "reference_path": "sprites/dynamic/weapon/saber_98",
+      "sheets": [
+        {
+          "index": 0,
+          "length": 1120,
+          "rom_matches": [
+            "0x084157A8",
+            "0x08870A38"
+          ],
+          "sha256": "c5f821f8e1211658ebe26f37bed108e41d94be8020115bcbe6b363476dae44ff"
+        },
+        {
+          "index": 1,
+          "length": 1056,
+          "rom_matches": [
+            "0x08415C08",
+            "0x08870E98"
+          ],
+          "sha256": "c6f524c4fb3d72fe789c7e9fbbd25f62183dfc281b8010a59189fe9b87382ee8"
+        },
+        {
+          "index": 2,
+          "length": 960,
+          "rom_matches": [
+            "0x08416028",
+            "0x088712B8"
+          ],
+          "sha256": "77a4726a8dc24dfe07d4a3bda18e2366618db708f8ca8812d1846d654945d795"
+        },
+        {
+          "index": 3,
+          "length": 768,
+          "rom_matches": [
+            "0x084163E8",
+            "0x08871678"
+          ],
+          "sha256": "001b22bb8a506ecc91f35e5b70b0a3b3bce447d64a65a9f97c6972c2138b3d3a"
+        },
+        {
+          "index": 4,
+          "length": 32,
+          "rom_matches": [
+            "0x084166E8",
+            "0x08871978"
+          ],
+          "sha256": "8c53fbd5e7401199ba1e7d79e8531690c387e93f8e77f203daf4f1675a70322c"
+        },
+        {
+          "index": 5,
+          "length": 1472,
+          "rom_matches": [
+            "0x08416708",
+            "0x08871998"
+          ],
+          "sha256": "558675792ce0f663fe4a9a8b7b273ab511442e654370b76b5367da65402e5af9"
+        },
+        {
+          "index": 6,
+          "length": 1472,
+          "rom_matches": [
+            "0x08416CC8",
+            "0x08871F58"
+          ],
+          "sha256": "e763ac3479ae80716156f1d2075f4332e66f3b6bded147ba5a07eb27a885616b"
+        },
+        {
+          "index": 7,
+          "length": 1472,
+          "rom_matches": [
+            "0x08417288",
+            "0x08872518"
+          ],
+          "sha256": "ee4f32598167e6bbe956f801afa378338d27222d05708450461a8d4075471067"
+        },
+        {
+          "index": 8,
+          "length": 1280,
+          "rom_matches": [
+            "0x08417848",
+            "0x08872AD8"
+          ],
+          "sha256": "ec7d4a58ce2afa923398338cba533e4043021d90dd0766146058f5355938bb42"
+        },
+        {
+          "index": 9,
+          "length": 992,
+          "rom_matches": [
+            "0x08417D48",
+            "0x08872FD8"
+          ],
+          "sha256": "e97e746e7cb1f8395536c5a41f720ba600948e19a96ebb310e233b8ac24238aa"
+        },
+        {
+          "index": 10,
+          "length": 800,
+          "rom_matches": [
+            "0x08418128",
+            "0x088733B8"
+          ],
+          "sha256": "01db4ac49bd75419d8e8479d83204fd87413e220aa26e3963193d87fb1cc4bae"
+        }
+      ],
+      "metasprite_matches": [
+        "0x083A5C30"
+      ],
+      "metasprite_sha256": "5bc8ae5df78a0e9d4efdea380b1525fcb0e77e6d02e373181824ad85d0cc0633",
+      "frame_count": 16,
+      "sequences": [
+        {
+          "index": 0,
+          "commands": [
+            {
+              "frameIdx": 0,
+              "duration": 1
+            },
+            {
+              "frameIdx": 1,
+              "duration": 1
+            },
+            {
+              "frameIdx": 2,
+              "duration": 2
+            },
+            {
+              "frameIdx": 3,
+              "duration": 2
+            },
+            {
+              "frameIdx": 4,
+              "duration": 2
+            },
+            {
+              "frameIdx": 5,
+              "duration": 2
+            },
+            {
+              "frameIdx": 6,
+              "duration": 2
+            },
+            {
+              "frameIdx": 4,
+              "duration": 254
+            }
+          ],
+          "rom_payload_matches": [
+            "0x083B64CC"
+          ]
+        },
+        {
+          "index": 1,
+          "commands": [
+            {
+              "frameIdx": 7,
+              "duration": 2
+            },
+            {
+              "frameIdx": 8,
+              "duration": 4
+            },
+            {
+              "frameIdx": 0,
+              "duration": 255
+            }
+          ],
+          "rom_payload_matches": [
+            "0x083B5A24",
+            "0x083B64DC"
+          ]
+        },
+        {
+          "index": 2,
+          "commands": [
+            {
+              "frameIdx": 9,
+              "duration": 2
+            },
+            {
+              "frameIdx": 9,
+              "duration": 4
+            },
+            {
+              "frameIdx": 10,
+              "duration": 2
+            },
+            {
+              "frameIdx": 11,
+              "duration": 2
+            },
+            {
+              "frameIdx": 12,
+              "duration": 2
+            },
+            {
+              "frameIdx": 13,
+              "duration": 2
+            },
+            {
+              "frameIdx": 14,
+              "duration": 2
+            },
+            {
+              "frameIdx": 15,
+              "duration": 2
+            },
+            {
+              "frameIdx": 0,
+              "duration": 255
+            }
+          ],
+          "rom_payload_matches": [
+            "0x083B64E2"
+          ]
+        }
+      ],
+      "preview_order": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "canvas_size": [
+        104,
+        104
+      ],
+      "origin": [
+        73,
+        85
+      ],
+      "limitations": [
+        "Static 1D OBJ assembly; no live OAM/PPU capture.",
+        "Character and blade previews separate; no asserted cross-object timing.",
+        "Duplicate matches are listed, not assumed to be active references."
+      ]
+    }
+  },
+  "target_binding": {
+    "body_motion": "DM025_ZERO_SABER_AIR sequence 0",
+    "weapon_motion": "DM098_SABER_CHARGE sequence 0 / SABER_AIR",
+    "source_branch": "air_saber -> DPAD_DOWN -> air_saber_hold; saberAirSlash maintains weapon collision initialization",
+    "air_source_sha256": "d530b719178e68f24beeca9958cffd1486f26d33c6164bbe910541bde6e9f474",
+    "weapon_source_sha256": "8f346e2be9529a9c3b30fa62727159995278c1f279d1f706b67f91606b60874a",
+    "evidence_level": "pinned source + matching resource bytes, not live gameplay"
+  },
+  "script_sha256": "b168b99b5ce73cdb152229c8a04722de578d4d4e443950a9c28dfcfe5720a2cc",
+  "visual_review": "pending; no Z2 adaptation or ROM write",
+  "supersedes_target_selection": "downslash-extraction-20261110.json describes EX Saber Smash and was the wrong user target; byte-match evidence retained as history",
+  "control_record_correction": "FE/FF excluded from static frame previews; first byte of control record is not a displayed frame index"
+}

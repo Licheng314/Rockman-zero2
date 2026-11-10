@@ -10,6 +10,8 @@
 
 2026-11-10 下一批已推进：下劈素材静态提取成功，角色 9 帧/剑光 18 帧；图块、拼合和帧序列在用户给定美版 OZ ROM 中与日版参考精确匹配。见[机器记录](semantic-data/downslash-extraction-20261110.json)及[提取工具](../research/extract-z3-downslash.py)。预览仅用参考 PNG 配色、没有游戏内时序或实际调色板证明；图片在本地 build/downslash-review-20261110 等待用户审阅，未改素材、未适配/回写 Z2。内置 Python/Pillow 可用，文档检查已实跑。ZCode 的 [S1 评分任务书](ZCODE-HANDOFF.md)已准备、未从本聊天投递；它仅可写专属 build 子目录，不与 Codex 同写正式文件。
 
+2026-11-10 目标纠正：上一条 9/18 帧为误选的 EX Saber Smash，不是用户要求的普通空中斩。正确目标是普通空中攻击后按住下方向，保留向下剑光和攻击判定。现已依据 Z3 air_saber_hold / SABER_AIR→DM098 定位并从给定 ROM 重新提取，见[新记录](semantic-data/normal-air-down-extraction-20261110.json)。旧证据保留但不作为目标成果；正确预览在 build/normal-air-down-review-20261110。FE/FF 控制记录不再当作显示帧，画布自动覆盖资源全部边界；仍待用户审图，无 Z2 回写或运行验证。
+
 ## 既有研究与历史
 
 当前从[开发目标与验收路线](SEMANTIC-ROADMAP.md)接手。阶段 1 和阶段 2 已通过范围内验收。工作区与操作见[CONTINUE](CONTINUE.md)，规则见[AGENTS](../AGENTS.md)。
