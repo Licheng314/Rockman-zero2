@@ -22,3 +22,9 @@ This checkout holds original-ROM research on main, connected to Licheng314/Rockm
 - Never append the existing document to itself. Run `python tools/check_research_docs.py` before closing research work.
 - Current consolidated state is docs/HANDOVER.md and docs/ZCODE-AUDIT.md; retired reports are historical clues, not completion evidence.
 - Follow docs/SEMANTIC-ROADMAP.md for finite research scope. Start with player fundamentals; stage caps are ceilings, not quotas. Do not expand into every boss, stage, script or asset without a concrete authorized need.
+
+## Current goals and autonomous verification (2026-11-10)
+
+- Current scope is only scoring, triangular down-slash graphics, a playable OZ form, and an emulator-based expanded viewport; follow the current docs/SEMANTIC-ROADMAP.md. Older stage checklists are evidence, not automatic work orders.
+- Codex completes reproducible verification and closeout itself. Do not leave a human acceptance queue. Ask the user only for material product choices or genuinely missing input; unresolved claims remain unverified.
+- OZ and expanded-view work include development and runnable deliverables. Keep ROM modifications in their separate checkout and emulator experiments in a separate source/build; preserve the original research core and ROM.

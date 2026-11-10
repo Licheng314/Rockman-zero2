@@ -1,0 +1,39 @@
+{
+  "recorded_date": "2026-11-10",
+  "scope": "file identification only; no ROM execution or modification attribution",
+  "reference": {
+    "file": "Mega Man Zero 3 (USA-oz).gba",
+    "size": 16777216,
+    "sha1": "f1835aaceadebe08bd4d6178947418d3e077a667",
+    "sha256": "dddc56efcab68e18d9d34a7f5b2186e2e07bff1dcb3f9a69ef22372cceccaf34",
+    "title": "MEGAMANZERO3",
+    "game_code": "BZ3E",
+    "revision": 0,
+    "header_checksum_valid": true
+  },
+  "nearby_candidates": [
+    {
+      "file": "RockmanZero3_X_Patch.gba",
+      "title": "ROCKMANZERO3",
+      "game_code": "BZ3J",
+      "revision": 0
+    },
+    {
+      "file": "洛克人Zero3.gba",
+      "title": "MEGAMANZERO3",
+      "game_code": "BZ3P",
+      "revision": 0
+    }
+  ],
+  "rmz3": {
+    "commit": "2a28700e0a74edd9578737c3b3435ced9d074045",
+    "region": "Japan",
+    "upstream": "https://github.com/mmzret/rmz3"
+  },
+  "same_region_unmodified_baseline": "not identified in supplied file directory",
+  "limitations": [
+    "Header identity does not prove source ROM hash or patch provenance.",
+    "Japan-source addresses cannot be copied directly to USA hack.",
+    "No full binary diff, OZ behavior test, or new Z2 implementation performed."
+  ]
+}
