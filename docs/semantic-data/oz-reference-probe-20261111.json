@@ -1,0 +1,105 @@
+{
+  "started_utc": "2026-11-11T03:38:02.281640+00:00",
+  "rom_sha256": "dddc56efcab68e18d9d34a7f5b2186e2e07bff1dcb3f9a69ef22372cceccaf34",
+  "core_sha256": "02747c2a77ea4ed9738c967d101a207a81973233588f68d39f5ab923a1a9599c",
+  "script_sha256": "6caac3d3d36eab777abec72dfea02031c8a9e8d87939fc277f583b8413609b2a",
+  "reference_baseline_missing": true,
+  "player": "0x2037fa0",
+  "callback": "0x080294bd",
+  "trampoline_target": "0x0881434d",
+  "custom_state": "0x20389e0",
+  "ram_fixtures": false,
+  "external_state": false,
+  "boot_frames": 16203,
+  "cases": {
+    "idle": {
+      "frames": 60,
+      "motions": [
+        0
+      ],
+      "custom_actions": [
+        0
+      ],
+      "wrapper_ticks": 60
+    },
+    "buster": {
+      "frames": 60,
+      "motions": [
+        0,
+        8
+      ],
+      "custom_actions": [
+        0
+      ],
+      "wrapper_ticks": 60
+    },
+    "saber": {
+      "frames": 60,
+      "motions": [
+        0,
+        14
+      ],
+      "custom_actions": [
+        0
+      ],
+      "wrapper_ticks": 60
+    },
+    "select": {
+      "frames": 60,
+      "motions": [
+        0
+      ],
+      "custom_actions": [
+        0
+      ],
+      "wrapper_ticks": 60
+    },
+    "select-saber": {
+      "frames": 60,
+      "motions": [
+        0,
+        14
+      ],
+      "custom_actions": [
+        0
+      ],
+      "wrapper_ticks": 60
+    },
+    "up-attack": {
+      "frames": 60,
+      "motions": [
+        0,
+        8
+      ],
+      "custom_actions": [
+        0
+      ],
+      "wrapper_ticks": 60
+    }
+  },
+  "claim": "normal controls and injected wrapper only; OZ activation unproven",
+  "initial": {
+    "kind": 0,
+    "type": 0,
+    "mode": [
+      1,
+      0,
+      0,
+      1
+    ],
+    "callback": "0x80294bd",
+    "motion": 0,
+    "command": 2,
+    "hp": 16,
+    "x": 335872,
+    "y": 442367,
+    "magic": "0x4f5a3136",
+    "custom_action": 0,
+    "custom_substate": 0,
+    "wrapper_tick": 2474
+  },
+  "trace_sha256": "e715c0e15146d709f0bbdbea975cd49219ab168a4525b1dc30282d0fbe7c97b2",
+  "gameplay_sha256": "85c8abc3d81bc3cc5de17faad5f5e6a43ba4fbd371832a868139081bd9a9fe5f",
+  "elapsed_seconds": 10.435,
+  "status": "passed-bounded-smoke-test"
+}

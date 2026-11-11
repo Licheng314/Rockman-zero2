@@ -47,4 +47,4 @@ git diff --check
 
 旧 Python 可执行路径当前不可用，PATH 也未找到 python/py。新动态任务先定位/恢复解释器及既有依赖，再检查原版 ROM/核心指纹；不能沿用昨天结果声称今天已复跑。本次路线更新用 Node 完成文档等价只读检查，未运行游戏样本或修改 ROM。
 
-2026-11-10 后续执行发现内置解释器 `C:\Users\47830\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\python.exe` 可用（3.12.14，含 Pillow），已执行素材提取和原文档检查器。capstone 尚不可导入；旧模拟器样本没有因此自动算作已复跑。使用实际可用的解释器，不再尝试失效系统路径或更改全局环境。
+2026-11-10 后续执行发现内置解释器 `C:\Users\47830\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\python.exe` 可用（3.12.14，含 Pillow），已执行素材提取和原文档检查器。2026-11-11 静态 OZ 调查另将 capstone 5.0.9 安装到忽略的 build/oz-env，仅限该本地目录；普通 Python 仍不全局依赖它。新的 OZ 运行探针不需要 capstone，已从开机实跑；旧模拟器样本没有因此自动算作已复跑。使用实际可用的解释器，不再尝试失效系统路径或更改全局环境。
