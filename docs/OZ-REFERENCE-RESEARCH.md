@@ -1,5 +1,19 @@
 # OZ 参考改版：操作、机制与 Z2 接入依据
 
+## 作者 Z2 作品与下载核查（2026-11-14）
+
+已直接查看 [AssassinXMod 的 YouTube 频道](https://www.youtube.com/@AssassinXMod)及以下作者视频页面，确认存在 **MZZXLC 合集版 Z2 可操作 Omega Zero** 展示，不能将其直接记作独立 GBA ROM 已发布：
+
+- [Z2 Omega Zero Very Early WIP](https://www.youtube.com/watch?v=9yoVyhJ1rdA)。
+- [Z2 OZ 通关 Part 1](https://www.youtube.com/watch?v=W3NsAWr46jQ)。
+- [Z2 OZ 通关 Part 6](https://www.youtube.com/watch?v=dm6qW_BiY2o)，展开简介显示日期2026-10-01。
+
+三个已查简介均指向 [Discord](https://discord.gg/BHZ3fmrHMQ)，说明为“Download for the mod will be released there soon hopefully.”：这是作者在简介中预告发布渠道，不是已获取文件。频道另列 [Discord 入口](https://discord.gg/qha7knyaQN)。本次邀请页未能加载出可读服务器内容；未加入服务器、未联系作者、未下载任何候选文件。
+
+**当前结论：找到作者 Z2 OZ 作品与公开发布线索，尚未找到/验证 Z2 `.gba`、IPS/BPS、源码或运行时脚本下载。** 不据三份简介推断作者从未发布，也不推断该合集 Mod 一定修改 ROM 或一定采用某类内存工具。通用搜索未提供可靠对应下载；相同名称的改色代码、其它作者改版不能替代这一目标。
+
+若取得作者Z2补丁/脚本，先辨认合集运行时修改与独立GBA修改，检查版本和输入/对象结构，再决定复用；它可能减少跨代重建工作，但在文件取得前不宣称已省去移植。现有Z3行为调查仍有效，给定ROM的作者归属仍按用户提供记录，不用频道标题代替文件来源证明。本轮仅查网页和更新资料，无新函数深入或ROM变更。
+
 ## 当前结论：2026-11-14 第二批
 
 **参考 ROM 作者（用户提供）：[AssassinXMod](https://www.youtube.com/@AssassinXMod)。** 用户给出的视频介绍操作表作为线索，以下用本机给定 ROM 实测校正，不把转述当已验证规范。本批未修改 Z2 或 Z3 ROM。
