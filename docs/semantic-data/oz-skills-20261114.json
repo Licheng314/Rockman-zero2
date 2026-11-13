@@ -1,0 +1,1372 @@
+{
+  "started_utc": "2026-11-13T17:21:44.616495+00:00",
+  "script_sha256": "2576254100c7b340c639b64d9b63a464260b8f5440c802e126aace67e7de89e5",
+  "rom_sha256": "dddc56efcab68e18d9d34a7f5b2186e2e07bff1dcb3f9a69ef22372cceccaf34",
+  "core_sha256": "02747c2a77ea4ed9738c967d101a207a81973233588f68d39f5ab923a1a9599c",
+  "user_supplied_author": "https://www.youtube.com/@AssassinXMod",
+  "boot_updates": 16203,
+  "user_save_loaded": false,
+  "old_state_loaded": false,
+  "frame_origin": "0 = after first retro_run of each restored-baseline case",
+  "limitations": [
+    "No enemy damage test",
+    "No interrupt/death test",
+    "Configuration/weapon swaps are RAM fixtures, not menu workflows",
+    "No full instruction trace; static call sites plus sampled runtime objects"
+  ],
+  "cases": {
+    "idle": {
+      "fixture": null,
+      "actions": [
+        0
+      ],
+      "active_interval": null,
+      "motions": [
+        0
+      ],
+      "tracked_types": [],
+      "peak_projectiles": 0,
+      "spawn_groups": {},
+      "observed_templates": {},
+      "final_action": 0,
+      "final_tracked": 0,
+      "screenshot_sha256": {
+        "6": "10112e9d535defa48dbf582eed03be2467a8d5db618810dbf8110e2cbf8dc627",
+        "12": "b1a7799570cc779b976e350ce7b59264e12e4361c327c8e919c7370ea7d811f5",
+        "24": "c248e341ec1310990528588180d8600dd68315f343d9b295bf069fedaef92350",
+        "30": "96789a5e8969695a37c20a6b1a8556c640b83eee5caa85d0191598c1c1fdd7ed",
+        "60": "a046fa9222e24ce2994c6bc7ca9df4303c4527daeae76f87fc81c8463ebb0975",
+        "195": "5510e543a5f03f1089a477fa6a5dd90f2380e5c6ceba8be1bdb4013adb3fe43b"
+      }
+    },
+    "select-L": {
+      "fixture": null,
+      "actions": [
+        0,
+        4
+      ],
+      "active_interval": [
+        0,
+        83
+      ],
+      "motions": [
+        0
+      ],
+      "tracked_types": [
+        [
+          5,
+          64
+        ]
+      ],
+      "peak_projectiles": 0,
+      "spawn_groups": {
+        "5/64/work0=0": {
+          "count": 1,
+          "first_t": 24,
+          "links28": [
+            "0x2038a2c"
+          ]
+        }
+      },
+      "observed_templates": {},
+      "final_action": 0,
+      "final_tracked": 1,
+      "screenshot_sha256": {
+        "6": "d4b0c06cf4c92b735221806205b701d6ca9fe6a043e563c50a601e04098c9f22",
+        "12": "d51b29b0d0f15ebb0be3274f6bb0edd6b3651d817f90581995db93c6304b7af5",
+        "24": "b4895fb471c4ada1c2e4855fd3c7ecd3d10dc9a0762b27d105d707cb4c2ec509",
+        "30": "f59263b8e24031f40909cd68eda603e31eefe83aa2d80ba80325a56cf6b3bd61",
+        "60": "9c7a88efa30ccdab14bc09d5bf0fd0238a96aa3cf0b8cd3a6a50b683d79a8fbd",
+        "195": "a4ef1c268313878dfa609d4d6c21cf1aa6389f4e0cbbd08a07f8110ce7d27df4"
+      }
+    },
+    "down-R": {
+      "fixture": null,
+      "actions": [
+        0,
+        2
+      ],
+      "active_interval": [
+        0,
+        101
+      ],
+      "motions": [
+        0
+      ],
+      "tracked_types": [
+        [
+          4,
+          38
+        ],
+        [
+          5,
+          64
+        ]
+      ],
+      "peak_projectiles": 5,
+      "spawn_groups": {
+        "5/64/work0=3": {
+          "count": 1,
+          "first_t": 0,
+          "links28": [
+            "0x2038a2c"
+          ]
+        },
+        "4/38/work0=3": {
+          "count": 5,
+          "first_t": 17,
+          "links28": [
+            "0x2038a2c"
+          ]
+        }
+      },
+      "observed_templates": {
+        "0x887a4f8": {
+          "kind": 1,
+          "faction": 0,
+          "damage": 0,
+          "remaining": 0,
+          "layer": 0
+        },
+        "0x887a498": {
+          "kind": 0,
+          "faction": 0,
+          "damage": 5,
+          "remaining": 0,
+          "layer": 1
+        }
+      },
+      "final_action": 0,
+      "final_tracked": 0,
+      "screenshot_sha256": {
+        "6": "586502eaadc945500376381f7646a2e564cfa7cf19120162f77ad027f1c28267",
+        "12": "2d602009bf06849c2c0098ad96b741fc4ef5ec6b5761e236d10c512e6c45072f",
+        "24": "bd17f3b005e4bd54bb9b7bfc4b75ce6fbf5f97f192baa77973cbf47be7c4cc3b",
+        "30": "6aa225f043c0e88b7a2179f52255e350b9d09e3cce5c75ca02433f36b41220f7",
+        "60": "cb651ff7ba5b69972a2f35a81bb4ee8bbf637f130405bb447c9181b755cc8971",
+        "195": "5510e543a5f03f1089a477fa6a5dd90f2380e5c6ceba8be1bdb4013adb3fe43b"
+      }
+    },
+    "up-R": {
+      "fixture": null,
+      "actions": [
+        0,
+        1
+      ],
+      "active_interval": [
+        0,
+        41
+      ],
+      "motions": [
+        0
+      ],
+      "tracked_types": [
+        [
+          4,
+          38
+        ],
+        [
+          5,
+          64
+        ]
+      ],
+      "peak_projectiles": 5,
+      "spawn_groups": {
+        "5/64/work0=1": {
+          "count": 1,
+          "first_t": 0,
+          "links28": [
+            "0x2038a2c"
+          ]
+        },
+        "4/38/work0=1": {
+          "count": 5,
+          "first_t": 17,
+          "links28": [
+            "0x2038a2c"
+          ]
+        }
+      },
+      "observed_templates": {
+        "0x887a480": {
+          "kind": 0,
+          "faction": 0,
+          "damage": 3,
+          "remaining": 0,
+          "layer": 1
+        }
+      },
+      "final_action": 0,
+      "final_tracked": 0,
+      "screenshot_sha256": {
+        "6": "32cf5036149940a5e64ef0e838d16b29b446c88dc7b9652fbbdfef2014e13c83",
+        "12": "330625cbbdf30dbfaaa6a8a0ce0c7ac28578708869e060ad21095858d73681c3",
+        "24": "66aad3156f52f0bab6d38062381f6a9552b77675d2852f889cc9b1ff4600bcf7",
+        "30": "28470fb1ae5b013ca479e5b5db288df2814cc926f1134e2cf7df7c6c82d580f5",
+        "60": "c3621b3da8e586b9c8c52465d100d70830f81700c59749de7c2541cc627cd657",
+        "195": "5510e543a5f03f1089a477fa6a5dd90f2380e5c6ceba8be1bdb4013adb3fe43b"
+      }
+    },
+    "down-B": {
+      "fixture": null,
+      "actions": [
+        0
+      ],
+      "active_interval": null,
+      "motions": [
+        0,
+        8
+      ],
+      "tracked_types": [
+        [
+          4,
+          38
+        ]
+      ],
+      "peak_projectiles": 1,
+      "spawn_groups": {
+        "4/38/work0=4": {
+          "count": 1,
+          "first_t": 0,
+          "links28": [
+            "0x2037fa0"
+          ]
+        }
+      },
+      "observed_templates": {
+        "0x887a4b0": {
+          "kind": 0,
+          "faction": 0,
+          "damage": 3,
+          "remaining": 0,
+          "layer": 1
+        }
+      },
+      "final_action": 0,
+      "final_tracked": 0,
+      "screenshot_sha256": {
+        "6": "8aea8b13e52a798e31e6a7258560f929d5581d9e53a26676b0c2a313e04c75a7",
+        "12": "cdae47c9d9e3b5405660a9b6e9b2d816924218b0c03e161625a354244acd536b",
+        "24": "ecfb389e3521f3a1d351ba0216aa900cd497c255330739963c93db41632291cc",
+        "30": "4e51546f4f3442bb5904b8801d8acf517c9a454405c9e429f261ee07086bdb9d",
+        "60": "a046fa9222e24ce2994c6bc7ca9df4303c4527daeae76f87fc81c8463ebb0975",
+        "195": "5510e543a5f03f1089a477fa6a5dd90f2380e5c6ceba8be1bdb4013adb3fe43b"
+      }
+    },
+    "select-B": {
+      "fixture": null,
+      "actions": [
+        0,
+        5
+      ],
+      "active_interval": [
+        0,
+        85
+      ],
+      "motions": [
+        0
+      ],
+      "tracked_types": [
+        [
+          4,
+          38
+        ],
+        [
+          5,
+          64
+        ]
+      ],
+      "peak_projectiles": 4,
+      "spawn_groups": {
+        "4/38/work0=4": {
+          "count": 1,
+          "first_t": 4,
+          "links28": [
+            "0x2038a2c"
+          ]
+        },
+        "4/38/work0=5": {
+          "count": 1,
+          "first_t": 24,
+          "links28": [
+            "0x2038a2c"
+          ]
+        },
+        "5/64/work0=6": {
+          "count": 3,
+          "first_t": 27,
+          "links28": [
+            "0x0"
+          ]
+        },
+        "4/38/work0=0": {
+          "count": 1,
+          "first_t": 65,
+          "links28": [
+            "0x2038a2c"
+          ]
+        },
+        "4/38/work0=6": {
+          "count": 1,
+          "first_t": 70,
+          "links28": [
+            "0x2038a2c"
+          ]
+        }
+      },
+      "observed_templates": {
+        "0x887a4b0": {
+          "kind": 0,
+          "faction": 0,
+          "damage": 3,
+          "remaining": 0,
+          "layer": 1
+        },
+        "0x887a4c8": {
+          "kind": 0,
+          "faction": 0,
+          "damage": 3,
+          "remaining": 0,
+          "layer": 1
+        },
+        "0x887b128": {
+          "kind": 0,
+          "faction": 0,
+          "damage": 4,
+          "remaining": 0,
+          "layer": 32
+        },
+        "0x887b140": {
+          "kind": 0,
+          "faction": 0,
+          "damage": 4,
+          "remaining": 1,
+          "layer": 32
+        },
+        "0x887a4e0": {
+          "kind": 0,
+          "faction": 0,
+          "damage": 3,
+          "remaining": 0,
+          "layer": 1
+        },
+        "0x887b158": {
+          "kind": 0,
+          "faction": 0,
+          "damage": 4,
+          "remaining": 0,
+          "layer": 32
+        },
+        "0x887b170": {
+          "kind": 0,
+          "faction": 0,
+          "damage": 4,
+          "remaining": 0,
+          "layer": 32
+        },
+        "0x887a4f8": {
+          "kind": 1,
+          "faction": 0,
+          "damage": 0,
+          "remaining": 0,
+          "layer": 0
+        }
+      },
+      "final_action": 0,
+      "final_tracked": 0,
+      "screenshot_sha256": {
+        "6": "cb81797707ba9aae32288ba8a36f098db238ce0d3f6a886f36b7a5442cdf0713",
+        "12": "1b68faf00a36f5ba25b53b1355528aac8e0edf5548a4f496104b33636c29d1b9",
+        "24": "534901333730475dbac85bc89af72681a295d6e6664f057fe2ffe8f3575d7a7d",
+        "30": "02f831e215d63f8210b6c58e65636a8f84be28c1843e91532fb81945c932d0b6",
+        "60": "f342b7733424865069062e6a5593f523c8b5a63020c6b4ff1aa732cd0f408da3",
+        "195": "5510e543a5f03f1089a477fa6a5dd90f2380e5c6ceba8be1bdb4013adb3fe43b"
+      }
+    },
+    "up-L-B": {
+      "fixture": null,
+      "actions": [
+        0
+      ],
+      "active_interval": null,
+      "motions": [
+        0,
+        8,
+        10
+      ],
+      "tracked_types": [
+        [
+          4,
+          38
+        ]
+      ],
+      "peak_projectiles": 1,
+      "spawn_groups": {
+        "4/38/work0=4": {
+          "count": 1,
+          "first_t": 0,
+          "links28": [
+            "0x2037fa0"
+          ]
+        }
+      },
+      "observed_templates": {
+        "0x887a4b0": {
+          "kind": 0,
+          "faction": 0,
+          "damage": 3,
+          "remaining": 0,
+          "layer": 1
+        }
+      },
+      "final_action": 0,
+      "final_tracked": 0,
+      "screenshot_sha256": {
+        "6": "9ae9f1b3ebfa55fa1d409d7e5dab3e39e11ce00a746d7c662a4e656d263031a9",
+        "12": "27a09021a48b2bea0b5b43b8d430fbb846f7808cc93782a4ea6c763e15840a50",
+        "24": "87056ced5fac4e0c57a5b40807d83b347cf3a15d7c6baba831996da200e0decb",
+        "30": "bf1d75956579cbfd03913d84fafcce2600425193d97ce7e919c49507bd105bd0",
+        "60": "5188c909b6bcd49770208380b6a13cf7610650748531b6d6084693e224dc52a1",
+        "195": "4b2b5e30357b09402775f39dfe27d623ca35ffdba5770261fe9620b02e119289"
+      }
+    },
+    "select-R": {
+      "fixture": null,
+      "actions": [
+        0,
+        6
+      ],
+      "active_interval": [
+        0,
+        32
+      ],
+      "motions": [
+        0
+      ],
+      "tracked_types": [
+        [
+          4,
+          38
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "peak_projectiles": 1,
+      "spawn_groups": {
+        "4/38/work0=0": {
+          "count": 1,
+          "first_t": 0,
+          "links28": [
+            "0x0"
+          ]
+        },
+        "5/6/work0=0": {
+          "count": 1,
+          "first_t": 0,
+          "links28": [
+            "0x2038a2c"
+          ]
+        },
+        "5/6/work0=1": {
+          "count": 1,
+          "first_t": 0,
+          "links28": [
+            "0x30079cc"
+          ]
+        },
+        "5/6/work0=2": {
+          "count": 1,
+          "first_t": 0,
+          "links28": [
+            "0x3007948"
+          ]
+        }
+      },
+      "observed_templates": {
+        "0x881615c": {
+          "kind": 0,
+          "faction": 0,
+          "damage": 255,
+          "remaining": 0,
+          "layer": 1
+        }
+      },
+      "final_action": 0,
+      "final_tracked": 0,
+      "screenshot_sha256": {
+        "6": "2a7b8eef3b24edc41f02c423d21c66a6d05b5d5b45bd981d596ae2df26b2a317",
+        "12": "d969bf5fe2933183e07a2991ed8a3f1b4846df7975bbaa0fe217f897471a157b",
+        "24": "010a6d5cdf00a8b50fe1baba142707e02703b1b8b9411bbebe2200ec1db6effa",
+        "30": "3abd7c54672f8912e635ac965ada8a7b3cb3d30d214224f265e8ebe3d43356e6",
+        "60": "4f599f37dcbd6213a63d3bb104f5c4a365a78e06e9ba50888677b0a012220d65",
+        "195": "908763a930bd558c8929e528367bf34ffde384f192ae34a67b0622812af02411"
+      }
+    },
+    "down-R-B": {
+      "fixture": null,
+      "actions": [
+        0,
+        2
+      ],
+      "active_interval": [
+        0,
+        101
+      ],
+      "motions": [
+        0
+      ],
+      "tracked_types": [
+        [
+          4,
+          38
+        ],
+        [
+          5,
+          64
+        ]
+      ],
+      "peak_projectiles": 5,
+      "spawn_groups": {
+        "5/64/work0=3": {
+          "count": 1,
+          "first_t": 0,
+          "links28": [
+            "0x2038a2c"
+          ]
+        },
+        "4/38/work0=3": {
+          "count": 5,
+          "first_t": 17,
+          "links28": [
+            "0x2038a2c"
+          ]
+        }
+      },
+      "observed_templates": {
+        "0x887a4f8": {
+          "kind": 1,
+          "faction": 0,
+          "damage": 0,
+          "remaining": 0,
+          "layer": 0
+        },
+        "0x887a498": {
+          "kind": 0,
+          "faction": 0,
+          "damage": 5,
+          "remaining": 0,
+          "layer": 1
+        }
+      },
+      "final_action": 0,
+      "final_tracked": 0,
+      "screenshot_sha256": {
+        "6": "586502eaadc945500376381f7646a2e564cfa7cf19120162f77ad027f1c28267",
+        "12": "2d602009bf06849c2c0098ad96b741fc4ef5ec6b5761e236d10c512e6c45072f",
+        "24": "bd17f3b005e4bd54bb9b7bfc4b75ce6fbf5f97f192baa77973cbf47be7c4cc3b",
+        "30": "6aa225f043c0e88b7a2179f52255e350b9d09e3cce5c75ca02433f36b41220f7",
+        "60": "cb651ff7ba5b69972a2f35a81bb4ee8bbf637f130405bb447c9181b755cc8971",
+        "195": "5510e543a5f03f1089a477fa6a5dd90f2380e5c6ceba8be1bdb4013adb3fe43b"
+      }
+    },
+    "up-R-B": {
+      "fixture": null,
+      "actions": [
+        0,
+        1
+      ],
+      "active_interval": [
+        0,
+        41
+      ],
+      "motions": [
+        0
+      ],
+      "tracked_types": [
+        [
+          4,
+          38
+        ],
+        [
+          5,
+          64
+        ]
+      ],
+      "peak_projectiles": 5,
+      "spawn_groups": {
+        "5/64/work0=1": {
+          "count": 1,
+          "first_t": 0,
+          "links28": [
+            "0x2038a2c"
+          ]
+        },
+        "4/38/work0=1": {
+          "count": 5,
+          "first_t": 17,
+          "links28": [
+            "0x2038a2c"
+          ]
+        }
+      },
+      "observed_templates": {
+        "0x887a480": {
+          "kind": 0,
+          "faction": 0,
+          "damage": 3,
+          "remaining": 0,
+          "layer": 1
+        }
+      },
+      "final_action": 0,
+      "final_tracked": 0,
+      "screenshot_sha256": {
+        "6": "32cf5036149940a5e64ef0e838d16b29b446c88dc7b9652fbbdfef2014e13c83",
+        "12": "330625cbbdf30dbfaaa6a8a0ce0c7ac28578708869e060ad21095858d73681c3",
+        "24": "66aad3156f52f0bab6d38062381f6a9552b77675d2852f889cc9b1ff4600bcf7",
+        "30": "28470fb1ae5b013ca479e5b5db288df2814cc926f1134e2cf7df7c6c82d580f5",
+        "60": "c3621b3da8e586b9c8c52465d100d70830f81700c59749de7c2541cc627cd657",
+        "195": "5510e543a5f03f1089a477fa6a5dd90f2380e5c6ceba8be1bdb4013adb3fe43b"
+      }
+    },
+    "select-R-B": {
+      "fixture": null,
+      "actions": [
+        0,
+        5
+      ],
+      "active_interval": [
+        0,
+        85
+      ],
+      "motions": [
+        0
+      ],
+      "tracked_types": [
+        [
+          4,
+          38
+        ],
+        [
+          5,
+          64
+        ]
+      ],
+      "peak_projectiles": 4,
+      "spawn_groups": {
+        "4/38/work0=4": {
+          "count": 1,
+          "first_t": 4,
+          "links28": [
+            "0x2038a2c"
+          ]
+        },
+        "4/38/work0=5": {
+          "count": 1,
+          "first_t": 24,
+          "links28": [
+            "0x2038a2c"
+          ]
+        },
+        "5/64/work0=6": {
+          "count": 3,
+          "first_t": 27,
+          "links28": [
+            "0x0"
+          ]
+        },
+        "4/38/work0=0": {
+          "count": 1,
+          "first_t": 65,
+          "links28": [
+            "0x2038a2c"
+          ]
+        },
+        "4/38/work0=6": {
+          "count": 1,
+          "first_t": 70,
+          "links28": [
+            "0x2038a2c"
+          ]
+        }
+      },
+      "observed_templates": {
+        "0x887a4b0": {
+          "kind": 0,
+          "faction": 0,
+          "damage": 3,
+          "remaining": 0,
+          "layer": 1
+        },
+        "0x887a4c8": {
+          "kind": 0,
+          "faction": 0,
+          "damage": 3,
+          "remaining": 0,
+          "layer": 1
+        },
+        "0x887b128": {
+          "kind": 0,
+          "faction": 0,
+          "damage": 4,
+          "remaining": 0,
+          "layer": 32
+        },
+        "0x887b140": {
+          "kind": 0,
+          "faction": 0,
+          "damage": 4,
+          "remaining": 1,
+          "layer": 32
+        },
+        "0x887a4e0": {
+          "kind": 0,
+          "faction": 0,
+          "damage": 3,
+          "remaining": 0,
+          "layer": 1
+        },
+        "0x887b158": {
+          "kind": 0,
+          "faction": 0,
+          "damage": 4,
+          "remaining": 0,
+          "layer": 32
+        },
+        "0x887b170": {
+          "kind": 0,
+          "faction": 0,
+          "damage": 4,
+          "remaining": 0,
+          "layer": 32
+        },
+        "0x887a4f8": {
+          "kind": 1,
+          "faction": 0,
+          "damage": 0,
+          "remaining": 0,
+          "layer": 0
+        }
+      },
+      "final_action": 0,
+      "final_tracked": 0,
+      "screenshot_sha256": {
+        "6": "cb81797707ba9aae32288ba8a36f098db238ce0d3f6a886f36b7a5442cdf0713",
+        "12": "1b68faf00a36f5ba25b53b1355528aac8e0edf5548a4f496104b33636c29d1b9",
+        "24": "534901333730475dbac85bc89af72681a295d6e6664f057fe2ffe8f3575d7a7d",
+        "30": "02f831e215d63f8210b6c58e65636a8f84be28c1843e91532fb81945c932d0b6",
+        "60": "f342b7733424865069062e6a5593f523c8b5a63020c6b4ff1aa732cd0f408da3",
+        "195": "5510e543a5f03f1089a477fa6a5dd90f2380e5c6ceba8be1bdb4013adb3fe43b"
+      }
+    },
+    "up-L-R-B": {
+      "fixture": null,
+      "actions": [
+        0
+      ],
+      "active_interval": null,
+      "motions": [
+        0,
+        4,
+        18
+      ],
+      "tracked_types": [],
+      "peak_projectiles": 0,
+      "spawn_groups": {},
+      "observed_templates": {},
+      "final_action": 0,
+      "final_tracked": 0,
+      "screenshot_sha256": {
+        "6": "9fd8e9a33422da9fa2d5025bb84ed27c5a21425555caeed386b86a004e236e35",
+        "12": "1720bfecd2bd4b5827fed76d7cb7de12a6b0f6a75616e23d513cab4e196c5713",
+        "24": "5f8fc301839bdfe3bbd4b0206d8a27775a962151dcbccb66bc3122451511572d",
+        "30": "e47400d644492558ae1a4c60e060a7e12535c79560dc5c9c03195045b359a1a5",
+        "60": "54ef3135982ee64a3b354a0a9890cf716bc8118c38cdb028e403b8727f29722f",
+        "195": "e63cfb6ac009683b331876b9f6bdf1b891c4f61d5fc8a395674b3f6b45371f49"
+      }
+    },
+    "R-held-down-B": {
+      "fixture": null,
+      "actions": [
+        0
+      ],
+      "active_interval": null,
+      "motions": [
+        0,
+        14
+      ],
+      "tracked_types": [],
+      "peak_projectiles": 0,
+      "spawn_groups": {},
+      "observed_templates": {},
+      "final_action": 0,
+      "final_tracked": 0,
+      "screenshot_sha256": {
+        "6": "10112e9d535defa48dbf582eed03be2467a8d5db618810dbf8110e2cbf8dc627",
+        "12": "eacec6305f6c6236948de45cd771ccc278834be39afb9db2e3ffdbf7d820dbde",
+        "24": "424f6b15a9eead69c53e4679d2925ce943b49bc3677d7518331b478d579ebc45",
+        "30": "ed5b5e1681d1703bdbc5929429be6f2ddd9a6fb04461849757ca4c0fa3b13e22",
+        "60": "a046fa9222e24ce2994c6bc7ca9df4303c4527daeae76f87fc81c8463ebb0975",
+        "195": "5510e543a5f03f1089a477fa6a5dd90f2380e5c6ceba8be1bdb4013adb3fe43b"
+      }
+    },
+    "air-R-held-up-B": {
+      "fixture": null,
+      "actions": [
+        0
+      ],
+      "active_interval": null,
+      "motions": [
+        0,
+        4,
+        25,
+        26
+      ],
+      "tracked_types": [
+        [
+          1,
+          1
+        ],
+        [
+          4,
+          38
+        ]
+      ],
+      "peak_projectiles": 7,
+      "spawn_groups": {
+        "1/1/work0=20": {
+          "count": 1,
+          "first_t": 10,
+          "links28": [
+            "0x0"
+          ]
+        },
+        "4/38/work0=2": {
+          "count": 7,
+          "first_t": 10,
+          "links28": [
+            "0x2037fa0"
+          ]
+        }
+      },
+      "observed_templates": {
+        "0x887a438": {
+          "kind": 0,
+          "faction": 0,
+          "damage": 3,
+          "remaining": 0,
+          "layer": 1
+        }
+      },
+      "final_action": 0,
+      "final_tracked": 0,
+      "screenshot_sha256": {
+        "6": "473f8e6b2408df755131ff6af46c1e634a5ed007a7deb41b3d75a202184378ec",
+        "12": "c2fa3d1d5a48b196a04f5211634ed24f22fd550b1c9e363d88e5d5d38e581dc8",
+        "24": "7f880d63e1424e298bb79f4c97075e4897e76cced98e09ce6ca8438cec9a8783",
+        "30": "f14bc4d9628bc2f440655fb51a73eca47aabdca3345e90f7e0b6258d7b051699",
+        "60": "5471d55c59a945d576bfd1455a1fcf2dfd46da437831799ffa98b0a0e0dee75f",
+        "195": "5510e543a5f03f1089a477fa6a5dd90f2380e5c6ceba8be1bdb4013adb3fe43b"
+      }
+    },
+    "R-B-charge": {
+      "fixture": null,
+      "actions": [
+        0
+      ],
+      "active_interval": null,
+      "motions": [
+        0,
+        8,
+        14
+      ],
+      "tracked_types": [
+        [
+          4,
+          38
+        ],
+        [
+          5,
+          64
+        ]
+      ],
+      "peak_projectiles": 1,
+      "spawn_groups": {
+        "4/38/work0=5": {
+          "count": 1,
+          "first_t": 180,
+          "links28": [
+            "0x2037fa0"
+          ]
+        },
+        "5/64/work0=6": {
+          "count": 3,
+          "first_t": 183,
+          "links28": [
+            "0x0"
+          ]
+        }
+      },
+      "observed_templates": {
+        "0x887a4c8": {
+          "kind": 0,
+          "faction": 0,
+          "damage": 3,
+          "remaining": 0,
+          "layer": 1
+        }
+      },
+      "final_action": 0,
+      "final_tracked": 0,
+      "screenshot_sha256": {
+        "6": "4d0c234be6ec8f649f69acc07c7198f09dd31cbdf1cff48b8af61fe8bac2365d",
+        "12": "c7c1d8c894fb6d63a2945fb9593c0d6fcad8b86164ced70e1c9634d992cbcc05",
+        "24": "1ebebd3494048f4d218dcf355a4594a536dcad33e07137b4fb4faa21512a5835",
+        "30": "4e51546f4f3442bb5904b8801d8acf517c9a454405c9e429f261ee07086bdb9d",
+        "60": "f02998242a0d6e750e0d62371c625ee2b1dda58ce24e78797ad8a5cc333370e1",
+        "195": "00c2f45552b9479371d2342c203e5d20ff41ad7347ad751671e9af49926e4d90"
+      }
+    },
+    "rebind-down-R": {
+      "fixture": "swap-LR-mapping",
+      "actions": [
+        0,
+        2
+      ],
+      "active_interval": [
+        0,
+        101
+      ],
+      "motions": [
+        0
+      ],
+      "tracked_types": [
+        [
+          4,
+          38
+        ],
+        [
+          5,
+          64
+        ]
+      ],
+      "peak_projectiles": 5,
+      "spawn_groups": {
+        "5/64/work0=3": {
+          "count": 1,
+          "first_t": 0,
+          "links28": [
+            "0x2038a2c"
+          ]
+        },
+        "4/38/work0=3": {
+          "count": 5,
+          "first_t": 17,
+          "links28": [
+            "0x2038a2c"
+          ]
+        }
+      },
+      "observed_templates": {
+        "0x887a4f8": {
+          "kind": 1,
+          "faction": 0,
+          "damage": 0,
+          "remaining": 0,
+          "layer": 0
+        },
+        "0x887a498": {
+          "kind": 0,
+          "faction": 0,
+          "damage": 5,
+          "remaining": 0,
+          "layer": 1
+        }
+      },
+      "final_action": 0,
+      "final_tracked": 0,
+      "screenshot_sha256": {
+        "6": "586502eaadc945500376381f7646a2e564cfa7cf19120162f77ad027f1c28267",
+        "12": "2d602009bf06849c2c0098ad96b741fc4ef5ec6b5761e236d10c512e6c45072f",
+        "24": "bd17f3b005e4bd54bb9b7bfc4b75ce6fbf5f97f192baa77973cbf47be7c4cc3b",
+        "30": "6aa225f043c0e88b7a2179f52255e350b9d09e3cce5c75ca02433f36b41220f7",
+        "60": "cb651ff7ba5b69972a2f35a81bb4ee8bbf637f130405bb447c9181b755cc8971",
+        "195": "5510e543a5f03f1089a477fa6a5dd90f2380e5c6ceba8be1bdb4013adb3fe43b"
+      }
+    },
+    "rebind-down-L": {
+      "fixture": "swap-LR-mapping",
+      "actions": [
+        0
+      ],
+      "active_interval": null,
+      "motions": [
+        0
+      ],
+      "tracked_types": [],
+      "peak_projectiles": 0,
+      "spawn_groups": {},
+      "observed_templates": {},
+      "final_action": 0,
+      "final_tracked": 0,
+      "screenshot_sha256": {
+        "6": "10112e9d535defa48dbf582eed03be2467a8d5db618810dbf8110e2cbf8dc627",
+        "12": "b1a7799570cc779b976e350ce7b59264e12e4361c327c8e919c7370ea7d811f5",
+        "24": "c248e341ec1310990528588180d8600dd68315f343d9b295bf069fedaef92350",
+        "30": "96789a5e8969695a37c20a6b1a8556c640b83eee5caa85d0191598c1c1fdd7ed",
+        "60": "a046fa9222e24ce2994c6bc7ca9df4303c4527daeae76f87fc81c8463ebb0975",
+        "195": "5510e543a5f03f1089a477fa6a5dd90f2380e5c6ceba8be1bdb4013adb3fe43b"
+      }
+    },
+    "rebind-select-R": {
+      "fixture": "swap-LR-mapping",
+      "actions": [
+        0,
+        6
+      ],
+      "active_interval": [
+        0,
+        32
+      ],
+      "motions": [
+        0
+      ],
+      "tracked_types": [
+        [
+          4,
+          38
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "peak_projectiles": 1,
+      "spawn_groups": {
+        "4/38/work0=0": {
+          "count": 1,
+          "first_t": 0,
+          "links28": [
+            "0x0"
+          ]
+        },
+        "5/6/work0=0": {
+          "count": 1,
+          "first_t": 0,
+          "links28": [
+            "0x2038a2c"
+          ]
+        },
+        "5/6/work0=1": {
+          "count": 1,
+          "first_t": 0,
+          "links28": [
+            "0x30079cc"
+          ]
+        },
+        "5/6/work0=2": {
+          "count": 1,
+          "first_t": 0,
+          "links28": [
+            "0x3007948"
+          ]
+        }
+      },
+      "observed_templates": {
+        "0x881615c": {
+          "kind": 0,
+          "faction": 0,
+          "damage": 255,
+          "remaining": 0,
+          "layer": 1
+        }
+      },
+      "final_action": 0,
+      "final_tracked": 0,
+      "screenshot_sha256": {
+        "6": "2a7b8eef3b24edc41f02c423d21c66a6d05b5d5b45bd981d596ae2df26b2a317",
+        "12": "d969bf5fe2933183e07a2991ed8a3f1b4846df7975bbaa0fe217f897471a157b",
+        "24": "010a6d5cdf00a8b50fe1baba142707e02703b1b8b9411bbebe2200ec1db6effa",
+        "30": "3abd7c54672f8912e635ac965ada8a7b3cb3d30d214224f265e8ebe3d43356e6",
+        "60": "4f599f37dcbd6213a63d3bb104f5c4a365a78e06e9ba50888677b0a012220d65",
+        "195": "908763a930bd558c8929e528367bf34ffde384f192ae34a67b0622812af02411"
+      }
+    },
+    "rebind-select-L": {
+      "fixture": "swap-LR-mapping",
+      "actions": [
+        0,
+        4
+      ],
+      "active_interval": [
+        0,
+        83
+      ],
+      "motions": [
+        0
+      ],
+      "tracked_types": [
+        [
+          5,
+          64
+        ]
+      ],
+      "peak_projectiles": 0,
+      "spawn_groups": {
+        "5/64/work0=0": {
+          "count": 1,
+          "first_t": 24,
+          "links28": [
+            "0x2038a2c"
+          ]
+        }
+      },
+      "observed_templates": {},
+      "final_action": 0,
+      "final_tracked": 1,
+      "screenshot_sha256": {
+        "6": "d4b0c06cf4c92b735221806205b701d6ca9fe6a043e563c50a601e04098c9f22",
+        "12": "d51b29b0d0f15ebb0be3274f6bb0edd6b3651d817f90581995db93c6304b7af5",
+        "24": "b4895fb471c4ada1c2e4855fd3c7ecd3d10dc9a0762b27d105d707cb4c2ec509",
+        "30": "f59263b8e24031f40909cd68eda603e31eefe83aa2d80ba80325a56cf6b3bd61",
+        "60": "9c7a88efa30ccdab14bc09d5bf0fd0238a96aa3cf0b8cd3a6a50b683d79a8fbd",
+        "195": "a4ef1c268313878dfa609d4d6c21cf1aa6389f4e0cbbd08a07f8110ce7d27df4"
+      }
+    },
+    "saber-main-down-B": {
+      "fixture": "saber-primary",
+      "actions": [
+        0
+      ],
+      "active_interval": null,
+      "motions": [
+        0,
+        14
+      ],
+      "tracked_types": [],
+      "peak_projectiles": 0,
+      "spawn_groups": {},
+      "observed_templates": {},
+      "final_action": 0,
+      "final_tracked": 0,
+      "screenshot_sha256": {
+        "6": "fc887beb3d3194555b39e2e8db902a8dce5b3edf27778038cb10e0e3beb878a1",
+        "12": "41c06da72e9e0dc6437484a5fc833224bfb762b9740f63af1a354a3172de64bf",
+        "24": "dafe41cd32a2cc20d39d647c79061368321eb6dea0aba7a5551aa69e30546380",
+        "30": "870134d9e8899f5c42687098a22093c2f2a61f3248f2f1da06874e201a82790f",
+        "60": "f9f8d2fbef4ddc27af331f6e0028273a2d51623984fbdcad31f6f428f26426f8",
+        "195": "9d17e0d5d041d0742ff73c92acce5d716d172bfb5e102db7b86860c5fa22bd19"
+      }
+    },
+    "saber-main-up-L-B": {
+      "fixture": "saber-primary",
+      "actions": [
+        0
+      ],
+      "active_interval": null,
+      "motions": [
+        0,
+        4,
+        18
+      ],
+      "tracked_types": [],
+      "peak_projectiles": 0,
+      "spawn_groups": {},
+      "observed_templates": {},
+      "final_action": 0,
+      "final_tracked": 0,
+      "screenshot_sha256": {
+        "6": "fb93b008f70977b5c492f8d100cf6ceaca929017ef8f5a4911da52a6e03a33eb",
+        "12": "6df72ee2ec18295924655fcdf3c9c2f9ca30cf7cc2925fc0bee333d5334224d0",
+        "24": "319fbda1772f46925e752860d3dde08662e6b079f7a0f37e26ddeece62749ecf",
+        "30": "67d6f09e111ca947a0b49e6ca3f8404fd9725b4b146cd58dd5a5e239cc4500bd",
+        "60": "9b7f444c3a92985119b1c57feb94faf85198285304bd6f02a7bde132c244293c",
+        "195": "231ce6e8adcf33911293d37c9a16feeaa0c40046950277d7733d408538e3dafd"
+      }
+    },
+    "saber-main-air-up-B": {
+      "fixture": "saber-primary",
+      "actions": [
+        0
+      ],
+      "active_interval": null,
+      "motions": [
+        0,
+        4,
+        25,
+        26
+      ],
+      "tracked_types": [
+        [
+          1,
+          1
+        ],
+        [
+          4,
+          38
+        ]
+      ],
+      "peak_projectiles": 7,
+      "spawn_groups": {
+        "1/1/work0=20": {
+          "count": 1,
+          "first_t": 10,
+          "links28": [
+            "0x0"
+          ]
+        },
+        "4/38/work0=2": {
+          "count": 7,
+          "first_t": 10,
+          "links28": [
+            "0x2037fa0"
+          ]
+        }
+      },
+      "observed_templates": {
+        "0x887a438": {
+          "kind": 0,
+          "faction": 0,
+          "damage": 3,
+          "remaining": 0,
+          "layer": 1
+        }
+      },
+      "final_action": 0,
+      "final_tracked": 0,
+      "screenshot_sha256": {
+        "6": "1ea33a7130b0238b4e5d059b0f5302d50f88b69a8120946669e52355c1a45daf",
+        "12": "da7b23025d8e5ab19fdc4814ff1388cc515c162e11d8d0c2a45007e1e1b9fbb8",
+        "24": "d0faf0bcc455e2f5a033efb9bffdab39a72253edaac0fe9269069e120d2eb107",
+        "30": "2c487ec86064f4305bc87f2cbae80281b130f3702e7e453295048bc83c3e5c8b",
+        "60": "8361d248e843d9d9db46acbb23517618dfd666744105d6f172f461a23df59cef",
+        "195": "9d17e0d5d041d0742ff73c92acce5d716d172bfb5e102db7b86860c5fa22bd19"
+      }
+    },
+    "saber-main-charge": {
+      "fixture": "saber-primary",
+      "actions": [
+        0
+      ],
+      "active_interval": null,
+      "motions": [
+        0,
+        14,
+        20
+      ],
+      "tracked_types": [
+        [
+          1,
+          1
+        ],
+        [
+          4,
+          52
+        ],
+        [
+          5,
+          23
+        ],
+        [
+          5,
+          64
+        ]
+      ],
+      "peak_projectiles": 3,
+      "spawn_groups": {
+        "1/1/work0=8": {
+          "count": 1,
+          "first_t": 180,
+          "links28": [
+            "0x0"
+          ]
+        },
+        "5/64/work0=7": {
+          "count": 1,
+          "first_t": 180,
+          "links28": [
+            "0x2037fa0"
+          ]
+        },
+        "4/52/work0=0": {
+          "count": 3,
+          "first_t": 190,
+          "links28": [
+            "0x0"
+          ]
+        },
+        "5/23/work0=0": {
+          "count": 6,
+          "first_t": 226,
+          "links28": [
+            "0x30074a4",
+            "0x30075ac",
+            "0x3007630",
+            "0x30076b4",
+            "0x30077bc",
+            "0x3007948"
+          ]
+        }
+      },
+      "observed_templates": {
+        "0x881610c": {
+          "kind": 0,
+          "faction": 0,
+          "damage": 5,
+          "remaining": 0,
+          "layer": 1
+        }
+      },
+      "final_action": 0,
+      "final_tracked": 0,
+      "screenshot_sha256": {
+        "6": "fc887beb3d3194555b39e2e8db902a8dce5b3edf27778038cb10e0e3beb878a1",
+        "12": "41c06da72e9e0dc6437484a5fc833224bfb762b9740f63af1a354a3172de64bf",
+        "24": "dafe41cd32a2cc20d39d647c79061368321eb6dea0aba7a5551aa69e30546380",
+        "30": "870134d9e8899f5c42687098a22093c2f2a61f3248f2f1da06874e201a82790f",
+        "60": "9695688dbb576f53fb61d0da49b0457e321c596d7ad867fa8386e5f3234c0267",
+        "195": "05240ef699a0f75098a36099b718cea2c02c7f099dcaa97eda31ddc07f4e27fb"
+      }
+    }
+  },
+  "baseline_weapons": [
+    0,
+    1
+  ],
+  "pillar_sample": {
+    "first_projectiles_t": 17,
+    "count": 5,
+    "kind": 4,
+    "type": 38,
+    "work0": 3,
+    "link28": "0x02038a2c",
+    "initial_template": {
+      "kind": 1,
+      "faction": 0,
+      "damage": 0,
+      "remaining": 0,
+      "layer": 0
+    },
+    "initial_collision": "0x887a4f8",
+    "attack_template": {
+      "kind": 0,
+      "faction": 0,
+      "damage": 5,
+      "remaining": 0,
+      "layer": 1
+    },
+    "attack_collision": "0x887a498",
+    "first_attack_template_t": 25,
+    "observed_update": "0x8811259",
+    "action_zero_t": 102,
+    "phase3_t": 102,
+    "phase4_t": 103,
+    "slots_empty_t": 104,
+    "actual_enemy_damage_tested": false
+  },
+  "trace_sha256": "71c4615c3745e61140063bb6d05f37671e3b3314d5a785e95c99dd8f349625ed",
+  "elapsed_seconds": 17.34,
+  "status": "passed-bounded-input-and-normal-cleanup"
+}

@@ -35,3 +35,7 @@ ZCode 2A/2B独立验收复跑：`python -X utf8 -B research/verify-stage2ab-acce
 ## OZ 参考改版运行探针（2026-11-11）
 
 `python -X utf8 -B research/oz-reference-probe.py --rom "本机的 Mega Man Zero 3 (USA-oz).gba"` 从开机顺序到首个可操作场景，核对美版实际玩家、扩展更新跳板及六个普通输入对照。仅需既有 Windows 核心和 Pillow；不需要 capstone，不写 RAM 或磁盘存档。输出仅允许本工程 build 下。通过意味着普通输入与包装器运行可复现，**不意味着已触发 OZ 或完成移植**。版本、字段、未完成与下一步见[OZ 当前记录](../docs/OZ-REFERENCE-RESEARCH.md)。
+
+## OZ 技能与键位对照（2026-11-14）
+
+`python -X utf8 -B research/oz-skill-probe.py --rom "本机的 Mega Man Zero 3 (USA-oz).gba"` 从开机重建首关基线，运行23组各360次更新，包含15组自然输入和8组标注RAM夹具（交换L/R映射、剑设主武器）。记录扩展状态、原动作、逻辑输入及登记对象实例；严格检查光柱5弹体的生成、友方攻击模板与正常退场。此项不证明实际扣血、受击中断、七连斩全段命中或菜单切换成功。输出仅在build；无ROM或用户存档改写。作者和详细操作/移植依赖见[OZ 当前记录](../docs/OZ-REFERENCE-RESEARCH.md)。
