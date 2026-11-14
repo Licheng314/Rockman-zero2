@@ -40,6 +40,8 @@ S 不依赖 T/O/V 或图块消费者闭合。
 
 ## O：参考 Z3 OZ 改版，在 Z2 加入可操作 OZ
 
+**详细进度与完成标准以 [OZ-PROGRESS](OZ-PROGRESS.md) 为唯一入口。** 当前冻结32批、每批3项：已完成5批，O06部分1/3，26批未开始；首个可玩版本路径为O01—O14，当前5/14批，Z2实际接入尚未开始。该计数不是工时/语义理解百分比。下文O1—O4仅为宏观分组，不另维护一套完成数字。ZCode首选独立包Z-O07已写好提示词，尚未投递，见[现役任务书](ZCODE-HANDOFF.md)。
+
 ### 已识别材料
 
 - 用户给定 `Mega Man Zero 3 (USA-oz).gba`：16MiB，header `MEGAMANZERO3 / BZ3E / revision 0`，SHA1 `f1835aaceadebe08bd4d6178947418d3e077a667`。已完成从开机至普通操作的有限复跑并定位扩展玩家更新入口，2026-11-14已按操作线索复现多项特殊动作及光柱正常生命周期，已补一个普通炮台实际命中及HP归零取消夹具，非致死受击/切图未闭合，见[当前记录](OZ-REFERENCE-RESEARCH.md)及[原文件记录](semantic-data/oz-reference-20261110.json)。
