@@ -18,6 +18,12 @@
 不能把弹体两帧当作身体动作，也不能拿下+B子型4炮波代替子型6剑气。
 取得这一个出招段的完整必要帧、时序、锚点、拼合、实际调色板和来源。
 
+优先读固定参考 src/boss/omega_zero.c 的 double_charge_wave_3 相关动作/资源，
+以及 src/projectile/omega_zero.c 的 CreateDoubleChargeWave3 既有结论。
+先从原生Boss末段动作建立候选，再核对改版代理实际使用的姿势；
+不要从全部图块或整套玩家动画盲扫，也不能因名称相同就宣称实现相同。
+只审读本段所需范围，新增必要函数仍计入下面3个上限。
+
 原版研究根目录：D:\NewStudio\Decompilation\public-release-clean-20261101
 唯一可写目录：该根目录的 build/zcode-oz-o07-20261114/
 若其中已有交付物，先保留它，另建本包带真实时间后缀的子目录，不覆盖。
