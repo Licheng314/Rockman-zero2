@@ -43,3 +43,7 @@ ZCode 2A/2B独立验收复跑：`python -X utf8 -B research/verify-stage2ab-acce
 ## OZ 光柱实际伤害与取消条件（2026-11-14）
 
 `python -X utf8 -B research/oz-hit-probe.py --rom "本机的 Mega Man Zero 3 (USA-oz).gba"` 从开机和自然向右移动重建首关一个炮台，核对池/类型表/实例，运行10组距离、空白、接触及HP归零对照。近距离实际HP8→3→0由相同光柱弹体的双向Body关联互证；两项一次性玩家HP0为明确RAM夹具，检查原5弹体的退出回调、phase和关闭碰撞，不是自然伤害/非致死受击证据。核心/ROM指纹检查，输出只在build，不写用户存档。需既有Windows核心/Pillow，不需capstone；见[当前OZ记录](../docs/OZ-REFERENCE-RESEARCH.md)。
+
+## OZ 前向炮波/剑气素材与 Z2 候选（2026-11-14）
+
+`python -X utf8 -B research/oz-wave-resources.py --rom "本机的 Mega Man Zero 3 (USA-oz).gba" --reference build/reference/rmz3` 从开机观察3个自然输入样本，核对实际OAM片段、显存及调色板，分别导出子型4炮波和子型6剑气。工具校验固定参考提交、所选ROM图块/拼合/动画，生成PNG及8-tile文件行/32-tile硬件行的Z2离线候选；重解码生成记录逐帧像素相等。需要Pillow和既有Windows核心，不需capstone；只输出到build，不安装到Z2、不打ROM补丁。图像与提取二进制保持本地，公开记录仅含参数/散列；见[首招接入清单](../docs/OZ-REFERENCE-RESEARCH.md)。

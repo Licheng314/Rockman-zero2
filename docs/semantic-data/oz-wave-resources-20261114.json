@@ -1,0 +1,717 @@
+{
+  "started_utc": "2026-11-14T03:55:08.998902+00:00",
+  "script_sha256": "aa1e12784c79e30a810d016af8ed69579041e6605d580dcaadc9c2d7865f64dc",
+  "rom_sha256": "dddc56efcab68e18d9d34a7f5b2186e2e07bff1dcb3f9a69ef22372cceccaf34",
+  "core_sha256": "02747c2a77ea4ed9738c967d101a207a81973233588f68d39f5ab923a1a9599c",
+  "helper_sha256": "b168b99b5ce73cdb152229c8a04722de578d4d4e443950a9c28dfcfe5720a2cc",
+  "reference_commit": "2a28700e0a74edd9578737c3b3435ced9d074045",
+  "source_sha256": "0bdc9dfacc6b0422dda703c25826c502c1680a549f04e0fd787ae8b727afa815",
+  "raw_png_bytes": 7360,
+  "meta": "0x85cd420",
+  "sheet": "0x8874d58",
+  "sequence_table": "0x85d5ee4",
+  "old_state_loaded": false,
+  "ram_fixture": false,
+  "sequences": {
+    "7": {
+      "name": "forward-shot",
+      "frames": [
+        1,
+        4,
+        5,
+        6,
+        7,
+        14,
+        25,
+        26,
+        27,
+        28,
+        29
+      ],
+      "order": [
+        1,
+        14,
+        25,
+        26,
+        4,
+        27,
+        5,
+        28,
+        6,
+        29,
+        7
+      ],
+      "source_used_tiles": 67,
+      "source_used_bytes": 2144,
+      "sequence_payload": "0x85d5f60",
+      "sequence_sha256": "ebf42a954bdbf2c862e932085f6383c5e23f2f489e4917ee044148e5e5ae31fa",
+      "palette_sha256": "8e6ca754ec6a79dcad1b7e5c5621927aaa286cf4040b18f130f18107985d8ea9",
+      "z2_candidate_atlas_bytes": 2304,
+      "z2_candidate_atlas_sha256": "514666928953190f99890865ca02d7d6b818e6d184fb3dc18265fc98a25494d2",
+      "z2_candidate_atlas_file_width_tiles": 8,
+      "z2_candidate_atlas_rows": 9,
+      "z2_candidate_hardware_row_stride_tiles": 32,
+      "z2_candidate_piece_count": 19,
+      "z2_candidate_records_sha256": "20f7d804d99510f68c24f8560c453544e4e4d7f79ca1e44a9beeea362843a088",
+      "z2_candidate_metadata_bytes": 196,
+      "z2_candidate_metadata_sha256": "761c5f4435efa83808ee717236b4f5324d6ff316e279e3f9c4a3d85e0c25fdd4",
+      "z2_candidate_sequence_bytes": 24,
+      "z2_candidate_sequence_sha256": "756d1ac1a5dc31094e02258199099eb23f85adaf5b92d3fed4f68d14ba71f109",
+      "conversion_check": "decode emitted HH H bb records and 8-tile file rows; per-frame RGBA equality",
+      "installed_in_z2": false
+    },
+    "5": {
+      "name": "saber-wave",
+      "frames": [
+        19,
+        20
+      ],
+      "order": [
+        19,
+        20
+      ],
+      "source_used_tiles": 23,
+      "source_used_bytes": 736,
+      "sequence_payload": "0x85d5f50",
+      "sequence_sha256": "ce55a84836422d1f1f2e93355886be75b66a3a5326c5c80adc1102f3931ca8d8",
+      "palette_sha256": "8e6ca754ec6a79dcad1b7e5c5621927aaa286cf4040b18f130f18107985d8ea9",
+      "z2_candidate_atlas_bytes": 1024,
+      "z2_candidate_atlas_sha256": "c6f1e4674cd22aa952e0e038f18ea577ff9a0df6df1d2b0f784c555ac5db6dee",
+      "z2_candidate_atlas_file_width_tiles": 8,
+      "z2_candidate_atlas_rows": 4,
+      "z2_candidate_hardware_row_stride_tiles": 32,
+      "z2_candidate_piece_count": 6,
+      "z2_candidate_records_sha256": "58c586a8546af30b058308f15ddd7f4881d7790b4d693a07ef80c37d87ad8503",
+      "z2_candidate_metadata_bytes": 56,
+      "z2_candidate_metadata_sha256": "2f5b16eaa8c9407d430c20cfc334ea682016103dd8d4d9226c00902a672c3761",
+      "z2_candidate_sequence_bytes": 6,
+      "z2_candidate_sequence_sha256": "d25d7da59d034b540992b1e884f248dc50fa2dd0f69a5edf165eb369819d7519",
+      "conversion_check": "decode emitted HH H bb records and 8-tile file rows; per-frame RGBA equality",
+      "installed_in_z2": false
+    }
+  },
+  "runtime": {
+    "right": {
+      "subtype": 4,
+      "sequence": 7,
+      "first_t": 0,
+      "last_registered_t": 128,
+      "velocity_fixed": 1152,
+      "first_position": [
+        343552,
+        436991
+      ],
+      "first_player_position": [
+        335872,
+        442367
+      ],
+      "link28": "0x2037fa0",
+      "captures": {
+        "1": {
+          "observed_after_t": 1,
+          "source_state_t": 0,
+          "pieces": [
+            {
+              "oam": 0,
+              "vram_tile": 1020,
+              "palette_bank": 15,
+              "source_tile": 180,
+              "bytes": 128,
+              "sha256": "11776a8e1774bd3c4cca933ff6f0cb66b5b6d526bf20ba5cd877afb68aa52732"
+            }
+          ],
+          "palette_sha256": "8e6ca754ec6a79dcad1b7e5c5621927aaa286cf4040b18f130f18107985d8ea9"
+        },
+        "14": {
+          "observed_after_t": 3,
+          "source_state_t": 2,
+          "pieces": [
+            {
+              "oam": 0,
+              "vram_tile": 1022,
+              "palette_bank": 15,
+              "source_tile": 200,
+              "bytes": 64,
+              "sha256": "f2063a30b76a4f3dce1f26746a6270444c97edff27f083c7c7e5b5510ade1c9c"
+            },
+            {
+              "oam": 1,
+              "vram_tile": 1022,
+              "palette_bank": 15,
+              "source_tile": 200,
+              "bytes": 64,
+              "sha256": "f2063a30b76a4f3dce1f26746a6270444c97edff27f083c7c7e5b5510ade1c9c"
+            }
+          ],
+          "palette_sha256": "8e6ca754ec6a79dcad1b7e5c5621927aaa286cf4040b18f130f18107985d8ea9"
+        },
+        "25": {
+          "observed_after_t": 5,
+          "source_state_t": 4,
+          "pieces": [
+            {
+              "oam": 0,
+              "vram_tile": 1023,
+              "palette_bank": 15,
+              "source_tile": 221,
+              "bytes": 32,
+              "sha256": "e8f27d4b169f29a184a28efece6a4f66f924f9d7443f501569670d88dcb7b6a6"
+            },
+            {
+              "oam": 1,
+              "vram_tile": 1016,
+              "palette_bank": 15,
+              "source_tile": 156,
+              "bytes": 128,
+              "sha256": "27d0bac5631a090b843e2384a1fe5989dd72b99227c30577b02ce1dc34e87521"
+            },
+            {
+              "oam": 2,
+              "vram_tile": 1023,
+              "palette_bank": 15,
+              "source_tile": 221,
+              "bytes": 32,
+              "sha256": "e8f27d4b169f29a184a28efece6a4f66f924f9d7443f501569670d88dcb7b6a6"
+            },
+            {
+              "oam": 3,
+              "vram_tile": 1016,
+              "palette_bank": 15,
+              "source_tile": 156,
+              "bytes": 128,
+              "sha256": "27d0bac5631a090b843e2384a1fe5989dd72b99227c30577b02ce1dc34e87521"
+            }
+          ],
+          "palette_sha256": "8e6ca754ec6a79dcad1b7e5c5621927aaa286cf4040b18f130f18107985d8ea9"
+        },
+        "26": {
+          "observed_after_t": 7,
+          "source_state_t": 6,
+          "pieces": [
+            {
+              "oam": 0,
+              "vram_tile": 1016,
+              "palette_bank": 15,
+              "source_tile": 80,
+              "bytes": 256,
+              "sha256": "57bab71c9df8cccdb4c5b586771a1bc751c1844a708a54bf7a9dfc22eea43af9"
+            },
+            {
+              "oam": 1,
+              "vram_tile": 1016,
+              "palette_bank": 15,
+              "source_tile": 80,
+              "bytes": 256,
+              "sha256": "57bab71c9df8cccdb4c5b586771a1bc751c1844a708a54bf7a9dfc22eea43af9"
+            }
+          ],
+          "palette_sha256": "8e6ca754ec6a79dcad1b7e5c5621927aaa286cf4040b18f130f18107985d8ea9"
+        },
+        "4": {
+          "observed_after_t": 9,
+          "source_state_t": 8,
+          "pieces": [
+            {
+              "oam": 0,
+              "vram_tile": 1016,
+              "palette_bank": 15,
+              "source_tile": 0,
+              "bytes": 256,
+              "sha256": "27b0c8d3b7e64100b7383dfddaf674f5abcbd016d1ede6c0db22756ab3a74ab3"
+            }
+          ],
+          "palette_sha256": "8e6ca754ec6a79dcad1b7e5c5621927aaa286cf4040b18f130f18107985d8ea9"
+        },
+        "27": {
+          "observed_after_t": 10,
+          "source_state_t": 9,
+          "pieces": [
+            {
+              "oam": 0,
+              "vram_tile": 1016,
+              "palette_bank": 15,
+              "source_tile": 88,
+              "bytes": 256,
+              "sha256": "54967d7009620239db542e9168261bb4dc4f6559c1b60721267a13edf5fb16c2"
+            },
+            {
+              "oam": 1,
+              "vram_tile": 1016,
+              "palette_bank": 15,
+              "source_tile": 88,
+              "bytes": 256,
+              "sha256": "54967d7009620239db542e9168261bb4dc4f6559c1b60721267a13edf5fb16c2"
+            }
+          ],
+          "palette_sha256": "8e6ca754ec6a79dcad1b7e5c5621927aaa286cf4040b18f130f18107985d8ea9"
+        },
+        "5": {
+          "observed_after_t": 12,
+          "source_state_t": 11,
+          "pieces": [
+            {
+              "oam": 0,
+              "vram_tile": 1020,
+              "palette_bank": 15,
+              "source_tile": 176,
+              "bytes": 128,
+              "sha256": "2098b6576bfbcfecc1f3f1fd059399123693cb7e4c29bf79d70dc2571b8e5650"
+            }
+          ],
+          "palette_sha256": "8e6ca754ec6a79dcad1b7e5c5621927aaa286cf4040b18f130f18107985d8ea9"
+        },
+        "28": {
+          "observed_after_t": 13,
+          "source_state_t": 12,
+          "pieces": [
+            {
+              "oam": 0,
+              "vram_tile": 1016,
+              "palette_bank": 15,
+              "source_tile": 96,
+              "bytes": 256,
+              "sha256": "b0be3edd8ee22b528367cccd0da7ecb91b4a8e7fcd6e4774c7a637c44e6a1f44"
+            },
+            {
+              "oam": 1,
+              "vram_tile": 1016,
+              "palette_bank": 15,
+              "source_tile": 96,
+              "bytes": 256,
+              "sha256": "b0be3edd8ee22b528367cccd0da7ecb91b4a8e7fcd6e4774c7a637c44e6a1f44"
+            }
+          ],
+          "palette_sha256": "8e6ca754ec6a79dcad1b7e5c5621927aaa286cf4040b18f130f18107985d8ea9"
+        },
+        "6": {
+          "observed_after_t": 15,
+          "source_state_t": 14,
+          "pieces": [
+            {
+              "oam": 0,
+              "vram_tile": 1016,
+              "palette_bank": 15,
+              "source_tile": 8,
+              "bytes": 256,
+              "sha256": "8fb3c5ea536fc4fdb4cc90a3ea8290d82900e8024b9bfd7c1a30f30d491c051f"
+            }
+          ],
+          "palette_sha256": "8e6ca754ec6a79dcad1b7e5c5621927aaa286cf4040b18f130f18107985d8ea9"
+        },
+        "29": {
+          "observed_after_t": 16,
+          "source_state_t": 15,
+          "pieces": [
+            {
+              "oam": 0,
+              "vram_tile": 1016,
+              "palette_bank": 15,
+              "source_tile": 104,
+              "bytes": 256,
+              "sha256": "81991f411089fec5f9c1e9ec22886b209446dc320d2fb92422b9841e96db3079"
+            },
+            {
+              "oam": 1,
+              "vram_tile": 1016,
+              "palette_bank": 15,
+              "source_tile": 104,
+              "bytes": 256,
+              "sha256": "81991f411089fec5f9c1e9ec22886b209446dc320d2fb92422b9841e96db3079"
+            }
+          ],
+          "palette_sha256": "8e6ca754ec6a79dcad1b7e5c5621927aaa286cf4040b18f130f18107985d8ea9"
+        },
+        "7": {
+          "observed_after_t": 18,
+          "source_state_t": 17,
+          "pieces": [
+            {
+              "oam": 0,
+              "vram_tile": 1020,
+              "palette_bank": 15,
+              "source_tile": 184,
+              "bytes": 128,
+              "sha256": "a9254c8d13dc4c33eb6ac9c3ff6630282e56eab48c0203c6fd68bcdbfd5122c0"
+            }
+          ],
+          "palette_sha256": "8e6ca754ec6a79dcad1b7e5c5621927aaa286cf4040b18f130f18107985d8ea9"
+        }
+      },
+      "actual_damage_tested": false,
+      "collision_template": {
+        "address": "0x887a4b0",
+        "kind": 0,
+        "faction": 0,
+        "damage": 3,
+        "range_fixed": [
+          1536,
+          0,
+          6400,
+          6656
+        ]
+      }
+    },
+    "left": {
+      "subtype": 4,
+      "sequence": 7,
+      "first_t": 0,
+      "last_registered_t": 128,
+      "velocity_fixed": -1152,
+      "first_position": [
+        328064,
+        436991
+      ],
+      "first_player_position": [
+        335744,
+        442367
+      ],
+      "link28": "0x2037fa0",
+      "captures": {
+        "1": {
+          "observed_after_t": 1,
+          "source_state_t": 0,
+          "pieces": [
+            {
+              "oam": 0,
+              "vram_tile": 1020,
+              "palette_bank": 15,
+              "source_tile": 180,
+              "bytes": 128,
+              "sha256": "11776a8e1774bd3c4cca933ff6f0cb66b5b6d526bf20ba5cd877afb68aa52732"
+            }
+          ],
+          "palette_sha256": "8e6ca754ec6a79dcad1b7e5c5621927aaa286cf4040b18f130f18107985d8ea9"
+        },
+        "14": {
+          "observed_after_t": 3,
+          "source_state_t": 2,
+          "pieces": [
+            {
+              "oam": 0,
+              "vram_tile": 1022,
+              "palette_bank": 15,
+              "source_tile": 200,
+              "bytes": 64,
+              "sha256": "f2063a30b76a4f3dce1f26746a6270444c97edff27f083c7c7e5b5510ade1c9c"
+            },
+            {
+              "oam": 1,
+              "vram_tile": 1022,
+              "palette_bank": 15,
+              "source_tile": 200,
+              "bytes": 64,
+              "sha256": "f2063a30b76a4f3dce1f26746a6270444c97edff27f083c7c7e5b5510ade1c9c"
+            }
+          ],
+          "palette_sha256": "8e6ca754ec6a79dcad1b7e5c5621927aaa286cf4040b18f130f18107985d8ea9"
+        },
+        "25": {
+          "observed_after_t": 5,
+          "source_state_t": 4,
+          "pieces": [
+            {
+              "oam": 0,
+              "vram_tile": 1023,
+              "palette_bank": 15,
+              "source_tile": 221,
+              "bytes": 32,
+              "sha256": "e8f27d4b169f29a184a28efece6a4f66f924f9d7443f501569670d88dcb7b6a6"
+            },
+            {
+              "oam": 1,
+              "vram_tile": 1016,
+              "palette_bank": 15,
+              "source_tile": 156,
+              "bytes": 128,
+              "sha256": "27d0bac5631a090b843e2384a1fe5989dd72b99227c30577b02ce1dc34e87521"
+            },
+            {
+              "oam": 2,
+              "vram_tile": 1023,
+              "palette_bank": 15,
+              "source_tile": 221,
+              "bytes": 32,
+              "sha256": "e8f27d4b169f29a184a28efece6a4f66f924f9d7443f501569670d88dcb7b6a6"
+            },
+            {
+              "oam": 3,
+              "vram_tile": 1016,
+              "palette_bank": 15,
+              "source_tile": 156,
+              "bytes": 128,
+              "sha256": "27d0bac5631a090b843e2384a1fe5989dd72b99227c30577b02ce1dc34e87521"
+            }
+          ],
+          "palette_sha256": "8e6ca754ec6a79dcad1b7e5c5621927aaa286cf4040b18f130f18107985d8ea9"
+        },
+        "26": {
+          "observed_after_t": 7,
+          "source_state_t": 6,
+          "pieces": [
+            {
+              "oam": 0,
+              "vram_tile": 1016,
+              "palette_bank": 15,
+              "source_tile": 80,
+              "bytes": 256,
+              "sha256": "57bab71c9df8cccdb4c5b586771a1bc751c1844a708a54bf7a9dfc22eea43af9"
+            },
+            {
+              "oam": 1,
+              "vram_tile": 1016,
+              "palette_bank": 15,
+              "source_tile": 80,
+              "bytes": 256,
+              "sha256": "57bab71c9df8cccdb4c5b586771a1bc751c1844a708a54bf7a9dfc22eea43af9"
+            }
+          ],
+          "palette_sha256": "8e6ca754ec6a79dcad1b7e5c5621927aaa286cf4040b18f130f18107985d8ea9"
+        },
+        "4": {
+          "observed_after_t": 9,
+          "source_state_t": 8,
+          "pieces": [
+            {
+              "oam": 0,
+              "vram_tile": 1016,
+              "palette_bank": 15,
+              "source_tile": 0,
+              "bytes": 256,
+              "sha256": "27b0c8d3b7e64100b7383dfddaf674f5abcbd016d1ede6c0db22756ab3a74ab3"
+            }
+          ],
+          "palette_sha256": "8e6ca754ec6a79dcad1b7e5c5621927aaa286cf4040b18f130f18107985d8ea9"
+        },
+        "27": {
+          "observed_after_t": 10,
+          "source_state_t": 9,
+          "pieces": [
+            {
+              "oam": 0,
+              "vram_tile": 1016,
+              "palette_bank": 15,
+              "source_tile": 88,
+              "bytes": 256,
+              "sha256": "54967d7009620239db542e9168261bb4dc4f6559c1b60721267a13edf5fb16c2"
+            },
+            {
+              "oam": 1,
+              "vram_tile": 1016,
+              "palette_bank": 15,
+              "source_tile": 88,
+              "bytes": 256,
+              "sha256": "54967d7009620239db542e9168261bb4dc4f6559c1b60721267a13edf5fb16c2"
+            }
+          ],
+          "palette_sha256": "8e6ca754ec6a79dcad1b7e5c5621927aaa286cf4040b18f130f18107985d8ea9"
+        },
+        "5": {
+          "observed_after_t": 12,
+          "source_state_t": 11,
+          "pieces": [
+            {
+              "oam": 0,
+              "vram_tile": 1020,
+              "palette_bank": 15,
+              "source_tile": 176,
+              "bytes": 128,
+              "sha256": "2098b6576bfbcfecc1f3f1fd059399123693cb7e4c29bf79d70dc2571b8e5650"
+            }
+          ],
+          "palette_sha256": "8e6ca754ec6a79dcad1b7e5c5621927aaa286cf4040b18f130f18107985d8ea9"
+        },
+        "28": {
+          "observed_after_t": 13,
+          "source_state_t": 12,
+          "pieces": [
+            {
+              "oam": 0,
+              "vram_tile": 1016,
+              "palette_bank": 15,
+              "source_tile": 96,
+              "bytes": 256,
+              "sha256": "b0be3edd8ee22b528367cccd0da7ecb91b4a8e7fcd6e4774c7a637c44e6a1f44"
+            },
+            {
+              "oam": 1,
+              "vram_tile": 1016,
+              "palette_bank": 15,
+              "source_tile": 96,
+              "bytes": 256,
+              "sha256": "b0be3edd8ee22b528367cccd0da7ecb91b4a8e7fcd6e4774c7a637c44e6a1f44"
+            }
+          ],
+          "palette_sha256": "8e6ca754ec6a79dcad1b7e5c5621927aaa286cf4040b18f130f18107985d8ea9"
+        },
+        "6": {
+          "observed_after_t": 15,
+          "source_state_t": 14,
+          "pieces": [
+            {
+              "oam": 0,
+              "vram_tile": 1016,
+              "palette_bank": 15,
+              "source_tile": 8,
+              "bytes": 256,
+              "sha256": "8fb3c5ea536fc4fdb4cc90a3ea8290d82900e8024b9bfd7c1a30f30d491c051f"
+            }
+          ],
+          "palette_sha256": "8e6ca754ec6a79dcad1b7e5c5621927aaa286cf4040b18f130f18107985d8ea9"
+        },
+        "29": {
+          "observed_after_t": 16,
+          "source_state_t": 15,
+          "pieces": [
+            {
+              "oam": 0,
+              "vram_tile": 1016,
+              "palette_bank": 15,
+              "source_tile": 104,
+              "bytes": 256,
+              "sha256": "81991f411089fec5f9c1e9ec22886b209446dc320d2fb92422b9841e96db3079"
+            },
+            {
+              "oam": 1,
+              "vram_tile": 1016,
+              "palette_bank": 15,
+              "source_tile": 104,
+              "bytes": 256,
+              "sha256": "81991f411089fec5f9c1e9ec22886b209446dc320d2fb92422b9841e96db3079"
+            }
+          ],
+          "palette_sha256": "8e6ca754ec6a79dcad1b7e5c5621927aaa286cf4040b18f130f18107985d8ea9"
+        },
+        "7": {
+          "observed_after_t": 18,
+          "source_state_t": 17,
+          "pieces": [
+            {
+              "oam": 0,
+              "vram_tile": 1020,
+              "palette_bank": 15,
+              "source_tile": 184,
+              "bytes": 128,
+              "sha256": "a9254c8d13dc4c33eb6ac9c3ff6630282e56eab48c0203c6fd68bcdbfd5122c0"
+            }
+          ],
+          "palette_sha256": "8e6ca754ec6a79dcad1b7e5c5621927aaa286cf4040b18f130f18107985d8ea9"
+        }
+      },
+      "actual_damage_tested": false,
+      "collision_template": {
+        "address": "0x887a4b0",
+        "kind": 0,
+        "faction": 0,
+        "damage": 3,
+        "range_fixed": [
+          1536,
+          0,
+          6400,
+          6656
+        ]
+      }
+    },
+    "combo-saber-wave": {
+      "subtype": 6,
+      "sequence": 5,
+      "first_t": 70,
+      "last_registered_t": 198,
+      "velocity_fixed": 1152,
+      "first_position": [
+        347264,
+        438527
+      ],
+      "first_player_position": [
+        335872,
+        442367
+      ],
+      "link28": "0x2038a2c",
+      "captures": {
+        "19": {
+          "observed_after_t": 71,
+          "source_state_t": 70,
+          "pieces": [
+            {
+              "oam": 0,
+              "vram_tile": 1022,
+              "palette_bank": 13,
+              "source_tile": 212,
+              "bytes": 64,
+              "sha256": "c6344b049baf1592e0ce3abe6932f58e2acd1d0c24d026ac62b0022f54a363ad"
+            },
+            {
+              "oam": 1,
+              "vram_tile": 1020,
+              "palette_bank": 13,
+              "source_tile": 214,
+              "bytes": 64,
+              "sha256": "f27e710b70952903af82b50e1e743018240b185b37230a28978649c48b45a8ff"
+            },
+            {
+              "oam": 2,
+              "vram_tile": 1008,
+              "palette_bank": 13,
+              "source_tile": 64,
+              "bytes": 256,
+              "sha256": "081083d329a8fa5b29e8b895c378247f53404da2200c6dc4b6a2e078aac0e4b2"
+            }
+          ],
+          "palette_sha256": "8e6ca754ec6a79dcad1b7e5c5621927aaa286cf4040b18f130f18107985d8ea9"
+        },
+        "20": {
+          "observed_after_t": 73,
+          "source_state_t": 72,
+          "pieces": [
+            {
+              "oam": 0,
+              "vram_tile": 1023,
+              "palette_bank": 13,
+              "source_tile": 223,
+              "bytes": 32,
+              "sha256": "7d5d3d18842cf869de29ba996ff9437fafc6f33eb5e1238fc1e001c90e3dd88a"
+            },
+            {
+              "oam": 1,
+              "vram_tile": 1020,
+              "palette_bank": 13,
+              "source_tile": 218,
+              "bytes": 64,
+              "sha256": "06f34fcc4d5d4a83a17233e89eeb500a5d38c8ef767426f733f7262b4e968334"
+            },
+            {
+              "oam": 2,
+              "vram_tile": 1008,
+              "palette_bank": 13,
+              "source_tile": 72,
+              "bytes": 256,
+              "sha256": "7ec4443839a1cbdff2f5682c0a45e014fdeb9e57fc0b9f5ac49df2c74001bcc4"
+            }
+          ],
+          "palette_sha256": "8e6ca754ec6a79dcad1b7e5c5621927aaa286cf4040b18f130f18107985d8ea9"
+        }
+      },
+      "actual_damage_tested": false,
+      "collision_template": {
+        "address": "0x887a4e0",
+        "kind": 0,
+        "faction": 0,
+        "damage": 3,
+        "range_fixed": [
+          768,
+          -256,
+          2560,
+          7936
+        ]
+      }
+    }
+  },
+  "trace_sha256": "56ab0d07b0ef5d7e9ee4629e393ad62f5e7e7b674ced65a13049680be9f85dd6",
+  "elapsed_seconds": 9.139,
+  "limitations": [
+    "Z2 candidates are offline assets, not tested in Z2",
+    "128 timer alone is not proven a universal maximum lifetime",
+    "No claim that frame rendering is captured at the same instant as entity update",
+    "Source PNG padding is excluded; selected tiles/meta/sequences verified against ROM",
+    "Source C is a semantic lead, not a byte-matched build of the US hack"
+  ]
+}
