@@ -1,0 +1,856 @@
+{
+  "started_utc": "2026-11-14T03:25:23.150928+00:00",
+  "script_sha256": "edb07f0fe86a06f50a088ef931141507cc6474cd4349ea7f24e0db593c5f44a8",
+  "rom_sha256": "dddc56efcab68e18d9d34a7f5b2186e2e07bff1dcb3f9a69ef22372cceccaf34",
+  "core_sha256": "02747c2a77ea4ed9738c967d101a207a81973233588f68d39f5ab923a1a9599c",
+  "boot_updates": 16203,
+  "target_walk_updates": 135,
+  "old_state_loaded": false,
+  "user_save_loaded": false,
+  "cases": {
+    "0-False": {
+      "approach_updates": 0,
+      "attack": false,
+      "keep_moving": false,
+      "fixture": null,
+      "interrupt_t": null,
+      "hp_changes": [
+        {
+          "t": -1,
+          "target_hp": 8,
+          "player_hp": 16
+        }
+      ],
+      "final_action": 0,
+      "final_tracked": 0,
+      "retired": {}
+    },
+    "0-True": {
+      "approach_updates": 0,
+      "attack": true,
+      "keep_moving": false,
+      "fixture": null,
+      "interrupt_t": null,
+      "hp_changes": [
+        {
+          "t": -1,
+          "target_hp": 8,
+          "player_hp": 16
+        }
+      ],
+      "final_action": 0,
+      "final_tracked": 0,
+      "retired": {}
+    },
+    "20-False": {
+      "approach_updates": 20,
+      "attack": false,
+      "keep_moving": false,
+      "fixture": null,
+      "interrupt_t": null,
+      "hp_changes": [
+        {
+          "t": -1,
+          "target_hp": 8,
+          "player_hp": 16
+        }
+      ],
+      "final_action": 0,
+      "final_tracked": 0,
+      "retired": {}
+    },
+    "20-True": {
+      "approach_updates": 20,
+      "attack": true,
+      "keep_moving": false,
+      "fixture": null,
+      "interrupt_t": null,
+      "hp_changes": [
+        {
+          "t": -1,
+          "target_hp": 8,
+          "player_hp": 16
+        }
+      ],
+      "final_action": 0,
+      "final_tracked": 0,
+      "retired": {}
+    },
+    "30-False": {
+      "approach_updates": 30,
+      "attack": false,
+      "keep_moving": false,
+      "fixture": null,
+      "interrupt_t": null,
+      "hp_changes": [
+        {
+          "t": -1,
+          "target_hp": 8,
+          "player_hp": 16
+        }
+      ],
+      "final_action": 0,
+      "final_tracked": 0,
+      "retired": {}
+    },
+    "30-True": {
+      "approach_updates": 30,
+      "attack": true,
+      "keep_moving": false,
+      "fixture": null,
+      "interrupt_t": null,
+      "hp_changes": [
+        {
+          "t": -1,
+          "target_hp": 8,
+          "player_hp": 16
+        },
+        {
+          "t": 25,
+          "target_hp": 3,
+          "player_hp": 16
+        },
+        {
+          "t": 26,
+          "target_hp": 0,
+          "player_hp": 16
+        }
+      ],
+      "final_action": 0,
+      "final_tracked": 0,
+      "retired": {}
+    },
+    "contact-idle": {
+      "approach_updates": 30,
+      "attack": false,
+      "keep_moving": true,
+      "fixture": null,
+      "interrupt_t": null,
+      "hp_changes": [
+        {
+          "t": -1,
+          "target_hp": 8,
+          "player_hp": 16
+        },
+        {
+          "t": 7,
+          "target_hp": 8,
+          "player_hp": 14
+        },
+        {
+          "t": 97,
+          "target_hp": 8,
+          "player_hp": 12
+        }
+      ],
+      "final_action": 0,
+      "final_tracked": 0,
+      "retired": {}
+    },
+    "contact-pillar": {
+      "approach_updates": 30,
+      "attack": true,
+      "keep_moving": true,
+      "fixture": null,
+      "interrupt_t": null,
+      "hp_changes": [
+        {
+          "t": -1,
+          "target_hp": 8,
+          "player_hp": 16
+        },
+        {
+          "t": 25,
+          "target_hp": 3,
+          "player_hp": 16
+        },
+        {
+          "t": 26,
+          "target_hp": 0,
+          "player_hp": 16
+        }
+      ],
+      "final_action": 0,
+      "final_tracked": 0,
+      "retired": {}
+    },
+    "hp-zero-20": {
+      "approach_updates": 30,
+      "attack": true,
+      "keep_moving": false,
+      "fixture": "one-shot player HP=0",
+      "interrupt_t": 20,
+      "hp_changes": [
+        {
+          "t": -1,
+          "target_hp": 8,
+          "player_hp": 16
+        },
+        {
+          "t": 20,
+          "target_hp": 8,
+          "player_hp": 0
+        }
+      ],
+      "final_action": 0,
+      "final_tracked": 0,
+      "retired": {
+        "20": [
+          {
+            "address": 50350780,
+            "unique": 71,
+            "kind": 4,
+            "type": 38,
+            "phase": 4,
+            "flags": 8,
+            "callback": 134246833,
+            "xy": [
+              424576,
+              421887
+            ],
+            "hp": 1,
+            "collision": 143107320,
+            "paired_body": 0,
+            "body_parent": 50350780,
+            "status": 0,
+            "invincibility": 0
+          },
+          {
+            "address": 50350584,
+            "unique": 70,
+            "kind": 4,
+            "type": 38,
+            "phase": 4,
+            "flags": 8,
+            "callback": 134246833,
+            "xy": [
+              420352,
+              421887
+            ],
+            "hp": 1,
+            "collision": 143107320,
+            "paired_body": 0,
+            "body_parent": 50350584,
+            "status": 0,
+            "invincibility": 0
+          },
+          {
+            "address": 50350388,
+            "unique": 69,
+            "kind": 4,
+            "type": 38,
+            "phase": 4,
+            "flags": 8,
+            "callback": 134246833,
+            "xy": [
+              413512,
+              421887
+            ],
+            "hp": 1,
+            "collision": 143107320,
+            "paired_body": 0,
+            "body_parent": 50350388,
+            "status": 0,
+            "invincibility": 0
+          },
+          {
+            "address": 50350192,
+            "unique": 68,
+            "kind": 4,
+            "type": 38,
+            "phase": 4,
+            "flags": 8,
+            "callback": 134246833,
+            "xy": [
+              413416,
+              421887
+            ],
+            "hp": 1,
+            "collision": 143107320,
+            "paired_body": 0,
+            "body_parent": 50350192,
+            "status": 0,
+            "invincibility": 0
+          },
+          {
+            "address": 50349996,
+            "unique": 67,
+            "kind": 4,
+            "type": 38,
+            "phase": 4,
+            "flags": 8,
+            "callback": 134246833,
+            "xy": [
+              420208,
+              421887
+            ],
+            "hp": 1,
+            "collision": 143107320,
+            "paired_body": 0,
+            "body_parent": 50349996,
+            "status": 0,
+            "invincibility": 0
+          }
+        ],
+        "21": [
+          {
+            "address": 50350780,
+            "unique": 71,
+            "kind": 4,
+            "type": 38,
+            "phase": 4,
+            "flags": 8,
+            "callback": 134246833,
+            "xy": [
+              424576,
+              421887
+            ],
+            "hp": 1,
+            "collision": 143107320,
+            "paired_body": 0,
+            "body_parent": 50350780,
+            "status": 0,
+            "invincibility": 0
+          },
+          {
+            "address": 50350584,
+            "unique": 70,
+            "kind": 4,
+            "type": 38,
+            "phase": 4,
+            "flags": 8,
+            "callback": 134246833,
+            "xy": [
+              420352,
+              421887
+            ],
+            "hp": 1,
+            "collision": 143107320,
+            "paired_body": 0,
+            "body_parent": 50350584,
+            "status": 0,
+            "invincibility": 0
+          },
+          {
+            "address": 50350388,
+            "unique": 69,
+            "kind": 4,
+            "type": 38,
+            "phase": 4,
+            "flags": 8,
+            "callback": 134246833,
+            "xy": [
+              413512,
+              421887
+            ],
+            "hp": 1,
+            "collision": 143107320,
+            "paired_body": 0,
+            "body_parent": 50350388,
+            "status": 0,
+            "invincibility": 0
+          },
+          {
+            "address": 50350192,
+            "unique": 68,
+            "kind": 4,
+            "type": 38,
+            "phase": 4,
+            "flags": 8,
+            "callback": 134246833,
+            "xy": [
+              413416,
+              421887
+            ],
+            "hp": 1,
+            "collision": 143107320,
+            "paired_body": 0,
+            "body_parent": 50350192,
+            "status": 0,
+            "invincibility": 0
+          },
+          {
+            "address": 50349996,
+            "unique": 67,
+            "kind": 4,
+            "type": 38,
+            "phase": 4,
+            "flags": 8,
+            "callback": 134246833,
+            "xy": [
+              420208,
+              421887
+            ],
+            "hp": 1,
+            "collision": 143107320,
+            "paired_body": 0,
+            "body_parent": 50349996,
+            "status": 0,
+            "invincibility": 0
+          }
+        ],
+        "22": [
+          {
+            "address": 50350780,
+            "unique": 71,
+            "kind": 4,
+            "type": 38,
+            "phase": 4,
+            "flags": 8,
+            "callback": 134246833,
+            "xy": [
+              424576,
+              421887
+            ],
+            "hp": 1,
+            "collision": 143107320,
+            "paired_body": 0,
+            "body_parent": 50350780,
+            "status": 0,
+            "invincibility": 0
+          },
+          {
+            "address": 50350584,
+            "unique": 70,
+            "kind": 4,
+            "type": 38,
+            "phase": 4,
+            "flags": 8,
+            "callback": 134246833,
+            "xy": [
+              420352,
+              421887
+            ],
+            "hp": 1,
+            "collision": 143107320,
+            "paired_body": 0,
+            "body_parent": 50350584,
+            "status": 0,
+            "invincibility": 0
+          },
+          {
+            "address": 50350388,
+            "unique": 69,
+            "kind": 4,
+            "type": 38,
+            "phase": 4,
+            "flags": 8,
+            "callback": 134246833,
+            "xy": [
+              413512,
+              421887
+            ],
+            "hp": 1,
+            "collision": 143107320,
+            "paired_body": 0,
+            "body_parent": 50350388,
+            "status": 0,
+            "invincibility": 0
+          },
+          {
+            "address": 50350192,
+            "unique": 68,
+            "kind": 4,
+            "type": 38,
+            "phase": 4,
+            "flags": 8,
+            "callback": 134246833,
+            "xy": [
+              413416,
+              421887
+            ],
+            "hp": 1,
+            "collision": 143107320,
+            "paired_body": 0,
+            "body_parent": 50350192,
+            "status": 0,
+            "invincibility": 0
+          },
+          {
+            "address": 50349996,
+            "unique": 67,
+            "kind": 4,
+            "type": 38,
+            "phase": 4,
+            "flags": 8,
+            "callback": 134246833,
+            "xy": [
+              420208,
+              421887
+            ],
+            "hp": 1,
+            "collision": 143107320,
+            "paired_body": 0,
+            "body_parent": 50349996,
+            "status": 0,
+            "invincibility": 0
+          }
+        ]
+      }
+    },
+    "hp-zero-30": {
+      "approach_updates": 30,
+      "attack": true,
+      "keep_moving": false,
+      "fixture": "one-shot player HP=0",
+      "interrupt_t": 30,
+      "hp_changes": [
+        {
+          "t": -1,
+          "target_hp": 8,
+          "player_hp": 16
+        },
+        {
+          "t": 25,
+          "target_hp": 3,
+          "player_hp": 16
+        },
+        {
+          "t": 26,
+          "target_hp": 0,
+          "player_hp": 16
+        },
+        {
+          "t": 30,
+          "target_hp": 0,
+          "player_hp": 0
+        }
+      ],
+      "final_action": 0,
+      "final_tracked": 0,
+      "retired": {
+        "30": [
+          {
+            "address": 50350780,
+            "unique": 71,
+            "kind": 4,
+            "type": 38,
+            "phase": 4,
+            "flags": 8,
+            "callback": 134246833,
+            "xy": [
+              424096,
+              421887
+            ],
+            "hp": 1,
+            "collision": 143107224,
+            "paired_body": 50354424,
+            "body_parent": 50350780,
+            "status": 0,
+            "invincibility": 0
+          },
+          {
+            "address": 50350584,
+            "unique": 70,
+            "kind": 4,
+            "type": 38,
+            "phase": 4,
+            "flags": 8,
+            "callback": 134246833,
+            "xy": [
+              418000,
+              421887
+            ],
+            "hp": 1,
+            "collision": 143107224,
+            "paired_body": 0,
+            "body_parent": 50350584,
+            "status": 0,
+            "invincibility": 0
+          },
+          {
+            "address": 50350388,
+            "unique": 69,
+            "kind": 4,
+            "type": 38,
+            "phase": 4,
+            "flags": 8,
+            "callback": 134246833,
+            "xy": [
+              412480,
+              421887
+            ],
+            "hp": 1,
+            "collision": 143107224,
+            "paired_body": 0,
+            "body_parent": 50350388,
+            "status": 0,
+            "invincibility": 0
+          },
+          {
+            "address": 50350192,
+            "unique": 68,
+            "kind": 4,
+            "type": 38,
+            "phase": 4,
+            "flags": 8,
+            "callback": 134246833,
+            "xy": [
+              415168,
+              421887
+            ],
+            "hp": 1,
+            "collision": 143107224,
+            "paired_body": 0,
+            "body_parent": 50350192,
+            "status": 0,
+            "invincibility": 0
+          },
+          {
+            "address": 50349996,
+            "unique": 67,
+            "kind": 4,
+            "type": 38,
+            "phase": 4,
+            "flags": 8,
+            "callback": 134246833,
+            "xy": [
+              422320,
+              421887
+            ],
+            "hp": 1,
+            "collision": 143107224,
+            "paired_body": 0,
+            "body_parent": 50349996,
+            "status": 0,
+            "invincibility": 0
+          }
+        ],
+        "31": [
+          {
+            "address": 50350780,
+            "unique": 71,
+            "kind": 4,
+            "type": 38,
+            "phase": 4,
+            "flags": 8,
+            "callback": 134246833,
+            "xy": [
+              424096,
+              421887
+            ],
+            "hp": 1,
+            "collision": 143107224,
+            "paired_body": 50354424,
+            "body_parent": 50350780,
+            "status": 0,
+            "invincibility": 0
+          },
+          {
+            "address": 50350584,
+            "unique": 70,
+            "kind": 4,
+            "type": 38,
+            "phase": 4,
+            "flags": 8,
+            "callback": 134246833,
+            "xy": [
+              418000,
+              421887
+            ],
+            "hp": 1,
+            "collision": 143107224,
+            "paired_body": 0,
+            "body_parent": 50350584,
+            "status": 0,
+            "invincibility": 0
+          },
+          {
+            "address": 50350388,
+            "unique": 69,
+            "kind": 4,
+            "type": 38,
+            "phase": 4,
+            "flags": 8,
+            "callback": 134246833,
+            "xy": [
+              412480,
+              421887
+            ],
+            "hp": 1,
+            "collision": 143107224,
+            "paired_body": 0,
+            "body_parent": 50350388,
+            "status": 0,
+            "invincibility": 0
+          },
+          {
+            "address": 50350192,
+            "unique": 68,
+            "kind": 4,
+            "type": 38,
+            "phase": 4,
+            "flags": 8,
+            "callback": 134246833,
+            "xy": [
+              415168,
+              421887
+            ],
+            "hp": 1,
+            "collision": 143107224,
+            "paired_body": 0,
+            "body_parent": 50350192,
+            "status": 0,
+            "invincibility": 0
+          },
+          {
+            "address": 50349996,
+            "unique": 67,
+            "kind": 4,
+            "type": 38,
+            "phase": 4,
+            "flags": 8,
+            "callback": 134246833,
+            "xy": [
+              422320,
+              421887
+            ],
+            "hp": 1,
+            "collision": 143107224,
+            "paired_body": 0,
+            "body_parent": 50349996,
+            "status": 0,
+            "invincibility": 0
+          }
+        ],
+        "32": [
+          {
+            "address": 50350780,
+            "unique": 71,
+            "kind": 4,
+            "type": 38,
+            "phase": 4,
+            "flags": 8,
+            "callback": 134246833,
+            "xy": [
+              424096,
+              421887
+            ],
+            "hp": 1,
+            "collision": 143107224,
+            "paired_body": 50354424,
+            "body_parent": 50350780,
+            "status": 0,
+            "invincibility": 0
+          },
+          {
+            "address": 50350584,
+            "unique": 70,
+            "kind": 4,
+            "type": 38,
+            "phase": 4,
+            "flags": 8,
+            "callback": 134246833,
+            "xy": [
+              418000,
+              421887
+            ],
+            "hp": 1,
+            "collision": 143107224,
+            "paired_body": 0,
+            "body_parent": 50350584,
+            "status": 0,
+            "invincibility": 0
+          },
+          {
+            "address": 50350388,
+            "unique": 69,
+            "kind": 4,
+            "type": 38,
+            "phase": 4,
+            "flags": 8,
+            "callback": 134246833,
+            "xy": [
+              412480,
+              421887
+            ],
+            "hp": 1,
+            "collision": 143107224,
+            "paired_body": 0,
+            "body_parent": 50350388,
+            "status": 0,
+            "invincibility": 0
+          },
+          {
+            "address": 50350192,
+            "unique": 68,
+            "kind": 4,
+            "type": 38,
+            "phase": 4,
+            "flags": 8,
+            "callback": 134246833,
+            "xy": [
+              415168,
+              421887
+            ],
+            "hp": 1,
+            "collision": 143107224,
+            "paired_body": 0,
+            "body_parent": 50350192,
+            "status": 0,
+            "invincibility": 0
+          },
+          {
+            "address": 50349996,
+            "unique": 67,
+            "kind": 4,
+            "type": 38,
+            "phase": 4,
+            "flags": 8,
+            "callback": 134246833,
+            "xy": [
+              422320,
+              421887
+            ],
+            "hp": 1,
+            "collision": 143107224,
+            "paired_body": 0,
+            "body_parent": 50349996,
+            "status": 0,
+            "invincibility": 0
+          }
+        ]
+      }
+    }
+  },
+  "static_update_fragment_sha256": "c6acc6636405790bc966da29e9eccf729988602a6a2eb2a56628d4500cb43b89",
+  "limitations": [
+    "Only one normal enemy instance",
+    "No Boss coverage",
+    "HP-zero fixtures are not natural damage/death",
+    "No nonlethal hit interrupt during the pillar",
+    "No CPU instruction trace or complete invulnerability explanation"
+  ],
+  "target_identity": {
+    "pool_header": "0x2031728",
+    "array": "0x3004b80",
+    "kind": 3,
+    "stride": 196,
+    "count": 18,
+    "slot": 17,
+    "type": 6,
+    "unique": 47,
+    "address": "0x3005884",
+    "rom_type_table_anchor": "0x8362110",
+    "routine_table": "0x83629e8",
+    "update": "0x8069105"
+  },
+  "hit_pairs": [
+    {
+      "t": 25,
+      "projectile": "0x3004abc",
+      "unique": 71,
+      "target_invincibility": 0
+    },
+    {
+      "t": 26,
+      "projectile": "0x3004abc",
+      "unique": 71,
+      "target_invincibility": 0
+    }
+  ],
+  "natural_contact_note": "Idle movement hits target at t7; pillar locks position, so this is not a controlled immunity comparison",
+  "trace_sha256": "a6755325c813d50fcc4e1dfa235e578a3d1dc5ac9cd6b97eeda04e919b619457",
+  "elapsed_seconds": 12.078,
+  "status": "passed-one-enemy-damage-and-two-hp-zero-fixtures"
+}

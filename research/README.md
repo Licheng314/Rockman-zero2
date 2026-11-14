@@ -39,3 +39,7 @@ ZCode 2A/2B独立验收复跑：`python -X utf8 -B research/verify-stage2ab-acce
 ## OZ 技能与键位对照（2026-11-14）
 
 `python -X utf8 -B research/oz-skill-probe.py --rom "本机的 Mega Man Zero 3 (USA-oz).gba"` 从开机重建首关基线，运行23组各360次更新，包含15组自然输入和8组标注RAM夹具（交换L/R映射、剑设主武器）。记录扩展状态、原动作、逻辑输入及登记对象实例；严格检查光柱5弹体的生成、友方攻击模板与正常退场。此项不证明实际扣血、受击中断、七连斩全段命中或菜单切换成功。输出仅在build；无ROM或用户存档改写。作者和详细操作/移植依赖见[OZ 当前记录](../docs/OZ-REFERENCE-RESEARCH.md)。
+
+## OZ 光柱实际伤害与取消条件（2026-11-14）
+
+`python -X utf8 -B research/oz-hit-probe.py --rom "本机的 Mega Man Zero 3 (USA-oz).gba"` 从开机和自然向右移动重建首关一个炮台，核对池/类型表/实例，运行10组距离、空白、接触及HP归零对照。近距离实际HP8→3→0由相同光柱弹体的双向Body关联互证；两项一次性玩家HP0为明确RAM夹具，检查原5弹体的退出回调、phase和关闭碰撞，不是自然伤害/非致死受击证据。核心/ROM指纹检查，输出只在build，不写用户存档。需既有Windows核心/Pillow，不需capstone；见[当前OZ记录](../docs/OZ-REFERENCE-RESEARCH.md)。
